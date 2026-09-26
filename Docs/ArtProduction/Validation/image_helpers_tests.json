@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "recorded_at_utc": "2026-09-14T07:22:48+00:00",
+  "passed": true,
+  "unique_tests_exercised": 22,
+  "runs": [
+    {
+      "scope": "full suite before final legacy-ledger hardening and showcase test addition",
+      "tests": 21,
+      "passed": 21,
+      "seconds": 147.296
+    },
+    {
+      "scope": "strengthened real-process lock and showcase exact references",
+      "tests": 2,
+      "passed": 2,
+      "seconds": 3.6
+    },
+    {
+      "scope": "mandatory predecessor including legacy ledger, predecessor-first, explicit reopen after final hardening",
+      "tests": 3,
+      "passed": 3,
+      "seconds": 43.328
+    }
+  ],
+  "coverage": [
+    "mandatory accepted immediate predecessor; old layout metadata cannot bypass",
+    "same reference set under optional predecessor-first reordering",
+    "real Windows subprocess waits on shared production lock",
+    "identical copy resume; different target remains untouched",
+    "reference hash mutation blocks acceptance",
+    "explicit reject+reopen archives current and prepared prompts and image",
+    "showcase T01/T12/T24 plus two styles within five input limit"
+  ],
+  "source_sha256": {
+    "validate_pipeline.py": "dc504eb8676b10ea3581b48b256214f9b3354bc83fd0b2c394d47d00b998abd8",
+    "prepare_image_job.py": "a47bf5c42dece83c1ce1c172667835d994d4cc3330c0f636b36e8b005abb398a",
+    "prepare_showcase_job.py": "c98993acdcae76f89fdfbf42f0ce6ecfc8882b0be05e9d9edf34f5843a13a458",
+    "ingest_generated_image.py": "031ccea5e633a0723f90bb0a17bff7703871ea0dc3d58a1cb978f3ab75fd52fe",
+    "test_validate_pipeline.py": "ea3a279a0dad3b092814579e0897c43f49ee549dcb46cb0b4aedd09b3f98574d"
+  },
+  "fixture_policy": "Disposable synthetic test files only; production art and central acceptance ledger unchanged by tests."
+}

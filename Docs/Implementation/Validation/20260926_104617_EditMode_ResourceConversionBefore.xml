@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="11" result="Failed(Child)" total="11" passed="5" failed="6" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-26 08:46:36Z" end-time="2026-09-26 08:46:36Z" duration="0,3732333">
+  <test-suite type="TestSuite" id="1000" name="WeedtopiaInc" fullname="WeedtopiaInc" runstate="Runnable" testcasecount="91" result="Failed" site="Child" start-time="2026-09-26 08:46:36Z" end-time="2026-09-26 08:46:36Z" duration="0.373233" total="11" passed="5" failed="6" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1127" name="Weedtopia.Game.EditModeTests.dll" fullname="D:/Unity Games/Weedtopia Inc/WeedtopiaInc/Library/ScriptAssemblies/Weedtopia.Game.EditModeTests.dll" runstate="Runnable" testcasecount="53" result="Failed" site="Child" start-time="2026-09-26 08:46:36Z" end-time="2026-09-26 08:46:36Z" duration="0.361505" total="11" passed="5" failed="6" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="85324" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1128" name="Weedtopia" fullname="Weedtopia" runstate="Runnable" testcasecount="53" result="Failed" site="Child" start-time="2026-09-26 08:46:36Z" end-time="2026-09-26 08:46:36Z" duration="0.358493" total="11" passed="5" failed="6" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1129" name="Tests" fullname="Weedtopia.Tests" runstate="Runnable" testcasecount="53" result="Failed" site="Child" start-time="2026-09-26 08:46:36Z" end-time="2026-09-26 08:46:36Z" duration="0.355824" total="11" passed="5" failed="6" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1113" name="ResourceConversionTests" fullname="Weedtopia.Tests.ResourceConversionTests" classname="Weedtopia.Tests.ResourceConversionTests" runstate="Runnable" testcasecount="11" result="Failed" site="Child" start-time="2026-09-26 08:46:36Z" end-time="2026-09-26 08:46:36Z" duration="0.352668" total="11" passed="5" failed="6" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1126" name="BuildingBuffersStillRejectNegativeAndInvalidAmounts" fullname="Weedtopia.Tests.ResourceConversionTests.BuildingBuffersStillRejectNegativeAndInvalidAmounts" methodname="BuildingBuffersStillRejectNegativeAndInvalidAmounts" classname="Weedtopia.Tests.ResourceConversionTests" runstate="Runnable" seed="371686760" result="Failed" start-time="2026-09-26 08:46:36Z" end-time="2026-09-26 08:46:36Z" duration="0.015354" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Expected: <System.ArgumentOutOfRangeException>
+  But was:  <System.ArithmeticException: Function does not accept floating point Not-a-Number values.
+  at System.Math.Sign (System.Double value) [0x0002a] in <1eb9db207454431c84a47bcd81e79c37>:0 
+  at Weedtopia.Domain.Amount.CompareTo (Weedtopia.Domain.Amount other) [0x00001] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\Amount.cs:56 
+  at Weedtopia.Domain.Amount.op_LessThan (Weedtopia.Domain.Amount a, Weedtopia.Domain.Amount b) [0x00000] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\Amount.cs:48 
+  at Weedtopia.Domain.BuildingState.Set (Weedtopia.Domain.Resource resource, Weedtopia.Domain.Amount value) [0x00001] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\GameState.cs:17 
+  at Weedtopia.Tests.ResourceConversionTests+<>c__DisplayClass6_0.<BuildingBuffersStillRejectNegativeAndInvalidAmounts>b__1 () [0x00000] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\EditMode\ResourceConversionTests.cs:127 
+  at NUnit.Framework.Assert.Throws (NUnit.Framework.Constraints.IResolveConstraint expression, NUnit.Framework.TestDelegate code, System.String message, System.Object[] args) [0x0002f] in <f577cd9686154d6ab10efd7e65e64366>:0 >
+]]></message>
+                <stack-trace><![CDATA[at Weedtopia.Tests.ResourceConversionTests.BuildingBuffersStillRejectNegativeAndInvalidAmounts () [0x00030] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\EditMode\ResourceConversionTests.cs:127
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1118" name="ExhaustingFractionalButterInputCannotOverdrawTheBuffer" fullname="Weedtopia.Tests.ResourceConversionTests.ExhaustingFractionalButterInputCannotOverdrawTheBuffer" classname="Weedtopia.Tests.ResourceConversionTests" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2026-09-26 08:46:36Z" end-time="2026-09-26 08:46:36Z" duration="0.021118" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1114" name="ExhaustingFractionalButterInputCannotOverdrawTheBuffer(0)" fullname="Weedtopia.Tests.ResourceConversionTests.ExhaustingFractionalButterInputCannotOverdrawTheBuffer(0)" methodname="ExhaustingFractionalButterInputCannotOverdrawTheBuffer" classname="Weedtopia.Tests.ResourceConversionTests" runstate="Runnable" seed="1144707785" result="Failed" start-time="2026-09-26 08:46:36Z" end-time="2026-09-26 08:46:36Z" duration="0.016157" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: No Exception to be thrown
+  But was:  <System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: value
+  at Weedtopia.Domain.BuildingState.Set (Weedtopia.Domain.Resource resource, Weedtopia.Domain.Amount value) [0x00020] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\GameState.cs:17 
+  at Weedtopia.Domain.Simulation.Convert (Weedtopia.Domain.BuildingState b, Weedtopia.Domain.Resource input, Weedtopia.Domain.Resource output, Weedtopia.Domain.Amount rate, System.Int32 ratio) [0x0003f] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\Simulation.cs:112 
+  at Weedtopia.Domain.Simulation.Produce (Weedtopia.Domain.BuildingState b) [0x00275] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\Simulation.cs:99 
+  at Weedtopia.Domain.Simulation.Tick () [0x00181] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\Simulation.cs:67 
+  at Weedtopia.Domain.Simulation.Advance (System.Double seconds) [0x00095] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\Simulation.cs:50 
+  at Weedtopia.Tests.ResourceConversionTests+<>c__DisplayClass2_0.<ExhaustingFractionalButterInputCannotOverdrawTheBuffer>b__0 () [0x00000] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\EditMode\ResourceConversionTests.cs:41 
+  at NUnit.Framework.Constraints.ThrowsConstraint+VoidInvocationDescriptor.Invoke () [0x00000] in <f577cd9686154d6ab10efd7e65e64366>:0 
+  at NUnit.Framework.Constraints.ThrowsConstraint+ExceptionInterceptor.Intercept (System.Object invocation) [0x00041] in <f577cd9686154d6ab10efd7e65e64366>:0 >
+]]></message>
+                  <stack-trace><![CDATA[at Weedtopia.Tests.ResourceConversionTests.ExhaustingFractionalButterInputCannotOverdrawTheBuffer (System.Int32 exponent) [0x0004e] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\EditMode\ResourceConversionTests.cs:41
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case id="1115" name="ExhaustingFractionalButterInputCannotOverdrawTheBuffer(9)" fullname="Weedtopia.Tests.ResourceConversionTests.ExhaustingFractionalButterInputCannotOverdrawTheBuffer(9)" methodname="ExhaustingFractionalButterInputCannotOverdrawTheBuffer" classname="Weedtopia.Tests.ResourceConversionTests" runstate="Runnable" seed="1283177608" result="Failed" start-time="2026-09-26 08:46:36Z" end-time="2026-09-26 08:46:36Z" duration="0.000548" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: No Exception to be thrown
+  But was:  <System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: value
+  at Weedtopia.Domain.BuildingState.Set (Weedtopia.Domain.Resource resource, Weedtopia.Domain.Amount value) [0x00020] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\GameState.cs:17 
+  at Weedtopia.Domain.Simulation.Convert (Weedtopia.Domain.BuildingState b, Weedtopia.Domain.Resource input, Weedtopia.Domain.Resource output, Weedtopia.Domain.Amount rate, System.Int32 ratio) [0x0003f] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\Simulation.cs:112 
+  at Weedtopia.Domain.Simulation.Produce (Weedtopia.Domain.BuildingState b) [0x00275] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\Simulation.cs:99 
+  at Weedtopia.Domain.Simulation.Tick () [0x00181] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\Simulation.cs:67 
+  at Weedtopia.Domain.Simulation.Advance (System.Double seconds) [0x00095] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\Simulation.cs:50 
+  at Weedtopia.Tests.ResourceConversionTests+<>c__DisplayClass2_0.<ExhaustingFractionalButterInputCannotOverdrawTheBuffer>b__0 () [0x00000] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\EditMode\ResourceConversionTests.cs:41 
+  at NUnit.Framework.Constraints.ThrowsConstraint+VoidInvocationDescriptor.Invoke () [0x00000] in <f577cd9686154d6ab10efd7e65e64366>:0 
+  at NUnit.Framework.Constraints.ThrowsConstraint+ExceptionInterceptor.Intercept (System.Object invocation) [0x00041] in <f577cd9686154d6ab10efd7e65e64366>:0 >
+]]></message>
+                  <stack-trace><![CDATA[at Weedtopia.Tests.ResourceConversionTests.ExhaustingFractionalButterInputCannotOverdrawTheBuffer (System.Int32 exponent) [0x0004e] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\EditMode\ResourceConversionTests.cs:41
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case id="1116" name="ExhaustingFractionalButterInputCannotOverdrawTheBuffer(400)" fullname="Weedtopia.Tests.ResourceConversionTests.ExhaustingFractionalButterInputCannotOverdrawTheBuffer(400)" methodname="ExhaustingFractionalButterInputCannotOverdrawTheBuffer" classname="Weedtopia.Tests.ResourceConversionTests" runstate="Runnable" seed="2043954490" result="Failed" start-time="2026-09-26 08:46:36Z" end-time="2026-09-26 08:46:36Z" duration="0.000467" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: No Exception to be thrown
+  But was:  <System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: value
+  at Weedtopia.Domain.BuildingState.Set (Weedtopia.Domain.Resource resource, Weedtopia.Domain.Amount value) [0x00020] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\GameState.cs:17 
+  at Weedtopia.Domain.Simulation.Convert (Weedtopia.Domain.BuildingState b, Weedtopia.Domain.Resource input, Weedtopia.Domain.Resource output, Weedtopia.Domain.Amount rate, System.Int32 ratio) [0x0003f] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\Simulation.cs:112 
+  at Weedtopia.Domain.Simulation.Produce (Weedtopia.Domain.BuildingState b) [0x00275] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\Simulation.cs:99 
+  at Weedtopia.Domain.Simulation.Tick () [0x00181] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\Simulation.cs:67 
+  at Weedtopia.Domain.Simulation.Advance (System.Double seconds) [0x00095] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\Simulation.cs:50 
+  at Weedtopia.Tests.ResourceConversionTests+<>c__DisplayClass2_0.<ExhaustingFractionalButterInputCannotOverdrawTheBuffer>b__0 () [0x00000] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\EditMode\ResourceConversionTests.cs:41 
+  at NUnit.Framework.Constraints.ThrowsConstraint+VoidInvocationDescriptor.Invoke () [0x00000] in <f577cd9686154d6ab10efd7e65e64366>:0 
+  at NUnit.Framework.Constraints.ThrowsConstraint+ExceptionInterceptor.Intercept (System.Object invocation) [0x00041] in <f577cd9686154d6ab10efd7e65e64366>:0 >
+]]></message>
+                  <stack-trace><![CDATA[at Weedtopia.Tests.ResourceConversionTests.ExhaustingFractionalButterInputCannotOverdrawTheBuffer (System.Int32 exponent) [0x0004e] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\EditMode\ResourceConversionTests.cs:41
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case id="1117" name="ExhaustingFractionalButterInputCannotOverdrawTheBuffer(2000)" fullname="Weedtopia.Tests.ResourceConversionTests.ExhaustingFractionalButterInputCannotOverdrawTheBuffer(2000)" methodname="ExhaustingFractionalButterInputCannotOverdrawTheBuffer" classname="Weedtopia.Tests.ResourceConversionTests" runstate="Runnable" seed="1634676916" result="Failed" start-time="2026-09-26 08:46:36Z" end-time="2026-09-26 08:46:36Z" duration="0.000445" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: No Exception to be thrown
+  But was:  <System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: value
+  at Weedtopia.Domain.BuildingState.Set (Weedtopia.Domain.Resource resource, Weedtopia.Domain.Amount value) [0x00020] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\GameState.cs:17 
+  at Weedtopia.Domain.Simulation.Convert (Weedtopia.Domain.BuildingState b, Weedtopia.Domain.Resource input, Weedtopia.Domain.Resource output, Weedtopia.Domain.Amount rate, System.Int32 ratio) [0x0003f] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\Simulation.cs:112 
+  at Weedtopia.Domain.Simulation.Produce (Weedtopia.Domain.BuildingState b) [0x00275] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\Simulation.cs:99 
+  at Weedtopia.Domain.Simulation.Tick () [0x00181] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\Simulation.cs:67 
+  at Weedtopia.Domain.Simulation.Advance (System.Double seconds) [0x00095] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\Simulation.cs:50 
+  at Weedtopia.Tests.ResourceConversionTests+<>c__DisplayClass2_0.<ExhaustingFractionalButterInputCannotOverdrawTheBuffer>b__0 () [0x00000] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\EditMode\ResourceConversionTests.cs:41 
+  at NUnit.Framework.Constraints.ThrowsConstraint+VoidInvocationDescriptor.Invoke () [0x00000] in <f577cd9686154d6ab10efd7e65e64366>:0 
+  at NUnit.Framework.Constraints.ThrowsConstraint+ExceptionInterceptor.Intercept (System.Object invocation) [0x00041] in <f577cd9686154d6ab10efd7e65e64366>:0 >
+]]></message>
+                  <stack-trace><![CDATA[at Weedtopia.Tests.ResourceConversionTests.ExhaustingFractionalButterInputCannotOverdrawTheBuffer (System.Int32 exponent) [0x0004e] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\EditMode\ResourceConversionTests.cs:41
+]]></stack-trace>
+                </failure>
+              </test-case>
+            </test-suite>
+            <test-case id="1125" name="FractionalConversionConservesResourcesWithinAmountPrecision" fullname="Weedtopia.Tests.ResourceConversionTests.FractionalConversionConservesResourcesWithinAmountPrecision" methodname="FractionalConversionConservesResourcesWithinAmountPrecision" classname="Weedtopia.Tests.ResourceConversionTests" runstate="Runnable" seed="1394546111" result="Passed" start-time="2026-09-26 08:46:36Z" end-time="2026-09-26 08:46:36Z" duration="0.005623" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1124" name="RateAndStorageLimitsPreserveUnconsumedInput" fullname="Weedtopia.Tests.ResourceConversionTests.RateAndStorageLimitsPreserveUnconsumedInput" classname="Weedtopia.Tests.ResourceConversionTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-09-26 08:46:36Z" end-time="2026-09-26 08:46:36Z" duration="0.004004" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1120" name="RateAndStorageLimitsPreserveUnconsumedInput(0,4,2,1000)" fullname="Weedtopia.Tests.ResourceConversionTests.RateAndStorageLimitsPreserveUnconsumedInput(0,4,2,1000)" methodname="RateAndStorageLimitsPreserveUnconsumedInput" classname="Weedtopia.Tests.ResourceConversionTests" runstate="Runnable" seed="1620276840" result="Passed" start-time="2026-09-26 08:46:36Z" end-time="2026-09-26 08:46:36Z" duration="0.001490" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1121" name="RateAndStorageLimitsPreserveUnconsumedInput(999,6,1,1000)" fullname="Weedtopia.Tests.ResourceConversionTests.RateAndStorageLimitsPreserveUnconsumedInput(999,6,1,1000)" methodname="RateAndStorageLimitsPreserveUnconsumedInput" classname="Weedtopia.Tests.ResourceConversionTests" runstate="Runnable" seed="132572828" result="Passed" start-time="2026-09-26 08:46:36Z" end-time="2026-09-26 08:46:36Z" duration="0.000235" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1122" name="RateAndStorageLimitsPreserveUnconsumedInput(1000,8,0,1000)" fullname="Weedtopia.Tests.ResourceConversionTests.RateAndStorageLimitsPreserveUnconsumedInput(1000,8,0,1000)" methodname="RateAndStorageLimitsPreserveUnconsumedInput" classname="Weedtopia.Tests.ResourceConversionTests" runstate="Runnable" seed="907809170" result="Passed" start-time="2026-09-26 08:46:36Z" end-time="2026-09-26 08:46:36Z" duration="0.000189" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1123" name="RateAndStorageLimitsPreserveUnconsumedInput(1001,8,0,1001)" fullname="Weedtopia.Tests.ResourceConversionTests.RateAndStorageLimitsPreserveUnconsumedInput(1001,8,0,1001)" methodname="RateAndStorageLimitsPreserveUnconsumedInput" classname="Weedtopia.Tests.ResourceConversionTests" runstate="Runnable" seed="741949021" result="Passed" start-time="2026-09-26 08:46:36Z" end-time="2026-09-26 08:46:36Z" duration="0.000189" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1119" name="SeededFractionalInputsRemainValidAcrossAllConverters" fullname="Weedtopia.Tests.ResourceConversionTests.SeededFractionalInputsRemainValidAcrossAllConverters" methodname="SeededFractionalInputsRemainValidAcrossAllConverters" classname="Weedtopia.Tests.ResourceConversionTests" runstate="Runnable" seed="1817258830" result="Failed" start-time="2026-09-26 08:46:36Z" end-time="2026-09-26 08:46:36Z" duration="0.290791" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Butter: 5.43130794607e-3
+  Expected: 0
+  But was:  1e-14
+]]></message>
+                <stack-trace><![CDATA[at Weedtopia.Tests.ResourceConversionTests.SeededFractionalInputsRemainValidAcrossAllConverters () [0x0013b] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\EditMode\ResourceConversionTests.cs:72
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[Saving results to: C:/Users/Mein-PC/AppData/LocalLow/DefaultCompany/WeedtopiaInc\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

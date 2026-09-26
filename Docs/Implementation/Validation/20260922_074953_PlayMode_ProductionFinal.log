@@ -1,0 +1,960 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.3/staging' branch; Version is '6000.3.9f1 (7a9955a4f2fa) revision 8034645'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Mein-PC" at "2026-09-22T05:49:53.3502324Z"
+OS: 'Windows 11  (10.0.22621) Professional' Language: 'de' Physical Memory: 65461 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-09-22T05:49:53Z
+
+COMMAND LINE ARGUMENTS:
+D:\Unity Games\6000.3.9f1\Editor\Unity.exe
+-batchmode
+-projectPath
+D:\Unity Games\Weedtopia Inc\WeedtopiaInc
+-logFile
+D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Docs\Implementation\Validation\20260922_074953_PlayMode_ProductionFinal.log
+-nographics
+-runTests
+-testPlatform
+PlayMode
+-testResults
+D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Docs\Implementation\Validation\20260922_074953_PlayMode_ProductionFinal.xml
+Successfully changed project path to: D:\Unity Games\Weedtopia Inc\WeedtopiaInc
+D:/Unity Games/Weedtopia Inc/WeedtopiaInc
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+Player connection [118548]  Target information:
+
+Player connection [118548]  * "[IP] 192.168.178.20 [Port] 55504 [Flags] 2 [Guid] 3727610575 [EditorId] 3727610575 [Version] 1048832 [Id] WindowsEditor(7,AndrosAiAgency) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [118548]  * "[IP] 192.168.80.1 [Port] 55504 [Flags] 2 [Guid] 3727610575 [EditorId] 3727610575 [Version] 1048832 [Id] WindowsEditor(7,AndrosAiAgency) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [118548]  * "[IP] 172.22.208.1 [Port] 55504 [Flags] 2 [Guid] 3727610575 [EditorId] 3727610575 [Version] 1048832 [Id] WindowsEditor(7,AndrosAiAgency) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [118548]  * "[IP] 100.92.133.246 [Port] 55504 [Flags] 2 [Guid] 3727610575 [EditorId] 3727610575 [Version] 1048832 [Id] WindowsEditor(7,AndrosAiAgency) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [118548]  * "[IP] 192.168.178.125 [Port] 55504 [Flags] 2 [Guid] 3727610575 [EditorId] 3727610575 [Version] 1048832 [Id] WindowsEditor(7,AndrosAiAgency) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Unable to join player connection multicast group (err: 10013).
+Player connection [118548] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-124016" after 0.4 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.17.4+4293ba1
+  Session Id:              dd604dca41b141e4a4dcd732fc7eaedf
+  Correlation Id:          0ef4e54a90d59ee295954957237bf648
+  External correlation Id: 1961786444928672626
+  Machine Id:              mBUYDsQxFiqlE0S13hX/L0FJm7M=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Mein-PC" (connect: 0.00s, validation: 0.00s, handshake: 0.91s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Mein-PC-notifications" at "2026-09-22T05:49:54.2662502Z"
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-6XDV-K257-C58Z-P2CY-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9072324915650-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.00
+[Licensing::Module] Licensing Background thread has ended after 0.92s
+[Licensing::Module] Licensing is initialized (took 0.05s).
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-6XDV-K257-C58Z-P2CY-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9072324915650-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Artifact Garbage Collection - Removed 2 unused hashed content files
+Refreshing native plugins compatible for Editor in 0.12 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.3.9f1 (7a9955a4f2fa)
+[Subsystems] Discovering subsystems at path D:/Unity Games/6000.3.9f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Unity Games/Weedtopia Inc/WeedtopiaInc/Assets
+Forcing GfxDevice: Null
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+NullGfxDevice:
+    Version:  NULL 1.0 [1.0]
+    Renderer: Null Device
+    Vendor:   Unity Technologies
+Initialize mono
+Mono path[0] = 'D:/Unity Games/6000.3.9f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity Games/6000.3.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity Games/6000.3.9f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56016
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity Games/6000.3.9f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/Unity Games/6000.3.9f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-6XDV-K257-C58Z-P2CY-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9072324915650-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Register platform support module: D:/Unity Games/6000.3.9f1/Editor/Data/PlaybackEngines/VisionOSPlayer/UnityEditor.VisionOS.Extensions.dll
+Register platform support module: D:/Unity Games/6000.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-6XDV-K257-C58Z-P2CY-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9072324915650-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Register platform support module: D:/Unity Games/6000.3.9f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-6XDV-K257-C58Z-P2CY-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9072324915650-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Register platform support module: D:/Unity Games/6000.3.9f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: D:/Unity Games/6000.3.9f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: D:/Unity Games/6000.3.9f1/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.AppleTV.Extensions.dll
+Registered in 0.005671 seconds.
+- Loaded All Assemblies, in  0.416 seconds
+Native extension for AppleTV target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 2260 ms
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Failed to load: D:/Unity Games/6000.3.9f1/Editor/Data/PlaybackEngines/VisionOSPlayer\x64\UnityEditor.VisionOS.Native.dll
+Native extension for VisionOS target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.786 seconds
+Domain Reload Profiling: 3202ms
+	BeginReloadAssembly (137ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (20ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (46ms)
+	LoadAllAssembliesAndSetupDomain (180ms)
+		LoadAssemblies (118ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (176ms)
+			TypeCache.Refresh (174ms)
+				TypeCache.ScanAssembly (160ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (2786ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2749ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2407ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (101ms)
+			ProcessInitializeOnLoadAttributes (172ms)
+			ProcessInitializeOnLoadMethodAttributes (63ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-6XDV-K257-C58Z-P2CY-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 9072324915650-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Application.AssetDatabase Initial Refresh Start
+Package Manager log level set to [2]
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 57 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.ai.navigation@2.0.10 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.ai.navigation@c33a115e9883)
+    com.unity.collab-proxy@2.11.3 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.collab-proxy@e566cd3e7623)
+    com.unity.ide.rider@3.0.39 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.ide.rider@4504839d03f7)
+    com.unity.ide.visualstudio@2.0.26 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.ide.visualstudio@a99d56dec63f)
+    com.unity.inputsystem@1.18.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.inputsystem@57d0e36f6123)
+    com.unity.timeline@1.8.10 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.timeline@7f8b2fb101b6)
+    com.unity.visualscripting@1.9.9 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.visualscripting@191c0d7e3b69)
+    com.unity.searcher@4.9.4 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.searcher@d45a78918735)
+    com.unity.burst@1.8.28 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.burst@07790c2d06d9)
+    com.unity.mathematics@1.3.3 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.mathematics@19a9377c4ffa)
+    com.unity.collections@2.6.2 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.collections@aea9d3bd5e19)
+    com.unity.nuget.mono-cecil@1.11.6 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff)
+    com.unity.test-framework.performance@3.2.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.test-framework.performance@0840f58e4562)
+  Built-in packages:
+    com.unity.multiplayer.center@1.0.1 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.multiplayer.center@f01f4ba8d00a)
+    com.unity.render-pipelines.universal@17.3.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.render-pipelines.universal@7327e77c1cc2)
+    com.unity.test-framework@1.6.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.test-framework@0b7a23ab2e1d)
+    com.unity.ugui@2.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.ugui@bb329a87fcdc)
+    com.unity.modules.accessibility@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.accessibility)
+    com.unity.modules.adaptiveperformance@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.adaptiveperformance)
+    com.unity.modules.ai@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.screencapture@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.terrainphysics)
+    com.unity.modules.tilemap@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.tilemap)
+    com.unity.modules.ui@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vectorgraphics@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.vectorgraphics)
+    com.unity.modules.vehicles@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.vr@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.vr)
+    com.unity.modules.wind@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.ext.nunit@2.0.5 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.ext.nunit@d8c07649098d)
+    com.unity.render-pipelines.core@17.3.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.render-pipelines.core@04ab0eefa0c3)
+    com.unity.shadergraph@17.3.0 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.shadergraph@f80b792d4861)
+    com.unity.render-pipelines.universal-config@17.0.3 (location: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Library\PackageCache\com.unity.render-pipelines.universal-config@8dc1aab4af1d)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.02 seconds
+Starting: D:\Unity Games\6000.3.9f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aEDbg.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: D:/Unity Games/Weedtopia Inc/WeedtopiaInc
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 0s311ms
+[489/995    0s] WriteResponseFile Library/Bee/artifacts/rsp/4747638433968585886.rsp
+[778/995    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+*** Tundra build success (0.28 seconds), 2 items updated, 995 evaluated
+AssetDatabase: script compilation time: 0.850256s
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.917 seconds
+Refreshing native plugins compatible for Editor in 0.77 ms, found 3 plugins.
+Native extension for AppleTV target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Failed to load: D:/Unity Games/6000.3.9f1/Editor/Data/PlaybackEngines/VisionOSPlayer\x64\UnityEditor.VisionOS.Native.dll
+Native extension for VisionOS target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  6.267 seconds
+Domain Reload Profiling: 7183ms
+	BeginReloadAssembly (307ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (12ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (171ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (25ms)
+	LoadAllAssembliesAndSetupDomain (532ms)
+		LoadAssemblies (362ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (261ms)
+			TypeCache.Refresh (176ms)
+				TypeCache.ScanAssembly (162ms)
+			BuildScriptInfoCaches (70ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (6268ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (6025ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (54ms)
+			SetLoadedEditorAssemblies (8ms)
+			BeforeProcessingInitializeOnLoad (258ms)
+			ProcessInitializeOnLoadAttributes (5620ms)
+			ProcessInitializeOnLoadMethodAttributes (84ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Asset Pipeline Refresh (id=6828bcc8a5ae45a44b7018299a86fd1d): Total: 8.719 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=6758 ms
+		Asset DB Callback time: managed=31 ms, native=17 ms
+		Scripting: domain reloads=1, domain reload time=917 ms, compile time=852 ms, other=142 ms
+		Project Asset Count: scripts=1581, non-scripts=2673
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.001ms
+	InvokePackagesCallback: 18.013ms
+	ApplyChangesToAssetFolders: 0.674ms
+	Scan: 90.090ms
+	OnSourceAssetsModified: 0.002ms
+	CategorizeAssetsWithTransientArtifact: 50.783ms
+	ProcessAssetsWithTransientArtifactChanges: 78.615ms
+	CategorizeAssets: 50.577ms
+	ImportOutOfDateAssets: 6276.769ms (5423.315ms without children)
+		CompileScripts: 851.511ms
+		ReloadNativeAssets: 0.021ms
+		UnloadImportedAssets: 0.875ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.613ms
+		InitializingProgressBar: 0.000ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 0.433ms
+	PostProcessAllAssets: 31.783ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.002ms
+	UnloadStreamsBegin: 2.393ms
+	PersistCurrentRevisions: 0.118ms
+	UnloadStreamsEnd: 0.001ms
+	GenerateScriptTypeHashes: 2.419ms
+	Untracked: 2119.008ms
+
+Application.AssetDatabase Initial Refresh End
+Scanning for USB devices : 16.749ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-WeedtopiaInc
+Unloading 19 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6260 unused Assets / (3.1 MB). Loaded Objects now: 7107.
+Memory consumption went from 188.9 MB to 185.8 MB.
+Total: 11.163100 ms (FindLiveObjects: 0.874300 ms CreateObjectMapping: 0.314300 ms MarkObjects: 7.959000 ms  DeleteObjects: 2.014300 ms)
+
+Microsoft Media Foundation video decoding to texture disabled: graphics device is Null, only Direct3D 11 and Direct3D 12 (only on desktop) are supported for hardware-accelerated video decoding.
+[Project] Loading completed in 13.981 seconds
+	Project init time: 				13.254 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		0.417 seconds
+		Asset Database init time: 		0.153 seconds
+		Global illumination init time: 	0.003 seconds
+		Assemblies load time: 			3.217 seconds
+		Unity extensions init time: 	0.038 seconds
+		Asset Database refresh time: 	8.719 seconds
+	Scene opening time: 			0.237 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1790056207309,"processId":124016,"projectLoad":13.980736199999999,"projectInit":13.2544683,"templateInit":0.0,"packageManagerInit":0.416852,"assetDatabaseInit":0.1527294,"globalIlluminationInit":0.0026206,"assembliesLoad":3.216958,"unityExtensionsInit":0.0384181,"assetDatabaseRefresh":8.718968,"sceneOpening":0.2372207}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1790056207309,"processId":124016,"editorVersion":"6000.3.9f1 (7a9955a4f2fa)","branch":"6000.3/staging","buildType":"Release","platform":"Windows"}
+Asset Pipeline Refresh (id=f2e9931a8b33355488c73af654cc4380): Total: 0.045 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Unable to use UDP port 56018 for VS/Unity messaging. You should check if another process is already bound to this port or if your firewall settings are compatible.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Microsoft.Unity.VisualStudio.Editor.VisualStudioIntegration/<>c:<.cctor>b__6_0 () (at ./Library/PackageCache/com.unity.ide.visualstudio@a99d56dec63f/Editor/VisualStudioIntegration.cs:55)
+Microsoft.Unity.VisualStudio.Editor.VisualStudioIntegration/<>c__DisplayClass7_0:<RunOnceOnUpdate>b__0 () (at ./Library/PackageCache/com.unity.ide.visualstudio@a99d56dec63f/Editor/VisualStudioIntegration.cs:71)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: ./Library/PackageCache/com.unity.ide.visualstudio@a99d56dec63f/Editor/VisualStudioIntegration.cs Line: 55)
+
+Running tests for ExecutionSettings with details:
+targetPlatform = 
+playerHeartbeatTimeout = 600
+filters[0] = 
+   Filter with settings:
+   testMode = PlayMode
+   targetPlatform = 
+   testNames = null
+   groupNames = null
+   categoryNames = null
+   assemblyNames = null
+ignoreTests = {}
+featureFlags = null
+
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UnityEditor.TestTools.TestRunner.CommandLineTest.Executer:InitializeAndExecuteRun (string[]) (at ./Library/PackageCache/com.unity.test-framework@0b7a23ab2e1d/UnityEditor.TestRunner/CommandLineTest/Executer.cs:53)
+UnityEditor.TestTools.TestRunner.CommandLineTest.TestStarter:InitializeAndExecuteRun () (at ./Library/PackageCache/com.unity.test-framework@0b7a23ab2e1d/UnityEditor.TestRunner/CommandLineTest/TestStarter.cs:64)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: ./Library/PackageCache/com.unity.test-framework@0b7a23ab2e1d/UnityEditor.TestRunner/CommandLineTest/Executer.cs Line: 53)
+
+Start Indexing on Editor startup
+[Indexing] Starting Initial Indexing for Assets
+[UnityConnectServicesConfig] config is NOT valid, switching to default
+Created GICache directory at C:/Users/Mein-PC/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.011s, timestamps: [13.983 - 13.994]
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 4 unused Assets / (45.9 KB). Loaded Objects now: 7159.
+Memory consumption went from 182.3 MB to 182.3 MB.
+Total: 9.914000 ms (FindLiveObjects: 0.273700 ms CreateObjectMapping: 0.139900 ms MarkObjects: 9.443300 ms  DeleteObjects: 0.056200 ms)
+
+Start importing Assets/InitTestScene36b13c16-0e1a-4166-b683-551d124b94b0.unity using Guid(40ab9fabd96c3c94d8d6dc1026a9661e) (DefaultImporter) -> (artifact id: '9bc408d70bbefffa7e3784d95687ea41') in 0.0075441 seconds
+Refreshing native plugins compatible for Editor in 0.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=673e382612ca6a046a69f4b6d49805df): Total: 0.131 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UnityEditor.TestTools.TestRunner.TestRun.Tasks.BuildActionTaskBase`1/<ExecuteMethods>d__8<UnityEngine.TestTools.IPrebuildSetup>:MoveNext () (at ./Library/PackageCache/com.unity.test-framework@0b7a23ab2e1d/UnityEditor.TestRunner/TestRun/Tasks/BuildActionTaskBase.cs:48)
+UnityEditor.TestTools.TestRunner.TestRun.Tasks.BuildActionTaskBase`1/<Execute>d__7<UnityEngine.TestTools.IPrebuildSetup>:MoveNext () (at ./Library/PackageCache/com.unity.test-framework@0b7a23ab2e1d/UnityEditor.TestRunner/TestRun/Tasks/BuildActionTaskBase.cs:34)
+UnityEditor.TestTools.TestRunner.TestRun.TestJobRunner:ExecuteStep () (at ./Library/PackageCache/com.unity.test-framework@0b7a23ab2e1d/UnityEditor.TestRunner/TestRun/TestJobRunner.cs:173)
+UnityEditor.TestTools.TestRunner.TestRun.TestJobRunner:ExecuteCallback () (at ./Library/PackageCache/com.unity.test-framework@0b7a23ab2e1d/UnityEditor.TestRunner/TestRun/TestJobRunner.cs:108)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: ./Library/PackageCache/com.unity.test-framework@0b7a23ab2e1d/UnityEditor.TestRunner/TestRun/Tasks/BuildActionTaskBase.cs Line: 48)
+
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.823 seconds
+Refreshing native plugins compatible for Editor in 0.72 ms, found 3 plugins.
+Native extension for AppleTV target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Failed to load: D:/Unity Games/6000.3.9f1/Editor/Data/PlaybackEngines/VisionOSPlayer\x64\UnityEditor.VisionOS.Native.dll
+Native extension for VisionOS target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.588 seconds
+Domain Reload Profiling: 2413ms
+	BeginReloadAssembly (504ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (78ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (296ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (25ms)
+	LoadAllAssembliesAndSetupDomain (241ms)
+		LoadAssemblies (137ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (195ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (172ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (1589ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1236ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (56ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (344ms)
+			ProcessInitializeOnLoadAttributes (469ms)
+			ProcessInitializeOnLoadMethodAttributes (357ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (44ms)
+Asset Pipeline Refresh (id=7dda5eebb63874242902f8974feb12ab): Total: 2.548 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=1681 ms
+		Asset DB Callback time: managed=29 ms, native=0 ms
+		Scripting: domain reloads=1, domain reload time=834 ms, compile time=1 ms, other=0 ms
+		Project Asset Count: scripts=1581, non-scripts=2674
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.001ms
+	InvokePackagesCallback: 1.060ms
+	ApplyChangesToAssetFolders: 0.338ms
+	Scan: 0.001ms
+	OnSourceAssetsModified: 0.001ms
+	CategorizeAssetsWithTransientArtifact: 0.002ms
+	ProcessAssetsWithTransientArtifactChanges: 4.357ms
+	CategorizeAssets: 54.860ms
+	ImportOutOfDateAssets: 1595.122ms (1590.357ms without children)
+		CompileScripts: 0.993ms
+		CollectScriptTypesHashes: 1.716ms
+		ReloadNativeAssets: 1.006ms
+		UnloadImportedAssets: 0.071ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.559ms
+		InitializingProgressBar: 0.001ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 0.418ms
+	PostProcessAllAssets: 29.990ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.312ms
+	UnloadStreamsBegin: 0.170ms
+	PersistCurrentRevisions: 0.119ms
+	UnloadStreamsEnd: 0.002ms
+	GenerateScriptTypeHashes: 4.423ms
+	Untracked: 861.189ms
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            1.036 ms
+	Integration:            276.863 ms
+	Integration of assets:  0.004 ms
+	Thread Wait Time:       0.015 ms
+	Total Operation Time:   277.918 ms
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Unable to use UDP port 56018 for VS/Unity messaging. You should check if another process is already bound to this port or if your firewall settings are compatible.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Microsoft.Unity.VisualStudio.Editor.VisualStudioIntegration/<>c:<.cctor>b__6_0 () (at ./Library/PackageCache/com.unity.ide.visualstudio@a99d56dec63f/Editor/VisualStudioIntegration.cs:55)
+Microsoft.Unity.VisualStudio.Editor.VisualStudioIntegration/<>c__DisplayClass7_0:<RunOnceOnUpdate>b__0 () (at ./Library/PackageCache/com.unity.ide.visualstudio@a99d56dec63f/Editor/VisualStudioIntegration.cs:71)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: ./Library/PackageCache/com.unity.ide.visualstudio@a99d56dec63f/Editor/VisualStudioIntegration.cs Line: 55)
+
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.285500 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/Bootstrap.unity'
+	Deserialize:            0.619 ms
+	Integration:            224.140 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       1.216 ms
+	Total Operation Time:   225.976 ms
+Unloading 164 unused Assets / (39.0 KB). Loaded Objects now: 7182.
+Memory consumption went from 181.4 MB to 181.4 MB.
+Total: 10.143000 ms (FindLiveObjects: 0.478600 ms CreateObjectMapping: 0.142900 ms MarkObjects: 8.688000 ms  DeleteObjects: 0.832400 ms)
+
+Unloading 340 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.293700 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/BurningHills.unity'
+	Deserialize:            144.214 ms
+	Integration:            298.150 ms
+	Integration of assets:  13.970 ms
+	Thread Wait Time:       1.603 ms
+	Total Operation Time:   457.938 ms
+Unloading 231 unused Assets / (36.2 KB). Loaded Objects now: 16263.
+Memory consumption went from 219.6 MB to 219.6 MB.
+Total: 10.427000 ms (FindLiveObjects: 1.087700 ms CreateObjectMapping: 0.295800 ms MarkObjects: 8.802700 ms  DeleteObjects: 0.239500 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 9.512200 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/Bootstrap.unity'
+	Deserialize:            0.404 ms
+	Integration:            231.869 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.747 ms
+	Total Operation Time:   233.021 ms
+Unloading 42 unused Assets / (246.3 KB). Loaded Objects now: 12120.
+Memory consumption went from 215.7 MB to 215.5 MB.
+Total: 10.727000 ms (FindLiveObjects: 0.831200 ms CreateObjectMapping: 0.360100 ms MarkObjects: 9.380300 ms  DeleteObjects: 0.154500 ms)
+
+Unloading 51 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.307500 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/BurningHills.unity'
+	Deserialize:            50.719 ms
+	Integration:            251.665 ms
+	Integration of assets:  0.482 ms
+	Thread Wait Time:       0.488 ms
+	Total Operation Time:   303.353 ms
+Unloading 231 unused Assets / (37.5 KB). Loaded Objects now: 16263.
+Memory consumption went from 219.7 MB to 219.7 MB.
+Total: 11.104400 ms (FindLiveObjects: 1.050600 ms CreateObjectMapping: 0.302500 ms MarkObjects: 9.512400 ms  DeleteObjects: 0.238100 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.412000 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/Bootstrap.unity'
+	Deserialize:            0.354 ms
+	Integration:            224.640 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.611 ms
+	Total Operation Time:   225.607 ms
+Unloading 42 unused Assets / (30.5 KB). Loaded Objects now: 12120.
+Memory consumption went from 215.9 MB to 215.9 MB.
+Total: 11.137400 ms (FindLiveObjects: 0.810300 ms CreateObjectMapping: 0.312700 ms MarkObjects: 9.846400 ms  DeleteObjects: 0.167300 ms)
+
+Unloading 51 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.316800 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/BurningHills.unity'
+	Deserialize:            49.551 ms
+	Integration:            255.316 ms
+	Integration of assets:  0.575 ms
+	Thread Wait Time:       0.536 ms
+	Total Operation Time:   305.977 ms
+Unloading 231 unused Assets / (36.3 KB). Loaded Objects now: 16263.
+Memory consumption went from 220.1 MB to 220.0 MB.
+Total: 12.410900 ms (FindLiveObjects: 1.415200 ms CreateObjectMapping: 0.828700 ms MarkObjects: 9.914800 ms  DeleteObjects: 0.251600 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.160700 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/Bootstrap.unity'
+	Deserialize:            0.366 ms
+	Integration:            229.250 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.609 ms
+	Total Operation Time:   230.227 ms
+Unloading 42 unused Assets / (228.9 KB). Loaded Objects now: 12120.
+Memory consumption went from 216.7 MB to 216.5 MB.
+Total: 11.295100 ms (FindLiveObjects: 0.788900 ms CreateObjectMapping: 0.335300 ms MarkObjects: 10.002600 ms  DeleteObjects: 0.167500 ms)
+
+Unloading 51 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.313900 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/BurningHills.unity'
+	Deserialize:            50.922 ms
+	Integration:            256.714 ms
+	Integration of assets:  0.486 ms
+	Thread Wait Time:       0.535 ms
+	Total Operation Time:   308.656 ms
+Unloading 231 unused Assets / (36.3 KB). Loaded Objects now: 16263.
+Memory consumption went from 220.8 MB to 220.8 MB.
+Total: 11.364900 ms (FindLiveObjects: 1.027500 ms CreateObjectMapping: 0.293100 ms MarkObjects: 9.798000 ms  DeleteObjects: 0.245200 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.914600 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/Bootstrap.unity'
+	Deserialize:            0.446 ms
+	Integration:            228.609 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.620 ms
+	Total Operation Time:   229.676 ms
+Unloading 42 unused Assets / (30.1 KB). Loaded Objects now: 12120.
+Memory consumption went from 216.6 MB to 216.5 MB.
+Total: 10.461000 ms (FindLiveObjects: 0.722500 ms CreateObjectMapping: 0.267800 ms MarkObjects: 9.315900 ms  DeleteObjects: 0.154100 ms)
+
+Unloading 51 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.315300 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/BurningHills.unity'
+	Deserialize:            54.365 ms
+	Integration:            251.557 ms
+	Integration of assets:  0.677 ms
+	Thread Wait Time:       0.363 ms
+	Total Operation Time:   306.962 ms
+Unloading 231 unused Assets / (36.5 KB). Loaded Objects now: 16263.
+Memory consumption went from 220.8 MB to 220.8 MB.
+Total: 11.081100 ms (FindLiveObjects: 1.023000 ms CreateObjectMapping: 0.295900 ms MarkObjects: 9.512100 ms  DeleteObjects: 0.249200 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.447900 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/Bootstrap.unity'
+	Deserialize:            0.350 ms
+	Integration:            296.838 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.587 ms
+	Total Operation Time:   297.777 ms
+Unloading 42 unused Assets / (29.9 KB). Loaded Objects now: 12120.
+Memory consumption went from 216.6 MB to 216.5 MB.
+Total: 14.591400 ms (FindLiveObjects: 1.050600 ms CreateObjectMapping: 0.399200 ms MarkObjects: 12.933900 ms  DeleteObjects: 0.206100 ms)
+
+Unloading 51 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.460200 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/BurningHills.unity'
+	Deserialize:            82.802 ms
+	Integration:            294.997 ms
+	Integration of assets:  0.889 ms
+	Thread Wait Time:       0.601 ms
+	Total Operation Time:   379.289 ms
+Unloading 231 unused Assets / (36.3 KB). Loaded Objects now: 16263.
+Memory consumption went from 220.7 MB to 220.7 MB.
+Total: 11.019200 ms (FindLiveObjects: 1.238400 ms CreateObjectMapping: 0.590300 ms MarkObjects: 8.949500 ms  DeleteObjects: 0.240000 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.849100 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/Bootstrap.unity'
+	Deserialize:            0.447 ms
+	Integration:            234.368 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       1.877 ms
+	Total Operation Time:   236.694 ms
+Unloading 42 unused Assets / (29.1 KB). Loaded Objects now: 12120.
+Memory consumption went from 216.6 MB to 216.5 MB.
+Total: 10.668300 ms (FindLiveObjects: 0.773400 ms CreateObjectMapping: 0.291500 ms MarkObjects: 9.433800 ms  DeleteObjects: 0.168700 ms)
+
+Unloading 51 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.305900 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/BurningHills.unity'
+	Deserialize:            51.311 ms
+	Integration:            273.094 ms
+	Integration of assets:  0.545 ms
+	Thread Wait Time:       0.470 ms
+	Total Operation Time:   325.420 ms
+Unloading 231 unused Assets / (36.3 KB). Loaded Objects now: 16263.
+Memory consumption went from 220.7 MB to 220.7 MB.
+Total: 13.699600 ms (FindLiveObjects: 1.499100 ms CreateObjectMapping: 0.365100 ms MarkObjects: 11.482400 ms  DeleteObjects: 0.351600 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.079300 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/Bootstrap.unity'
+	Deserialize:            0.520 ms
+	Integration:            239.378 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.739 ms
+	Total Operation Time:   240.639 ms
+Unloading 42 unused Assets / (30.1 KB). Loaded Objects now: 12120.
+Memory consumption went from 216.7 MB to 216.6 MB.
+Total: 10.034200 ms (FindLiveObjects: 0.809400 ms CreateObjectMapping: 0.271300 ms MarkObjects: 8.794100 ms  DeleteObjects: 0.158500 ms)
+
+Unloading 51 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.300300 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/BurningHills.unity'
+	Deserialize:            51.827 ms
+	Integration:            283.572 ms
+	Integration of assets:  0.522 ms
+	Thread Wait Time:       0.267 ms
+	Total Operation Time:   336.187 ms
+Unloading 231 unused Assets / (36.3 KB). Loaded Objects now: 16263.
+Memory consumption went from 220.9 MB to 220.9 MB.
+Total: 10.764400 ms (FindLiveObjects: 1.151900 ms CreateObjectMapping: 0.314000 ms MarkObjects: 9.043000 ms  DeleteObjects: 0.254600 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.713900 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/Bootstrap.unity'
+	Deserialize:            0.379 ms
+	Integration:            227.468 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.611 ms
+	Total Operation Time:   228.458 ms
+Unloading 42 unused Assets / (30.0 KB). Loaded Objects now: 12120.
+Memory consumption went from 216.9 MB to 216.8 MB.
+Total: 10.122800 ms (FindLiveObjects: 0.748600 ms CreateObjectMapping: 0.319300 ms MarkObjects: 8.896000 ms  DeleteObjects: 0.157700 ms)
+
+Unloading 51 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.309300 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/BurningHills.unity'
+	Deserialize:            52.869 ms
+	Integration:            261.534 ms
+	Integration of assets:  0.492 ms
+	Thread Wait Time:       0.316 ms
+	Total Operation Time:   315.211 ms
+Unloading 231 unused Assets / (35.9 KB). Loaded Objects now: 16263.
+Memory consumption went from 221.0 MB to 221.0 MB.
+Total: 11.103800 ms (FindLiveObjects: 1.070000 ms CreateObjectMapping: 0.376000 ms MarkObjects: 9.417100 ms  DeleteObjects: 0.240000 ms)
+
+Unloading 21 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.719400 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/BurningHills.unity'
+	Deserialize:            44.299 ms
+	Integration:            257.180 ms
+	Integration of assets:  0.428 ms
+	Thread Wait Time:       0.622 ms
+	Total Operation Time:   302.529 ms
+Unloading 242 unused Assets / (36.8 KB). Loaded Objects now: 16530.
+Memory consumption went from 221.4 MB to 221.3 MB.
+Total: 10.540700 ms (FindLiveObjects: 1.106300 ms CreateObjectMapping: 0.296300 ms MarkObjects: 8.884300 ms  DeleteObjects: 0.252900 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.655400 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/Bootstrap.unity'
+	Deserialize:            0.455 ms
+	Integration:            235.978 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.539 ms
+	Total Operation Time:   236.972 ms
+Unloading 42 unused Assets / (30.0 KB). Loaded Objects now: 12120.
+Memory consumption went from 217.0 MB to 216.9 MB.
+Total: 11.288400 ms (FindLiveObjects: 0.781000 ms CreateObjectMapping: 0.287900 ms MarkObjects: 10.048500 ms  DeleteObjects: 0.169600 ms)
+
+Unloading 51 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.452200 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/BurningHills.unity'
+	Deserialize:            97.982 ms
+	Integration:            265.066 ms
+	Integration of assets:  0.812 ms
+	Thread Wait Time:       0.760 ms
+	Total Operation Time:   364.620 ms
+Unloading 231 unused Assets / (36.3 KB). Loaded Objects now: 16263.
+Memory consumption went from 221.1 MB to 221.1 MB.
+Total: 12.004800 ms (FindLiveObjects: 1.262300 ms CreateObjectMapping: 0.709200 ms MarkObjects: 9.775300 ms  DeleteObjects: 0.257100 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.535000 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/Bootstrap.unity'
+	Deserialize:            0.378 ms
+	Integration:            230.355 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.711 ms
+	Total Operation Time:   231.445 ms
+Unloading 42 unused Assets / (30.0 KB). Loaded Objects now: 12120.
+Memory consumption went from 217.0 MB to 216.9 MB.
+Total: 10.635000 ms (FindLiveObjects: 0.724100 ms CreateObjectMapping: 0.277800 ms MarkObjects: 9.475800 ms  DeleteObjects: 0.156500 ms)
+
+Unloading 51 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.394500 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/BurningHills.unity'
+	Deserialize:            55.051 ms
+	Integration:            253.435 ms
+	Integration of assets:  0.593 ms
+	Thread Wait Time:       0.416 ms
+	Total Operation Time:   309.495 ms
+Unloading 231 unused Assets / (37.2 KB). Loaded Objects now: 16263.
+Memory consumption went from 223.2 MB to 223.1 MB.
+Total: 10.563500 ms (FindLiveObjects: 1.086400 ms CreateObjectMapping: 0.306100 ms MarkObjects: 8.926700 ms  DeleteObjects: 0.243000 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 7.455100 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/Bootstrap.unity'
+	Deserialize:            0.387 ms
+	Integration:            239.077 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       1.298 ms
+	Total Operation Time:   240.764 ms
+Unloading 42 unused Assets / (30.0 KB). Loaded Objects now: 12120.
+Memory consumption went from 218.9 MB to 218.9 MB.
+Total: 10.959000 ms (FindLiveObjects: 0.707300 ms CreateObjectMapping: 0.321400 ms MarkObjects: 9.771600 ms  DeleteObjects: 0.157900 ms)
+
+Unloading 51 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.313100 ms
+Loaded scene 'Assets/Weedtopia/Game/Scenes/BurningHills.unity'
+	Deserialize:            53.033 ms
+	Integration:            255.788 ms
+	Integration of assets:  0.484 ms
+	Thread Wait Time:       0.554 ms
+	Total Operation Time:   309.858 ms
+Unloading 231 unused Assets / (35.9 KB). Loaded Objects now: 16263.
+Memory consumption went from 223.1 MB to 223.0 MB.
+Total: 12.157900 ms (FindLiveObjects: 1.345100 ms CreateObjectMapping: 0.342700 ms MarkObjects: 10.207400 ms  DeleteObjects: 0.261600 ms)
+
+Saving results to: C:/Users/Mein-PC/AppData/LocalLow/DefaultCompany/WeedtopiaInc\TestResults.xml
+Saving results to: D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Docs\Implementation\Validation\20260922_074953_PlayMode_ProductionFinal.xml
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            0.474 ms
+	Integration:            223.919 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.010 ms
+	Total Operation Time:   224.404 ms
+Unloading 30 unused Assets / (1.2 MB). Loaded Objects now: 12104.
+Memory consumption went from 220.0 MB to 218.9 MB.
+Total: 13.154200 ms (FindLiveObjects: 0.820900 ms CreateObjectMapping: 0.260300 ms MarkObjects: 11.903100 ms  DeleteObjects: 0.168700 ms)
+
+Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UnityEditor.TestTools.TestRunner.TestRun.Tasks.BuildActionTaskBase`1/<ExecuteMethods>d__8<UnityEngine.TestTools.IPostBuildCleanup>:MoveNext () (at ./Library/PackageCache/com.unity.test-framework@0b7a23ab2e1d/UnityEditor.TestRunner/TestRun/Tasks/BuildActionTaskBase.cs:48)
+UnityEditor.TestTools.TestRunner.TestRun.Tasks.BuildActionTaskBase`1/<Execute>d__7<UnityEngine.TestTools.IPostBuildCleanup>:MoveNext () (at ./Library/PackageCache/com.unity.test-framework@0b7a23ab2e1d/UnityEditor.TestRunner/TestRun/Tasks/BuildActionTaskBase.cs:34)
+UnityEditor.TestTools.TestRunner.TestRun.TestJobRunner:ExecuteStep () (at ./Library/PackageCache/com.unity.test-framework@0b7a23ab2e1d/UnityEditor.TestRunner/TestRun/TestJobRunner.cs:173)
+UnityEditor.TestTools.TestRunner.TestRun.TestJobRunner:ExecuteCallback () (at ./Library/PackageCache/com.unity.test-framework@0b7a23ab2e1d/UnityEditor.TestRunner/TestRun/TestJobRunner.cs:108)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: ./Library/PackageCache/com.unity.test-framework@0b7a23ab2e1d/UnityEditor.TestRunner/TestRun/Tasks/BuildActionTaskBase.cs Line: 48)
+
+Asset Pipeline Refresh (id=056a128f8544a2b4e835e748cd8452c3): Total: 0.020 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 0 unused Assets / (0 B). Loaded Objects now: 12109.
+Memory consumption went from 214.9 MB to 214.9 MB.
+Total: 12.593100 ms (FindLiveObjects: 0.786800 ms CreateObjectMapping: 0.316500 ms MarkObjects: 11.472300 ms  DeleteObjects: 0.016600 ms)
+
+Refreshing native plugins compatible for Editor in 0.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=3ebeb970a59de1449ad696af40ff875c): Total: 0.083 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+DisplayProgressbar: Undo
+Test run completed. Exiting with code 0 (Ok). Run completed.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UnityEditor.TestTools.TestRunner.CommandLineTest.Executer:ExitApplication (UnityEditor.TestTools.TestRunner.CommandLineTest.Executer/ReturnCodes,string) (at ./Library/PackageCache/com.unity.test-framework@0b7a23ab2e1d/UnityEditor.TestRunner/CommandLineTest/Executer.cs:81)
+UnityEditor.TestTools.TestRunner.CommandLineTest.Executer:ExitIfRunIsCompleted () (at ./Library/PackageCache/com.unity.test-framework@0b7a23ab2e1d/UnityEditor.TestRunner/CommandLineTest/Executer.cs:74)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: ./Library/PackageCache/com.unity.test-framework@0b7a23ab2e1d/UnityEditor.TestRunner/CommandLineTest/Executer.cs Line: 81)
+
+Killing ADB server in 0,0548285 seconds.
+Start importing ProjectSettings/ProjectSettings.asset using Guid(00000000000000004000000000000000) (LibraryAssetImporter) -> (artifact id: 'a2db8e4f5d48beca34820d77e1424edb') in 0.0077516 seconds
+Refreshing native plugins compatible for Editor in 0.68 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=bbbdbbed91dd4754ca0a4aa6a67179e6): Total: 0.022 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input System polling thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-Mein-PC-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-Mein-PC channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1790056228974,"processId":124016,"allocatedMemory":14569281,"memoryLabels":[{"Default":14409},{"Permanent":15236},{"NewDelete":68827},{"Thread":4230344},{"Manager":40479},{"VertexData":8},{"Geometry":816},{"Texture":296},{"Shader":79341},{"Material":24},{"GfxDevice":55257},{"Animation":392},{"Audio":3040},{"FreeType":8},{"FontEngine":736},{"Physics":2090},{"Physics2D":16},{"Serialization":80},{"Input":14984},{"JobScheduler":33024},{"TextLib":216},{"Mono":32},{"MonoCode":64},{"ScriptingNativeRuntime":155060},{"BaseObject":1620784},{"Resource":1336},{"Renderer":3000},{"Transform":4685},{"File":15629},{"WebCam":616},{"Culling":32},{"Terrain":11394},{"Wind":24},{"STL":40},{"String":14536},{"DynamicArray":120845},{"HashMap":82648},{"Utility":2662998},{"Curl":2478},{"PoolAlloc":2152},{"AI":80},{"TypeTree":5341},{"ScriptManager":512},{"RuntimeInitializeOnLoadManager":64},{"SpriteAtlas":112},{"GI":7792},{"Director":8240},{"CloudService":432},{"WebRequest":808},{"VR":47994},{"SceneManager":504},{"Video":64},{"LazyScriptCache":32},{"Camera":17},{"Secure":2113},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":256},{"Hierarchy":608},{"CoreStats":13032},{"Identifiers":12960},{"Gui":96},{"EditorUtility":119280},{"VersionControl":4},{"Undo":947},{"AssetDatabase":4696587},{"EditorGi":328},{"UnityConnect":29232},{"Upm":1896},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":213},{"ProfilerEditor":9746},{"CoreBusinessMetrics":2607},{"Licensing":664},{"AssetReference":32},{"IPCStream":32}]}

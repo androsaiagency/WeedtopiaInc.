@@ -1,0 +1,61 @@
+{
+    "utc": "2026-09-22T05:42:09.5281718Z",
+    "unity": "6000.3.9f1",
+    "device": "NVIDIA GeForce RTX 3070",
+    "graphics": "Direct3D11",
+    "scope": "Windows x64 Development player, uncapped Direct3D11, explicit offscreen URP StandardRequest, 1920x1080; diagnostic canvas uses ScreenSpaceCamera. PNG readbacks prove rendered content. No GPU VRAM measurement, human playthrough, touch or production building acceptance. Current unapproved development buildings remain.",
+    "width": 1920,
+    "height": 1080,
+    "completed": true,
+    "targetAccepted": false,
+    "measurements": [
+        {
+            "scenario": "automated_farm",
+            "frames": 300,
+            "gcCollections": 3,
+            "medianMs": 0.9598993929103017,
+            "p95Ms": 4.281101282685995,
+            "maxMs": 10.31780056655407,
+            "maxGcBytes": 30570,
+            "maxDrawCalls": 254,
+            "maxBatches": 252,
+            "textureRuntimeBytes": 188539415,
+            "totalAllocatedBytes": 129367432,
+            "gcCounterAvailable": true,
+            "drawCounterAvailable": true,
+            "batchCounterAvailable": true
+        },
+        {
+            "scenario": "freeplay_overview",
+            "frames": 300,
+            "gcCollections": 2,
+            "medianMs": 1.2018991401419044,
+            "p95Ms": 1.4867063146084548,
+            "maxMs": 2.6236961130052807,
+            "maxGcBytes": 57376,
+            "maxDrawCalls": 537,
+            "maxBatches": 532,
+            "textureRuntimeBytes": 188539415,
+            "totalAllocatedBytes": 129903771,
+            "gcCounterAvailable": true,
+            "drawCounterAvailable": true,
+            "batchCounterAvailable": true
+        },
+        {
+            "scenario": "upgrade_completion",
+            "frames": 300,
+            "gcCollections": 2,
+            "medianMs": 1.078699016943574,
+            "p95Ms": 1.397704123519361,
+            "maxMs": 6.54350221157074,
+            "maxGcBytes": 648448,
+            "maxDrawCalls": 299,
+            "maxBatches": 299,
+            "textureRuntimeBytes": 188539415,
+            "totalAllocatedBytes": 129936659,
+            "gcCounterAvailable": true,
+            "drawCounterAvailable": true,
+            "batchCounterAvailable": true
+        }
+    ]
+}

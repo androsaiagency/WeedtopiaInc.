@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="7" result="Failed(Child)" total="7" passed="0" failed="7" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-21 20:22:32Z" end-time="2026-09-21 20:22:36Z" duration="3,9633676">
+  <test-suite type="TestSuite" id="1016" name="WeedtopiaInc" fullname="WeedtopiaInc" runstate="Runnable" testcasecount="7" result="Failed" site="Child" start-time="2026-09-21 20:22:32Z" end-time="2026-09-21 20:22:36Z" duration="3.963368" total="7" passed="0" failed="7" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1012" name="Weedtopia.Game.PlayModeTests.dll" fullname="D:/Unity Games/Weedtopia Inc/WeedtopiaInc/Library/ScriptAssemblies/Weedtopia.Game.PlayModeTests.dll" runstate="Runnable" testcasecount="7" result="Failed" site="Child" start-time="2026-09-21 20:22:32Z" end-time="2026-09-21 20:22:36Z" duration="3.953619" total="7" passed="0" failed="7" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="51232" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1013" name="Weedtopia" fullname="Weedtopia" runstate="Runnable" testcasecount="7" result="Failed" site="Child" start-time="2026-09-21 20:22:32Z" end-time="2026-09-21 20:22:36Z" duration="3.952194" total="7" passed="0" failed="7" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1014" name="Tests" fullname="Weedtopia.Tests" runstate="Runnable" testcasecount="7" result="Failed" site="Child" start-time="2026-09-21 20:22:32Z" end-time="2026-09-21 20:22:36Z" duration="3.951306" total="7" passed="0" failed="7" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1015" name="PlayMode" fullname="Weedtopia.Tests.PlayMode" runstate="Runnable" testcasecount="7" result="Failed" site="Child" start-time="2026-09-21 20:22:32Z" end-time="2026-09-21 20:22:36Z" duration="3.950645" total="7" passed="0" failed="7" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="1004" name="GameFlowTests" fullname="Weedtopia.Tests.PlayMode.GameFlowTests" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" testcasecount="7" result="Failed" site="Child" start-time="2026-09-21 20:22:32Z" end-time="2026-09-21 20:22:36Z" duration="3.948881" total="7" passed="0" failed="7" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1005" name="BootstrapAndStartButtonsCreateOneSessionWithExactResources" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.BootstrapAndStartButtonsCreateOneSessionWithExactResources" methodname="BootstrapAndStartButtonsCreateOneSessionWithExactResources" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="823267132" result="Failed" start-time="2026-09-21 20:22:32Z" end-time="2026-09-21 20:22:32Z" duration="0.303598" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[SetUp :   Expected: not null
+  But was:  null
+]]></message>
+                  <stack-trace><![CDATA[at Weedtopia.Tests.PlayMode.GameFlowTests+<Setup>d__3.MoveNext () [0x000b0] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\PlayMode\GameFlowTests.cs:25
+at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00029] in .\Library\PackageCache\com.unity.test-framework@0b7a23ab2e1d\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35
+at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00180] in .\Library\PackageCache\com.unity.test-framework@0b7a23ab2e1d\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case id="1006" name="BuildingSelectionPanelUpgradeAndManagerHaveRealEffects" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.BuildingSelectionPanelUpgradeAndManagerHaveRealEffects" methodname="BuildingSelectionPanelUpgradeAndManagerHaveRealEffects" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="747227722" result="Failed" start-time="2026-09-21 20:22:32Z" end-time="2026-09-21 20:22:33Z" duration="0.732861" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[SetUp :   Expected: not null
+  But was:  null
+]]></message>
+                  <stack-trace><![CDATA[at Weedtopia.Tests.PlayMode.GameFlowTests+<Setup>d__3.MoveNext () [0x000b0] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\PlayMode\GameFlowTests.cs:25
+at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00029] in .\Library\PackageCache\com.unity.test-framework@0b7a23ab2e1d\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35
+at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00180] in .\Library\PackageCache\com.unity.test-framework@0b7a23ab2e1d\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case id="1008" name="CitySalesRathausSpinAndSettlementUnlockAreConnected" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.CitySalesRathausSpinAndSettlementUnlockAreConnected" methodname="CitySalesRathausSpinAndSettlementUnlockAreConnected" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="868369690" result="Failed" start-time="2026-09-21 20:22:33Z" end-time="2026-09-21 20:22:34Z" duration="0.573502" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[SetUp :   Expected: not null
+  But was:  null
+]]></message>
+                  <stack-trace><![CDATA[at Weedtopia.Tests.PlayMode.GameFlowTests+<Setup>d__3.MoveNext () [0x000b0] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\PlayMode\GameFlowTests.cs:25
+at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00029] in .\Library\PackageCache\com.unity.test-framework@0b7a23ab2e1d\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35
+at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00180] in .\Library\PackageCache\com.unity.test-framework@0b7a23ab2e1d\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case id="1007" name="FarmEndToEndUnlocksCityWithCompletedDelivery" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.FarmEndToEndUnlocksCityWithCompletedDelivery" methodname="FarmEndToEndUnlocksCityWithCompletedDelivery" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="982924137" result="Failed" start-time="2026-09-21 20:22:34Z" end-time="2026-09-21 20:22:34Z" duration="0.577170" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[SetUp :   Expected: not null
+  But was:  null
+]]></message>
+                  <stack-trace><![CDATA[at Weedtopia.Tests.PlayMode.GameFlowTests+<Setup>d__3.MoveNext () [0x000b0] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\PlayMode\GameFlowTests.cs:25
+at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00029] in .\Library\PackageCache\com.unity.test-framework@0b7a23ab2e1d\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35
+at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00180] in .\Library\PackageCache\com.unity.test-framework@0b7a23ab2e1d\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case id="1010" name="IndustrySellsButterProductsAndReachesFreeplay" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.IndustrySellsButterProductsAndReachesFreeplay" methodname="IndustrySellsButterProductsAndReachesFreeplay" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="366253133" result="Failed" start-time="2026-09-21 20:22:34Z" end-time="2026-09-21 20:22:35Z" duration="0.581753" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[SetUp :   Expected: not null
+  But was:  null
+]]></message>
+                  <stack-trace><![CDATA[at Weedtopia.Tests.PlayMode.GameFlowTests+<Setup>d__3.MoveNext () [0x000b0] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\PlayMode\GameFlowTests.cs:25
+at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00029] in .\Library\PackageCache\com.unity.test-framework@0b7a23ab2e1d\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35
+at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00180] in .\Library\PackageCache\com.unity.test-framework@0b7a23ab2e1d\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case id="1009" name="SaveSceneReloadAndContinueKeepResidentialChoiceAndProgress" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.SaveSceneReloadAndContinueKeepResidentialChoiceAndProgress" methodname="SaveSceneReloadAndContinueKeepResidentialChoiceAndProgress" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="761097845" result="Failed" start-time="2026-09-21 20:22:35Z" end-time="2026-09-21 20:22:35Z" duration="0.580640" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[SetUp :   Expected: not null
+  But was:  null
+]]></message>
+                  <stack-trace><![CDATA[at Weedtopia.Tests.PlayMode.GameFlowTests+<Setup>d__3.MoveNext () [0x000b0] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\PlayMode\GameFlowTests.cs:25
+at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00029] in .\Library\PackageCache\com.unity.test-framework@0b7a23ab2e1d\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35
+at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00180] in .\Library\PackageCache\com.unity.test-framework@0b7a23ab2e1d\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case id="1011" name="UiRaycastsBlockWorldAndPauseStopsTime" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.UiRaycastsBlockWorldAndPauseStopsTime" methodname="UiRaycastsBlockWorldAndPauseStopsTime" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="185977562" result="Failed" start-time="2026-09-21 20:22:35Z" end-time="2026-09-21 20:22:36Z" duration="0.580803" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[SetUp :   Expected: not null
+  But was:  null
+]]></message>
+                  <stack-trace><![CDATA[at Weedtopia.Tests.PlayMode.GameFlowTests+<Setup>d__3.MoveNext () [0x000b0] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\PlayMode\GameFlowTests.cs:25
+at UnityEngine.TestTools.EnumeratorHelper+<ProgressOnEnumerator>d__5.MoveNext () [0x00029] in .\Library\PackageCache\com.unity.test-framework@0b7a23ab2e1d\UnityEngine.TestRunner\NUnitExtensions\Attributes\EnumeratorHelper.cs:35
+at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__16[T].MoveNext () [0x00180] in .\Library\PackageCache\com.unity.test-framework@0b7a23ab2e1d\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs:155
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[Saving results to: C:/Users/Mein-PC/AppData/LocalLow/DefaultCompany/WeedtopiaInc\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

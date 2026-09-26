@@ -1,0 +1,48 @@
+Mono path[0] = 'D:/Unity Games/Weedtopia Inc/WeedtopiaInc/Builds/ProductionFinishDiagnostic/BurningHillsDiagnostic_Data/Managed'
+Mono config path = 'D:/Unity Games/Weedtopia Inc/WeedtopiaInc/Builds/ProductionFinishDiagnostic/MonoBleedingEdge/etc'
+Found 3 interfaces on host : 0) 192.168.178.20 1) 192.168.80.1 2) 172.22.208.1
+Player connection [50388]  Target information:
+
+Player connection [50388]  * "[IP] 192.168.178.20 [Port] 55000 [Flags] 2 [Guid] 3631432377 [EditorId] 1171051357 [Version] 1048832 [Id] WindowsPlayer(2,AndrosAiAgency) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] WeedtopiaInc" 
+
+Player connection [50388]  * "[IP] 192.168.80.1 [Port] 55000 [Flags] 2 [Guid] 3631432377 [EditorId] 1171051357 [Version] 1048832 [Id] WindowsPlayer(2,AndrosAiAgency) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] WeedtopiaInc" 
+
+Player connection [50388]  * "[IP] 172.22.208.1 [Port] 55000 [Flags] 2 [Guid] 3631432377 [EditorId] 1171051357 [Version] 1048832 [Id] WindowsPlayer(2,AndrosAiAgency) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] WeedtopiaInc" 
+
+Player connection [50388] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Initialize engine version: 6000.3.9f1 (7a9955a4f2fa)
+[Subsystems] Discovering subsystems at path D:/Unity Games/Weedtopia Inc/WeedtopiaInc/Builds/ProductionFinishDiagnostic/BurningHillsDiagnostic_Data/UnitySubsystems
+Forcing GfxDevice: Direct3D 11
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3070 (ID=0x2484)
+    Vendor:   NVIDIA
+    VRAM:     8018 MB
+    Driver:   32.0.16.1062
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  4.960 seconds
+- Finished resetting the current domain, in  0.002 seconds
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+UnloadTime: 0.681900 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.631500 ms
+Unloading 3 unused Assets / (Unknown). Loaded Objects now: 34696.
+Memory consumption went from 86.2 MB to 86.2 MB.
+Total: 6.048500 ms (FindLiveObjects: 2.361000 ms CreateObjectMapping: 0.473300 ms MarkObjects: 3.175500 ms  DeleteObjects: 0.037100 ms)
+
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input System polling thread exited.
+Input System module state changed to: Shutdown.
+PlayerConnection::Cleanup##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1790334585953,"processId":150408,"allocatedMemory":589842,"memoryLabels":[{"Default":136},{"NewDelete":104},{"Manager":541461},{"VertexData":576},{"GfxDevice":504},{"Audio":752},{"Serialization":520},{"JobScheduler":32768},{"String":594},{"DynamicArray":2688},{"HashMap":3584},{"PoolAlloc":288},{"CloudService":144},{"WebRequest":3515},{"VR":1872},{"Video":144},{"Subsystems":96},{"Accessibility":80},{"CoreBusinessMetrics":120}]}

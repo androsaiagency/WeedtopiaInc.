@@ -1,0 +1,22 @@
+{
+  "preferred_workflow": "multi_view_image_to_3d",
+  "fallback_workflow": "image_to_3d",
+  "inputs": [
+    "mesh_input_3q_v2_clean.png",
+    "mesh_input_rear_3q_v2_clean.png"
+  ],
+  "fallback_input": "mesh_input_3q_v2_clean.png",
+  "model_type": "smart-topology",
+  "topology": "triangles",
+  "target_faces": 15000,
+  "texture_resolution": 2048,
+  "pbr": true,
+  "rigging": false,
+  "animation": false,
+  "recommended_export": "FBX with complete texture folder",
+  "unity_scale": "1 unit = 1 meter",
+  "unity_up_axis": "+Y",
+  "unity_forward_axis": "+Z",
+  "pivot_intent": "ground center",
+  "note_de": "Mehransicht nur verwenden, wenn Meshy die beiden Bilder als Ansichten eines Assets akzeptiert. Andernfalls die bereinigte Vorderansicht als Einzelbild verwenden. Vor dem Erzeugen die Kostenzusammenfassung prüfen."
+}

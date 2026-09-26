@@ -1,0 +1,17 @@
+{
+  "checked_at_utc": "2026-09-14T08:15:00+00:00",
+  "command": "python -m unittest discover -s Docs/ArtProduction/Tools -p test_validate_pipeline.py",
+  "tests": 25,
+  "duration_seconds": 147.937,
+  "result": "passed",
+  "new_regressions": [
+    "Repeated hash and full PNG decode reused only within one validation invocation",
+    "Every new validation fully rehashes and decodes; standalone hashes uncached",
+    "Changed file version and showcase dimension mode invalidate cached reuse",
+    "Exceptions discard cache and callers cannot mutate cached results"
+  ],
+  "source_sha256": {
+    "validate_pipeline.py": "5b8e5fa470af1f2ece6f80e93cd2a9293878e7ade7b6abee2866aba25cb7c0ae",
+    "test_validate_pipeline.py": "27c1ee0606715960ebdd08aa7ff46281f1d9d03906d1a45489475c1193846479"
+  }
+}

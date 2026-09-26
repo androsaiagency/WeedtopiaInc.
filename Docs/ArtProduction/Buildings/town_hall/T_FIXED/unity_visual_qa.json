@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "generatedUtc": "2026-09-20T20:42:32.1016001Z",
+  "slot": "town_hall/T_FIXED",
+  "sourceModel": "Assets/Weedtopia/Art/Buildings/Incoming/town_hall/T_FIXED/Meshy_v3_Base/Meshy_AI_Solar_Forge_Citadel_0917201315_texture_fbx/Meshy_AI_Solar_Forge_Citadel_0917201315_texture.fbx",
+  "wrapperPrefab": "Assets/Weedtopia/Art/Buildings/Prefabs/town_hall/WT_town_hall_T_FIXED.prefab",
+  "material": "Assets/Weedtopia/Art/Buildings/Materials/TownHall/WT_TownHall_PaletteClean.mat",
+  "shader": "Weedtopia/Buildings/Palette Clean",
+  "sourceAtlasUsedByFinalMaterial": false,
+  "sourceNormalMapUsedByFinalMaterial": false,
+  "rendererCount": 1,
+  "views": [
+    {
+      "role": "front_three_quarter",
+      "path": "Docs/ArtProduction/Buildings/town_hall/T_FIXED/unity_preview_front_3q.png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "B101E9FAFBF27C04905A0998D22312F035B994A9CA4465FF6A09DB185E83BB36"
+    },
+    {
+      "role": "rear_three_quarter",
+      "path": "Docs/ArtProduction/Buildings/town_hall/T_FIXED/unity_preview_rear_3q.png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "4B44A61A6911B76C805CC99F6A2872B7A09FCA428F156804352685F3D5FC5EBB"
+    }
+  ],
+  "checks": {
+    "unityShaderImported": "passed",
+    "materialAssignedToAllRenderers": "passed",
+    "frontOrientation": "passed_visual_front_entrance_visible",
+    "frontAndRearFullyVisible": "passed",
+    "unintendedGeometryHolesVisible": "none_observed_in_two_previews",
+    "meshyAtlasScratchesAndSmears": "removed_final_material_does_not_sample_atlas",
+    "randomCopperSpeckling": "removed",
+    "crownSeparation": "passed_contiguous_copper_crown",
+    "facadeRoofBaseSeparation": "passed_geometry_driven_palette",
+    "sourceAssetsPreserved": "passed"
+  },
+  "openManualGates": [
+    "The user rejected this atlas-independent replacement on aesthetic grounds; it must not be treated as the final town-hall look.",
+    "Review Blender Polish Stage 3 before exporting a replacement FBX or changing the Unity wrapper.",
+    "Author simplified colliders below ColliderRoot for gameplay interaction.",
+    "Inspect the wrapper once in the final gameplay scene with production lighting and camera framing."
+  ],
+  "decision": "rejected_by_user_aesthetic_review_and_superseded_by_isometric_2d_prototype",
+  "supersededBy": "Assets/Weedtopia/Art/Buildings/Prototypes2D/town_hall/WT_town_hall_T_FIXED_2D_Prototype.prefab",
+  "supersededStrategy": "isometric_2d_sprite_with_optional_2_5d_layers",
+  "userFeedback": "The Meshy and Blender results did not retain the clean source-art quality reliably. Preserve all 3D work as an archive and validate the accepted isometric art directly as a 2D prototype."
+}

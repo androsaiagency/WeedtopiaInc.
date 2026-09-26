@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="80" result="Passed" total="80" passed="80" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-25 20:42:44Z" end-time="2026-09-25 20:46:56Z" duration="252,0345365">
+  <test-suite type="TestSuite" id="1000" name="WeedtopiaInc" fullname="WeedtopiaInc" runstate="Runnable" testcasecount="80" result="Passed" start-time="2026-09-25 20:42:44Z" end-time="2026-09-25 20:46:56Z" duration="252.034537" total="80" passed="80" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1026" name="Weedtopia.Editor.BuildingArtPipeline.Tests.dll" fullname="D:/Unity Games/Weedtopia Inc/WeedtopiaInc/Library/ScriptAssemblies/Weedtopia.Editor.BuildingArtPipeline.Tests.dll" runstate="Runnable" testcasecount="14" result="Passed" start-time="2026-09-25 20:42:44Z" end-time="2026-09-25 20:43:11Z" duration="27.210045" total="14" passed="14" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="156464" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1027" name="Weedtopia" fullname="Weedtopia" runstate="Runnable" testcasecount="14" result="Passed" start-time="2026-09-25 20:42:44Z" end-time="2026-09-25 20:43:11Z" duration="27.209135" total="14" passed="14" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1028" name="Editor" fullname="Weedtopia.Editor" runstate="Runnable" testcasecount="14" result="Passed" start-time="2026-09-25 20:42:44Z" end-time="2026-09-25 20:43:11Z" duration="27.208552" total="14" passed="14" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1029" name="BuildingArtPipeline" fullname="Weedtopia.Editor.BuildingArtPipeline" runstate="Runnable" testcasecount="14" result="Passed" start-time="2026-09-25 20:42:44Z" end-time="2026-09-25 20:43:11Z" duration="27.207963" total="14" passed="14" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestSuite" id="1030" name="Tests" fullname="Weedtopia.Editor.BuildingArtPipeline.Tests" runstate="Runnable" testcasecount="14" result="Passed" start-time="2026-09-25 20:42:44Z" end-time="2026-09-25 20:43:11Z" duration="27.207259" total="14" passed="14" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestFixture" id="1008" name="BuildingManifestTests" fullname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingManifestTests" classname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingManifestTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-09-25 20:42:44Z" end-time="2026-09-25 20:42:44Z" duration="0.113459" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1009" name="ManifestHasAll251UniqueSlotsAndContinuousBands" fullname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingManifestTests.ManifestHasAll251UniqueSlotsAndContinuousBands" methodname="ManifestHasAll251UniqueSlotsAndContinuousBands" classname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingManifestTests" runstate="Runnable" seed="1301502003" result="Passed" start-time="2026-09-25 20:42:44Z" end-time="2026-09-25 20:42:44Z" duration="0.059586" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1017" name="ManifestRejectsDuplicateIdentityWrongBandAndFaceBudget" fullname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingManifestTests.ManifestRejectsDuplicateIdentityWrongBandAndFaceBudget" methodname="ManifestRejectsDuplicateIdentityWrongBandAndFaceBudget" classname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingManifestTests" runstate="Runnable" seed="1709759426" result="Passed" start-time="2026-09-25 20:42:44Z" end-time="2026-09-25 20:42:44Z" duration="0.031217" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-suite type="ParameterizedMethod" id="1016" name="ManifestRejectsUnsafePaths" fullname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingManifestTests.ManifestRejectsUnsafePaths" classname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingManifestTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-09-25 20:42:44Z" end-time="2026-09-25 20:42:44Z" duration="0.004495" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+                  <properties />
+                  <test-case id="1010" name="ManifestRejectsUnsafePaths(&quot;../outside.png&quot;)" fullname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingManifestTests.ManifestRejectsUnsafePaths(&quot;../outside.png&quot;)" methodname="ManifestRejectsUnsafePaths" classname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingManifestTests" runstate="Runnable" seed="1724960463" result="Passed" start-time="2026-09-25 20:42:44Z" end-time="2026-09-25 20:42:44Z" duration="0.000443" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1011" name="ManifestRejectsUnsafePaths(&quot;Assets//test.prefab&quot;)" fullname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingManifestTests.ManifestRejectsUnsafePaths(&quot;Assets//test.prefab&quot;)" methodname="ManifestRejectsUnsafePaths" classname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingManifestTests" runstate="Runnable" seed="1009325191" result="Passed" start-time="2026-09-25 20:42:44Z" end-time="2026-09-25 20:42:44Z" duration="0.000088" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1012" name="ManifestRejectsUnsafePaths(&quot;Assets/./test.prefab&quot;)" fullname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingManifestTests.ManifestRejectsUnsafePaths(&quot;Assets/./test.prefab&quot;)" methodname="ManifestRejectsUnsafePaths" classname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingManifestTests" runstate="Runnable" seed="79533263" result="Passed" start-time="2026-09-25 20:42:44Z" end-time="2026-09-25 20:42:44Z" duration="0.000083" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1013" name="ManifestRejectsUnsafePaths(&quot;C:/outside.png&quot;)" fullname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingManifestTests.ManifestRejectsUnsafePaths(&quot;C:/outside.png&quot;)" methodname="ManifestRejectsUnsafePaths" classname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingManifestTests" runstate="Runnable" seed="1772482470" result="Passed" start-time="2026-09-25 20:42:44Z" end-time="2026-09-25 20:42:44Z" duration="0.000077" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1014" name="ManifestRejectsUnsafePaths(&quot;Assets\\test.prefab&quot;)" fullname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingManifestTests.ManifestRejectsUnsafePaths(&quot;Assets\\test.prefab&quot;)" methodname="ManifestRejectsUnsafePaths" classname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingManifestTests" runstate="Runnable" seed="1277431980" result="Passed" start-time="2026-09-25 20:42:44Z" end-time="2026-09-25 20:42:44Z" duration="0.000078" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1015" name="ManifestRejectsUnsafePaths(&quot;/absolute/path&quot;)" fullname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingManifestTests.ManifestRejectsUnsafePaths(&quot;/absolute/path&quot;)" methodname="ManifestRejectsUnsafePaths" classname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingManifestTests" runstate="Runnable" seed="754293585" result="Passed" start-time="2026-09-25 20:42:44Z" end-time="2026-09-25 20:42:44Z" duration="0.000077" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                </test-suite>
+                <test-case id="1018" name="RuntimeLookupUsesExactBandsAndNeverSpawnsObjects" fullname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingManifestTests.RuntimeLookupUsesExactBandsAndNeverSpawnsObjects" methodname="RuntimeLookupUsesExactBandsAndNeverSpawnsObjects" classname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingManifestTests" runstate="Runnable" seed="113496122" result="Passed" start-time="2026-09-25 20:42:44Z" end-time="2026-09-25 20:42:44Z" duration="0.001950" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-suite type="TestFixture" id="1019" name="BuildingScaffoldIntegrationTests" fullname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingScaffoldIntegrationTests" classname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingScaffoldIntegrationTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-09-25 20:42:44Z" end-time="2026-09-25 20:43:11Z" duration="27.065012" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1020" name="FullScaffoldSecondRunLeavesAll251PrefabsAndCatalogByteIdentical" fullname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingScaffoldIntegrationTests.FullScaffoldSecondRunLeavesAll251PrefabsAndCatalogByteIdentical" methodname="FullScaffoldSecondRunLeavesAll251PrefabsAndCatalogByteIdentical" classname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingScaffoldIntegrationTests" runstate="Runnable" seed="1717478167" result="Passed" start-time="2026-09-25 20:42:44Z" end-time="2026-09-25 20:43:10Z" duration="26.096235" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1021" name="ModelUpdatePreservesAuthoredOffsetsButRespectsNewSourceDefaults" fullname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingScaffoldIntegrationTests.ModelUpdatePreservesAuthoredOffsetsButRespectsNewSourceDefaults" methodname="ModelUpdatePreservesAuthoredOffsetsButRespectsNewSourceDefaults" classname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingScaffoldIntegrationTests" runstate="Runnable" seed="1267395759" result="Passed" start-time="2026-09-25 20:43:10Z" end-time="2026-09-25 20:43:10Z" duration="0.388007" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1022" name="ReplacementMissingManuallyAdjustedChildDoesNotSave" fullname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingScaffoldIntegrationTests.ReplacementMissingManuallyAdjustedChildDoesNotSave" methodname="ReplacementMissingManuallyAdjustedChildDoesNotSave" classname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingScaffoldIntegrationTests" runstate="Runnable" seed="1879917497" result="Passed" start-time="2026-09-25 20:43:10Z" end-time="2026-09-25 20:43:11Z" duration="0.332289" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1023" name="ValidatorDoesNotModifyAssetsOrSourceFiles" fullname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingScaffoldIntegrationTests.ValidatorDoesNotModifyAssetsOrSourceFiles" methodname="ValidatorDoesNotModifyAssetsOrSourceFiles" classname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingScaffoldIntegrationTests" runstate="Runnable" seed="667915053" result="Passed" start-time="2026-09-25 20:43:11Z" end-time="2026-09-25 20:43:11Z" duration="0.245453" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-suite type="TestFixture" id="1024" name="BuildingSpritePrototypeTests" fullname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingSpritePrototypeTests" classname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingSpritePrototypeTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-09-25 20:43:11Z" end-time="2026-09-25 20:43:11Z" duration="0.027123" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1025" name="TownHallPrototype_UsesBottomPivotSpriteAndNoMeshRenderer" fullname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingSpritePrototypeTests.TownHallPrototype_UsesBottomPivotSpriteAndNoMeshRenderer" methodname="TownHallPrototype_UsesBottomPivotSpriteAndNoMeshRenderer" classname="Weedtopia.Editor.BuildingArtPipeline.Tests.BuildingSpritePrototypeTests" runstate="Runnable" seed="426696229" result="Passed" start-time="2026-09-25 20:43:11Z" end-time="2026-09-25 20:43:11Z" duration="0.024662" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1062" name="Weedtopia.Game.AssetTests.dll" fullname="D:/Unity Games/Weedtopia Inc/WeedtopiaInc/Library/ScriptAssemblies/Weedtopia.Game.AssetTests.dll" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-09-25 20:43:11Z" end-time="2026-09-25 20:46:20Z" duration="188.768374" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="156464" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1063" name="Weedtopia" fullname="Weedtopia" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-09-25 20:43:11Z" end-time="2026-09-25 20:46:20Z" duration="188.767459" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1064" name="Tests" fullname="Weedtopia.Tests" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-09-25 20:43:11Z" end-time="2026-09-25 20:46:20Z" duration="188.766718" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1065" name="Assets" fullname="Weedtopia.Tests.Assets" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-09-25 20:43:11Z" end-time="2026-09-25 20:46:20Z" duration="188.765854" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1031" name="DirectionalMotionTests" fullname="Weedtopia.Tests.Assets.DirectionalMotionTests" classname="Weedtopia.Tests.Assets.DirectionalMotionTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-09-25 20:43:11Z" end-time="2026-09-25 20:43:16Z" duration="5.048481" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1032" name="EveryMovingInstanceHasCompleteViewsAndTheVanMatchesHumanScale" fullname="Weedtopia.Tests.Assets.DirectionalMotionTests.EveryMovingInstanceHasCompleteViewsAndTheVanMatchesHumanScale" methodname="EveryMovingInstanceHasCompleteViewsAndTheVanMatchesHumanScale" classname="Weedtopia.Tests.Assets.DirectionalMotionTests" runstate="Runnable" seed="1199797396" result="Passed" start-time="2026-09-25 20:43:11Z" end-time="2026-09-25 20:43:12Z" duration="0.847038" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1033" name="GroundDirectionDoesNotConfuseCameraForeshorteningOrReturnTrips" fullname="Weedtopia.Tests.Assets.DirectionalMotionTests.GroundDirectionDoesNotConfuseCameraForeshorteningOrReturnTrips" methodname="GroundDirectionDoesNotConfuseCameraForeshorteningOrReturnTrips" classname="Weedtopia.Tests.Assets.DirectionalMotionTests" runstate="Runnable" seed="311271027" result="Passed" start-time="2026-09-25 20:43:12Z" end-time="2026-09-25 20:43:12Z" duration="0.002332" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1034" name="ReapplyingDirectionalAuthoringPreservesSceneAndPrefabBytes" fullname="Weedtopia.Tests.Assets.DirectionalMotionTests.ReapplyingDirectionalAuthoringPreservesSceneAndPrefabBytes" methodname="ReapplyingDirectionalAuthoringPreservesSceneAndPrefabBytes" classname="Weedtopia.Tests.Assets.DirectionalMotionTests" runstate="Runnable" seed="1776640355" result="Passed" start-time="2026-09-25 20:43:12Z" end-time="2026-09-25 20:43:16Z" duration="4.197014" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1035" name="DistrictLayoutTests" fullname="Weedtopia.Tests.Assets.DistrictLayoutTests" classname="Weedtopia.Tests.Assets.DistrictLayoutTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-09-25 20:43:16Z" end-time="2026-09-25 20:43:16Z" duration="0.193048" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1036" name="AuthoredSelectionRespectsRotatedScaledBoxesAndRejectsMisses" fullname="Weedtopia.Tests.Assets.DistrictLayoutTests.AuthoredSelectionRespectsRotatedScaledBoxesAndRejectsMisses" methodname="AuthoredSelectionRespectsRotatedScaledBoxesAndRejectsMisses" classname="Weedtopia.Tests.Assets.DistrictLayoutTests" runstate="Runnable" seed="1482058785" result="Passed" start-time="2026-09-25 20:43:16Z" end-time="2026-09-25 20:43:16Z" duration="0.003108" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1037" name="DistrictsExpandAlongTheSketchAndClampAtBothEnds" fullname="Weedtopia.Tests.Assets.DistrictLayoutTests.DistrictsExpandAlongTheSketchAndClampAtBothEnds" methodname="DistrictsExpandAlongTheSketchAndClampAtBothEnds" classname="Weedtopia.Tests.Assets.DistrictLayoutTests" runstate="Runnable" seed="26248254" result="Passed" start-time="2026-09-25 20:43:16Z" end-time="2026-09-25 20:43:16Z" duration="0.002769" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1038" name="EveryExpandedWorkplaceHasARealSupplyRouteAndFarmNeedsTransport" fullname="Weedtopia.Tests.Assets.DistrictLayoutTests.EveryExpandedWorkplaceHasARealSupplyRouteAndFarmNeedsTransport" methodname="EveryExpandedWorkplaceHasARealSupplyRouteAndFarmNeedsTransport" classname="Weedtopia.Tests.Assets.DistrictLayoutTests" runstate="Runnable" seed="727724403" result="Passed" start-time="2026-09-25 20:43:16Z" end-time="2026-09-25 20:43:16Z" duration="0.016997" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1039" name="GameAssetTests" fullname="Weedtopia.Tests.Assets.GameAssetTests" classname="Weedtopia.Tests.Assets.GameAssetTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-09-25 20:43:16Z" end-time="2026-09-25 20:43:44Z" duration="27.527401" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1041" name="EveryLevelMapsToExistingCatalogWithNoGaps" fullname="Weedtopia.Tests.Assets.GameAssetTests.EveryLevelMapsToExistingCatalogWithNoGaps" methodname="EveryLevelMapsToExistingCatalogWithNoGaps" classname="Weedtopia.Tests.Assets.GameAssetTests" runstate="Runnable" seed="1850563064" result="Passed" start-time="2026-09-25 20:43:16Z" end-time="2026-09-25 20:43:17Z" duration="0.506820" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1043" name="IsolatedSpritePrototypesHaveAlphaGroundPivotAnchorsAndBoundedTextures" fullname="Weedtopia.Tests.Assets.GameAssetTests.IsolatedSpritePrototypesHaveAlphaGroundPivotAnchorsAndBoundedTextures" methodname="IsolatedSpritePrototypesHaveAlphaGroundPivotAnchorsAndBoundedTextures" classname="Weedtopia.Tests.Assets.GameAssetTests" runstate="Runnable" seed="288394495" result="Passed" start-time="2026-09-25 20:43:17Z" end-time="2026-09-25 20:43:17Z" duration="0.066271" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1040" name="SceneReferencesAndBuildConfigurationValidate" fullname="Weedtopia.Tests.Assets.GameAssetTests.SceneReferencesAndBuildConfigurationValidate" methodname="SceneReferencesAndBuildConfigurationValidate" classname="Weedtopia.Tests.Assets.GameAssetTests" runstate="Runnable" seed="1838663962" result="Passed" start-time="2026-09-25 20:43:17Z" end-time="2026-09-25 20:43:18Z" duration="1.765009" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1042" name="SecondGameScaffoldPreservesEveryAuthoredAssetByte" fullname="Weedtopia.Tests.Assets.GameAssetTests.SecondGameScaffoldPreservesEveryAuthoredAssetByte" methodname="SecondGameScaffoldPreservesEveryAuthoredAssetByte" classname="Weedtopia.Tests.Assets.GameAssetTests" runstate="Runnable" seed="1992216612" result="Passed" start-time="2026-09-25 20:43:18Z" end-time="2026-09-25 20:43:44Z" duration="25.184795" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1044" name="LivingHillsTests" fullname="Weedtopia.Tests.Assets.LivingHillsTests" classname="Weedtopia.Tests.Assets.LivingHillsTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-25 20:43:44Z" end-time="2026-09-25 20:43:48Z" duration="4.116835" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1046" name="ApplyingLivingHillsAgainPreservesTheEntireScene" fullname="Weedtopia.Tests.Assets.LivingHillsTests.ApplyingLivingHillsAgainPreservesTheEntireScene" methodname="ApplyingLivingHillsAgainPreservesTheEntireScene" classname="Weedtopia.Tests.Assets.LivingHillsTests" runstate="Runnable" seed="1847569555" result="Passed" start-time="2026-09-25 20:43:44Z" end-time="2026-09-25 20:43:46Z" duration="2.738630" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1045" name="TownLifeIsAuthoredReusableAndKeepsPedestriansOutsideBuildingParcels" fullname="Weedtopia.Tests.Assets.LivingHillsTests.TownLifeIsAuthoredReusableAndKeepsPedestriansOutsideBuildingParcels" methodname="TownLifeIsAuthoredReusableAndKeepsPedestriansOutsideBuildingParcels" classname="Weedtopia.Tests.Assets.LivingHillsTests" runstate="Runnable" seed="2101962797" result="Passed" start-time="2026-09-25 20:43:46Z" end-time="2026-09-25 20:43:48Z" duration="1.362800" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1047" name="NaturalEnvironmentTests" fullname="Weedtopia.Tests.Assets.NaturalEnvironmentTests" classname="Weedtopia.Tests.Assets.NaturalEnvironmentTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-25 20:43:48Z" end-time="2026-09-25 20:43:52Z" duration="4.127065" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1048" name="NaturalLandscapeIsSerializedWithReusableArtAndCannotInterceptBuildingInput" fullname="Weedtopia.Tests.Assets.NaturalEnvironmentTests.NaturalLandscapeIsSerializedWithReusableArtAndCannotInterceptBuildingInput" methodname="NaturalLandscapeIsSerializedWithReusableArtAndCannotInterceptBuildingInput" classname="Weedtopia.Tests.Assets.NaturalEnvironmentTests" runstate="Runnable" seed="329511731" result="Passed" start-time="2026-09-25 20:43:48Z" end-time="2026-09-25 20:43:49Z" duration="1.465729" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1049" name="ReapplyingNaturalLandscapePreservesAuthoredSceneBytes" fullname="Weedtopia.Tests.Assets.NaturalEnvironmentTests.ReapplyingNaturalLandscapePreservesAuthoredSceneBytes" methodname="ReapplyingNaturalLandscapePreservesAuthoredSceneBytes" classname="Weedtopia.Tests.Assets.NaturalEnvironmentTests" runstate="Runnable" seed="1346502786" result="Passed" start-time="2026-09-25 20:43:49Z" end-time="2026-09-25 20:43:52Z" duration="2.653982" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1050" name="ProductionPresentationTests" fullname="Weedtopia.Tests.Assets.ProductionPresentationTests" classname="Weedtopia.Tests.Assets.ProductionPresentationTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-09-25 20:43:52Z" end-time="2026-09-25 20:46:20Z" duration="147.750930" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1053" name="AuthoredWorldUsesAllCharactersRoutesAndOriginalAudioWithoutChangingContent" fullname="Weedtopia.Tests.Assets.ProductionPresentationTests.AuthoredWorldUsesAllCharactersRoutesAndOriginalAudioWithoutChangingContent" methodname="AuthoredWorldUsesAllCharactersRoutesAndOriginalAudioWithoutChangingContent" classname="Weedtopia.Tests.Assets.ProductionPresentationTests" runstate="Runnable" seed="934872708" result="Passed" start-time="2026-09-25 20:43:52Z" end-time="2026-09-25 20:43:53Z" duration="1.297594" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1052" name="EveryRoleAndRequiredIconHasAnImportedNonemptySprite" fullname="Weedtopia.Tests.Assets.ProductionPresentationTests.EveryRoleAndRequiredIconHasAnImportedNonemptySprite" methodname="EveryRoleAndRequiredIconHasAnImportedNonemptySprite" classname="Weedtopia.Tests.Assets.ProductionPresentationTests" runstate="Runnable" seed="1057921916" result="Passed" start-time="2026-09-25 20:43:53Z" end-time="2026-09-25 20:43:53Z" duration="0.005602" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1061" name="OldOrUnboundAcceptanceCannotOpenTheReleaseGate" fullname="Weedtopia.Tests.Assets.ProductionPresentationTests.OldOrUnboundAcceptanceCannotOpenTheReleaseGate" methodname="OldOrUnboundAcceptanceCannotOpenTheReleaseGate" classname="Weedtopia.Tests.Assets.ProductionPresentationTests" runstate="Runnable" seed="2108339840" result="Passed" start-time="2026-09-25 20:43:53Z" end-time="2026-09-25 20:43:53Z" duration="0.000395" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1060" name="PreflightIdentifiesForbiddenReferences" fullname="Weedtopia.Tests.Assets.ProductionPresentationTests.PreflightIdentifiesForbiddenReferences" classname="Weedtopia.Tests.Assets.ProductionPresentationTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-09-25 20:43:53Z" end-time="2026-09-25 20:43:53Z" duration="0.004120" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1055" name="PreflightIdentifiesForbiddenReferences(&quot;Assets/x/Development_city.prefab&quot;,True)" fullname="Weedtopia.Tests.Assets.ProductionPresentationTests.PreflightIdentifiesForbiddenReferences(&quot;Assets/x/Development_city.prefab&quot;,True)" methodname="PreflightIdentifiesForbiddenReferences" classname="Weedtopia.Tests.Assets.ProductionPresentationTests" runstate="Runnable" seed="1816948170" result="Passed" start-time="2026-09-25 20:43:53Z" end-time="2026-09-25 20:43:53Z" duration="0.000636" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1056" name="PreflightIdentifiesForbiddenReferences(&quot;Assets/x/DevelopmentVisuals.asset&quot;,True)" fullname="Weedtopia.Tests.Assets.ProductionPresentationTests.PreflightIdentifiesForbiddenReferences(&quot;Assets/x/DevelopmentVisuals.asset&quot;,True)" methodname="PreflightIdentifiesForbiddenReferences" classname="Weedtopia.Tests.Assets.ProductionPresentationTests" runstate="Runnable" seed="1017350133" result="Passed" start-time="2026-09-25 20:43:53Z" end-time="2026-09-25 20:43:53Z" duration="0.000110" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1057" name="PreflightIdentifiesForbiddenReferences(&quot;Assets/x/development_accept.wav&quot;,True)" fullname="Weedtopia.Tests.Assets.ProductionPresentationTests.PreflightIdentifiesForbiddenReferences(&quot;Assets/x/development_accept.wav&quot;,True)" methodname="PreflightIdentifiesForbiddenReferences" classname="Weedtopia.Tests.Assets.ProductionPresentationTests" runstate="Runnable" seed="1663688406" result="Passed" start-time="2026-09-25 20:43:53Z" end-time="2026-09-25 20:43:53Z" duration="0.000100" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1058" name="PreflightIdentifiesForbiddenReferences(&quot;Assets/Weedtopia/Game/VisualReview/Review_town.prefab&quot;,True)" fullname="Weedtopia.Tests.Assets.ProductionPresentationTests.PreflightIdentifiesForbiddenReferences(&quot;Assets/Weedtopia/Game/VisualReview/Review_town.prefab&quot;,True)" methodname="PreflightIdentifiesForbiddenReferences" classname="Weedtopia.Tests.Assets.ProductionPresentationTests" runstate="Runnable" seed="540740109" result="Passed" start-time="2026-09-25 20:43:53Z" end-time="2026-09-25 20:43:53Z" duration="0.000104" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1059" name="PreflightIdentifiesForbiddenReferences(&quot;Assets/Weedtopia/Production/Prefabs/Character_rocko.prefab&quot;,False)" fullname="Weedtopia.Tests.Assets.ProductionPresentationTests.PreflightIdentifiesForbiddenReferences(&quot;Assets/Weedtopia/Production/Prefabs/Character_rocko.prefab&quot;,False)" methodname="PreflightIdentifiesForbiddenReferences" classname="Weedtopia.Tests.Assets.ProductionPresentationTests" runstate="Runnable" seed="506497818" result="Passed" start-time="2026-09-25 20:43:53Z" end-time="2026-09-25 20:43:53Z" duration="0.000106" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1051" name="ProductionPreflightRecognizesApprovedSpritesAndKeepsIndependentReleaseGates" fullname="Weedtopia.Tests.Assets.ProductionPresentationTests.ProductionPreflightRecognizesApprovedSpritesAndKeepsIndependentReleaseGates" methodname="ProductionPreflightRecognizesApprovedSpritesAndKeepsIndependentReleaseGates" classname="Weedtopia.Tests.Assets.ProductionPresentationTests" runstate="Runnable" seed="196873512" result="Passed" start-time="2026-09-25 20:43:53Z" end-time="2026-09-25 20:44:46Z" duration="52.719216" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1054" name="ProductionReauthoringPreservesManualSceneAndPrefabBytes" fullname="Weedtopia.Tests.Assets.ProductionPresentationTests.ProductionReauthoringPreservesManualSceneAndPrefabBytes" methodname="ProductionReauthoringPreservesManualSceneAndPrefabBytes" classname="Weedtopia.Tests.Assets.ProductionPresentationTests" runstate="Runnable" seed="1926630854" result="Passed" start-time="2026-09-25 20:44:46Z" end-time="2026-09-25 20:46:20Z" duration="93.570641" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1113" name="Weedtopia.Game.EditModeTests.dll" fullname="D:/Unity Games/Weedtopia Inc/WeedtopiaInc/Library/ScriptAssemblies/Weedtopia.Game.EditModeTests.dll" runstate="Runnable" testcasecount="42" result="Passed" start-time="2026-09-25 20:46:20Z" end-time="2026-09-25 20:46:56Z" duration="36.046729" total="42" passed="42" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="156464" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1114" name="Weedtopia" fullname="Weedtopia" runstate="Runnable" testcasecount="42" result="Passed" start-time="2026-09-25 20:46:20Z" end-time="2026-09-25 20:46:56Z" duration="35.970779" total="42" passed="42" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1115" name="Tests" fullname="Weedtopia.Tests" runstate="Runnable" testcasecount="42" result="Passed" start-time="2026-09-25 20:46:20Z" end-time="2026-09-25 20:46:56Z" duration="35.969747" total="42" passed="42" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1066" name="BakeryDeliveryTests" fullname="Weedtopia.Tests.BakeryDeliveryTests" classname="Weedtopia.Tests.BakeryDeliveryTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-09-25 20:46:20Z" end-time="2026-09-25 20:46:21Z" duration="0.795473" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1067" name="BakerDrivesEmptyLoadsAtFactoryAndOnlyBakesAfterReturning" fullname="Weedtopia.Tests.BakeryDeliveryTests.BakerDrivesEmptyLoadsAtFactoryAndOnlyBakesAfterReturning" methodname="BakerDrivesEmptyLoadsAtFactoryAndOnlyBakesAfterReturning" classname="Weedtopia.Tests.BakeryDeliveryTests" runstate="Runnable" seed="2097852795" result="Passed" start-time="2026-09-25 20:46:20Z" end-time="2026-09-25 20:46:20Z" duration="0.043003" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1076" name="ExistingSavesWithoutPickupFieldsRemainReadable" fullname="Weedtopia.Tests.BakeryDeliveryTests.ExistingSavesWithoutPickupFieldsRemainReadable" methodname="ExistingSavesWithoutPickupFieldsRemainReadable" classname="Weedtopia.Tests.BakeryDeliveryTests" runstate="Runnable" seed="436333160" result="Passed" start-time="2026-09-25 20:46:20Z" end-time="2026-09-25 20:46:20Z" duration="0.009780" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1070" name="FullArrivalBufferCanDrainWhileTheVanWaitsAndCargoIsPreserved" fullname="Weedtopia.Tests.BakeryDeliveryTests.FullArrivalBufferCanDrainWhileTheVanWaitsAndCargoIsPreserved" methodname="FullArrivalBufferCanDrainWhileTheVanWaitsAndCargoIsPreserved" classname="Weedtopia.Tests.BakeryDeliveryTests" runstate="Runnable" seed="374038097" result="Passed" start-time="2026-09-25 20:46:20Z" end-time="2026-09-25 20:46:20Z" duration="0.029387" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1071" name="MissingReservedStockReturnsAnEmptyVanWithoutInventingADelivery" fullname="Weedtopia.Tests.BakeryDeliveryTests.MissingReservedStockReturnsAnEmptyVanWithoutInventingADelivery" methodname="MissingReservedStockReturnsAnEmptyVanWithoutInventingADelivery" classname="Weedtopia.Tests.BakeryDeliveryTests" runstate="Runnable" seed="888191816" result="Passed" start-time="2026-09-25 20:46:20Z" end-time="2026-09-25 20:46:20Z" duration="0.018795" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1069" name="MultipleBakersReserveWithoutDuplicatingOrLosingButter" fullname="Weedtopia.Tests.BakeryDeliveryTests.MultipleBakersReserveWithoutDuplicatingOrLosingButter" methodname="MultipleBakersReserveWithoutDuplicatingOrLosingButter" classname="Weedtopia.Tests.BakeryDeliveryTests" runstate="Runnable" seed="1948339175" result="Passed" start-time="2026-09-25 20:46:20Z" end-time="2026-09-25 20:46:20Z" duration="0.156141" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1068" name="NoBakerNoBeltAndNoPickupWhenTheDestinationIsStocked" fullname="Weedtopia.Tests.BakeryDeliveryTests.NoBakerNoBeltAndNoPickupWhenTheDestinationIsStocked" methodname="NoBakerNoBeltAndNoPickupWhenTheDestinationIsStocked" classname="Weedtopia.Tests.BakeryDeliveryTests" runstate="Runnable" seed="621674487" result="Passed" start-time="2026-09-25 20:46:20Z" end-time="2026-09-25 20:46:20Z" duration="0.028724" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1074" name="SaveReloadAndOfflineResumeEachLegExactly" fullname="Weedtopia.Tests.BakeryDeliveryTests.SaveReloadAndOfflineResumeEachLegExactly" classname="Weedtopia.Tests.BakeryDeliveryTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-25 20:46:20Z" end-time="2026-09-25 20:46:21Z" duration="0.499074" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1072" name="SaveReloadAndOfflineResumeEachLegExactly(True)" fullname="Weedtopia.Tests.BakeryDeliveryTests.SaveReloadAndOfflineResumeEachLegExactly(True)" methodname="SaveReloadAndOfflineResumeEachLegExactly" classname="Weedtopia.Tests.BakeryDeliveryTests" runstate="Runnable" seed="2030911561" result="Passed" start-time="2026-09-25 20:46:20Z" end-time="2026-09-25 20:46:20Z" duration="0.278894" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1073" name="SaveReloadAndOfflineResumeEachLegExactly(False)" fullname="Weedtopia.Tests.BakeryDeliveryTests.SaveReloadAndOfflineResumeEachLegExactly(False)" methodname="SaveReloadAndOfflineResumeEachLegExactly" classname="Weedtopia.Tests.BakeryDeliveryTests" runstate="Runnable" seed="1578426359" result="Passed" start-time="2026-09-25 20:46:20Z" end-time="2026-09-25 20:46:21Z" duration="0.218739" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1075" name="SavesRejectWrongCourierAndImpossiblePickupPhases" fullname="Weedtopia.Tests.BakeryDeliveryTests.SavesRejectWrongCourierAndImpossiblePickupPhases" methodname="SavesRejectWrongCourierAndImpossiblePickupPhases" classname="Weedtopia.Tests.BakeryDeliveryTests" runstate="Runnable" seed="1594961414" result="Passed" start-time="2026-09-25 20:46:21Z" end-time="2026-09-25 20:46:21Z" duration="0.006660" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1077" name="DomainTests" fullname="Weedtopia.Tests.DomainTests" classname="Weedtopia.Tests.DomainTests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-09-25 20:46:21Z" end-time="2026-09-25 20:46:21Z" duration="0.109472" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1079" name="All5001LevelsResolveContiguousExactBands" fullname="Weedtopia.Tests.DomainTests.All5001LevelsResolveContiguousExactBands" methodname="All5001LevelsResolveContiguousExactBands" classname="Weedtopia.Tests.DomainTests" runstate="Runnable" seed="272229237" result="Passed" start-time="2026-09-25 20:46:21Z" end-time="2026-09-25 20:46:21Z" duration="0.031948" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1078" name="AmountArithmeticOrderingAndInvariantRoundtrip" fullname="Weedtopia.Tests.DomainTests.AmountArithmeticOrderingAndInvariantRoundtrip" methodname="AmountArithmeticOrderingAndInvariantRoundtrip" classname="Weedtopia.Tests.DomainTests" runstate="Runnable" seed="437477894" result="Passed" start-time="2026-09-25 20:46:21Z" end-time="2026-09-25 20:46:21Z" duration="0.002287" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1080" name="CurvesRemainMonotoneBeyondDoubleRange" fullname="Weedtopia.Tests.DomainTests.CurvesRemainMonotoneBeyondDoubleRange" methodname="CurvesRemainMonotoneBeyondDoubleRange" classname="Weedtopia.Tests.DomainTests" runstate="Runnable" seed="147918527" result="Passed" start-time="2026-09-25 20:46:21Z" end-time="2026-09-25 20:46:21Z" duration="0.010352" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1088" name="DriverCannotBeRemovedDuringTripAndBlockedCargoIsRetained" fullname="Weedtopia.Tests.DomainTests.DriverCannotBeRemovedDuringTripAndBlockedCargoIsRetained" methodname="DriverCannotBeRemovedDuringTripAndBlockedCargoIsRetained" classname="Weedtopia.Tests.DomainTests" runstate="Runnable" seed="196310652" result="Passed" start-time="2026-09-25 20:46:21Z" end-time="2026-09-25 20:46:21Z" duration="0.003347" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1083" name="FullBuffersAndInFlightCargoConserveMass" fullname="Weedtopia.Tests.DomainTests.FullBuffersAndInFlightCargoConserveMass" methodname="FullBuffersAndInFlightCargoConserveMass" classname="Weedtopia.Tests.DomainTests" runstate="Runnable" seed="2059574262" result="Passed" start-time="2026-09-25 20:46:21Z" end-time="2026-09-25 20:46:21Z" duration="0.043944" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1082" name="ManualCropStopsAtCapacityAndManagerEnablesTransfer" fullname="Weedtopia.Tests.DomainTests.ManualCropStopsAtCapacityAndManagerEnablesTransfer" methodname="ManualCropStopsAtCapacityAndManagerEnablesTransfer" classname="Weedtopia.Tests.DomainTests" runstate="Runnable" seed="1009825166" result="Passed" start-time="2026-09-25 20:46:21Z" end-time="2026-09-25 20:46:21Z" duration="0.001733" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1086" name="MoneyConstructionAndInsufficientGrindersAreAtomic" fullname="Weedtopia.Tests.DomainTests.MoneyConstructionAndInsufficientGrindersAreAtomic" methodname="MoneyConstructionAndInsufficientGrindersAreAtomic" classname="Weedtopia.Tests.DomainTests" runstate="Runnable" seed="659319896" result="Passed" start-time="2026-09-25 20:46:21Z" end-time="2026-09-25 20:46:21Z" duration="0.002200" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1085" name="PremiumRequiresSingleUseConfirmationAndCancelDoesNotSpend" fullname="Weedtopia.Tests.DomainTests.PremiumRequiresSingleUseConfirmationAndCancelDoesNotSpend" methodname="PremiumRequiresSingleUseConfirmationAndCancelDoesNotSpend" classname="Weedtopia.Tests.DomainTests" runstate="Runnable" seed="292521834" result="Passed" start-time="2026-09-25 20:46:21Z" end-time="2026-09-25 20:46:21Z" duration="0.000543" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1084" name="RenderFramePartitionDoesNotChangeSimulation" fullname="Weedtopia.Tests.DomainTests.RenderFramePartitionDoesNotChangeSimulation" methodname="RenderFramePartitionDoesNotChangeSimulation" classname="Weedtopia.Tests.DomainTests" runstate="Runnable" seed="2079021982" result="Passed" start-time="2026-09-25 20:46:21Z" end-time="2026-09-25 20:46:21Z" duration="0.003376" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1087" name="RolesRarityAssignmentSwapAndDriverTiers" fullname="Weedtopia.Tests.DomainTests.RolesRarityAssignmentSwapAndDriverTiers" methodname="RolesRarityAssignmentSwapAndDriverTiers" classname="Weedtopia.Tests.DomainTests" runstate="Runnable" seed="1934065326" result="Passed" start-time="2026-09-25 20:46:21Z" end-time="2026-09-25 20:46:21Z" duration="0.000765" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1081" name="SeededRandomReplaysAndRejectsInvalidRange" fullname="Weedtopia.Tests.DomainTests.SeededRandomReplaysAndRejectsInvalidRange" methodname="SeededRandomReplaysAndRejectsInvalidRange" classname="Weedtopia.Tests.DomainTests" runstate="Runnable" seed="1548259218" result="Passed" start-time="2026-09-25 20:46:21Z" end-time="2026-09-25 20:46:21Z" duration="0.002994" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1089" name="WorkerLevelAndRankCapsAreIndependent" fullname="Weedtopia.Tests.DomainTests.WorkerLevelAndRankCapsAreIndependent" methodname="WorkerLevelAndRankCapsAreIndependent" classname="Weedtopia.Tests.DomainTests" runstate="Runnable" seed="1163884480" result="Passed" start-time="2026-09-25 20:46:21Z" end-time="2026-09-25 20:46:21Z" duration="0.000991" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1090" name="PersistenceTests" fullname="Weedtopia.Tests.PersistenceTests" classname="Weedtopia.Tests.PersistenceTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-09-25 20:46:21Z" end-time="2026-09-25 20:46:55Z" duration="34.032496" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1093" name="CorruptMainRecoversAndSavingDoesNotOverwriteValidBackupWithCorruption" fullname="Weedtopia.Tests.PersistenceTests.CorruptMainRecoversAndSavingDoesNotOverwriteValidBackupWithCorruption" methodname="CorruptMainRecoversAndSavingDoesNotOverwriteValidBackupWithCorruption" classname="Weedtopia.Tests.PersistenceTests" runstate="Runnable" seed="567174472" result="Passed" start-time="2026-09-25 20:46:21Z" end-time="2026-09-25 20:46:21Z" duration="0.066712" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1092" name="FullTutorialSaveRoundtripIncludesChoicesWorkersCargoAndStats" fullname="Weedtopia.Tests.PersistenceTests.FullTutorialSaveRoundtripIncludesChoicesWorkersCargoAndStats" methodname="FullTutorialSaveRoundtripIncludesChoicesWorkersCargoAndStats" classname="Weedtopia.Tests.PersistenceTests" runstate="Runnable" seed="1295620988" result="Passed" start-time="2026-09-25 20:46:21Z" end-time="2026-09-25 20:46:21Z" duration="0.401242" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1095" name="InvalidAssignmentsAndNanNeverReachDisk" fullname="Weedtopia.Tests.PersistenceTests.InvalidAssignmentsAndNanNeverReachDisk" methodname="InvalidAssignmentsAndNanNeverReachDisk" classname="Weedtopia.Tests.PersistenceTests" runstate="Runnable" seed="1670814657" result="Passed" start-time="2026-09-25 20:46:21Z" end-time="2026-09-25 20:46:21Z" duration="0.003990" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1097" name="LocalLeaderboardPersistsBestAndOnlineAdapterRemainsDisabled" fullname="Weedtopia.Tests.PersistenceTests.LocalLeaderboardPersistsBestAndOnlineAdapterRemainsDisabled" methodname="LocalLeaderboardPersistsBestAndOnlineAdapterRemainsDisabled" classname="Weedtopia.Tests.PersistenceTests" runstate="Runnable" seed="2065457355" result="Passed" start-time="2026-09-25 20:46:21Z" end-time="2026-09-25 20:46:21Z" duration="0.012929" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1096" name="OfflineUsesSameSimulationCapsDurationAndDoesNotRewardRepeatedLoadOrRollback" fullname="Weedtopia.Tests.PersistenceTests.OfflineUsesSameSimulationCapsDurationAndDoesNotRewardRepeatedLoadOrRollback" methodname="OfflineUsesSameSimulationCapsDurationAndDoesNotRewardRepeatedLoadOrRollback" classname="Weedtopia.Tests.PersistenceTests" runstate="Runnable" seed="1559200679" result="Passed" start-time="2026-09-25 20:46:21Z" end-time="2026-09-25 20:46:55Z" duration="33.481485" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1091" name="PreviousDistrictSaveAddsOnlyNewPlotsAndPreservesProgressAndCargo" fullname="Weedtopia.Tests.PersistenceTests.PreviousDistrictSaveAddsOnlyNewPlotsAndPreservesProgressAndCargo" methodname="PreviousDistrictSaveAddsOnlyNewPlotsAndPreservesProgressAndCargo" classname="Weedtopia.Tests.PersistenceTests" runstate="Runnable" seed="914277383" result="Passed" start-time="2026-09-25 20:46:55Z" end-time="2026-09-25 20:46:55Z" duration="0.042341" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1094" name="SchemaOneMigratesAndFutureVersionIsRejected" fullname="Weedtopia.Tests.PersistenceTests.SchemaOneMigratesAndFutureVersionIsRejected" methodname="SchemaOneMigratesAndFutureVersionIsRejected" classname="Weedtopia.Tests.PersistenceTests" runstate="Runnable" seed="748449818" result="Passed" start-time="2026-09-25 20:46:55Z" end-time="2026-09-25 20:46:55Z" duration="0.020410" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1098" name="ProgressionTests" fullname="Weedtopia.Tests.ProgressionTests" classname="Weedtopia.Tests.ProgressionTests" runstate="Runnable" testcasecount="14" result="Passed" start-time="2026-09-25 20:46:55Z" end-time="2026-09-25 20:46:56Z" duration="1.030171" total="14" passed="14" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1099" name="AuthoredContentAndAllCurvesAreValid" fullname="Weedtopia.Tests.ProgressionTests.AuthoredContentAndAllCurvesAreValid" methodname="AuthoredContentAndAllCurvesAreValid" classname="Weedtopia.Tests.ProgressionTests" runstate="Runnable" seed="1855702162" result="Passed" start-time="2026-09-25 20:46:55Z" end-time="2026-09-25 20:46:55Z" duration="0.301056" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1112" name="AuthoredGermanTextPreservesUnicodeAcrossContentImport" fullname="Weedtopia.Tests.ProgressionTests.AuthoredGermanTextPreservesUnicodeAcrossContentImport" methodname="AuthoredGermanTextPreservesUnicodeAcrossContentImport" classname="Weedtopia.Tests.ProgressionTests" runstate="Runnable" seed="2084110428" result="Passed" start-time="2026-09-25 20:46:55Z" end-time="2026-09-25 20:46:55Z" duration="0.004564" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1101" name="DailyBoundariesCatchupAndClockRollbackAreDefensive" fullname="Weedtopia.Tests.ProgressionTests.DailyBoundariesCatchupAndClockRollbackAreDefensive" methodname="DailyBoundariesCatchupAndClockRollbackAreDefensive" classname="Weedtopia.Tests.ProgressionTests" runstate="Runnable" seed="1508609809" result="Passed" start-time="2026-09-25 20:46:55Z" end-time="2026-09-25 20:46:55Z" duration="0.004886" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1107" name="DailyUpgradeDoesNotMultiplyPastDaysAndMidnightIsSingleClaim" fullname="Weedtopia.Tests.ProgressionTests.DailyUpgradeDoesNotMultiplyPastDaysAndMidnightIsSingleClaim" methodname="DailyUpgradeDoesNotMultiplyPastDaysAndMidnightIsSingleClaim" classname="Weedtopia.Tests.ProgressionTests" runstate="Runnable" seed="1151037803" result="Passed" start-time="2026-09-25 20:46:55Z" end-time="2026-09-25 20:46:55Z" duration="0.004520" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1106" name="EveryRoleRarityUsesExactlyItsRelevantAttributePool" fullname="Weedtopia.Tests.ProgressionTests.EveryRoleRarityUsesExactlyItsRelevantAttributePool" methodname="EveryRoleRarityUsesExactlyItsRelevantAttributePool" classname="Weedtopia.Tests.ProgressionTests" runstate="Runnable" seed="976593907" result="Passed" start-time="2026-09-25 20:46:55Z" end-time="2026-09-25 20:46:55Z" duration="0.003649" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1100" name="FullTutorialReachesFreeplayWithoutPremiumOrStateInjection" fullname="Weedtopia.Tests.ProgressionTests.FullTutorialReachesFreeplayWithoutPremiumOrStateInjection" methodname="FullTutorialReachesFreeplayWithoutPremiumOrStateInjection" classname="Weedtopia.Tests.ProgressionTests" runstate="Runnable" seed="1630117930" result="Passed" start-time="2026-09-25 20:46:55Z" end-time="2026-09-25 20:46:55Z" duration="0.210293" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1102" name="LastPlotProtectsMissingTutorialChoiceAndChoiceIsPermanent" fullname="Weedtopia.Tests.ProgressionTests.LastPlotProtectsMissingTutorialChoiceAndChoiceIsPermanent" methodname="LastPlotProtectsMissingTutorialChoiceAndChoiceIsPermanent" classname="Weedtopia.Tests.ProgressionTests" runstate="Runnable" seed="1820462522" result="Passed" start-time="2026-09-25 20:46:55Z" end-time="2026-09-25 20:46:55Z" duration="0.007523" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1110" name="MissingQuestReferencesAndDuplicateIdsAreRejected" fullname="Weedtopia.Tests.ProgressionTests.MissingQuestReferencesAndDuplicateIdsAreRejected" methodname="MissingQuestReferencesAndDuplicateIdsAreRejected" classname="Weedtopia.Tests.ProgressionTests" runstate="Runnable" seed="2074676369" result="Passed" start-time="2026-09-25 20:46:55Z" end-time="2026-09-25 20:46:55Z" duration="0.007810" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1105" name="NewGameNameIntroReplayAndPauseDoNotDuplicateStartResources" fullname="Weedtopia.Tests.ProgressionTests.NewGameNameIntroReplayAndPauseDoNotDuplicateStartResources" methodname="NewGameNameIntroReplayAndPauseDoNotDuplicateStartResources" classname="Weedtopia.Tests.ProgressionTests" runstate="Runnable" seed="1805983576" result="Passed" start-time="2026-09-25 20:46:55Z" end-time="2026-09-25 20:46:55Z" duration="0.004793" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1109" name="OptionalSecondCropAndBakeryDoNotAddUnfundedTutorialManagerRequirements" fullname="Weedtopia.Tests.ProgressionTests.OptionalSecondCropAndBakeryDoNotAddUnfundedTutorialManagerRequirements" methodname="OptionalSecondCropAndBakeryDoNotAddUnfundedTutorialManagerRequirements" classname="Weedtopia.Tests.ProgressionTests" runstate="Runnable" seed="102793786" result="Passed" start-time="2026-09-25 20:46:55Z" end-time="2026-09-25 20:46:55Z" duration="0.250029" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1104" name="OverspendingRecoveryIsTimeLimitedAndDoesNotSpendPremium" fullname="Weedtopia.Tests.ProgressionTests.OverspendingRecoveryIsTimeLimitedAndDoesNotSpendPremium" methodname="OverspendingRecoveryIsTimeLimitedAndDoesNotSpendPremium" classname="Weedtopia.Tests.ProgressionTests" runstate="Runnable" seed="134512079" result="Passed" start-time="2026-09-25 20:46:55Z" end-time="2026-09-25 20:46:55Z" duration="0.004121" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1111" name="QuestRewardsContributeToLifetimeEarningsOnlyOnce" fullname="Weedtopia.Tests.ProgressionTests.QuestRewardsContributeToLifetimeEarningsOnlyOnce" methodname="QuestRewardsContributeToLifetimeEarningsOnlyOnce" classname="Weedtopia.Tests.ProgressionTests" runstate="Runnable" seed="1427174497" result="Passed" start-time="2026-09-25 20:46:55Z" end-time="2026-09-25 20:46:55Z" duration="0.008606" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1103" name="SpinConsumesOneCardAndReplaysExactly" fullname="Weedtopia.Tests.ProgressionTests.SpinConsumesOneCardAndReplaysExactly" methodname="SpinConsumesOneCardAndReplaysExactly" classname="Weedtopia.Tests.ProgressionTests" runstate="Runnable" seed="1884908051" result="Passed" start-time="2026-09-25 20:46:55Z" end-time="2026-09-25 20:46:56Z" duration="0.004209" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1108" name="VipGoalsAreReachableFromFarmAndRewardsCannotBeClaimedTwice" fullname="Weedtopia.Tests.ProgressionTests.VipGoalsAreReachableFromFarmAndRewardsCannotBeClaimedTwice" methodname="VipGoalsAreReachableFromFarmAndRewardsCannotBeClaimedTwice" classname="Weedtopia.Tests.ProgressionTests" runstate="Runnable" seed="577265730" result="Passed" start-time="2026-09-25 20:46:56Z" end-time="2026-09-25 20:46:56Z" duration="0.208153" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/Mein-PC/AppData/LocalLow/DefaultCompany/WeedtopiaInc\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

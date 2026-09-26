@@ -1,0 +1,18 @@
+{
+  "primary_workflow": "image_to_3d",
+  "fallback_workflow": "text_to_3d",
+  "model_type": "smart-topology",
+  "model_type_availability": "Select only if present; current web UI not inspected.",
+  "topology": "triangles",
+  "target_faces": 9250,
+  "target_faces_reason_de": "9250 Faces für die lesbare Silhouette dieser Stufe; höheres Budget für gestapelte Hallen, Kuppeln und rekonstruierbare Anschlüsse.",
+  "texture_resolution": 2048,
+  "pbr": true,
+  "rigging": false,
+  "animation": false,
+  "recommended_export": "FBX with complete texture folder",
+  "unity_scale": "1 unit = 1 meter",
+  "unity_up_axis": "+Y",
+  "unity_forward_axis": "+Z",
+  "pivot_intent": "ground center"
+}

@@ -1,0 +1,91 @@
+{
+  "sites": 56,
+  "routes": 35,
+  "preservedIds": [
+    "farm_grow_01",
+    "farm_grow_02",
+    "farm_processing",
+    "farm_warehouse",
+    "city_warehouse",
+    "town_hall",
+    "coffee_01",
+    "coffee_02",
+    "settlement_01",
+    "settlement_02",
+    "settlement_03",
+    "settlement_04",
+    "butter_factory",
+    "supermarket",
+    "bakery_01",
+    "bakery_02"
+  ],
+  "districts": [
+    {
+      "zone": 0,
+      "label": "Farm · Anbau nach rechts",
+      "start": {
+        "x": 265,
+        "y": -45
+      },
+      "end": {
+        "x": 552,
+        "y": -45
+      },
+      "direction": {
+        "x": 1,
+        "y": 0
+      }
+    },
+    {
+      "zone": 1,
+      "label": "Stadt · Shops nach unten",
+      "start": {
+        "x": 34,
+        "y": -12
+      },
+      "end": {
+        "x": 34,
+        "y": -214
+      },
+      "direction": {
+        "x": 0,
+        "y": -1
+      }
+    },
+    {
+      "zone": 2,
+      "label": "Siedlung · Plätze nach oben",
+      "start": {
+        "x": 34,
+        "y": 96
+      },
+      "end": {
+        "x": 34,
+        "y": 356
+      },
+      "direction": {
+        "x": 0,
+        "y": 1
+      }
+    },
+    {
+      "zone": 3,
+      "label": "Industrie · Bäcker nach links",
+      "start": {
+        "x": -94,
+        "y": 30
+      },
+      "end": {
+        "x": -204,
+        "y": 30
+      },
+      "direction": {
+        "x": -1,
+        "y": 0
+      }
+    }
+  ],
+  "farmCityTripSeconds": 15,
+  "simulationCurvesChanged": false,
+  "cameraStartRefinement": "Farm start framed at u=265 to include processing and warehouse; farm plots remain u=300..552."
+}

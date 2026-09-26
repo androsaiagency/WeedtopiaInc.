@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="13" result="Failed(Child)" total="13" passed="0" failed="13" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-26 09:33:22Z" end-time="2026-09-26 09:33:33Z" duration="11,3521737">
+  <test-suite type="TestSuite" id="1042" name="WeedtopiaInc" fullname="WeedtopiaInc" runstate="Runnable" testcasecount="32" result="Failed" site="Child" start-time="2026-09-26 09:33:22Z" end-time="2026-09-26 09:33:33Z" duration="11.352174" total="13" passed="0" failed="13" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1038" name="Weedtopia.Game.PlayModeTests.dll" fullname="D:/Unity Games/Weedtopia Inc/WeedtopiaInc/Library/ScriptAssemblies/Weedtopia.Game.PlayModeTests.dll" runstate="Runnable" testcasecount="32" result="Failed" site="Child" start-time="2026-09-26 09:33:22Z" end-time="2026-09-26 09:33:33Z" duration="11.342415" total="13" passed="0" failed="13" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="155392" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1039" name="Weedtopia" fullname="Weedtopia" runstate="Runnable" testcasecount="32" result="Failed" site="Child" start-time="2026-09-26 09:33:22Z" end-time="2026-09-26 09:33:33Z" duration="11.340977" total="13" passed="0" failed="13" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1040" name="Tests" fullname="Weedtopia.Tests" runstate="Runnable" testcasecount="32" result="Failed" site="Child" start-time="2026-09-26 09:33:22Z" end-time="2026-09-26 09:33:33Z" duration="11.339970" total="13" passed="0" failed="13" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1041" name="PlayMode" fullname="Weedtopia.Tests.PlayMode" runstate="Runnable" testcasecount="32" result="Failed" site="Child" start-time="2026-09-26 09:33:22Z" end-time="2026-09-26 09:33:33Z" duration="11.338943" total="13" passed="0" failed="13" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="1004" name="BuildingInteractionTests" fullname="Weedtopia.Tests.PlayMode.BuildingInteractionTests" classname="Weedtopia.Tests.PlayMode.BuildingInteractionTests" runstate="Runnable" testcasecount="13" result="Failed" site="Child" start-time="2026-09-26 09:33:22Z" end-time="2026-09-26 09:33:33Z" duration="11.336322" total="13" passed="0" failed="13" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1007" name="DiagonalTouchCanLeaveEveryDistrictAxis" fullname="Weedtopia.Tests.PlayMode.BuildingInteractionTests.DiagonalTouchCanLeaveEveryDistrictAxis" methodname="DiagonalTouchCanLeaveEveryDistrictAxis" classname="Weedtopia.Tests.PlayMode.BuildingInteractionTests" runstate="Runnable" seed="610445515" result="Failed" start-time="2026-09-26 09:33:22Z" end-time="2026-09-26 09:33:23Z" duration="1.255287" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[SetUp : Unhandled log message: '[Exception] MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                  <stack-trace><![CDATA[UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></output>
+              </test-case>
+              <test-case id="1014" name="EveryAssignmentPickerContainsOnlyCompatibleRolesAndButtonsAssignRemove" fullname="Weedtopia.Tests.PlayMode.BuildingInteractionTests.EveryAssignmentPickerContainsOnlyCompatibleRolesAndButtonsAssignRemove" methodname="EveryAssignmentPickerContainsOnlyCompatibleRolesAndButtonsAssignRemove" classname="Weedtopia.Tests.PlayMode.BuildingInteractionTests" runstate="Runnable" seed="1647861407" result="Failed" start-time="2026-09-26 09:33:23Z" end-time="2026-09-26 09:33:24Z" duration="0.832352" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[SetUp : Unhandled log message: '[Exception] MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                  <stack-trace><![CDATA[UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></output>
+              </test-case>
+              <test-case id="1015" name="FleetShowsUnlockedSlotsAndProtectsDriversInTransit" fullname="Weedtopia.Tests.PlayMode.BuildingInteractionTests.FleetShowsUnlockedSlotsAndProtectsDriversInTransit" methodname="FleetShowsUnlockedSlotsAndProtectsDriversInTransit" classname="Weedtopia.Tests.PlayMode.BuildingInteractionTests" runstate="Runnable" seed="863714683" result="Failed" start-time="2026-09-26 09:33:24Z" end-time="2026-09-26 09:33:25Z" duration="0.832945" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[SetUp : Unhandled log message: '[Exception] MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                  <stack-trace><![CDATA[UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></output>
+              </test-case>
+              <test-case id="1005" name="FreeWorldHasNoPersistentPanelsOrPositionScrollbar" fullname="Weedtopia.Tests.PlayMode.BuildingInteractionTests.FreeWorldHasNoPersistentPanelsOrPositionScrollbar" methodname="FreeWorldHasNoPersistentPanelsOrPositionScrollbar" classname="Weedtopia.Tests.PlayMode.BuildingInteractionTests" runstate="Runnable" seed="1748909743" result="Failed" start-time="2026-09-26 09:33:25Z" end-time="2026-09-26 09:33:25Z" duration="0.841791" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[SetUp : Unhandled log message: '[Exception] MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                  <stack-trace><![CDATA[UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></output>
+              </test-case>
+              <test-case id="1013" name="GesturesThatStartOnInspectorStayCapturedByUi" fullname="Weedtopia.Tests.PlayMode.BuildingInteractionTests.GesturesThatStartOnInspectorStayCapturedByUi" methodname="GesturesThatStartOnInspectorStayCapturedByUi" classname="Weedtopia.Tests.PlayMode.BuildingInteractionTests" runstate="Runnable" seed="1257845377" result="Failed" start-time="2026-09-26 09:33:25Z" end-time="2026-09-26 09:33:26Z" duration="0.831979" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[SetUp : Unhandled log message: '[Exception] MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                  <stack-trace><![CDATA[UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></output>
+              </test-case>
+              <test-case id="1017" name="ImmediateTierSwapFramesTheCurrentLargestBuildingWithoutClipping" fullname="Weedtopia.Tests.PlayMode.BuildingInteractionTests.ImmediateTierSwapFramesTheCurrentLargestBuildingWithoutClipping" methodname="ImmediateTierSwapFramesTheCurrentLargestBuildingWithoutClipping" classname="Weedtopia.Tests.PlayMode.BuildingInteractionTests" runstate="Runnable" seed="1695286864" result="Failed" start-time="2026-09-26 09:33:26Z" end-time="2026-09-26 09:33:27Z" duration="0.854863" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[SetUp : Unhandled log message: '[Exception] MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                  <stack-trace><![CDATA[UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></output>
+              </test-case>
+              <test-case id="1006" name="MouseSwipeMovesEveryDistrictWithoutClickingABuilding" fullname="Weedtopia.Tests.PlayMode.BuildingInteractionTests.MouseSwipeMovesEveryDistrictWithoutClickingABuilding" methodname="MouseSwipeMovesEveryDistrictWithoutClickingABuilding" classname="Weedtopia.Tests.PlayMode.BuildingInteractionTests" runstate="Runnable" seed="41177917" result="Failed" start-time="2026-09-26 09:33:27Z" end-time="2026-09-26 09:33:28Z" duration="0.837700" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[SetUp : Unhandled log message: '[Exception] MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                  <stack-trace><![CDATA[UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></output>
+              </test-case>
+              <test-case id="1011" name="MouseTapFramesBuildingOnRightAndCloseRestoresPreviousView" fullname="Weedtopia.Tests.PlayMode.BuildingInteractionTests.MouseTapFramesBuildingOnRightAndCloseRestoresPreviousView" methodname="MouseTapFramesBuildingOnRightAndCloseRestoresPreviousView" classname="Weedtopia.Tests.PlayMode.BuildingInteractionTests" runstate="Runnable" seed="264013148" result="Failed" start-time="2026-09-26 09:33:28Z" end-time="2026-09-26 09:33:29Z" duration="0.851466" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[SetUp : Unhandled log message: '[Exception] MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                  <stack-trace><![CDATA[UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></output>
+              </test-case>
+              <test-case id="1009" name="NavigationButtonsWorkByTouchAndPreserveLockedProgression" fullname="Weedtopia.Tests.PlayMode.BuildingInteractionTests.NavigationButtonsWorkByTouchAndPreserveLockedProgression" methodname="NavigationButtonsWorkByTouchAndPreserveLockedProgression" classname="Weedtopia.Tests.PlayMode.BuildingInteractionTests" runstate="Runnable" seed="24654681" result="Failed" start-time="2026-09-26 09:33:29Z" end-time="2026-09-26 09:33:30Z" duration="0.842877" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[SetUp : Unhandled log message: '[Exception] MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                  <stack-trace><![CDATA[UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></output>
+              </test-case>
+              <test-case id="1008" name="TouchCrossesRiverAndReachesAllFourWorldEdgesWithoutMenu" fullname="Weedtopia.Tests.PlayMode.BuildingInteractionTests.TouchCrossesRiverAndReachesAllFourWorldEdgesWithoutMenu" methodname="TouchCrossesRiverAndReachesAllFourWorldEdgesWithoutMenu" classname="Weedtopia.Tests.PlayMode.BuildingInteractionTests" runstate="Runnable" seed="1505639410" result="Failed" start-time="2026-09-26 09:33:30Z" end-time="2026-09-26 09:33:31Z" duration="0.830046" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[SetUp : Unhandled log message: '[Exception] MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                  <stack-trace><![CDATA[UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></output>
+              </test-case>
+              <test-case id="1010" name="TouchStartingOnRoundNavigationCannotDragWorldOrClickOnReleaseElsewhere" fullname="Weedtopia.Tests.PlayMode.BuildingInteractionTests.TouchStartingOnRoundNavigationCannotDragWorldOrClickOnReleaseElsewhere" methodname="TouchStartingOnRoundNavigationCannotDragWorldOrClickOnReleaseElsewhere" classname="Weedtopia.Tests.PlayMode.BuildingInteractionTests" runstate="Runnable" seed="1890420559" result="Failed" start-time="2026-09-26 09:33:31Z" end-time="2026-09-26 09:33:31Z" duration="0.839592" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[SetUp : Unhandled log message: '[Exception] MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                  <stack-trace><![CDATA[UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></output>
+              </test-case>
+              <test-case id="1012" name="TouchSwipeAndPinchNeverDispatchAccidentalBuildingTaps" fullname="Weedtopia.Tests.PlayMode.BuildingInteractionTests.TouchSwipeAndPinchNeverDispatchAccidentalBuildingTaps" methodname="TouchSwipeAndPinchNeverDispatchAccidentalBuildingTaps" classname="Weedtopia.Tests.PlayMode.BuildingInteractionTests" runstate="Runnable" seed="708695600" result="Failed" start-time="2026-09-26 09:33:31Z" end-time="2026-09-26 09:33:32Z" duration="0.834798" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[SetUp : Unhandled log message: '[Exception] MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                  <stack-trace><![CDATA[UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></output>
+              </test-case>
+              <test-case id="1016" name="UpgradePreviewMatchesActualPostUpgradeRateAndPreservesStateWhileReading" fullname="Weedtopia.Tests.PlayMode.BuildingInteractionTests.UpgradePreviewMatchesActualPostUpgradeRateAndPreservesStateWhileReading" methodname="UpgradePreviewMatchesActualPostUpgradeRateAndPreservesStateWhileReading" classname="Weedtopia.Tests.PlayMode.BuildingInteractionTests" runstate="Runnable" seed="912596482" result="Failed" start-time="2026-09-26 09:33:32Z" end-time="2026-09-26 09:33:33Z" duration="0.829851" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[SetUp : Unhandled log message: '[Exception] MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                  <stack-trace><![CDATA[UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[MissingComponentException: There is no 'CanvasRenderer' attached to the "Farm" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "Farm". Or your script needs to check if the component is attached before using it.
+UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) (at <31f3cd5c2a074982a9d5664e7709cac1>:0)
+UnityEngine.CanvasRenderer.get_cull () (at <e38a05dc40cb4f9eb7c6234262785c89>:0)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.Canvas canvas, UnityEngine.Camera eventCamera, UnityEngine.Vector2 pointerPosition, System.Collections.Generic.IList`1[T] foundGraphics, System.Collections.Generic.List`1[T] results) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:323)
+UnityEngine.UI.GraphicRaycaster.Raycast (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] resultAppendList) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/UI/Core/GraphicRaycaster.cs:224)
+UnityEngine.EventSystems.EventSystem.RaycastAll (UnityEngine.EventSystems.PointerEventData eventData, System.Collections.Generic.List`1[T] raycastResults) (at ./Library/PackageCache/com.unity.ugui@bb329a87fcdc/Runtime/UGUI/EventSystem/EventSystem.cs:276)
+Weedtopia.Unity.IsometricCameraRig.IsUiPoint (UnityEngine.Vector2 position) (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:58)
+Weedtopia.Unity.IsometricCameraRig.Update () (at Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs:151)
+
+Saving results to: C:/Users/Mein-PC/AppData/LocalLow/DefaultCompany/WeedtopiaInc\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

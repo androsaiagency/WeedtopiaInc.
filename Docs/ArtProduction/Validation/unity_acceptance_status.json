@@ -1,0 +1,169 @@
+{
+  "updated_utc": "2026-09-14T20:30:05.9889842Z",
+  "unity_version": "6000.3.9f1",
+  "initial_sandbox_attempt": {
+    "log_created": false,
+    "serialized_assets": 0,
+    "exit_code": -2147483645
+  },
+  "regular_batch": {
+    "reference_images_at_run": 241,
+    "report": "Docs/ArtProduction/Validation/unity_intake_initial_report.json",
+    "warnings": 251,
+    "created_wrappers": 251,
+    "assigned_models": 0,
+    "exit_code": 1,
+    "error_details": [
+      {
+        "severity": "error",
+        "slot": "park/T15_L900",
+        "message": "Missing path: Docs/ArtProduction/Buildings/park/T15_L900/mesh_input_3q.png"
+      },
+      {
+        "severity": "error",
+        "slot": "park/T16_L1000",
+        "message": "Missing path: Docs/ArtProduction/Buildings/park/T16_L1000/mesh_input_3q.png"
+      },
+      {
+        "severity": "error",
+        "slot": "park/T17_L1250",
+        "message": "Missing path: Docs/ArtProduction/Buildings/park/T17_L1250/mesh_input_3q.png"
+      },
+      {
+        "severity": "error",
+        "slot": "park/T18_L1500",
+        "message": "Missing path: Docs/ArtProduction/Buildings/park/T18_L1500/mesh_input_3q.png"
+      },
+      {
+        "severity": "error",
+        "slot": "park/T19_L1750",
+        "message": "Missing path: Docs/ArtProduction/Buildings/park/T19_L1750/mesh_input_3q.png"
+      },
+      {
+        "severity": "error",
+        "slot": "park/T20_L2000",
+        "message": "Missing path: Docs/ArtProduction/Buildings/park/T20_L2000/mesh_input_3q.png"
+      },
+      {
+        "severity": "error",
+        "slot": "park/T21_L2500",
+        "message": "Missing path: Docs/ArtProduction/Buildings/park/T21_L2500/mesh_input_3q.png"
+      },
+      {
+        "severity": "error",
+        "slot": "park/T22_L3000",
+        "message": "Missing path: Docs/ArtProduction/Buildings/park/T22_L3000/mesh_input_3q.png"
+      },
+      {
+        "severity": "error",
+        "slot": "park/T23_L4000",
+        "message": "Missing path: Docs/ArtProduction/Buildings/park/T23_L4000/mesh_input_3q.png"
+      },
+      {
+        "severity": "error",
+        "slot": "park/T24_L5000",
+        "message": "Missing path: Docs/ArtProduction/Buildings/park/T24_L5000/mesh_input_3q.png"
+      }
+    ],
+    "errors": 10,
+    "warning_interpretation": "One expected missing imported model warning per prepared empty slot.",
+    "catalog_references": 251,
+    "log": "Docs/ArtProduction/Validation/unity_scaffold.log"
+  },
+  "source_compile": {
+    "changed_sources_since_compile": [],
+    "report": "Docs/ArtProduction/Validation/SourceCompile/source_compile_report.json",
+    "status": "passed"
+  },
+  "unity_import": "passed; batch method executed and created serialized assets with Unity-generated metadata",
+  "editmode": {
+    "started_utc": "2026-09-14T18:15:23.0938159Z",
+    "ended_utc": "2026-09-14T18:16:10.4345824Z",
+    "mode": "EditMode",
+    "exit_code": 0,
+    "log": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\ArtProduction\\Validation\\unity_editmode.log",
+    "lock_present_after_exit": false,
+    "result": "passed",
+    "results_xml": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\ArtProduction\\Validation\\unity_editmode_results.xml",
+    "tests": 13,
+    "passed": 13,
+    "failed": 0,
+    "skipped": 0
+  },
+  "scaffold_idempotence": {
+    "status": "passed",
+    "test": "FullScaffoldSecondRunLeavesAll251PrefabsAndCatalogByteIdentical",
+    "actual_production_unchanged": true,
+    "actual_files_compared": 504,
+    "evidence": "unity_editmode_results.xml"
+  },
+  "protection": {
+    "preexisting_changes_against_initial_baseline": [
+      "Assets/Settings/Mobile_RPAsset.asset"
+    ],
+    "scaffold_snapshot": "Docs/ArtProduction/Validation/unity_scaffold_first_hashes.json",
+    "original_snapshot": "Docs/ArtProduction/Validation/unity_originals_before.json",
+    "sample_scene_unchanged": true,
+    "original_files_checked": 60,
+    "changed_during_owned_unity_run": []
+  },
+  "current_blocker": null,
+  "manual_model_qa": "Later manual Meshy/FBX intake, material/scale/front/collider/device checks remain outside this local art-generation step.",
+  "post_test_preservation": {
+    "checked_utc": "2026-09-14T18:17:03.3826942Z",
+    "original_files_checked": 60,
+    "original_files_changed_since_first_unity_start": [],
+    "generated_prefab_catalog_files_checked": 504,
+    "generated_files_changed_since_scaffold": [],
+    "remaining_test_artifacts": [],
+    "passed": true
+  },
+  "final_validation": {
+    "started_utc": "2026-09-14T20:27:40.5915353Z",
+    "ended_utc": "2026-09-14T20:29:07.8574436Z",
+    "mode": "FinalValidate",
+    "exit_code": 0,
+    "log": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\ArtProduction\\Validation\\unity_finalvalidate.log",
+    "lock_present_after_exit": false,
+    "result": "passed",
+    "intake_report": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\ArtProduction\\Validation\\unity_intake_report.json",
+    "errors": 0,
+    "warnings": 251,
+    "wrappers": 251,
+    "catalog_references": 251,
+    "reference_images": 251,
+    "status": "passed",
+    "unexpected_warning_count": 0,
+    "assigned_models": 0
+  },
+  "final_preservation": {
+    "checked_utc": "2026-09-14T20:30:05.9533617Z",
+    "original_files_checked": 60,
+    "original_files_changed_since_first_unity_start": [],
+    "historical_baseline_differences": [
+      "Assets/Settings/Mobile_RPAsset.asset"
+    ],
+    "generated_prefab_catalog_files_checked": 504,
+    "generated_files_changed_since_scaffold": [],
+    "current_csharp_source_count": 8,
+    "csharp_sources_changed_since_compile": [],
+    "remaining_test_artifacts": [],
+    "passed": true
+  },
+  "final_local_preflight": {
+    "report": "Docs/ArtProduction/Validation/unity_preflight_production_validation.json",
+    "counts": {
+      "expected_slots": 251,
+      "manifest_slots": 251,
+      "generated_slots": 251,
+      "validated_slots": 251,
+      "failed_slots": 0,
+      "expected_showcases": 11,
+      "generated_showcases": 11,
+      "validated_showcases": 11,
+      "metadata_errors": 0,
+      "pending_items": 0
+    },
+    "passed": true
+  }
+}

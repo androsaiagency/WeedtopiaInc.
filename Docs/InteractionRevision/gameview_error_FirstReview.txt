@@ -1,0 +1,18 @@
+UnityEngine.MissingComponentException: There is no 'CanvasRenderer' attached to the "RemoveMark" game object, but a script is trying to access it.
+You probably need to add a CanvasRenderer to the game object "RemoveMark". Or your script needs to check if the component is attached before using it.
+  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000e2] in <31f3cd5c2a074982a9d5664e7709cac1>:0 
+  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x00010] in <31f3cd5c2a074982a9d5664e7709cac1>:0 
+  at UnityEngine.CanvasRenderer.EnableRectClipping (UnityEngine.Rect rect) [0x00006] in <e38a05dc40cb4f9eb7c6234262785c89>:0 
+  at UnityEngine.UI.MaskableGraphic.SetClipRect (UnityEngine.Rect clipRect, System.Boolean validRect) [0x00006] in .\Library\PackageCache\com.unity.ugui@bb329a87fcdc\Runtime\UGUI\UI\Core\MaskableGraphic.cs:158 
+  at UnityEngine.UI.RectMask2D.PerformClipping () [0x000f5] in .\Library\PackageCache\com.unity.ugui@bb329a87fcdc\Runtime\UGUI\UI\Core\RectMask2D.cs:252 
+  at UnityEngine.UI.ClipperRegistry.Cull () [0x00012] in .\Library\PackageCache\com.unity.ugui@bb329a87fcdc\Runtime\UGUI\UI\Core\Culling\ClipperRegistry.cs:47 
+  at UnityEngine.UI.CanvasUpdateRegistry.PerformUpdate () [0x00107] in .\Library\PackageCache\com.unity.ugui@bb329a87fcdc\Runtime\UGUI\UI\Core\CanvasUpdateRegistry.cs:201 
+  at UnityEngine.Canvas.SendWillRenderCanvases () [0x0000a] in <e38a05dc40cb4f9eb7c6234262785c89>:0 
+  at UnityEngine.Canvas.ForceUpdateCanvases () [0x00007] in <e38a05dc40cb4f9eb7c6234262785c89>:0 
+  at UnityEngine.UI.ScrollRect.EnsureLayoutHasRebuilt () [0x00018] in .\Library\PackageCache\com.unity.ugui@bb329a87fcdc\Runtime\UGUI\UI\Core\ScrollRect.cs:636 
+  at UnityEngine.UI.ScrollRect.SetNormalizedPosition (System.Single value, System.Int32 axis) [0x00001] in .\Library\PackageCache\com.unity.ugui@bb329a87fcdc\Runtime\UGUI\UI\Core\ScrollRect.cs:1064 
+  at UnityEngine.UI.ScrollRect.set_verticalNormalizedPosition (System.Single value) [0x00001] in .\Library\PackageCache\com.unity.ugui@bb329a87fcdc\Runtime\UGUI\UI\Core\ScrollRect.cs:1050 
+  at Weedtopia.Unity.BuildingInteractionUi.OpenPicker (System.Int32 slot) [0x00097] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Unity\BuildingInteractionUi.cs:93 
+  at Weedtopia.Editor.GameSetup.InteractionVisualEvidence+<>c__DisplayClass25_0.<PrepareSteps>b__9 () [0x00001] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Editor\GameSetup\InteractionVisualEvidence.cs:110 
+  at Weedtopia.Editor.GameSetup.InteractionVisualEvidence+<>c__DisplayClass25_1.<PrepareSteps>b__6 () [0x00001] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Editor\GameSetup\InteractionVisualEvidence.cs:104 
+  at Weedtopia.Editor.GameSetup.InteractionVisualEvidence.Tick () [0x00206] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Editor\GameSetup\InteractionVisualEvidence.cs:77 

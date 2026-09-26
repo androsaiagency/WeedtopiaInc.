@@ -1,0 +1,27 @@
+Burning Hills original audio — 2026-09-22
+Runtime: D:/Stable Audio 3/stable-audio-3/.venv/Scripts/stable-audio.exe
+
+MUSIC
+Model small-music; device cuda; duration 62 seconds; steps 8; cfg-scale 1.0; seed 420926; chunked-decode.
+Prompt: Warm optimistic instrumental soundtrack for Burning Hills, a cozy solarpunk town rebuilding game at blue hour. Gentle nylon guitar and muted Rhodes electric piano, soft brushed percussion, warm mellow bass, subtle marimba accents, slow relaxed 82 bpm, spacious playful harmonic loop with room for UI and work sounds. Handcrafted retro atmosphere, hopeful communal rebuilding, no intro, no outro, continuous loop, smooth transitions, understated and unobtrusive.
+Negative: vocals speech singing rap loud drums dramatic hits dense arrangement harsh sound distortion abrupt transition fade out ending cadence
+Source: Assets/Audio/Source/BurningHills/afterglow_62s.wav
+Result: Assets/Audio/Approved/BurningHills/afterglow_loop_60s.wav
+Processing: stable-audio-unity-background-music/scripts/make_unity_loop.py; duration 60; overlap 2.
+Format: WAV stereo 44100 Hz PCM_24, 2646000 samples, 60.000000 seconds.
+Peak 0.999000072479248; RMS 0.20776500633008582; boundary jump 0.00029730796813964844.
+
+SFX
+Model small-sfx; device cuda; duration 2 seconds per generation; steps 8; cfg-scale 1.0; seed 420927; batch of 4; chunked-decode.
+0 / confirm: Short gentle UI confirmation sound for a cozy solarpunk game, a warm wooden click and bright soft brass coin chime, one clean positive action, dry isolated sound, no music, no speech
+1 / unavailable: Short gentle denied action sound for a cozy game, two soft low wooden knocks with muted brushed metallic rattle, friendly and unobtrusive, dry isolated sound, no speech, no music
+2 / upgrade: Short magical mechanical upgrade completion for a cozy rebuilding game, soft winding copper mechanism followed by a warm rising bell sparkle, polished positive reward, no speech, no music
+3 / delivery: Short small delivery truck unloading a wooden crate, gentle electric motor hum and soft wood settling click, cheerful cozy logistics game, no music, no speech
+Sources: Assets/Audio/Source/BurningHills/action_0.wav through action_3.wav.
+Results: Assets/Audio/Approved/BurningHills/confirm.wav, unavailable.wav, upgrade.wav, delivery.wav.
+Processing: Tools/Implementation/finish_production_audio.py; trim active amplitude >0.005, preserve 20ms lead/80ms tail, 12ms fades, normalize down only when peak exceeds 0.7; stereo 44100 Hz PCM_24.
+Durations, sample counts, peak, RMS and hashes: audio_provenance.json.
+
+ACCEPTANCE
+Human audition: not performed. Device speakers/headphones: not tested. Commercial license eligibility/registration: not verified. These remain release gates.
+No OGG/FFmpeg variant is needed: Unity performs platform compression from the WAV masters.

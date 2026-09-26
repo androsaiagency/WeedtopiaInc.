@@ -1,0 +1,23 @@
+{
+  "workflow": "image_to_3d",
+  "input": "mesh_input_3q_v3_mesh_base.png",
+  "model_type": "smart-topology",
+  "topology": "triangles",
+  "target_faces": 15000,
+  "texture": true,
+  "texture_resolution": 2048,
+  "pbr": true,
+  "rigging": false,
+  "animation": false,
+  "license": "private",
+  "recommended_export": "FBX with complete texture folder",
+  "unity_scale": "1 unit = 1 meter",
+  "unity_up_axis": "+Y",
+  "unity_forward_axis": "+Z",
+  "pivot_intent": "ground center",
+  "crest_delivery": "separate Unity decal; never part of Meshy input",
+  "rejected_inputs": [
+    "mesh_input_3q.png",
+    "mesh_input_3q_v2_clean.png"
+  ]
+}

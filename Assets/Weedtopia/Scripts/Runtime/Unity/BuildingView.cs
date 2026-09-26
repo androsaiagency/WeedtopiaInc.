@@ -1,0 +1,66 @@
+using UnityEngine;
+using Weedtopia.Domain;
+
+namespace Weedtopia.Unity
+{
+    public sealed class BuildingView : MonoBehaviour
+    {
+        [SerializeField] private string instanceId;
+        [SerializeField] private Transform visualRoot;
+        [SerializeField] private GameObject selection;
+        [SerializeField] private TextMesh label;
+        [SerializeField] private Renderer statusLamp;
+        [SerializeField] private ParticleSystem upgradeEffect;
+        private int previousLevel=-1;
+        private GameRoot root;
+        private GameObject visual,shownPrefab;
+        private MaterialPropertyBlock properties;
+        private BoxCollider parcelBox;
+        private BoxCollider[] visualBoxes=System.Array.Empty<BoxCollider>();
+        public string InstanceId=>instanceId;
+        public Transform VisualRoot=>visualRoot;
+        public bool TryGetCurrentSpriteBounds(out Bounds bounds)
+        {
+            var sprite=visual!=null?visual.GetComponentInChildren<Weedtopia.Buildings.Presentation.BuildingSpriteVisual>():null;
+            bounds=sprite!=null?sprite.SpriteRenderer.bounds:default;
+            return sprite!=null&&sprite.SpriteRenderer.sprite!=null;
+        }
+        public void Initialize(GameRoot value){root=value;properties=new MaterialPropertyBlock();parcelBox=GetComponent<BoxCollider>();}
+        public bool TryPick(Ray ray,out float distance)
+        {
+            bool found=AuthoredBoxPicking.TryHit(parcelBox,ray,out distance);
+            foreach(var box in visualBoxes)if(AuthoredBoxPicking.TryHit(box,ray,out float hit)&&hit<distance){distance=hit;found=true;}
+            return found;
+        }
+        public void Refresh()
+        {
+            if(root.Session==null)return;
+            var b=root.Session.State.Find(instanceId);var d=root.Definitions.Building(b.family);
+            if(previousLevel>=0&&b.level>previousLevel&&upgradeEffect!=null)upgradeEffect.Play();previousLevel=b.level;
+            // An unchosen residential parcel uses the accepted residential ruin until the player chooses its family.
+            string family=b.family=="settlement_plot"&&root.UsesProductionBuildings?"residential_house":b.family;
+            if(!root.Visuals.TryGetVisual(family,b.level,out var prefab))throw new System.InvalidOperationException("Missing building visual: "+family+"/"+b.level);
+            if(prefab!=shownPrefab)
+            {
+                if(visual!=null)Destroy(visual);
+                visual=Instantiate(prefab,visualRoot,false);shownPrefab=prefab;
+                visualBoxes=visual.GetComponentsInChildren<BoxCollider>();
+            }
+            selection.SetActive(root.SelectedId==instanceId&&(root.Ui.Interaction==null||root.Ui.Interaction.BuildingOpen));
+            bool locked=d.zone>root.Session.State.City.unlocked;
+            // The authored information panel carries name and build time at every zoom level.
+            label.gameObject.SetActive(!root.UsesProductionBuildings&&root.SelectedId==instanceId);
+            label.text=root.Definitions.Text(d.nameKey)+(b.buildingSeconds>0?"\n"+b.buildingSeconds+" s":"");
+            label.transform.rotation=root.CameraRig.RenderCamera.transform.rotation;
+            Color color=locked?new Color(.3f,.35f,.45f):!string.IsNullOrEmpty(b.bottleneck)?new Color(1,.55f,.15f):new Color(.35f,1,.65f);
+            properties.SetColor("_BaseColor",color);properties.SetColor("_Color",color);statusLamp.SetPropertyBlock(properties);
+            if(statusLamp is SpriteRenderer statusSprite){statusSprite.color=color;statusSprite.sortingOrder=WorldSort.At(transform.position)+5;}
+            statusLamp.enabled=!root.UsesProductionBuildings;
+        }
+#if UNITY_EDITOR
+        public void EditorConfigure(string id,Transform anchor,GameObject ring,TextMesh text,Renderer lamp)
+        {instanceId=id;visualRoot=anchor;selection=ring;label=text;statusLamp=lamp;}
+        public void EditorSetId(string id){instanceId=id;}
+#endif
+    }
+}

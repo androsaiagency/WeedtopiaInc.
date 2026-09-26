@@ -1,0 +1,19 @@
+{
+  "utc": "2026-09-24T23:06:29.590142+00:00",
+  "fingerprint": "86ba1b88f63044fead4c902860634c2e5409f058e7282558fad68793f20d5b04",
+  "passed": false,
+  "scope": "47 actual Game View images; all inspected in eight contact sheets, key worker and fleet views additionally at original size",
+  "findings": [
+    {
+      "file": "1366x768_07_drivers.png",
+      "issue": "Global menu launcher overlaps the contextual picker close area at 115 percent scale. Hide launcher while a contextual window is open."
+    },
+    {
+      "files": [
+        "1366x768_01_free_world.png",
+        "2560x1080_01_free_world.png"
+      ],
+      "issue": "Capture scenario retains the town menu from the previous step. Explicitly close it for the free-world captures."
+    }
+  ]
+}
