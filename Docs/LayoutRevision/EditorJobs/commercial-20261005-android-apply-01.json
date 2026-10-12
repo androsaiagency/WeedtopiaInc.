@@ -1,0 +1,14 @@
+{
+    "id": "commercial-20261005-android-apply-01",
+    "command": "android-building-textures",
+    "utc": "2026-10-05T03:48:22.1075404Z",
+    "status": "blocked_or_failed",
+    "detail": "System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidOperationException: Android import is not ETC2_RGBA8: Assets/Weedtopia/Production/Resources/WeedtopiaBuildings/bakery/T00_RUIN.png (RGBA32). No source rescaling is permitted.\r\n  at Weedtopia.Editor.GameSetup.AndroidBuildingTextureOptimization.Apply () [0x00443] in D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Assets\\Weedtopia\\Scripts\\Editor\\GameSetup\\AndroidBuildingTextureOptimization.cs:142 \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <1eb9db207454431c84a47bcd81e79c37>:0 \r\n   --- End of inner exception stack trace ---\r\n  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <1eb9db207454431c84a47bcd81e79c37>:0 \r\n  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <1eb9db207454431c84a47bcd81e79c37>:0 \r\n  at Weedtopia.Editor.GameSetup.LayoutEditorJob.Poll () [0x004c1] in D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Assets\\Weedtopia\\Scripts\\Editor\\GameSetup\\LayoutEditorJob.cs:68 ",
+    "processId": 258904,
+    "playing": false,
+    "compiling": false,
+    "scenes": [
+        "Assets/Weedtopia/Game/Scenes/BurningHills.unity"
+    ],
+    "dirtyScenes": []
+}

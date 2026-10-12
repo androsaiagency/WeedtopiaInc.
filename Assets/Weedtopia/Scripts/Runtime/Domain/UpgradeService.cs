@@ -21,6 +21,12 @@ namespace Weedtopia.Domain
         private readonly Dictionary<string, PremiumOffer> offers = new Dictionary<string, PremiumOffer>();
         public UpgradeService(GameDefinitions defs, GameState state, WorkerService workers) { this.defs = defs; this.state = state; this.workers = workers; }
         public Amount Cost(BuildingState b) => defs.Building(b.family).cost.At(b.level + 1);
+        public int Duration(BuildingState b)
+        {
+            if (b.level >= 5000) return 0;
+            return (int)Math.Ceiling(defs.Building(b.family).BuildSeconds(b.level + 1) /
+                workers.Bonus(b, WorkerAttribute.BuildSpeed));
+        }
         private Failure CanUpgrade(BuildingState b)
         {
             if (b == null || b.cityId != state.activeCity) return Failure.Invalid;
@@ -38,7 +44,8 @@ namespace Weedtopia.Domain
         }
         private void Begin(BuildingState b)
         {
-            b.buildingSeconds = Math.Max(1, (int)Math.Ceiling(defs.Building(b.family).BuildSeconds(b.level + 1) / workers.Bonus(b, WorkerAttribute.BuildSpeed)));
+            b.buildingSeconds = Duration(b);
+            if (b.buildingSeconds == 0) b.level++;
             state.revision++;
         }
         public Failure Offer(string id, bool finish, out PremiumOffer offer)
@@ -65,8 +72,7 @@ namespace Weedtopia.Domain
             state.grinders -= offer.Grinders;
             if (offer.FinishConstruction)
             {
-                if(b.level==0){b.lastDailyDay=state.highWaterUtcTicks/TimeSpan.TicksPerDay-1;b.dailyTier=1;}
-                b.buildingSeconds = 0; b.level++; state.revision++;
+                ConstructionProgress.Reduce(state, b, b.buildingSeconds);
             }
             else Begin(b);
             return Failure.None;

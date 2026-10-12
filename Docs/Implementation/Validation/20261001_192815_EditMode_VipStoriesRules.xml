@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="28" result="Failed(Child)" total="28" passed="24" failed="4" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-01 17:28:34Z" end-time="2026-10-01 17:28:37Z" duration="3,4216717">
+  <test-suite type="TestSuite" id="1000" name="WeedtopiaInc" fullname="WeedtopiaInc" runstate="Runnable" testcasecount="251" result="Failed" site="Child" start-time="2026-10-01 17:28:34Z" end-time="2026-10-01 17:28:37Z" duration="3.421672" total="28" passed="24" failed="4" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1316" name="Weedtopia.Game.EditModeTests.dll" fullname="D:/Unity Games/Weedtopia Inc/WeedtopiaInc/Library/ScriptAssemblies/Weedtopia.Game.EditModeTests.dll" runstate="Runnable" testcasecount="197" result="Failed" site="Child" start-time="2026-10-01 17:28:34Z" end-time="2026-10-01 17:28:37Z" duration="3.353530" total="28" passed="24" failed="4" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="209812" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1317" name="Weedtopia" fullname="Weedtopia" runstate="Runnable" testcasecount="197" result="Failed" site="Child" start-time="2026-10-01 17:28:34Z" end-time="2026-10-01 17:28:37Z" duration="3.344306" total="28" passed="24" failed="4" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1318" name="Tests" fullname="Weedtopia.Tests" runstate="Runnable" testcasecount="197" result="Failed" site="Child" start-time="2026-10-01 17:28:34Z" end-time="2026-10-01 17:28:37Z" duration="3.336257" total="28" passed="24" failed="4" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1285" name="VipStoryTests" fullname="Weedtopia.Tests.VipStoryTests" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" testcasecount="28" result="Failed" site="Child" start-time="2026-10-01 17:28:34Z" end-time="2026-10-01 17:28:37Z" duration="3.327665" total="28" passed="24" failed="4" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1286" name="AllApprovedCharactersChaptersAndRecurringPoolsValidate" fullname="Weedtopia.Tests.VipStoryTests.AllApprovedCharactersChaptersAndRecurringPoolsValidate" methodname="AllApprovedCharactersChaptersAndRecurringPoolsValidate" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="452673283" result="Passed" start-time="2026-10-01 17:28:34Z" end-time="2026-10-01 17:28:34Z" duration="0.161693" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1304" name="AllFortyPersonalChaptersAndFiveCollaborationsCompleteAndRemainSaved" fullname="Weedtopia.Tests.VipStoryTests.AllFortyPersonalChaptersAndFiveCollaborationsCompleteAndRemainSaved" methodname="AllFortyPersonalChaptersAndFiveCollaborationsCompleteAndRemainSaved" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="850818214" result="Failed" label="Error" start-time="2026-10-01 17:28:34Z" end-time="2026-10-01 17:28:35Z" duration="0.246836" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[System.IO.InvalidDataException : Invalid VIP story progress]]></message>
+                <stack-trace><![CDATA[  at Weedtopia.Persistence.VipStorySaveValidator.<Validate>g__Require|0_0 (System.Boolean condition) [0x00009] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Persistence\VipStorySaveValidator.cs:13 
+  at Weedtopia.Persistence.VipStorySaveValidator.Validate (Weedtopia.Domain.GameState state, Weedtopia.Domain.GameDefinitions defs) [0x001b2] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Persistence\VipStorySaveValidator.cs:21 
+  at Weedtopia.Persistence.SaveValidator.Validate (Weedtopia.Domain.GameState s, Weedtopia.Domain.GameDefinitions d) [0x00e0a] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Persistence\LocalSaveStore.cs:157 
+  at Weedtopia.Persistence.LocalSaveStore.Decode (System.String json) [0x00109] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Persistence\LocalSaveStore.cs:73 
+  at Weedtopia.Tests.VipStoryTests.RoundTrip () [0x0000d] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\EditMode\VipStoryTests.cs:59 
+  at Weedtopia.Tests.VipStoryTests.AllFortyPersonalChaptersAndFiveCollaborationsCompleteAndRemainSaved () [0x001d9] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\EditMode\VipStoryTests.cs:143 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <1eb9db207454431c84a47bcd81e79c37>:0 ]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1302" name="ChoicesBaselinesAndMemoriesSurviveSavingWithoutNewRewards" fullname="Weedtopia.Tests.VipStoryTests.ChoicesBaselinesAndMemoriesSurviveSavingWithoutNewRewards" methodname="ChoicesBaselinesAndMemoriesSurviveSavingWithoutNewRewards" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="41331927" result="Failed" label="Error" start-time="2026-10-01 17:28:35Z" end-time="2026-10-01 17:28:35Z" duration="0.099633" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[System.IO.InvalidDataException : Invalid VIP story progress]]></message>
+                <stack-trace><![CDATA[  at Weedtopia.Persistence.VipStorySaveValidator.<Validate>g__Require|0_0 (System.Boolean condition) [0x00009] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Persistence\VipStorySaveValidator.cs:13 
+  at Weedtopia.Persistence.VipStorySaveValidator.Validate (Weedtopia.Domain.GameState state, Weedtopia.Domain.GameDefinitions defs) [0x001b2] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Persistence\VipStorySaveValidator.cs:21 
+  at Weedtopia.Persistence.SaveValidator.Validate (Weedtopia.Domain.GameState s, Weedtopia.Domain.GameDefinitions d) [0x00e0a] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Persistence\LocalSaveStore.cs:157 
+  at Weedtopia.Persistence.LocalSaveStore.Decode (System.String json) [0x00109] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Persistence\LocalSaveStore.cs:73 
+  at Weedtopia.Tests.VipStoryTests.RoundTrip () [0x0000d] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\EditMode\VipStoryTests.cs:59 
+  at Weedtopia.Tests.VipStoryTests.ChoicesBaselinesAndMemoriesSurviveSavingWithoutNewRewards () [0x0004e] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\EditMode\VipStoryTests.cs:117 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <1eb9db207454431c84a47bcd81e79c37>:0 ]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1305" name="CollaborationsRequireTheActualEarlierChaptersAndCannotPayTwice" fullname="Weedtopia.Tests.VipStoryTests.CollaborationsRequireTheActualEarlierChaptersAndCannotPayTwice" methodname="CollaborationsRequireTheActualEarlierChaptersAndCannotPayTwice" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1088394426" result="Passed" start-time="2026-10-01 17:28:35Z" end-time="2026-10-01 17:28:35Z" duration="0.087861" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1312" name="CorruptProgressIsRejected" fullname="Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-01 17:28:35Z" end-time="2026-10-01 17:28:36Z" duration="1.017668" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1306" name="CorruptProgressIsRejected(&quot;id&quot;)" fullname="Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(&quot;id&quot;)" methodname="CorruptProgressIsRejected" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="353743436" result="Passed" start-time="2026-10-01 17:28:35Z" end-time="2026-10-01 17:28:35Z" duration="0.093237" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1307" name="CorruptProgressIsRejected(&quot;choice&quot;)" fullname="Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(&quot;choice&quot;)" methodname="CorruptProgressIsRejected" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1558065253" result="Passed" start-time="2026-10-01 17:28:35Z" end-time="2026-10-01 17:28:35Z" duration="0.159607" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1308" name="CorruptProgressIsRejected(&quot;baseline&quot;)" fullname="Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(&quot;baseline&quot;)" methodname="CorruptProgressIsRejected" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1894197798" result="Passed" start-time="2026-10-01 17:28:35Z" end-time="2026-10-01 17:28:35Z" duration="0.362125" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1309" name="CorruptProgressIsRejected(&quot;history&quot;)" fullname="Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(&quot;history&quot;)" methodname="CorruptProgressIsRejected" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="2085629818" result="Passed" start-time="2026-10-01 17:28:35Z" end-time="2026-10-01 17:28:36Z" duration="0.207048" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1310" name="CorruptProgressIsRejected(&quot;scale&quot;)" fullname="Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(&quot;scale&quot;)" methodname="CorruptProgressIsRejected" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1408393832" result="Passed" start-time="2026-10-01 17:28:36Z" end-time="2026-10-01 17:28:36Z" duration="0.093302" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1311" name="CorruptProgressIsRejected(&quot;time&quot;)" fullname="Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(&quot;time&quot;)" methodname="CorruptProgressIsRejected" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="197689083" result="Passed" start-time="2026-10-01 17:28:36Z" end-time="2026-10-01 17:28:36Z" duration="0.093639" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1314" name="FailedDiskWritesRestoreAcceptedQuestsAndAllClaimedRewards" fullname="Weedtopia.Tests.VipStoryTests.FailedDiskWritesRestoreAcceptedQuestsAndAllClaimedRewards" methodname="FailedDiskWritesRestoreAcceptedQuestsAndAllClaimedRewards" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1322309905" result="Passed" start-time="2026-10-01 17:28:36Z" end-time="2026-10-01 17:28:36Z" duration="0.139248" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1299" name="HighestChapterIsReachableWithExistingHousingAndWorkerRules" fullname="Weedtopia.Tests.VipStoryTests.HighestChapterIsReachableWithExistingHousingAndWorkerRules" methodname="HighestChapterIsReachableWithExistingHousingAndWorkerRules" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="769162443" result="Passed" start-time="2026-10-01 17:28:36Z" end-time="2026-10-01 17:28:36Z" duration="0.103450" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1297" name="InhabitantsUnlockAtTheirExactSavedPopulationMilestone" fullname="Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-01 17:28:36Z" end-time="2026-10-01 17:28:37Z" duration="0.837512" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1287" name="InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;toni&quot;,50)" fullname="Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;toni&quot;,50)" methodname="InhabitantsUnlockAtTheirExactSavedPopulationMilestone" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1377510800" result="Passed" start-time="2026-10-01 17:28:36Z" end-time="2026-10-01 17:28:36Z" duration="0.090343" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1288" name="InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;juno&quot;,100)" fullname="Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;juno&quot;,100)" methodname="InhabitantsUnlockAtTheirExactSavedPopulationMilestone" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1502548051" result="Passed" start-time="2026-10-01 17:28:36Z" end-time="2026-10-01 17:28:36Z" duration="0.086623" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1289" name="InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;rosa&quot;,200)" fullname="Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;rosa&quot;,200)" methodname="InhabitantsUnlockAtTheirExactSavedPopulationMilestone" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="888099236" result="Passed" start-time="2026-10-01 17:28:36Z" end-time="2026-10-01 17:28:36Z" duration="0.080339" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1290" name="InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;mira&quot;,350)" fullname="Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;mira&quot;,350)" methodname="InhabitantsUnlockAtTheirExactSavedPopulationMilestone" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1330631376" result="Passed" start-time="2026-10-01 17:28:36Z" end-time="2026-10-01 17:28:36Z" duration="0.080822" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1291" name="InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;kalle&quot;,500)" fullname="Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;kalle&quot;,500)" methodname="InhabitantsUnlockAtTheirExactSavedPopulationMilestone" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1893608965" result="Passed" start-time="2026-10-01 17:28:36Z" end-time="2026-10-01 17:28:36Z" duration="0.082130" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1292" name="InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;alma&quot;,750)" fullname="Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;alma&quot;,750)" methodname="InhabitantsUnlockAtTheirExactSavedPopulationMilestone" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1678913392" result="Passed" start-time="2026-10-01 17:28:36Z" end-time="2026-10-01 17:28:37Z" duration="0.081505" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1293" name="InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;selma&quot;,1000)" fullname="Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;selma&quot;,1000)" methodname="InhabitantsUnlockAtTheirExactSavedPopulationMilestone" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="473185234" result="Passed" start-time="2026-10-01 17:28:37Z" end-time="2026-10-01 17:28:37Z" duration="0.080092" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1294" name="InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;oskar&quot;,1500)" fullname="Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;oskar&quot;,1500)" methodname="InhabitantsUnlockAtTheirExactSavedPopulationMilestone" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1792472589" result="Passed" start-time="2026-10-01 17:28:37Z" end-time="2026-10-01 17:28:37Z" duration="0.079697" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1295" name="InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;dalia&quot;,2000)" fullname="Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;dalia&quot;,2000)" methodname="InhabitantsUnlockAtTheirExactSavedPopulationMilestone" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="572136947" result="Passed" start-time="2026-10-01 17:28:37Z" end-time="2026-10-01 17:28:37Z" duration="0.084718" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1296" name="InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;valentina&quot;,3000)" fullname="Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;valentina&quot;,3000)" methodname="InhabitantsUnlockAtTheirExactSavedPopulationMilestone" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1973568720" result="Passed" start-time="2026-10-01 17:28:37Z" end-time="2026-10-01 17:28:37Z" duration="0.085938" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1313" name="LegacySaveWithoutStoryFieldsKeepsExistingProgressAndResources" fullname="Weedtopia.Tests.VipStoryTests.LegacySaveWithoutStoryFieldsKeepsExistingProgressAndResources" methodname="LegacySaveWithoutStoryFieldsKeepsExistingProgressAndResources" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="260114034" result="Passed" start-time="2026-10-01 17:28:37Z" end-time="2026-10-01 17:28:37Z" duration="0.131368" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1298" name="LiveResidentsRaiseTheMilestoneAndRemovalOfAWorkerDoesNotRemoveAnInhabitant" fullname="Weedtopia.Tests.VipStoryTests.LiveResidentsRaiseTheMilestoneAndRemovalOfAWorkerDoesNotRemoveAnInhabitant" methodname="LiveResidentsRaiseTheMilestoneAndRemovalOfAWorkerDoesNotRemoveAnInhabitant" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1232852230" result="Passed" start-time="2026-10-01 17:28:37Z" end-time="2026-10-01 17:28:37Z" duration="0.108240" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1315" name="OfflineSimulationAdvancesAcceptedCountersButNeverAutomaticallyAwardsTheQuest" fullname="Weedtopia.Tests.VipStoryTests.OfflineSimulationAdvancesAcceptedCountersButNeverAutomaticallyAwardsTheQuest" methodname="OfflineSimulationAdvancesAcceptedCountersButNeverAutomaticallyAwardsTheQuest" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1851013911" result="Failed" label="Error" start-time="2026-10-01 17:28:37Z" end-time="2026-10-01 17:28:37Z" duration="0.120432" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[System.IO.InvalidDataException : Invalid VIP story progress]]></message>
+                <stack-trace><![CDATA[  at Weedtopia.Persistence.VipStorySaveValidator.<Validate>g__Require|0_0 (System.Boolean condition) [0x00009] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Persistence\VipStorySaveValidator.cs:13 
+  at Weedtopia.Persistence.VipStorySaveValidator.Validate (Weedtopia.Domain.GameState state, Weedtopia.Domain.GameDefinitions defs) [0x0059c] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Persistence\VipStorySaveValidator.cs:43 
+  at Weedtopia.Persistence.SaveValidator.Validate (Weedtopia.Domain.GameState s, Weedtopia.Domain.GameDefinitions d) [0x00e0a] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Persistence\LocalSaveStore.cs:157 
+  at Weedtopia.Persistence.LocalSaveStore.Decode (System.String json) [0x00109] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Persistence\LocalSaveStore.cs:73 
+  at Weedtopia.Tests.VipStoryTests.RoundTrip () [0x0000d] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\EditMode\VipStoryTests.cs:59 
+  at Weedtopia.Tests.VipStoryTests.OfflineSimulationAdvancesAcceptedCountersButNeverAutomaticallyAwardsTheQuest () [0x00045] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\EditMode\VipStoryTests.cs:205 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <1eb9db207454431c84a47bcd81e79c37>:0 ]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1300" name="PopulationGrowthNeverSkipsChaptersOrPaysEarlierActivityAgain" fullname="Weedtopia.Tests.VipStoryTests.PopulationGrowthNeverSkipsChaptersOrPaysEarlierActivityAgain" methodname="PopulationGrowthNeverSkipsChaptersOrPaysEarlierActivityAgain" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="494377355" result="Passed" start-time="2026-10-01 17:28:37Z" end-time="2026-10-01 17:28:37Z" duration="0.081962" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1303" name="RecurringQuestsRotateScaleAndWaitWithoutExpiring" fullname="Weedtopia.Tests.VipStoryTests.RecurringQuestsRotateScaleAndWaitWithoutExpiring" methodname="RecurringQuestsRotateScaleAndWaitWithoutExpiring" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="392161702" result="Failed" label="Error" start-time="2026-10-01 17:28:37Z" end-time="2026-10-01 17:28:37Z" duration="0.088833" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[System.IO.InvalidDataException : Invalid VIP story progress]]></message>
+                <stack-trace><![CDATA[  at Weedtopia.Persistence.VipStorySaveValidator.<Validate>g__Require|0_0 (System.Boolean condition) [0x00009] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Persistence\VipStorySaveValidator.cs:13 
+  at Weedtopia.Persistence.VipStorySaveValidator.Validate (Weedtopia.Domain.GameState state, Weedtopia.Domain.GameDefinitions defs) [0x001b2] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Persistence\VipStorySaveValidator.cs:21 
+  at Weedtopia.Persistence.SaveValidator.Validate (Weedtopia.Domain.GameState s, Weedtopia.Domain.GameDefinitions d) [0x00e0a] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Persistence\LocalSaveStore.cs:157 
+  at Weedtopia.Persistence.LocalSaveStore.Decode (System.String json) [0x00109] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Persistence\LocalSaveStore.cs:73 
+  at Weedtopia.Tests.VipStoryTests.RoundTrip () [0x0000d] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\EditMode\VipStoryTests.cs:59 
+  at Weedtopia.Tests.VipStoryTests.RecurringQuestsRotateScaleAndWaitWithoutExpiring () [0x00135] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\EditMode\VipStoryTests.cs:131 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <1eb9db207454431c84a47bcd81e79c37>:0 ]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1301" name="ThreeActiveQuestsAreAllowedAndRejectedAcceptsHaveNoSideEffects" fullname="Weedtopia.Tests.VipStoryTests.ThreeActiveQuestsAreAllowedAndRejectedAcceptsHaveNoSideEffects" methodname="ThreeActiveQuestsAreAllowedAndRejectedAcceptsHaveNoSideEffects" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1219138699" result="Passed" start-time="2026-10-01 17:28:37Z" end-time="2026-10-01 17:28:37Z" duration="0.081738" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/Mein-PC/AppData/LocalLow/DefaultCompany/WeedtopiaInc\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

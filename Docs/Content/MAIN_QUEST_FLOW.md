@@ -1,6 +1,6 @@
 # Hauptquestfluss – Burning Hills
 
-Direkt aus `Assets/Weedtopia/Game/Content/BurningHills.json` exportiert. Inhaltsversion 1.
+Direkt aus `Assets/Weedtopia/Game/Content/BurningHills.json` exportiert. Inhaltsversion 2.
 
 Alle Bedingungen einer Quest müssen erfüllt sein. Danach wird die Belohnung ausdrücklich abgeholt. Die persistierte Reihenfolge und abgeschlossene Quest-ID verhindern doppelte Belohnungen. Farm, Stadt, Siedlung und Industrie werden durch die unten benannten Rewards freigeschaltet.
 

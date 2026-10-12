@@ -1,0 +1,476 @@
+ D Assets/Audio.meta
+ D Assets/Audio/Approved.meta
+ D Assets/Audio/Approved/BurningHills.meta
+ D Assets/Audio/Approved/BurningHills/afterglow_loop_60s.wav
+ D Assets/Audio/Approved/BurningHills/afterglow_loop_60s.wav.meta
+ D Assets/Audio/Approved/BurningHills/confirm.wav
+ D Assets/Audio/Approved/BurningHills/confirm.wav.meta
+ D Assets/Audio/Approved/BurningHills/delivery.wav
+ D Assets/Audio/Approved/BurningHills/delivery.wav.meta
+ D Assets/Audio/Approved/BurningHills/unavailable.wav
+ D Assets/Audio/Approved/BurningHills/unavailable.wav.meta
+ D Assets/Audio/Approved/BurningHills/upgrade.wav
+ D Assets/Audio/Approved/BurningHills/upgrade.wav.meta
+ D Assets/Audio/Source.meta
+ D Assets/Audio/Source/BurningHills.meta
+ D Assets/Audio/Source/BurningHills/action_0.wav
+ D Assets/Audio/Source/BurningHills/action_0.wav.meta
+ D Assets/Audio/Source/BurningHills/action_1.wav
+ D Assets/Audio/Source/BurningHills/action_1.wav.meta
+ D Assets/Audio/Source/BurningHills/action_2.wav
+ D Assets/Audio/Source/BurningHills/action_2.wav.meta
+ D Assets/Audio/Source/BurningHills/action_3.wav
+ D Assets/Audio/Source/BurningHills/action_3.wav.meta
+ D Assets/Audio/Source/BurningHills/afterglow_62s.wav
+ D Assets/Audio/Source/BurningHills/afterglow_62s.wav.meta
+ D Assets/Readme.asset
+ D Assets/Readme.asset.meta
+ D Assets/Scenes.meta
+ D Assets/Scenes/SampleScene.unity
+ D Assets/Scenes/SampleScene.unity.meta
+ D Assets/TutorialInfo.meta
+ D Assets/TutorialInfo/Icons.meta
+ D Assets/TutorialInfo/Icons/URP.png
+ D Assets/TutorialInfo/Icons/URP.png.meta
+ D Assets/TutorialInfo/Layout.wlt
+ D Assets/TutorialInfo/Layout.wlt.meta
+ D Assets/TutorialInfo/Scripts.meta
+ D Assets/TutorialInfo/Scripts/Editor.meta
+ D Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs
+ D Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs.meta
+ D Assets/TutorialInfo/Scripts/Readme.cs
+ D Assets/TutorialInfo/Scripts/Readme.cs.meta
+ M Assets/Weedtopia/Art/Buildings/Prefabs/town_hall/WT_town_hall_T_FIXED.prefab
+ M Assets/Weedtopia/Game/Content/BurningHills.json
+ M Assets/Weedtopia/Game/Prefabs/BuildingSite.prefab
+ M Assets/Weedtopia/Game/Scenes/BurningHills.unity
+ M Assets/Weedtopia/Production/Layout/DistrictMap.asset
+ M Assets/Weedtopia/Production/Prefabs/WorldNavigationDock.prefab
+ M Assets/Weedtopia/Scripts/Editor/GameSetup/DirectionalMotionEvidence.cs
+ M Assets/Weedtopia/Scripts/Editor/GameSetup/GameScaffold.cs
+ M Assets/Weedtopia/Scripts/Editor/GameSetup/InteractionVisualEvidence.cs
+ M Assets/Weedtopia/Scripts/Editor/GameSetup/LayoutVisualEvidence.cs
+ M Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionAudioAuthoring.cs
+ M Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionBuildingIntegration.cs
+ M Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionFinishInstaller.cs
+ M Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionVisualEvidence.cs
+ M Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionVisualPreflight.cs
+ M Assets/Weedtopia/Scripts/Editor/GameSetup/VisualEvidence.cs
+ M Assets/Weedtopia/Scripts/Editor/GameSetup/WorldNavigationAuthoring.cs
+ M Assets/Weedtopia/Scripts/Runtime/Application/DailyService.cs
+ M Assets/Weedtopia/Scripts/Runtime/Application/GameSession.cs
+ M Assets/Weedtopia/Scripts/Runtime/Application/ProgressionService.cs
+ M Assets/Weedtopia/Scripts/Runtime/Application/TutorialDriver.cs
+ M Assets/Weedtopia/Scripts/Runtime/Domain/Definitions.cs
+ M Assets/Weedtopia/Scripts/Runtime/Domain/GameState.cs
+ M Assets/Weedtopia/Scripts/Runtime/Domain/Simulation.cs
+ M Assets/Weedtopia/Scripts/Runtime/Domain/UpgradeService.cs
+ M Assets/Weedtopia/Scripts/Runtime/Domain/WorkerService.cs
+ M Assets/Weedtopia/Scripts/Runtime/Persistence/LocalSaveStore.cs
+ M Assets/Weedtopia/Scripts/Runtime/Unity/BuildingInspectionMetrics.cs
+ M Assets/Weedtopia/Scripts/Runtime/Unity/BuildingInteractionUi.cs
+ M Assets/Weedtopia/Scripts/Runtime/Unity/BuildingView.cs
+ M Assets/Weedtopia/Scripts/Runtime/Unity/DistrictMap.cs
+ M Assets/Weedtopia/Scripts/Runtime/Unity/GameRoot.cs
+ M Assets/Weedtopia/Scripts/Runtime/Unity/GameUi.cs
+ M Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs
+ M Assets/Weedtopia/Scripts/Runtime/Unity/PresentationBenchmark.cs
+ M Assets/Weedtopia/Scripts/Runtime/Unity/PresentationRoute.cs
+ M Assets/Weedtopia/Scripts/Runtime/Unity/ProductionPresentation.cs
+ M Assets/Weedtopia/Scripts/Tests/EditMode/DomainTests.cs
+ M Assets/Weedtopia/Scripts/Tests/EditMode/PersistenceTests.cs
+ M Assets/Weedtopia/Scripts/Tests/EditMode/ProgressionTests.cs
+ M Assets/Weedtopia/Scripts/Tests/EditorAssets/DirectionalMotionTests.cs
+ M Assets/Weedtopia/Scripts/Tests/EditorAssets/GameAssetTests.cs
+ M Assets/Weedtopia/Scripts/Tests/EditorAssets/LivingHillsTests.cs
+ M Assets/Weedtopia/Scripts/Tests/EditorAssets/WorldNavigationTests.cs
+ M Assets/Weedtopia/Scripts/Tests/PlayMode/BuildingInteractionTests.cs
+ M Assets/Weedtopia/Scripts/Tests/PlayMode/GameFlowTests.cs
+ M Docs/ArtProduction/PROGRESS.json
+ M Docs/Content/BUILDING_AND_WORKER_MATRIX.csv
+ M Docs/Content/MAIN_QUEST_FLOW.md
+ M Docs/DirectionalMotion/integration.json
+ M Docs/GameDesign/ECONOMY_AND_BALANCE.md
+ M Docs/Implementation/Validation/SourceCompile/Weedtopia.Application.dll
+ M Docs/Implementation/Validation/SourceCompile/Weedtopia.Application.rsp
+ M Docs/Implementation/Validation/SourceCompile/Weedtopia.Buildings.Presentation.dll
+ M Docs/Implementation/Validation/SourceCompile/Weedtopia.Buildings.Presentation.log
+ M Docs/Implementation/Validation/SourceCompile/Weedtopia.Content.dll
+ M Docs/Implementation/Validation/SourceCompile/Weedtopia.Domain.dll
+ M Docs/Implementation/Validation/SourceCompile/Weedtopia.Domain.rsp
+ M Docs/Implementation/Validation/SourceCompile/Weedtopia.Editor.BuildingArtPipeline.Tests.dll
+ M Docs/Implementation/Validation/SourceCompile/Weedtopia.Editor.BuildingArtPipeline.dll
+ M Docs/Implementation/Validation/SourceCompile/Weedtopia.Editor.BuildingArtPipeline.rsp
+ M Docs/Implementation/Validation/SourceCompile/Weedtopia.Editor.GameSetup.dll
+ M Docs/Implementation/Validation/SourceCompile/Weedtopia.Editor.GameSetup.log
+ M Docs/Implementation/Validation/SourceCompile/Weedtopia.Editor.GameSetup.rsp
+ M Docs/Implementation/Validation/SourceCompile/Weedtopia.Game.AssetTests.dll
+ M Docs/Implementation/Validation/SourceCompile/Weedtopia.Game.AssetTests.rsp
+ M Docs/Implementation/Validation/SourceCompile/Weedtopia.Game.EditModeTests.dll
+ M Docs/Implementation/Validation/SourceCompile/Weedtopia.Game.EditModeTests.rsp
+ M Docs/Implementation/Validation/SourceCompile/Weedtopia.Game.PlayModeTests.dll
+ M Docs/Implementation/Validation/SourceCompile/Weedtopia.Game.PlayModeTests.rsp
+ M Docs/Implementation/Validation/SourceCompile/Weedtopia.Persistence.dll
+ M Docs/Implementation/Validation/SourceCompile/Weedtopia.Persistence.rsp
+ M Docs/Implementation/Validation/SourceCompile/Weedtopia.Unity.dll
+ M Docs/Implementation/Validation/SourceCompile/Weedtopia.Unity.log
+ M Docs/Implementation/Validation/SourceCompile/Weedtopia.Unity.rsp
+ M Docs/Implementation/Validation/SourceCompile/result.json
+ M Docs/Implementation/Validation/game_asset_validation.json
+ M Docs/Implementation/Validation/game_idempotence.json
+ M Docs/Implementation/Validation/progression_simulation.json
+ M Docs/Implementation/Validation/sprite_prototype_validation.json
+ M Docs/LayoutRevision/EditorJobs/request.json
+ M Docs/ProductionFinish/Evidence/production_preflight.json
+ M Docs/ProductionFinish/Evidence/ui_overflow.json
+ M Docs/ProductionFinish/PROVENANCE_AND_LICENSES.md
+ M Docs/ProductionFinish/generation_details.txt
+ M ProjectSettings/ProjectSettings.asset
+ M Tools/Implementation/Run-UnityValidation.ps1
+ M Tools/Implementation/export_content_docs.py
+?? Assets/Weedtopia/Art/Buildings/Archive.meta
+?? Assets/Weedtopia/Art/Buildings/Archive/
+?? Assets/Weedtopia/Art/Buildings/Models.meta
+?? Assets/Weedtopia/Art/Buildings/Models/
+?? Assets/Weedtopia/Art/Buildings/Prototypes3D.meta
+?? Assets/Weedtopia/Game/Archive/UnityTemplate.meta
+?? Assets/Weedtopia/Game/Archive/UnityTemplate/
+?? Assets/Weedtopia/Game/Audio/
+?? Assets/Weedtopia/Production/Construction.meta
+?? Assets/Weedtopia/Production/Construction/
+?? Assets/Weedtopia/Production/Conveyors.meta
+?? Assets/Weedtopia/Production/Conveyors/
+?? Assets/Weedtopia/Production/Prefabs/CityStatusBar.prefab
+?? Assets/Weedtopia/Production/Prefabs/CityStatusBar.prefab.meta
+?? Assets/Weedtopia/Production/Prefabs/ResourceCounter.prefab
+?? Assets/Weedtopia/Production/Prefabs/ResourceCounter.prefab.meta
+?? Assets/Weedtopia/Production/Rewards.meta
+?? Assets/Weedtopia/Production/Rewards/
+?? Assets/Weedtopia/Production/TownVitality.meta
+?? Assets/Weedtopia/Production/TownVitality/
+?? Assets/Weedtopia/Production/WorldCorners.meta
+?? Assets/Weedtopia/Production/WorldCorners/
+?? Assets/Weedtopia/Scripts/Editor/BuildingArtPipeline/TownHall3DReview.cs
+?? Assets/Weedtopia/Scripts/Editor/BuildingArtPipeline/TownHall3DReview.cs.meta
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/ConstructionFenceAuthoring.cs
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/ConstructionFenceAuthoring.cs.meta
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/ConstructionFenceEvidence.cs
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/ConstructionFenceEvidence.cs.meta
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/ConveyorAuthoring.cs
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/ConveyorAuthoring.cs.meta
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/ConveyorVisualEvidence.cs
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/ConveyorVisualEvidence.cs.meta
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/InventoryAuthoring.cs
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/InventoryAuthoring.cs.meta
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/InventoryEvidence.cs
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/InventoryEvidence.cs.meta
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/MenuLayoutAuthoring.cs
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/MenuLayoutAuthoring.cs.meta
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/RewardPresentationAuthoring.cs
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/RewardPresentationAuthoring.cs.meta
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/RewardPresentationEvidence.cs
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/RewardPresentationEvidence.cs.meta
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/TownHall2DRestore.cs
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/TownHall2DRestore.cs.meta
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/TownHall3DIntegration.cs
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/TownHall3DIntegration.cs.meta
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/TownHallLightingAuthoring.cs
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/TownHallLightingAuthoring.cs.meta
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/TownVitalityAuthoring.cs
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/TownVitalityAuthoring.cs.meta
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/WorldCornersAuthoring.cs
+?? Assets/Weedtopia/Scripts/Editor/GameSetup/WorldCornersAuthoring.cs.meta
+?? Assets/Weedtopia/Scripts/Runtime/Application/CityProjectDriver.cs
+?? Assets/Weedtopia/Scripts/Runtime/Application/CityProjectDriver.cs.meta
+?? Assets/Weedtopia/Scripts/Runtime/Application/CityProjectService.cs
+?? Assets/Weedtopia/Scripts/Runtime/Application/CityProjectService.cs.meta
+?? Assets/Weedtopia/Scripts/Runtime/Application/CityProjectText.cs
+?? Assets/Weedtopia/Scripts/Runtime/Application/CityProjectText.cs.meta
+?? Assets/Weedtopia/Scripts/Runtime/Application/InventoryService.cs
+?? Assets/Weedtopia/Scripts/Runtime/Application/InventoryService.cs.meta
+?? Assets/Weedtopia/Scripts/Runtime/Application/RewardCatalog.cs
+?? Assets/Weedtopia/Scripts/Runtime/Application/RewardCatalog.cs.meta
+?? Assets/Weedtopia/Scripts/Runtime/Domain/CityProject.cs
+?? Assets/Weedtopia/Scripts/Runtime/Domain/CityProject.cs.meta
+?? Assets/Weedtopia/Scripts/Runtime/Domain/Inventory.cs
+?? Assets/Weedtopia/Scripts/Runtime/Domain/Inventory.cs.meta
+?? Assets/Weedtopia/Scripts/Runtime/Domain/RewardHistory.cs
+?? Assets/Weedtopia/Scripts/Runtime/Domain/RewardHistory.cs.meta
+?? Assets/Weedtopia/Scripts/Runtime/Persistence/RewardSaveValidator.cs
+?? Assets/Weedtopia/Scripts/Runtime/Persistence/RewardSaveValidator.cs.meta
+?? Assets/Weedtopia/Scripts/Runtime/Unity/CityStatusBar.cs
+?? Assets/Weedtopia/Scripts/Runtime/Unity/CityStatusBar.cs.meta
+?? Assets/Weedtopia/Scripts/Runtime/Unity/ConstructionFenceView.cs
+?? Assets/Weedtopia/Scripts/Runtime/Unity/ConstructionFenceView.cs.meta
+?? Assets/Weedtopia/Scripts/Runtime/Unity/ConveyorNetwork.cs
+?? Assets/Weedtopia/Scripts/Runtime/Unity/ConveyorNetwork.cs.meta
+?? Assets/Weedtopia/Scripts/Runtime/Unity/ConveyorSection.cs
+?? Assets/Weedtopia/Scripts/Runtime/Unity/ConveyorSection.cs.meta
+?? Assets/Weedtopia/Scripts/Runtime/Unity/InventoryDetailView.cs
+?? Assets/Weedtopia/Scripts/Runtime/Unity/InventoryDetailView.cs.meta
+?? Assets/Weedtopia/Scripts/Runtime/Unity/InventoryTileView.cs
+?? Assets/Weedtopia/Scripts/Runtime/Unity/InventoryTileView.cs.meta
+?? Assets/Weedtopia/Scripts/Runtime/Unity/RewardBurstGraphic.cs
+?? Assets/Weedtopia/Scripts/Runtime/Unity/RewardBurstGraphic.cs.meta
+?? Assets/Weedtopia/Scripts/Runtime/Unity/RewardCardView.cs
+?? Assets/Weedtopia/Scripts/Runtime/Unity/RewardCardView.cs.meta
+?? Assets/Weedtopia/Scripts/Runtime/Unity/RewardCollectionUi.cs
+?? Assets/Weedtopia/Scripts/Runtime/Unity/RewardCollectionUi.cs.meta
+?? Assets/Weedtopia/Scripts/Runtime/Unity/RewardPresentation.cs
+?? Assets/Weedtopia/Scripts/Runtime/Unity/RewardPresentation.cs.meta
+?? Assets/Weedtopia/Scripts/Runtime/Unity/RewardPreviewView.cs
+?? Assets/Weedtopia/Scripts/Runtime/Unity/RewardPreviewView.cs.meta
+?? Assets/Weedtopia/Scripts/Runtime/Unity/RewardText.cs
+?? Assets/Weedtopia/Scripts/Runtime/Unity/RewardText.cs.meta
+?? Assets/Weedtopia/Scripts/Runtime/Unity/TownVitalityStamp.cs
+?? Assets/Weedtopia/Scripts/Runtime/Unity/TownVitalityStamp.cs.meta
+?? Assets/Weedtopia/Scripts/Runtime/Unity/WorldCornersStamp.cs
+?? Assets/Weedtopia/Scripts/Runtime/Unity/WorldCornersStamp.cs.meta
+?? Assets/Weedtopia/Scripts/Tests/EditMode/BuildingBalanceTests.cs
+?? Assets/Weedtopia/Scripts/Tests/EditMode/BuildingBalanceTests.cs.meta
+?? Assets/Weedtopia/Scripts/Tests/EditMode/CityProjectTests.cs
+?? Assets/Weedtopia/Scripts/Tests/EditMode/CityProjectTests.cs.meta
+?? Assets/Weedtopia/Scripts/Tests/EditMode/InventoryTests.cs
+?? Assets/Weedtopia/Scripts/Tests/EditMode/InventoryTests.cs.meta
+?? Assets/Weedtopia/Scripts/Tests/EditMode/RewardTests.cs
+?? Assets/Weedtopia/Scripts/Tests/EditMode/RewardTests.cs.meta
+?? Assets/Weedtopia/Scripts/Tests/EditorAssets/ConstructionFenceAssetTests.cs
+?? Assets/Weedtopia/Scripts/Tests/EditorAssets/ConstructionFenceAssetTests.cs.meta
+?? Assets/Weedtopia/Scripts/Tests/EditorAssets/ConveyorAssetTests.cs
+?? Assets/Weedtopia/Scripts/Tests/EditorAssets/ConveyorAssetTests.cs.meta
+?? Assets/Weedtopia/Scripts/Tests/EditorAssets/TownHall3DAssetTests.cs
+?? Assets/Weedtopia/Scripts/Tests/EditorAssets/TownHall3DAssetTests.cs.meta
+?? Assets/Weedtopia/Scripts/Tests/EditorAssets/TownVitalityTests.cs
+?? Assets/Weedtopia/Scripts/Tests/EditorAssets/TownVitalityTests.cs.meta
+?? Assets/Weedtopia/Scripts/Tests/EditorAssets/WorldCornersTests.cs
+?? Assets/Weedtopia/Scripts/Tests/EditorAssets/WorldCornersTests.cs.meta
+?? Assets/Weedtopia/Scripts/Tests/PlayMode/RewardPresentationTests.cs
+?? Assets/Weedtopia/Scripts/Tests/PlayMode/RewardPresentationTests.cs.meta
+?? Docs/Architecture/PROJECT_STRUCTURE.md
+?? Docs/ArtProduction/Buildings/town_hall/T_FIXED/Meshy_Highpoly_2026-09-28/
+?? Docs/BalanceRevision/
+?? Docs/CityFestivalRevision/
+?? Docs/ConstructionFences/
+?? Docs/ConveyorCargoFix/
+?? Docs/ConveyorRevision/
+?? Docs/Implementation/Validation/20260927_093341_TownVitality_OverviewBounds.json
+?? Docs/Implementation/Validation/20260927_093341_TownVitality_OverviewBounds.log
+?? Docs/Implementation/Validation/20260927_093520_TownVitalityCapture_VisualQA.json
+?? Docs/Implementation/Validation/20260927_093520_TownVitalityCapture_VisualQA.log
+?? Docs/Implementation/Validation/20260927_093932_TownVitalityRefine_PlacementPolish.json
+?? Docs/Implementation/Validation/20260927_093932_TownVitalityRefine_PlacementPolish.log
+?? Docs/Implementation/Validation/20260927_094052_EditMode_TownVitality.json
+?? Docs/Implementation/Validation/20260927_094052_EditMode_TownVitality.log
+?? Docs/Implementation/Validation/20260927_094052_EditMode_TownVitality.xml
+?? Docs/Implementation/Validation/20260927_094818_TownVitalityRefine_ClearanceAndAnimation.json
+?? Docs/Implementation/Validation/20260927_094818_TownVitalityRefine_ClearanceAndAnimation.log
+?? Docs/Implementation/Validation/20260927_094841_EditMode_TownVitalityRecheck.json
+?? Docs/Implementation/Validation/20260927_094841_EditMode_TownVitalityRecheck.log
+?? Docs/Implementation/Validation/20260927_094841_EditMode_TownVitalityRecheck.xml
+?? Docs/Implementation/Validation/20260927_094914_PlayMode_TownVitality.json
+?? Docs/Implementation/Validation/20260927_094914_PlayMode_TownVitality.log
+?? Docs/Implementation/Validation/20260927_094914_PlayMode_TownVitality.xml
+?? Docs/Implementation/Validation/20260927_095245_PlayMode_TownVitalityExpansionRecheck.json
+?? Docs/Implementation/Validation/20260927_095245_PlayMode_TownVitalityExpansionRecheck.log
+?? Docs/Implementation/Validation/20260927_095245_PlayMode_TownVitalityExpansionRecheck.xml
+?? Docs/Implementation/Validation/20260927_095325_TownVitalityCapture_Final.json
+?? Docs/Implementation/Validation/20260927_095325_TownVitalityCapture_Final.log
+?? Docs/Implementation/Validation/20260927_095806_TownVitalityRefine_StreetTreeVariety.json
+?? Docs/Implementation/Validation/20260927_095806_TownVitalityRefine_StreetTreeVariety.log
+?? Docs/Implementation/Validation/20260927_095830_EditMode_TownVitalityStreetTrees.json
+?? Docs/Implementation/Validation/20260927_095830_EditMode_TownVitalityStreetTrees.log
+?? Docs/Implementation/Validation/20260927_095830_EditMode_TownVitalityStreetTrees.xml
+?? Docs/Implementation/Validation/20260927_095909_PlayMode_TownVitalityFinalClick.json
+?? Docs/Implementation/Validation/20260927_095909_PlayMode_TownVitalityFinalClick.log
+?? Docs/Implementation/Validation/20260927_095909_PlayMode_TownVitalityFinalClick.xml
+?? Docs/Implementation/Validation/20260927_095940_TownVitalityCapture_ReviewedFinal.json
+?? Docs/Implementation/Validation/20260927_095940_TownVitalityCapture_ReviewedFinal.log
+?? Docs/Implementation/Validation/20260927_104422_WorldCorners_InitialAuthoring.json
+?? Docs/Implementation/Validation/20260927_104422_WorldCorners_InitialAuthoring.log
+?? Docs/Implementation/Validation/20260927_104536_WorldCornersCapture_CompositionReview.json
+?? Docs/Implementation/Validation/20260927_104536_WorldCornersCapture_CompositionReview.log
+?? Docs/Implementation/Validation/20260927_104913_WorldCornersRefine_CurvedTrailsAndVisibleLookout.json
+?? Docs/Implementation/Validation/20260927_104913_WorldCornersRefine_CurvedTrailsAndVisibleLookout.log
+?? Docs/Implementation/Validation/20260927_105034_EditMode_WorldCornersFinalAssets.json
+?? Docs/Implementation/Validation/20260927_105034_EditMode_WorldCornersFinalAssets.log
+?? Docs/Implementation/Validation/20260927_105034_EditMode_WorldCornersFinalAssets.xml
+?? Docs/Implementation/Validation/20260927_105644_PlayMode_WorldCornersRuntime.json
+?? Docs/Implementation/Validation/20260927_105644_PlayMode_WorldCornersRuntime.log
+?? Docs/Implementation/Validation/20260927_105644_PlayMode_WorldCornersRuntime.xml
+?? Docs/Implementation/Validation/20260927_105924_WorldCornersCapture_FinalCurvedGardens.json
+?? Docs/Implementation/Validation/20260927_105924_WorldCornersCapture_FinalCurvedGardens.log
+?? Docs/Implementation/Validation/20260927_110201_WorldCornersRefine_ClearPavilionForecourt.json
+?? Docs/Implementation/Validation/20260927_110201_WorldCornersRefine_ClearPavilionForecourt.log
+?? Docs/Implementation/Validation/20260927_110302_EditMode_FinalPlantPlacement.json
+?? Docs/Implementation/Validation/20260927_110302_EditMode_FinalPlantPlacement.log
+?? Docs/Implementation/Validation/20260927_110302_EditMode_FinalPlantPlacement.xml
+?? Docs/Implementation/Validation/20260927_110433_WorldCornersCapture_FinalVerified.json
+?? Docs/Implementation/Validation/20260927_110433_WorldCornersCapture_FinalVerified.log
+?? Docs/Implementation/Validation/20260927_172939_MenuLayout_DirectMenu.json
+?? Docs/Implementation/Validation/20260927_172939_MenuLayout_DirectMenu.log
+?? Docs/Implementation/Validation/20260927_173016_MenuLayoutCapture_FirstReview.json
+?? Docs/Implementation/Validation/20260927_173016_MenuLayoutCapture_FirstReview.log
+?? Docs/Implementation/Validation/20260927_173318_MenuLayout_PortraitWidthRepair.json
+?? Docs/Implementation/Validation/20260927_173318_MenuLayout_PortraitWidthRepair.log
+?? Docs/Implementation/Validation/20260927_173429_EditMode_DirectMenuRegression.json
+?? Docs/Implementation/Validation/20260927_173429_EditMode_DirectMenuRegression.log
+?? Docs/Implementation/Validation/20260927_173429_EditMode_DirectMenuRegression.xml
+?? Docs/Implementation/Validation/20260927_174049_PlayMode_DirectMenuRegression.json
+?? Docs/Implementation/Validation/20260927_174049_PlayMode_DirectMenuRegression.log
+?? Docs/Implementation/Validation/20260927_174049_PlayMode_DirectMenuRegression.xml
+?? Docs/Implementation/Validation/20260927_174327_MenuLayout_Idempotence.json
+?? Docs/Implementation/Validation/20260927_174327_MenuLayout_Idempotence.log
+?? Docs/Implementation/Validation/20260927_174525_MenuLayoutCapture_FinalVerified.json
+?? Docs/Implementation/Validation/20260927_174525_MenuLayoutCapture_FinalVerified.log
+?? Docs/Implementation/Validation/20260927_182506_Conveyors_PaintedSprites.json
+?? Docs/Implementation/Validation/20260927_182506_Conveyors_PaintedSprites.log
+?? Docs/Implementation/Validation/20260927_182646_ConveyorCapture_FirstVisualReview.json
+?? Docs/Implementation/Validation/20260927_182646_ConveyorCapture_FirstVisualReview.log
+?? Docs/Implementation/Validation/20260927_183414_PlayMode_ConveyorRevision.json
+?? Docs/Implementation/Validation/20260927_183414_PlayMode_ConveyorRevision.log
+?? Docs/Implementation/Validation/20260927_183414_PlayMode_ConveyorRevision.xml
+?? Docs/Implementation/Validation/20260927_183652_EditMode_ConveyorAssetsAndDomain.json
+?? Docs/Implementation/Validation/20260927_183652_EditMode_ConveyorAssetsAndDomain.log
+?? Docs/Implementation/Validation/20260927_183652_EditMode_ConveyorAssetsAndDomain.xml
+?? Docs/Implementation/Validation/20260927_183832_EditMode_ConveyorFinalRegression.json
+?? Docs/Implementation/Validation/20260927_183832_EditMode_ConveyorFinalRegression.log
+?? Docs/Implementation/Validation/20260927_183832_EditMode_ConveyorFinalRegression.xml
+?? Docs/Implementation/Validation/20260927_184008_ConveyorCapture_FinalMotionReview.json
+?? Docs/Implementation/Validation/20260927_184008_ConveyorCapture_FinalMotionReview.log
+?? Docs/Implementation/Validation/20260927_184417_Conveyors_ClearDecorativeOverlap.json
+?? Docs/Implementation/Validation/20260927_184417_Conveyors_ClearDecorativeOverlap.log
+?? Docs/Implementation/Validation/20260927_184618_EditMode_ConveyorFinalScene.json
+?? Docs/Implementation/Validation/20260927_184618_EditMode_ConveyorFinalScene.log
+?? Docs/Implementation/Validation/20260927_184618_EditMode_ConveyorFinalScene.xml
+?? Docs/Implementation/Validation/20260927_184736_ConveyorCapture_FinalVerified.json
+?? Docs/Implementation/Validation/20260927_184736_ConveyorCapture_FinalVerified.log
+?? Docs/Implementation/Validation/20260927_191157_ConstructionFences_InitialInstall.json
+?? Docs/Implementation/Validation/20260927_191157_ConstructionFences_InitialInstall.log
+?? Docs/Implementation/Validation/20260927_191306_ConstructionCapture_FirstVisualReview.json
+?? Docs/Implementation/Validation/20260927_191306_ConstructionCapture_FirstVisualReview.log
+?? Docs/Implementation/Validation/20260927_191616_PlayMode_ConstructionFences.json
+?? Docs/Implementation/Validation/20260927_191616_PlayMode_ConstructionFences.log
+?? Docs/Implementation/Validation/20260927_191616_PlayMode_ConstructionFences.xml
+?? Docs/Implementation/Validation/20260927_192026_EditMode_ConstructionFences.json
+?? Docs/Implementation/Validation/20260927_192026_EditMode_ConstructionFences.log
+?? Docs/Implementation/Validation/20260927_192026_EditMode_ConstructionFences.xml
+?? Docs/Implementation/Validation/20260928_204921_ConveyorCargoCapture_CargoClippingFix.json
+?? Docs/Implementation/Validation/20260928_204921_ConveyorCargoCapture_CargoClippingFix.log
+?? Docs/Implementation/Validation/20260928_225639_EditMode_TownHall3DIntegration.json
+?? Docs/Implementation/Validation/20260928_225639_EditMode_TownHall3DIntegration.log
+?? Docs/Implementation/Validation/20260928_225639_EditMode_TownHall3DIntegration.xml
+?? Docs/Implementation/Validation/20260928_225931_PlayMode_TownHall3DInteractions.json
+?? Docs/Implementation/Validation/20260928_225931_PlayMode_TownHall3DInteractions.log
+?? Docs/Implementation/Validation/20260928_225931_PlayMode_TownHall3DInteractions.xml
+?? Docs/Implementation/Validation/20260928_230221_EditMode_TownHall3DFinal.json
+?? Docs/Implementation/Validation/20260928_230221_EditMode_TownHall3DFinal.log
+?? Docs/Implementation/Validation/20260928_230221_EditMode_TownHall3DFinal.xml
+?? Docs/Implementation/Validation/20260930_053517_EditMode_TownHall2DRestore.json
+?? Docs/Implementation/Validation/20260930_053517_EditMode_TownHall2DRestore.log
+?? Docs/Implementation/Validation/20260930_053517_EditMode_TownHall2DRestore.xml
+?? Docs/Implementation/Validation/20260930_053707_PlayMode_TownHall2DRestore.json
+?? Docs/Implementation/Validation/20260930_053707_PlayMode_TownHall2DRestore.log
+?? Docs/Implementation/Validation/20260930_053707_PlayMode_TownHall2DRestore.xml
+?? Docs/Implementation/Validation/20260930_100737_EditMode_BuildingBalance.json
+?? Docs/Implementation/Validation/20260930_100737_EditMode_BuildingBalance.log
+?? Docs/Implementation/Validation/20260930_100737_EditMode_BuildingBalance.xml
+?? Docs/Implementation/Validation/20260930_101100_EditMode_BuildingBalanceFinal.json
+?? Docs/Implementation/Validation/20260930_101100_EditMode_BuildingBalanceFinal.log
+?? Docs/Implementation/Validation/20260930_101100_EditMode_BuildingBalanceFinal.xml
+?? Docs/Implementation/Validation/20260930_101318_PlayMode_BuildingBalance.json
+?? Docs/Implementation/Validation/20260930_101318_PlayMode_BuildingBalance.log
+?? Docs/Implementation/Validation/20260930_101318_PlayMode_BuildingBalance.xml
+?? Docs/Implementation/Validation/20260930_101702_PlayMode_BuildingBalanceFinal.json
+?? Docs/Implementation/Validation/20260930_101702_PlayMode_BuildingBalanceFinal.log
+?? Docs/Implementation/Validation/20260930_101702_PlayMode_BuildingBalanceFinal.xml
+?? Docs/Implementation/Validation/20260930_124121_EditMode_CityFestival.json
+?? Docs/Implementation/Validation/20260930_124121_EditMode_CityFestival.log
+?? Docs/Implementation/Validation/20260930_124121_EditMode_CityFestival.xml
+?? Docs/Implementation/Validation/20260930_124633_PlayMode_CityFestival.json
+?? Docs/Implementation/Validation/20260930_124633_PlayMode_CityFestival.log
+?? Docs/Implementation/Validation/20260930_124633_PlayMode_CityFestival.xml
+?? Docs/Implementation/Validation/20260930_125056_EditMode_CityFestivalFinal.json
+?? Docs/Implementation/Validation/20260930_125056_EditMode_CityFestivalFinal.log
+?? Docs/Implementation/Validation/20260930_125056_EditMode_CityFestivalFinal.xml
+?? Docs/Implementation/Validation/20260930_125348_PlayMode_CityFestivalFinal.json
+?? Docs/Implementation/Validation/20260930_125348_PlayMode_CityFestivalFinal.log
+?? Docs/Implementation/Validation/20260930_125348_PlayMode_CityFestivalFinal.xml
+?? Docs/Implementation/Validation/20260930_210009_Rewards_QuestRewards.json
+?? Docs/Implementation/Validation/20260930_210009_Rewards_QuestRewards.log
+?? Docs/Implementation/Validation/20260930_210229_Rewards_QuestRewardsRecheck.json
+?? Docs/Implementation/Validation/20260930_210229_Rewards_QuestRewardsRecheck.log
+?? Docs/Implementation/Validation/20260930_210332_EditMode_QuestRewards.json
+?? Docs/Implementation/Validation/20260930_210332_EditMode_QuestRewards.log
+?? Docs/Implementation/Validation/20260930_210332_EditMode_QuestRewards.xml
+?? Docs/Implementation/Validation/20260930_210733_PlayMode_QuestRewards.json
+?? Docs/Implementation/Validation/20260930_210733_PlayMode_QuestRewards.log
+?? Docs/Implementation/Validation/20260930_210733_PlayMode_QuestRewards.xml
+?? Docs/Implementation/Validation/20260930_211041_RewardsCapture_QuestRewards.json
+?? Docs/Implementation/Validation/20260930_211041_RewardsCapture_QuestRewards.log
+?? Docs/Implementation/Validation/20260930_211743_RewardsRefine_QuestRewardsPolish.json
+?? Docs/Implementation/Validation/20260930_211743_RewardsRefine_QuestRewardsPolish.log
+?? Docs/Implementation/Validation/20260930_211938_PlayMode_QuestRewardsFinal.json
+?? Docs/Implementation/Validation/20260930_211938_PlayMode_QuestRewardsFinal.log
+?? Docs/Implementation/Validation/20260930_211938_PlayMode_QuestRewardsFinal.xml
+?? Docs/Implementation/Validation/20260930_212158_RewardsCapture_QuestRewardsFinal.json
+?? Docs/Implementation/Validation/20260930_212158_RewardsCapture_QuestRewardsFinal.log
+?? Docs/Implementation/Validation/20260930_212533_RewardsRefine_QuestRewardsRays.json
+?? Docs/Implementation/Validation/20260930_212533_RewardsRefine_QuestRewardsRays.log
+?? Docs/Implementation/Validation/20260930_212753_RewardsCapture_QuestRewardsAcceptedLayout.json
+?? Docs/Implementation/Validation/20260930_212753_RewardsCapture_QuestRewardsAcceptedLayout.log
+?? Docs/Implementation/Validation/20260930_213123_RewardsRefine_QuestRewardsGlow.json
+?? Docs/Implementation/Validation/20260930_213123_RewardsRefine_QuestRewardsGlow.log
+?? Docs/Implementation/Validation/20260930_213248_RewardsCapture_QuestRewardsDelivery.json
+?? Docs/Implementation/Validation/20260930_213248_RewardsCapture_QuestRewardsDelivery.log
+?? Docs/Implementation/Validation/20260930_222101_Inventory_CategorizedItems.json
+?? Docs/Implementation/Validation/20260930_222101_Inventory_CategorizedItems.log
+?? Docs/Implementation/Validation/20260930_222155_EditMode_Inventory.json
+?? Docs/Implementation/Validation/20260930_222155_EditMode_Inventory.log
+?? Docs/Implementation/Validation/20260930_222155_EditMode_Inventory.xml
+?? Docs/Implementation/Validation/20260930_223212_Inventory_SplitAndSurfaces.json
+?? Docs/Implementation/Validation/20260930_223212_Inventory_SplitAndSurfaces.log
+?? Docs/Implementation/Validation/20260930_223301_InventoryCapture_FirstVisual.json
+?? Docs/Implementation/Validation/20260930_223301_InventoryCapture_FirstVisual.log
+?? Docs/Implementation/Validation/20260930_223746_Inventory_LayoutFinal.json
+?? Docs/Implementation/Validation/20260930_223746_Inventory_LayoutFinal.log
+?? Docs/Implementation/Validation/20260930_223952_Inventory_MigrationFinal.json
+?? Docs/Implementation/Validation/20260930_223952_Inventory_MigrationFinal.log
+?? Docs/Implementation/Validation/20260930_224037_EditMode_InventoryFinal.json
+?? Docs/Implementation/Validation/20260930_224037_EditMode_InventoryFinal.log
+?? Docs/Implementation/Validation/20260930_224037_EditMode_InventoryFinal.xml
+?? Docs/Implementation/Validation/20260930_224438_PlayMode_InventoryFinal.json
+?? Docs/Implementation/Validation/20260930_224438_PlayMode_InventoryFinal.log
+?? Docs/Implementation/Validation/20260930_224438_PlayMode_InventoryFinal.xml
+?? Docs/Implementation/Validation/20260930_224931_PlayMode_InventoryUiFinal.json
+?? Docs/Implementation/Validation/20260930_224931_PlayMode_InventoryUiFinal.log
+?? Docs/Implementation/Validation/20260930_224931_PlayMode_InventoryUiFinal.xml
+?? Docs/Implementation/Validation/20260930_225048_EditMode_InventoryAssetFinal.json
+?? Docs/Implementation/Validation/20260930_225048_EditMode_InventoryAssetFinal.log
+?? Docs/Implementation/Validation/20260930_225048_EditMode_InventoryAssetFinal.xml
+?? Docs/Implementation/Validation/20260930_225250_Inventory_Idempotence.json
+?? Docs/Implementation/Validation/20260930_225250_Inventory_Idempotence.log
+?? Docs/Implementation/Validation/20260930_225355_InventoryCapture_Final.json
+?? Docs/Implementation/Validation/20260930_225355_InventoryCapture_Final.log
+?? Docs/InventoryRevision/
+?? Docs/LayoutRevision/EditorJobs/corners-observe-20260927.json
+?? Docs/MenuLayoutRevision/
+?? Docs/ProductionFinish/Evidence/audio_license_confirmation.json
+?? Docs/RewardPresentation/
+?? Docs/TownVitalityRevision/
+?? Docs/WorldCornersRevision/
+?? Tools/Implementation/author_city_festival.py
+?? Tools/Implementation/author_inventory_content.py
+?? Tools/Implementation/author_reward_content.py
+?? Tools/Implementation/extend_inventory.py
+?? Tools/Implementation/implement_rewards.py
+?? Tools/Implementation/integrate_inventory.py
+?? Tools/Implementation/integrate_reward_ui.py
+?? Tools/Implementation/integrate_reward_validation.py
+?? Tools/Implementation/package_conveyor_evidence.py
+?? Tools/Implementation/prepare_town_vitality.py
+?? Tools/Implementation/prepare_world_corners.py
+?? Tools/Implementation/verify_city_festival.py
+?? Tools/Implementation/verify_construction_fences.py
+?? Tools/Implementation/verify_conveyor_preservation.py
+?? Tools/Implementation/verify_menu_layout_preservation.py
+?? Tools/Implementation/verify_world_corners_preservation.py

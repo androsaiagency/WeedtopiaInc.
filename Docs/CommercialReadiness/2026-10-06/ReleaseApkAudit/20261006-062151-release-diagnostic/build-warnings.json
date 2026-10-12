@@ -1,0 +1,101 @@
+{
+  "schema": "weedtopia_android_build_warning_inventory_v1",
+  "utc": "2026-10-06T06:33:32.687832+00:00",
+  "status": "build_succeeded_with_nine_warnings",
+  "scope": "Exact completed ReleaseDiagnostic build 20261006-062151; native/SDK artifact audit passed independently; warning-free gate remains failed.",
+  "buildResult": {
+    "path": "Builds/Android/20261006-062151-release-diagnostic/build-result.json",
+    "sha256": "3bac8c519aa9df0ed23fb8b91cd1ef54b7d0121d9e8d5abce8b8c2b16cdac7e3",
+    "bytes": 3072
+  },
+  "nativeBuildLog": {
+    "path": "Docs/CommercialReadiness/2026-10-06/ReleaseApkAudit/20261006-062151-release-diagnostic/native-build.log",
+    "sha256": "91b4b8383b6d6f1f88e430a90d20c7ff46b8b1638420480c9f5ba2de3260dd5f",
+    "bytes": 696106
+  },
+  "actualApkAudit": {
+    "path": "Docs/CommercialReadiness/2026-10-06/ReleaseApkAudit/20261006-062151-release-diagnostic/apk-audit.json",
+    "sha256": "5f2c5dcd4b90e08743b5b0d5dad478555f2796eb914651ea20a8907863ab9d7e",
+    "bytes": 183992
+  },
+  "buildReport": {
+    "status": "succeeded",
+    "errors": 0,
+    "warnings": 9,
+    "seconds": 326.6302431,
+    "bytes": 354495906
+  },
+  "buildWarningClasses": [
+    {
+      "class": "UrpTestOnlyPrivateConstructorStripper",
+      "count": 8,
+      "lineNumbers": [
+        459,
+        495,
+        559,
+        583,
+        971,
+        992,
+        3401,
+        3422
+      ],
+      "scope": "Embedded Core package test fixture was discoverable during URP stripping; clean package Tests~ exclusion is handled separately."
+    },
+    {
+      "class": "UnconfiguredUnityServicesSymbolUpload",
+      "count": 1,
+      "lineNumbers": [
+        5564
+      ],
+      "scope": "Unity cloud diagnostics attempted auth without a token; local per-build Full ZIP archive and matching native ELF identities already passed."
+    }
+  ],
+  "warningClassesCountMatchesBuildReport": true,
+  "editorOnlyWarnings": [
+    {
+      "class": "VsUnityUdpMessagingPortUnavailable",
+      "count": 1,
+      "lineNumbers": [
+        438
+      ],
+      "scope": "Editor debugger discovery. Additional log warning outside the nine-warning BuildReport; no Android player connection claim."
+    }
+  ],
+  "compilerWarningLineNumbers": [],
+  "shaderWarningLineNumbers": [],
+  "unclassifiedDirectWarningLineNumbers": [],
+  "settingsRestorationPairsVerified": 16,
+  "effectiveSettingsVerified": {
+    "TextureCompressionOverride": "NoOverride",
+    "MaximumTextureSizeOverride": 0,
+    "SymbolLevel": "Full",
+    "SymbolFormat": "Zip",
+    "ManagedStacktrace": "MethodFileLineNumber",
+    "ErrorStacktrace": "Full",
+    "ExceptionStacktrace": "Full"
+  },
+  "nativeSymbolIdentitiesMatch": true,
+  "textures": {
+    "report": {
+      "path": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\CommercialReadiness\\2026-10-06\\ReleaseApkAudit\\20261006-062151-release-diagnostic\\building-textures.json",
+      "bytes": 143051,
+      "sha256": "c21af8a1a11a01b0e1a0ceb9f067243a64978a1c3622e5ecf41c3424efbbfce0"
+    },
+    "tool": {
+      "path": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Tools\\Implementation\\audit_android_building_textures.py",
+      "bytes": 13840,
+      "sha256": "b9618cead546bd09643c2dcca2d601806b6875496b769fa95c001b18b5226be3"
+    },
+    "textures": 251,
+    "formats": {
+      "ETC2_RGBA8": 251
+    },
+    "gpuImageBytes": 350930128,
+    "originalSourcesAndGuidsPreserved": true
+  },
+  "warningsZeroGatePassed": false,
+  "actualArtifactVerificationPassed": true,
+  "physicalDeviceAcceptance": false,
+  "humanAcceptance": false,
+  "releaseAccepted": false
+}

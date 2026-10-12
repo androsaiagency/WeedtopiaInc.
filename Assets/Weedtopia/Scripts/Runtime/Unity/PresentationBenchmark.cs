@@ -55,7 +55,7 @@ namespace Weedtopia.Unity
                 // scene and UI at a fixed output size without taking focus from the user.
                 RenderPipeline.SubmitRenderRequest(root.CameraRig.RenderCamera,renderRequest);
                 if(warmup-->0)return;
-                if(stage==2&&frames==60){root.Session.Upgrades.BuyWithMoney("farm_grow_01");root.Session.Advance(10);root.Refresh();}
+                if(stage==2&&frames==60){root.Session.Upgrades.BuyWithMoney("farm_grow_01");root.Session.Advance(root.Session.State.Find("farm_grow_01").buildingSeconds);root.Refresh();}
                 times.Add(Time.unscaledDeltaTime*1000);frames++;
                 if(gc.Valid)maxGc=Math.Max(maxGc,gc.LastValue);if(draws.Valid)maxDraw=Math.Max(maxDraw,draws.LastValue);if(batches.Valid)maxBatch=Math.Max(maxBatch,batches.LastValue);
                 if(frames<300)return;
@@ -69,7 +69,7 @@ namespace Weedtopia.Unity
         }
         private void Prepare()
         {
-            for(int i=0;i<300&&(stage==0?root.Session.State.City.unlocked<Zone.City:!root.Session.State.City.freeplay);i++){TutorialDriver.Act(root.Session,DateTime.UtcNow);root.Session.Advance(1);}
+            for(int i=0;i<TutorialDriver.MaxSimulationSeconds&&(stage==0?root.Session.State.City.unlocked<Zone.City:!root.Session.State.City.freeplay);i++){TutorialDriver.Act(root.Session,DateTime.UtcNow);root.Session.Advance(1);}
             if(stage==0&&root.Session.State.City.unlocked<Zone.City||stage>0&&!root.Session.State.City.freeplay)throw new InvalidOperationException("Benchmark progression stalled");
             root.Ui.Close();root.Select(stage==1?"town_hall":"farm_grow_01",true);root.Refresh();
             if(stage==1)root.CameraRig.ShowOverview();else root.CameraRig.SetDiagnosticZoom(28);

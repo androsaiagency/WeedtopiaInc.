@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="8" result="Failed(Child)" total="8" passed="7" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-03 14:20:58Z" end-time="2026-10-03 14:21:15Z" duration="17,5431394">
+  <test-suite type="TestSuite" id="1100" name="WeedtopiaInc" fullname="WeedtopiaInc" runstate="Runnable" testcasecount="84" result="Failed" site="Child" start-time="2026-10-03 14:20:58Z" end-time="2026-10-03 14:21:15Z" duration="17.543139" total="8" passed="7" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1096" name="Weedtopia.Game.PlayModeTests.dll" fullname="D:/Unity Games/Weedtopia Inc/WeedtopiaInc/Library/ScriptAssemblies/Weedtopia.Game.PlayModeTests.dll" runstate="Runnable" testcasecount="84" result="Failed" site="Child" start-time="2026-10-03 14:20:58Z" end-time="2026-10-03 14:21:15Z" duration="17.530994" total="8" passed="7" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="246260" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1097" name="Weedtopia" fullname="Weedtopia" runstate="Runnable" testcasecount="84" result="Failed" site="Child" start-time="2026-10-03 14:20:58Z" end-time="2026-10-03 14:21:15Z" duration="17.527314" total="8" passed="7" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1098" name="Tests" fullname="Weedtopia.Tests" runstate="Runnable" testcasecount="84" result="Failed" site="Child" start-time="2026-10-03 14:20:58Z" end-time="2026-10-03 14:21:15Z" duration="17.524020" total="8" passed="7" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1099" name="PlayMode" fullname="Weedtopia.Tests.PlayMode" runstate="Runnable" testcasecount="84" result="Failed" site="Child" start-time="2026-10-03 14:20:58Z" end-time="2026-10-03 14:21:15Z" duration="17.520571" total="8" passed="7" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="1062" name="RewardPresentationTests" fullname="Weedtopia.Tests.PlayMode.RewardPresentationTests" classname="Weedtopia.Tests.PlayMode.RewardPresentationTests" runstate="Runnable" testcasecount="8" result="Failed" site="Child" start-time="2026-10-03 14:20:58Z" end-time="2026-10-03 14:21:15Z" duration="17.514730" total="8" passed="7" failed="1" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1068" name="CancelOrNavigateAwayNeverConsumesItemsOrLeavesTheSimulationPaused" fullname="Weedtopia.Tests.PlayMode.RewardPresentationTests.CancelOrNavigateAwayNeverConsumesItemsOrLeavesTheSimulationPaused" methodname="CancelOrNavigateAwayNeverConsumesItemsOrLeavesTheSimulationPaused" classname="Weedtopia.Tests.PlayMode.RewardPresentationTests" runstate="Runnable" seed="1303317532" result="Passed" start-time="2026-10-03 14:20:58Z" end-time="2026-10-03 14:21:00Z" duration="2.596657" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1063" name="ClaimShowsSavedRewardAndDismissalCannotDuplicateIt" fullname="Weedtopia.Tests.PlayMode.RewardPresentationTests.ClaimShowsSavedRewardAndDismissalCannotDuplicateIt" methodname="ClaimShowsSavedRewardAndDismissalCannotDuplicateIt" classname="Weedtopia.Tests.PlayMode.RewardPresentationTests" runstate="Runnable" seed="609378701" result="Passed" start-time="2026-10-03 14:21:00Z" end-time="2026-10-03 14:21:03Z" duration="2.399687" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1070" name="CollectionAndCelebrationButtonsReceiveTheTopmostPointerHit" fullname="Weedtopia.Tests.PlayMode.RewardPresentationTests.CollectionAndCelebrationButtonsReceiveTheTopmostPointerHit" methodname="CollectionAndCelebrationButtonsReceiveTheTopmostPointerHit" classname="Weedtopia.Tests.PlayMode.RewardPresentationTests" runstate="Runnable" seed="1057617352" result="Passed" start-time="2026-10-03 14:21:03Z" end-time="2026-10-03 14:21:05Z" duration="2.101780" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1064" name="CollectionUsesLiveBalancesAndWorkerCardOpensExistingTeam" fullname="Weedtopia.Tests.PlayMode.RewardPresentationTests.CollectionUsesLiveBalancesAndWorkerCardOpensExistingTeam" methodname="CollectionUsesLiveBalancesAndWorkerCardOpensExistingTeam" classname="Weedtopia.Tests.PlayMode.RewardPresentationTests" runstate="Runnable" seed="2084828881" result="Passed" start-time="2026-10-03 14:21:05Z" end-time="2026-10-03 14:21:07Z" duration="1.933953" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1067" name="InventoryFiltersInspectAndConfirmOneSpeedupThenPersist" fullname="Weedtopia.Tests.PlayMode.RewardPresentationTests.InventoryFiltersInspectAndConfirmOneSpeedupThenPersist" methodname="InventoryFiltersInspectAndConfirmOneSpeedupThenPersist" classname="Weedtopia.Tests.PlayMode.RewardPresentationTests" runstate="Runnable" seed="1905638842" result="Passed" start-time="2026-10-03 14:21:07Z" end-time="2026-10-03 14:21:09Z" duration="2.070177" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1066" name="NewGameClearsPendingCelebrationAndHistory" fullname="Weedtopia.Tests.PlayMode.RewardPresentationTests.NewGameClearsPendingCelebrationAndHistory" methodname="NewGameClearsPendingCelebrationAndHistory" classname="Weedtopia.Tests.PlayMode.RewardPresentationTests" runstate="Runnable" seed="332024549" result="Passed" start-time="2026-10-03 14:21:09Z" end-time="2026-10-03 14:21:11Z" duration="2.204572" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1069" name="OpeningAPackShowsActualSavedContentsAndConsumesOnlyOne" fullname="Weedtopia.Tests.PlayMode.RewardPresentationTests.OpeningAPackShowsActualSavedContentsAndConsumesOnlyOne" methodname="OpeningAPackShowsActualSavedContentsAndConsumesOnlyOne" classname="Weedtopia.Tests.PlayMode.RewardPresentationTests" runstate="Runnable" seed="170886558" result="Passed" start-time="2026-10-03 14:21:11Z" end-time="2026-10-03 14:21:13Z" duration="2.227289" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1065" name="SplitIsClickableWithoutConstructionAndKeepsAllTimeInSavedInventory" fullname="Weedtopia.Tests.PlayMode.RewardPresentationTests.SplitIsClickableWithoutConstructionAndKeepsAllTimeInSavedInventory" methodname="SplitIsClickableWithoutConstructionAndKeepsAllTimeInSavedInventory" classname="Weedtopia.Tests.PlayMode.RewardPresentationTests" runstate="Runnable" seed="839280252" result="Failed" start-time="2026-10-03 14:21:13Z" end-time="2026-10-03 14:21:15Z" duration="1.961125" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Slot_1 is covered by InventoryDetail
+  Expected: <Slot_1 (UnityEngine.UI.Button)>
+  But was:  null
+]]></message>
+                  <stack-trace><![CDATA[at Weedtopia.Tests.PlayMode.RewardPresentationTests+<SplitIsClickableWithoutConstructionAndKeepsAllTimeInSavedInventory>d__8.MoveNext () [0x00209] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\PlayMode\RewardPresentationTests.cs:82
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in .\Library\PackageCache\com.unity.test-framework@0b7a23ab2e1d\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:44
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[Saving results to: C:/Users/Mein-PC/AppData/LocalLow/DefaultCompany/WeedtopiaInc\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

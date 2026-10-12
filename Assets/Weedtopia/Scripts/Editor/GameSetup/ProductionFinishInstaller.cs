@@ -26,10 +26,10 @@ namespace Weedtopia.Editor.GameSetup
                 var root=UnityEngine.Object.FindFirstObjectByType<GameRoot>();var presentation=root.gameObject.AddComponent<ProductionPresentation>();presentation.art=art;
                 var serialized=new SerializedObject(root);serialized.FindProperty("presentation").objectReferenceValue=presentation;serialized.ApplyModifiedPropertiesWithoutUndo();
                 ProductionWorldAuthoring.Author(root,presentation,art);ProductionUiAuthoring.Author(root.Ui,presentation,art);
-                var music=AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audio/Approved/BurningHills/afterglow_loop_60s.wav");
+                var music=AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Weedtopia/Game/Audio/Approved/BurningHills/afterglow_loop_60s.wav");
                 if(music!=null){var obj=new GameObject("AfterglowMusic",typeof(AudioSource));obj.transform.SetParent(root.transform,false);var audio=obj.GetComponent<AudioSource>();audio.clip=music;audio.loop=true;audio.playOnAwake=true;audio.volume=.2f;presentation.ambience=audio;}
-                // Preserve SampleScene on disk, remove only the confirmed stock sample from build configuration.
-                EditorBuildSettings.scenes=EditorBuildSettings.scenes.Where(x=>x.path!="Assets/Scenes/SampleScene.unity").ToArray();
+                // Preserve the archived template scene on disk, but never include it in a production build.
+                EditorBuildSettings.scenes=EditorBuildSettings.scenes.Where(x=>x.path!="Assets/Weedtopia/Game/Archive/UnityTemplate/SampleScene.unity").ToArray();
                 EditorSceneManager.MarkSceneDirty(scene);EditorSceneManager.SaveScene(scene);AssetDatabase.SaveAssets();
                 Directory.CreateDirectory("Docs/ProductionFinish/Evidence");File.WriteAllText("Docs/ProductionFinish/Evidence/install.json","{\"utc\":\""+DateTime.UtcNow.ToString("O")+"\",\"implemented\":true,\"userBuildingApproval\":false,\"productionWrappersConverted\":0,\"releaseReady\":false}");
             }

@@ -53,6 +53,21 @@ namespace Weedtopia.Editor.GameSetup
                     {
                         case "apply": type = "Weedtopia.Editor.GameSetup.BurningHillsLayoutInstaller"; method = "Apply"; break;
                         case "integrate": type = "Weedtopia.Editor.GameSetup.ProductionBuildingIntegration"; method = "Apply"; break;
+                        case "phone-ui": type = "Weedtopia.Editor.GameSetup.PhoneUiAuthoring"; method = "Apply"; break;
+                        case "shop": type = "Weedtopia.Editor.GameSetup.ShopAuthoring"; method = "Apply"; break;
+                        case "phone-ui-verify": type = "Weedtopia.Editor.GameSetup.PhoneUiEvidence"; method = "Begin"; break;
+                        case "commercial-tests": type = "Weedtopia.Editor.GameSetup.CommercialReadinessTestJob"; method = "Begin"; break;
+                        case "commercial-tests-repair": type = "Weedtopia.Editor.GameSetup.CommercialReadinessTestJob"; method = "BeginRepairContinuation"; break;
+                        case "commercial-startup-benchmark": type = "Weedtopia.Editor.GameSetup.CommercialReadinessTestJob"; method = "BeginStartupBenchmark"; break;
+                        case "phone-ui-tests": type = "Weedtopia.Editor.GameSetup.PhoneUiTestJob"; method = "Begin"; break;
+                        case "phone-ui-retest": type = "Weedtopia.Editor.GameSetup.PhoneUiTestJob"; method = "BeginFocused"; break;
+                        case "phone-ui-edit-tests": type = "Weedtopia.Editor.GameSetup.PhoneUiTestJob"; method = "ResumeEditMode"; break;
+                        case "phone-ui-asset-recheck": type = "Weedtopia.Editor.GameSetup.PhoneUiTestJob"; method = "RecheckAssets"; break;
+                        case "android-building-textures-inspect": type = "Weedtopia.Editor.GameSetup.AndroidBuildingTextureOptimization"; method = "Inspect"; break;
+                        case "android-building-textures": type = "Weedtopia.Editor.GameSetup.AndroidBuildingTextureOptimization"; method = "Apply"; break;
+                        case "android-building-textures-probe": type = "Weedtopia.Editor.GameSetup.AndroidBuildingTextureOptimization"; method = "Probe"; break;
+                        case "android-building-textures-probe-astc4": type = "Weedtopia.Editor.GameSetup.AndroidBuildingTextureOptimization"; method = "ProbeAstc4"; break;
+                        case "android-building-textures-probe-1024": type = "Weedtopia.Editor.GameSetup.AndroidBuildingTextureOptimization"; method = "Probe1024"; break;
                         default: throw new InvalidOperationException("Unknown explicit job " + job.command);
                     }
                     var target = typeof(LayoutEditorJob).Assembly.GetType(type, true);

@@ -1,0 +1,3 @@
+Diese Dateien dokumentieren die einmalige Sprachmigration vom 04.10.2026. Sie sind historische Erstellungswerkzeuge und wurden vor der Archivierung nur aus Tools/Localization ausgeführt. Ihre bisherigen relativen Pfadannahmen sind absichtlich nicht für diesen Archivordner angepasst. Nicht für die laufende Textpflege ausführen.
+
+Aktuell ausgelieferte Texte liegen in Assets/Weedtopia/Game/Localization. Dort direkt ergänzen oder korrigieren und anschließend Tools/Localization/validate_catalogs.py bzw. das Unity-Menü Validate Catalogs ausführen. Die lokale Übersetzung benötigte kein zusätzliches Modell und keinerlei externe Übertragung von Projekttexten.

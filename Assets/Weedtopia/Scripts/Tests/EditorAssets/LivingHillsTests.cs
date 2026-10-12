@@ -19,7 +19,9 @@ namespace Weedtopia.Tests.Assets
             {
                 EditorSceneManager.OpenScene(GameScaffold.GameScene);var life=Object.FindFirstObjectByType<LivingTownPresentation>();
                 Assert.That(life,Is.Not.Null);Assert.That(life.root,Is.Not.Null);Assert.That(life.authoredLandmarks,Is.EqualTo(29));
-                Assert.That(life.actors.Count(a=>!a.airborne),Is.EqualTo(26));Assert.That(life.actors.Count(a=>a.airborne),Is.EqualTo(24));
+                var vitality=Object.FindFirstObjectByType<TownVitalityStamp>();
+                var corners=Object.FindFirstObjectByType<WorldCornersStamp>();
+                Assert.That(life.actors.Count(a=>!a.airborne),Is.EqualTo(26+(vitality!=null?vitality.residents:0)+(corners!=null?corners.residents:0)));Assert.That(life.actors.Count(a=>a.airborne),Is.EqualTo(24+(corners!=null?corners.wildlife:0)));
                 Assert.That(life.GetComponentsInChildren<Collider>(true),Is.Empty,"Decoration cannot intercept input.");
                 var plan=JsonUtility.FromJson<BurningHillsLayoutInstaller.LayoutPlan>(File.ReadAllText(BurningHillsLayoutInstaller.Folder+"/BurningHillsLayout.json"));
                 foreach(var renderer in life.GetComponentsInChildren<SpriteRenderer>(true))

@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "reviewer": "assistant pixel inspection via view_image",
+  "fingerprint": "3bb7da189628d15752c2cacecc58824ae8bafd848fe191e6ec26524777631ee5",
+  "captureRun": "20261008_211150_Capture_SettledViewportGameViews",
+  "scope": "Representative actual Game View PNGs; all 32 PNG dimensions and freshness are independently checked by the capture runner.",
+  "userVisualApproval": false,
+  "diagnosticGrowthFixtures": true,
+  "fullHumanCampaignPlaythrough": false,
+  "reviewedFinalFrames": [
+    "01_locked_99999.png",
+    "11_river_market_diagnostic_growth.png",
+    "15_bram_third_chapter_choice.png",
+    "18_city_travel_1920x1080.png",
+    "18_city_travel_1366x768.png",
+    "18_city_travel_2560x1080.png",
+    "18_city_travel_1080x1920.png",
+    "19_long_story_body_1080x1920.png",
+    "26_roundtrip_bram_memory_preserved.png"
+  ],
+  "observations": [
+    "The sixth city row and its button are fully inside the settled viewport at all four requested resolutions.",
+    "Nora's long story and the acceptance button are readable in portrait orientation; smaller landscape layouts use the existing scroll area.",
+    "Bram's third chapter presents two readable choices. His actor and the visible memory props remain after the real scene roundtrip.",
+    "The city sign, forest palette and authored buildings render with their textures; no missing-shader presentation was observed."
+  ],
+  "resolvedCaptureIssue": "The first portrait travel capture used a scroll position before resolution reflow. The final sequence scrolls and checks the sixth row after Screen dimensions settle, before capturing.",
+  "limits": [
+    "Individual memory props are small at district overview zoom. Branch identity is established by accompanying runtime checks, not by the overview PNG alone.",
+    "Assistant inspection is not user art approval or physical-device touch and audio evidence."
+  ]
+}

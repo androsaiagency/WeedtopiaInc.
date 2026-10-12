@@ -1,0 +1,41 @@
+{
+  "schema": "weedtopia_reusable_android_diagnostics_stage_v1",
+  "utc": "2026-10-06T05:47:57.323265+00:00",
+  "status": "integrated_tool_selftest_pending",
+  "files": [
+    {
+      "source": ".utmp\\ReleaseApkAudit20261006\\audit_apk.py",
+      "sourceSha256": "aebdb2745991d49fd7b6a5264daf0b803f25b04c916de1f1516493e3f9877f2b",
+      "staged": ".utmp\\ReusableAndroidDiagnostics20261006\\audit_android_release.py",
+      "target": "Tools\\CommercialReadiness\\audit_android_release.py",
+      "targetAlreadyExists": false,
+      "stagedSha256": "aebdb2745991d49fd7b6a5264daf0b803f25b04c916de1f1516493e3f9877f2b",
+      "bytes": 30724
+    },
+    {
+      "source": ".utmp\\ReusableAndroidDiagnostics20261006\\README.md",
+      "sourceSha256": "70b7d0c48b3525ca379602759b8f6d6c829ee5f5ff52ab4300e934c5caaa9a16",
+      "staged": ".utmp\\ReusableAndroidDiagnostics20261006\\README.md",
+      "target": "Tools\\CommercialReadiness\\README.md",
+      "targetAlreadyExists": false,
+      "stagedSha256": "70b7d0c48b3525ca379602759b8f6d6c829ee5f5ff52ab4300e934c5caaa9a16",
+      "bytes": 5332
+    }
+  ],
+  "rootResolution": "Path(__file__).resolve().parents[2]; same two-level depth for staged and final location",
+  "dependency": {
+    "path": "Tools\\Implementation\\audit_android_building_textures.py",
+    "sha256": "b9618cead546bd09643c2dcca2d601806b6875496b769fa95c001b18b5226be3",
+    "reusedExisting": true,
+    "copied": false,
+    "stagedDirectoryRequired": false
+  },
+  "exactScopeChange": "APK auditor body byte-identical; new durable filename and usage README only.",
+  "textureParserBytesPreserved": true,
+  "productionSourceAndGuidsReadOnly": true,
+  "nativeBuildExecuted": false,
+  "actualApkAudited": false,
+  "deviceAccepted": false,
+  "humanAccepted": false,
+  "releaseAccepted": false
+}

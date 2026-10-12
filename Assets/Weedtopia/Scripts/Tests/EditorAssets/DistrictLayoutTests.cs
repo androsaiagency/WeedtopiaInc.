@@ -43,6 +43,8 @@ namespace Weedtopia.Tests.Assets
         [Test] public void EveryExpandedWorkplaceHasARealSupplyRouteAndFarmNeedsTransport()
         {
             var d=AssetDatabase.LoadAssetAtPath<GameContent>(GameScaffold.ContentPath).Load();
+            d.instances=d.instances.Where(x=>x.cityId=="burning_hills").ToArray();
+            var localIds=d.instances.Select(x=>x.id).ToArray();d.routes=d.routes.Where(x=>localIds.Contains(x.from)&&localIds.Contains(x.to)).ToArray();
             var plan=JsonUtility.FromJson<BurningHillsLayoutInstaller.LayoutPlan>(File.ReadAllText(BurningHillsLayoutInstaller.Folder+"/BurningHillsLayout.json"));
             Assert.That(d.instances.Count(x=>x.family=="cultivation_plot"),Is.EqualTo(8));
             Assert.That(d.instances.Count(x=>x.family=="coffee_shop"),Is.EqualTo(12));

@@ -7,6 +7,8 @@ OUT.mkdir(parents=True,exist_ok=True)
 definitions={json.loads(p.read_text(encoding='utf-8-sig'))['name']:p for p in (ROOT/'Assets/Weedtopia/Scripts').rglob('*.asmdef')}
 refs=list((EDITOR/'UnityReferenceAssemblies/unity-4.8-api').glob('*.dll'))+list((EDITOR/'UnityReferenceAssemblies/unity-4.8-api/Facades').glob('*.dll'))
 refs+=list((EDITOR/'Managed').glob('Unity*.dll'))+list((EDITOR/'Managed/UnityEngine').glob('*.dll'))+list((EDITOR/'Managed/UnityEditor').glob('*.dll'))
+refs+=list((EDITOR/'PlaybackEngines/AndroidPlayer').glob('UnityEditor.Android.Extensions.dll'))
+refs+=list((EDITOR/'PlaybackEngines/AndroidPlayer').glob('Unity.Android.Types.dll'))
 refs+=list((ROOT/'Library/ScriptAssemblies').glob('Unity*.dll'))+list((ROOT/'Library/PackageCache').glob('com.unity.ext.nunit*/net40/unity-custom/nunit.framework.dll'))
 refs=list({p.name:p for p in refs}.values())
 remaining=dict(definitions); compiled={};results=[]

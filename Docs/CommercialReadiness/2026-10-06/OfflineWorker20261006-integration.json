@@ -1,0 +1,36 @@
+{
+  "utc": "2026-10-06T04:01:41.880297+00:00",
+  "status": "integrated_native_pending",
+  "entries": [
+    {
+      "staged": ".utmp/OfflineWorker20261006/GameSession.cs",
+      "destination": "Assets/Weedtopia/Scripts/Runtime/Application/GameSession.cs",
+      "stagedSha256": "10aebe19ffda090f9c1cbd282c8170d7de17cddfc8bce3f17ad2078c4b2302c7",
+      "sourceSha256": "511a4efcc663f27b6f929a17b0570dffa6ada9608155e7147282c9eaeca1d8bd",
+      "newFile": false
+    },
+    {
+      "staged": ".utmp/OfflineWorker20261006/OfflineSimulationOperation.cs",
+      "destination": "Assets/Weedtopia/Scripts/Runtime/Application/OfflineSimulationOperation.cs",
+      "stagedSha256": "9a731572a4d89d97d2e9aa998955bbe81d019764c5aa0400735d84e6b969e0ab",
+      "sourceSha256": null,
+      "newFile": true
+    },
+    {
+      "staged": ".utmp/OfflineWorker20261006/OfflineWorkerTests.cs",
+      "destination": "Assets/Weedtopia/Scripts/Tests/EditMode/OfflineWorkerTests.cs",
+      "stagedSha256": "8860c484856b486f7432c17af6d9ed433111f3755ed9f9b03107b07b991321aa",
+      "sourceSha256": null,
+      "newFile": true
+    }
+  ],
+  "domainDependency": {
+    "staged": ".utmp/OfflineCpu20261006/Simulation.cs",
+    "sha256": "436620563a8b1ae616ca7fc6cde86673798562a12b80894dae1d5c113f140975",
+    "requiredMethod": "AdvanceOffline(int seconds, long startUtcTicks, CancellationToken cancellation, Action<int> completed)",
+    "ownedBy": "numeric_hotpath"
+  },
+  "patchSha256": "619473b24c32fe1348beb45768ca5064afd4bb2e875299eb742b1e64a52c8410",
+  "validationSha256": "c721f266d6bfb3b9f57df73a16197a967aa9cf259a698b70f352d1e97517439f",
+  "integratedUtc": "2026-10-06T04:02:36.957593+00:00"
+}

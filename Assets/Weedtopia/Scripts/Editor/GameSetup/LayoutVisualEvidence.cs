@@ -89,7 +89,7 @@ namespace Weedtopia.Editor.GameSetup
         private static void Capture(string name){requested=Path.GetFullPath(Folder+"/"+name+".png");frames=0;settleUntil=EditorApplication.timeSinceStartup+1.5;}
         private static void Drive(Func<bool> condition)
         {
-            for(int i=0;i<1800&&!condition();i++){TutorialDriver.Act(root.Session,clock.UtcNow);clock.UtcNow=clock.UtcNow.AddSeconds(1);root.Session.Advance(1);}
+            for(int i=0;i<TutorialDriver.MaxSimulationSeconds&&!condition();i++){TutorialDriver.Act(root.Session,clock.UtcNow);clock.UtcNow=clock.UtcNow.AddSeconds(1);root.Session.Advance(1);}
             if(!condition())throw new InvalidOperationException("Tutorial stalled: "+root.Session.Progression.Current?.id);
             root.Refresh();
         }
@@ -112,14 +112,14 @@ namespace Weedtopia.Editor.GameSetup
             steps.Add(()=>{root.Ui.Close();root.Select("farm_grow_01",true);root.Ui.SpeakToSelected();root.Refresh();Capture("12_dialog");});
             steps.Add(()=>{root.Ui.Close();root.Select("farm_grow_01",true);root.Session.State.money=0;root.Ui.Element<UnityEngine.UI.Button>("ui.upgrade").onClick.Invoke();root.Refresh();Capture("12b_premium_confirmation");});
             steps.Add(()=>{root.Ui.Element<UnityEngine.UI.Button>("ui.cancel").onClick.Invoke();root.Ui.ShowWorkers();root.Refresh();Capture("12c_worker_assignment");});
-            steps.Add(()=>{root.Ui.Close();root.CameraRig.ShowOverview();var route=root.Presentation.Route("farm_city");root.CameraRig.Focus(route.Position(.5f));root.CameraRig.SetDiagnosticZoom(35);var driver=root.Session.State.workers.First(x=>x.buildingId=="farm_warehouse"&&x.slot>0);root.Session.State.deliveries.Clear();root.Session.State.deliveries.Add(new DeliveryState{route="farm_city",workerId=driver.id,cargo=10,totalSeconds=root.Definitions.routes.First(x=>x.id=="farm_city").travelSeconds,remainingSeconds=root.Definitions.routes.First(x=>x.id=="farm_city").travelSeconds/2});root.Refresh();Capture("13_farm_delivery");});
+            steps.Add(()=>{root.Ui.Close();root.CameraRig.ShowOverview();var route=root.Presentation.Route("farm_city");root.CameraRig.SetDiagnosticZoom(35);root.CameraRig.Focus(route.Position(.5f));var driver=root.Session.State.workers.First(x=>x.buildingId=="farm_warehouse"&&x.slot>0);root.Session.State.deliveries.Clear();root.Session.State.deliveries.Add(new DeliveryState{route="farm_city",workerId=driver.id,cargo=10,totalSeconds=root.Definitions.routes.First(x=>x.id=="farm_city").travelSeconds,remainingSeconds=root.Definitions.routes.First(x=>x.id=="farm_city").travelSeconds/2});root.Refresh();Capture("13_farm_delivery");});
             if(EvidenceRoot.Contains("EnvironmentRevision"))
             {
                 foreach(var spot in new[]{new Vector2(34,36),new Vector2(232,152),new Vector2(166,18),new Vector2(310,-118)})
                 {
-                    var center=spot;steps.Add(()=>{root.Ui.Close();root.Ui.Notify("");root.CameraRig.ShowOverview();root.CameraRig.Focus(DistrictMap.ToWorld(center));root.CameraRig.SetDiagnosticZoom(42);Capture("environment_"+(int)center.x+"_"+(int)center.y);});
+                    var center=spot;steps.Add(()=>{root.Ui.Close();root.Ui.Notify("");root.CameraRig.ShowOverview();root.CameraRig.SetDiagnosticZoom(42);root.CameraRig.Focus(DistrictMap.ToWorld(center));Capture("environment_"+(int)center.x+"_"+(int)center.y);});
                 }
-                steps.Add(()=>{root.CameraRig.ShowOverview();root.CameraRig.Focus(DistrictMap.ToWorld(new Vector2(166,18)));root.CameraRig.SetDiagnosticZoom(34);Capture("environment_motion_a");});
+                steps.Add(()=>{root.CameraRig.ShowOverview();root.CameraRig.SetDiagnosticZoom(34);root.CameraRig.Focus(DistrictMap.ToWorld(new Vector2(166,18)));Capture("environment_motion_a");});
                 steps.Add(()=>Capture("environment_motion_b"));
             }
             var samples=new Dictionary<string,string>{{"cultivation_plot","farm_grow_01"},{"farm_processing","farm_processing"},{"farm_warehouse","farm_warehouse"},{"city_warehouse","city_warehouse"},{"coffee_shop","coffee_01"},{"residential_house","settlement_01"},{"park","settlement_02"},{"butter_factory","butter_factory"},{"supermarket","supermarket"},{"bakery","bakery_01"},{"town_hall","town_hall"}};
@@ -135,7 +135,7 @@ namespace Weedtopia.Editor.GameSetup
                     var up=root.CameraRig.RenderCamera.transform.up;
                     float projectedGround=Vector3.Dot(up,new Vector3(DistrictMap.Diagonal,0,DistrictMap.Diagonal));
                     plan.y+=(center.y*up.y-zoom*.12f)/projectedGround;
-                    root.Ui.Notify("");root.CameraRig.Focus(DistrictMap.ToWorld(plan));root.CameraRig.SetDiagnosticZoom(zoom);
+                    root.Ui.Notify("");root.CameraRig.SetDiagnosticZoom(zoom);root.CameraRig.Focus(DistrictMap.ToWorld(plan));
                     Capture("building_"+family+"_"+VisualTiers.Id(level,family=="town_hall"));});
             }
         }

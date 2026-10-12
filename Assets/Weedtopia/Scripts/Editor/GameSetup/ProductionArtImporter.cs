@@ -12,8 +12,8 @@ namespace Weedtopia.Editor.GameSetup
     {
         public const string Root="Assets/Weedtopia/Production";
         public const string ArtPath=Root+"/PresentationArt.asset";
-        [Serializable] private sealed class Slices { public Slice[] entries; }
-        [Serializable] private sealed class Slice {public string file,name;public int x,y,width,height,border,ppu;public float pivotX,pivotY;}
+        [Serializable] private sealed class Slices { public Slice[] entries = default; }
+        [Serializable] private sealed class Slice {public string file = default,name = default;public int x = default,y = default,width = default,height = default,border = default,ppu = default;public float pivotX = default,pivotY = default;}
         public static PresentationArt Import(bool refresh=false)
         {
             foreach(string folder in new[]{Root,Root+"/Prefabs",Root+"/Meshes",Root+"/Materials",Root+"/Fonts"})BuildingIntakeService.EnsureAssetFolder(folder);
@@ -34,8 +34,7 @@ namespace Weedtopia.Editor.GameSetup
             var terrain=(TextureImporter)AssetImporter.GetAtPath(Root+"/Art/Terrain.png");terrain.mipmapEnabled=true;terrain.wrapMode=TextureWrapMode.Repeat;terrain.filterMode=FilterMode.Trilinear;terrain.anisoLevel=4;terrain.textureCompression=TextureImporterCompression.CompressedHQ;terrain.maxTextureSize=2048;terrain.SaveAndReimport();
             var art=existing!=null?existing:ScriptableObject.CreateInstance<PresentationArt>();
             art.sprites=slices.entries.Select(x=>new NamedSprite{id=x.name,sprite=AssetDatabase.LoadAllAssetsAtPath(Root+"/Art/"+x.file).OfType<Sprite>().Single(s=>s.name==x.name)}).ToArray();
-            art.bodyFont=AssetDatabase.LoadAssetAtPath<Font>(Root+"/Fonts/Lato-Regular.ttf");art.headingFont=AssetDatabase.LoadAssetAtPath<Font>(Root+"/Fonts/Lato-Bold.ttf");
-            if(art.bodyFont==null||art.headingFont==null)throw new InvalidOperationException("Licensed Lato font missing");
+            art.bodyFont=TypographyAuthoring.ResolveBody(art.bodyFont);art.headingFont=TypographyAuthoring.ResolveHeading(art.headingFont);
             art.ClearCache();if(existing==null)AssetDatabase.CreateAsset(art,ArtPath);else EditorUtility.SetDirty(art);AssetDatabase.SaveAssets();return art;
         }
     }

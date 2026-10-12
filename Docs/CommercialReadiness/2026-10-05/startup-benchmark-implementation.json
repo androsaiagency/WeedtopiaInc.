@@ -1,0 +1,235 @@
+{
+  "utc": "2026-10-05T07:07:32.750507+02:00",
+  "status": "integrated_native_benchmark_passed",
+  "nativeUnityTestsExecuted": true,
+  "targetAccepted": false,
+  "releaseAccepted": false,
+  "scope": "Three focused EditMode byte-preservation regressions followed by one true GameRoot.ContinueResponsive PlayMode benchmark; shared explicit test-runner state protections; source preparation only.",
+  "sources": [
+    {
+      "path": "Assets/Weedtopia/Scripts/Editor/GameSetup/CommercialReadinessTestJob.cs",
+      "originalSha256": "32ceca5d0cbdfe885928535f522d08e93c5de09c12846d1abcf3a2e62d1f5485",
+      "stagedSha256": "1c2f5af81559192154cf639c24c336d6924f2e5b78545bd84b259930d0b6891f"
+    },
+    {
+      "path": "Assets/Weedtopia/Scripts/Editor/GameSetup/LayoutEditorJob.cs",
+      "originalSha256": "6df93625e0a3615a38de04b1871a225668082950b7e6f7cb99ec62d5c5ca03fd",
+      "stagedSha256": "c4a877d06f67439d2b1b0a2b39115f1754d10382b4e639913ceebcc8202fdf39"
+    },
+    {
+      "path": "Assets/Weedtopia/Scripts/Tests/PlayMode/ResponsiveStartupBenchmarkTests.cs",
+      "originalSha256": null,
+      "stagedSha256": "206e83dbf0c62bdecf88b47ee6a8a706d605df5bc53e1e0fa5f494aa84f75426"
+    },
+    {
+      "path": "Assets/Weedtopia/Scripts/Tests/PlayMode/ResponsiveStartupBenchmarkTests.cs.meta",
+      "originalSha256": null,
+      "stagedSha256": "322040a556bb5264a6d2b2e3ed289a9d7dccff9c7b2c1319c2440db6c59d27ec"
+    }
+  ],
+  "testName": "Weedtopia.Tests.PlayMode.ResponsiveStartupBenchmarkTests.EightHourResponsiveContinueMatchesSynchronousStateAndRecordsFrameLatency",
+  "command": "commercial-startup-benchmark",
+  "jobMethod": "CommercialReadinessTestJob.BeginStartupBenchmark",
+  "resultFolder": "Docs/CommercialReadiness/2026-10-05/StartupBenchmarkTests",
+  "fullSuiteLatestProtected": "Docs/CommercialReadiness/2026-10-05/Tests/latest.json",
+  "requires": "Most recent complete EditMode+PlayMode suite passed with editorRestored=true and original per-stage XML+JSON evidence.",
+  "preservationTests": [
+    "Weedtopia.Tests.Assets.BigRockCityAssetTests.ExplicitInstallerPreservesExistingSceneAndAssetBytesOnARepeatRun",
+    "Weedtopia.Tests.Assets.GameAssetTests.SecondGameScaffoldPreservesEveryAuthoredAssetByte",
+    "Weedtopia.Tests.Assets.TypographyAssetTests.ReusableTextPrefabsUseTheFamilyAndFontRepairIsIdempotent"
+  ],
+  "historicalPreNativeStatus": "integrated_pending_native_validation",
+  "nativeEvidenceUpdatedUtc": "2026-10-05T06:24:07.054764+00:00",
+  "nativeRegressionContext": {
+    "run": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/run.json",
+      "sha256": "3c21ff8ed4523cce4af54f2e16fb2c652df61a84512e5cd162c429825c5da583"
+    },
+    "runId": "20261005T061357352-258904",
+    "unity": "6000.3.9f1",
+    "finishedUtc": "2026-10-05T06:22:37.0323225Z",
+    "scope": "native_editmode_repair_aggregate_then_complete_playmode",
+    "editorRestored": true,
+    "editModeEvidenceMode": "395 original native passes plus one actual repaired native pass; no full EditMode rerun",
+    "originalFullEditMode": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+      "sha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29",
+      "passed": 395,
+      "failed": 1,
+      "skipped": 0,
+      "inconclusive": 0,
+      "total": 396,
+      "testcasecount": 396
+    },
+    "repairEditMode": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/EditModeRepair.xml",
+      "sha256": "97bfccd1e4e4a756a4d3f9aba4760c86759ba4100411341a181cdb72c47fc678",
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "total": 1,
+      "testcasecount": 1
+    },
+    "editModeAggregate": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/EditModeAggregate.json",
+      "sha256": "1e6a4b29ef087dd3e484609d1c3e3094233ca18ae57cea5e1b9a369bd892cdd4"
+    },
+    "effectiveEditModePassed": 396,
+    "completePlayMode": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+      "sha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611",
+      "passed": 103,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "total": 103,
+      "testcasecount": 103
+    },
+    "sourceValidation": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/source_validation.json",
+      "sha256": "c2c7f3827a839daf559acae80cf93cf1ce2a2dab0713aa3464c70cdc3399ebb2"
+    },
+    "sourceInputs": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/source_inputs.json",
+      "sha256": "626d4e2d40f7ad52637e6d715b195f316b424dcea4a1ec6f0a091115ce389b74"
+    },
+    "targetAccepted": false,
+    "releaseAccepted": false,
+    "deviceAccepted": false,
+    "humanAccepted": false
+  },
+  "finalRuntimeSourceHashes": {
+    "Assets/Weedtopia/Scripts/Runtime/Domain/Amount.cs": "1e2d5bcce8465a7c1942504f2670144b83e85b1c109a5ab4cb67df7b6c19bd8d",
+    "Assets/Weedtopia/Scripts/Runtime/Domain/Simulation.cs": "b26a6b64674d21a60061e2e48d7b5431b3b2f72485cdcb36902fadd6a3c30910",
+    "Assets/Weedtopia/Scripts/Runtime/Application/GameSession.cs": "511a4efcc663f27b6f929a17b0570dffa6ada9608155e7147282c9eaeca1d8bd",
+    "Assets/Weedtopia/Scripts/Runtime/Application/GameStateTransactionSnapshot.cs": "4257db04ddef24effc3782452d4811c9fe757ebbb7037ef0517d8ed3640de4c2",
+    "Assets/Weedtopia/Scripts/Runtime/Application/OfflineProgress.cs": "e584c95d207045a78e60cb8e0bb03e29bedd9e98aaa0fdef2d7a812f93ec8ac5",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/GameRoot.cs": "0e6b0a6eb5126466c5053e4ee2e6f7b2e6e26e58ca25c13fe65c4643157f4988",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/GameUi.cs": "7cdd50f2ef7db569897878ce2bc1a6ae58ae06861a0595ae29eed124a55c0111",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/UiExperience.cs": "204cd3429614b24ad74f8439deadde3e3c2ce2555946e082d89aa782dbb7818c",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/LuckyWheelUi.cs": "646c024251c1b0b80829f911a1e327f388e91b27c7be87487f5dae20c8e968d2"
+  },
+  "finalSourceHashes": {
+    "Assets/Weedtopia/Scripts/Editor/GameSetup/CommercialReadinessTestJob.cs": "1c977a2fdcb169309a7c7225095ddc79b9a5b661bf2ba933b2cdccb1e9b62252",
+    "Assets/Weedtopia/Scripts/Editor/GameSetup/LayoutEditorJob.cs": "dc98682250a712e7e9d954a6d38f8417d44e500d67e5dd4a49aad5f937785471",
+    "Assets/Weedtopia/Scripts/Tests/PlayMode/ResponsiveStartupBenchmarkTests.cs": "206e83dbf0c62bdecf88b47ee6a8a706d605df5bc53e1e0fa5f494aa84f75426",
+    "Assets/Weedtopia/Scripts/Tests/PlayMode/ResponsiveStartupBenchmarkTests.cs.meta": "322040a556bb5264a6d2b2e3ed289a9d7dccff9c7b2c1319c2440db6c59d27ec"
+  },
+  "finalResponsiveStartupPolicy": {
+    "batchSeconds": 32,
+    "frameBudgetMilliseconds": 8,
+    "GameRootSha256": "0e6b0a6eb5126466c5053e4ee2e6f7b2e6e26e58ca25c13fe65c4643157f4988",
+    "matchesNativeSourceManifest": true
+  },
+  "nativePreservation": {
+    "status": "passed",
+    "stage": "EditMode",
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0,
+    "fixtureResults": [
+      {
+        "fixture": "Weedtopia.Tests.Assets.BigRockCityAssetTests",
+        "passed": 1,
+        "testNames": [
+          "Weedtopia.Tests.Assets.BigRockCityAssetTests.ExplicitInstallerPreservesExistingSceneAndAssetBytesOnARepeatRun"
+        ]
+      },
+      {
+        "fixture": "Weedtopia.Tests.Assets.GameAssetTests",
+        "passed": 1,
+        "testNames": [
+          "Weedtopia.Tests.Assets.GameAssetTests.SecondGameScaffoldPreservesEveryAuthoredAssetByte"
+        ]
+      },
+      {
+        "fixture": "Weedtopia.Tests.Assets.TypographyAssetTests",
+        "passed": 1,
+        "testNames": [
+          "Weedtopia.Tests.Assets.TypographyAssetTests.ReusableTextPrefabsUseTheFamilyAndFontRepairIsIdempotent"
+        ]
+      }
+    ],
+    "cases": [
+      {
+        "fullname": "Weedtopia.Tests.Assets.BigRockCityAssetTests.ExplicitInstallerPreservesExistingSceneAndAssetBytesOnARepeatRun",
+        "fixture": "Weedtopia.Tests.Assets.BigRockCityAssetTests",
+        "method": "ExplicitInstallerPreservesExistingSceneAndAssetBytesOnARepeatRun",
+        "result": "Passed",
+        "durationSeconds": 4.591107,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.Assets.GameAssetTests.SecondGameScaffoldPreservesEveryAuthoredAssetByte",
+        "fixture": "Weedtopia.Tests.Assets.GameAssetTests",
+        "method": "SecondGameScaffoldPreservesEveryAuthoredAssetByte",
+        "result": "Passed",
+        "durationSeconds": 7.289081,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.Assets.TypographyAssetTests.ReusableTextPrefabsUseTheFamilyAndFontRepairIsIdempotent",
+        "fixture": "Weedtopia.Tests.Assets.TypographyAssetTests",
+        "method": "ReusableTextPrefabsUseTheFamilyAndFontRepairIsIdempotent",
+        "result": "Passed",
+        "durationSeconds": 4.585296,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      }
+    ],
+    "scope": "Only these actual native cases certify the listed coverage; no device, store, visual or human acceptance is inferred."
+  },
+  "nativeStartupBenchmark": {
+    "status": "passed",
+    "stage": "PlayMode",
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0,
+    "fixtureResults": [
+      {
+        "fixture": "Weedtopia.Tests.PlayMode.ResponsiveStartupBenchmarkTests",
+        "passed": 1,
+        "testNames": [
+          "Weedtopia.Tests.PlayMode.ResponsiveStartupBenchmarkTests.EightHourResponsiveContinueMatchesSynchronousStateAndRecordsFrameLatency"
+        ]
+      }
+    ],
+    "cases": [
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.ResponsiveStartupBenchmarkTests.EightHourResponsiveContinueMatchesSynchronousStateAndRecordsFrameLatency",
+        "fixture": "Weedtopia.Tests.PlayMode.ResponsiveStartupBenchmarkTests",
+        "method": "EightHourResponsiveContinueMatchesSynchronousStateAndRecordsFrameLatency",
+        "result": "Passed",
+        "durationSeconds": 88.76794,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      }
+    ],
+    "scope": "Only these actual native cases certify the listed coverage; no device, store, visual or human acceptance is inferred."
+  },
+  "executedNativeScope": "The three preservation cases passed in the original complete EditMode run; the actual startup benchmark passed in the complete PlayMode assembly following the reviewed one-case repair. No focused benchmark runner execution is implied.",
+  "startupBenchmarkReport": {
+    "path": "Docs/CommercialReadiness/2026-10-05/NativeResponsiveStartupBenchmark.json",
+    "sha256": "80a1be72d4483967d6790d8208f06f5d59379dd68fa5008783d4b257c832884a",
+    "status": "passed",
+    "seconds": 28800,
+    "responsiveMilliseconds": 50313.7416,
+    "synchronousMilliseconds": 35046.7909,
+    "exactStateMatch": true,
+    "exactPersistedStateMatch": true,
+    "framesElapsed": 908,
+    "maximumObservedFrameMilliseconds": 1091.1566999999995,
+    "p95ObservedFrameMilliseconds": 58.57210000000123,
+    "offlinePhaseObservedFrames": 898,
+    "maximumOfflinePhaseFrameMilliseconds": 105.57719999999972,
+    "p95OfflinePhaseFrameMilliseconds": 58.24399999999878,
+    "scope": "Native Unity editor GameRoot.ContinueResponsive after the initial BurningHills scene is loaded: real temporary LocalSaveStore read/write, productive eight-hour simulation, coroutine chunking, target-city handoff and authored offline panel. Initial editor/process boot, initial scene load, texture import and physical target devices are excluded. This is an observed editor path; it does not certify GPU or device frame time, cold OS caches or human acceptance.",
+    "frameMeasurement": "Stopwatch wall-clock intervals between successive UnityTest coroutine observations, beginning immediately before ContinueResponsive. Includes the work and waits observed across those editor/player-loop frames. P95 uses nearest-rank over observed intervals. No GPU profiler or device frame measurement; there is no timing pass/fail threshold.",
+    "offlinePhaseMeasurement": "Interior observed frame intervals for which the original source GameRoot reports ContinueBusy, no TravelLoading, and partial progress strictly between zero and one at both observation boundaries. Excludes initial file loading and mixed terminal commit/scene-handoff intervals; target-scene loading stays in the whole-path statistics. No GPU or device frame-time claim."
+  }
+}

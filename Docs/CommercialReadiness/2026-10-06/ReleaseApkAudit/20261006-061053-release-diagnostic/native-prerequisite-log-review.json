@@ -1,0 +1,227 @@
+{
+  "schema": "weedtopia_native_prerequisite_log_review_v1",
+  "utc": "2026-10-06T06:16:16.284861+00:00",
+  "status": "reviewed_completed_native_prerequisite_only",
+  "scope": "Final completed Editor native regression log; not the pending Android build.",
+  "nativeSummary": {
+    "path": "Docs/CommercialReadiness/2026-10-06/native-final-summary.json",
+    "bytes": 1858,
+    "sha256": "86430bf0980ef36c8db5282ad0505e8a064677539c2a8d228718b932d0e1317b"
+  },
+  "nativeRunId": "20261006T053442845-33652",
+  "nativeLog": {
+    "path": "Docs/CommercialReadiness/2026-10-06/native-regression-final.log",
+    "bytes": 690919,
+    "sha256": "cb776f853ff8aced42bf1bd708134ec6d0baef3ed8507217ce1c323c52005625"
+  },
+  "editMode": {
+    "path": "Docs/CommercialReadiness/2026-10-06/Tests/20261006T053442845-33652/EditMode.xml",
+    "sha256": "e0d767a9c7dab6902088305750bf93ba6e0c13fa52814b3d3aff4374afcbc5e0",
+    "total": 463,
+    "passed": 463,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "playMode": {
+    "path": "Docs/CommercialReadiness/2026-10-06/Tests/20261006T053442845-33652/PlayMode.xml",
+    "sha256": "e6f58ad10dcf2fd8a1d0f80c9e595f60e74f777eee4e0ef8baf632b30b7db92a",
+    "total": 112,
+    "passed": 112,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "editorRestored": true,
+  "messageClasses": [
+    {
+      "class": "LicensingAccessTokenUnavailable",
+      "count": 1,
+      "lineNumbers": [
+        78
+      ],
+      "scope": "Editor service; license/test execution continued."
+    },
+    {
+      "class": "PlayerConnectionMulticastDenied",
+      "count": 1,
+      "lineNumbers": [
+        65
+      ],
+      "scope": "Editor player connection; no game delivery transport relation."
+    },
+    {
+      "class": "OptionalNativePlatformExtensionsAbsent",
+      "count": 24,
+      "lineNumbers": [
+        189,
+        190,
+        191,
+        193,
+        194,
+        196,
+        197,
+        198,
+        333,
+        334,
+        335,
+        336,
+        337,
+        339,
+        340,
+        341,
+        6756,
+        6757,
+        6758,
+        6759,
+        6760,
+        6762,
+        6763,
+        6764
+      ],
+      "scope": "Editor platform module availability; no Android build proof."
+    },
+    {
+      "class": "VisionOSNativeModuleLoadFailed",
+      "count": 3,
+      "lineNumbers": [
+        195,
+        338,
+        6761
+      ],
+      "scope": "Unused VisionOS editor module."
+    },
+    {
+      "class": "ExpectedCitySceneFailureInjection",
+      "count": 2,
+      "lineNumbers": [
+        7299,
+        7337
+      ],
+      "scope": "Both CitySceneFailureUiTests explicitly expect LogType.Error; actual XML tests passed."
+    },
+    {
+      "class": "ExpectedStorageFailureInjection",
+      "count": 13,
+      "lineNumbers": [
+        8239,
+        8266,
+        8293,
+        8320,
+        8360,
+        8411,
+        8714,
+        8744,
+        8798,
+        8851,
+        8885,
+        8919,
+        8953
+      ],
+      "scope": "ResponsiveStartupUiTests/StorageFailureUiTests explicitly expect LogType.Warning; actual XML tests passed."
+    }
+  ],
+  "compilerWarningLineNumbers": [],
+  "shaderWarningLineNumbers": [],
+  "unclassifiedSignalLineNumbers": [],
+  "faultInjectionSources": [
+    {
+      "source": {
+        "path": "Assets/Weedtopia/Scripts/Tests/PlayMode/CitySceneFailureUiTests.cs",
+        "bytes": 8292,
+        "sha256": "3f1085580d333318621ff13517faa646ca2778e467f5472b887d5317c4469fe5"
+      },
+      "expectedLogAssertionLines": [
+        69
+      ]
+    },
+    {
+      "source": {
+        "path": "Assets/Weedtopia/Scripts/Tests/PlayMode/ResponsiveStartupUiTests.cs",
+        "bytes": 14730,
+        "sha256": "ba62509e2c9b3871f4c71bcfe207fd68c9eafbb172c6c70118588dac35d465da"
+      },
+      "expectedLogAssertionLines": [
+        76,
+        99,
+        133,
+        145,
+        157,
+        171
+      ]
+    },
+    {
+      "source": {
+        "path": "Assets/Weedtopia/Scripts/Tests/PlayMode/StorageFailureUiTests.cs",
+        "bytes": 7052,
+        "sha256": "942dacde88dcb2c1b2d07523934039923a4025fe7a8991b2a4ed7c3fa74733ee"
+      },
+      "expectedLogAssertionLines": [
+        52,
+        60,
+        76,
+        97,
+        102
+      ]
+    }
+  ],
+  "passedFaultInjectionTestCases": [
+    {
+      "test": "Weedtopia.Tests.PlayMode.CitySceneFailureUiTests.RejectedSceneLoadRetainsOldSessionAndAllowsCommittedCityRetry",
+      "result": "Passed"
+    },
+    {
+      "test": "Weedtopia.Tests.PlayMode.CitySceneFailureUiTests.SceneLoaderExceptionRetainsOldSessionAndAllowsCommittedCityRetry",
+      "result": "Passed"
+    },
+    {
+      "test": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests.FailedContinueBlocksRetainedSessionUpdateFocusWritesAndCommandsUntilRetry",
+      "result": "Passed"
+    },
+    {
+      "test": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests.FailedContinueCanStartExplicitNewGameWithoutAdvancingRetainedSession",
+      "result": "Passed"
+    },
+    {
+      "test": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests.FailedFinalWritePreservesOldSessionAndUnlocksPlayForRetry",
+      "result": "Passed"
+    },
+    {
+      "test": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests.FailedSynchronousContinueRetainsSessionUntilSuccessfulSynchronousRetry",
+      "result": "Passed"
+    },
+    {
+      "test": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests.PlayAfterFailedContinueRetriesMissingSaveUntilExplicitNewGame",
+      "result": "Passed"
+    },
+    {
+      "test": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests.ResponsiveContinueOpensSavedCityWithOneCompletedOfflineSummary",
+      "result": "Passed"
+    },
+    {
+      "test": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests.RestartAfterFailedContinueArchivesOriginalSaveBeforeStartingNewGame",
+      "result": "Passed"
+    },
+    {
+      "test": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests.StartShowsProgressBeforeWorkAndSuppressesDuplicateClicksAndPauseSaves",
+      "result": "Passed"
+    },
+    {
+      "test": "Weedtopia.Tests.PlayMode.StorageFailureUiTests.AutosaveErrorAppearsOnceUntilRecoveryAndCanBeReportedAgain",
+      "result": "Passed"
+    },
+    {
+      "test": "Weedtopia.Tests.PlayMode.StorageFailureUiTests.DirectUnauthorizedSaveIsLocalizedAndRestoresTheFailedCommand",
+      "result": "Passed"
+    },
+    {
+      "test": "Weedtopia.Tests.PlayMode.StorageFailureUiTests.FailedIntroButtonsStayOnTheirPageAndKeepTheIntroOpenUntilSaved",
+      "result": "Passed"
+    }
+  ],
+  "androidBuildReportWarnings": null,
+  "actualApkAudited": false,
+  "deviceAccepted": false,
+  "humanAccepted": false,
+  "releaseAccepted": false
+}

@@ -1,0 +1,70 @@
+{
+  "utc": "2026-09-30T08:20:43.777023+00:00",
+  "status": "passed",
+  "scope": "Approved building costs, two-phase upgrade curve, timed visual tier transitions, immediate intermediate levels, UI, save compatibility, and regression tests. Human pacing not evaluated.",
+  "sourceCompile": {
+    "status": "passed",
+    "assemblies": 12,
+    "receipt": "Docs/BalanceRevision/SourceCompile/result.json",
+    "sourceHashesVerified": true
+  },
+  "editMode": {
+    "passed": 91,
+    "total": 91,
+    "receipt": "Docs/Implementation/Validation/20260930_101100_EditMode_BuildingBalanceFinal.json"
+  },
+  "playMode": {
+    "passed": 42,
+    "total": 42,
+    "receipt": "Docs/Implementation/Validation/20260930_101702_PlayMode_BuildingBalanceFinal.json"
+  },
+  "progression": {
+    "utc": "2026-09-30T08:12:19.5909393Z",
+    "money": "3.4986e3",
+    "quest": "",
+    "seconds": 2100,
+    "quests": 16,
+    "grinders": 51,
+    "freeplay": true
+  },
+  "firstSaleChain": {
+    "money": 875,
+    "startingMoney": 1000,
+    "reserveWithoutCashRewards": 125
+  },
+  "contentAndSaveVersion": 2,
+  "activePaidTimersPreserved": true,
+  "protectedAssets": {
+    "Assets/Weedtopia/Game/Scenes/BurningHills.unity": true,
+    "Assets/Weedtopia/Game/Prefabs/BuildingSite.prefab": true,
+    "Assets/Weedtopia/Production/Layout/DistrictMap.asset": true,
+    "Assets/Weedtopia/Production/Prefabs/WorldNavigationDock.prefab": true,
+    "Assets/Weedtopia/Art/Buildings/Prefabs/town_hall/WT_town_hall_T_FIXED.prefab": true
+  },
+  "questProductionAndRoutePreservation": true,
+  "changedFiles": [
+    "Assets/Weedtopia/Game/Content/BurningHills.json",
+    "Docs/GameDesign/ECONOMY_AND_BALANCE.md",
+    "Docs/Content/BUILDING_AND_WORKER_MATRIX.csv",
+    "Docs/Content/MAIN_QUEST_FLOW.md",
+    "Assets/Weedtopia/Scripts/Editor/GameSetup/InteractionVisualEvidence.cs",
+    "Assets/Weedtopia/Scripts/Editor/GameSetup/LayoutVisualEvidence.cs",
+    "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionVisualEvidence.cs",
+    "Assets/Weedtopia/Scripts/Editor/GameSetup/VisualEvidence.cs",
+    "Assets/Weedtopia/Scripts/Runtime/Application/TutorialDriver.cs",
+    "Assets/Weedtopia/Scripts/Runtime/Domain/Definitions.cs",
+    "Assets/Weedtopia/Scripts/Runtime/Domain/UpgradeService.cs",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/BuildingInspectionMetrics.cs",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/BuildingInteractionUi.cs",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/BuildingView.cs",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/GameUi.cs",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/PresentationBenchmark.cs",
+    "Assets/Weedtopia/Scripts/Tests/EditMode/PersistenceTests.cs",
+    "Assets/Weedtopia/Scripts/Tests/EditMode/ProgressionTests.cs",
+    "Assets/Weedtopia/Scripts/Tests/PlayMode/GameFlowTests.cs",
+    "Assets/Weedtopia/Scripts/Tests/EditMode/BuildingBalanceTests.cs",
+    "Assets/Weedtopia/Scripts/Tests/EditMode/BuildingBalanceTests.cs.meta",
+    "Tools/Implementation/export_content_docs.py"
+  ],
+  "manualPlaythrough": false
+}

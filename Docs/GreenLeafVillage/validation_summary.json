@@ -1,0 +1,162 @@
+{
+  "utc": "2026-10-09T04:24:26.753695+00:00",
+  "status": "passed_local_integration",
+  "city": "green_leaf_village",
+  "introducedContentVersion": 8,
+  "unlockResidents": 250000,
+  "unlockSourceCities": [
+    "burning_hills",
+    "big_rock_city",
+    "seven_hills",
+    "little_montana",
+    "cassa_vadela",
+    "mark_wood_city"
+  ],
+  "oneTimeMandateAid": {
+    "money": 10000,
+    "teamCards": 6
+  },
+  "content": {
+    "buildingSites": 56,
+    "routes": 35,
+    "mainQuests": 18,
+    "permanentResidents": 8,
+    "personalChapters": 32,
+    "recurringVariants": 24,
+    "communityProjects": 3,
+    "localizedKeysPerLanguage": 315,
+    "languages": [
+      "de",
+      "en",
+      "es",
+      "fr",
+      "ru"
+    ]
+  },
+  "staticPresentationSerialized": true,
+  "runtimeStaticObjectCreation": false,
+  "source": {
+    "utc": "2026-10-09T04:24:26.753695+00:00",
+    "status": "passed",
+    "assemblies": 12,
+    "compiledSources": 318,
+    "changedSourcesSinceCompile": [],
+    "changedContentAndLocalesSinceValidation": []
+  },
+  "contentContracts": {
+    "passed": 9,
+    "failed": 0,
+    "receipt": "Docs/GreenLeafVillage/content_authoring_contracts.json"
+  },
+  "unityImportAndAuthoring": {
+    "status": "passed",
+    "receipt": "Docs/GreenLeafVillage/authoring_receipt.json",
+    "finalInstallRun": "Docs/GreenLeafVillage/Validation/20261009_061155_Install_PaintedArchitectureDependencyOrder.json"
+  },
+  "tests": {
+    "domain": {
+      "receipt": "Docs/Implementation/Validation/20261008_224439_EditMode_GreenLeafVillageRelevantDomain.json",
+      "xml": "Docs/Implementation/Validation/20261008_224439_EditMode_GreenLeafVillageRelevantDomain.xml",
+      "passed": 215,
+      "failed": 0,
+      "skipped": 0
+    },
+    "assets": {
+      "receipt": "Docs/Implementation/Validation/20261009_061244_EditMode_GreenLeafVillagePaintedAssets.json",
+      "xml": "Docs/Implementation/Validation/20261009_061244_EditMode_GreenLeafVillagePaintedAssets.xml",
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0
+    },
+    "playModeRegression": {
+      "receipt": "Docs/Implementation/Validation/20261009_055150_PlayMode_GreenLeafVillageTravelAndStories.json",
+      "xml": "Docs/Implementation/Validation/20261009_055150_PlayMode_GreenLeafVillageTravelAndStories.xml",
+      "passed": 30,
+      "failed": 0,
+      "skipped": 0
+    },
+    "playModeFinalScene": {
+      "receipt": "Docs/Implementation/Validation/20261009_061456_PlayMode_GreenLeafVillageFinalScene.json",
+      "xml": "Docs/Implementation/Validation/20261009_061456_PlayMode_GreenLeafVillageFinalScene.xml",
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "uniquePassingNUnitCases": 251,
+  "newGreenLeafDomainCases": 31,
+  "testCounting": "The three GreenLeaf PlayMode cases were rerun after the final visual repair; they are not double-counted as unique cases.",
+  "testScope": {
+    "domainFilter": "CampaignTests|PersistenceTests|VipStoryTests|SimulationBatchTests|ProgressionTests|LocalizationTests",
+    "playModeFilter": "GreenLeafVillagePlayModeTests|MarkWoodCityPlayModeTests|CityCampaignUiTests|VipStoryUiTests",
+    "fullDomainSuite": "Cancelled and replaced by relevant fixtures; not counted as passed.",
+    "cancelledRunReceipt": "Docs/GreenLeafVillage/Validation/full_domain_scope_change.json"
+  },
+  "gameView": {
+    "status": "passed",
+    "screenshots": 42,
+    "mode": "actual_playmode_gameview",
+    "captureRun": "Docs/GreenLeafVillage/Validation/20261009_061609_Capture_PaintedFinalGameViews.json",
+    "receipt": "Docs/GreenLeafVillage/gameview_receipt.json",
+    "fingerprint": "fa1777d9c416079282d174934228ad1dc0e607a94b6dd24bda8e92b0c9679db4",
+    "resolutions": [
+      "1920x1080",
+      "1366x768",
+      "2560x1080",
+      "1080x1920"
+    ],
+    "uiOverflowIssues": 0,
+    "actualSceneTravel": [
+      "green_leaf_village",
+      "burning_hills",
+      "mark_wood_city",
+      "green_leaf_village"
+    ],
+    "visualReview": "Docs/GreenLeafVillage/visual_review.json",
+    "diagnosticGrowthFixtures": true,
+    "fullEconomyPlayed": false
+  },
+  "preservation": {
+    "status": "passed",
+    "protectedFiles": 6648,
+    "unchangedProtectedFiles": 6637,
+    "reviewedExistingFileChanges": 11,
+    "unexpectedChanges": [],
+    "removedProtectedFiles": [],
+    "sixOriginalScenesByteIdentical": {
+      "BurningHills": true,
+      "BigRockCity": true,
+      "SevenHills": true,
+      "LittleMontana": true,
+      "CassaVadela": true,
+      "MarkWoodCity": true
+    },
+    "receipt": "Docs/GreenLeafVillage/Preservation/result.json"
+  },
+  "newAssetReferences": {
+    "utc": "2026-10-09T04:21:24.276175+00:00",
+    "status": "passed",
+    "newAssets": 302,
+    "checkedUniqueReferences": 809,
+    "unresolvedReferences": [],
+    "duplicateGuids": {},
+    "missingMetas": [],
+    "scope": "GreenLeafVillage production files and scene; references resolved through Assets, Packages and the imported PackageCache"
+  },
+  "art": {
+    "tool": "built-in image_gen",
+    "transparentRasterAssets": 13,
+    "architecturePromptSet": "Docs/GreenLeafVillage/architecture_art_generation.json",
+    "residentAndSignPromptSet": "Docs/GreenLeafVillage/art_generation.json",
+    "archive": "Docs/GreenLeafVillage/ArtArchive/FacetedArchitecture",
+    "retirementReceipt": "Docs/GreenLeafVillage/ArtArchive/FacetedArchitecture/retirement_receipt.json"
+  },
+  "openGates": [
+    "User visual approval",
+    "Physical-device touch and audio",
+    "Android/WebGL player build and device/browser test",
+    "Native-speaker localization review",
+    "Human full-campaign economy playthrough"
+  ],
+  "releaseAccepted": false
+}

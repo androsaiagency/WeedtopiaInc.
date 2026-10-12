@@ -1,0 +1,33 @@
+{
+  "utc": "2026-10-05T03:45:11.9846903Z",
+  "gate": "standalone-domain-benchmark",
+  "runtime": ".NET 10.0.12",
+  "sourceSha256": "B26A6B64674D21A60061E2E48D7B5431B3B2F72485CDCB36902FADD6A3C30910",
+  "referenceSha256": "45F712F4B098241BED11B8EA3D9EFA86E435364D9E4BE52D9939E99DE92A247E",
+  "scenarios": [
+    {
+      "scenario": "early-save",
+      "seconds": 28800,
+      "buildings": 112,
+      "workers": 0,
+      "originalMilliseconds": 1793.2342,
+      "optimizedMilliseconds": 355.9913,
+      "speedup": 5.037297821604067,
+      "originalAllocatedBytes": 634982480.0,
+      "optimizedAllocatedBytes": 74842912.0,
+      "exactStateMatch": true
+    },
+    {
+      "scenario": "established-two-cities",
+      "seconds": 28800,
+      "buildings": 112,
+      "workers": 118,
+      "originalMilliseconds": 29088.8969,
+      "optimizedMilliseconds": 3998.0395,
+      "speedup": 7.275790271706921,
+      "originalAllocatedBytes": 8095314872.0,
+      "optimizedAllocatedBytes": 447298328.0,
+      "exactStateMatch": true
+    }
+  ]
+}

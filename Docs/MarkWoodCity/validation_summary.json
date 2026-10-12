@@ -1,0 +1,4104 @@
+{
+  "utc": "2026-10-08T19:30:36.546487+00:00",
+  "implementationStatus": "verified_in_editor",
+  "city": "mark_wood_city",
+  "unlockResidents": 100000,
+  "unlockSources": [
+    "burning_hills",
+    "big_rock_city",
+    "seven_hills",
+    "little_montana",
+    "cassa_vadela"
+  ],
+  "gates": {
+    "content": "passed",
+    "contentIdempotence": "passed",
+    "sourceCompile": "passed",
+    "authoring": "passed",
+    "domain": "passed",
+    "editorAssets": "passed",
+    "playMode": "passed",
+    "gameView": "passed",
+    "uiLayout": "passed",
+    "visualReview": "passed",
+    "preservation": "passed",
+    "assetReferences": "passed"
+  },
+  "staleSources": [],
+  "newTests": {
+    "domain": {
+      "total": 21,
+      "passed": 21
+    },
+    "assets": {
+      "total": 5,
+      "passed": 5
+    },
+    "playMode": {
+      "total": 3,
+      "passed": 3
+    }
+  },
+  "domain": {
+    "status": "passed",
+    "aggregation": "latest_result_per_unique_test_fullname",
+    "total": 450,
+    "passed": 450,
+    "failed": 0,
+    "rawFullRun": {
+      "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+      "mode": "EditMode",
+      "startedUtc": "2026-10-08T17:46:54.4788797Z",
+      "endedUtc": "2026-10-08T18:24:26.7417346Z",
+      "unity": "6000.3.9f1 (7a9955a4f2fa)",
+      "exitCode": 2,
+      "log": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\Implementation\\Validation\\20261008_194654_EditMode_MarkWoodCityFullDomain.log",
+      "status": "failed",
+      "total": 450,
+      "passed": 449,
+      "failed": 1,
+      "skipped": 0,
+      "xml": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\Implementation\\Validation\\20261008_194654_EditMode_MarkWoodCityFullDomain.xml"
+    },
+    "targetedRetest": {
+      "run": "20261008_203837_EditMode_MarkWoodCityDomainCorrected",
+      "mode": "EditMode",
+      "startedUtc": "2026-10-08T18:38:37.3421793Z",
+      "endedUtc": "2026-10-08T18:39:47.5969094Z",
+      "unity": "6000.3.9f1 (7a9955a4f2fa)",
+      "exitCode": 0,
+      "log": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\Implementation\\Validation\\20261008_203837_EditMode_MarkWoodCityDomainCorrected.log",
+      "status": "passed",
+      "total": 21,
+      "passed": 21,
+      "failed": 0,
+      "skipped": 0,
+      "xml": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\Implementation\\Validation\\20261008_203837_EditMode_MarkWoodCityDomainCorrected.xml"
+    },
+    "rawFullSummary": {
+      "total": 450,
+      "passed": 449,
+      "failed": 1,
+      "notPassed": [
+        "Weedtopia.Tests.MarkWoodCityCampaignTests.SeparateHistoricalHighsAndDestinationPopulationCannotUnlockTheCity"
+      ]
+    },
+    "retestSummary": {
+      "total": 21,
+      "passed": 21,
+      "failed": 0,
+      "notPassed": []
+    },
+    "expectedUniqueCases": 450,
+    "expectedRetestCases": 21,
+    "originallyFailedCases": [
+      "Weedtopia.Tests.MarkWoodCityCampaignTests.SeparateHistoricalHighsAndDestinationPopulationCannotUnlockTheCity"
+    ],
+    "uncoveredOriginalFailures": [],
+    "missingRetestCases": [],
+    "unexpectedRetestCases": [],
+    "retestIsNewer": true,
+    "supersededCases": [
+      "Weedtopia.Tests.MarkWoodCityCampaignTests.AcceptanceFromAnySourceGrantsBridgeOnceAndPreservesMainHistories(\"big_rock_city\")",
+      "Weedtopia.Tests.MarkWoodCityCampaignTests.AcceptanceFromAnySourceGrantsBridgeOnceAndPreservesMainHistories(\"burning_hills\")",
+      "Weedtopia.Tests.MarkWoodCityCampaignTests.AcceptanceFromAnySourceGrantsBridgeOnceAndPreservesMainHistories(\"cassa_vadela\")",
+      "Weedtopia.Tests.MarkWoodCityCampaignTests.AcceptanceFromAnySourceGrantsBridgeOnceAndPreservesMainHistories(\"little_montana\")",
+      "Weedtopia.Tests.MarkWoodCityCampaignTests.AcceptanceFromAnySourceGrantsBridgeOnceAndPreservesMainHistories(\"seven_hills\")",
+      "Weedtopia.Tests.MarkWoodCityCampaignTests.CombinedPopulationBoundaryIsExact(100000,True)",
+      "Weedtopia.Tests.MarkWoodCityCampaignTests.CombinedPopulationBoundaryIsExact(100001,True)",
+      "Weedtopia.Tests.MarkWoodCityCampaignTests.CombinedPopulationBoundaryIsExact(99999,False)",
+      "Weedtopia.Tests.MarkWoodCityCampaignTests.LocalFoundationCompletesTwelveMainQuestsWithTheBridgeAndNoPreviousCityIncome",
+      "Weedtopia.Tests.MarkWoodCityCampaignTests.MigrationRejectsMissingHistoricalBuildingsAndForgedCharters",
+      "Weedtopia.Tests.MarkWoodCityCampaignTests.OfferedCharterSurvivesPopulationDeclineSaveAndContinue",
+      "Weedtopia.Tests.MarkWoodCityCampaignTests.SeparateHistoricalHighsAndDestinationPopulationCannotUnlockTheCity",
+      "Weedtopia.Tests.MarkWoodCityCampaignTests.SixOwnedCitiesContinueOfflineWithoutMovingTheirAssignedWorkers",
+      "Weedtopia.Tests.MarkWoodCityCampaignTests.SixthCityUsesTheFirstFiveCitiesAndIndependentLocalContent",
+      "Weedtopia.Tests.MarkWoodCityCampaignTests.StoriesRecurringWorkAndCommunityProjectsPersistEveryChoice(0)",
+      "Weedtopia.Tests.MarkWoodCityCampaignTests.StoriesRecurringWorkAndCommunityProjectsPersistEveryChoice(1)",
+      "Weedtopia.Tests.MarkWoodCityCampaignTests.UnacceptedCitiesDoNotContributeTheirPopulation(\"big_rock_city\")",
+      "Weedtopia.Tests.MarkWoodCityCampaignTests.UnacceptedCitiesDoNotContributeTheirPopulation(\"cassa_vadela\")",
+      "Weedtopia.Tests.MarkWoodCityCampaignTests.UnacceptedCitiesDoNotContributeTheirPopulation(\"little_montana\")",
+      "Weedtopia.Tests.MarkWoodCityCampaignTests.UnacceptedCitiesDoNotContributeTheirPopulation(\"seven_hills\")",
+      "Weedtopia.Tests.MarkWoodCityCampaignTests.VersionSixMigrationAddsOnlyLockedCityAndKeepsWorkersCargoInventoryAndStories"
+    ],
+    "verificationIssues": [],
+    "cases": [
+      {
+        "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(-1.0d,-250,\"-1e-250\")",
+        "className": "Weedtopia.Tests.AmountNormalizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(-1.234567890123d,17,\"-1.23456789012e17\")",
+        "className": "Weedtopia.Tests.AmountNormalizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(-9.0d,250,\"-9e250\")",
+        "className": "Weedtopia.Tests.AmountNormalizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(1.000000000001d,17,\"1e17\")",
+        "className": "Weedtopia.Tests.AmountNormalizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(1.0d,250,\"1e250\")",
+        "className": "Weedtopia.Tests.AmountNormalizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(1.234567890123d,17,\"1.23456789012e17\")",
+        "className": "Weedtopia.Tests.AmountNormalizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(8.999999999994d,17,\"8.99999999999e17\")",
+        "className": "Weedtopia.Tests.AmountNormalizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(9.0d,-250,\"9e-250\")",
+        "className": "Weedtopia.Tests.AmountNormalizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitIntervalRetainsExponentLimitsAndRejectsNonFiniteInputs",
+        "className": "Weedtopia.Tests.AmountNormalizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.AmountNormalizationTests.ValuesImmediatelyAroundIntervalAndCarryBoundaryNormalizeCorrectly",
+        "className": "Weedtopia.Tests.AmountNormalizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BakeryDeliveryTests.BakerDrivesEmptyLoadsAtFactoryAndOnlyBakesAfterReturning",
+        "className": "Weedtopia.Tests.BakeryDeliveryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BakeryDeliveryTests.ExistingSavesWithoutPickupFieldsRemainReadable",
+        "className": "Weedtopia.Tests.BakeryDeliveryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BakeryDeliveryTests.FullArrivalBufferCanDrainWhileTheVanWaitsAndCargoIsPreserved",
+        "className": "Weedtopia.Tests.BakeryDeliveryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BakeryDeliveryTests.MissingReservedStockReturnsAnEmptyVanWithoutInventingADelivery",
+        "className": "Weedtopia.Tests.BakeryDeliveryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BakeryDeliveryTests.MultipleBakersReserveWithoutDuplicatingOrLosingButter",
+        "className": "Weedtopia.Tests.BakeryDeliveryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BakeryDeliveryTests.NoBakerNoBeltAndNoPickupWhenTheDestinationIsStocked",
+        "className": "Weedtopia.Tests.BakeryDeliveryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BakeryDeliveryTests.SaveReloadAndOfflineResumeEachLegExactly(False)",
+        "className": "Weedtopia.Tests.BakeryDeliveryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BakeryDeliveryTests.SaveReloadAndOfflineResumeEachLegExactly(True)",
+        "className": "Weedtopia.Tests.BakeryDeliveryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BakeryDeliveryTests.SavesRejectWrongCourierAndImpossiblePickupPhases",
+        "className": "Weedtopia.Tests.BakeryDeliveryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.CostGrowthChangesAfterTargetLevel25WithoutAJumpOrEffectOnProduction",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.EntireFirstSaleChainFitsStartMoneyWithoutCashRewards",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.FirstConstructionMatchesApprovedTable(\"bakery\",3500,600)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.FirstConstructionMatchesApprovedTable(\"butter_factory\",2500,480)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.FirstConstructionMatchesApprovedTable(\"city_warehouse\",200,120)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.FirstConstructionMatchesApprovedTable(\"coffee_shop\",250,120)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.FirstConstructionMatchesApprovedTable(\"cultivation_plot\",100,30)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.FirstConstructionMatchesApprovedTable(\"farm_processing\",150,60)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.FirstConstructionMatchesApprovedTable(\"farm_warehouse\",175,90)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.FirstConstructionMatchesApprovedTable(\"park\",800,180)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.FirstConstructionMatchesApprovedTable(\"residential_house\",1200,300)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.FirstConstructionMatchesApprovedTable(\"supermarket\",2000,360)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.InstantUpgradeChargesOnceAndCannotBeAccelerated",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.InvalidNewCurveAndTierConfigurationIsRejected",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(1,120)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(10,180)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(100,360)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(150,480)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(151,0)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(2,0)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(200,480)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(25,240)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(4,0)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(4999,0)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(5,150)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(50,300)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(5000,480)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.PremiumInstantUpgradeAndTimedCompletionRemainSingleUse",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.TimedUpgradeKeepsProducingAndBuildSpeedMatchesItsPreview",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.TutorialFinancesAllBuildingsWithoutRecoveryOrPremium(1)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.TutorialFinancesAllBuildingsWithoutRecoveryOrPremium(42)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.BuildingBalanceTests.TutorialFinancesAllBuildingsWithoutRecoveryOrPremium(420)",
+        "className": "Weedtopia.Tests.BuildingBalanceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.AcceptanceFromEachSourcePaysOnlyOnceAndKeepsItsMainHistory(\"big_rock_city\")",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.AcceptanceFromEachSourcePaysOnlyOnceAndKeepsItsMainHistory(\"burning_hills\")",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.AcceptanceFromEachSourcePaysOnlyOnceAndKeepsItsMainHistory(\"little_montana\")",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.AcceptanceFromEachSourcePaysOnlyOnceAndKeepsItsMainHistory(\"seven_hills\")",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.BurningHillsAloneCanMeetTheCombinedThresholdWithoutOtherCharters",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.CassaPopulationNeverFeedsBackIntoItsOwnThreshold",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.FifthCityUsesExactlyTheFirstFourSourcesAndItsOwnContent",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.FiftyThousandResidentsOfferTheCityForEveryDistribution(0,0,0,50000)",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.FiftyThousandResidentsOfferTheCityForEveryDistribution(0,0,50000,0)",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.FiftyThousandResidentsOfferTheCityForEveryDistribution(0,50000,0,0)",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.FiftyThousandResidentsOfferTheCityForEveryDistribution(12500,12500,12500,12500)",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.FiftyThousandResidentsOfferTheCityForEveryDistribution(20000,15000,10000,5000)",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.FiftyThousandResidentsOfferTheCityForEveryDistribution(50000,0,0,0)",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.FirstFourCityCatalogsStoriesTextsAndProductiveTuningStayUnchanged",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.FortyNineThousandNineHundredNinetyNineResidentsRemainLocked",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.FoundationCompletesTwelveQuestsUsingOnlyTheBridgeGrantAndLocalIncome",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.IndependentHistoricalHighsAndDestinationPopulationDoNotUnlockTheCity",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.InesIsPresentOnArrivalAndAllFiveOwnedCitiesKeepProducing",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.MissingHistoricalBuildingAndForgedCharterAreRejected",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.OfferSurvivesPopulationDeclineAndSaveRestoreBeforeAcceptance",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.PopulationOfAnUnacceptedSourceIsExcluded(\"big_rock_city\")",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.PopulationOfAnUnacceptedSourceIsExcluded(\"little_montana\")",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.PopulationOfAnUnacceptedSourceIsExcluded(\"seven_hills\")",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.ResidentChaptersRecurringStoriesAndSharedProjectsKeepChoicesAcrossSaveRestore(0)",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.ResidentChaptersRecurringStoriesAndSharedProjectsKeepChoicesAcrossSaveRestore(1)",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.SaveFailureRestoresMilestoneCharterRewardAndTravel",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.VersionFiveMigrationAddsLaterCitiesAndPreservesAllFourExistingStates",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CassaVadelaCampaignTests.WorkerAssignmentCapturesTheThresholdInThePublicTransaction",
+        "className": "Weedtopia.Tests.CassaVadelaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityCampaignTests.AcceptPaysExactlyOnceAndKeepsOriginalQuests",
+        "className": "Weedtopia.Tests.CityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityCampaignTests.AllSixInhabitantsAndTheirTwentyFourChaptersCompleteAndRemainSaved",
+        "className": "Weedtopia.Tests.CityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityCampaignTests.AssignedWorkersInBurningHillsCannotSatisfyBigRockGoals",
+        "className": "Weedtopia.Tests.CityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityCampaignTests.BothCitiesHaveSameFamiliesAndIndependentIdentities",
+        "className": "Weedtopia.Tests.CityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityCampaignTests.BothOwnedCitiesProduceDuringOnlineAndOfflineSimulation",
+        "className": "Weedtopia.Tests.CityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityCampaignTests.BothTutorialsFinishUsingPublicCommandsAndNoPremium",
+        "className": "Weedtopia.Tests.CityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityCampaignTests.CharterAndTravelRollBackOnSaveFailure",
+        "className": "Weedtopia.Tests.CityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityCampaignTests.CorruptOldSaveCannotBeRepairedByAddingNewCityBuildings",
+        "className": "Weedtopia.Tests.CityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityCampaignTests.ExistingVersionTwoSavePreservesStoriesConstructionInventoryWorkersAndCargo",
+        "className": "Weedtopia.Tests.CityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityCampaignTests.ForgedAccessAndCrossCityQuestHistoriesAreRejected",
+        "className": "Weedtopia.Tests.CityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityCampaignTests.InvitationStartsAtOneThousandAndSurvivesPopulationDecline",
+        "className": "Weedtopia.Tests.CityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityCampaignTests.LockedCityDoesNotSimulateAndCannotBeVisited",
+        "className": "Weedtopia.Tests.CityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityCampaignTests.RealResidentCalculationUnlocksTheMandate",
+        "className": "Weedtopia.Tests.CityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityProjectTests.BonusAppliesOnlyAfterCompletionToChosenFamilyAndSurvivesReload",
+        "className": "Weedtopia.Tests.CityProjectTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityProjectTests.BothPlansCompleteFrom1000UsingOnlyPlayerCommandsWithoutPremiumOrRecovery(\"gourmet\",121)",
+        "className": "Weedtopia.Tests.CityProjectTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityProjectTests.BothPlansCompleteFrom1000UsingOnlyPlayerCommandsWithoutPremiumOrRecovery(\"gourmet\",420)",
+        "className": "Weedtopia.Tests.CityProjectTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityProjectTests.BothPlansCompleteFrom1000UsingOnlyPlayerCommandsWithoutPremiumOrRecovery(\"neighborhood\",121)",
+        "className": "Weedtopia.Tests.CityProjectTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityProjectTests.BothPlansCompleteFrom1000UsingOnlyPlayerCommandsWithoutPremiumOrRecovery(\"neighborhood\",420)",
+        "className": "Weedtopia.Tests.CityProjectTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityProjectTests.CorruptChapterProgressIsRejected(\"baseline\")",
+        "className": "Weedtopia.Tests.CityProjectTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityProjectTests.CorruptChapterProgressIsRejected(\"future\")",
+        "className": "Weedtopia.Tests.CityProjectTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityProjectTests.CorruptChapterProgressIsRejected(\"history\")",
+        "className": "Weedtopia.Tests.CityProjectTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityProjectTests.CorruptChapterProgressIsRejected(\"locked\")",
+        "className": "Weedtopia.Tests.CityProjectTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityProjectTests.CorruptChapterProgressIsRejected(\"plan\")",
+        "className": "Weedtopia.Tests.CityProjectTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityProjectTests.LegacySaveWithoutProjectFieldLoadsWithAllTutorialProgressAndResources",
+        "className": "Weedtopia.Tests.CityProjectTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityProjectTests.MidStepSaveAndOfflineProgressKeepTheSameBaselineWithoutClaimingRewards",
+        "className": "Weedtopia.Tests.CityProjectTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityProjectTests.PlanRequiresCompletedTutorialAndChoiceCannotBeRepeatedOrSwitched",
+        "className": "Weedtopia.Tests.CityProjectTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.CityProjectTests.PreviousProductionDoesNotCompleteNewGoalsAndStepRewardsArePaidOnce",
+        "className": "Weedtopia.Tests.CityProjectTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.DomainTests.All5001LevelsResolveContiguousExactBands",
+        "className": "Weedtopia.Tests.DomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.DomainTests.AmountArithmeticOrderingAndInvariantRoundtrip",
+        "className": "Weedtopia.Tests.DomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.DomainTests.CurvesRemainMonotoneBeyondDoubleRange",
+        "className": "Weedtopia.Tests.DomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.DomainTests.DriverCannotBeRemovedDuringTripAndBlockedCargoIsRetained",
+        "className": "Weedtopia.Tests.DomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.DomainTests.FullBuffersAndInFlightCargoConserveMass",
+        "className": "Weedtopia.Tests.DomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.DomainTests.ManualCropStopsAtCapacityAndManagerEnablesTransfer",
+        "className": "Weedtopia.Tests.DomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.DomainTests.MoneyConstructionAndInsufficientGrindersAreAtomic",
+        "className": "Weedtopia.Tests.DomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.DomainTests.ObservingConveyorTransfersDoesNotChangeSimulationState",
+        "className": "Weedtopia.Tests.DomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.DomainTests.PremiumRequiresSingleUseConfirmationAndCancelDoesNotSpend",
+        "className": "Weedtopia.Tests.DomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.DomainTests.RenderFramePartitionDoesNotChangeSimulation",
+        "className": "Weedtopia.Tests.DomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.DomainTests.RolesRarityAssignmentSwapAndDriverTiers",
+        "className": "Weedtopia.Tests.DomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.DomainTests.SeededRandomReplaysAndRejectsInvalidRange",
+        "className": "Weedtopia.Tests.DomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.DomainTests.WorkerLevelAndRankCapsAreIndependent",
+        "className": "Weedtopia.Tests.DomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.EditMode.LocalizationTests.CulturesFormatNumbersWithoutChangingAmountSerialization",
+        "className": "Weedtopia.Tests.EditMode.LocalizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.EditMode.LocalizationTests.IndependentDefinitionLookupsDoNotShareMutableLanguageState",
+        "className": "Weedtopia.Tests.EditMode.LocalizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.EditMode.LocalizationTests.MissingTranslationFallsBackAndUnknownKeyRemainsVisible",
+        "className": "Weedtopia.Tests.EditMode.LocalizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.EditMode.LocalizationTests.RejectsChangedPlaceholdersAndDuplicateKeys",
+        "className": "Weedtopia.Tests.EditMode.LocalizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.EditMode.LocalizationTests.SelectPublishesOnceAndInvalidCodesPreserveCurrentLanguage",
+        "className": "Weedtopia.Tests.EditMode.LocalizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.AllQuestItemGrantsMatchPreviewAndCannotBeClaimedTwice",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.CatalogContainsEveryDurationAndAllItemsAreObtainableWithoutChangingStarterBalance",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.CompletionClampsAndPreservesFirstBuildDailyEntitlement",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.DamagedInventoryIsRejected(\"duplicate\")",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.DamagedInventoryIsRejected(\"negative\")",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.DamagedInventoryIsRejected(\"null\")",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.DamagedInventoryIsRejected(\"unknown\")",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.InventoryRoundTripKeepsSpentCountsAndLegacySavesRemainEmpty",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.NumericOverflowDoesNotConsumeThePack",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.OpeningAndCancellingAreReadOnlyAndInvalidTargetsAreRejected",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.PackCashAndGrindersGrantExactlyTheirContentsAndAreNotReplayed",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.SmallestBoosterCannotBeSplitAndSplitOverflowCannotSpend",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.SpecialistChoiceUsesExistingRoleAndRarityRules",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.SpeedupOnlyReducesChosenConstructionByItsExactDuration(\"build_10h\",36000)",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.SpeedupOnlyReducesChosenConstructionByItsExactDuration(\"build_15m\",900)",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.SpeedupOnlyReducesChosenConstructionByItsExactDuration(\"build_1h\",3600)",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.SpeedupOnlyReducesChosenConstructionByItsExactDuration(\"build_1m\",60)",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.SpeedupOnlyReducesChosenConstructionByItsExactDuration(\"build_24h\",86400)",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.SpeedupOnlyReducesChosenConstructionByItsExactDuration(\"build_30m\",1800)",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.SpeedupOnlyReducesChosenConstructionByItsExactDuration(\"build_5h\",18000)",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.SpeedupOnlyReducesChosenConstructionByItsExactDuration(\"build_5m\",300)",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.SplittingPreservesEverySecondWithoutAConstructionAndIsSingleUse(\"build_10h\")",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.SplittingPreservesEverySecondWithoutAConstructionAndIsSingleUse(\"build_15m\")",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.SplittingPreservesEverySecondWithoutAConstructionAndIsSingleUse(\"build_1h\")",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.SplittingPreservesEverySecondWithoutAConstructionAndIsSingleUse(\"build_24h\")",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.SplittingPreservesEverySecondWithoutAConstructionAndIsSingleUse(\"build_30m\")",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.SplittingPreservesEverySecondWithoutAConstructionAndIsSingleUse(\"build_5h\")",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.SplittingPreservesEverySecondWithoutAConstructionAndIsSingleUse(\"build_5m\")",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.StaleOffersNeverSpendAnItem(\"cancel\")",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.StaleOffersNeverSpendAnItem(\"finished\")",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.StaleOffersNeverSpendAnItem(\"new_offer\")",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.StaleOffersNeverSpendAnItem(\"spent\")",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.StaleOffersNeverSpendAnItem(\"tick\")",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.InventoryTests.VipSpeedupsAreRepeatableButEachOrderPaysOnlyOnce",
+        "className": "Weedtopia.Tests.InventoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LittleMontanaCampaignTests.AcceptanceWorksFromEachSourceCityAndPaysOnlyOnce(\"big_rock_city\")",
+        "className": "Weedtopia.Tests.LittleMontanaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LittleMontanaCampaignTests.AcceptanceWorksFromEachSourceCityAndPaysOnlyOnce(\"burning_hills\")",
+        "className": "Weedtopia.Tests.LittleMontanaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LittleMontanaCampaignTests.AcceptanceWorksFromEachSourceCityAndPaysOnlyOnce(\"seven_hills\")",
+        "className": "Weedtopia.Tests.LittleMontanaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LittleMontanaCampaignTests.AllResidentChaptersRecurringStoriesAndCollaborationsKeepTheirChoices(0)",
+        "className": "Weedtopia.Tests.LittleMontanaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LittleMontanaCampaignTests.AllResidentChaptersRecurringStoriesAndCollaborationsKeepTheirChoices(1)",
+        "className": "Weedtopia.Tests.LittleMontanaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LittleMontanaCampaignTests.FifteenThousandResidentsOfferTheCityForEveryDistribution(0,0,15000)",
+        "className": "Weedtopia.Tests.LittleMontanaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LittleMontanaCampaignTests.FifteenThousandResidentsOfferTheCityForEveryDistribution(0,15000,0)",
+        "className": "Weedtopia.Tests.LittleMontanaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LittleMontanaCampaignTests.FifteenThousandResidentsOfferTheCityForEveryDistribution(15000,0,0)",
+        "className": "Weedtopia.Tests.LittleMontanaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LittleMontanaCampaignTests.FifteenThousandResidentsOfferTheCityForEveryDistribution(5000,5000,5000)",
+        "className": "Weedtopia.Tests.LittleMontanaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LittleMontanaCampaignTests.FifteenThousandResidentsOfferTheCityForEveryDistribution(7000,6500,1500)",
+        "className": "Weedtopia.Tests.LittleMontanaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LittleMontanaCampaignTests.FinalWorkerAssignmentCapturesTheOfferInsideThePublicTransaction",
+        "className": "Weedtopia.Tests.LittleMontanaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LittleMontanaCampaignTests.FirstThreeCityCatalogsStoriesAndTextsStayUnchanged",
+        "className": "Weedtopia.Tests.LittleMontanaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LittleMontanaCampaignTests.FirstTwelveFoundationQuestsFinishThroughPublicCommandsWithoutPremium",
+        "className": "Weedtopia.Tests.LittleMontanaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LittleMontanaCampaignTests.FourteenThousandNineHundredNinetyNineResidentsRemainLocked",
+        "className": "Weedtopia.Tests.LittleMontanaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LittleMontanaCampaignTests.FourthCityResidentsNeverFeedBackIntoTheirOwnThreshold",
+        "className": "Weedtopia.Tests.LittleMontanaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LittleMontanaCampaignTests.FourthCityUsesExactlyTheFirstThreeSourcesAndItsOwnContent",
+        "className": "Weedtopia.Tests.LittleMontanaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LittleMontanaCampaignTests.MaraIsPresentOnArrivalAndEveryOwnedCityKeepsProducing",
+        "className": "Weedtopia.Tests.LittleMontanaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LittleMontanaCampaignTests.MissingOldBuildingAndForgedFourthCityCharterAreRejected",
+        "className": "Weedtopia.Tests.LittleMontanaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LittleMontanaCampaignTests.OfferSurvivesPopulationDeclineAndSaveRestoreBeforeAcceptance",
+        "className": "Weedtopia.Tests.LittleMontanaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LittleMontanaCampaignTests.ResidentsInAnUnacceptedSourceCityCannotContributeToTheThreshold",
+        "className": "Weedtopia.Tests.LittleMontanaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LittleMontanaCampaignTests.SaveFailureRestoresTheThresholdLatchCharterRewardAndTravel",
+        "className": "Weedtopia.Tests.LittleMontanaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LittleMontanaCampaignTests.SeparateHistoricalHighsAndLockedDestinationPopulationCannotUnlockTheCity",
+        "className": "Weedtopia.Tests.LittleMontanaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LittleMontanaCampaignTests.SufficientPopulationInBurningHillsOffersMontanaWithoutAnotherCharterAcceptance",
+        "className": "Weedtopia.Tests.LittleMontanaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LittleMontanaCampaignTests.VersionFourMigrationAddsOnlyLittleMontanaAndPreservesAllThreeExistingCities",
+        "className": "Weedtopia.Tests.LittleMontanaCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LuckyWheelTests.ActualSaveReloadKeepsBoardConsumedFreeSpinAndPrize",
+        "className": "Weedtopia.Tests.LuckyWheelTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LuckyWheelTests.BoardHasTenDistinctItemsAndDoesNotChangeOnReadOrReopen",
+        "className": "Weedtopia.Tests.LuckyWheelTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LuckyWheelTests.CapacityOverflowNeverChargesOrDraws",
+        "className": "Weedtopia.Tests.LuckyWheelTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LuckyWheelTests.FailedFundsAndCancelledOrReusedOffersDoNotChangeResourcesOrRandom",
+        "className": "Weedtopia.Tests.LuckyWheelTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LuckyWheelTests.ForwardJumpDoesNotAccumulateFreeSpinsAndRollbackDoesNotReset",
+        "className": "Weedtopia.Tests.LuckyWheelTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LuckyWheelTests.InvalidWheelSaveIsRejected(\"count\")",
+        "className": "Weedtopia.Tests.LuckyWheelTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LuckyWheelTests.InvalidWheelSaveIsRejected(\"day\")",
+        "className": "Weedtopia.Tests.LuckyWheelTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LuckyWheelTests.InvalidWheelSaveIsRejected(\"duplicate\")",
+        "className": "Weedtopia.Tests.LuckyWheelTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LuckyWheelTests.InvalidWheelSaveIsRejected(\"random\")",
+        "className": "Weedtopia.Tests.LuckyWheelTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LuckyWheelTests.InvalidWheelSaveIsRejected(\"spins\")",
+        "className": "Weedtopia.Tests.LuckyWheelTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LuckyWheelTests.InvalidWheelSaveIsRejected(\"unknown\")",
+        "className": "Weedtopia.Tests.LuckyWheelTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LuckyWheelTests.LegacySaveWithoutWheelIsAcceptedAndReceivesOneBoard",
+        "className": "Weedtopia.Tests.LuckyWheelTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LuckyWheelTests.MidnightInvalidatesPaidConfirmationWithoutCharging",
+        "className": "Weedtopia.Tests.LuckyWheelTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LuckyWheelTests.SaveFailureRollsBackPrizeCurrencyBoardReceiptAndRng",
+        "className": "Weedtopia.Tests.LuckyWheelTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LuckyWheelTests.TenDrawsFollowExactCostsRemoveEachPrizeAndThenStop",
+        "className": "Weedtopia.Tests.LuckyWheelTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.LuckyWheelTests.UtcMidnightResetsBoardFreeSpinAndCountdownTogether",
+        "className": "Weedtopia.Tests.LuckyWheelTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.MarkWoodCityCampaignTests.AcceptanceFromAnySourceGrantsBridgeOnceAndPreservesMainHistories(\"big_rock_city\")",
+        "className": "Weedtopia.Tests.MarkWoodCityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_203837_EditMode_MarkWoodCityDomainCorrected",
+        "failureMessage": null,
+        "evidence": "targetedRetest"
+      },
+      {
+        "fullname": "Weedtopia.Tests.MarkWoodCityCampaignTests.AcceptanceFromAnySourceGrantsBridgeOnceAndPreservesMainHistories(\"burning_hills\")",
+        "className": "Weedtopia.Tests.MarkWoodCityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_203837_EditMode_MarkWoodCityDomainCorrected",
+        "failureMessage": null,
+        "evidence": "targetedRetest"
+      },
+      {
+        "fullname": "Weedtopia.Tests.MarkWoodCityCampaignTests.AcceptanceFromAnySourceGrantsBridgeOnceAndPreservesMainHistories(\"cassa_vadela\")",
+        "className": "Weedtopia.Tests.MarkWoodCityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_203837_EditMode_MarkWoodCityDomainCorrected",
+        "failureMessage": null,
+        "evidence": "targetedRetest"
+      },
+      {
+        "fullname": "Weedtopia.Tests.MarkWoodCityCampaignTests.AcceptanceFromAnySourceGrantsBridgeOnceAndPreservesMainHistories(\"little_montana\")",
+        "className": "Weedtopia.Tests.MarkWoodCityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_203837_EditMode_MarkWoodCityDomainCorrected",
+        "failureMessage": null,
+        "evidence": "targetedRetest"
+      },
+      {
+        "fullname": "Weedtopia.Tests.MarkWoodCityCampaignTests.AcceptanceFromAnySourceGrantsBridgeOnceAndPreservesMainHistories(\"seven_hills\")",
+        "className": "Weedtopia.Tests.MarkWoodCityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_203837_EditMode_MarkWoodCityDomainCorrected",
+        "failureMessage": null,
+        "evidence": "targetedRetest"
+      },
+      {
+        "fullname": "Weedtopia.Tests.MarkWoodCityCampaignTests.CombinedPopulationBoundaryIsExact(100000,True)",
+        "className": "Weedtopia.Tests.MarkWoodCityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_203837_EditMode_MarkWoodCityDomainCorrected",
+        "failureMessage": null,
+        "evidence": "targetedRetest"
+      },
+      {
+        "fullname": "Weedtopia.Tests.MarkWoodCityCampaignTests.CombinedPopulationBoundaryIsExact(100001,True)",
+        "className": "Weedtopia.Tests.MarkWoodCityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_203837_EditMode_MarkWoodCityDomainCorrected",
+        "failureMessage": null,
+        "evidence": "targetedRetest"
+      },
+      {
+        "fullname": "Weedtopia.Tests.MarkWoodCityCampaignTests.CombinedPopulationBoundaryIsExact(99999,False)",
+        "className": "Weedtopia.Tests.MarkWoodCityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_203837_EditMode_MarkWoodCityDomainCorrected",
+        "failureMessage": null,
+        "evidence": "targetedRetest"
+      },
+      {
+        "fullname": "Weedtopia.Tests.MarkWoodCityCampaignTests.LocalFoundationCompletesTwelveMainQuestsWithTheBridgeAndNoPreviousCityIncome",
+        "className": "Weedtopia.Tests.MarkWoodCityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_203837_EditMode_MarkWoodCityDomainCorrected",
+        "failureMessage": null,
+        "evidence": "targetedRetest"
+      },
+      {
+        "fullname": "Weedtopia.Tests.MarkWoodCityCampaignTests.MigrationRejectsMissingHistoricalBuildingsAndForgedCharters",
+        "className": "Weedtopia.Tests.MarkWoodCityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_203837_EditMode_MarkWoodCityDomainCorrected",
+        "failureMessage": null,
+        "evidence": "targetedRetest"
+      },
+      {
+        "fullname": "Weedtopia.Tests.MarkWoodCityCampaignTests.OfferedCharterSurvivesPopulationDeclineSaveAndContinue",
+        "className": "Weedtopia.Tests.MarkWoodCityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_203837_EditMode_MarkWoodCityDomainCorrected",
+        "failureMessage": null,
+        "evidence": "targetedRetest"
+      },
+      {
+        "fullname": "Weedtopia.Tests.MarkWoodCityCampaignTests.SeparateHistoricalHighsAndDestinationPopulationCannotUnlockTheCity",
+        "className": "Weedtopia.Tests.MarkWoodCityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_203837_EditMode_MarkWoodCityDomainCorrected",
+        "failureMessage": null,
+        "evidence": "targetedRetest"
+      },
+      {
+        "fullname": "Weedtopia.Tests.MarkWoodCityCampaignTests.SixOwnedCitiesContinueOfflineWithoutMovingTheirAssignedWorkers",
+        "className": "Weedtopia.Tests.MarkWoodCityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_203837_EditMode_MarkWoodCityDomainCorrected",
+        "failureMessage": null,
+        "evidence": "targetedRetest"
+      },
+      {
+        "fullname": "Weedtopia.Tests.MarkWoodCityCampaignTests.SixthCityUsesTheFirstFiveCitiesAndIndependentLocalContent",
+        "className": "Weedtopia.Tests.MarkWoodCityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_203837_EditMode_MarkWoodCityDomainCorrected",
+        "failureMessage": null,
+        "evidence": "targetedRetest"
+      },
+      {
+        "fullname": "Weedtopia.Tests.MarkWoodCityCampaignTests.StoriesRecurringWorkAndCommunityProjectsPersistEveryChoice(0)",
+        "className": "Weedtopia.Tests.MarkWoodCityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_203837_EditMode_MarkWoodCityDomainCorrected",
+        "failureMessage": null,
+        "evidence": "targetedRetest"
+      },
+      {
+        "fullname": "Weedtopia.Tests.MarkWoodCityCampaignTests.StoriesRecurringWorkAndCommunityProjectsPersistEveryChoice(1)",
+        "className": "Weedtopia.Tests.MarkWoodCityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_203837_EditMode_MarkWoodCityDomainCorrected",
+        "failureMessage": null,
+        "evidence": "targetedRetest"
+      },
+      {
+        "fullname": "Weedtopia.Tests.MarkWoodCityCampaignTests.UnacceptedCitiesDoNotContributeTheirPopulation(\"big_rock_city\")",
+        "className": "Weedtopia.Tests.MarkWoodCityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_203837_EditMode_MarkWoodCityDomainCorrected",
+        "failureMessage": null,
+        "evidence": "targetedRetest"
+      },
+      {
+        "fullname": "Weedtopia.Tests.MarkWoodCityCampaignTests.UnacceptedCitiesDoNotContributeTheirPopulation(\"cassa_vadela\")",
+        "className": "Weedtopia.Tests.MarkWoodCityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_203837_EditMode_MarkWoodCityDomainCorrected",
+        "failureMessage": null,
+        "evidence": "targetedRetest"
+      },
+      {
+        "fullname": "Weedtopia.Tests.MarkWoodCityCampaignTests.UnacceptedCitiesDoNotContributeTheirPopulation(\"little_montana\")",
+        "className": "Weedtopia.Tests.MarkWoodCityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_203837_EditMode_MarkWoodCityDomainCorrected",
+        "failureMessage": null,
+        "evidence": "targetedRetest"
+      },
+      {
+        "fullname": "Weedtopia.Tests.MarkWoodCityCampaignTests.UnacceptedCitiesDoNotContributeTheirPopulation(\"seven_hills\")",
+        "className": "Weedtopia.Tests.MarkWoodCityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_203837_EditMode_MarkWoodCityDomainCorrected",
+        "failureMessage": null,
+        "evidence": "targetedRetest"
+      },
+      {
+        "fullname": "Weedtopia.Tests.MarkWoodCityCampaignTests.VersionSixMigrationAddsOnlyLockedCityAndKeepsWorkersCargoInventoryAndStories",
+        "className": "Weedtopia.Tests.MarkWoodCityCampaignTests",
+        "result": "Passed",
+        "run": "20261008_203837_EditMode_MarkWoodCityDomainCorrected",
+        "failureMessage": null,
+        "evidence": "targetedRetest"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineStartupTests.ChunkedOfflineExactlyMatchesSynchronousResultIncludingTwoCitiesAndVipExpiry(1)",
+        "className": "Weedtopia.Tests.OfflineStartupTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineStartupTests.ChunkedOfflineExactlyMatchesSynchronousResultIncludingTwoCitiesAndVipExpiry(128)",
+        "className": "Weedtopia.Tests.OfflineStartupTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineStartupTests.ChunkedOfflineExactlyMatchesSynchronousResultIncludingTwoCitiesAndVipExpiry(64)",
+        "className": "Weedtopia.Tests.OfflineStartupTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineStartupTests.ChunkedOfflineExactlyMatchesSynchronousResultIncludingTwoCitiesAndVipExpiry(7)",
+        "className": "Weedtopia.Tests.OfflineStartupTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineStartupTests.DisposedPartialOfflineRestoresModelAndRejectsSaveAdvanceAndReentrancy",
+        "className": "Weedtopia.Tests.OfflineStartupTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineStartupTests.FailedFinalOfflineWriteRestoresCountersResourcesTimestampAndReferences",
+        "className": "Weedtopia.Tests.OfflineStartupTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineStartupTests.FailedSingleOfflineVipCommitRollsBackAllProgressAndRetryGrantsOnce",
+        "className": "Weedtopia.Tests.OfflineStartupTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineStartupTests.InvalidOfflineBatchIsRejectedBeforeAnyMutation(0)",
+        "className": "Weedtopia.Tests.OfflineStartupTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineStartupTests.InvalidOfflineBatchIsRejectedBeforeAnyMutation(129)",
+        "className": "Weedtopia.Tests.OfflineStartupTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineStartupTests.OfflineInitialProgressPrecedesSimulationAndZeroElapsedStillCompletes",
+        "className": "Weedtopia.Tests.OfflineStartupTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineStartupTests.OfflineWithDueVipUsesOneCommitEvenIfASecondWriteWouldFail",
+        "className": "Weedtopia.Tests.OfflineStartupTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineWorkerTests.CancellationAfterSimulationCompletionStillDiscardsTheUncommittedModel",
+        "className": "Weedtopia.Tests.OfflineWorkerTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineWorkerTests.CancelledCalculationKeepsSessionBusyUntilRollbackAndNeverSaves",
+        "className": "Weedtopia.Tests.OfflineWorkerTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineWorkerTests.DisposingAnUnpublishedOperationRollsBackAfterWorkerStopsWithoutPersisting",
+        "className": "Weedtopia.Tests.OfflineWorkerTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineWorkerTests.FailedCommitRollsBackEveryFieldAndReferenceAndRetryGrantsVipOnce",
+        "className": "Weedtopia.Tests.OfflineWorkerTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineWorkerTests.OtherThreadsCannotStartCompleteOrDisposeAndClockAndSaveStayOnOwnerThread",
+        "className": "Weedtopia.Tests.OfflineWorkerTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineWorkerTests.ReentrantStoreCallbacksCannotDisposeOrRepeatAnInProgressCommit",
+        "className": "Weedtopia.Tests.OfflineWorkerTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineWorkerTests.RepeatedCompletionReturnsSameSummaryWithoutASecondSave",
+        "className": "Weedtopia.Tests.OfflineWorkerTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineWorkerTests.WorkerExactlyMatchesHistoricalResponsiveTwoCityConstructionVipAndPersistedState(0.1d)",
+        "className": "Weedtopia.Tests.OfflineWorkerTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineWorkerTests.WorkerExactlyMatchesHistoricalResponsiveTwoCityConstructionVipAndPersistedState(0.375d)",
+        "className": "Weedtopia.Tests.OfflineWorkerTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineWorkerTests.WorkerModelExceptionRollsBackWithoutCallingSaveOrSwallowingTheDefect",
+        "className": "Weedtopia.Tests.OfflineWorkerTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineWorkerTests.WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap(-100)",
+        "className": "Weedtopia.Tests.OfflineWorkerTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineWorkerTests.WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap(0)",
+        "className": "Weedtopia.Tests.OfflineWorkerTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineWorkerTests.WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap(86400)",
+        "className": "Weedtopia.Tests.OfflineWorkerTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PersistenceTests.ActiveSessionAutomaticallyPersistsAtThirtySecondsWithoutManualSave",
+        "className": "Weedtopia.Tests.PersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PersistenceTests.CorruptMainRecoversAndSavingDoesNotOverwriteValidBackupWithCorruption",
+        "className": "Weedtopia.Tests.PersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PersistenceTests.ExistingPaidConstructionKeepsItsTimerAndNewUpgradesUseCurrentBalance",
+        "className": "Weedtopia.Tests.PersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PersistenceTests.FullTutorialSaveRoundtripIncludesChoicesWorkersCargoAndStats",
+        "className": "Weedtopia.Tests.PersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PersistenceTests.InvalidAssignmentsAndNanNeverReachDisk",
+        "className": "Weedtopia.Tests.PersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PersistenceTests.LocalLeaderboardPersistsBestAndOnlineAdapterRemainsDisabled",
+        "className": "Weedtopia.Tests.PersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PersistenceTests.LongTierConstructionSurvivesSaveAndOfflineCompletion",
+        "className": "Weedtopia.Tests.PersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PersistenceTests.OfflineUsesSameSimulationCapsDurationAndDoesNotRewardRepeatedLoadOrRollback",
+        "className": "Weedtopia.Tests.PersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PersistenceTests.PreviousDistrictSaveAddsOnlyNewPlotsAndPreservesProgressAndCargo",
+        "className": "Weedtopia.Tests.PersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PersistenceTests.SchemaOneMigratesAndFutureVersionIsRejected",
+        "className": "Weedtopia.Tests.PersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ProgressionTests.AuthoredContentAndAllCurvesAreValid",
+        "className": "Weedtopia.Tests.ProgressionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ProgressionTests.AuthoredGermanTextPreservesUnicodeAcrossContentImport",
+        "className": "Weedtopia.Tests.ProgressionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ProgressionTests.DailyBoundariesCatchupAndClockRollbackAreDefensive",
+        "className": "Weedtopia.Tests.ProgressionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ProgressionTests.DailyUpgradeDoesNotMultiplyPastDaysAndMidnightIsSingleClaim",
+        "className": "Weedtopia.Tests.ProgressionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ProgressionTests.EveryRoleRarityUsesExactlyItsRelevantAttributePool",
+        "className": "Weedtopia.Tests.ProgressionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ProgressionTests.FullTutorialReachesFreeplayWithoutPremiumOrStateInjection",
+        "className": "Weedtopia.Tests.ProgressionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ProgressionTests.LastPlotProtectsMissingTutorialChoiceAndChoiceIsPermanent",
+        "className": "Weedtopia.Tests.ProgressionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ProgressionTests.MissingQuestReferencesAndDuplicateIdsAreRejected",
+        "className": "Weedtopia.Tests.ProgressionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ProgressionTests.NewGameNameIntroReplayAndPauseDoNotDuplicateStartResources",
+        "className": "Weedtopia.Tests.ProgressionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ProgressionTests.OptionalSecondCropAndBakeryDoNotAddUnfundedTutorialManagerRequirements",
+        "className": "Weedtopia.Tests.ProgressionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ProgressionTests.OverspendingRecoveryIsTimeLimitedAndDoesNotSpendPremium",
+        "className": "Weedtopia.Tests.ProgressionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ProgressionTests.QuestRewardsContributeToLifetimeEarningsOnlyOnce",
+        "className": "Weedtopia.Tests.ProgressionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ProgressionTests.SpinConsumesOneCardAndReplaysExactly",
+        "className": "Weedtopia.Tests.ProgressionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ProgressionTests.VipGoalsAreReachableFromFarmAndRewardsCannotBeClaimedTwice",
+        "className": "Weedtopia.Tests.ProgressionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ResourceConversionTests.BuildingBuffersStillRejectNegativeAndInvalidAmounts",
+        "className": "Weedtopia.Tests.ResourceConversionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ResourceConversionTests.ExhaustingFractionalButterInputCannotOverdrawTheBuffer(0)",
+        "className": "Weedtopia.Tests.ResourceConversionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ResourceConversionTests.ExhaustingFractionalButterInputCannotOverdrawTheBuffer(2000)",
+        "className": "Weedtopia.Tests.ResourceConversionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ResourceConversionTests.ExhaustingFractionalButterInputCannotOverdrawTheBuffer(400)",
+        "className": "Weedtopia.Tests.ResourceConversionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ResourceConversionTests.ExhaustingFractionalButterInputCannotOverdrawTheBuffer(9)",
+        "className": "Weedtopia.Tests.ResourceConversionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ResourceConversionTests.FractionalConversionConservesResourcesWithinAmountPrecision",
+        "className": "Weedtopia.Tests.ResourceConversionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ResourceConversionTests.RateAndStorageLimitsPreserveUnconsumedInput(0,4,2,1000)",
+        "className": "Weedtopia.Tests.ResourceConversionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ResourceConversionTests.RateAndStorageLimitsPreserveUnconsumedInput(1000,8,0,1000)",
+        "className": "Weedtopia.Tests.ResourceConversionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ResourceConversionTests.RateAndStorageLimitsPreserveUnconsumedInput(1001,8,0,1001)",
+        "className": "Weedtopia.Tests.ResourceConversionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ResourceConversionTests.RateAndStorageLimitsPreserveUnconsumedInput(999,6,1,1000)",
+        "className": "Weedtopia.Tests.ResourceConversionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ResourceConversionTests.SavedFractionalInputResumesThroughLiveFramesAndOfflineProgress(False)",
+        "className": "Weedtopia.Tests.ResourceConversionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ResourceConversionTests.SavedFractionalInputResumesThroughLiveFramesAndOfflineProgress(True)",
+        "className": "Weedtopia.Tests.ResourceConversionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ResourceConversionTests.SeededFractionalInputsRemainValidAcrossAllConverters",
+        "className": "Weedtopia.Tests.ResourceConversionTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.RestartRecoveryTests.ChecksumInvalidPrimaryCanBeArchivedBeforeAnExplicitFreshGame",
+        "className": "Weedtopia.Tests.RestartRecoveryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.RestartRecoveryTests.ExclusiveSourceLockPreventsRestartArchiveAndPreservesTheSave",
+        "className": "Weedtopia.Tests.RestartRecoveryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.RestartRecoveryTests.InvalidBackupWithoutPrimaryIsArchivedBeforeAFreshGame",
+        "className": "Weedtopia.Tests.RestartRecoveryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.RestartRecoveryTests.InvalidPrimaryAndBackupBothSurviveLaterAutosavesAsOriginalBytes",
+        "className": "Weedtopia.Tests.RestartRecoveryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.RestartRecoveryTests.MissingFilesCannotProduceAFictitiousArchive",
+        "className": "Weedtopia.Tests.RestartRecoveryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.RestartRecoveryTests.ValidRecoveredBackupKeepsTheExistingRestartArchiveContract",
+        "className": "Weedtopia.Tests.RestartRecoveryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.RewardTests.DailyReceiptContainsOnlyNewRewardsAndCannotBeClaimedTwice",
+        "className": "Weedtopia.Tests.RewardTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.RewardTests.DamagedRewardHistoryIsRejected(\"amount\")",
+        "className": "Weedtopia.Tests.RewardTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.RewardTests.DamagedRewardHistoryIsRejected(\"null\")",
+        "className": "Weedtopia.Tests.RewardTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.RewardTests.DamagedRewardHistoryIsRejected(\"sequence\")",
+        "className": "Weedtopia.Tests.RewardTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.RewardTests.DamagedRewardHistoryIsRejected(\"title\")",
+        "className": "Weedtopia.Tests.RewardTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.RewardTests.DamagedRewardHistoryIsRejected(\"worker\")",
+        "className": "Weedtopia.Tests.RewardTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.RewardTests.FestivalFinaleListsTitleAndExactlyOnePermanentBonus(\"gourmet\")",
+        "className": "Weedtopia.Tests.RewardTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.RewardTests.FestivalFinaleListsTitleAndExactlyOnePermanentBonus(\"neighborhood\")",
+        "className": "Weedtopia.Tests.RewardTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.RewardTests.HistoryIsBoundedAndSequencesRemainMonotonic",
+        "className": "Weedtopia.Tests.RewardTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.RewardTests.MainQuestReceiptsMatchAllActualAwardsAndSurviveSave",
+        "className": "Weedtopia.Tests.RewardTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.RewardTests.OldSaveWithoutLedgerKeepsProgressAndDerivedAwards",
+        "className": "Weedtopia.Tests.RewardTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.RewardTests.PreviewHasNoStateOrRandomEffects",
+        "className": "Weedtopia.Tests.RewardTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.RewardTests.ReadingHistoryDoesNotRestoreSpentMoneyOrCards",
+        "className": "Weedtopia.Tests.RewardTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.RewardTests.RecruitmentReceiptIdentifiesTheExactRolledWorker",
+        "className": "Weedtopia.Tests.RewardTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.AutosaveFailureKeepsLiveProgressAndBacksOffUntilStoreRecovers",
+        "className": "Weedtopia.Tests.SessionPersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.EveryMutableSaveFieldAndNestedReferenceSurvivesFailedTransaction",
+        "className": "Weedtopia.Tests.SessionPersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.FailedCommandAndThrownCommandRestoreMutationsWithoutSaving",
+        "className": "Weedtopia.Tests.SessionPersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.FailedConstructionSaveRestoresPaymentTimerRevisionAndBuildingIdentity",
+        "className": "Weedtopia.Tests.SessionPersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(\"advance\",False)",
+        "className": "Weedtopia.Tests.SessionPersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(\"advance\",True)",
+        "className": "Weedtopia.Tests.SessionPersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(\"advance_to_complete\",False)",
+        "className": "Weedtopia.Tests.SessionPersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(\"advance_to_complete\",True)",
+        "className": "Weedtopia.Tests.SessionPersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(\"complete\",False)",
+        "className": "Weedtopia.Tests.SessionPersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(\"complete\",True)",
+        "className": "Weedtopia.Tests.SessionPersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(\"restart\",False)",
+        "className": "Weedtopia.Tests.SessionPersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(\"restart\",True)",
+        "className": "Weedtopia.Tests.SessionPersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.FailedRewardSaveRemovesGrantedWorkerAndRestoresRandomAndReceipts",
+        "className": "Weedtopia.Tests.SessionPersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.FailedWorkerAssignmentSaveRestoresBothWorkersInPlace",
+        "className": "Weedtopia.Tests.SessionPersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.IntroAdvanceCompletionAndRestartEachPersistExactlyOnce",
+        "className": "Weedtopia.Tests.SessionPersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.PausedSessionRetriesUnsavedProgressWithoutSimulating",
+        "className": "Weedtopia.Tests.SessionPersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.RetryDelayIsCappedAndManualSaveCanRecoverImmediately",
+        "className": "Weedtopia.Tests.SessionPersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.SaveFailureDoesNotConsumeTimestampAndInvalidFrameDoesNotTouchStore",
+        "className": "Weedtopia.Tests.SessionPersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.UnauthorizedSaveRestoresTransactionAndMarksTheExactStorageError",
+        "className": "Weedtopia.Tests.SessionPersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.VipDailySaveFailureRetriesAtBackoffAndGrantsExactlyOnce",
+        "className": "Weedtopia.Tests.SessionPersistenceTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsCampaignTests.AWorkerAssignmentCapturesTheOfferBeforeTheNextSimulationTick",
+        "className": "Weedtopia.Tests.SevenHillsCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsCampaignTests.AcceptanceFailureRestoresTheCombinedLatchAndAllSharedResources",
+        "className": "Weedtopia.Tests.SevenHillsCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsCampaignTests.AcceptanceWorksFromBothCitiesAndPaysOnlyOnce(\"big_rock_city\")",
+        "className": "Weedtopia.Tests.SevenHillsCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsCampaignTests.AcceptanceWorksFromBothCitiesAndPaysOnlyOnce(\"burning_hills\")",
+        "className": "Weedtopia.Tests.SevenHillsCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsCampaignTests.CatalogHasACombinedFiveThousandCharterAndItsOwnCompleteNeighborhood",
+        "className": "Weedtopia.Tests.SevenHillsCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsCampaignTests.CorruptVersionThreeSaveCannotBeRepairedByNewCityMigration",
+        "className": "Weedtopia.Tests.SevenHillsCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsCampaignTests.ExistingVersionThreeSaveAddsOnlyTheNewCityAndOffersItsCurrentPopulation",
+        "className": "Weedtopia.Tests.SevenHillsCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsCampaignTests.FailedWorkerAssignmentRestoresTheCapturedOfferAndAssignment",
+        "className": "Weedtopia.Tests.SevenHillsCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsCampaignTests.FiveThousandInBurningHillsNeedNoAdditionalBigRockAcceptance",
+        "className": "Weedtopia.Tests.SevenHillsCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsCampaignTests.FiveThousandResidentsOfferTheCityWithEveryDistribution(3000,2000)",
+        "className": "Weedtopia.Tests.SevenHillsCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsCampaignTests.FiveThousandResidentsOfferTheCityWithEveryDistribution(4200,800)",
+        "className": "Weedtopia.Tests.SevenHillsCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsCampaignTests.FiveThousandResidentsOfferTheCityWithEveryDistribution(5000,0)",
+        "className": "Weedtopia.Tests.SevenHillsCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsCampaignTests.ForgedAcceptedCityWithoutASimultaneousMilestoneIsRejected",
+        "className": "Weedtopia.Tests.SevenHillsCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsCampaignTests.FourThousandNineHundredNinetyNineResidentsRemainLocked",
+        "className": "Weedtopia.Tests.SevenHillsCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsCampaignTests.MilaIsPresentUponFirstArrivalAndOwnedCitiesKeepProducing",
+        "className": "Weedtopia.Tests.SevenHillsCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsCampaignTests.OfferSurvivesPopulationDeclineAndSaveRestoreBeforeAcceptance",
+        "className": "Weedtopia.Tests.SevenHillsCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsCampaignTests.SeparateHistoricalHighsNeverSatisfyTheCombinedThreshold",
+        "className": "Weedtopia.Tests.SevenHillsCampaignTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsContentTests.EveryNewTextExistsInAllFiveLanguagesWithIdenticalPlaceholders",
+        "className": "Weedtopia.Tests.SevenHillsContentTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsContentTests.EveryPersonalChapterAndCommunityProjectRequiresFreshActivityAndPersists",
+        "className": "Weedtopia.Tests.SevenHillsContentTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsContentTests.FoundationReachesLocalSupplyUsingPublicCommandsWithoutRecoveryOrPremium",
+        "className": "Weedtopia.Tests.SevenHillsContentTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsContentTests.MainChaptersHaveExactPopulationGatesAndNeverSkip",
+        "className": "Weedtopia.Tests.SevenHillsContentTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsContentTests.MilaAppearsUponArrivalBeforeAnyNewPopulation",
+        "className": "Weedtopia.Tests.SevenHillsContentTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsContentTests.PanoramaRingWaitsForAllSevenFirstChaptersAndSavedChoices",
+        "className": "Weedtopia.Tests.SevenHillsContentTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsContentTests.RecurringPoolsRotateAllTwentyOneVariantsAndWaitWithoutExpiring",
+        "className": "Weedtopia.Tests.SevenHillsContentTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsContentTests.ResidentsAppearAtTheirAuthoredMilestone(\"sh_anton\",1200)",
+        "className": "Weedtopia.Tests.SevenHillsContentTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsContentTests.ResidentsAppearAtTheirAuthoredMilestone(\"sh_clara\",800)",
+        "className": "Weedtopia.Tests.SevenHillsContentTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsContentTests.ResidentsAppearAtTheirAuthoredMilestone(\"sh_emil\",300)",
+        "className": "Weedtopia.Tests.SevenHillsContentTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsContentTests.ResidentsAppearAtTheirAuthoredMilestone(\"sh_juna\",150)",
+        "className": "Weedtopia.Tests.SevenHillsContentTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsContentTests.ResidentsAppearAtTheirAuthoredMilestone(\"sh_safiya\",500)",
+        "className": "Weedtopia.Tests.SevenHillsContentTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsContentTests.ResidentsAppearAtTheirAuthoredMilestone(\"sh_tariq\",50)",
+        "className": "Weedtopia.Tests.SevenHillsContentTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SevenHillsContentTests.ThirdCityRetainsEstablishedBuildingAndDeliveryContracts",
+        "className": "Weedtopia.Tests.SevenHillsContentTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.ApprovedCatalogContainsEveryRequestedPriceAndExactBundleContents",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.CancelledRejectedAndWrongChannelPurchasesCannotGrantResources",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.CorruptDuplicatePurchaseLedgerIsRejected",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.EachProductGrantsExactlyOnceAndRemainsDeduplicatedAfterSaveLoad(\"boost_15m\")",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.EachProductGrantsExactlyOnceAndRemainsDeduplicatedAfterSaveLoad(\"boost_1h\")",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.EachProductGrantsExactlyOnceAndRemainsDeduplicatedAfterSaveLoad(\"boost_5h\")",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.EachProductGrantsExactlyOnceAndRemainsDeduplicatedAfterSaveLoad(\"boost_5m\")",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.EachProductGrantsExactlyOnceAndRemainsDeduplicatedAfterSaveLoad(\"development\")",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.EachProductGrantsExactlyOnceAndRemainsDeduplicatedAfterSaveLoad(\"grinders_1000\")",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.EachProductGrantsExactlyOnceAndRemainsDeduplicatedAfterSaveLoad(\"grinders_10000\")",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.EachProductGrantsExactlyOnceAndRemainsDeduplicatedAfterSaveLoad(\"grinders_200\")",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.EachProductGrantsExactlyOnceAndRemainsDeduplicatedAfterSaveLoad(\"grinders_50\")",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.EachProductGrantsExactlyOnceAndRemainsDeduplicatedAfterSaveLoad(\"grinders_500\")",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.EachProductGrantsExactlyOnceAndRemainsDeduplicatedAfterSaveLoad(\"money_1000\")",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.EachProductGrantsExactlyOnceAndRemainsDeduplicatedAfterSaveLoad(\"money_10000\")",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.EachProductGrantsExactlyOnceAndRemainsDeduplicatedAfterSaveLoad(\"money_100000\")",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.EachProductGrantsExactlyOnceAndRemainsDeduplicatedAfterSaveLoad(\"money_1000000\")",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.EachProductGrantsExactlyOnceAndRemainsDeduplicatedAfterSaveLoad(\"money_5000\")",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.EachProductGrantsExactlyOnceAndRemainsDeduplicatedAfterSaveLoad(\"starter\")",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.EachProductGrantsExactlyOnceAndRemainsDeduplicatedAfterSaveLoad(\"vip_30d\")",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.FailedPersistenceRollsBackCurrencyItemsVipLedgerAndRewardHistory",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.IntegerOverflowCannotPartiallyGrantAPackage",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.OfflineCalculationSplitsTheVipExpiryInsteadOfApplyingItToTheEntireAbsence",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.OldSavesWithoutShopStateLoadWithOriginalBalancesAndNoVip",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.PendingPurchaseBlocksSecondOrderAndCannotGrantOnMismatchedApproval",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.RenewingExpiredVipPreservesMissedDailyGrindersBeforeStartingNewPeriod",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.RepeatedTestOrdersHaveDifferentReceiptsAndCanBeUsedForProgressTesting",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.VipExtensionAddsThirtyDaysWithoutStackingSpeedOrGivingTwoPaymentsToday",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.VipGrantsThirtyDailyPaymentsCatchesUpAndDoesNotRepeatOnClockRollback",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.VipGrowCycleProducesThreeBatchesDuringTwoRegularCycles",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.ShopTests.VipMakesFlowerThroughputAndPerUnitSalePriceFiftyPercentHigher",
+        "className": "Weedtopia.Tests.ShopTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SimulationBatchTests.HouseCompletionInvalidatesResidentsWithinTheSameBatch",
+        "className": "Weedtopia.Tests.SimulationBatchTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SimulationBatchTests.VipExpiryInsideABatchMatchesSecondBySecondExecution",
+        "className": "Weedtopia.Tests.SimulationBatchTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SimulationBatchTests.WorkerChangesAreVisibleInTheNextBatchAndPublicQueries",
+        "className": "Weedtopia.Tests.SimulationBatchTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SimulationOfflineOptimizationTests.CancellationBeforeAnyWorkDoesNotMutateThePrivateModel",
+        "className": "Weedtopia.Tests.SimulationOfflineOptimizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SimulationOfflineOptimizationTests.CancellationLeavesExactlyCompletedPrivateSegmentsAndClearsPlanForReuse(128)",
+        "className": "Weedtopia.Tests.SimulationOfflineOptimizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SimulationOfflineOptimizationTests.CancellationLeavesExactlyCompletedPrivateSegmentsAndClearsPlanForReuse(256)",
+        "className": "Weedtopia.Tests.SimulationOfflineOptimizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SimulationOfflineOptimizationTests.EmptyOfflineAdvanceHasNoProgressOrModelChanges",
+        "className": "Weedtopia.Tests.SimulationOfflineOptimizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SimulationOfflineOptimizationTests.InvalidOfflineDurationDoesNotChangeAnyField(-1)",
+        "className": "Weedtopia.Tests.SimulationOfflineOptimizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SimulationOfflineOptimizationTests.InvalidOfflineDurationDoesNotChangeAnyField(604801)",
+        "className": "Weedtopia.Tests.SimulationOfflineOptimizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SimulationOfflineOptimizationTests.RetainedPlanKeepsLegacy32FractionalUtcBoundariesForVipStartAndExpiry(0.1d)",
+        "className": "Weedtopia.Tests.SimulationOfflineOptimizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SimulationOfflineOptimizationTests.RetainedPlanKeepsLegacy32FractionalUtcBoundariesForVipStartAndExpiry(0.999999998d)",
+        "className": "Weedtopia.Tests.SimulationOfflineOptimizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SimulationOfflineOptimizationTests.RetainedPlanMatchesLegacyUtcRoundingAndEveryFieldBit(0.0d)",
+        "className": "Weedtopia.Tests.SimulationOfflineOptimizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SimulationOfflineOptimizationTests.RetainedPlanMatchesLegacyUtcRoundingAndEveryFieldBit(0.1d)",
+        "className": "Weedtopia.Tests.SimulationOfflineOptimizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SimulationOfflineOptimizationTests.RetainedPlanMatchesLegacyUtcRoundingAndEveryFieldBit(0.375d)",
+        "className": "Weedtopia.Tests.SimulationOfflineOptimizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SimulationOfflineOptimizationTests.RetainedPlanMatchesLegacyUtcRoundingAndEveryFieldBit(0.999999998d)",
+        "className": "Weedtopia.Tests.SimulationOfflineOptimizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SimulationOfflineOptimizationTests.RetainedPlanMatchesLegacyUtcRoundingAndEveryFieldBit(0.9999999999d)",
+        "className": "Weedtopia.Tests.SimulationOfflineOptimizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SimulationOfflineOptimizationTests.RetainedPlanMatchesPublicChunkingThroughConstructionAndVipChanges(1)",
+        "className": "Weedtopia.Tests.SimulationOfflineOptimizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SimulationOfflineOptimizationTests.RetainedPlanMatchesPublicChunkingThroughConstructionAndVipChanges(128)",
+        "className": "Weedtopia.Tests.SimulationOfflineOptimizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SimulationOfflineOptimizationTests.RetainedPlanMatchesPublicChunkingThroughConstructionAndVipChanges(32)",
+        "className": "Weedtopia.Tests.SimulationOfflineOptimizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SimulationOfflineOptimizationTests.ThrowingProgressCallbackClearsPlanAndRecursiveOfflineAdvanceIsRejected",
+        "className": "Weedtopia.Tests.SimulationOfflineOptimizationTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.UiExperienceDomainTests.CoffeeshopChecklistNamesTheExactShopAndShowsEveryMissingCondition",
+        "className": "Weedtopia.Tests.UiExperienceDomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.UiExperienceDomainTests.FailedProfileSaveRestoresThePreviousProfile",
+        "className": "Weedtopia.Tests.UiExperienceDomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.UiExperienceDomainTests.FreshTutorialRequiresANameAndProfileEditingPreservesProgress",
+        "className": "Weedtopia.Tests.UiExperienceDomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.UiExperienceDomainTests.GuidanceIsReadOnlyAndEveryTutorialHasSeparateNpcSpeech",
+        "className": "Weedtopia.Tests.UiExperienceDomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.UiExperienceDomainTests.HistoricalSaveKeepsItsNameAndReceivesAValidAvatar",
+        "className": "Weedtopia.Tests.UiExperienceDomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.UiExperienceDomainTests.ProfileUsesOneNameRule(\"  Mila  \",True)",
+        "className": "Weedtopia.Tests.UiExperienceDomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.UiExperienceDomainTests.ProfileUsesOneNameRule(\"\",False)",
+        "className": "Weedtopia.Tests.UiExperienceDomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.UiExperienceDomainTests.ProfileUsesOneNameRule(\"<Rocko>\",False)",
+        "className": "Weedtopia.Tests.UiExperienceDomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.UiExperienceDomainTests.ProfileUsesOneNameRule(\"a\",False)",
+        "className": "Weedtopia.Tests.UiExperienceDomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.UiExperienceDomainTests.ProfileUsesOneNameRule(\"Änne\",True)",
+        "className": "Weedtopia.Tests.UiExperienceDomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.UiExperienceDomainTests.ResidentAvatarsMigrateWithoutChangingThePlayerOrTown(\"baker\")",
+        "className": "Weedtopia.Tests.UiExperienceDomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.UiExperienceDomainTests.ResidentAvatarsMigrateWithoutChangingThePlayerOrTown(\"city_host\")",
+        "className": "Weedtopia.Tests.UiExperienceDomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.UiExperienceDomainTests.ResidentAvatarsMigrateWithoutChangingThePlayerOrTown(\"driver\")",
+        "className": "Weedtopia.Tests.UiExperienceDomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.UiExperienceDomainTests.ResidentAvatarsMigrateWithoutChangingThePlayerOrTown(\"gardener\")",
+        "className": "Weedtopia.Tests.UiExperienceDomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.UiExperienceDomainTests.ResidentAvatarsMigrateWithoutChangingThePlayerOrTown(\"jaro\")",
+        "className": "Weedtopia.Tests.UiExperienceDomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.UiExperienceDomainTests.ResidentAvatarsMigrateWithoutChangingThePlayerOrTown(\"mila\")",
+        "className": "Weedtopia.Tests.UiExperienceDomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.UiExperienceDomainTests.ResidentAvatarsMigrateWithoutChangingThePlayerOrTown(\"nia\")",
+        "className": "Weedtopia.Tests.UiExperienceDomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.UiExperienceDomainTests.ResidentAvatarsMigrateWithoutChangingThePlayerOrTown(\"rocko\")",
+        "className": "Weedtopia.Tests.UiExperienceDomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.UiExperienceDomainTests.RestartArchiveSurvivesLaterAutosavesAndProfileRoundTrips",
+        "className": "Weedtopia.Tests.UiExperienceDomainTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.AllApprovedCharactersChaptersAndRecurringPoolsValidate",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.AllFortyPersonalChaptersAndFiveCollaborationsCompleteAndRemainSaved",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.ChoicesBaselinesAndMemoriesSurviveSavingWithoutNewRewards",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.CollaborationsRequireTheActualEarlierChaptersAndCannotPayTwice",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(\"baseline\")",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(\"choice\")",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(\"history\")",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(\"id\")",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(\"id_empty\")",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(\"scale\")",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(\"time\")",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.FailedDiskWritesRestoreAcceptedQuestsAndAllClaimedRewards",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.HighestChapterIsReachableWithExistingHousingAndWorkerRules",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(\"alma\",750)",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(\"dalia\",2000)",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(\"juno\",100)",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(\"kalle\",500)",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(\"mira\",350)",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(\"oskar\",1500)",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(\"rosa\",200)",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(\"selma\",1000)",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(\"toni\",50)",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(\"valentina\",3000)",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.LegacySaveWithoutStoryFieldsKeepsExistingProgressAndResources",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.LiveResidentsRaiseTheMilestoneAndRemovalOfAWorkerDoesNotRemoveAnInhabitant",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.OfflineSimulationAdvancesAcceptedCountersButNeverAutomaticallyAwardsTheQuest",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.PopulationGrowthNeverSkipsChaptersOrPaysEarlierActivityAgain",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.RecurringQuestsRotateScaleAndWaitWithoutExpiring",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      },
+      {
+        "fullname": "Weedtopia.Tests.VipStoryTests.ThreeActiveQuestsAreAllowedAndRejectedAcceptsHaveNoSideEffects",
+        "className": "Weedtopia.Tests.VipStoryTests",
+        "result": "Passed",
+        "run": "20261008_194654_EditMode_MarkWoodCityFullDomain",
+        "failureMessage": null,
+        "evidence": "fullRun"
+      }
+    ],
+    "note": "The full domain run is retained unchanged, including its failure. The corrected test preparation was rerun as a complete targeted class. Only newer results with the same test fullname supersede prior results; the final pass requires 450 unique passed cases, a complete successful 21-case current retest, and coverage of every original failure."
+  },
+  "editorAssets": {
+    "run": "20261008_202739_EditMode_MarkWoodCityAssets",
+    "mode": "EditMode",
+    "startedUtc": "2026-10-08T18:27:39.8704245Z",
+    "endedUtc": "2026-10-08T18:29:08.0090879Z",
+    "unity": "6000.3.9f1 (7a9955a4f2fa)",
+    "exitCode": 0,
+    "log": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\Implementation\\Validation\\20261008_202739_EditMode_MarkWoodCityAssets.log",
+    "status": "passed",
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "skipped": 0,
+    "xml": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\Implementation\\Validation\\20261008_202739_EditMode_MarkWoodCityAssets.xml"
+  },
+  "playMode": {
+    "run": "20261008_204011_PlayMode_MarkWoodCityFullPlay",
+    "mode": "PlayMode",
+    "startedUtc": "2026-10-08T18:40:11.9209467Z",
+    "endedUtc": "2026-10-08T18:56:19.9909072Z",
+    "unity": "6000.3.9f1 (7a9955a4f2fa)",
+    "exitCode": 0,
+    "log": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\Implementation\\Validation\\20261008_204011_PlayMode_MarkWoodCityFullPlay.log",
+    "status": "passed",
+    "total": 136,
+    "passed": 136,
+    "failed": 0,
+    "skipped": 0,
+    "xml": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\Implementation\\Validation\\20261008_204011_PlayMode_MarkWoodCityFullPlay.xml"
+  },
+  "authoring": {
+    "utc": "2026-10-08T18:28:26.2941738Z",
+    "status": "passed",
+    "createdScene": false,
+    "runtimeStaticObjects": false,
+    "changedExistingCityScenes": [],
+    "buildings": 56,
+    "routes": 35,
+    "mainQuests": 18,
+    "buildingVariants": 251,
+    "landmarks": 3,
+    "residents": 8,
+    "chapters": 32,
+    "recurring": 24,
+    "sharedProjects": 3
+  },
+  "content": {
+    "city": "mark_wood_city",
+    "version": 7,
+    "changed": true,
+    "instances": 56,
+    "routes": 35,
+    "mainQuests": 18,
+    "permanentResidents": 8,
+    "personalChapters": 32,
+    "recurringVariants": 24,
+    "communityProjects": 3,
+    "localizedKeys": 299,
+    "languages": [
+      "de",
+      "en",
+      "es",
+      "fr",
+      "ru"
+    ],
+    "oldContentDigest": "d8bfab6d356e62542ceec2d7319deb67f454768ea68ac736ce759bcae41a274a",
+    "contentDigest": "1ff9ab9c3c34941d35eb07e135bb432a2437ab8afbce87a99b310c32edd429eb",
+    "priorContentPreserved": true,
+    "priorLocaleEntriesPreserved": true,
+    "placeholderParity": true,
+    "residents": [
+      {
+        "id": "mw_mara",
+        "appearsAt": 30,
+        "chapters": [
+          30,
+          800,
+          4000,
+          12000
+        ]
+      },
+      {
+        "id": "mw_jonas",
+        "appearsAt": 90,
+        "chapters": [
+          90,
+          1200,
+          4500,
+          12500
+        ]
+      },
+      {
+        "id": "mw_leila",
+        "appearsAt": 200,
+        "chapters": [
+          200,
+          1500,
+          5000,
+          13000
+        ]
+      },
+      {
+        "id": "mw_bram",
+        "appearsAt": 400,
+        "chapters": [
+          400,
+          1900,
+          5500,
+          13500
+        ]
+      },
+      {
+        "id": "mw_tessa",
+        "appearsAt": 700,
+        "chapters": [
+          700,
+          2400,
+          6000,
+          14000
+        ]
+      },
+      {
+        "id": "mw_silas",
+        "appearsAt": 1100,
+        "chapters": [
+          1100,
+          3000,
+          6500,
+          14500
+        ]
+      },
+      {
+        "id": "mw_nora",
+        "appearsAt": 1600,
+        "chapters": [
+          1600,
+          3700,
+          7500,
+          15500
+        ]
+      },
+      {
+        "id": "mw_owen",
+        "appearsAt": 2200,
+        "chapters": [
+          2200,
+          4500,
+          8500,
+          16000
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "id": "mw_joint_river_market",
+        "residents": 1800,
+        "participants": [
+          "mw_mara",
+          "mw_jonas",
+          "mw_leila"
+        ],
+        "goals": [
+          {
+            "kind": 5,
+            "count": 160,
+            "target": "",
+            "textKey": "mw.goal.coffee"
+          }
+        ]
+      },
+      {
+        "id": "mw_joint_open_saw_yards",
+        "residents": 5500,
+        "participants": [
+          "mw_bram",
+          "mw_tessa",
+          "mw_nora"
+        ],
+        "goals": [
+          {
+            "kind": 8,
+            "count": 300,
+            "target": "",
+            "textKey": "mw.goal.delivered"
+          }
+        ]
+      },
+      {
+        "id": "mw_joint_forest_river_day",
+        "residents": 11000,
+        "participants": [
+          "mw_mara",
+          "mw_jonas",
+          "mw_leila",
+          "mw_bram",
+          "mw_tessa",
+          "mw_silas",
+          "mw_nora",
+          "mw_owen"
+        ],
+        "goals": [
+          {
+            "kind": 9,
+            "count": 40,
+            "target": "",
+            "textKey": "mw.goal.deliveries"
+          }
+        ]
+      }
+    ]
+  },
+  "contentAuthoringContracts": {
+    "status": "passed",
+    "currentVersion": 7,
+    "futureVersionPreserved": 8,
+    "futureContentPreserved": true,
+    "conflictRefused": true,
+    "conflictWriteCount": 0,
+    "syntaxCompiled": true,
+    "localizationPlaceholderParity": true,
+    "idempotentContentDigest": "8a6a2a1595ef77cfa7ee74cac16eb72a17063605ee5e32e24bd176e1e9819f83"
+  },
+  "gameView": {
+    "screenshots": 32,
+    "resolutions": [
+      "1920x1080",
+      "1366x768",
+      "2560x1080",
+      "1080x1920"
+    ],
+    "diagnosticGrowthFixtures": true,
+    "fullEconomyPlayed": false
+  },
+  "preservation": {
+    "utc": "2026-10-08T19:24:04.375198+00:00",
+    "protectedFiles": 6033,
+    "changedFiles": [
+      "Assets/Weedtopia/Game/Content/BurningHills.json",
+      "Assets/Weedtopia/Game/Localization/de.json",
+      "Assets/Weedtopia/Game/Localization/en.json",
+      "Assets/Weedtopia/Game/Localization/es.json",
+      "Assets/Weedtopia/Game/Localization/fr.json",
+      "Assets/Weedtopia/Game/Localization/ru.json",
+      "Assets/Weedtopia/Production/BigRockCity/CityCampaign.prefab",
+      "Assets/Weedtopia/Scripts/Runtime/Persistence/LocalSaveStore.cs",
+      "Assets/Weedtopia/Scripts/Tests/EditMode/CassaVadelaCampaignTests.cs",
+      "Assets/Weedtopia/Scripts/Tests/EditorAssets/CassaVadelaAssetTests.cs",
+      "ProjectSettings/EditorBuildSettings.asset"
+    ],
+    "reviewedIntegrationFiles": [
+      "Assets/Weedtopia/Game/Content/BurningHills.json",
+      "Assets/Weedtopia/Game/Content/BurningHillsContent.asset",
+      "Assets/Weedtopia/Game/Localization/de.json",
+      "Assets/Weedtopia/Game/Localization/en.json",
+      "Assets/Weedtopia/Game/Localization/es.json",
+      "Assets/Weedtopia/Game/Localization/fr.json",
+      "Assets/Weedtopia/Game/Localization/ru.json",
+      "Assets/Weedtopia/Game/Scenes/BigRockCity.unity",
+      "Assets/Weedtopia/Game/Scenes/BurningHills.unity",
+      "Assets/Weedtopia/Game/Scenes/CassaVadela.unity",
+      "Assets/Weedtopia/Game/Scenes/LittleMontana.unity",
+      "Assets/Weedtopia/Game/Scenes/SevenHills.unity",
+      "Assets/Weedtopia/Production/BigRockCity/CityCampaign.prefab",
+      "Assets/Weedtopia/Scripts/Runtime/Persistence/LocalSaveStore.cs",
+      "Assets/Weedtopia/Scripts/Tests/EditMode/CassaVadelaCampaignTests.cs",
+      "Assets/Weedtopia/Scripts/Tests/EditorAssets/CassaVadelaAssetTests.cs",
+      "ProjectSettings/EditorBuildSettings.asset"
+    ],
+    "unexpectedChanges": [],
+    "unchangedProtectedFiles": 6022,
+    "removedFiles": [],
+    "priorContentChanges": [],
+    "priorLocalizationChanges": {
+      "de": [],
+      "en": [],
+      "es": [],
+      "fr": [],
+      "ru": []
+    },
+    "scenes": {
+      "BurningHills": {
+        "originalObjects": 9728,
+        "removedObjects": [],
+        "changedObjects": [],
+        "addedObjects": 0,
+        "originalObjectIdentitiesRetained": true,
+        "unexpectedChangedObjects": []
+      },
+      "BigRockCity": {
+        "originalObjects": 9729,
+        "removedObjects": [],
+        "changedObjects": [],
+        "addedObjects": 0,
+        "originalObjectIdentitiesRetained": true,
+        "unexpectedChangedObjects": []
+      },
+      "SevenHills": {
+        "originalObjects": 9729,
+        "removedObjects": [],
+        "changedObjects": [],
+        "addedObjects": 0,
+        "originalObjectIdentitiesRetained": true,
+        "unexpectedChangedObjects": []
+      },
+      "LittleMontana": {
+        "originalObjects": 9729,
+        "removedObjects": [],
+        "changedObjects": [],
+        "addedObjects": 0,
+        "originalObjectIdentitiesRetained": true,
+        "unexpectedChangedObjects": []
+      },
+      "CassaVadela": {
+        "originalObjects": 9729,
+        "removedObjects": [],
+        "changedObjects": [],
+        "addedObjects": 0,
+        "originalObjectIdentitiesRetained": true,
+        "unexpectedChangedObjects": []
+      }
+    },
+    "captureNote": "Current working state captured before content writes; preexisting local changes retained.",
+    "status": "passed"
+  },
+  "assetReferences": {
+    "utc": "2026-10-08T19:23:58.145634+00:00",
+    "status": "passed",
+    "newAssets": 295,
+    "checkedUniqueReferences": 801,
+    "unresolvedReferences": [],
+    "duplicateGuids": {},
+    "missingMetas": [],
+    "scope": "MarkWoodCity production files and scene; references resolved through Assets, Packages and the imported PackageCache"
+  },
+  "visualReview": {
+    "status": "passed",
+    "reviewer": "assistant pixel inspection via view_image",
+    "fingerprint": "3bb7da189628d15752c2cacecc58824ae8bafd848fe191e6ec26524777631ee5",
+    "captureRun": "20261008_211150_Capture_SettledViewportGameViews",
+    "scope": "Representative actual Game View PNGs; all 32 PNG dimensions and freshness are independently checked by the capture runner.",
+    "userVisualApproval": false,
+    "diagnosticGrowthFixtures": true,
+    "fullHumanCampaignPlaythrough": false,
+    "reviewedFinalFrames": [
+      "01_locked_99999.png",
+      "11_river_market_diagnostic_growth.png",
+      "15_bram_third_chapter_choice.png",
+      "18_city_travel_1920x1080.png",
+      "18_city_travel_1366x768.png",
+      "18_city_travel_2560x1080.png",
+      "18_city_travel_1080x1920.png",
+      "19_long_story_body_1080x1920.png",
+      "26_roundtrip_bram_memory_preserved.png"
+    ],
+    "observations": [
+      "The sixth city row and its button are fully inside the settled viewport at all four requested resolutions.",
+      "Nora's long story and the acceptance button are readable in portrait orientation; smaller landscape layouts use the existing scroll area.",
+      "Bram's third chapter presents two readable choices. His actor and the visible memory props remain after the real scene roundtrip.",
+      "The city sign, forest palette and authored buildings render with their textures; no missing-shader presentation was observed."
+    ],
+    "resolvedCaptureIssue": "The first portrait travel capture used a scroll position before resolution reflow. The final sequence scrolls and checks the sixth row after Screen dimensions settle, before capturing.",
+    "limits": [
+      "Individual memory props are small at district overview zoom. Branch identity is established by accompanying runtime checks, not by the overview PNG alone.",
+      "Assistant inspection is not user art approval or physical-device touch and audio evidence."
+    ]
+  },
+  "acceptance": {
+    "userVisualApproval": false,
+    "physicalDeviceTouch": false,
+    "deviceAudio": false,
+    "androidPlayerBuild": false,
+    "webglPlayerBuild": false,
+    "fullHumanCampaignPlaythrough": false
+  },
+  "foundationEvidence": "Domain test advances the first twelve local main quests using real economy and assigned workers, without previous-city income, premium spending or recovery. Later story and visual coverage uses diagnostic fixtures."
+}

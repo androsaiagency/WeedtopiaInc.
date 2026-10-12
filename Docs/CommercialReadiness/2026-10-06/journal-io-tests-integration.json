@@ -1,0 +1,18 @@
+{
+  "utc": "2026-10-06T04:39:09.868598+00:00",
+  "status": "staged_not_integrated",
+  "sources": [
+    {
+      "path": "Assets/Weedtopia/Scripts/Tests/EditorAssets/ReleaseDiagnosticsTests.cs",
+      "originalSha256": "0ec2df8af821f45254899d1854a1ee980c32fcd1a36f79b4b30a4d15cfa1ca4b",
+      "stagedSha256": "607fdac1147aa37bfdbd5cad28dbeee6ca58b6b9ccf397b52c564ad80ea28c4e"
+    }
+  ],
+  "nativeUnityExecuted": false,
+  "tests": [
+    "LocalJournalRotatesAndExportsOnlyBoundedCurrentEvents",
+    "LocalJournalQuotaRejectsThe257thEvent",
+    "LocalJournalIOFailureCannotBreakStartupOrReadSnapshot"
+  ],
+  "policy": "Own unique temporaryCachePath fixture; private file/events snapshot+restore while holding existing journal Gate; no log subscription, editor/player preference or personal journal accessed; only tests changed."
+}

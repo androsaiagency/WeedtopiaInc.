@@ -27,7 +27,7 @@ namespace Weedtopia.Tests.Assets
             foreach(var entry in art.sprites){Assert.That(entry.sprite,Is.Not.Null,entry.id);Assert.That(entry.sprite.rect.width,Is.GreaterThan(8));}
             var defs=AssetDatabase.LoadAssetAtPath<GameContent>(GameScaffold.ContentPath).Load();
             foreach(var role in defs.roles){Assert.That(art.Get("portrait_"+PresentationArt.CharacterForRole(role.id)),Is.Not.Null,role.id);Assert.That(art.Get(PresentationArt.IconForRole(role.id)),Is.Not.Null,role.id);}
-            Assert.That(AssetDatabase.GetAssetPath(art.bodyFont),Does.EndWith("Lato-Regular.ttf"));Assert.That(File.Exists(ProductionArtImporter.Root+"/Fonts/OFL.txt"),Is.True);
+            Assert.That(AssetDatabase.GetAssetPath(art.bodyFont),Is.EqualTo(TypographyAuthoring.BodyPath));Assert.That(File.Exists(TypographyAuthoring.Folder+"/OFL.txt"),Is.True);
             Assert.Throws<InvalidOperationException>(()=>art.Get("unmapped_required_icon"));
         }
         [Test] public void AuthoredWorldUsesAllCharactersRoutesAndOriginalAudioWithoutChangingContent()
@@ -37,7 +37,7 @@ namespace Weedtopia.Tests.Assets
             {
                 EditorSceneManager.OpenScene(GameScaffold.GameScene);var root=UnityEngine.Object.FindFirstObjectByType<GameRoot>();var p=root.Presentation;
                 Assert.That(p,Is.Not.Null);Assert.That(p.characters.Length,Is.EqualTo(8));Assert.That(root.Sites.Length,Is.EqualTo(56));
-                var defs=AssetDatabase.LoadAssetAtPath<GameContent>(GameScaffold.ContentPath).Load();Assert.That(p.routes.Length,Is.EqualTo(defs.routes.Length));
+                var defs=AssetDatabase.LoadAssetAtPath<GameContent>(GameScaffold.ContentPath).Load();Assert.That(p.routes.Length,Is.EqualTo(defs.routes.Count(r=>defs.instances.Single(i=>i.id==r.from).cityId=="burning_hills")));
                 var plan=JsonUtility.FromJson<BurningHillsLayoutInstaller.LayoutPlan>(File.ReadAllText(BurningHillsLayoutInstaller.Folder+"/BurningHillsLayout.json"));
                 foreach(var route in p.routes)
                 {
@@ -47,7 +47,7 @@ namespace Weedtopia.Tests.Assets
                     Assert.That(route.points.Length,Is.EqualTo(r.points.Length));
                 }
                 Assert.That(p.ambience.clip.samples,Is.EqualTo(2646000));Assert.That(p.ambience.loop,Is.True);Assert.That(p.eventAudio,Is.Not.Null);
-                Assert.That(EditorBuildSettings.scenes.Where(x=>x.enabled).Select(x=>x.path),Is.EquivalentTo(new[]{GameScaffold.BootstrapScene,GameScaffold.GameScene}));
+                Assert.That(EditorBuildSettings.scenes.Where(x=>x.enabled).Select(x=>x.path),Is.EquivalentTo(new[]{GameScaffold.BootstrapScene}.Concat(defs.cities.Select(city=>city.scenePath))));
                 Assert.That(p.explicitBuildingApproval,Is.True);Assert.That(p.releaseRequested,Is.False);
             }
             finally{if(setup.Length>0)EditorSceneManager.RestoreSceneManagerSetup(setup);}

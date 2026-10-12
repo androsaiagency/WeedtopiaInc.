@@ -1,0 +1,1508 @@
+{
+  "utc": "2026-10-04T08:24:14.556511+00:00",
+  "playMode": {
+    "uniqueCases": 86,
+    "passed": 86,
+    "unresolved": {},
+    "runs": [
+      {
+        "file": "Docs/PhoneUiRevision/Tests/PlayMode.xml",
+        "result": "Failed(Child)",
+        "end": "2026-10-04 07:15:50Z"
+      },
+      {
+        "file": "Docs/PhoneUiRevision/Tests/PlayModeFocused.xml",
+        "result": "Passed",
+        "end": "2026-10-04 07:26:28Z"
+      }
+    ],
+    "latestResultPerCase": {
+      "Weedtopia.Tests.PlayMode.BuildingInteractionTests.DiagonalTouchCanLeaveEveryDistrictAxis": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.BuildingInteractionTests.DirectMenuButtonsWorkByTouchAndSettingsPersistWithoutSaveButton": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.BuildingInteractionTests.EveryAssignmentPickerContainsOnlyCompatibleRolesAndButtonsAssignRemove": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.BuildingInteractionTests.FleetShowsUnlockedSlotsAndProtectsDriversInTransit": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.BuildingInteractionTests.FreeWorldHasNoPersistentPanelsOrPositionScrollbar": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.BuildingInteractionTests.GesturesThatStartOnInspectorStayCapturedByUi": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.BuildingInteractionTests.ImmediateTierSwapFramesTheCurrentLargestBuildingWithoutClipping": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.BuildingInteractionTests.InventoryAndWheelDockOpenByTouchAndFreeBadgeTracksTheSavedDraw": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.BuildingInteractionTests.MouseSwipeMovesEveryDistrictWithoutClickingABuilding": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.BuildingInteractionTests.MouseTapFramesBuildingOnRightAndCloseRestoresPreviousView": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.BuildingInteractionTests.NavigationButtonsWorkByTouchAndPreserveLockedProgression": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.BuildingInteractionTests.OrdersRetainQuestRewardsFocusAndRecoveryAfterRemovingHiddenMenu": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.BuildingInteractionTests.TeamShowsCardsAndSpinSpendsExactlyOneCardAndAutosavesReward": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.BuildingInteractionTests.TouchCrossesRiverButRenderedViewCannotLeaveOverview": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.BuildingInteractionTests.TouchStartingOnRoundNavigationCannotDragWorldOrClickOnReleaseElsewhere": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.BuildingInteractionTests.TouchSwipeAndPinchNeverDispatchAccidentalBuildingTaps": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.BuildingInteractionTests.TownHallSpriteMouseAndTouchSelectionKeepStatisticsAndRockoDialogue": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.BuildingInteractionTests.TownHallSpriteRetainsAuthoredPickingAfterZoom": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.BuildingInteractionTests.UpgradePreviewMatchesActualPostUpgradeRateAndPreservesStateWhileReading": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.BuildingInteractionTests.ZoomAndAspectChangesNeverExposeOutsideOverviewDuringEasing": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.CityCampaignUiTests.ActualSceneTravelRoundtripPreservesBothCitiesAndTheSavePath": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.CityCampaignUiTests.AuthoredHeaderAndRockoOfferRespectThresholdAndPayOnce": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.CityCampaignUiTests.BigRockInhabitantsUseTheirOwnAuthoredRowsArtAndWorldPicking": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.CityCampaignUiTests.BigRockWorldActorsKeepTheirClickedIdentityWithLockedWorkplaces": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.CityCampaignUiTests.ContinueOpensTheSavedCityAndDoesNotApplyOfflineTwice": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.AmbientTownLifeMovesPausesAndNeverChangesGameplayOrCreatesObjects": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.BakerVanDrivesBothDirectionsAndShowsButterOnlyAfterLoading": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.BootstrapAndStartButtonsCreateOneSessionWithExactResources": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.BuildingSelectionPanelUpgradeAndManagerHaveRealEffects": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.CharacterRaycastsOpenTheMatchingAuthoredPortraitAndCanBeClosed": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.CityFestivalChoiceClaimAndReloadUseTheExistingOrdersUi": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.CityFestivalTextsFitTheAuthoredOrdersFieldsForBothPlansAndCompletion": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.CitySalesRathausSpinAndSettlementUnlockAreConnected": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.ConstructionEnclosuresFitSmallAndLargeBuildingFamiliesWithoutChangingTheSave": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.ConstructionFenceFollowsPurchasePauseReloadAndBothCompletionPaths": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.ConveyorsAnimateActualTransfersSmoothlyPauseAndPreserveGameplay": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.DirectionalVanMovesBetweenHudRefreshesAndFacesTheActualReturnDirection": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.DistrictControlsReachEveryExpansionEndAndApprovedSpritesLoadOnDemand": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.EveryBakeryHasAnAuthoredRoadAndTheCourierPoolCoversAllWorkers": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.ExpandedBuildingsRemainClickableAfterTheirLargestVisualSwap": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.FarmEndToEndUnlocksCityWithCompletedDelivery": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.IndustrySellsButterProductsAndReachesFreeplay": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.InspectorShowsInstantLevelsAndTimedTierConstructionConsistently": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.MaximumUiScaleKeepsContextualActionsInsideSafeArea": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.PremiumPanelCancelThenConfirmSpendsOnlyAfterExplicitClick": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.SaveSceneReloadAndContinueKeepResidentialChoiceAndProgress": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.UiRaycastsBlockWorldAndPauseStopsTime": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.WesternDirectionsReflectActualGeometryForBothProductionShaderFamilies": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.WorkerInventoryButtonsAssignRemoveAndImproveManager": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.GameFlowTests.WorkerRoleFiltersAndRarityCardsKeepAllTwelveRolesVisible": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.LuckyWheelUiTests.ClosingAnimationKeepsSavedPrizeAndPaidSpinRequiresConfirmation": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.LuckyWheelUiTests.CountdownUpdatesAndMidnightRestoresTenSlotsAndFreeSpin": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.LuckyWheelUiTests.EntriesSpinPrizeAndConfirmationReceivePointerHits": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.LuckyWheelUiTests.FreeSpinIsSavedBeforeAnimationAndShowsExactlyOneReward": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.PhoneUiTests.BuildingAndPickerHideHudAndClosingRestoresItsActions": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.PhoneUiTests.ToniRosterClickOpensVisibleOfferAndBackRestoresRosterWithoutAccepting": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.RewardPresentationTests.CancelOrNavigateAwayNeverConsumesItemsOrLeavesTheSimulationPaused": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.RewardPresentationTests.ClaimShowsSavedRewardAndDismissalCannotDuplicateIt": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.RewardPresentationTests.CollectionAndCelebrationButtonsReceiveTheTopmostPointerHit": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.RewardPresentationTests.CollectionUsesLiveBalancesAndWorkerCardOpensExistingTeam": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.RewardPresentationTests.InventoryFiltersInspectAndConfirmOneSpeedupThenPersist": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.RewardPresentationTests.NewGameClearsPendingCelebrationAndHistory": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.RewardPresentationTests.OpeningAPackShowsActualSavedContentsAndConsumesOnlyOne": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.RewardPresentationTests.SplitIsClickableWithoutConstructionAndKeepsAllTimeInSavedInventory": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.UiExperienceTests.AuthoredModuleScrollKeepsLowerInventoryActionsReachable": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.UiExperienceTests.EveryClickedActorKeepsItsIdentityEvenWhenItsWorkplaceIsLocked": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.UiExperienceTests.LegacyWindowCloseLivesInAReservedHeaderOutsideTheContent": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.UiExperienceTests.MilaUsesSpeechAndDifferentGesturesAboveTheBottomDialogueBox": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.UiExperienceTests.ModalCloseButtonsAreAboveTheirContentAndRestoreNavigation": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.UiExperienceTests.NewGameRequiresInGameConfirmationAndKeepsItsOwnArchive": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.UiExperienceTests.OnePlayButtonStartsNamesAndResumesTheSavedGame": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.UiExperienceTests.ProfileTabChangesNameAndAvatarWithoutResettingTheTown": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.UiExperienceTests.RoundQuestShortcutOpensANextStepPreviewBeforeTheChecklist": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.UiExperienceTests.WholeScreenTapAdvancesPagesAndConsumesTheFinalTap": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.UiExperienceTests.WorkerPickerCloseDoesNotOpenSettingsAndGlobalMenusRemainReachable": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.UiRefinementTests.ContinuousInventoryShowsEightEntriesAndScrollsToTheLastWithoutPagesOrNewPools": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.UiRefinementTests.EveryCloseUsesTheGoldArtworkAtTheOutsideEdgeAndWorkerAssignIconStaysLeft": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.UiRefinementTests.TenProfileChoicesShowDistinctPortraitsAndRoundTripThroughTheSave": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.UiRefinementTests.WheelAndPaidConfirmationFitTheSingleViewport": {
+        "result": "Passed",
+        "source": "PlayMode"
+      },
+      "Weedtopia.Tests.PlayMode.VipStoryUiTests.AcceptedQuestClaimsOnceAndItsWorldMemoryAndProgressSurviveContinue": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.VipStoryUiTests.ChapterChoicesAreSelectableAndSavedWithTheChosenResponse": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.VipStoryUiTests.ClickingTheActualActorOpensItsOwnStoryAndStoresTheVisit": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.VipStoryUiTests.LockedRosterAndSharedProjectsRemainReadableAndCannotBeAccepted": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.VipStoryUiTests.PopulationUnlocksOnlyTheFirstActorAndNewGameHidesAllActorsAgain": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.VipStoryUiTests.RecurringOfferPreviewsTheSameScaledTargetsAndRewardThatAcceptanceStores": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      },
+      "Weedtopia.Tests.PlayMode.VipStoryUiTests.StoryControlsReceivePointerHitsAndUseTheAuthoredStaticRows": {
+        "result": "Passed",
+        "source": "PlayModeFocused"
+      }
+    },
+    "singleFullRunPassed": false
+  },
+  "editMode": {
+    "uniqueCases": 280,
+    "passed": 280,
+    "unresolved": {},
+    "runs": [
+      {
+        "file": "Docs/PhoneUiRevision/Tests/EditMode.xml",
+        "result": "Failed(Child)",
+        "end": "2026-10-04 07:47:04Z"
+      },
+      {
+        "file": "Docs/PhoneUiRevision/Tests/AssetRecheck.xml",
+        "result": "Passed",
+        "end": "2026-10-04 08:01:42Z"
+      }
+    ],
+    "latestResultPerCase": {
+      "Weedtopia.Tests.Assets.BigRockCityAssetTests.All251CityVariantsPreserveTierCoverageCollidersOffsetsAndGameplayAnchors": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.BigRockCityAssetTests.BothScenesHaveOnlyLocalSitesRoutesAndCompleteAuthoredCampaignBindings": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.BigRockCityAssetTests.ExplicitInstallerPreservesExistingSceneAndAssetBytesOnARepeatRun": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.ConstructionFenceAssetTests.EverySiteInheritsAnInactiveReusableEnclosureWithoutBlockingSelection": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.ConstructionFenceAssetTests.ReinstallationPreservesTheSceneAndAuthoredPrefab": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.ConveyorAssetTests.AuthoredNetworkUsesWideReusableSpritesAndSharesEveryOverlappingSpan": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.ConveyorAssetTests.ReapplyingConveyorAuthoringPreservesTheScene": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.DirectionalMotionTests.EveryMovingInstanceHasCompleteViewsAndTheVanMatchesHumanScale": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.DirectionalMotionTests.GroundDirectionDoesNotConfuseCameraForeshorteningOrReturnTrips": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.DirectionalMotionTests.ReapplyingDirectionalAuthoringPreservesSceneAndPrefabBytes": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.DistrictLayoutTests.AuthoredSelectionRespectsRotatedScaledBoxesAndRejectsMisses": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.DistrictLayoutTests.DistrictsExpandAlongTheSketchAndClampAtBothEnds": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.DistrictLayoutTests.EveryExpandedWorkplaceHasARealSupplyRouteAndFarmNeedsTransport": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.GameAssetTests.EveryLevelMapsToExistingCatalogWithNoGaps": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.GameAssetTests.IsolatedSpritePrototypesHaveAlphaGroundPivotAnchorsAndBoundedTextures": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.GameAssetTests.ProjectAssetsUseCanonicalRoots": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.GameAssetTests.SceneReferencesAndBuildConfigurationValidate": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.GameAssetTests.SecondGameScaffoldPreservesEveryAuthoredAssetByte": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.LivingHillsTests.ApplyingLivingHillsAgainPreservesTheEntireScene": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.LivingHillsTests.TownLifeIsAuthoredReusableAndKeepsPedestriansOutsideBuildingParcels": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.LuckyWheelAssetTests.InstallerPreservesInstalledPrefabsContentSceneAndAllTheirGuids": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.NaturalEnvironmentTests.NaturalLandscapeIsSerializedWithReusableArtAndCannotInterceptBuildingInput": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.NaturalEnvironmentTests.ReapplyingNaturalLandscapePreservesAuthoredSceneBytes": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.ProductionPresentationTests.AuthoredWorldUsesAllCharactersRoutesAndOriginalAudioWithoutChangingContent": {
+        "result": "Passed",
+        "source": "AssetRecheck"
+      },
+      "Weedtopia.Tests.Assets.ProductionPresentationTests.EveryRoleAndRequiredIconHasAnImportedNonemptySprite": {
+        "result": "Passed",
+        "source": "AssetRecheck"
+      },
+      "Weedtopia.Tests.Assets.ProductionPresentationTests.OldOrUnboundAcceptanceCannotOpenTheReleaseGate": {
+        "result": "Passed",
+        "source": "AssetRecheck"
+      },
+      "Weedtopia.Tests.Assets.ProductionPresentationTests.PreflightIdentifiesForbiddenReferences(\"Assets/x/Development_city.prefab\",True)": {
+        "result": "Passed",
+        "source": "AssetRecheck"
+      },
+      "Weedtopia.Tests.Assets.ProductionPresentationTests.PreflightIdentifiesForbiddenReferences(\"Assets/x/DevelopmentVisuals.asset\",True)": {
+        "result": "Passed",
+        "source": "AssetRecheck"
+      },
+      "Weedtopia.Tests.Assets.ProductionPresentationTests.PreflightIdentifiesForbiddenReferences(\"Assets/x/development_accept.wav\",True)": {
+        "result": "Passed",
+        "source": "AssetRecheck"
+      },
+      "Weedtopia.Tests.Assets.ProductionPresentationTests.PreflightIdentifiesForbiddenReferences(\"Assets/Weedtopia/Game/VisualReview/Review_town.prefab\",True)": {
+        "result": "Passed",
+        "source": "AssetRecheck"
+      },
+      "Weedtopia.Tests.Assets.ProductionPresentationTests.PreflightIdentifiesForbiddenReferences(\"Assets/Weedtopia/Production/Prefabs/Character_rocko.prefab\",False)": {
+        "result": "Passed",
+        "source": "AssetRecheck"
+      },
+      "Weedtopia.Tests.Assets.ProductionPresentationTests.ProductionPreflightRecognizesApprovedSpritesAndKeepsIndependentReleaseGates": {
+        "result": "Passed",
+        "source": "AssetRecheck"
+      },
+      "Weedtopia.Tests.Assets.ProductionPresentationTests.ProductionReauthoringPreservesManualSceneAndPrefabBytes": {
+        "result": "Passed",
+        "source": "AssetRecheck"
+      },
+      "Weedtopia.Tests.Assets.TownHall3DAssetTests.ArchivedTownHallRetainsThreeBoundedLodsAndOnly2KTextures": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.TownHall3DAssetTests.RestoredOriginalSpritePreservesIdentityAndHasNoMeshDependency": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.TownVitalityTests.ExplicitAuthoringIsIdempotentAndKeepsExistingSceneBytes": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.TownVitalityTests.NewTownDetailsAreReusableDoNotInterceptInputAndLeaveBuildingParcelsClear": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.UiExperienceAssetTests.BothCitiesUseTheSharedAuthoredDialogueAndSinglePlayMenu": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.UiExperienceAssetTests.PolishedAssetsAndInstallerAreSharedAndRepeatable": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.UiExperienceAssetTests.PortraitCellsUseActualSourceDimensionsAndPreserveAlpha": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.UiExperienceAssetTests.RepeatedUiInstallerPreservesEverySceneAndSharedPrefabByte": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.UiRefinementAssetTests.BothCitiesReferenceTheSameGoldenCloseSymbolPrefab": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.UiRefinementAssetTests.InstallerRepeatsWithoutChangingAuthoredSourcesOrScenes": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.UiRefinementAssetTests.PlayerPortraitsAreIndependentAndAllTenHaveSourceAlpha": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.VipStoryAssetTests.AllTenDistinctSpritesFifteenRowsAndFortyMemoriesAreAuthored": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.VipStoryAssetTests.InstallerIsIdempotentAndPreservesAllExistingBindingsAndNewAssetGuids": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.WorldCornersTests.DestinationsConnectToTownWithoutBlockingBuildingParcelsOrInput": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.WorldCornersTests.ReapplyingCornersPreservesTheSavedScene": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.WorldNavigationTests.AuthoredNavigationUsesNineReusableIconButtonsAndAllBuildingsAreReachable": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.Assets.WorldNavigationTests.RepeatingMenuInstallerPreservesDockSceneAndGuids": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BakeryDeliveryTests.BakerDrivesEmptyLoadsAtFactoryAndOnlyBakesAfterReturning": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BakeryDeliveryTests.ExistingSavesWithoutPickupFieldsRemainReadable": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BakeryDeliveryTests.FullArrivalBufferCanDrainWhileTheVanWaitsAndCargoIsPreserved": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BakeryDeliveryTests.MissingReservedStockReturnsAnEmptyVanWithoutInventingADelivery": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BakeryDeliveryTests.MultipleBakersReserveWithoutDuplicatingOrLosingButter": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BakeryDeliveryTests.NoBakerNoBeltAndNoPickupWhenTheDestinationIsStocked": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BakeryDeliveryTests.SaveReloadAndOfflineResumeEachLegExactly(True)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BakeryDeliveryTests.SaveReloadAndOfflineResumeEachLegExactly(False)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BakeryDeliveryTests.SavesRejectWrongCourierAndImpossiblePickupPhases": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.CostGrowthChangesAfterTargetLevel25WithoutAJumpOrEffectOnProduction": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.EntireFirstSaleChainFitsStartMoneyWithoutCashRewards": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.FirstConstructionMatchesApprovedTable(\"cultivation_plot\",100,30)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.FirstConstructionMatchesApprovedTable(\"farm_processing\",150,60)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.FirstConstructionMatchesApprovedTable(\"farm_warehouse\",175,90)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.FirstConstructionMatchesApprovedTable(\"city_warehouse\",200,120)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.FirstConstructionMatchesApprovedTable(\"coffee_shop\",250,120)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.FirstConstructionMatchesApprovedTable(\"residential_house\",1200,300)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.FirstConstructionMatchesApprovedTable(\"park\",800,180)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.FirstConstructionMatchesApprovedTable(\"butter_factory\",2500,480)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.FirstConstructionMatchesApprovedTable(\"supermarket\",2000,360)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.FirstConstructionMatchesApprovedTable(\"bakery\",3500,600)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.InstantUpgradeChargesOnceAndCannotBeAccelerated": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.InvalidNewCurveAndTierConfigurationIsRejected": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(1,120)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(2,0)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(4,0)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(5,150)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(10,180)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(25,240)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(50,300)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(100,360)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(150,480)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(151,0)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(200,480)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(4999,0)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.OnlyVisibleTierChangesCreateConstruction(5000,480)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.PremiumInstantUpgradeAndTimedCompletionRemainSingleUse": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.TimedUpgradeKeepsProducingAndBuildSpeedMatchesItsPreview": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.TutorialFinancesAllBuildingsWithoutRecoveryOrPremium(1)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.TutorialFinancesAllBuildingsWithoutRecoveryOrPremium(42)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.BuildingBalanceTests.TutorialFinancesAllBuildingsWithoutRecoveryOrPremium(420)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityCampaignTests.AcceptPaysExactlyOnceAndKeepsOriginalQuests": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityCampaignTests.AllSixInhabitantsAndTheirTwentyFourChaptersCompleteAndRemainSaved": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityCampaignTests.AssignedWorkersInBurningHillsCannotSatisfyBigRockGoals": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityCampaignTests.BothCitiesHaveSameFamiliesAndIndependentIdentities": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityCampaignTests.BothOwnedCitiesProduceDuringOnlineAndOfflineSimulation": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityCampaignTests.BothTutorialsFinishUsingPublicCommandsAndNoPremium": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityCampaignTests.CharterAndTravelRollBackOnSaveFailure": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityCampaignTests.CorruptOldSaveCannotBeRepairedByAddingNewCityBuildings": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityCampaignTests.ExistingVersionTwoSavePreservesStoriesConstructionInventoryWorkersAndCargo": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityCampaignTests.ForgedAccessAndCrossCityQuestHistoriesAreRejected": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityCampaignTests.InvitationStartsAtOneThousandAndSurvivesPopulationDecline": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityCampaignTests.LockedCityDoesNotSimulateAndCannotBeVisited": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityCampaignTests.RealResidentCalculationUnlocksTheMandate": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityProjectTests.BonusAppliesOnlyAfterCompletionToChosenFamilyAndSurvivesReload": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityProjectTests.BothPlansCompleteFrom1000UsingOnlyPlayerCommandsWithoutPremiumOrRecovery(\"neighborhood\",420)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityProjectTests.BothPlansCompleteFrom1000UsingOnlyPlayerCommandsWithoutPremiumOrRecovery(\"gourmet\",420)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityProjectTests.BothPlansCompleteFrom1000UsingOnlyPlayerCommandsWithoutPremiumOrRecovery(\"neighborhood\",121)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityProjectTests.BothPlansCompleteFrom1000UsingOnlyPlayerCommandsWithoutPremiumOrRecovery(\"gourmet\",121)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityProjectTests.CorruptChapterProgressIsRejected(\"plan\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityProjectTests.CorruptChapterProgressIsRejected(\"history\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityProjectTests.CorruptChapterProgressIsRejected(\"baseline\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityProjectTests.CorruptChapterProgressIsRejected(\"future\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityProjectTests.CorruptChapterProgressIsRejected(\"locked\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityProjectTests.LegacySaveWithoutProjectFieldLoadsWithAllTutorialProgressAndResources": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityProjectTests.MidStepSaveAndOfflineProgressKeepTheSameBaselineWithoutClaimingRewards": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityProjectTests.PlanRequiresCompletedTutorialAndChoiceCannotBeRepeatedOrSwitched": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.CityProjectTests.PreviousProductionDoesNotCompleteNewGoalsAndStepRewardsArePaidOnce": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.DomainTests.All5001LevelsResolveContiguousExactBands": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.DomainTests.AmountArithmeticOrderingAndInvariantRoundtrip": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.DomainTests.CurvesRemainMonotoneBeyondDoubleRange": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.DomainTests.DriverCannotBeRemovedDuringTripAndBlockedCargoIsRetained": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.DomainTests.FullBuffersAndInFlightCargoConserveMass": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.DomainTests.ManualCropStopsAtCapacityAndManagerEnablesTransfer": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.DomainTests.MoneyConstructionAndInsufficientGrindersAreAtomic": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.DomainTests.ObservingConveyorTransfersDoesNotChangeSimulationState": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.DomainTests.PremiumRequiresSingleUseConfirmationAndCancelDoesNotSpend": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.DomainTests.RenderFramePartitionDoesNotChangeSimulation": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.DomainTests.RolesRarityAssignmentSwapAndDriverTiers": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.DomainTests.SeededRandomReplaysAndRejectsInvalidRange": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.DomainTests.WorkerLevelAndRankCapsAreIndependent": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.AllQuestItemGrantsMatchPreviewAndCannotBeClaimedTwice": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.CatalogContainsEveryDurationAndAllItemsAreObtainableWithoutChangingStarterBalance": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.CompletionClampsAndPreservesFirstBuildDailyEntitlement": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.DamagedInventoryIsRejected(\"negative\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.DamagedInventoryIsRejected(\"duplicate\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.DamagedInventoryIsRejected(\"unknown\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.DamagedInventoryIsRejected(\"null\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.InventoryRoundTripKeepsSpentCountsAndLegacySavesRemainEmpty": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.NumericOverflowDoesNotConsumeThePack": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.OpeningAndCancellingAreReadOnlyAndInvalidTargetsAreRejected": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.PackCashAndGrindersGrantExactlyTheirContentsAndAreNotReplayed": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.SmallestBoosterCannotBeSplitAndSplitOverflowCannotSpend": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.SpecialistChoiceUsesExistingRoleAndRarityRules": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.SpeedupOnlyReducesChosenConstructionByItsExactDuration(\"build_1m\",60)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.SpeedupOnlyReducesChosenConstructionByItsExactDuration(\"build_5m\",300)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.SpeedupOnlyReducesChosenConstructionByItsExactDuration(\"build_15m\",900)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.SpeedupOnlyReducesChosenConstructionByItsExactDuration(\"build_30m\",1800)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.SpeedupOnlyReducesChosenConstructionByItsExactDuration(\"build_1h\",3600)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.SpeedupOnlyReducesChosenConstructionByItsExactDuration(\"build_5h\",18000)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.SpeedupOnlyReducesChosenConstructionByItsExactDuration(\"build_10h\",36000)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.SpeedupOnlyReducesChosenConstructionByItsExactDuration(\"build_24h\",86400)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.SplittingPreservesEverySecondWithoutAConstructionAndIsSingleUse(\"build_5m\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.SplittingPreservesEverySecondWithoutAConstructionAndIsSingleUse(\"build_15m\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.SplittingPreservesEverySecondWithoutAConstructionAndIsSingleUse(\"build_30m\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.SplittingPreservesEverySecondWithoutAConstructionAndIsSingleUse(\"build_1h\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.SplittingPreservesEverySecondWithoutAConstructionAndIsSingleUse(\"build_5h\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.SplittingPreservesEverySecondWithoutAConstructionAndIsSingleUse(\"build_10h\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.SplittingPreservesEverySecondWithoutAConstructionAndIsSingleUse(\"build_24h\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.StaleOffersNeverSpendAnItem(\"tick\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.StaleOffersNeverSpendAnItem(\"finished\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.StaleOffersNeverSpendAnItem(\"cancel\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.StaleOffersNeverSpendAnItem(\"new_offer\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.StaleOffersNeverSpendAnItem(\"spent\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.InventoryTests.VipSpeedupsAreRepeatableButEachOrderPaysOnlyOnce": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.LuckyWheelTests.ActualSaveReloadKeepsBoardConsumedFreeSpinAndPrize": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.LuckyWheelTests.BoardHasTenDistinctItemsAndDoesNotChangeOnReadOrReopen": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.LuckyWheelTests.CapacityOverflowNeverChargesOrDraws": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.LuckyWheelTests.FailedFundsAndCancelledOrReusedOffersDoNotChangeResourcesOrRandom": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.LuckyWheelTests.ForwardJumpDoesNotAccumulateFreeSpinsAndRollbackDoesNotReset": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.LuckyWheelTests.InvalidWheelSaveIsRejected(\"count\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.LuckyWheelTests.InvalidWheelSaveIsRejected(\"duplicate\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.LuckyWheelTests.InvalidWheelSaveIsRejected(\"unknown\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.LuckyWheelTests.InvalidWheelSaveIsRejected(\"spins\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.LuckyWheelTests.InvalidWheelSaveIsRejected(\"day\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.LuckyWheelTests.InvalidWheelSaveIsRejected(\"random\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.LuckyWheelTests.LegacySaveWithoutWheelIsAcceptedAndReceivesOneBoard": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.LuckyWheelTests.MidnightInvalidatesPaidConfirmationWithoutCharging": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.LuckyWheelTests.SaveFailureRollsBackPrizeCurrencyBoardReceiptAndRng": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.LuckyWheelTests.TenDrawsFollowExactCostsRemoveEachPrizeAndThenStop": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.LuckyWheelTests.UtcMidnightResetsBoardFreeSpinAndCountdownTogether": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.PersistenceTests.ActiveSessionAutomaticallyPersistsAtThirtySecondsWithoutManualSave": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.PersistenceTests.CorruptMainRecoversAndSavingDoesNotOverwriteValidBackupWithCorruption": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.PersistenceTests.ExistingPaidConstructionKeepsItsTimerAndNewUpgradesUseCurrentBalance": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.PersistenceTests.FullTutorialSaveRoundtripIncludesChoicesWorkersCargoAndStats": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.PersistenceTests.InvalidAssignmentsAndNanNeverReachDisk": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.PersistenceTests.LocalLeaderboardPersistsBestAndOnlineAdapterRemainsDisabled": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.PersistenceTests.LongTierConstructionSurvivesSaveAndOfflineCompletion": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.PersistenceTests.OfflineUsesSameSimulationCapsDurationAndDoesNotRewardRepeatedLoadOrRollback": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.PersistenceTests.PreviousDistrictSaveAddsOnlyNewPlotsAndPreservesProgressAndCargo": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.PersistenceTests.SchemaOneMigratesAndFutureVersionIsRejected": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ProgressionTests.AuthoredContentAndAllCurvesAreValid": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ProgressionTests.AuthoredGermanTextPreservesUnicodeAcrossContentImport": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ProgressionTests.DailyBoundariesCatchupAndClockRollbackAreDefensive": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ProgressionTests.DailyUpgradeDoesNotMultiplyPastDaysAndMidnightIsSingleClaim": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ProgressionTests.EveryRoleRarityUsesExactlyItsRelevantAttributePool": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ProgressionTests.FullTutorialReachesFreeplayWithoutPremiumOrStateInjection": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ProgressionTests.LastPlotProtectsMissingTutorialChoiceAndChoiceIsPermanent": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ProgressionTests.MissingQuestReferencesAndDuplicateIdsAreRejected": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ProgressionTests.NewGameNameIntroReplayAndPauseDoNotDuplicateStartResources": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ProgressionTests.OptionalSecondCropAndBakeryDoNotAddUnfundedTutorialManagerRequirements": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ProgressionTests.OverspendingRecoveryIsTimeLimitedAndDoesNotSpendPremium": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ProgressionTests.QuestRewardsContributeToLifetimeEarningsOnlyOnce": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ProgressionTests.SpinConsumesOneCardAndReplaysExactly": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ProgressionTests.VipGoalsAreReachableFromFarmAndRewardsCannotBeClaimedTwice": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ResourceConversionTests.BuildingBuffersStillRejectNegativeAndInvalidAmounts": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ResourceConversionTests.ExhaustingFractionalButterInputCannotOverdrawTheBuffer(0)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ResourceConversionTests.ExhaustingFractionalButterInputCannotOverdrawTheBuffer(9)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ResourceConversionTests.ExhaustingFractionalButterInputCannotOverdrawTheBuffer(400)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ResourceConversionTests.ExhaustingFractionalButterInputCannotOverdrawTheBuffer(2000)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ResourceConversionTests.FractionalConversionConservesResourcesWithinAmountPrecision": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ResourceConversionTests.RateAndStorageLimitsPreserveUnconsumedInput(0,4,2,1000)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ResourceConversionTests.RateAndStorageLimitsPreserveUnconsumedInput(999,6,1,1000)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ResourceConversionTests.RateAndStorageLimitsPreserveUnconsumedInput(1000,8,0,1000)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ResourceConversionTests.RateAndStorageLimitsPreserveUnconsumedInput(1001,8,0,1001)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ResourceConversionTests.SavedFractionalInputResumesThroughLiveFramesAndOfflineProgress(False)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ResourceConversionTests.SavedFractionalInputResumesThroughLiveFramesAndOfflineProgress(True)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.ResourceConversionTests.SeededFractionalInputsRemainValidAcrossAllConverters": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.RewardTests.DailyReceiptContainsOnlyNewRewardsAndCannotBeClaimedTwice": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.RewardTests.DamagedRewardHistoryIsRejected(\"sequence\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.RewardTests.DamagedRewardHistoryIsRejected(\"worker\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.RewardTests.DamagedRewardHistoryIsRejected(\"amount\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.RewardTests.DamagedRewardHistoryIsRejected(\"title\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.RewardTests.DamagedRewardHistoryIsRejected(\"null\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.RewardTests.FestivalFinaleListsTitleAndExactlyOnePermanentBonus(\"neighborhood\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.RewardTests.FestivalFinaleListsTitleAndExactlyOnePermanentBonus(\"gourmet\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.RewardTests.HistoryIsBoundedAndSequencesRemainMonotonic": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.RewardTests.MainQuestReceiptsMatchAllActualAwardsAndSurviveSave": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.RewardTests.OldSaveWithoutLedgerKeepsProgressAndDerivedAwards": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.RewardTests.PreviewHasNoStateOrRandomEffects": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.RewardTests.ReadingHistoryDoesNotRestoreSpentMoneyOrCards": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.RewardTests.RecruitmentReceiptIdentifiesTheExactRolledWorker": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.UiExperienceDomainTests.CoffeeshopChecklistNamesTheExactShopAndShowsEveryMissingCondition": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.UiExperienceDomainTests.FailedProfileSaveRestoresThePreviousProfile": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.UiExperienceDomainTests.FreshTutorialRequiresANameAndProfileEditingPreservesProgress": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.UiExperienceDomainTests.GuidanceIsReadOnlyAndEveryTutorialHasSeparateNpcSpeech": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.UiExperienceDomainTests.HistoricalSaveKeepsItsNameAndReceivesAValidAvatar": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.UiExperienceDomainTests.ProfileUsesOneNameRule(\"\",False)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.UiExperienceDomainTests.ProfileUsesOneNameRule(\"a\",False)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.UiExperienceDomainTests.ProfileUsesOneNameRule(\"<Rocko>\",False)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.UiExperienceDomainTests.ProfileUsesOneNameRule(\"  Mila  \",True)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.UiExperienceDomainTests.ProfileUsesOneNameRule(\"Änne\",True)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.UiExperienceDomainTests.ResidentAvatarsMigrateWithoutChangingThePlayerOrTown(\"rocko\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.UiExperienceDomainTests.ResidentAvatarsMigrateWithoutChangingThePlayerOrTown(\"mila\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.UiExperienceDomainTests.ResidentAvatarsMigrateWithoutChangingThePlayerOrTown(\"jaro\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.UiExperienceDomainTests.ResidentAvatarsMigrateWithoutChangingThePlayerOrTown(\"nia\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.UiExperienceDomainTests.ResidentAvatarsMigrateWithoutChangingThePlayerOrTown(\"city_host\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.UiExperienceDomainTests.ResidentAvatarsMigrateWithoutChangingThePlayerOrTown(\"gardener\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.UiExperienceDomainTests.ResidentAvatarsMigrateWithoutChangingThePlayerOrTown(\"baker\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.UiExperienceDomainTests.ResidentAvatarsMigrateWithoutChangingThePlayerOrTown(\"driver\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.UiExperienceDomainTests.RestartArchiveSurvivesLaterAutosavesAndProfileRoundTrips": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.AllApprovedCharactersChaptersAndRecurringPoolsValidate": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.AllFortyPersonalChaptersAndFiveCollaborationsCompleteAndRemainSaved": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.ChoicesBaselinesAndMemoriesSurviveSavingWithoutNewRewards": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.CollaborationsRequireTheActualEarlierChaptersAndCannotPayTwice": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(\"id\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(\"id_empty\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(\"choice\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(\"baseline\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(\"history\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(\"scale\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(\"time\")": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.FailedDiskWritesRestoreAcceptedQuestsAndAllClaimedRewards": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.HighestChapterIsReachableWithExistingHousingAndWorkerRules": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(\"toni\",50)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(\"juno\",100)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(\"rosa\",200)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(\"mira\",350)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(\"kalle\",500)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(\"alma\",750)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(\"selma\",1000)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(\"oskar\",1500)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(\"dalia\",2000)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(\"valentina\",3000)": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.LegacySaveWithoutStoryFieldsKeepsExistingProgressAndResources": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.LiveResidentsRaiseTheMilestoneAndRemovalOfAWorkerDoesNotRemoveAnInhabitant": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.OfflineSimulationAdvancesAcceptedCountersButNeverAutomaticallyAwardsTheQuest": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.PopulationGrowthNeverSkipsChaptersOrPaysEarlierActivityAgain": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.RecurringQuestsRotateScaleAndWaitWithoutExpiring": {
+        "result": "Passed",
+        "source": "EditMode"
+      },
+      "Weedtopia.Tests.VipStoryTests.ThreeActiveQuestsAreAllowedAndRejectedAcceptsHaveNoSideEffects": {
+        "result": "Passed",
+        "source": "EditMode"
+      }
+    },
+    "singleFullRunPassed": false
+  },
+  "passed": true
+}

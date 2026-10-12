@@ -1,0 +1,4399 @@
+{
+  "version": 2,
+  "maxOfflineSeconds": 28800,
+  "maxDailyCatchup": 7,
+  "maxVip": 12,
+  "rarityWeights": [
+    60,
+    25,
+    10,
+    4,
+    1
+  ],
+  "workerAttributeStep": 0.05,
+  "workerLevelBaseCost": 50,
+  "workerRankCards": 2,
+  "moneyPerGrinder": 100,
+  "secondsPerGrinder": 60,
+  "buildings": [
+    {
+      "id": "cultivation_plot",
+      "nameKey": "building.cultivation_plot",
+      "kind": 0,
+      "zone": 0,
+      "managerRole": "grow",
+      "driverRole": "",
+      "cost": {
+        "basis": 100,
+        "growth": 1.012,
+        "earlyLevels": 24,
+        "earlyGrowth": 1.08
+      },
+      "capacity": {
+        "basis": 16,
+        "growth": 1.008
+      },
+      "rate": {
+        "basis": 4,
+        "growth": 1.008
+      },
+      "price": {
+        "basis": 1,
+        "growth": 1.004
+      },
+      "cycleSeconds": 4,
+      "baseBuildSeconds": 30,
+      "maxBuildSeconds": 120,
+      "baseResidents": 5,
+      "buildGrowth": 1,
+      "yield": {
+        "basis": 4,
+        "growth": 1.008
+      },
+      "tierBuildMultipliers": [
+        1,
+        1.25,
+        1.5,
+        2,
+        2.5,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "farm_processing",
+      "nameKey": "building.farm_processing",
+      "kind": 1,
+      "zone": 0,
+      "managerRole": "processing",
+      "driverRole": "",
+      "cost": {
+        "basis": 150,
+        "growth": 1.012,
+        "earlyLevels": 24,
+        "earlyGrowth": 1.08
+      },
+      "capacity": {
+        "basis": 24,
+        "growth": 1.008
+      },
+      "rate": {
+        "basis": 1,
+        "growth": 1.008
+      },
+      "price": {
+        "basis": 1,
+        "growth": 1.004
+      },
+      "cycleSeconds": 4,
+      "baseBuildSeconds": 60,
+      "maxBuildSeconds": 240,
+      "baseResidents": 5,
+      "buildGrowth": 1,
+      "yield": {
+        "basis": 1,
+        "growth": 1.008
+      },
+      "tierBuildMultipliers": [
+        1,
+        1.25,
+        1.5,
+        2,
+        2.5,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "farm_warehouse",
+      "nameKey": "building.farm_warehouse",
+      "kind": 2,
+      "zone": 0,
+      "managerRole": "farm_manager",
+      "driverRole": "farm_driver",
+      "cost": {
+        "basis": 175,
+        "growth": 1.012,
+        "earlyLevels": 24,
+        "earlyGrowth": 1.08
+      },
+      "capacity": {
+        "basis": 40,
+        "growth": 1.008
+      },
+      "rate": {
+        "basis": 8,
+        "growth": 1.008
+      },
+      "price": {
+        "basis": 1,
+        "growth": 1.004
+      },
+      "cycleSeconds": 4,
+      "baseBuildSeconds": 90,
+      "maxBuildSeconds": 360,
+      "baseResidents": 5,
+      "buildGrowth": 1,
+      "yield": {
+        "basis": 1,
+        "growth": 1.008
+      },
+      "tierBuildMultipliers": [
+        1,
+        1.25,
+        1.5,
+        2,
+        2.5,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "city_warehouse",
+      "nameKey": "building.city_warehouse",
+      "kind": 2,
+      "zone": 1,
+      "managerRole": "city_manager",
+      "driverRole": "city_driver",
+      "cost": {
+        "basis": 200,
+        "growth": 1.012,
+        "earlyLevels": 24,
+        "earlyGrowth": 1.08
+      },
+      "capacity": {
+        "basis": 48,
+        "growth": 1.008
+      },
+      "rate": {
+        "basis": 8,
+        "growth": 1.008
+      },
+      "price": {
+        "basis": 1,
+        "growth": 1.004
+      },
+      "cycleSeconds": 4,
+      "baseBuildSeconds": 120,
+      "maxBuildSeconds": 480,
+      "baseResidents": 5,
+      "buildGrowth": 1,
+      "yield": {
+        "basis": 1,
+        "growth": 1.008
+      },
+      "tierBuildMultipliers": [
+        1,
+        1.25,
+        1.5,
+        2,
+        2.5,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "coffee_shop",
+      "nameKey": "building.coffee_shop",
+      "kind": 3,
+      "zone": 1,
+      "managerRole": "coffee",
+      "driverRole": "",
+      "cost": {
+        "basis": 250,
+        "growth": 1.012,
+        "earlyLevels": 24,
+        "earlyGrowth": 1.08
+      },
+      "capacity": {
+        "basis": 24,
+        "growth": 1.008
+      },
+      "rate": {
+        "basis": 1,
+        "growth": 1.008
+      },
+      "price": {
+        "basis": 12,
+        "growth": 1.004
+      },
+      "cycleSeconds": 4,
+      "baseBuildSeconds": 120,
+      "maxBuildSeconds": 480,
+      "baseResidents": 5,
+      "buildGrowth": 1,
+      "yield": {
+        "basis": 1,
+        "growth": 1.008
+      },
+      "tierBuildMultipliers": [
+        1,
+        1.25,
+        1.5,
+        2,
+        2.5,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "residential_house",
+      "nameKey": "building.residential_house",
+      "kind": 4,
+      "zone": 2,
+      "managerRole": "caretaker",
+      "driverRole": "",
+      "cost": {
+        "basis": 1200,
+        "growth": 1.012,
+        "earlyLevels": 24,
+        "earlyGrowth": 1.08
+      },
+      "capacity": {
+        "basis": 20,
+        "growth": 1.008
+      },
+      "rate": {
+        "basis": 1,
+        "growth": 1.008
+      },
+      "price": {
+        "basis": 1,
+        "growth": 1.004
+      },
+      "cycleSeconds": 4,
+      "baseBuildSeconds": 300,
+      "maxBuildSeconds": 1200,
+      "baseResidents": 5,
+      "buildGrowth": 1,
+      "yield": {
+        "basis": 1,
+        "growth": 1.008
+      },
+      "tierBuildMultipliers": [
+        1,
+        1.25,
+        1.5,
+        2,
+        2.5,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "park",
+      "nameKey": "building.park",
+      "kind": 5,
+      "zone": 2,
+      "managerRole": "ranger",
+      "driverRole": "",
+      "cost": {
+        "basis": 800,
+        "growth": 1.012,
+        "earlyLevels": 24,
+        "earlyGrowth": 1.08
+      },
+      "capacity": {
+        "basis": 20,
+        "growth": 1.008
+      },
+      "rate": {
+        "basis": 1,
+        "growth": 1.008
+      },
+      "price": {
+        "basis": 1,
+        "growth": 1.004
+      },
+      "cycleSeconds": 4,
+      "baseBuildSeconds": 180,
+      "maxBuildSeconds": 720,
+      "baseResidents": 5,
+      "buildGrowth": 1,
+      "yield": {
+        "basis": 1,
+        "growth": 1.008
+      },
+      "tierBuildMultipliers": [
+        1,
+        1.25,
+        1.5,
+        2,
+        2.5,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "butter_factory",
+      "nameKey": "building.butter_factory",
+      "kind": 6,
+      "zone": 3,
+      "managerRole": "butter",
+      "driverRole": "",
+      "cost": {
+        "basis": 2500,
+        "growth": 1.012,
+        "earlyLevels": 24,
+        "earlyGrowth": 1.08
+      },
+      "capacity": {
+        "basis": 32,
+        "growth": 1.008
+      },
+      "rate": {
+        "basis": 1,
+        "growth": 1.008
+      },
+      "price": {
+        "basis": 1,
+        "growth": 1.004
+      },
+      "cycleSeconds": 4,
+      "baseBuildSeconds": 480,
+      "maxBuildSeconds": 1920,
+      "baseResidents": 5,
+      "buildGrowth": 1,
+      "yield": {
+        "basis": 1,
+        "growth": 1.008
+      },
+      "tierBuildMultipliers": [
+        1,
+        1.25,
+        1.5,
+        2,
+        2.5,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "supermarket",
+      "nameKey": "building.supermarket",
+      "kind": 7,
+      "zone": 3,
+      "managerRole": "market",
+      "driverRole": "",
+      "cost": {
+        "basis": 2000,
+        "growth": 1.012,
+        "earlyLevels": 24,
+        "earlyGrowth": 1.08
+      },
+      "capacity": {
+        "basis": 20,
+        "growth": 1.008
+      },
+      "rate": {
+        "basis": 0.1,
+        "growth": 1.008
+      },
+      "price": {
+        "basis": 1,
+        "growth": 1.004
+      },
+      "cycleSeconds": 4,
+      "baseBuildSeconds": 360,
+      "maxBuildSeconds": 1440,
+      "baseResidents": 5,
+      "buildGrowth": 1,
+      "yield": {
+        "basis": 1,
+        "growth": 1.008
+      },
+      "tierBuildMultipliers": [
+        1,
+        1.25,
+        1.5,
+        2,
+        2.5,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "bakery",
+      "nameKey": "building.bakery",
+      "kind": 8,
+      "zone": 3,
+      "managerRole": "baker",
+      "driverRole": "",
+      "cost": {
+        "basis": 3500,
+        "growth": 1.012,
+        "earlyLevels": 24,
+        "earlyGrowth": 1.08
+      },
+      "capacity": {
+        "basis": 24,
+        "growth": 1.008
+      },
+      "rate": {
+        "basis": 1,
+        "growth": 1.008
+      },
+      "price": {
+        "basis": 35,
+        "growth": 1.004
+      },
+      "cycleSeconds": 4,
+      "baseBuildSeconds": 600,
+      "maxBuildSeconds": 2400,
+      "baseResidents": 5,
+      "buildGrowth": 1,
+      "yield": {
+        "basis": 1,
+        "growth": 1.008
+      },
+      "tierBuildMultipliers": [
+        1,
+        1.25,
+        1.5,
+        2,
+        2.5,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "town_hall",
+      "nameKey": "building.town_hall",
+      "kind": 9,
+      "zone": 1,
+      "managerRole": "",
+      "driverRole": "",
+      "cost": {
+        "basis": 1,
+        "growth": 1.012
+      },
+      "capacity": {
+        "basis": 1,
+        "growth": 1.008
+      },
+      "rate": {
+        "basis": 1,
+        "growth": 1.008
+      },
+      "price": {
+        "basis": 1,
+        "growth": 1.004
+      },
+      "cycleSeconds": 4,
+      "baseBuildSeconds": 3,
+      "maxBuildSeconds": 120,
+      "baseResidents": 5,
+      "buildGrowth": 1.001,
+      "yield": {
+        "basis": 1,
+        "growth": 1.008
+      }
+    },
+    {
+      "id": "settlement_plot",
+      "nameKey": "building.settlement_plot",
+      "kind": 10,
+      "zone": 2,
+      "managerRole": "",
+      "driverRole": "",
+      "cost": {
+        "basis": 1,
+        "growth": 1.012
+      },
+      "capacity": {
+        "basis": 1,
+        "growth": 1.008
+      },
+      "rate": {
+        "basis": 1,
+        "growth": 1.008
+      },
+      "price": {
+        "basis": 1,
+        "growth": 1.004
+      },
+      "cycleSeconds": 4,
+      "baseBuildSeconds": 3,
+      "maxBuildSeconds": 120,
+      "baseResidents": 5,
+      "buildGrowth": 1.001,
+      "yield": {
+        "basis": 1,
+        "growth": 1.008
+      }
+    }
+  ],
+  "instances": [
+    {
+      "id": "farm_grow_01",
+      "family": "cultivation_plot",
+      "zone": 0,
+      "cityId": "burning_hills",
+      "x": 169.70563,
+      "z": -254.55844
+    },
+    {
+      "id": "farm_grow_02",
+      "family": "cultivation_plot",
+      "zone": 0,
+      "cityId": "burning_hills",
+      "x": 195.16147,
+      "z": -280.01429
+    },
+    {
+      "id": "farm_grow_03",
+      "family": "cultivation_plot",
+      "zone": 0,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": 220.61732,
+      "z": -305.47013
+    },
+    {
+      "id": "farm_grow_04",
+      "family": "cultivation_plot",
+      "zone": 0,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": 246.07316,
+      "z": -330.92597
+    },
+    {
+      "id": "farm_grow_05",
+      "family": "cultivation_plot",
+      "zone": 0,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": 271.529,
+      "z": -356.38182
+    },
+    {
+      "id": "farm_grow_06",
+      "family": "cultivation_plot",
+      "zone": 0,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": 296.98485,
+      "z": -381.83766
+    },
+    {
+      "id": "farm_grow_07",
+      "family": "cultivation_plot",
+      "zone": 0,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": 322.44069,
+      "z": -407.29351
+    },
+    {
+      "id": "farm_grow_08",
+      "family": "cultivation_plot",
+      "zone": 0,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": 347.89654,
+      "z": -432.74935
+    },
+    {
+      "id": "farm_processing",
+      "family": "farm_processing",
+      "zone": 0,
+      "cityId": "burning_hills",
+      "x": 176.7767,
+      "z": -176.7767
+    },
+    {
+      "id": "farm_warehouse",
+      "family": "farm_warehouse",
+      "zone": 0,
+      "cityId": "burning_hills",
+      "x": 125.86501,
+      "z": -227.68838
+    },
+    {
+      "id": "city_warehouse",
+      "family": "city_warehouse",
+      "zone": 1,
+      "cityId": "burning_hills",
+      "x": 43.84062,
+      "z": -43.84062
+    },
+    {
+      "id": "town_hall",
+      "family": "town_hall",
+      "zone": 1,
+      "cityId": "burning_hills",
+      "x": 0.0,
+      "z": 0.0
+    },
+    {
+      "id": "coffee_01",
+      "family": "coffee_shop",
+      "zone": 1,
+      "cityId": "burning_hills",
+      "x": -41.01219,
+      "z": -41.01219
+    },
+    {
+      "id": "coffee_02",
+      "family": "coffee_shop",
+      "zone": 1,
+      "cityId": "burning_hills",
+      "x": -16.97056,
+      "z": -65.05382
+    },
+    {
+      "id": "coffee_03",
+      "family": "coffee_shop",
+      "zone": 1,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": 7.07107,
+      "z": -89.09545
+    },
+    {
+      "id": "coffee_04",
+      "family": "coffee_shop",
+      "zone": 1,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": -77.78175,
+      "z": -77.78175
+    },
+    {
+      "id": "coffee_05",
+      "family": "coffee_shop",
+      "zone": 1,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": -53.74012,
+      "z": -101.82338
+    },
+    {
+      "id": "coffee_06",
+      "family": "coffee_shop",
+      "zone": 1,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": -29.69848,
+      "z": -125.86501
+    },
+    {
+      "id": "coffee_07",
+      "family": "coffee_shop",
+      "zone": 1,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": -114.5513,
+      "z": -114.5513
+    },
+    {
+      "id": "coffee_08",
+      "family": "coffee_shop",
+      "zone": 1,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": -90.50967,
+      "z": -138.59293
+    },
+    {
+      "id": "coffee_09",
+      "family": "coffee_shop",
+      "zone": 1,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": -66.46804,
+      "z": -162.63456
+    },
+    {
+      "id": "coffee_10",
+      "family": "coffee_shop",
+      "zone": 1,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": -151.32085,
+      "z": -151.32085
+    },
+    {
+      "id": "coffee_11",
+      "family": "coffee_shop",
+      "zone": 1,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": -127.27922,
+      "z": -175.36248
+    },
+    {
+      "id": "coffee_12",
+      "family": "coffee_shop",
+      "zone": 1,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": -103.23759,
+      "z": -199.40411
+    },
+    {
+      "id": "settlement_01",
+      "family": "settlement_plot",
+      "zone": 2,
+      "cityId": "burning_hills",
+      "x": 67.88225,
+      "z": 67.88225
+    },
+    {
+      "id": "settlement_02",
+      "family": "settlement_plot",
+      "zone": 2,
+      "cityId": "burning_hills",
+      "x": 91.92388,
+      "z": 43.84062
+    },
+    {
+      "id": "settlement_03",
+      "family": "settlement_plot",
+      "zone": 2,
+      "cityId": "burning_hills",
+      "x": 115.96551,
+      "z": 19.79899
+    },
+    {
+      "id": "settlement_04",
+      "family": "settlement_plot",
+      "zone": 2,
+      "cityId": "burning_hills",
+      "x": 104.6518,
+      "z": 104.6518
+    },
+    {
+      "id": "settlement_05",
+      "family": "settlement_plot",
+      "zone": 2,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": 128.69343,
+      "z": 80.61017
+    },
+    {
+      "id": "settlement_06",
+      "family": "settlement_plot",
+      "zone": 2,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": 152.73506,
+      "z": 56.56854
+    },
+    {
+      "id": "settlement_07",
+      "family": "settlement_plot",
+      "zone": 2,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": 141.42136,
+      "z": 141.42136
+    },
+    {
+      "id": "settlement_08",
+      "family": "settlement_plot",
+      "zone": 2,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": 165.46299,
+      "z": 117.37973
+    },
+    {
+      "id": "settlement_09",
+      "family": "settlement_plot",
+      "zone": 2,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": 189.50462,
+      "z": 93.3381
+    },
+    {
+      "id": "settlement_10",
+      "family": "settlement_plot",
+      "zone": 2,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": 178.19091,
+      "z": 178.19091
+    },
+    {
+      "id": "settlement_11",
+      "family": "settlement_plot",
+      "zone": 2,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": 202.23254,
+      "z": 154.14928
+    },
+    {
+      "id": "settlement_12",
+      "family": "settlement_plot",
+      "zone": 2,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": 226.27417,
+      "z": 130.10765
+    },
+    {
+      "id": "settlement_13",
+      "family": "settlement_plot",
+      "zone": 2,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": 214.96046,
+      "z": 214.96046
+    },
+    {
+      "id": "settlement_14",
+      "family": "settlement_plot",
+      "zone": 2,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": 239.00209,
+      "z": 190.91883
+    },
+    {
+      "id": "settlement_15",
+      "family": "settlement_plot",
+      "zone": 2,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": 263.04372,
+      "z": 166.8772
+    },
+    {
+      "id": "settlement_16",
+      "family": "settlement_plot",
+      "zone": 2,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": 251.73001,
+      "z": 251.73001
+    },
+    {
+      "id": "settlement_17",
+      "family": "settlement_plot",
+      "zone": 2,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": 275.77164,
+      "z": 227.68838
+    },
+    {
+      "id": "settlement_18",
+      "family": "settlement_plot",
+      "zone": 2,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": 299.81328,
+      "z": 203.64675
+    },
+    {
+      "id": "butter_factory",
+      "family": "butter_factory",
+      "zone": 3,
+      "cityId": "burning_hills",
+      "x": 26.87006,
+      "z": 128.69343
+    },
+    {
+      "id": "supermarket",
+      "family": "supermarket",
+      "zone": 3,
+      "cityId": "burning_hills",
+      "x": -79.19596,
+      "z": 22.62742
+    },
+    {
+      "id": "bakery_01",
+      "family": "bakery",
+      "zone": 3,
+      "cityId": "burning_hills",
+      "x": -12.72792,
+      "z": 168.29141
+    },
+    {
+      "id": "bakery_02",
+      "family": "bakery",
+      "zone": 3,
+      "cityId": "burning_hills",
+      "x": -49.49747,
+      "z": 131.52186
+    },
+    {
+      "id": "bakery_03",
+      "family": "bakery",
+      "zone": 3,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": -86.26703,
+      "z": 94.75231
+    },
+    {
+      "id": "bakery_04",
+      "family": "bakery",
+      "zone": 3,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": -123.03658,
+      "z": 57.98276
+    },
+    {
+      "id": "bakery_05",
+      "family": "bakery",
+      "zone": 3,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": -39.59798,
+      "z": 195.16147
+    },
+    {
+      "id": "bakery_06",
+      "family": "bakery",
+      "zone": 3,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": -76.36753,
+      "z": 158.39192
+    },
+    {
+      "id": "bakery_07",
+      "family": "bakery",
+      "zone": 3,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": -113.13708,
+      "z": 121.62237
+    },
+    {
+      "id": "bakery_08",
+      "family": "bakery",
+      "zone": 3,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": -149.90664,
+      "z": 84.85281
+    },
+    {
+      "id": "bakery_09",
+      "family": "bakery",
+      "zone": 3,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": -66.46804,
+      "z": 222.03153
+    },
+    {
+      "id": "bakery_10",
+      "family": "bakery",
+      "zone": 3,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": -103.23759,
+      "z": 185.26198
+    },
+    {
+      "id": "bakery_11",
+      "family": "bakery",
+      "zone": 3,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": -140.00714,
+      "z": 148.49242
+    },
+    {
+      "id": "bakery_12",
+      "family": "bakery",
+      "zone": 3,
+      "cityId": "burning_hills",
+      "introducedVersion": 2,
+      "x": -176.7767,
+      "z": 111.72287
+    }
+  ],
+  "routes": [
+    {
+      "id": "grow1_processing",
+      "from": "farm_grow_01",
+      "to": "farm_processing",
+      "resource": 0,
+      "vehicle": false,
+      "travelSeconds": 6,
+      "capacity": 8
+    },
+    {
+      "id": "grow2_processing",
+      "from": "farm_grow_02",
+      "to": "farm_processing",
+      "resource": 0,
+      "vehicle": false,
+      "travelSeconds": 6,
+      "capacity": 8
+    },
+    {
+      "id": "grow3_processing",
+      "from": "farm_grow_03",
+      "to": "farm_processing",
+      "resource": 0,
+      "vehicle": false,
+      "travelSeconds": 6,
+      "capacity": 8
+    },
+    {
+      "id": "grow4_processing",
+      "from": "farm_grow_04",
+      "to": "farm_processing",
+      "resource": 0,
+      "vehicle": false,
+      "travelSeconds": 6,
+      "capacity": 8
+    },
+    {
+      "id": "grow5_processing",
+      "from": "farm_grow_05",
+      "to": "farm_processing",
+      "resource": 0,
+      "vehicle": false,
+      "travelSeconds": 6,
+      "capacity": 8
+    },
+    {
+      "id": "grow6_processing",
+      "from": "farm_grow_06",
+      "to": "farm_processing",
+      "resource": 0,
+      "vehicle": false,
+      "travelSeconds": 6,
+      "capacity": 8
+    },
+    {
+      "id": "grow7_processing",
+      "from": "farm_grow_07",
+      "to": "farm_processing",
+      "resource": 0,
+      "vehicle": false,
+      "travelSeconds": 6,
+      "capacity": 8
+    },
+    {
+      "id": "grow8_processing",
+      "from": "farm_grow_08",
+      "to": "farm_processing",
+      "resource": 0,
+      "vehicle": false,
+      "travelSeconds": 6,
+      "capacity": 8
+    },
+    {
+      "id": "processing_farm",
+      "from": "farm_processing",
+      "to": "farm_warehouse",
+      "resource": 1,
+      "vehicle": false,
+      "travelSeconds": 6,
+      "capacity": 8
+    },
+    {
+      "id": "farm_city",
+      "from": "farm_warehouse",
+      "to": "city_warehouse",
+      "resource": 1,
+      "vehicle": true,
+      "travelSeconds": 15,
+      "capacity": 8
+    },
+    {
+      "id": "city_coffee1",
+      "from": "city_warehouse",
+      "to": "coffee_01",
+      "resource": 1,
+      "vehicle": true,
+      "travelSeconds": 16,
+      "capacity": 8
+    },
+    {
+      "id": "city_coffee2",
+      "from": "city_warehouse",
+      "to": "coffee_02",
+      "resource": 1,
+      "vehicle": true,
+      "travelSeconds": 13,
+      "capacity": 8
+    },
+    {
+      "id": "city_coffee3",
+      "from": "city_warehouse",
+      "to": "coffee_03",
+      "resource": 1,
+      "vehicle": true,
+      "travelSeconds": 11,
+      "capacity": 8
+    },
+    {
+      "id": "city_coffee4",
+      "from": "city_warehouse",
+      "to": "coffee_04",
+      "resource": 1,
+      "vehicle": true,
+      "travelSeconds": 20,
+      "capacity": 8
+    },
+    {
+      "id": "city_coffee5",
+      "from": "city_warehouse",
+      "to": "coffee_05",
+      "resource": 1,
+      "vehicle": true,
+      "travelSeconds": 17,
+      "capacity": 8
+    },
+    {
+      "id": "city_coffee6",
+      "from": "city_warehouse",
+      "to": "coffee_06",
+      "resource": 1,
+      "vehicle": true,
+      "travelSeconds": 15,
+      "capacity": 8
+    },
+    {
+      "id": "city_coffee7",
+      "from": "city_warehouse",
+      "to": "coffee_07",
+      "resource": 1,
+      "vehicle": true,
+      "travelSeconds": 23,
+      "capacity": 8
+    },
+    {
+      "id": "city_coffee8",
+      "from": "city_warehouse",
+      "to": "coffee_08",
+      "resource": 1,
+      "vehicle": true,
+      "travelSeconds": 21,
+      "capacity": 8
+    },
+    {
+      "id": "city_coffee9",
+      "from": "city_warehouse",
+      "to": "coffee_09",
+      "resource": 1,
+      "vehicle": true,
+      "travelSeconds": 18,
+      "capacity": 8
+    },
+    {
+      "id": "city_coffee10",
+      "from": "city_warehouse",
+      "to": "coffee_10",
+      "resource": 1,
+      "vehicle": true,
+      "travelSeconds": 27,
+      "capacity": 8
+    },
+    {
+      "id": "city_coffee11",
+      "from": "city_warehouse",
+      "to": "coffee_11",
+      "resource": 1,
+      "vehicle": true,
+      "travelSeconds": 25,
+      "capacity": 8
+    },
+    {
+      "id": "city_coffee12",
+      "from": "city_warehouse",
+      "to": "coffee_12",
+      "resource": 1,
+      "vehicle": true,
+      "travelSeconds": 22,
+      "capacity": 8
+    },
+    {
+      "id": "city_butter",
+      "from": "city_warehouse",
+      "to": "butter_factory",
+      "resource": 1,
+      "vehicle": true,
+      "travelSeconds": 24,
+      "capacity": 8
+    },
+    {
+      "id": "butter_bakery1",
+      "from": "butter_factory",
+      "to": "bakery_01",
+      "resource": 2,
+      "vehicle": true,
+      "travelSeconds": 6,
+      "capacity": 8,
+      "pickupByRecipient": true
+    },
+    {
+      "id": "butter_bakery2",
+      "from": "butter_factory",
+      "to": "bakery_02",
+      "resource": 2,
+      "vehicle": true,
+      "travelSeconds": 9,
+      "capacity": 8,
+      "pickupByRecipient": true
+    },
+    {
+      "id": "butter_bakery3",
+      "from": "butter_factory",
+      "to": "bakery_03",
+      "resource": 2,
+      "vehicle": true,
+      "travelSeconds": 13,
+      "capacity": 8,
+      "pickupByRecipient": true
+    },
+    {
+      "id": "butter_bakery4",
+      "from": "butter_factory",
+      "to": "bakery_04",
+      "resource": 2,
+      "vehicle": true,
+      "travelSeconds": 16,
+      "capacity": 8,
+      "pickupByRecipient": true
+    },
+    {
+      "id": "butter_bakery5",
+      "from": "butter_factory",
+      "to": "bakery_05",
+      "resource": 2,
+      "vehicle": true,
+      "travelSeconds": 8,
+      "capacity": 8,
+      "pickupByRecipient": true
+    },
+    {
+      "id": "butter_bakery6",
+      "from": "butter_factory",
+      "to": "bakery_06",
+      "resource": 2,
+      "vehicle": true,
+      "travelSeconds": 12,
+      "capacity": 8,
+      "pickupByRecipient": true
+    },
+    {
+      "id": "butter_bakery7",
+      "from": "butter_factory",
+      "to": "bakery_07",
+      "resource": 2,
+      "vehicle": true,
+      "travelSeconds": 15,
+      "capacity": 8,
+      "pickupByRecipient": true
+    },
+    {
+      "id": "butter_bakery8",
+      "from": "butter_factory",
+      "to": "bakery_08",
+      "resource": 2,
+      "vehicle": true,
+      "travelSeconds": 19,
+      "capacity": 8,
+      "pickupByRecipient": true
+    },
+    {
+      "id": "butter_bakery9",
+      "from": "butter_factory",
+      "to": "bakery_09",
+      "resource": 2,
+      "vehicle": true,
+      "travelSeconds": 11,
+      "capacity": 8,
+      "pickupByRecipient": true
+    },
+    {
+      "id": "butter_bakery10",
+      "from": "butter_factory",
+      "to": "bakery_10",
+      "resource": 2,
+      "vehicle": true,
+      "travelSeconds": 14,
+      "capacity": 8,
+      "pickupByRecipient": true
+    },
+    {
+      "id": "butter_bakery11",
+      "from": "butter_factory",
+      "to": "bakery_11",
+      "resource": 2,
+      "vehicle": true,
+      "travelSeconds": 18,
+      "capacity": 8,
+      "pickupByRecipient": true
+    },
+    {
+      "id": "butter_bakery12",
+      "from": "butter_factory",
+      "to": "bakery_12",
+      "resource": 2,
+      "vehicle": true,
+      "travelSeconds": 22,
+      "capacity": 8,
+      "pickupByRecipient": true
+    }
+  ],
+  "roles": [
+    {
+      "id": "grow",
+      "nameKey": "role.grow",
+      "attributes": [
+        0,
+        1,
+        2,
+        3,
+        9
+      ]
+    },
+    {
+      "id": "processing",
+      "nameKey": "role.processing",
+      "attributes": [
+        0,
+        1,
+        2,
+        3,
+        9
+      ]
+    },
+    {
+      "id": "farm_manager",
+      "nameKey": "role.farm_manager",
+      "attributes": [
+        1,
+        2,
+        3,
+        9,
+        0
+      ]
+    },
+    {
+      "id": "farm_driver",
+      "nameKey": "role.farm_driver",
+      "attributes": [
+        4,
+        5,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "id": "city_manager",
+      "nameKey": "role.city_manager",
+      "attributes": [
+        1,
+        2,
+        3,
+        9,
+        0
+      ]
+    },
+    {
+      "id": "city_driver",
+      "nameKey": "role.city_driver",
+      "attributes": [
+        4,
+        5,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "id": "coffee",
+      "nameKey": "role.coffee",
+      "attributes": [
+        1,
+        2,
+        3,
+        6,
+        9
+      ]
+    },
+    {
+      "id": "caretaker",
+      "nameKey": "role.caretaker",
+      "attributes": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "id": "ranger",
+      "nameKey": "role.ranger",
+      "attributes": [
+        8,
+        9,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "id": "butter",
+      "nameKey": "role.butter",
+      "attributes": [
+        0,
+        1,
+        2,
+        3,
+        9
+      ]
+    },
+    {
+      "id": "market",
+      "nameKey": "role.market",
+      "attributes": [
+        1,
+        2,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "baker",
+      "nameKey": "role.baker",
+      "attributes": [
+        1,
+        2,
+        3,
+        6,
+        9
+      ]
+    }
+  ],
+  "quests": [
+    {
+      "id": "farm_welcome",
+      "titleKey": "quest.farm_welcome.title",
+      "bodyKey": "quest.farm_welcome.body",
+      "speaker": "Mila",
+      "focus": "farm_grow_01",
+      "conditions": [
+        {
+          "kind": 0,
+          "target": "mila",
+          "count": 1
+        }
+      ],
+      "moneyReward": 0,
+      "cardsReward": 0,
+      "workerRewards": [],
+      "unlock": 0,
+      "itemRewards": []
+    },
+    {
+      "id": "first_crop",
+      "titleKey": "quest.first_crop.title",
+      "bodyKey": "quest.first_crop.body",
+      "speaker": "Mila",
+      "focus": "farm_grow_01",
+      "conditions": [
+        {
+          "kind": 1,
+          "target": "farm_grow_01",
+          "count": 1
+        }
+      ],
+      "moneyReward": 150,
+      "cardsReward": 0,
+      "workerRewards": [],
+      "unlock": 0,
+      "itemRewards": [
+        {
+          "id": "build_1m",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "manual_harvest",
+      "titleKey": "quest.manual_harvest.title",
+      "bodyKey": "quest.manual_harvest.body",
+      "speaker": "Mila",
+      "focus": "farm_grow_01",
+      "conditions": [
+        {
+          "kind": 2,
+          "target": "",
+          "count": 1
+        }
+      ],
+      "moneyReward": 150,
+      "cardsReward": 0,
+      "workerRewards": [
+        "grow"
+      ],
+      "unlock": 0,
+      "itemRewards": []
+    },
+    {
+      "id": "grow_manager",
+      "titleKey": "quest.grow_manager.title",
+      "bodyKey": "quest.grow_manager.body",
+      "speaker": "Mila",
+      "focus": "farm_grow_01",
+      "conditions": [
+        {
+          "kind": 3,
+          "target": "farm_grow_01",
+          "count": 1
+        }
+      ],
+      "moneyReward": 150,
+      "cardsReward": 0,
+      "workerRewards": [],
+      "unlock": 0,
+      "itemRewards": [
+        {
+          "id": "build_5m",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "processing",
+      "titleKey": "quest.processing.title",
+      "bodyKey": "quest.processing.body",
+      "speaker": "Jaro",
+      "focus": "farm_processing",
+      "conditions": [
+        {
+          "kind": 0,
+          "target": "jaro",
+          "count": 1
+        },
+        {
+          "kind": 1,
+          "target": "farm_processing",
+          "count": 1
+        }
+      ],
+      "moneyReward": 150,
+      "cardsReward": 0,
+      "workerRewards": [
+        "processing"
+      ],
+      "unlock": 0,
+      "itemRewards": []
+    },
+    {
+      "id": "processing_manager",
+      "titleKey": "quest.processing_manager.title",
+      "bodyKey": "quest.processing_manager.body",
+      "speaker": "Jaro",
+      "focus": "farm_processing",
+      "conditions": [
+        {
+          "kind": 3,
+          "target": "farm_processing",
+          "count": 1
+        }
+      ],
+      "moneyReward": 150,
+      "cardsReward": 0,
+      "workerRewards": [],
+      "unlock": 0,
+      "itemRewards": [
+        {
+          "id": "build_5m",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "farm_storage",
+      "titleKey": "quest.farm_storage.title",
+      "bodyKey": "quest.farm_storage.body",
+      "speaker": "Nia",
+      "focus": "farm_warehouse",
+      "conditions": [
+        {
+          "kind": 0,
+          "target": "nia",
+          "count": 1
+        },
+        {
+          "kind": 1,
+          "target": "farm_warehouse",
+          "count": 1
+        }
+      ],
+      "moneyReward": 150,
+      "cardsReward": 0,
+      "workerRewards": [
+        "farm_manager",
+        "farm_driver"
+      ],
+      "unlock": 0,
+      "itemRewards": []
+    },
+    {
+      "id": "farm_delivery",
+      "titleKey": "quest.farm_delivery.title",
+      "bodyKey": "quest.farm_delivery.body",
+      "speaker": "Nia",
+      "focus": "farm_warehouse",
+      "conditions": [
+        {
+          "kind": 3,
+          "target": "farm_warehouse",
+          "count": 2
+        },
+        {
+          "kind": 4,
+          "target": "",
+          "count": 1
+        },
+        {
+          "kind": 12,
+          "target": "farm_grow_01",
+          "count": 1
+        },
+        {
+          "kind": 12,
+          "target": "farm_processing",
+          "count": 1
+        },
+        {
+          "kind": 12,
+          "target": "farm_warehouse",
+          "count": 1
+        }
+      ],
+      "moneyReward": 150,
+      "cardsReward": 1,
+      "workerRewards": [],
+      "unlock": 1,
+      "itemRewards": [
+        {
+          "id": "build_15m",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "city_rebuild",
+      "titleKey": "quest.city_rebuild.title",
+      "bodyKey": "quest.city_rebuild.body",
+      "speaker": "Rocko",
+      "focus": "city_warehouse",
+      "conditions": [
+        {
+          "kind": 1,
+          "target": "city_warehouse",
+          "count": 1
+        },
+        {
+          "kind": 1,
+          "target": "coffee_01",
+          "count": 1
+        }
+      ],
+      "moneyReward": 150,
+      "cardsReward": 0,
+      "workerRewards": [
+        "city_manager",
+        "city_driver",
+        "coffee"
+      ],
+      "unlock": 1,
+      "itemRewards": []
+    },
+    {
+      "id": "city_sales",
+      "titleKey": "quest.city_sales.title",
+      "bodyKey": "quest.city_sales.body",
+      "speaker": "Rocko",
+      "focus": "coffee_01",
+      "conditions": [
+        {
+          "kind": 3,
+          "target": "city_warehouse",
+          "count": 2
+        },
+        {
+          "kind": 3,
+          "target": "coffee_01",
+          "count": 1
+        },
+        {
+          "kind": 5,
+          "target": "",
+          "count": 1
+        }
+      ],
+      "moneyReward": 150,
+      "cardsReward": 0,
+      "workerRewards": [],
+      "unlock": 1,
+      "itemRewards": [
+        {
+          "id": "team_pack",
+          "count": 1
+        },
+        {
+          "id": "cash_crate",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "townhall_spin",
+      "titleKey": "quest.townhall_spin.title",
+      "bodyKey": "quest.townhall_spin.body",
+      "speaker": "Rocko",
+      "focus": "town_hall",
+      "conditions": [
+        {
+          "kind": 7,
+          "target": "",
+          "count": 1
+        },
+        {
+          "kind": 6,
+          "target": "",
+          "count": 1
+        }
+      ],
+      "moneyReward": 350,
+      "cardsReward": 0,
+      "workerRewards": [],
+      "unlock": 2,
+      "itemRewards": [
+        {
+          "id": "specialist_contract",
+          "count": 1
+        },
+        {
+          "id": "grinder_pouch",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "settlement_build",
+      "titleKey": "quest.settlement_build.title",
+      "bodyKey": "quest.settlement_build.body",
+      "speaker": "Rocko",
+      "focus": "settlement_01",
+      "conditions": [
+        {
+          "kind": 1,
+          "target": "residential_house",
+          "count": 1
+        },
+        {
+          "kind": 1,
+          "target": "park",
+          "count": 1
+        }
+      ],
+      "moneyReward": 150,
+      "cardsReward": 0,
+      "workerRewards": [
+        "caretaker",
+        "ranger"
+      ],
+      "unlock": 2,
+      "itemRewards": [
+        {
+          "id": "build_30m",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "settlement_daily",
+      "titleKey": "quest.settlement_daily.title",
+      "bodyKey": "quest.settlement_daily.body",
+      "speaker": "Rocko",
+      "focus": "settlement_01",
+      "conditions": [
+        {
+          "kind": 8,
+          "target": "",
+          "count": 1
+        },
+        {
+          "kind": 9,
+          "target": "",
+          "count": 1
+        },
+        {
+          "kind": 13,
+          "target": "",
+          "count": 1
+        },
+        {
+          "kind": 3,
+          "target": "residential_house",
+          "count": 1
+        },
+        {
+          "kind": 3,
+          "target": "park",
+          "count": 1
+        }
+      ],
+      "moneyReward": 600,
+      "cardsReward": 0,
+      "workerRewards": [
+        "butter",
+        "market",
+        "baker"
+      ],
+      "unlock": 3,
+      "itemRewards": [
+        {
+          "id": "build_1h",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "industry_build",
+      "titleKey": "quest.industry_build.title",
+      "bodyKey": "quest.industry_build.body",
+      "speaker": "Rocko",
+      "focus": "butter_factory",
+      "conditions": [
+        {
+          "kind": 1,
+          "target": "butter_factory",
+          "count": 1
+        },
+        {
+          "kind": 1,
+          "target": "supermarket",
+          "count": 1
+        },
+        {
+          "kind": 1,
+          "target": "bakery_01",
+          "count": 1
+        }
+      ],
+      "moneyReward": 150,
+      "cardsReward": 0,
+      "workerRewards": [],
+      "unlock": 3,
+      "itemRewards": [
+        {
+          "id": "build_5h",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "industry_sell",
+      "titleKey": "quest.industry_sell.title",
+      "bodyKey": "quest.industry_sell.body",
+      "speaker": "Rocko",
+      "focus": "bakery_01",
+      "conditions": [
+        {
+          "kind": 10,
+          "target": "",
+          "count": 1
+        },
+        {
+          "kind": 11,
+          "target": "",
+          "count": 1
+        },
+        {
+          "kind": 12,
+          "target": "butter_factory",
+          "count": 1
+        },
+        {
+          "kind": 12,
+          "target": "supermarket",
+          "count": 1
+        },
+        {
+          "kind": 12,
+          "target": "bakery_01",
+          "count": 1
+        }
+      ],
+      "moneyReward": 150,
+      "cardsReward": 0,
+      "workerRewards": [],
+      "unlock": 3,
+      "itemRewards": [
+        {
+          "id": "build_10h",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "freeplay",
+      "titleKey": "quest.freeplay.title",
+      "bodyKey": "quest.freeplay.body",
+      "speaker": "Rocko",
+      "focus": "supermarket",
+      "conditions": [
+        {
+          "kind": 9,
+          "target": "supermarket",
+          "count": 1
+        },
+        {
+          "kind": 12,
+          "target": "butter_factory",
+          "count": 1
+        },
+        {
+          "kind": 12,
+          "target": "supermarket",
+          "count": 1
+        },
+        {
+          "kind": 12,
+          "target": "bakery_01",
+          "count": 1
+        }
+      ],
+      "moneyReward": 500,
+      "cardsReward": 0,
+      "workerRewards": [],
+      "unlock": 3,
+      "itemRewards": [
+        {
+          "id": "build_24h",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "key": "building.cultivation_plot",
+      "de": "Anbauplatz"
+    },
+    {
+      "key": "building.farm_processing",
+      "de": "Farm-Veredelung"
+    },
+    {
+      "key": "building.farm_warehouse",
+      "de": "Farm-Lager"
+    },
+    {
+      "key": "building.city_warehouse",
+      "de": "Stadt-Lager"
+    },
+    {
+      "key": "building.coffee_shop",
+      "de": "Coffee-Shop"
+    },
+    {
+      "key": "building.residential_house",
+      "de": "Wohnhaus"
+    },
+    {
+      "key": "building.park",
+      "de": "Park"
+    },
+    {
+      "key": "building.butter_factory",
+      "de": "Butterfabrik"
+    },
+    {
+      "key": "building.supermarket",
+      "de": "Supermarkt"
+    },
+    {
+      "key": "building.bakery",
+      "de": "Bäckerei"
+    },
+    {
+      "key": "building.town_hall",
+      "de": "Rathaus · Rocko"
+    },
+    {
+      "key": "building.settlement_plot",
+      "de": "Freier Bauplatz"
+    },
+    {
+      "key": "role.grow",
+      "de": "Anbau-Manager"
+    },
+    {
+      "key": "role.processing",
+      "de": "Verarbeitungsmanager"
+    },
+    {
+      "key": "role.farm_manager",
+      "de": "Farm-Lager-Manager"
+    },
+    {
+      "key": "role.farm_driver",
+      "de": "Farm-Fahrer"
+    },
+    {
+      "key": "role.city_manager",
+      "de": "Stadt-Lager-Manager"
+    },
+    {
+      "key": "role.city_driver",
+      "de": "Stadt-Lieferfahrer"
+    },
+    {
+      "key": "role.coffee",
+      "de": "Coffee-Shop-Manager"
+    },
+    {
+      "key": "role.caretaker",
+      "de": "Hausmeister"
+    },
+    {
+      "key": "role.ranger",
+      "de": "Parkwächter"
+    },
+    {
+      "key": "role.butter",
+      "de": "Butterfabrik-Manager"
+    },
+    {
+      "key": "role.market",
+      "de": "Supermarkt-Leiter"
+    },
+    {
+      "key": "role.baker",
+      "de": "Bäckermeister"
+    },
+    {
+      "key": "quest.farm_welcome.title",
+      "de": "Mila wartet am Anbauplatz"
+    },
+    {
+      "key": "quest.farm_welcome.body",
+      "de": "Sprich mit Mila am ersten Anbauplatz. Wir fangen klein an."
+    },
+    {
+      "key": "quest.first_crop.title",
+      "de": "Ein Topf voller Hoffnung"
+    },
+    {
+      "key": "quest.first_crop.body",
+      "de": "Baue den ersten Anbauplatz auf Level 1 aus. Geld bezahlt den Ausbau, danach läuft die Bauzeit."
+    },
+    {
+      "key": "quest.manual_harvest.title",
+      "de": "Handarbeit"
+    },
+    {
+      "key": "quest.manual_harvest.body",
+      "de": "Warte auf die reife Ernte und sammle sie von Hand ein. Ohne Manager bleibt sie am Anbauplatz."
+    },
+    {
+      "key": "quest.grow_manager.title",
+      "de": "Mila übernimmt"
+    },
+    {
+      "key": "quest.grow_manager.body",
+      "de": "Weise den erhaltenen Anbau-Manager dem ersten Anbauplatz zu."
+    },
+    {
+      "key": "quest.processing.title",
+      "de": "Jaro veredelt"
+    },
+    {
+      "key": "quest.processing.body",
+      "de": "Sprich mit Jaro. Baue die Farm-Veredelung auf. Ein kleiner Durchlauf staut die Ernte auf dem Band."
+    },
+    {
+      "key": "quest.processing_manager.title",
+      "de": "Das Band läuft"
+    },
+    {
+      "key": "quest.processing_manager.body",
+      "de": "Weise den Verarbeitungsmanager zu. Puffer behalten Material, auch wenn der nächste Schritt voll ist."
+    },
+    {
+      "key": "quest.farm_storage.title",
+      "de": "Nias Logistik"
+    },
+    {
+      "key": "quest.farm_storage.body",
+      "de": "Sprich mit Nia. Repariere das Farm-Lager. Die erste visuelle Stufe hat einen Fahrerplatz."
+    },
+    {
+      "key": "quest.farm_delivery.title",
+      "de": "Burning Hills bekommt Nachschub"
+    },
+    {
+      "key": "quest.farm_delivery.body",
+      "de": "Besetze Manager und Fahrer im Farm-Lager. Eine echte Lieferung muss das Stadtdock erreichen."
+    },
+    {
+      "key": "quest.city_rebuild.title",
+      "de": "Willkommen in der Stadt"
+    },
+    {
+      "key": "quest.city_rebuild.body",
+      "de": "Aktiviere das Stadt-Lager und den ersten Coffee-Shop. Rocko erwartet dich im Rathaus."
+    },
+    {
+      "key": "quest.city_sales.title",
+      "de": "Die erste Kasse klingelt"
+    },
+    {
+      "key": "quest.city_sales.body",
+      "de": "Besetze Stadt-Manager, Lieferfahrer und Shop-Manager. Verkaufe mindestens eine veredelte Blüte."
+    },
+    {
+      "key": "quest.townhall_spin.title",
+      "de": "Ein neues Gesicht"
+    },
+    {
+      "key": "quest.townhall_spin.body",
+      "de": "Besuche Rocko im Rathaus. Öffne danach Mein Team und verwandle dort eine Karte mit einem Spin in ein neues Teammitglied."
+    },
+    {
+      "key": "quest.settlement_build.title",
+      "de": "Ein Zuhause und ein grüner Ort"
+    },
+    {
+      "key": "quest.settlement_build.body",
+      "de": "Wähle auf zwei getrennten Bauplätzen ein Wohnhaus und einen Park und baue beide auf. Der letzte freie Platz bleibt für den noch fehlenden Typ reserviert."
+    },
+    {
+      "key": "quest.settlement_daily.title",
+      "de": "Die Nachbarschaft wächst"
+    },
+    {
+      "key": "quest.settlement_daily.body",
+      "de": "Besetze Hausmeister und Parkwächter. Hole die Tagesbelohnungen ab und erledige eine VIP-Quest. Neue Gebäude haben eine erste Tagesration."
+    },
+    {
+      "key": "quest.industry_build.title",
+      "de": "Die nächste Produktionskette"
+    },
+    {
+      "key": "quest.industry_build.body",
+      "de": "Repariere Butterfabrik, Supermarkt und eine Bäckerei. Der Stadtfahrer beliefert die Butterfabrik im Wechsel mit den Shops."
+    },
+    {
+      "key": "quest.industry_sell.title",
+      "de": "Butter, Backwaren, Zukunft"
+    },
+    {
+      "key": "quest.industry_sell.body",
+      "de": "Besetze die drei Spezialisten. Zwei Blüten werden zu einer Butter. Der Bäcker holt die Butter mit seinem Lieferwagen an der Fabrik ab und backt nach seiner Rückkehr."
+    },
+    {
+      "key": "quest.freeplay.title",
+      "de": "Burning Hills gehört euch"
+    },
+    {
+      "key": "quest.freeplay.body",
+      "de": "Hole den täglichen Grinderbonus im Supermarkt ab. Danach bestimmst du den weiteren Ausbau. Parks liefern weiterhin erreichbare VIP-Aufträge."
+    },
+    {
+      "key": "game.title",
+      "de": "BURNING HILLS"
+    },
+    {
+      "key": "game.subtitle",
+      "de": "Wiederaufbau · Produktion · Gemeinschaft"
+    },
+    {
+      "key": "intro.0",
+      "de": "Rocko: Hey, aufwachen! Beide Seiten haben im THC-Krieg kapituliert. Jetzt bauen wir gemeinsam wieder auf."
+    },
+    {
+      "key": "intro.1",
+      "de": "Rocko: Früher war ich bei der Mafia. Heute arbeite ich für die Regierung – als Bürgermeister von Burning Hills. Und du wirst mein Assistent."
+    },
+    {
+      "key": "intro.2",
+      "de": "Rocko: Du bekommst 1.000 Geld und 50 goldene Grinder. Bring zuerst die Farm zum Laufen. Mila, Jaro und Nia helfen dir. Grinder brauchst du fürs Tutorial nicht."
+    },
+    {
+      "key": "intro.done",
+      "de": "Willkommen, {0}. Die Farm wartet auf dich."
+    },
+    {
+      "key": "name.invalid",
+      "de": "Bitte 2–24 Zeichen ohne Steuerzeichen oder spitze Klammern eingeben."
+    },
+    {
+      "key": "bottleneck.harvest",
+      "de": "Erntepuffer voll"
+    },
+    {
+      "key": "bottleneck.manager",
+      "de": "Wartet auf Handbetrieb"
+    },
+    {
+      "key": "bottleneck.output",
+      "de": "Zielpuffer voll"
+    },
+    {
+      "key": "bottleneck.throughput",
+      "de": "Durchsatz ausgelastet"
+    },
+    {
+      "key": "bottleneck.input",
+      "de": "Wartet auf Rohstoffe"
+    },
+    {
+      "key": "bottleneck.storage",
+      "de": "Ziel-Lager voll"
+    },
+    {
+      "key": "bottleneck.driver",
+      "de": "Fahrer fehlt"
+    },
+    {
+      "key": "bottleneck.none",
+      "de": "Produktion im Fluss"
+    },
+    {
+      "key": "failure.None",
+      "de": "Erledigt."
+    },
+    {
+      "key": "failure.Locked",
+      "de": "Zone noch gesperrt. Schließe den aktuellen Hauptauftrag ab."
+    },
+    {
+      "key": "failure.Invalid",
+      "de": "Diese Aktion ist hier noch nicht möglich."
+    },
+    {
+      "key": "failure.Busy",
+      "de": "Gerade im Bau oder auf Lieferung. Bitte warten."
+    },
+    {
+      "key": "failure.Money",
+      "de": "Es fehlt Geld. Produktion oder Auftragsbelohnung nutzen."
+    },
+    {
+      "key": "failure.GrinderConfirmation",
+      "de": "Geld reicht nicht. Eine Grinder-Ausgabe braucht deine Bestätigung."
+    },
+    {
+      "key": "failure.Grinders",
+      "de": "Nicht genug Grinder."
+    },
+    {
+      "key": "failure.Incompatible",
+      "de": "Dieser Worker passt nicht zur Tätigkeit des Slots."
+    },
+    {
+      "key": "failure.Slot",
+      "de": "Dieser Fahrerplatz wird erst mit dem nächsten visuellen Tier frei."
+    },
+    {
+      "key": "failure.Card",
+      "de": "Keine Worker-Karte verfügbar. Wohnhäuser liefern täglich Karten."
+    },
+    {
+      "key": "failure.NotReady",
+      "de": "Noch nicht bereit. Die angezeigten Bedingungen zuerst erfüllen."
+    },
+    {
+      "key": "failure.StaleOffer",
+      "de": "Angebot abgelaufen oder bereits verwendet. Bitte neu öffnen."
+    },
+    {
+      "key": "failure.ReservedPlot",
+      "de": "Dieser letzte freie Platz wird für den noch fehlenden Wohnhaus-/Parktyp gebraucht."
+    },
+    {
+      "key": "online.disabled",
+      "de": "Online-Rangliste noch nicht verbunden"
+    },
+    {
+      "key": "local.title",
+      "de": "Lokale Stadtstatistik"
+    },
+    {
+      "key": "ui.new",
+      "de": "Neues Spiel"
+    },
+    {
+      "key": "ui.continue",
+      "de": "Weiterladen"
+    },
+    {
+      "key": "ui.name",
+      "de": "Dein Name"
+    },
+    {
+      "key": "ui.start",
+      "de": "Burning Hills starten"
+    },
+    {
+      "key": "ui.next",
+      "de": "Weiter"
+    },
+    {
+      "key": "ui.skip",
+      "de": "Intro überspringen"
+    },
+    {
+      "key": "ui.restart_intro",
+      "de": "Intro erneut ansehen"
+    },
+    {
+      "key": "ui.save",
+      "de": "Speichern"
+    },
+    {
+      "key": "ui.pause",
+      "de": "Einstellungen"
+    },
+    {
+      "key": "ui.resume",
+      "de": "Weiterspielen"
+    },
+    {
+      "key": "ui.close",
+      "de": "Schließen"
+    },
+    {
+      "key": "ui.upgrade",
+      "de": "Mit Geld ausbauen"
+    },
+    {
+      "key": "ui.finish",
+      "de": "Bauzeit mit Grindern beenden"
+    },
+    {
+      "key": "ui.harvest",
+      "de": "Ernte einsammeln"
+    },
+    {
+      "key": "ui.work",
+      "de": "30 s Handbetrieb starten"
+    },
+    {
+      "key": "ui.talk",
+      "de": "Bewohner ansprechen"
+    },
+    {
+      "key": "ui.claim",
+      "de": "Questbelohnung abholen"
+    },
+    {
+      "key": "ui.focus",
+      "de": "Zum Questziel"
+    },
+    {
+      "key": "ui.workers",
+      "de": "Mein Team"
+    },
+    {
+      "key": "city.burning_hills",
+      "de": "Burning Hills"
+    },
+    {
+      "key": "ui.spin_locked",
+      "de": "Der Spin wird mit dem Stadtviertel freigeschaltet."
+    },
+    {
+      "key": "ui.spin_empty",
+      "de": "Noch keine Karten. Erfülle Aufträge für neue Karten."
+    },
+    {
+      "key": "ui.spin_ready",
+      "de": "1 Karte für ein neues Teammitglied."
+    },
+    {
+      "key": "ui.journal",
+      "de": "Aufträge"
+    },
+    {
+      "key": "ui.townhall",
+      "de": "Rathaus"
+    },
+    {
+      "key": "ui.spin",
+      "de": "1 Karte → Worker-Spin"
+    },
+    {
+      "key": "ui.daily",
+      "de": "Tagesbelohnungen abholen"
+    },
+    {
+      "key": "ui.house",
+      "de": "Wohnhaus wählen"
+    },
+    {
+      "key": "ui.park",
+      "de": "Park wählen"
+    },
+    {
+      "key": "ui.confirm",
+      "de": "Grinder verbindlich ausgeben"
+    },
+    {
+      "key": "ui.cancel",
+      "de": "Abbrechen"
+    },
+    {
+      "key": "ui.volume",
+      "de": "Lautstärke"
+    },
+    {
+      "key": "ui.scale",
+      "de": "UI-Skalierung"
+    },
+    {
+      "key": "ui.reset",
+      "de": "Neues Spiel vorbereiten"
+    },
+    {
+      "key": "ui.filter",
+      "de": "Rollenfilter"
+    },
+    {
+      "key": "ui.assign",
+      "de": "Zuweisen"
+    },
+    {
+      "key": "ui.remove",
+      "de": "Freistellen"
+    },
+    {
+      "key": "ui.worker_level",
+      "de": "Worker-Level erhöhen"
+    },
+    {
+      "key": "ui.worker_rank",
+      "de": "Worker-Rang erhöhen"
+    },
+    {
+      "key": "ui.freeplay",
+      "de": "Freies Spiel · Burning Hills wächst"
+    },
+    {
+      "key": "ui.dev",
+      "de": "Entwicklungsvisuals · Gebäude-Art wartet auf visuelle Freigabe"
+    },
+    {
+      "key": "ui.saved",
+      "de": "Spielstand sicher gespeichert."
+    },
+    {
+      "key": "ui.no_save",
+      "de": "Noch kein gültiger Spielstand vorhanden."
+    },
+    {
+      "key": "ui.recovered",
+      "de": "Die Hauptdatei war beschädigt. Der letzte gültige Backupstand wurde geladen."
+    },
+    {
+      "key": "ui.offline",
+      "de": "Offline: {0} Sekunden simuliert · {1} Geld verdient. Maximal 8 Stunden; negative Zeit wird nicht belohnt."
+    },
+    {
+      "key": "ui.premium",
+      "de": "{0} Grinder für {1}? Erst dieser Bestätigungsklick gibt Premiumwährung aus."
+    },
+    {
+      "key": "ui.empty_workers",
+      "de": "Noch keine passenden Worker. Hauptquests geben garantierte Spezialisten; Karten gibt es in Wohnhäusern."
+    },
+    {
+      "key": "ui.empty_vip",
+      "de": "Noch keine VIP-Aufträge. Ein gebauter Park stellt täglich neue Aufgaben bereit."
+    },
+    {
+      "key": "ui.stats",
+      "de": "Verdient {0} · Blüten roh {1} / veredelt {2}\nCoffee-Verkäufe {3} · Backwaren {4}\nEinwohner {5} · Lieferungen {6}\nHauptquests {7} · VIP {8} · Worker erhalten/eingesetzt {9}/{10}\nHöchstes Level {11} · Spielzeit {12}s · Freeplay {13}\nVerfügbar {14} Geld · {15} Grinder"
+    },
+    {
+      "key": "ui.detail",
+      "de": "Level {0}\nRoh {8} | Blüten {9}\nButter {10} | Backwaren {11}\nKapazität je Puffer: {3}\nDurchsatz {4}/s · Fahrer {7}\nAusbau: {5} Geld\nBauzeit: {6}"
+    },
+    {
+      "key": "ui.worker_detail",
+      "de": "{0} · {1}\nLevel {2} · Rang {3}\nAttribute: {4}\nZuweisung: {5}"
+    },
+    {
+      "key": "ui.hud",
+      "de": "Geld {0}     ◆ Grinder {1}     ▣ Karten {2}     Einwohner {3}"
+    },
+    {
+      "key": "ui.vip",
+      "de": "VIP: {0} → Ziel {1} · Belohnung {2} Geld"
+    },
+    {
+      "key": "zone.Farm",
+      "de": "Farm"
+    },
+    {
+      "key": "zone.City",
+      "de": "Stadt"
+    },
+    {
+      "key": "zone.Settlement",
+      "de": "Siedlung"
+    },
+    {
+      "key": "zone.Industry",
+      "de": "Industrie"
+    },
+    {
+      "key": "rarity.0",
+      "de": "Normal"
+    },
+    {
+      "key": "rarity.1",
+      "de": "Rare"
+    },
+    {
+      "key": "rarity.2",
+      "de": "Super Rare"
+    },
+    {
+      "key": "rarity.3",
+      "de": "Ultra Rare"
+    },
+    {
+      "key": "rarity.4",
+      "de": "Mega Rare"
+    },
+    {
+      "key": "speaker.mila",
+      "de": "Mila · Anbau"
+    },
+    {
+      "key": "speaker.jaro",
+      "de": "Jaro · Veredelung"
+    },
+    {
+      "key": "speaker.nia",
+      "de": "Nia · Logistik"
+    },
+    {
+      "key": "speaker.rocko",
+      "de": "Rocko · Bürgermeister"
+    },
+    {
+      "key": "attribute.0",
+      "de": "Ertrag"
+    },
+    {
+      "key": "attribute.1",
+      "de": "Zyklusgeschwindigkeit"
+    },
+    {
+      "key": "attribute.2",
+      "de": "Durchsatz"
+    },
+    {
+      "key": "attribute.3",
+      "de": "Lagerkapazität"
+    },
+    {
+      "key": "attribute.4",
+      "de": "Transportkapazität"
+    },
+    {
+      "key": "attribute.5",
+      "de": "Fahrgeschwindigkeit"
+    },
+    {
+      "key": "attribute.6",
+      "de": "Verkaufspreis"
+    },
+    {
+      "key": "attribute.7",
+      "de": "Einwohnerbonus"
+    },
+    {
+      "key": "attribute.8",
+      "de": "Tagesbonus"
+    },
+    {
+      "key": "attribute.9",
+      "de": "Bauzeitbonus"
+    },
+    {
+      "key": "attribute.10",
+      "de": "Trainingsermäßigung"
+    },
+    {
+      "key": "attribute.11",
+      "de": "Rangermäßigung"
+    },
+    {
+      "key": "attribute.12",
+      "de": "VIP-Prämie"
+    },
+    {
+      "key": "attribute.13",
+      "de": "VIP-Zielbonus"
+    },
+    {
+      "key": "attribute.14",
+      "de": "Gemeinschaftseinkommen"
+    },
+    {
+      "key": "ui.deliveries",
+      "de": "Ware liefern"
+    },
+    {
+      "key": "ui.unassigned",
+      "de": "Nicht zugewiesen"
+    },
+    {
+      "key": "ui.offline_title",
+      "de": "Willkommen zurück"
+    },
+    {
+      "key": "ui.recovery",
+      "de": "+100 Geld · Aufbauhilfe"
+    },
+    {
+      "key": "ui.rocko_identity",
+      "de": "Willkommen in Burning Hills. Wir packen den Wiederaufbau gemeinsam an."
+    },
+    {
+      "key": "ui.premium_title",
+      "de": "Goldene Grinder ausgeben"
+    },
+    {
+      "key": "ui.production",
+      "de": "Rohe Blüten produzieren"
+    },
+    {
+      "key": "ui.manager_slot",
+      "de": "Managerplatz"
+    },
+    {
+      "key": "ui.driver_slot",
+      "de": "Fahrerplatz"
+    },
+    {
+      "key": "ui.all_roles",
+      "de": "Alle Rollen"
+    },
+    {
+      "key": "ui.new_note",
+      "de": "Neues Spiel speichert einen neuen Stand. Der vorherige gültige Stand bleibt als Backup erhalten."
+    },
+    {
+      "key": "save.invalid",
+      "de": "Hauptdatei und Backup sind ungültig. Bitte ein neues Spiel starten oder eine gesicherte Datei wiederherstellen."
+    },
+    {
+      "key": "ui.select_worker",
+      "de": "Wähle eine Worker-Karte aus der Liste."
+    },
+    {
+      "key": "ui.automated",
+      "de": "Managerautomatik"
+    },
+    {
+      "key": "ui.manual",
+      "de": "Handbetrieb"
+    },
+    {
+      "key": "ui.yes",
+      "de": "Ja"
+    },
+    {
+      "key": "ui.no",
+      "de": "Nein"
+    },
+    {
+      "key": "speaker.city_host",
+      "de": "Lin · Coffee-Kooperative"
+    },
+    {
+      "key": "speaker.gardener",
+      "de": "Edda · Nachbarschaftsgarten"
+    },
+    {
+      "key": "speaker.baker",
+      "de": "Arun · Bäckermeister"
+    },
+    {
+      "key": "speaker.driver",
+      "de": "Ben · Stadtlogistik"
+    },
+    {
+      "key": "dialog.city_host",
+      "de": "Willkommen in unserer Coffee-Kooperative! Sobald das Stadt-Lager liefert, kümmern wir uns um den Verkauf. Ein passender Manager hält den Laden zuverlässig am Laufen."
+    },
+    {
+      "key": "dialog.gardener",
+      "de": "Hier entsteht unser neues Viertel. Wohnhäuser bringen Einwohner und Worker-Karten, Parks neue VIP-Aufträge. Lass uns beides bauen, damit Burning Hills lebendig wird."
+    },
+    {
+      "key": "dialog.baker",
+      "de": "Ich hole die Butter mit meinem Lieferwagen direkt an der Butterfabrik ab. Zurück in meiner Bäckerei backe und verkaufe ich daraus Backwaren. Während der Fahrt ruht die Backstube."
+    },
+    {
+      "key": "dialog.driver",
+      "de": "Ich fahre erst los, wenn Ware und Platz im Ziel bereit sind. Zusätzliche Fahrer und ausgebaute Lager halten die Kooperative in Bewegung."
+    },
+    {
+      "key": "ui.dialog_continue",
+      "de": "Weiter"
+    },
+    {
+      "key": "dialog.rocko",
+      "de": "Sieh dich um: In jeder reparierten Werkstatt steckt ein neuer Anfang. Ich behalte im Rathaus den Überblick – du gibst Burning Hills seinen Rhythmus zurück."
+    },
+    {
+      "key": "dialog.mila",
+      "de": "Die nächste Ernte wächst schon. Hol die Blüten rechtzeitig ab, dann bleibt Platz für frische Pflanzen. Mit einem Manager läuft der Anbau auch weiter, während du die Stadt erkundest."
+    },
+    {
+      "key": "dialog.jaro",
+      "de": "Ein leeres Förderband hilft niemandem. Ich veredle die Ernte, solange im Zielpuffer Platz ist. Steht hier alles still, schau beim Lager und seinen Fahrern nach."
+    },
+    {
+      "key": "dialog.nia",
+      "de": "Gute Logistik ist Teamarbeit. Ich halte das Lager am Laufen; unsere Fahrer bringen die Ware in die Stadt. Ein freier Fahrerplatz ist eine neue Verbindung für Burning Hills."
+    },
+    {
+      "key": "bottleneck.pickup",
+      "de": "Bäcker unterwegs zur Butterabholung"
+    },
+    {
+      "key": "project.goal.0.farm_grow_01",
+      "de": "Erstes Anbaufeld · Level"
+    },
+    {
+      "key": "project.goal.0.farm_processing",
+      "de": "Veredelung · Level"
+    },
+    {
+      "key": "project.goal.3.200",
+      "de": "Neue Blüten veredelt"
+    },
+    {
+      "key": "project.harvest.title",
+      "de": "Die Farm macht sich bereit"
+    },
+    {
+      "key": "project.harvest.body",
+      "de": "Für unser erstes Stadtfest brauchen wir Nachschub. Stärke Anbau und Veredelung. Neue Blüten zählen ab jetzt."
+    },
+    {
+      "key": "project.goal.0.farm_warehouse",
+      "de": "Farmlager · Level"
+    },
+    {
+      "key": "project.goal.0.city_warehouse",
+      "de": "Stadtlager · Level"
+    },
+    {
+      "key": "project.goal.0.farm_grow_02",
+      "de": "Zweites Anbaufeld · Level"
+    },
+    {
+      "key": "project.goal.1.farm_grow_02",
+      "de": "Zweites Anbaufeld mit Leitung"
+    },
+    {
+      "key": "project.goal.7.240",
+      "de": "Neu ausgelieferte Waren"
+    },
+    {
+      "key": "project.logistics.title",
+      "de": "Alles kommt an"
+    },
+    {
+      "key": "project.logistics.body",
+      "de": "Setze deine neue Anbaukraft auf dem zweiten Feld ein. Erweitere beide Lager. Die nächste Belohnung ist die Leitung deines Feststands."
+    },
+    {
+      "key": "project.goal.0.coffee_02",
+      "de": "Zweiter Coffee-Shop · Level"
+    },
+    {
+      "key": "project.goal.1.coffee_02",
+      "de": "Feststand mit Leitung"
+    },
+    {
+      "key": "project.goal.4.360",
+      "de": "Neu verkaufte Blüten"
+    },
+    {
+      "key": "project.neighborhood.venue.title",
+      "de": "Ein zweiter Treffpunkt"
+    },
+    {
+      "key": "project.neighborhood.venue.body",
+      "de": "Baue den zweiten Coffee-Shop aus und setze deine neue Verkaufskraft ein. Für das Verkaufsziel zählen alle Coffee-Shops."
+    },
+    {
+      "key": "project.goal.0.residential_house",
+      "de": "Ein Wohnhaus · Level"
+    },
+    {
+      "key": "project.goal.0.park",
+      "de": "Ein Park · Level"
+    },
+    {
+      "key": "project.goal.2.15",
+      "de": "Einwohner"
+    },
+    {
+      "key": "project.neighbors.title",
+      "de": "Ein Fest für die Nachbarn"
+    },
+    {
+      "key": "project.neighbors.body",
+      "de": "Unsere Nachbarn feiern mit! Ein Haus und ein Park auf Level 5 reichen. Bestehende Gebäude zählen; neue Bauplätze sind nicht nötig."
+    },
+    {
+      "key": "project.goal.0.butter_factory",
+      "de": "Butterfabrik · Level"
+    },
+    {
+      "key": "project.goal.0.supermarket",
+      "de": "Supermarkt · Level"
+    },
+    {
+      "key": "project.goal.0.bakery_01",
+      "de": "Erste Bäckerei · Level"
+    },
+    {
+      "key": "project.goal.5.120",
+      "de": "Neue Butter produziert"
+    },
+    {
+      "key": "project.goal.6.80",
+      "de": "Neu verkaufte Backwaren"
+    },
+    {
+      "key": "project.neighborhood.rehearsal.title",
+      "de": "Die große Generalprobe"
+    },
+    {
+      "key": "project.neighborhood.rehearsal.body",
+      "de": "Jetzt zählt die ganze Kette. Stärke die Industrie und versorge die Generalprobe mit frischer Butter und neuen Backwarenverkäufen."
+    },
+    {
+      "key": "project.goal.4.400",
+      "de": "Neu verkaufte Blüten"
+    },
+    {
+      "key": "project.goal.6.100",
+      "de": "Neu verkaufte Backwaren"
+    },
+    {
+      "key": "project.goal.7.400",
+      "de": "Neu ausgelieferte Waren"
+    },
+    {
+      "key": "project.neighborhood.festival.title",
+      "de": "Burning Hills feiert!"
+    },
+    {
+      "key": "project.neighborhood.festival.body",
+      "de": "Die Vorbereitungen stehen! Versorge das Fest mit neuen Verkäufen und Lieferungen. Dann erhältst du Stadttitel und Verkaufsbonus."
+    },
+    {
+      "key": "project.neighborhood.title",
+      "de": "Nachbarschaftsfest"
+    },
+    {
+      "key": "project.neighborhood.body",
+      "de": "Schwerpunkt: zweiter Coffee-Shop und Verkauf."
+    },
+    {
+      "key": "project.neighborhood.reward",
+      "de": "Abschluss: dauerhaft +10 % Erlös in allen Coffee-Shops."
+    },
+    {
+      "key": "project.goal.0.bakery_02",
+      "de": "Zweite Bäckerei · Level"
+    },
+    {
+      "key": "project.goal.1.bakery_02",
+      "de": "Feststand mit Leitung"
+    },
+    {
+      "key": "project.goal.6.120",
+      "de": "Neu verkaufte Backwaren"
+    },
+    {
+      "key": "project.gourmet.venue.title",
+      "de": "Die Genussmeile wächst"
+    },
+    {
+      "key": "project.gourmet.venue.body",
+      "de": "Baue die zweite Bäckerei aus und setze deinen neuen Bäcker ein. Für das Verkaufsziel zählen alle Bäckereien."
+    },
+    {
+      "key": "project.gourmet.rehearsal.title",
+      "de": "Die große Generalprobe"
+    },
+    {
+      "key": "project.gourmet.rehearsal.body",
+      "de": "Jetzt zählt die ganze Kette. Stärke die Industrie und versorge die Generalprobe mit frischer Butter und neuen Backwarenverkäufen."
+    },
+    {
+      "key": "project.goal.4.250",
+      "de": "Neu verkaufte Blüten"
+    },
+    {
+      "key": "project.goal.6.180",
+      "de": "Neu verkaufte Backwaren"
+    },
+    {
+      "key": "project.gourmet.festival.title",
+      "de": "Burning Hills feiert!"
+    },
+    {
+      "key": "project.gourmet.festival.body",
+      "de": "Die Vorbereitungen stehen! Versorge das Fest mit neuen Verkäufen und Lieferungen. Dann erhältst du Stadttitel und Verkaufsbonus."
+    },
+    {
+      "key": "project.gourmet.title",
+      "de": "Genussmeile"
+    },
+    {
+      "key": "project.gourmet.body",
+      "de": "Schwerpunkt: zweite Bäckerei und Backwaren."
+    },
+    {
+      "key": "project.gourmet.reward",
+      "de": "Abschluss: dauerhaft +10 % Erlös in allen Bäckereien."
+    },
+    {
+      "key": "project.title",
+      "de": "Kapitel 2 · Das erste Stadtfest"
+    },
+    {
+      "key": "project.invitation",
+      "de": "Rocko lädt zum ersten Stadtfest! Wähle rechts einen Schwerpunkt für sechs Etappen. Die Wahl bleibt bestehen. Beide Wege stärken die Stadt."
+    },
+    {
+      "key": "project.finished",
+      "de": "Burning Hills ist Feststadt! Dein Bonus gilt auch offline."
+    },
+    {
+      "key": "project.step_title",
+      "de": "Stadtfest {0}/{1}\n{2}"
+    },
+    {
+      "key": "project.finished_title",
+      "de": "Burning Hills · Feststadt"
+    },
+    {
+      "key": "project.goal_progress",
+      "de": "{0}\n{1} / {2}"
+    },
+    {
+      "key": "project.step_reward",
+      "de": "Etappenbelohnung: {0} Geld · {1} Karten"
+    },
+    {
+      "key": "project.choose",
+      "de": "Verbindlich wählen: {0}"
+    },
+    {
+      "key": "project.counter_hint",
+      "de": "Verkäufe, Produktion und Lieferungen zählen neu je Etappe."
+    },
+    {
+      "key": "project.completed",
+      "de": "Erledigt"
+    },
+    {
+      "key": "project.active",
+      "de": "Aktuell"
+    },
+    {
+      "key": "project.later",
+      "de": "Danach"
+    },
+    {
+      "key": "project.city_title",
+      "de": "Stadttitel"
+    },
+    {
+      "key": "project.city_title_value",
+      "de": "Feststadt"
+    },
+    {
+      "key": "project.progress",
+      "de": "Stadtfest-Etappen"
+    },
+    {
+      "key": "reward.headline",
+      "de": "DAS HAST DU DIR VERDIENT!"
+    },
+    {
+      "key": "reward.welcome",
+      "de": "VERSTÄRKUNG FÜR DEIN TEAM!"
+    },
+    {
+      "key": "reward.continue",
+      "de": "Weiter"
+    },
+    {
+      "key": "reward.open_collection",
+      "de": "Inventar öffnen"
+    },
+    {
+      "key": "reward.collection",
+      "de": "Inventar"
+    },
+    {
+      "key": "reward.secured",
+      "de": "Bereits gutgeschrieben · bleibt auch nach dem Schließen erhalten"
+    },
+    {
+      "key": "reward.preview",
+      "de": "DAS ERWARTET DICH"
+    },
+    {
+      "key": "reward.preview_empty",
+      "de": "Wähle ein Stadtprojekt und entdecke neue Belohnungen."
+    },
+    {
+      "key": "reward.preview_no_items",
+      "de": "Lerne deine Stadt kennen. Die ersten Gewinne warten in den nächsten Aufträgen."
+    },
+    {
+      "key": "reward.inventory",
+      "de": "Dein Inventar"
+    },
+    {
+      "key": "reward.achievements",
+      "de": "DEINE AUSZEICHNUNGEN"
+    },
+    {
+      "key": "reward.history",
+      "de": "DEINE BELOHNUNGEN"
+    },
+    {
+      "key": "reward.tab.inventory",
+      "de": "Inventar"
+    },
+    {
+      "key": "reward.tab.achievements",
+      "de": "Erfolge"
+    },
+    {
+      "key": "reward.tab.history",
+      "de": "Verlauf"
+    },
+    {
+      "key": "reward.inventory_hint",
+      "de": "Wähle ein Item und entdecke, was darin steckt."
+    },
+    {
+      "key": "reward.achievements_hint",
+      "de": "Deine Meilensteine bleiben erhalten. Freigeschaltete Verkaufsboni wirken automatisch."
+    },
+    {
+      "key": "reward.history_hint",
+      "de": "Zuletzt erhalten · Verlauf der letzten 100 Belohnungen, unabhängig vom aktuellen Bestand."
+    },
+    {
+      "key": "reward.no_achievements",
+      "de": "Dein erster Meilenstein wartet auf dich!\nSchließe die Anfangsquests ab und verdiene die Gründungsurkunde."
+    },
+    {
+      "key": "reward.no_history",
+      "de": "Deine nächsten Belohnungen erscheinen hier.\nBei älteren Spielständen beginnt der Verlauf ab diesem Update."
+    },
+    {
+      "key": "reward.kind.Money",
+      "de": "Geld"
+    },
+    {
+      "key": "reward.kind.Grinders",
+      "de": "Grinder"
+    },
+    {
+      "key": "reward.kind.Cards",
+      "de": "Mitarbeiterkarten"
+    },
+    {
+      "key": "reward.kind.Worker",
+      "de": "Neues Teammitglied"
+    },
+    {
+      "key": "reward.kind.VipOrders",
+      "de": "VIP-Aufträge"
+    },
+    {
+      "key": "reward.title.founder",
+      "de": "Gründungsurkunde"
+    },
+    {
+      "key": "reward.title.festival",
+      "de": "Feststadt"
+    },
+    {
+      "key": "reward.permanent",
+      "de": "Dauerhafte Auszeichnung"
+    },
+    {
+      "key": "reward.sales_bonus",
+      "de": "Dauerhafter Verkaufsbonus"
+    },
+    {
+      "key": "reward.unlocked",
+      "de": "Gebiet freigeschaltet"
+    },
+    {
+      "key": "reward.available",
+      "de": "Aktuell verfügbar"
+    },
+    {
+      "key": "reward.credited",
+      "de": "Gutgeschrieben"
+    },
+    {
+      "key": "reward.assigned",
+      "de": "Im Einsatz"
+    },
+    {
+      "key": "reward.orders_hint",
+      "de": "Jetzt im Questbuch"
+    },
+    {
+      "key": "reward.source.quest",
+      "de": "Quest abgeschlossen"
+    },
+    {
+      "key": "reward.source.cityproject",
+      "de": "Stadtprojekt abgeschlossen"
+    },
+    {
+      "key": "reward.source.vip",
+      "de": "VIP-Auftrag erfüllt"
+    },
+    {
+      "key": "reward.source.daily",
+      "de": "Tagesbelohnungen"
+    },
+    {
+      "key": "reward.source.recruitment",
+      "de": "Teamverstärkung"
+    },
+    {
+      "key": "reward.role.processing",
+      "de": "Verarbeitungs-\nmanager"
+    },
+    {
+      "key": "reward.role.coffee",
+      "de": "Coffee-Shop-\nManager"
+    },
+    {
+      "key": "reward.role.processing.compact",
+      "de": "Verarbeitungs-\nmanager"
+    },
+    {
+      "key": "reward.role.coffee.compact",
+      "de": "Coffee-Shop\nManager"
+    },
+    {
+      "key": "reward.role.grow.compact",
+      "de": "Anbau-\nManager"
+    },
+    {
+      "key": "reward.role.farm_manager.compact",
+      "de": "Farm-Lager\nManager"
+    },
+    {
+      "key": "reward.role.farm_driver.compact",
+      "de": "Farm-Fahrer"
+    },
+    {
+      "key": "reward.role.city_manager.compact",
+      "de": "Stadt-Lager\nManager"
+    },
+    {
+      "key": "reward.role.city_driver.compact",
+      "de": "Stadt-\nLieferfahrer"
+    },
+    {
+      "key": "reward.role.caretaker.compact",
+      "de": "Haus-\nverwaltung"
+    },
+    {
+      "key": "reward.role.ranger.compact",
+      "de": "Park-\nbetreuung"
+    },
+    {
+      "key": "reward.role.butter.compact",
+      "de": "Butter-\nproduktion"
+    },
+    {
+      "key": "reward.role.market.compact",
+      "de": "Supermarkt"
+    },
+    {
+      "key": "reward.role.baker.compact",
+      "de": "Bäckerei"
+    },
+    {
+      "key": "reward.title.founder.compact",
+      "de": "Gründungs-\nurkunde"
+    },
+    {
+      "key": "reward.kind.Cards.compact",
+      "de": "Teamkarten"
+    },
+    {
+      "key": "item.build_1m.name",
+      "de": "Baubeschleuniger · 1 Min."
+    },
+    {
+      "key": "item.build_1m.short",
+      "de": "Bauzeit\n1 Min."
+    },
+    {
+      "key": "item.build_1m.description",
+      "de": "Verkürzt die Bauzeit einer gewählten Baustelle um bis zu 1 Min. Einmal verwendbar. Überschüssige Zeit verfällt."
+    },
+    {
+      "key": "item.build_5m.name",
+      "de": "Baubeschleuniger · 5 Min."
+    },
+    {
+      "key": "item.build_5m.short",
+      "de": "Bauzeit\n5 Min."
+    },
+    {
+      "key": "item.build_5m.description",
+      "de": "Verkürzt die Bauzeit einer gewählten Baustelle um bis zu 5 Min. Einmal verwendbar. Überschüssige Zeit verfällt."
+    },
+    {
+      "key": "item.build_15m.name",
+      "de": "Baubeschleuniger · 15 Min."
+    },
+    {
+      "key": "item.build_15m.short",
+      "de": "Bauzeit\n15 Min."
+    },
+    {
+      "key": "item.build_15m.description",
+      "de": "Verkürzt die Bauzeit einer gewählten Baustelle um bis zu 15 Min. Einmal verwendbar. Überschüssige Zeit verfällt."
+    },
+    {
+      "key": "item.build_30m.name",
+      "de": "Baubeschleuniger · 30 Min."
+    },
+    {
+      "key": "item.build_30m.short",
+      "de": "Bauzeit\n30 Min."
+    },
+    {
+      "key": "item.build_30m.description",
+      "de": "Verkürzt die Bauzeit einer gewählten Baustelle um bis zu 30 Min. Einmal verwendbar. Überschüssige Zeit verfällt."
+    },
+    {
+      "key": "item.build_1h.name",
+      "de": "Baubeschleuniger · 1 Std."
+    },
+    {
+      "key": "item.build_1h.short",
+      "de": "Bauzeit\n1 Std."
+    },
+    {
+      "key": "item.build_1h.description",
+      "de": "Verkürzt die Bauzeit einer gewählten Baustelle um bis zu 1 Std. Einmal verwendbar. Überschüssige Zeit verfällt."
+    },
+    {
+      "key": "item.build_5h.name",
+      "de": "Baubeschleuniger · 5 Std."
+    },
+    {
+      "key": "item.build_5h.short",
+      "de": "Bauzeit\n5 Std."
+    },
+    {
+      "key": "item.build_5h.description",
+      "de": "Verkürzt die Bauzeit einer gewählten Baustelle um bis zu 5 Std. Einmal verwendbar. Überschüssige Zeit verfällt."
+    },
+    {
+      "key": "item.build_10h.name",
+      "de": "Baubeschleuniger · 10 Std."
+    },
+    {
+      "key": "item.build_10h.short",
+      "de": "Bauzeit\n10 Std."
+    },
+    {
+      "key": "item.build_10h.description",
+      "de": "Verkürzt die Bauzeit einer gewählten Baustelle um bis zu 10 Std. Einmal verwendbar. Überschüssige Zeit verfällt."
+    },
+    {
+      "key": "item.build_24h.name",
+      "de": "Baubeschleuniger · 24 Std."
+    },
+    {
+      "key": "item.build_24h.short",
+      "de": "Bauzeit\n24 Std."
+    },
+    {
+      "key": "item.build_24h.description",
+      "de": "Verkürzt die Bauzeit einer gewählten Baustelle um bis zu 24 Std. Einmal verwendbar. Überschüssige Zeit verfällt."
+    },
+    {
+      "key": "item.team_pack.name",
+      "de": "Kartenpaket"
+    },
+    {
+      "key": "item.team_pack.short",
+      "de": "Karten-\npaket"
+    },
+    {
+      "key": "item.team_pack.description",
+      "de": "Enthält 3 Worker-Karten. Nutze sie im Team-Menü zum Rekrutieren oder für Rangaufstiege. Ab dem Stadtviertel verwendbar."
+    },
+    {
+      "key": "item.specialist_contract.name",
+      "de": "Spezialistenvertrag"
+    },
+    {
+      "key": "item.specialist_contract.short",
+      "de": "Spezialisten-\nvertrag"
+    },
+    {
+      "key": "item.specialist_contract.description",
+      "de": "Wähle einen Beruf und erhalte einen seltenen Worker (Rare) mit zwei Eigenschaften. Ab dem Stadtviertel verwendbar."
+    },
+    {
+      "key": "item.cash_crate.name",
+      "de": "Geldkiste"
+    },
+    {
+      "key": "item.cash_crate.short",
+      "de": "Geldkiste"
+    },
+    {
+      "key": "item.cash_crate.description",
+      "de": "Enthält 500 Geld für deinen nächsten Ausbau. Du bestimmst, wann du die Kiste öffnest. Einmal verwendbar."
+    },
+    {
+      "key": "item.grinder_pouch.name",
+      "de": "Grinder-Beutel"
+    },
+    {
+      "key": "item.grinder_pouch.short",
+      "de": "Grinder-\nBeutel"
+    },
+    {
+      "key": "item.grinder_pouch.description",
+      "de": "Enthält 10 Grinder. Sie werden beim Öffnen deinem vorhandenen Guthaben gutgeschrieben. Einmal verwendbar."
+    },
+    {
+      "key": "reward.source.inventory",
+      "de": "Inventar"
+    },
+    {
+      "key": "reward.kind.Item",
+      "de": "Item"
+    },
+    {
+      "key": "inventory.all",
+      "de": "Alle"
+    },
+    {
+      "key": "inventory.category.Workers",
+      "de": "Worker / Karten"
+    },
+    {
+      "key": "inventory.category.Boosters",
+      "de": "Beschleuniger"
+    },
+    {
+      "key": "inventory.category.Supplies",
+      "de": "Vorräte"
+    },
+    {
+      "key": "inventory.empty",
+      "de": "Hier ist noch Platz für deine Belohnungen.\nErfülle Quests und sammle neue Items!"
+    },
+    {
+      "key": "inventory.pick",
+      "de": "Dein nächster Vorteil wartet"
+    },
+    {
+      "key": "inventory.pick_hint",
+      "de": "Klicke ein Item an, um es genauer anzuschauen.\n\nHier findest du Wirkung, Bestand und Verwendung."
+    },
+    {
+      "key": "inventory.owned",
+      "de": "Im Besitz: {0}"
+    },
+    {
+      "key": "inventory.worker_meta",
+      "de": "{0} · Level {1} · Rang {2}"
+    },
+    {
+      "key": "inventory.worker_info",
+      "de": "Ein Mitglied deines Teams. Die Eigenschaften verstärken das Gebäude, dem du diesen Worker zuweist."
+    },
+    {
+      "key": "inventory.cards_info",
+      "de": "Verwende Worker-Karten, um ein neues Teammitglied zu rekrutieren oder einen Worker im Rang zu verbessern."
+    },
+    {
+      "key": "inventory.manage",
+      "de": "Im Team ansehen"
+    },
+    {
+      "key": "inventory.recruit",
+      "de": "Zum Rekrutieren"
+    },
+    {
+      "key": "inventory.open",
+      "de": "1 × öffnen"
+    },
+    {
+      "key": "inventory.choose_worker",
+      "de": "Worker verpflichten"
+    },
+    {
+      "key": "inventory.boost",
+      "de": "1 × anwenden"
+    },
+    {
+      "key": "inventory.confirm",
+      "de": "Verbindlich verwenden"
+    },
+    {
+      "key": "inventory.cancel",
+      "de": "Zurück"
+    },
+    {
+      "key": "inventory.confirm_hint",
+      "de": "Bestätige den Verbrauch von genau einem Item."
+    },
+    {
+      "key": "inventory.no_build",
+      "de": "Keine laufende Baustelle. Starte zuerst einen Bau oder Ausbau."
+    },
+    {
+      "key": "inventory.locked",
+      "de": "Verfügbar, sobald das Stadtviertel freigeschaltet ist."
+    },
+    {
+      "key": "inventory.before_after",
+      "de": "Restzeit: {0} → {1}"
+    },
+    {
+      "key": "inventory.waste",
+      "de": "Davon verfallen {0}."
+    },
+    {
+      "key": "inventory.ready",
+      "de": "Danach sofort fertig!"
+    },
+    {
+      "key": "inventory.applied",
+      "de": "Baubeschleuniger angewendet."
+    },
+    {
+      "key": "inventory.updated",
+      "de": "Die Baustelle hat sich verändert. Bitte erneut auswählen."
+    },
+    {
+      "key": "inventory.contents",
+      "de": "Inhalt: {0} {1}"
+    },
+    {
+      "key": "inventory.choose_build",
+      "de": "Baustelle auswählen"
+    },
+    {
+      "key": "inventory.choose_role",
+      "de": "Beruf auswählen"
+    },
+    {
+      "key": "inventory.selected",
+      "de": "Ausgewählt"
+    },
+    {
+      "key": "inventory.confirm_title",
+      "de": "Item verwenden?"
+    },
+    {
+      "key": "inventory.back",
+      "de": "← Inventar"
+    },
+    {
+      "key": "inventory.unknown",
+      "de": "Nicht mehr im Inventar"
+    },
+    {
+      "key": "inventory.no_filter",
+      "de": "In dieser Kategorie besitzt du noch keine Items."
+    },
+    {
+      "key": "inventory.balance",
+      "de": "{0} Geld   ·   {1} Grinder"
+    },
+    {
+      "key": "inventory.split",
+      "de": "Aufteilen: {0} × {1}"
+    },
+    {
+      "key": "inventory.split_preview",
+      "de": "1 × {0} wird zu\n{1} × {2}\n\nDie gesamte Bauzeit bleibt erhalten."
+    },
+    {
+      "key": "wheel.title",
+      "de": "Glücksrad"
+    },
+    {
+      "key": "wheel.subtitle",
+      "de": "Ein kleiner Dreh. Große Möglichkeiten."
+    },
+    {
+      "key": "wheel.entry",
+      "de": "Glücksrad"
+    },
+    {
+      "key": "wheel.entry_free",
+      "de": "Glücksrad · Gratis"
+    },
+    {
+      "key": "wheel.reward_title",
+      "de": "Dein Glücksrad-Gewinn"
+    },
+    {
+      "key": "reward.source.luckywheel",
+      "de": "Glücksrad"
+    },
+    {
+      "key": "wheel.countdown",
+      "de": "Neue Gewinne in {0}"
+    },
+    {
+      "key": "wheel.reset_hint",
+      "de": "Täglich um 00:00 UTC · Gratis-Dreh inklusive"
+    },
+    {
+      "key": "wheel.remaining",
+      "de": "{0} von 10 Gewinnen übrig"
+    },
+    {
+      "key": "wheel.chance",
+      "de": "Jedes Feld: {0} % Gewinnchance"
+    },
+    {
+      "key": "wheel.free",
+      "de": "Kostenlos drehen"
+    },
+    {
+      "key": "wheel.paid",
+      "de": "Drehen · {0} Grinder"
+    },
+    {
+      "key": "wheel.confirm",
+      "de": "Für {0} Grinder drehen?"
+    },
+    {
+      "key": "wheel.confirm_button",
+      "de": "{0} Grinder einsetzen"
+    },
+    {
+      "key": "wheel.cancel",
+      "de": "Abbrechen"
+    },
+    {
+      "key": "wheel.spinning",
+      "de": "Dein Glück ist unterwegs …"
+    },
+    {
+      "key": "wheel.empty",
+      "de": "Alle Gewinne eingesammelt!"
+    },
+    {
+      "key": "wheel.empty_hint",
+      "de": "Morgen warten zehn neue Items auf dich."
+    },
+    {
+      "key": "wheel.balance",
+      "de": "Dein Guthaben: {0} Grinder"
+    },
+    {
+      "key": "wheel.prize_hint",
+      "de": "Klicke auf ein Item, um es anzuschauen."
+    },
+    {
+      "key": "wheel.costs",
+      "de": "DREHKOSTEN"
+    },
+    {
+      "key": "wheel.costs_body",
+      "de": "Gratis → 50 → 100 → 200 → 500\n→ 1.000 → 2.000 → 2.000 → 2.000 → 2.000"
+    },
+    {
+      "key": "wheel.inventory",
+      "de": "Inventar öffnen"
+    },
+    {
+      "key": "wheel.details",
+      "de": "{0} · {1}\n\n{2}"
+    },
+    {
+      "key": "wheel.won",
+      "de": "GEWONNEN!"
+    },
+    {
+      "key": "wheel.secured",
+      "de": "×{0} {1}\nDein Gewinn liegt im Inventar."
+    },
+    {
+      "key": "wheel.insufficient",
+      "de": "Benötigt: {0} Grinder"
+    },
+    {
+      "key": "wheel.short.specialist_contract",
+      "de": "Vertrag"
+    },
+    {
+      "key": "wheel.short.team_pack",
+      "de": "Kartenpaket"
+    },
+    {
+      "key": "wheel.short.grinder_pouch",
+      "de": "Grinder"
+    }
+  ],
+  "cityProject": {
+    "id": "first_city_festival",
+    "cityId": "burning_hills",
+    "titleKey": "project.title",
+    "invitationKey": "project.invitation",
+    "completedKey": "project.finished",
+    "plans": [
+      {
+        "id": "neighborhood",
+        "titleKey": "project.neighborhood.title",
+        "bodyKey": "project.neighborhood.body",
+        "rewardKey": "project.neighborhood.reward",
+        "bonusFamily": "coffee_shop",
+        "salesBonus": 0.1,
+        "steps": [
+          {
+            "id": "harvest",
+            "titleKey": "project.harvest.title",
+            "bodyKey": "project.harvest.body",
+            "speaker": "mila",
+            "focus": "farm_grow_01",
+            "goals": [
+              {
+                "kind": 0,
+                "count": 5,
+                "target": "farm_grow_01",
+                "textKey": "project.goal.0.farm_grow_01"
+              },
+              {
+                "kind": 0,
+                "count": 5,
+                "target": "farm_processing",
+                "textKey": "project.goal.0.farm_processing"
+              },
+              {
+                "kind": 3,
+                "count": 200,
+                "target": "",
+                "textKey": "project.goal.3.200"
+              }
+            ],
+            "moneyReward": 1000,
+            "cardsReward": 1,
+            "workerRewards": [
+              "grow"
+            ],
+            "itemRewards": [
+              {
+                "id": "build_15m",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "id": "logistics",
+            "titleKey": "project.logistics.title",
+            "bodyKey": "project.logistics.body",
+            "speaker": "nia",
+            "focus": "city_warehouse",
+            "goals": [
+              {
+                "kind": 0,
+                "count": 5,
+                "target": "farm_warehouse",
+                "textKey": "project.goal.0.farm_warehouse"
+              },
+              {
+                "kind": 0,
+                "count": 5,
+                "target": "city_warehouse",
+                "textKey": "project.goal.0.city_warehouse"
+              },
+              {
+                "kind": 0,
+                "count": 1,
+                "target": "farm_grow_02",
+                "textKey": "project.goal.0.farm_grow_02"
+              },
+              {
+                "kind": 1,
+                "count": 1,
+                "target": "farm_grow_02",
+                "textKey": "project.goal.1.farm_grow_02"
+              },
+              {
+                "kind": 7,
+                "count": 240,
+                "target": "",
+                "textKey": "project.goal.7.240"
+              }
+            ],
+            "moneyReward": 2000,
+            "cardsReward": 1,
+            "workerRewards": [
+              "coffee"
+            ],
+            "itemRewards": [
+              {
+                "id": "team_pack",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "id": "neighborhood.venue",
+            "titleKey": "project.neighborhood.venue.title",
+            "bodyKey": "project.neighborhood.venue.body",
+            "speaker": "city_host",
+            "focus": "coffee_02",
+            "goals": [
+              {
+                "kind": 0,
+                "count": 5,
+                "target": "coffee_02",
+                "textKey": "project.goal.0.coffee_02"
+              },
+              {
+                "kind": 1,
+                "count": 1,
+                "target": "coffee_02",
+                "textKey": "project.goal.1.coffee_02"
+              },
+              {
+                "kind": 4,
+                "count": 360,
+                "target": "",
+                "textKey": "project.goal.4.360"
+              }
+            ],
+            "moneyReward": 3000,
+            "cardsReward": 2,
+            "workerRewards": [],
+            "itemRewards": [
+              {
+                "id": "build_1h",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "id": "neighbors",
+            "titleKey": "project.neighbors.title",
+            "bodyKey": "project.neighbors.body",
+            "speaker": "gardener",
+            "focus": "settlement_01",
+            "goals": [
+              {
+                "kind": 0,
+                "count": 5,
+                "target": "residential_house",
+                "textKey": "project.goal.0.residential_house"
+              },
+              {
+                "kind": 0,
+                "count": 5,
+                "target": "park",
+                "textKey": "project.goal.0.park"
+              },
+              {
+                "kind": 2,
+                "count": 15,
+                "target": "",
+                "textKey": "project.goal.2.15"
+              }
+            ],
+            "moneyReward": 2500,
+            "cardsReward": 2,
+            "workerRewards": [],
+            "itemRewards": [
+              {
+                "id": "specialist_contract",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "id": "neighborhood.rehearsal",
+            "titleKey": "project.neighborhood.rehearsal.title",
+            "bodyKey": "project.neighborhood.rehearsal.body",
+            "speaker": "jaro",
+            "focus": "supermarket",
+            "goals": [
+              {
+                "kind": 0,
+                "count": 2,
+                "target": "butter_factory",
+                "textKey": "project.goal.0.butter_factory"
+              },
+              {
+                "kind": 0,
+                "count": 5,
+                "target": "supermarket",
+                "textKey": "project.goal.0.supermarket"
+              },
+              {
+                "kind": 0,
+                "count": 2,
+                "target": "bakery_01",
+                "textKey": "project.goal.0.bakery_01"
+              },
+              {
+                "kind": 5,
+                "count": 120,
+                "target": "",
+                "textKey": "project.goal.5.120"
+              },
+              {
+                "kind": 6,
+                "count": 80,
+                "target": "",
+                "textKey": "project.goal.6.80"
+              }
+            ],
+            "moneyReward": 4000,
+            "cardsReward": 3,
+            "workerRewards": [],
+            "itemRewards": [
+              {
+                "id": "cash_crate",
+                "count": 2
+              },
+              {
+                "id": "grinder_pouch",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "id": "neighborhood.festival",
+            "titleKey": "project.neighborhood.festival.title",
+            "bodyKey": "project.neighborhood.festival.body",
+            "speaker": "rocko",
+            "focus": "town_hall",
+            "goals": [
+              {
+                "kind": 4,
+                "count": 400,
+                "target": "",
+                "textKey": "project.goal.4.400"
+              },
+              {
+                "kind": 6,
+                "count": 100,
+                "target": "",
+                "textKey": "project.goal.6.100"
+              },
+              {
+                "kind": 7,
+                "count": 400,
+                "target": "",
+                "textKey": "project.goal.7.400"
+              }
+            ],
+            "moneyReward": 5000,
+            "cardsReward": 5,
+            "workerRewards": [],
+            "itemRewards": [
+              {
+                "id": "build_24h",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "gourmet",
+        "titleKey": "project.gourmet.title",
+        "bodyKey": "project.gourmet.body",
+        "rewardKey": "project.gourmet.reward",
+        "bonusFamily": "bakery",
+        "salesBonus": 0.1,
+        "steps": [
+          {
+            "id": "harvest",
+            "titleKey": "project.harvest.title",
+            "bodyKey": "project.harvest.body",
+            "speaker": "mila",
+            "focus": "farm_grow_01",
+            "goals": [
+              {
+                "kind": 0,
+                "count": 5,
+                "target": "farm_grow_01",
+                "textKey": "project.goal.0.farm_grow_01"
+              },
+              {
+                "kind": 0,
+                "count": 5,
+                "target": "farm_processing",
+                "textKey": "project.goal.0.farm_processing"
+              },
+              {
+                "kind": 3,
+                "count": 200,
+                "target": "",
+                "textKey": "project.goal.3.200"
+              }
+            ],
+            "moneyReward": 1000,
+            "cardsReward": 1,
+            "workerRewards": [
+              "grow"
+            ],
+            "itemRewards": [
+              {
+                "id": "build_15m",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "id": "logistics",
+            "titleKey": "project.logistics.title",
+            "bodyKey": "project.logistics.body",
+            "speaker": "nia",
+            "focus": "city_warehouse",
+            "goals": [
+              {
+                "kind": 0,
+                "count": 5,
+                "target": "farm_warehouse",
+                "textKey": "project.goal.0.farm_warehouse"
+              },
+              {
+                "kind": 0,
+                "count": 5,
+                "target": "city_warehouse",
+                "textKey": "project.goal.0.city_warehouse"
+              },
+              {
+                "kind": 0,
+                "count": 1,
+                "target": "farm_grow_02",
+                "textKey": "project.goal.0.farm_grow_02"
+              },
+              {
+                "kind": 1,
+                "count": 1,
+                "target": "farm_grow_02",
+                "textKey": "project.goal.1.farm_grow_02"
+              },
+              {
+                "kind": 7,
+                "count": 240,
+                "target": "",
+                "textKey": "project.goal.7.240"
+              }
+            ],
+            "moneyReward": 2000,
+            "cardsReward": 1,
+            "workerRewards": [
+              "baker"
+            ],
+            "itemRewards": [
+              {
+                "id": "team_pack",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "id": "gourmet.venue",
+            "titleKey": "project.gourmet.venue.title",
+            "bodyKey": "project.gourmet.venue.body",
+            "speaker": "baker",
+            "focus": "bakery_02",
+            "goals": [
+              {
+                "kind": 0,
+                "count": 5,
+                "target": "bakery_02",
+                "textKey": "project.goal.0.bakery_02"
+              },
+              {
+                "kind": 1,
+                "count": 1,
+                "target": "bakery_02",
+                "textKey": "project.goal.1.bakery_02"
+              },
+              {
+                "kind": 6,
+                "count": 120,
+                "target": "",
+                "textKey": "project.goal.6.120"
+              }
+            ],
+            "moneyReward": 3000,
+            "cardsReward": 2,
+            "workerRewards": [],
+            "itemRewards": [
+              {
+                "id": "build_1h",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "id": "neighbors",
+            "titleKey": "project.neighbors.title",
+            "bodyKey": "project.neighbors.body",
+            "speaker": "gardener",
+            "focus": "settlement_01",
+            "goals": [
+              {
+                "kind": 0,
+                "count": 5,
+                "target": "residential_house",
+                "textKey": "project.goal.0.residential_house"
+              },
+              {
+                "kind": 0,
+                "count": 5,
+                "target": "park",
+                "textKey": "project.goal.0.park"
+              },
+              {
+                "kind": 2,
+                "count": 15,
+                "target": "",
+                "textKey": "project.goal.2.15"
+              }
+            ],
+            "moneyReward": 2500,
+            "cardsReward": 2,
+            "workerRewards": [],
+            "itemRewards": [
+              {
+                "id": "specialist_contract",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "id": "gourmet.rehearsal",
+            "titleKey": "project.gourmet.rehearsal.title",
+            "bodyKey": "project.gourmet.rehearsal.body",
+            "speaker": "jaro",
+            "focus": "butter_factory",
+            "goals": [
+              {
+                "kind": 0,
+                "count": 5,
+                "target": "butter_factory",
+                "textKey": "project.goal.0.butter_factory"
+              },
+              {
+                "kind": 0,
+                "count": 2,
+                "target": "supermarket",
+                "textKey": "project.goal.0.supermarket"
+              },
+              {
+                "kind": 0,
+                "count": 2,
+                "target": "bakery_01",
+                "textKey": "project.goal.0.bakery_01"
+              },
+              {
+                "kind": 5,
+                "count": 120,
+                "target": "",
+                "textKey": "project.goal.5.120"
+              },
+              {
+                "kind": 6,
+                "count": 80,
+                "target": "",
+                "textKey": "project.goal.6.80"
+              }
+            ],
+            "moneyReward": 4000,
+            "cardsReward": 3,
+            "workerRewards": [],
+            "itemRewards": [
+              {
+                "id": "cash_crate",
+                "count": 2
+              },
+              {
+                "id": "grinder_pouch",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "id": "gourmet.festival",
+            "titleKey": "project.gourmet.festival.title",
+            "bodyKey": "project.gourmet.festival.body",
+            "speaker": "rocko",
+            "focus": "town_hall",
+            "goals": [
+              {
+                "kind": 4,
+                "count": 250,
+                "target": "",
+                "textKey": "project.goal.4.250"
+              },
+              {
+                "kind": 6,
+                "count": 180,
+                "target": "",
+                "textKey": "project.goal.6.180"
+              },
+              {
+                "kind": 7,
+                "count": 400,
+                "target": "",
+                "textKey": "project.goal.7.400"
+              }
+            ],
+            "moneyReward": 5000,
+            "cardsReward": 5,
+            "workerRewards": [],
+            "itemRewards": [
+              {
+                "id": "build_24h",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "build_1m",
+      "nameKey": "item.build_1m.name",
+      "shortNameKey": "item.build_1m.short",
+      "descriptionKey": "item.build_1m.description",
+      "icon": "time",
+      "category": 1,
+      "effect": 0,
+      "value": 60,
+      "rarity": 0
+    },
+    {
+      "id": "build_5m",
+      "nameKey": "item.build_5m.name",
+      "shortNameKey": "item.build_5m.short",
+      "descriptionKey": "item.build_5m.description",
+      "icon": "time",
+      "category": 1,
+      "effect": 0,
+      "value": 300,
+      "rarity": 0
+    },
+    {
+      "id": "build_15m",
+      "nameKey": "item.build_15m.name",
+      "shortNameKey": "item.build_15m.short",
+      "descriptionKey": "item.build_15m.description",
+      "icon": "time",
+      "category": 1,
+      "effect": 0,
+      "value": 900,
+      "rarity": 1
+    },
+    {
+      "id": "build_30m",
+      "nameKey": "item.build_30m.name",
+      "shortNameKey": "item.build_30m.short",
+      "descriptionKey": "item.build_30m.description",
+      "icon": "time",
+      "category": 1,
+      "effect": 0,
+      "value": 1800,
+      "rarity": 1
+    },
+    {
+      "id": "build_1h",
+      "nameKey": "item.build_1h.name",
+      "shortNameKey": "item.build_1h.short",
+      "descriptionKey": "item.build_1h.description",
+      "icon": "time",
+      "category": 1,
+      "effect": 0,
+      "value": 3600,
+      "rarity": 2
+    },
+    {
+      "id": "build_5h",
+      "nameKey": "item.build_5h.name",
+      "shortNameKey": "item.build_5h.short",
+      "descriptionKey": "item.build_5h.description",
+      "icon": "time",
+      "category": 1,
+      "effect": 0,
+      "value": 18000,
+      "rarity": 2
+    },
+    {
+      "id": "build_10h",
+      "nameKey": "item.build_10h.name",
+      "shortNameKey": "item.build_10h.short",
+      "descriptionKey": "item.build_10h.description",
+      "icon": "time",
+      "category": 1,
+      "effect": 0,
+      "value": 36000,
+      "rarity": 3
+    },
+    {
+      "id": "build_24h",
+      "nameKey": "item.build_24h.name",
+      "shortNameKey": "item.build_24h.short",
+      "descriptionKey": "item.build_24h.description",
+      "icon": "time",
+      "category": 1,
+      "effect": 0,
+      "value": 86400,
+      "rarity": 4
+    },
+    {
+      "id": "team_pack",
+      "nameKey": "item.team_pack.name",
+      "shortNameKey": "item.team_pack.short",
+      "descriptionKey": "item.team_pack.description",
+      "icon": "cards",
+      "category": 0,
+      "effect": 1,
+      "value": 3,
+      "rarity": 1
+    },
+    {
+      "id": "specialist_contract",
+      "nameKey": "item.specialist_contract.name",
+      "shortNameKey": "item.specialist_contract.short",
+      "descriptionKey": "item.specialist_contract.description",
+      "icon": "person",
+      "category": 0,
+      "effect": 2,
+      "value": 1,
+      "rarity": 1
+    },
+    {
+      "id": "cash_crate",
+      "nameKey": "item.cash_crate.name",
+      "shortNameKey": "item.cash_crate.short",
+      "descriptionKey": "item.cash_crate.description",
+      "icon": "gift",
+      "category": 2,
+      "effect": 3,
+      "value": 500,
+      "rarity": 1
+    },
+    {
+      "id": "grinder_pouch",
+      "nameKey": "item.grinder_pouch.name",
+      "shortNameKey": "item.grinder_pouch.short",
+      "descriptionKey": "item.grinder_pouch.description",
+      "icon": "grinder",
+      "category": 2,
+      "effect": 4,
+      "value": 10,
+      "rarity": 2
+    }
+  ],
+  "vipItemRewards": [
+    {
+      "id": "build_5m",
+      "count": 1
+    }
+  ],
+  "wheelRewards": [
+    {
+      "id": "build_1m",
+      "count": 3
+    },
+    {
+      "id": "build_5m",
+      "count": 2
+    },
+    {
+      "id": "build_15m",
+      "count": 1
+    },
+    {
+      "id": "build_30m",
+      "count": 1
+    },
+    {
+      "id": "build_1h",
+      "count": 1
+    },
+    {
+      "id": "build_5h",
+      "count": 1
+    },
+    {
+      "id": "build_10h",
+      "count": 1
+    },
+    {
+      "id": "build_24h",
+      "count": 1
+    },
+    {
+      "id": "team_pack",
+      "count": 1
+    },
+    {
+      "id": "specialist_contract",
+      "count": 1
+    },
+    {
+      "id": "cash_crate",
+      "count": 1
+    },
+    {
+      "id": "grinder_pouch",
+      "count": 1
+    }
+  ]
+}

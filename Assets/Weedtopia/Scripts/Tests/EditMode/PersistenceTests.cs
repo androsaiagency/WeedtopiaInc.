@@ -17,10 +17,57 @@ namespace Weedtopia.Tests
         [SetUp] public void Setup(){directory=Path.GetFullPath("Temp/WeedtopiaSaveTests_"+Guid.NewGuid().ToString("N"));Directory.CreateDirectory(directory);defs=ProgressionTests.Definitions();start=new DateTime(2026,9,21,12,0,0,DateTimeKind.Utc);}
         [TearDown] public void Cleanup(){if(directory!=null&&Path.GetFileName(directory).StartsWith("WeedtopiaSaveTests_"))Directory.Delete(directory,true);}
         private LocalSaveStore Store()=>new LocalSaveStore(Path.Combine(directory,"save.json"),defs);
+        [Test] public void ExistingPaidConstructionKeepsItsTimerAndNewUpgradesUseCurrentBalance()
+        {
+            var state=GameState.Create(defs,"Bestehender Ausbau",start);state.introSeen=true;
+            var building=state.Find("farm_grow_01");building.level=10;building.buildingSeconds=2;
+            state.money=12345;state.grinders=47;
+            var store=Store();store.Save(state);string before=JsonUtility.ToJson(state);
+            var loaded=store.Load().State;
+            Assert.That(JsonUtility.ToJson(loaded),Is.EqualTo(before));
+            var clock=new ManualClock(start.AddSeconds(1));var session=new GameSession(defs,loaded,clock,store);
+            session.ApplyOffline();Assert.That(loaded.Find(building.id).buildingSeconds,Is.EqualTo(1));
+            Assert.That(loaded.Find(building.id).level,Is.EqualTo(10));
+            clock.UtcNow=clock.UtcNow.AddSeconds(1);session.Advance(1);
+            var resumed=loaded.Find(building.id);Assert.That(resumed.level,Is.EqualTo(11));
+            Amount money=loaded.money,cost=session.Upgrades.Cost(resumed);
+            Assert.That(session.Upgrades.BuyWithMoney(resumed.id),Is.EqualTo(Failure.None));
+            Assert.That(resumed.level,Is.EqualTo(12));Assert.That(resumed.buildingSeconds,Is.Zero);
+            Assert.That(loaded.money,Is.EqualTo(money-cost));Assert.That(loaded.grinders,Is.EqualTo(47));
+            session.Save();Assert.That(store.Load().State.Find(resumed.id).level,Is.EqualTo(12));
+        }
+        [Test] public void LongTierConstructionSurvivesSaveAndOfflineCompletion()
+        {
+            var state=GameState.Create(defs,"Lange Baustelle",start);state.introSeen=true;
+            state.City.unlocked=Zone.Industry;state.money=new Amount(1,40);
+            var building=state.Find("bakery_01");building.level=149;
+            var clock=new ManualClock(start);var store=Store();var session=new GameSession(defs,state,clock,store);
+            Assert.That(session.Upgrades.BuyWithMoney(building.id),Is.EqualTo(Failure.None));
+            Assert.That(building.buildingSeconds,Is.EqualTo(2400));session.Save();
+            var loaded=store.Load();Assert.That(loaded.State,Is.Not.Null);Assert.That(loaded.Recovered,Is.False);
+            clock.UtcNow=clock.UtcNow.AddSeconds(2400);
+            var resumed=new GameSession(defs,loaded.State,clock,store);resumed.ApplyOffline();
+            Assert.That(loaded.State.Find(building.id).level,Is.EqualTo(150));
+            Assert.That(loaded.State.Find(building.id).buildingSeconds,Is.Zero);
+            resumed.ApplyOffline();Assert.That(loaded.State.Find(building.id).level,Is.EqualTo(150));
+        }
+        [Test] public void ActiveSessionAutomaticallyPersistsAtThirtySecondsWithoutManualSave()
+        {
+            var store=Store();var state=GameState.Create(defs,"Autosave",start);var clock=new ManualClock(start);
+            var session=new GameSession(defs,state,clock,store);session.CompleteIntro();
+            state.money=1234;clock.UtcNow=clock.UtcNow.AddSeconds(29);session.Advance(29);
+            Assert.That(store.Load().State.money,Is.EqualTo(new Amount(1000)));
+            clock.UtcNow=clock.UtcNow.AddSeconds(1);session.Advance(1);
+            Assert.That(store.Load().State.money,Is.EqualTo(new Amount(1234)));
+            Assert.That(store.Load().State.lastUtcTicks,Is.EqualTo(clock.UtcNow.Ticks));
+        }
         [Test] public void PreviousDistrictSaveAddsOnlyNewPlotsAndPreservesProgressAndCargo()
         {
             var previous=JsonUtility.FromJson<GameDefinitions>(JsonUtility.ToJson(defs));previous.version=1;
+            // The historical district catalog predates the resident story expansion.
+            previous.vipStories=Array.Empty<VipStoryDefinition>();previous.vipCollaborations=Array.Empty<VipCollaborationDefinition>();
             previous.instances=previous.instances.Where(x=>x.introducedVersion<=1).ToArray();
+            previous.cities=previous.cities.Where(x=>x.introducedVersion<=1).ToArray();previous.quests=previous.QuestsFor("burning_hills");
             var ids=previous.instances.Select(x=>x.id).ToArray();previous.routes=previous.routes.Where(x=>ids.Contains(x.from)&&ids.Contains(x.to)).ToArray();
             Assert.That(previous.instances.Length,Is.EqualTo(16));
             var state=GameState.Create(previous,"Bestehende Farm",start);state.introSeen=true;
@@ -31,11 +78,11 @@ namespace Weedtopia.Tests
             state.money=12345;state.Find("farm_grow_01").level=25;
             string existing=JsonUtility.ToJson(state.Find("farm_grow_01"));
             var oldStore=new LocalSaveStore(Path.Combine(directory,"save.json"),previous);oldStore.Save(state);
-            var migrated=Store().Load().State;Assert.That(migrated,Is.Not.Null);Assert.That(migrated.contentVersion,Is.EqualTo(2));Assert.That(migrated.buildings.Count,Is.EqualTo(56));
+            var migrated=Store().Load().State;Assert.That(migrated,Is.Not.Null);Assert.That(migrated.contentVersion,Is.EqualTo(defs.version));Assert.That(migrated.buildings.Count,Is.EqualTo(defs.instances.Length));
             Assert.That(JsonUtility.ToJson(migrated.Find("farm_grow_01")),Is.EqualTo(existing));Assert.That(migrated.money,Is.EqualTo(state.money));
             Assert.That(JsonUtility.ToJson(migrated.deliveries[0]),Is.EqualTo(JsonUtility.ToJson(state.deliveries[0])));
-            Assert.That(migrated.buildings.Where(x=>!ids.Contains(x.id)).All(x=>x.level==0&&x.raw==0&&x.refined==0),Is.True);
-            Store().Save(migrated);Assert.That(Store().Load().State.buildings.Count,Is.EqualTo(56));
+            Assert.That(migrated.buildings.Where(x=>!ids.Contains(x.id)).All(x=>x.level==(x.family=="town_hall"?1:0)&&x.raw==0&&x.refined==0),Is.True);
+            Store().Save(migrated);Assert.That(Store().Load().State.buildings.Count,Is.EqualTo(defs.instances.Length));
             state.buildings.RemoveAt(0);string payload=JsonUtility.ToJson(state);
             Assert.Throws<InvalidDataException>(()=>Store().Decode(JsonUtility.ToJson(new SaveEnvelope{payload=payload,sha256=LocalSaveStore.Hash(payload)})));
         }
@@ -43,7 +90,7 @@ namespace Weedtopia.Tests
         {
             var state=GameState.Create(defs,"Save-Test",start);var clock=new ManualClock(start);var store=Store();var session=new GameSession(defs,state,clock,store);
             // Use the same bounded tutorial budget as the progression test; pickup routes include a return leg.
-            for(int i=0;i<1800&&!state.City.freeplay;i++){TutorialDriver.Act(session,clock.UtcNow);clock.UtcNow=clock.UtcNow.AddSeconds(1);session.Advance(1);}
+            for(int i=0;i<TutorialDriver.MaxSimulationSeconds&&!state.City.freeplay;i++){TutorialDriver.Act(session,clock.UtcNow);clock.UtcNow=clock.UtcNow.AddSeconds(1);session.Advance(1);}
             session.Save();var loaded=store.Load();Assert.That(loaded.State,Is.Not.Null);Assert.That(loaded.Recovered,Is.False);
             Assert.That(JsonUtility.ToJson(loaded.State),Is.EqualTo(JsonUtility.ToJson(state)));Assert.That(state.City.freeplay,Is.True);
             for(int i=0;i<3;i++){store.Save(loaded.State);loaded=store.Load();}Assert.That(loaded.State.City.stats.earned,Is.EqualTo(state.City.stats.earned));

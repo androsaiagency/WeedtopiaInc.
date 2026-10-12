@@ -2,11 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
 using UnityEditor;
 using UnityEditor.Build;
 using UnityEditor.Build.Reporting;
+using UnityEditor.Build.Profile;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,7 +18,8 @@ namespace Weedtopia.Editor.GameSetup
     [Serializable] public sealed class VisualIssue {public string code,scene,objectPath,asset,detail;}
     [Serializable] public sealed class VisualPreflightReport
     {
-        public string utc,unity;
+        public string utc,unity,fingerprint,buildContext;
+        public int fingerprintSchemaVersion;
         public bool productionReady,userApproved;
         public int catalogSlots;
         public VisualIssue[] issues;
@@ -27,22 +27,93 @@ namespace Weedtopia.Editor.GameSetup
     public static class ProductionVisualPreflight
     {
         public const string ReportPath="Docs/ProductionFinish/Evidence/production_preflight.json";
-        [Serializable] private sealed class GateReceipt {public bool passed;public string fingerprint;}
-        public static string Fingerprint()
+        [Serializable] private sealed class GateReceipt {public bool passed = default;public string fingerprint = default;}
+        public const string InputManifestPath = "Docs/ProductionFinish/Evidence/release_inputs.json";
+        public static string[] ScenesForBuild()
         {
-            using(var sha=SHA256.Create())
-            {
-                var dependencies=EditorBuildSettings.scenes.Where(x=>x.enabled).SelectMany(x=>AssetDatabase.GetDependencies(x.path,true));
-                var files=Directory.GetFiles("Assets/Weedtopia/Scripts","*.cs",SearchOption.AllDirectories)
-                    .Concat(Directory.GetFiles("Assets/Weedtopia/Production","*",SearchOption.AllDirectories))
-                    .Concat(Directory.GetFiles("Assets/Settings","*",SearchOption.AllDirectories))
-                    .Concat(dependencies.SelectMany(x=>new[]{x,x+".meta"}))
-                    .Concat(new[]{"ProjectSettings/GraphicsSettings.asset","ProjectSettings/QualitySettings.asset","ProjectSettings/EditorBuildSettings.asset","Packages/manifest.json","Packages/packages-lock.json"})
-                    .Select(x=>x.Replace('\\','/')).Where(File.Exists).Distinct(StringComparer.Ordinal).OrderBy(x=>x,StringComparer.Ordinal);
-                string hashes=string.Join("\n",files.Select(p=>p+":"+BitConverter.ToString(sha.ComputeHash(File.ReadAllBytes(p)))));
-                return BitConverter.ToString(sha.ComputeHash(Encoding.UTF8.GetBytes(hashes))).Replace("-","").ToLowerInvariant();
-            }
+            var profile = BuildProfile.GetActiveBuildProfile();
+            var scenes = profile != null ? profile.GetScenesForBuild() : EditorBuildSettings.scenes;
+            return scenes.Where(scene => scene.enabled).Select(scene => scene.path).ToArray();
         }
+
+        public static IEnumerable<string> FingerprintInputPaths()
+        {
+            var scenes = ScenesForBuild();
+            var dependencies = scenes.SelectMany(path => AssetDatabase.GetDependencies(path, true));
+            // Resources, StreamingAssets and build profiles can enter a player without a scene reference.
+            var runtimeAssets = AssetDatabase.GetAllAssetPaths().Where(path => path.StartsWith("Assets/", StringComparison.Ordinal)
+                && (path.Contains("/Resources/") || path.StartsWith("Assets/StreamingAssets/", StringComparison.Ordinal)));
+            var profile = BuildProfile.GetActiveBuildProfile();
+            var profileInputs = profile == null ? Enumerable.Empty<string>()
+                : AssetDatabase.GetDependencies(AssetDatabase.GetAssetPath(profile), true);
+            IEnumerable<string> Files(string folder) => Directory.Exists(folder)
+                ? Directory.GetFiles(folder, "*", SearchOption.AllDirectories) : Array.Empty<string>();
+            return Files("Assets/Weedtopia/Scripts").Concat(Files("Assets/Weedtopia/Production"))
+                .Concat(Files("Assets/Settings")).Concat(Files("ProjectSettings"))
+                .Concat(EmbeddedPackageInputs("Packages"))
+                .Concat(dependencies.Concat(runtimeAssets).Concat(profileInputs).Where(path => path.StartsWith("Assets/", StringComparison.Ordinal))
+                    .SelectMany(path => new[] { path, path + ".meta" }))
+                .Concat(new[] { "ProjectSettings/ProjectSettings.asset", "ProjectSettings/ProjectVersion.txt",
+                    "ProjectSettings/EditorBuildSettings.asset", "Packages/manifest.json", "Packages/packages-lock.json" })
+                .Select(path => path.Replace('\\', '/')).Where(path => !AssetDatabase.IsValidFolder(path));
+        }
+
+        // Embedded package sources and metadata must invalidate release receipts just like productive assets.
+        public static IEnumerable<string> EmbeddedPackageInputs(string packagesFolder)
+            => Directory.Exists(packagesFolder) ? Directory.GetDirectories(packagesFolder)
+                .Where(folder => File.Exists(Path.Combine(folder, "package.json")))
+                .SelectMany(folder => Directory.GetFiles(folder, "*", SearchOption.AllDirectories)) : Array.Empty<string>();
+
+        public static string BuildContext(BuildTarget target, BuildOptions options)
+        {
+            var namedTarget = NamedBuildTarget.FromBuildTargetGroup(BuildPipeline.GetBuildTargetGroup(target));
+            var profile = BuildProfile.GetActiveBuildProfile();
+            // Persisted settings are hashed separately; live platform switches and profile overrides are explicit.
+            var entries = new List<string>
+            {
+                "unity=" + UnityEngine.Application.unityVersion,
+                "target=" + target,
+                "options=" + (int)options,
+                "textureCompressionOverride=" + EditorUserBuildSettings.overrideTextureCompression,
+                "textureCompressionOverrideValue=" + (int)EditorUserBuildSettings.overrideTextureCompression,
+                "maximumTextureSizeOverride=" + EditorUserBuildSettings.overrideMaxTextureSize,
+                "profile=" + (profile == null ? "platform" : AssetDatabase.GetAssetPath(profile)),
+                "identifier=" + PlayerSettings.GetApplicationIdentifier(namedTarget),
+                "version=" + PlayerSettings.bundleVersion,
+                "backend=" + PlayerSettings.GetScriptingBackend(namedTarget),
+                "stripping=" + PlayerSettings.GetManagedStrippingLevel(namedTarget),
+                "errorStacktrace=" + PlayerSettings.GetStackTraceLogType(LogType.Error),
+                "exceptionStacktrace=" + PlayerSettings.GetStackTraceLogType(LogType.Exception),
+                "defines=" + PlayerSettings.GetScriptingDefineSymbols(namedTarget),
+                "profileDefines=" + (profile == null ? "" : string.Join(";", profile.scriptingDefines)),
+                "graphics=" + string.Join(",", PlayerSettings.GetGraphicsAPIs(target).Select(api => api.ToString())),
+                "scenes=" + string.Join(";", ScenesForBuild())
+            };
+            if (target == BuildTarget.Android)
+            {
+                entries.Add("androidManagedStacktrace=" + PlayerSettings.GetIl2CppStacktraceInformation(NamedBuildTarget.Android));
+                entries.Add("androidSymbolLevel=" + UnityEditor.Android.UserBuildSettings.DebugSymbols.level);
+                entries.Add("androidSymbolFormat=" + UnityEditor.Android.UserBuildSettings.DebugSymbols.format);
+                entries.Add("androidBundle=" + EditorUserBuildSettings.buildAppBundle);
+                entries.Add("androidExport=" + EditorUserBuildSettings.exportAsGoogleAndroidProject);
+                entries.Add("androidTextures=" + EditorUserBuildSettings.androidBuildSubtarget);
+                entries.Add("androidArchitectures=" + PlayerSettings.Android.targetArchitectures);
+                entries.Add("androidVersionCode=" + PlayerSettings.Android.bundleVersionCode);
+                entries.Add("androidMinSdk=" + (int)PlayerSettings.Android.minSdkVersion);
+                entries.Add("androidTargetSdk=" + (int)PlayerSettings.Android.targetSdkVersion);
+                entries.Add("androidSplit=" + PlayerSettings.Android.splitApplicationBinary);
+                entries.Add("androidPerCpu=" + PlayerSettings.Android.buildApkPerCpuArchitecture);
+                entries.Add("androidCustomKeystore=" + PlayerSettings.Android.useCustomKeystore);
+            }
+            else if (BuildPipeline.GetBuildTargetGroup(target) == BuildTargetGroup.Standalone)
+                entries.Add("standaloneSubtarget=" + EditorUserBuildSettings.standaloneBuildSubtarget);
+            return string.Join("\n", entries);
+        }
+
+        public static ReleaseInputManifest CaptureInputs(BuildTarget target, BuildOptions options)
+            => ReleaseFingerprint.Capture(Directory.GetCurrentDirectory(), FingerprintInputPaths(), BuildContext(target, options));
+        public static string Fingerprint() => Fingerprint(EditorUserBuildSettings.activeBuildTarget, BuildOptions.None);
+        public static string Fingerprint(BuildTarget target, BuildOptions options) => CaptureInputs(target, options).fingerprint;
         public static bool AcceptsReceipt(string json,string fingerprint)
         {try{var r=JsonUtility.FromJson<GateReceipt>(json);return r!=null&&r.passed&&!string.IsNullOrEmpty(r.fingerprint)&&r.fingerprint==fingerprint;}catch(ArgumentException){return false;}}
         private static string PathOf(Transform t)=>t.parent==null?t.name:PathOf(t.parent)+"/"+t.name;
@@ -53,12 +124,24 @@ namespace Weedtopia.Editor.GameSetup
         [MenuItem("Weedtopia/Production/Production Visual Preflight")]
         public static void RunMenu(){var report=Inspect();if(!report.productionReady)throw new InvalidOperationException("Production Visual Preflight FAILED: "+report.issues.Length+" issues. See "+ReportPath);}
         public static VisualPreflightReport Inspect()
+            => Inspect(EditorUserBuildSettings.activeBuildTarget, BuildOptions.None);
+        public static VisualPreflightReport Inspect(BuildTarget target, BuildOptions options)
         {
+            // Opening build scenes must never discard the user's unsaved scene work.
+            if (Enumerable.Range(0, UnityEngine.SceneManagement.SceneManager.sceneCount)
+                .Select(UnityEngine.SceneManagement.SceneManager.GetSceneAt).Any(scene => scene.isDirty))
+                throw new InvalidOperationException("Save the open scenes before running production preflight. Unsaved scene work is protected.");
+            var activeProfile = BuildProfile.GetActiveBuildProfile();
+            if (activeProfile != null && EditorUtility.IsDirty(activeProfile))
+                throw new InvalidOperationException("Save the active build profile before running production preflight.");
+            var inputs = CaptureInputs(target, options);
             var issues=new List<VisualIssue>();var setup=EditorSceneManager.GetSceneManagerSetup();bool approved=true;int presentations=0,slots=0;
             void Add(string code,string scene,string obj,string asset,string detail)=>issues.Add(new VisualIssue{code=code,scene=scene,objectPath=obj,asset=asset,detail=detail});
+            foreach (var missing in inputs.files.Where(file => file.bytes < 0))
+                Add("MISSING_RELEASE_INPUT", "", "", missing.path, "Required release input or import metadata is missing");
             try
             {
-                foreach(var build in EditorBuildSettings.scenes.Where(x=>x.enabled))
+                foreach(var build in ScenesForBuild().Select(path => new EditorBuildSettingsScene(path, true)))
                 {
                     if(build.path.Contains("Sample")||build.path.Contains("Test")||build.path.Contains("Review"))Add("NON_PRODUCT_SCENE",build.path,"",build.path,"Sample/test/review scene in product build");
                     foreach(string dependency in AssetDatabase.GetDependencies(build.path,true).Distinct())if(ForbiddenAsset(dependency))Add("FORBIDDEN_DEPENDENCY",build.path,"",dependency,"Development or review asset reachable from built scene");
@@ -119,9 +202,12 @@ namespace Weedtopia.Editor.GameSetup
                 foreach(var family in catalog.Families)foreach(var band in family.Bands)
                 {
                     slots++;var wrapper=band.WrapperPrefab.GetComponent<BuildingVisualWrapper>();string key=family.BuildingId+"/"+wrapper.TierId;
-                    var visuals=wrapper.VisualRoot.GetComponentsInChildren<BuildingSpriteVisual>(true);
+                    var visuals=wrapper.VisualRoot.GetComponentsInChildren<BuildingSpriteVisual>();
                     var sprites=visuals.Select(x=>string.IsNullOrEmpty(x.ResourcePath)?x.GetComponent<SpriteRenderer>().sprite:AssetDatabase.LoadAssetAtPath<Sprite>(ProductionBuildingIntegration.SpritePath(x.ResourcePath))).ToArray();
-                    if(sprites.Length==0||sprites.Any(x=>x==null))Add("BUILDING_SPRITE_MISSING",GameScaffold.GameScene,key,AssetDatabase.GetAssetPath(band.WrapperPrefab),"Accepted source not integrated under VisualRoot");
+                    var model=wrapper.ManagedModel;
+                    var lod=model!=null&&model.gameObject.activeSelf?model.GetComponent<LODGroup>():null;
+                    bool meshVisual=lod!=null&&lod.GetLODs().Length>0&&lod.GetLODs().All(l=>l.renderers.Length>0&&l.renderers.All(r=>r!=null&&r.GetComponent<MeshFilter>()?.sharedMesh!=null&&r.sharedMaterials.Length>0&&r.sharedMaterials.All(m=>m!=null&&m.shader!=null)));
+                    if(sprites.Any(x=>x==null)||(sprites.Length==0&&!meshVisual))Add("BUILDING_VISUAL_MISSING",GameScaffold.GameScene,key,AssetDatabase.GetAssetPath(band.WrapperPrefab),"Active accepted sprite or complete authored LOD model required under VisualRoot");
                     foreach(var sprite in sprites.Where(x=>x!=null))
                     {
                         string id=GlobalObjectId.GetGlobalObjectIdSlow(sprite).ToString();if(!used.Add(id))Add("DUPLICATE_BUILDING_SPRITE",GameScaffold.GameScene,key,AssetDatabase.GetAssetPath(sprite),"Sprite reused across building slots");
@@ -129,7 +215,7 @@ namespace Weedtopia.Editor.GameSetup
                     }
                 }
                 if(slots!=251)Add("CATALOG_COVERAGE",GameScaffold.GameScene,"BuildingVisualCatalog","","Expected exactly 251 slots, got "+slots);
-                string fingerprint=Fingerprint();
+                string fingerprint=inputs.fingerprint;
                 foreach(string gate in new[]{"ui_overflow","target_profile","human_playthrough","audio_listening","audio_license"})
                 {
                     string path="Docs/ProductionFinish/Evidence/"+gate+".json";
@@ -138,8 +224,8 @@ namespace Weedtopia.Editor.GameSetup
                 }
             }
             finally{if(setup.Length>0)EditorSceneManager.RestoreSceneManagerSetup(setup);}
-            var report=new VisualPreflightReport{utc=DateTime.UtcNow.ToString("O"),unity=UnityEngine.Application.unityVersion,productionReady=issues.Count==0,userApproved=approved,catalogSlots=slots,issues=issues.ToArray()};
-            Directory.CreateDirectory(Path.GetDirectoryName(ReportPath));File.WriteAllText(ReportPath,JsonUtility.ToJson(report,true));return report;
+            var report=new VisualPreflightReport{utc=DateTime.UtcNow.ToString("O"),unity=UnityEngine.Application.unityVersion,fingerprint=inputs.fingerprint,buildContext=inputs.buildContext,fingerprintSchemaVersion=inputs.schemaVersion,productionReady=issues.Count==0,userApproved=approved,catalogSlots=slots,issues=issues.ToArray()};
+            Directory.CreateDirectory(Path.GetDirectoryName(ReportPath));File.WriteAllText(InputManifestPath,JsonUtility.ToJson(inputs,true));File.WriteAllText(ReportPath,JsonUtility.ToJson(report,true));return report;
         }
     }
     public sealed class ProductionBuildGuard : IPreprocessBuildWithReport
@@ -148,7 +234,12 @@ namespace Weedtopia.Editor.GameSetup
         public void OnPreprocessBuild(BuildReport report)
         {
             if((report.summary.options&BuildOptions.Development)!=0)return;
-            var result=ProductionVisualPreflight.Inspect();if(!result.productionReady)throw new BuildFailedException("Production visual preflight failed: "+result.issues.Length+" blockers. "+ProductionVisualPreflight.ReportPath);
+            // Explicit non-Development diagnostic artifacts carry no shipping acceptance. The exact active APK path is scoped by try/finally.
+            if(AndroidTestBuild.IsReleaseDiagnosticBuild(report))return;
+            if(report.summary.platform==BuildTarget.Android && (UnityEditor.Android.UserBuildSettings.DebugSymbols.level!=global::Unity.Android.Types.DebugSymbolLevel.Full
+                || UnityEditor.Android.UserBuildSettings.DebugSymbols.format!=global::Unity.Android.Types.DebugSymbolFormat.Zip))
+                throw new BuildFailedException("Production Android builds require Full native debug symbols in ZIP format. Use Weedtopia/Build/Production Android Release.");
+            var result=ProductionVisualPreflight.Inspect(report.summary.platform,report.summary.options);if(!result.productionReady)throw new BuildFailedException("Production visual preflight failed: "+result.issues.Length+" blockers. "+ProductionVisualPreflight.ReportPath);
         }
     }
 }

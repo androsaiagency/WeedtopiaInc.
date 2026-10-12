@@ -12,6 +12,7 @@ namespace Weedtopia.Unity
         public PresentationArt art;
         public CharacterActor[] characters;
         public PresentationRoute[] routes;
+        public ConveyorNetwork conveyors;
         public Text[] currencyValues;
         public Image introPortrait, questPortrait, workerPortrait, workerRoleIcon;
         public Image workerRarity;
@@ -27,15 +28,24 @@ namespace Weedtopia.Unity
         private GameRoot root;
         private float revealAt=-10;
         private int previousDeliveries=-1,previousLevels=-1;
+        private Simulation observedSimulation;
+        private readonly System.Collections.Generic.Dictionary<string,PresentationRoute> routeViews = new System.Collections.Generic.Dictionary<string,PresentationRoute>();
         public void Initialize(GameRoot value)
         {
             root=value;
+            foreach(var route in routes)routeViews.Add(route.routeId,route);
             if(releaseRequested&&!explicitBuildingApproval)throw new InvalidOperationException("Production startup blocked: explicit building art approval is missing.");
             foreach(var actor in characters)actor.Initialize(root);
         }
         public void Refresh()
         {
             if(root.Session==null)return;
+            if(observedSimulation!=root.Session.Simulation)
+            {
+                if(observedSimulation!=null)observedSimulation.ConveyorTransferred-=OnConveyorTransferred;
+                observedSimulation=root.Session.Simulation;observedSimulation.ConveyorTransferred+=OnConveyorTransferred;
+                foreach(var route in routes)if(route.conveyor)route.ResetConveyorVisuals();
+            }
             var s=root.Session.State;
             int levels=s.buildings.Sum(x=>x.level);
             if(eventAudio!=null)
@@ -44,7 +54,7 @@ namespace Weedtopia.Unity
                 else if(previousDeliveries>=0&&s.City.stats.deliveries>previousDeliveries&&deliverySound!=null)eventAudio.PlayOneShot(deliverySound,.45f);
             }
             previousLevels=levels;previousDeliveries=s.City.stats.deliveries;
-            currencyValues[0].text=s.money.ToString();currencyValues[1].text=s.grinders.ToString();currencyValues[2].text=s.cards.ToString();currencyValues[3].text=root.Session.Simulation.Residents(s.activeCity).ToString();
+            currencyValues[0].text=s.money.ToString(null,root.Localization.Culture);currencyValues[1].text=s.grinders.ToString();currencyValues[2].text=s.cards.ToString();currencyValues[3].text=root.Session.Simulation.Residents(s.activeCity).ToString();
             var q=root.Session.Progression.Current;
             string speaker=(q?.speaker??"rocko").ToLowerInvariant();
             if(!new[]{"rocko","mila","jaro","nia"}.Contains(speaker))speaker="rocko";
@@ -62,26 +72,33 @@ namespace Weedtopia.Unity
             foreach(var route in routes)
             {
                 var def=root.Definitions.routes.First(x=>x.id==route.routeId);
-                var source=s.Find(def.from);
-                route.Present(!root.Session.Paused&&source.level>0&&root.Session.Workers.Automated(source)&&string.IsNullOrEmpty(source.bottleneck),source.level>0&&source.Total>0,.1f);
+                var source=s.Find(def.from);var destination=s.Find(def.to);
+                route.SetOperatingState(source.level>0&&destination.level>0&&(root.Session.Workers.Automated(source)||source.workSeconds>0),
+                    destination.Get(def.resource)<root.Session.Simulation.Capacity(destination));
             }
         }
         public void PaintWorker(WorkerState worker,bool reveal=false)
         {
-            if(worker==null){workerPortrait.gameObject.SetActive(false);workerRoleIcon.gameObject.SetActive(false);workerName.text="Dein Team";return;}
+            if(worker==null){workerPortrait.gameObject.SetActive(false);workerRoleIcon.gameObject.SetActive(false);workerName.text=GameText.Get("presentation.productionpresentation.dein_team.f2ec7e04");return;}
             workerPortrait.gameObject.SetActive(true);workerRoleIcon.gameObject.SetActive(true);
             workerPortrait.sprite=art.Get("portrait_"+PresentationArt.CharacterForRole(worker.role));
             workerRoleIcon.sprite=art.Get(PresentationArt.IconForRole(worker.role));
             Color[] colors={new Color(.7f,.69f,.54f),new Color(.38f,.73f,.6f),new Color(.35f,.65f,.92f),new Color(.73f,.43f,.92f),new Color(1,.72f,.26f)};
             workerRarity.color=colors[Mathf.Clamp(worker.rarity,0,4)];
-            workerName.text=root.Definitions.Text(root.Definitions.Role(worker.role).nameKey).Replace("-Manager","\nManager");
+            workerName.text=root.Definitions.Text(root.Definitions.Role(worker.role).nameKey).Replace("-Manager",GameText.Get("presentation.productionpresentation.b4fa9c25d365"));
             if(reveal)revealAt=Time.unscaledTime;
         }
         public void RevealWorker(){revealAt=Time.unscaledTime;}
         private void Update()
         {
+            if(conveyors!=null&&root!=null&&root.Session!=null&&!conveyors.diagnosticFreeze)
+                conveyors.Animate(Time.unscaledDeltaTime,root.Session.Paused||!root.Session.State.introSeen,root.CameraRig.RenderCamera);
             if(workerReveal!=null){float t=Mathf.Clamp01((Time.unscaledTime-revealAt)/.55f);workerReveal.localScale=Vector3.one*(1+.08f*Mathf.Sin(t*Mathf.PI));}
         }
+        private void OnConveyorTransferred(string routeId)
+        { if(routeViews.TryGetValue(routeId,out var route))route.NotifyCargoTransfer(); }
+        private void OnDestroy()
+        { if(observedSimulation!=null)observedSimulation.ConveyorTransferred-=OnConveyorTransferred; }
         public void DecorateRow(Button row,string icon,Color? tint=null)
         {
             var image=row.transform.Find("RowIcon")?.GetComponent<Image>();

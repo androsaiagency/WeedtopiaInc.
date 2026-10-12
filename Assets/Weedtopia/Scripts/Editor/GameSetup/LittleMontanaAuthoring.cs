@@ -1,0 +1,641 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using UnityEditor;
+using UnityEditor.SceneManagement;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using Weedtopia.Buildings.Presentation;
+using Weedtopia.Domain;
+using Weedtopia.Unity;
+using Object = UnityEngine.Object;
+
+namespace Weedtopia.Editor.GameSetup
+{
+    /// <summary>
+    /// Explicit additive city authoring. The current second-city scene supplies shared shop, localization,
+    /// mobile controls and world contracts. Earlier city installers are deliberately never invoked here.
+    /// </summary>
+    public static class LittleMontanaAuthoring
+    {
+        public const string Folder = "Assets/Weedtopia/Production/LittleMontana";
+        public const string ScenePath = "Assets/Weedtopia/Game/Scenes/LittleMontana.unity";
+        public const string CatalogPath = Folder + "/BuildingVisuals.asset";
+        public const string StoriesPath = Folder + "/ResidentStories.prefab";
+        public const string PeoplePath = Folder + "/Residents.prefab";
+        public const string VisualsPath = Folder + "/ResidentVisuals.asset";
+        public const string LandmarksPath = Folder + "/Prefabs/ValleyPlaces.prefab";
+        public const string MapPath = Folder + "/DistrictMap.asset";
+        private const string City = "little_montana";
+        private static GameDefinitions definitions;
+        private static readonly Dictionary<string, Vector2> Places = new Dictionary<string, Vector2>
+        {
+            {"lm_mara", new Vector2(-38,116)}, {"lm_jon", new Vector2(-29,14)},
+            {"lm_ellie", new Vector2(18,-82)}, {"lm_noah", new Vector2(18,-184)},
+            {"lm_ruth", new Vector2(14,182)}, {"lm_tessa", new Vector2(5,-33)},
+            {"lm_ben", new Vector2(-38,300)}
+        };
+
+        [MenuItem("Weedtopia/Cities/Install or Repair Little Montana")]
+        public static void Apply()
+        {
+            BurningHillsLayoutInstaller.RequireSafeEditor();
+            var setup = EditorSceneManager.GetSceneManagerSetup();
+            try
+            {
+                foreach (string sub in new[] { "", "/Materials", "/Buildings", "/Prefabs" }) Directory.CreateDirectory(Folder + sub);
+                AssetDatabase.Refresh();
+                definitions = AssetDatabase.LoadAssetAtPath<Weedtopia.Content.GameContent>(GameScaffold.ContentPath).Load();
+                if (definitions.cities.All(c => c.id != "little_montana")) throw new InvalidOperationException("Little Montana content must be installed before scene authoring.");
+                var sourceScene = EditorSceneManager.OpenScene(GameScaffold.GameScene);
+                var source = FindRoot(sourceScene);
+                var sourceCatalog = (BuildingVisualCatalog)new SerializedObject(source).FindProperty("productionCatalog").objectReferenceValue;
+                Buildings(sourceCatalog);
+                var visuals = Residents();
+                ResidentPanel(visuals); ResidentWorld(visuals); Landmarks(); Districts(); ImportSingle(Folder + "/Art/town_sign.png", .06f);
+                UpgradeCampaignPrefab();
+                var changedExisting = new List<string>();
+                foreach (string path in new[] { GameScaffold.GameScene, BigRockCityAuthoring.ScenePath, SevenHillsAuthoring.ScenePath })
+                {
+                    var scene = EditorSceneManager.OpenScene(path);
+                    if (CampaignRows(FindRoot(scene).Ui.Campaign))
+                    {
+                        EditorSceneManager.MarkSceneDirty(scene); EditorSceneManager.SaveScene(scene); changedExisting.Add(path);
+                    }
+                }
+                bool created = !File.Exists(ScenePath);
+                if (created && !AssetDatabase.CopyAsset(BigRockCityAuthoring.ScenePath, ScenePath))
+                    throw new InvalidOperationException("Could not copy current authored Big Rock City scene.");
+                var cityScene = EditorSceneManager.OpenScene(ScenePath);
+                var root = FindRoot(cityScene);
+                bool changed = false;
+                if (created)
+                {
+                    RemapCity(cityScene);
+                    var data = new SerializedObject(root);
+                    data.FindProperty("sceneCityId").stringValue = "little_montana";
+                    data.FindProperty("productionCatalog").objectReferenceValue = AssetDatabase.LoadAssetAtPath<BuildingVisualCatalog>(CatalogPath);
+                    var previousWorld = root.StoryWorld.gameObject;
+                    var world = Instance(PeoplePath, null).GetComponent<VipTownPresentation>();
+                    data.FindProperty("storyWorld").objectReferenceValue = world;
+                    data.ApplyModifiedPropertiesWithoutUndo(); Object.DestroyImmediate(previousWorld);
+                    ReplaceResidentPanel(root);
+                    foreach (var quarry in cityScene.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<BigRockCityStamp>(true)).ToArray())
+                        Object.DestroyImmediate(quarry.gameObject);
+                    ThemeLandscape(cityScene, root);
+                    changed = true;
+                }
+                // Repair only missing Little Montana-owned assets/references. Authored/manual objects retain identity.
+                var rootData = new SerializedObject(root);
+                if (rootData.FindProperty("productionCatalog").objectReferenceValue == null)
+                {
+                    rootData.FindProperty("productionCatalog").objectReferenceValue = AssetDatabase.LoadAssetAtPath<BuildingVisualCatalog>(CatalogPath);
+                    rootData.ApplyModifiedPropertiesWithoutUndo(); changed = true;
+                }
+                if (root.StoryWorld == null)
+                {
+                    rootData.FindProperty("storyWorld").objectReferenceValue = Instance(PeoplePath, null).GetComponent<VipTownPresentation>();
+                    rootData.ApplyModifiedPropertiesWithoutUndo(); changed = true;
+                }
+                
+                if (root.Ui.Stories == null) throw new InvalidOperationException("Missing story UI; refusing a broad UI rebuild.");
+                if (root.Ui.Stories.visuals == null) { root.Ui.Stories.visuals = AssetDatabase.LoadAssetAtPath<VipVisualCatalog>(VisualsPath); changed = true; }
+                if (!cityScene.GetRootGameObjects().Any(g => g.GetComponentInChildren<LittleMontanaStamp>(true) != null))
+                { Instance(LandmarksPath, null); changed = true; }
+                changed |= MapAndLabels(root, cityScene);
+                foreach (var place in cityScene.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<CityPlaceProgressVisual>(true)))
+                    if (place.root != root) { place.root = root; PrefabUtility.RecordPrefabInstancePropertyModifications(place); changed = true; }
+                changed |= WelcomeSigns(cityScene);
+                changed |= CampaignRows(root.Ui.Campaign);
+                if (changed) { EditorSceneManager.MarkSceneDirty(cityScene); EditorSceneManager.SaveScene(cityScene); }
+                var scenes = EditorBuildSettings.scenes.ToList();
+                if (!scenes.Any(s => s.path == ScenePath)) { scenes.Add(new EditorBuildSettingsScene(ScenePath, true)); EditorBuildSettings.scenes = scenes.ToArray(); }
+                else if (scenes.Any(s => s.path == ScenePath && !s.enabled)) { scenes.Single(s => s.path == ScenePath).enabled = true; EditorBuildSettings.scenes = scenes.ToArray(); }
+                AssetDatabase.SaveAssets();
+                Directory.CreateDirectory("Docs/LittleMontana");
+                File.WriteAllText("Docs/LittleMontana/authoring_receipt.json", JsonUtility.ToJson(new Receipt
+                {
+                    utc = DateTime.UtcNow.ToString("O"), createdScene = created, changedExistingCityScenes = changedExisting.ToArray(),
+                    buildings = definitions.instances.Count(i => i.cityId == "little_montana"),
+                    routes = definitions.routes.Count(r => definitions.instances.Single(i => i.id == r.from).cityId == "little_montana"),
+                    mainQuests = definitions.QuestsFor("little_montana").Length
+                }, true));
+            }
+            finally
+            {
+                if (setup.Any(s => s.isLoaded) && setup.Count(s => s.isActive) == 1) EditorSceneManager.RestoreSceneManagerSetup(setup);
+            }
+        }
+
+        [Serializable] private sealed class Receipt
+        {
+            public string utc, status = "passed";
+            public bool createdScene, runtimeStaticObjects;
+            public string[] changedExistingCityScenes;
+            public int buildings, routes, mainQuests, buildingVariants = 251, landmarks = 6, residents = 7, chapters = 28, recurring = 21, sharedProjects = 3;
+        }
+        private static GameRoot FindRoot(Scene scene) => scene.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<GameRoot>(true)).Single();
+        private static BuildingVisualCatalog Buildings(BuildingVisualCatalog source)
+        {
+            var existing = AssetDatabase.LoadAssetAtPath<BuildingVisualCatalog>(CatalogPath);
+            if (existing != null) return existing;
+            var shader = Shader.Find("Weedtopia/Little Montana/Building Palette");
+            if (shader == null) throw new InvalidOperationException("Missing Little Montana building shader.");
+            var material = AssetDatabase.LoadAssetAtPath<Material>(Folder + "/Materials/CedarSlate.mat");
+            if (material == null) { material = new Material(shader); AssetDatabase.CreateAsset(material, Folder + "/Materials/CedarSlate.mat"); }
+            var families = new List<BuildingVisualFamily>();
+            foreach (var family in source.Families)
+            {
+                Directory.CreateDirectory(Folder + "/Buildings/" + family.BuildingId); AssetDatabase.Refresh();
+                var bands = new List<BuildingVisualBand>();
+                foreach (var band in family.Bands)
+                {
+                    string path = Folder + "/Buildings/" + family.BuildingId + "/" + band.TierId + ".prefab";
+                    if (!File.Exists(path))
+                    {
+                        if (!AssetDatabase.CopyAsset(AssetDatabase.GetAssetPath(band.WrapperPrefab), path)) throw new InvalidOperationException("Building wrapper copy failed: " + path);
+                        var copy = PrefabUtility.LoadPrefabContents(path);
+                        try
+                        {
+                            foreach (var sprite in copy.GetComponentsInChildren<BuildingSpriteVisual>(true)) sprite.SpriteRenderer.sharedMaterial = material;
+                            PrefabUtility.SaveAsPrefabAsset(copy, path);
+                        }
+                        finally { PrefabUtility.UnloadPrefabContents(copy); }
+                    }
+                    bands.Add(new BuildingVisualBand(band.TierId, band.MinLevel, band.MaxLevel, AssetDatabase.LoadAssetAtPath<GameObject>(path)));
+                }
+                families.Add(new BuildingVisualFamily(family.BuildingId, bands));
+            }
+            var catalog = ScriptableObject.CreateInstance<BuildingVisualCatalog>(); catalog.EditorSetFamilies(families); AssetDatabase.CreateAsset(catalog, CatalogPath); return catalog;
+        }
+        private static VipVisualCatalog Residents()
+        {
+            var existing = AssetDatabase.LoadAssetAtPath<VipVisualCatalog>(VisualsPath); if (existing != null) return existing;
+            var entries = new List<VipVisualEntry>();
+            foreach (var person in definitions.vipStories.Where(p => p.cityId == "little_montana"))
+            {
+                string path = Folder + "/Art/" + person.id + ".png";
+                var importer = AssetImporter.GetAtPath(path) as TextureImporter;
+                if (importer == null) throw new InvalidOperationException("Missing Little Montana resident artwork " + path);
+                importer.textureType = TextureImporterType.Sprite; importer.spriteImportMode = SpriteImportMode.Multiple; importer.spritePixelsPerUnit = 256;
+                importer.alphaIsTransparency = true; importer.mipmapEnabled = true; importer.maxTextureSize = 2048; importer.wrapMode = TextureWrapMode.Clamp;
+                importer.textureCompression = TextureImporterCompression.CompressedHQ;
+#pragma warning disable 618
+                importer.spritesheet = new[]
+                {
+                    new SpriteMetaData { name = person.id + "_body", rect = new Rect(0, 0, 1024, 1536), alignment = 9, pivot = new Vector2(.5f, .02f) },
+                    new SpriteMetaData { name = person.id + "_portrait", rect = new Rect(100, 690, 824, 800), alignment = 9, pivot = new Vector2(.5f, .5f) }
+                };
+#pragma warning restore 618
+                importer.SaveAndReimport();
+                var sprites = AssetDatabase.LoadAllAssetsAtPath(path).OfType<Sprite>().ToArray();
+                entries.Add(new VipVisualEntry { id = person.id, body = sprites.Single(s => s.name == person.id + "_body"), portrait = sprites.Single(s => s.name == person.id + "_portrait") });
+            }
+            var visuals = ScriptableObject.CreateInstance<VipVisualCatalog>(); visuals.entries = entries.ToArray(); AssetDatabase.CreateAsset(visuals, VisualsPath); return visuals;
+        }
+        private static void ResidentPanel(VipVisualCatalog visuals)
+        {
+            if (File.Exists(StoriesPath)) return;
+            var panel = PrefabUtility.LoadPrefabContents(BigRockCityAuthoring.StoriesPath);
+            try
+            {
+                var ui = panel.GetComponent<VipStoriesUi>(); ui.visuals = visuals;
+                foreach (var row in ui.rows) Object.DestroyImmediate(row.gameObject);
+                var rows = new List<VipStoryRosterRow>();
+                foreach (var person in definitions.vipStories.Where(p => p.cityId == "little_montana"))
+                {
+                    var row = Instance(VipStoriesAuthoring.RowPath, ui.rosterScroll.content).GetComponent<VipStoryRosterRow>();
+                    row.id = person.id; row.portrait.sprite = visuals.Get(person.id).portrait; rows.Add(row);
+                }
+                foreach (var collaboration in definitions.vipCollaborations.Where(p => p.cityId == "little_montana"))
+                {
+                    var row = Instance(VipStoriesAuthoring.RowPath, ui.rosterScroll.content).GetComponent<VipStoryRosterRow>();
+                    row.id = collaboration.id; row.collaboration = true; row.gameObject.SetActive(false); rows.Add(row);
+                }
+                ui.rows = rows.ToArray(); ui.portrait.sprite = visuals.entries[0].body;
+                panel.name = "LittleMontanaResidentStories"; PrefabUtility.SaveAsPrefabAsset(panel, StoriesPath);
+            }
+            finally { PrefabUtility.UnloadPrefabContents(panel); }
+        }
+        private static void ResidentWorld(VipVisualCatalog visuals)
+        {
+            if (File.Exists(PeoplePath))
+            {
+                foreach (var person in definitions.vipStories.Where(p => p.cityId == City)) RepairResidentMemories(person.id);
+                return;
+            }
+            var world = new GameObject("LittleMontanaResidents", typeof(VipTownPresentation)); var actors = new List<VipStoryActor>();
+            foreach (var person in definitions.vipStories.Where(p => p.cityId == "little_montana"))
+            {
+                string path = Folder + "/Prefabs/" + person.id + ".prefab";
+                if (!File.Exists(path))
+                {
+                    var actorObject = PrefabUtility.LoadPrefabContents(VipStoriesAuthoring.ActorPath);
+                    try
+                    {
+                        var actor = actorObject.GetComponent<VipStoryActor>(); actor.vipId = person.id; actorObject.name = person.id;
+                        actor.spriteRenderer.sprite = visuals.Get(person.id).body;
+                        actor.artwork.localScale = Vector3.one * (5.6f / actor.spriteRenderer.sprite.bounds.size.y);
+                        var memories = new List<VipMemoryVisual>();
+                        for (int chapter = 0; chapter < person.chapters.Length; chapter++)
+                            for (int choice = 0; choice < person.chapters[chapter].choices.Length; choice++)
+                            {
+                                string prop = MemoryProp(person.id, chapter, choice);
+                                var memory = Instance(prop, actor.visibleRoot.transform);
+                                memory.name = "Memory_" + (chapter + 1) + "_" + person.chapters[chapter].choices[choice].id;
+                                memory.transform.localPosition = AuthoredMemoryPosition(person.id, chapter);
+                                memory.transform.localScale *= MemoryScaleFactor(prop); EnsurePropDepth(memory); memory.SetActive(false);
+                                memories.Add(new VipMemoryVisual { chapter = chapter, choiceId = person.chapters[chapter].choices.Length > 1 ? person.chapters[chapter].choices[choice].id : "", target = memory });
+                            }
+                        actor.memories = memories.ToArray(); PrefabUtility.SaveAsPrefabAsset(actorObject, path);
+                    }
+                    finally { PrefabUtility.UnloadPrefabContents(actorObject); }
+                }
+                var instance = Instance(path, world.transform); instance.transform.localPosition = DistrictMap.ToWorld(Places[person.id]); actors.Add(instance.GetComponent<VipStoryActor>());
+            }
+            world.GetComponent<VipTownPresentation>().actors = actors.ToArray(); PrefabUtility.SaveAsPrefabAsset(world, PeoplePath); Object.DestroyImmediate(world);
+        }
+        private static string MemoryProp(string person, int chapter, int choice)
+        {
+            string[] props;
+            string alternate;
+            switch (person)
+            {
+                case "lm_mara": props = new[] { "Prop_crates", "Town_herb_garden", "Prop_sign", "Town_reading_corner" }; alternate = "Town_picnic_nook"; break;
+                case "lm_jon": props = new[] { "Prop_lantern", "Prop_crates", "Town_reading_corner", "Town_produce_stall" }; alternate = "Town_tea_patio"; break;
+                case "lm_ellie": props = new[] { "Prop_crates", "Town_herb_garden", "Town_produce_stall", "Town_bread_cart" }; alternate = "Town_tea_patio"; break;
+                case "lm_noah": props = new[] { "Prop_pump", "Prop_crates", "Town_workshop_corner", "Prop_lantern" }; alternate = "Town_reading_corner"; break;
+                case "lm_ruth": props = new[] { "Prop_crates", "Town_reading_corner", "Prop_sign", "Town_rowan_tree" }; alternate = "Town_tea_patio"; break;
+                case "lm_tessa": props = new[] { "Prop_lantern", "Town_reading_corner", "Town_tea_patio", "Prop_flowers" }; alternate = "Town_picnic_nook"; break;
+                case "lm_ben": props = new[] { "Town_picnic_nook", "Prop_lantern", "Prop_sign", "Town_rowan_tree" }; alternate = "Town_reading_corner"; break;
+                default: throw new InvalidOperationException("Unknown Little Montana resident " + person);
+            }
+            if (chapter < 0 || chapter >= props.Length) throw new InvalidOperationException("Unsupported resident chapter " + chapter);
+            string prop = chapter == 2 && choice == 1 ? alternate : props[chapter];
+            return (prop.StartsWith("Town_", StringComparison.Ordinal) ? "Assets/Weedtopia/Production/TownVitality/Prefabs/" : "Assets/Weedtopia/Production/Prefabs/") + prop + ".prefab";
+        }
+        private static void RepairResidentMemories(string personId)
+        {
+            string path = Folder + "/Prefabs/" + personId + ".prefab";
+            var person = definitions.vipStories.Single(p => p.id == personId);
+            var contents = PrefabUtility.LoadPrefabContents(path);
+            try
+            {
+                if (RepairMemoryTargets(contents, person))
+                {
+                    EditorUtility.SetDirty(contents.GetComponent<VipStoryActor>());
+                    PrefabUtility.SaveAsPrefabAsset(contents, path);
+                }
+            }
+            finally { PrefabUtility.UnloadPrefabContents(contents); }
+        }
+        private static bool RepairMemoryTargets(GameObject contents, VipStoryDefinition person)
+        {
+            var actor = contents.GetComponent<VipStoryActor>(); bool changed = false;
+            foreach (var memory in actor.memories)
+            {
+                var chapter = person.chapters[memory.chapter];
+                int choice = string.IsNullOrEmpty(memory.choiceId) ? 0 : Array.FindIndex(chapter.choices, c => c.id == memory.choiceId);
+                if (choice < 0 || memory.target == null) throw new InvalidOperationException("Missing owned memory " + person.id + "/" + memory.chapter);
+                string expectedName = "Memory_" + (memory.chapter + 1) + "_" + chapter.choices[choice].id;
+                // A manual rename opts the object out of this narrowly scoped authored-content repair.
+                if (memory.target.name != expectedName) continue;
+                string expected = MemoryProp(person.id, memory.chapter, choice);
+                string previousPath = PrefabUtility.GetPrefabAssetPathOfNearestInstanceRoot(memory.target);
+                if (previousPath == expected)
+                {
+                    changed |= UpgradeAuthoredScale(memory.target, expected.Contains("Town_") ? .38f : .85f, MemoryScaleFactor(expected));
+                    changed |= UpgradeAuthoredMemoryPosition(memory.target, person.id, memory.chapter);
+                    changed |= EnsurePropDepth(memory.target); continue;
+                }
+                // A different source link or unpacked object is a manual presentation choice.
+                // Existing initial content has already been migrated; new prefabs use MemoryProp.
+                continue;
+            }
+            return changed;
+        }
+        private static readonly Vector2[] FirstGridRuthMemoryPositions =
+        {
+            new Vector2(3.1f,-5), new Vector2(3.1f,-18), new Vector2(3.1f,-31), new Vector2(3.1f,-44)
+        };
+        private static readonly Vector2[] RuthMemoryPositions =
+        {
+            new Vector2(4.5f,-1), new Vector2(3.1f,-30), new Vector2(3.1f,3), new Vector2(3.1f,-44)
+        };
+        private static readonly Vector2[] TessaMemoryPositions =
+        {
+            new Vector2(-5,3), new Vector2(6,5), new Vector2(-10,8), new Vector2(15,14)
+        };
+        private static Vector3 AuthoredMemoryPosition(string personId, int chapter)
+        {
+            // Captured houses and foliage leave these individual memory clearings unobstructed.
+            Vector2 point = personId == "lm_ruth" ? RuthMemoryPositions[chapter]
+                : personId == "lm_tessa" ? TessaMemoryPositions[chapter]
+                : chapter == 3 && (personId == "lm_ellie" || personId == "lm_noah" || personId == "lm_ben") ? new Vector2(-5,-10)
+                : new Vector2(6 + chapter % 2 * 9, -5 - chapter / 2 * 13);
+            return DistrictMap.ToWorld(point);
+        }
+        private static Vector3 FirstGridMemoryPosition(string personId, int chapter)
+        {
+            Vector2 point = personId == "lm_ruth" ? FirstGridRuthMemoryPositions[chapter]
+                : personId == "lm_tessa" ? TessaMemoryPositions[chapter]
+                : new Vector2(6 + chapter % 2 * 9, -5 - chapter / 2 * 13);
+            return DistrictMap.ToWorld(point);
+        }
+        private static bool UpgradeAuthoredMemoryPosition(GameObject prop, string personId, int chapter)
+        {
+            var legacy = DistrictMap.ToWorld(new Vector2(6 + chapter % 2 * 6, -5 - chapter / 2 * 6));
+            var firstGrid = FirstGridMemoryPosition(personId, chapter);
+            var next = AuthoredMemoryPosition(personId, chapter);
+            var current = prop.transform.localPosition;
+            if (current.Equals(next) || (!current.Equals(legacy) && !current.Equals(firstGrid))) return false;
+            prop.transform.localPosition = next;
+            PrefabUtility.RecordPrefabInstancePropertyModifications(prop.transform);
+            return true;
+        }
+        private static float MemoryScaleFactor(string path)
+        {
+            switch (Path.GetFileNameWithoutExtension(path))
+            {
+                case "Town_reading_corner": case "Town_tea_patio": case "Town_workshop_corner": return .7f;
+                case "Town_picnic_nook": case "Town_fern_garden": case "Town_herb_garden": return .9f;
+                case "Town_bread_cart": case "Town_produce_stall": return .55f;
+                case "Town_rowan_tree": return .38f;
+                case "Prop_crates": return 1.6f;
+                case "Prop_pump": return 1.3f;
+                case "Prop_sign": return 1.1f;
+                case "Prop_lantern": return .85f;
+                case "Prop_flowers": return 1.6f;
+                default: throw new InvalidOperationException("Unsupported Little Montana memory prop " + path);
+            }
+        }
+        private static float CompletedPlaceScaleFactor(string path)
+        {
+            string name = Path.GetFileNameWithoutExtension(path);
+            return name == "Town_picnic_nook" || name == "Town_fern_garden" ? 1.2f : .9f;
+        }
+        private static bool UpgradeAuthoredScale(GameObject prop, float previousFactor, float nextFactor)
+        {
+            if (prop == null || previousFactor == nextFactor) return false;
+            string path = PrefabUtility.GetPrefabAssetPathOfNearestInstanceRoot(prop);
+            if (string.IsNullOrEmpty(path)) return false; // A manually unpacked instance keeps its presentation.
+            var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(path);
+            if (prefab == null) throw new InvalidOperationException("Missing owned prop source " + path);
+            // Only the exact old authored value is migrated; every manual adjustment remains intact.
+            if (!prop.transform.localScale.Equals(prefab.transform.localScale * previousFactor)) return false;
+            prop.transform.localScale = prefab.transform.localScale * nextFactor;
+            PrefabUtility.RecordPrefabInstancePropertyModifications(prop.transform);
+            return true;
+        }
+        private static bool RepairLandmarkScales(GameObject world)
+        {
+            bool changed = false;
+            foreach (var place in world.GetComponentsInChildren<CityPlaceProgressVisual>(true).Where(p => p.cityId == City))
+            {
+                if (place.growingPlace != null && place.growingPlace.name == "SharedSupplies") changed |= UpgradeAuthoredScale(place.growingPlace, 1f, 1.6f);
+                if (place.completedPlace != null && place.completedPlace.name == "RestoredCommunityPlace")
+                {
+                    string path = PrefabUtility.GetPrefabAssetPathOfNearestInstanceRoot(place.completedPlace);
+                    if (!string.IsNullOrEmpty(path)) changed |= UpgradeAuthoredScale(place.completedPlace, .4f, CompletedPlaceScaleFactor(path));
+                }
+                foreach (var choice in place.choicePlaces ?? Array.Empty<GameObject>())
+                    if (choice != null && (choice.name == "SharedRepairWorkshop" || choice.name == "OpenLearningWorkshop")) changed |= UpgradeAuthoredScale(choice, .36f, .8f);
+            }
+            return changed;
+        }
+        private static bool EnsurePropDepth(GameObject prop)
+        {
+            bool changed = false;
+            foreach (var sprite in prop.GetComponentsInChildren<SpriteRenderer>(true))
+            {
+                if (sprite.GetComponent<CityLandmarkVisual>() != null) continue;
+                // Shared props are authored at a default depth. Their owning place supplies the world anchor.
+                sprite.gameObject.AddComponent<CityLandmarkVisual>(); changed = true;
+            }
+            return changed;
+        }
+        private static void Landmarks()
+        {
+            if (File.Exists(LandmarksPath))
+            {
+                var existing = PrefabUtility.LoadPrefabContents(LandmarksPath);
+                try { bool changed = RepairLandmarkScales(existing); changed |= RepairPineTargets(existing); changed |= EnsurePropDepth(existing); if (changed) PrefabUtility.SaveAsPrefabAsset(existing, LandmarksPath); }
+                finally { PrefabUtility.UnloadPrefabContents(existing); }
+                return;
+            }
+            ImportSingle(Folder + "/Art/timber_depot.png", .04f);
+            ImportSingle(Folder + "/Art/mountain_ridge.png", .04f);
+            var depot = AssetDatabase.LoadAssetAtPath<Sprite>(Folder + "/Art/timber_depot.png");
+            var ridge = AssetDatabase.LoadAssetAtPath<Sprite>(Folder + "/Art/mountain_ridge.png");
+            var world = new GameObject("ValleyPlaces", typeof(LittleMontanaStamp));
+            var positions = new[] { new Vector2(110,-76), new Vector2(-40,42), new Vector2(110,-184), new Vector2(110,156), new Vector2(-40,324), new Vector2(315,-12) };
+            var names = new[] { "OldStation", "NeighbourPlatform", "OpenMillYard", "LearningCourtyard", "EagleTrail", "PineTrailhead" };
+            var completedProps = new[] { "Town_produce_stall", "Town_bread_cart", "Town_workshop_corner", "Town_reading_corner", "Town_picnic_nook", "Town_fern_garden" };
+            for (int i = 0; i < positions.Length; i++)
+            {
+                var placeObject = new GameObject(names[i], typeof(CityPlaceProgressVisual)); placeObject.transform.SetParent(world.transform, false);
+                placeObject.transform.localPosition = DistrictMap.ToWorld(positions[i]);
+                var place = placeObject.GetComponent<CityPlaceProgressVisual>(); place.cityId = City;
+                place.residents = i < 2 ? 1250 : i < 4 ? 3000 : 6000;
+                place.collaborationId = i < 2 ? "lm_joint_station_square" : i < 4 ? "lm_joint_open_workyard" : "lm_joint_valley_trail";
+                if (i == 0)
+                {
+                    var renderer = ProductionWorldAuthoring.Sprite("TimberDepot", placeObject.transform, depot, 26, Vector3.zero);
+                    renderer.gameObject.AddComponent<CityLandmarkVisual>();
+                }
+                var closed = Instance("Assets/Weedtopia/Production/Prefabs/Prop_salvage.prefab", placeObject.transform);
+                closed.name = "StormDebris"; closed.transform.localPosition = DistrictMap.ToWorld(new Vector2(8,-6)); place.closedPlace = closed;
+                var growing = Instance("Assets/Weedtopia/Production/Prefabs/Prop_crates.prefab", placeObject.transform);
+                growing.name = "SharedSupplies"; growing.transform.localPosition = DistrictMap.ToWorld(new Vector2(-8,-6)); growing.transform.localScale *= 1.6f; growing.SetActive(false); place.growingPlace = growing;
+                var restored = Instance("Assets/Weedtopia/Production/TownVitality/Prefabs/" + completedProps[i] + ".prefab", placeObject.transform);
+                restored.name = "RestoredCommunityPlace"; restored.transform.localPosition = DistrictMap.ToWorld(new Vector2(8,-6)); restored.transform.localScale *= CompletedPlaceScaleFactor(completedProps[i]);
+                restored.SetActive(false); place.completedPlace = restored;
+                if (i == 2 || i == 3)
+                {
+                    place.choiceResidentId = "lm_noah"; place.choiceChapter = 2; place.choiceValues = new[] { "repair", "teach" };
+                    var repair = Instance("Assets/Weedtopia/Production/TownVitality/Prefabs/Town_workshop_corner.prefab", placeObject.transform);
+                    repair.name = "SharedRepairWorkshop"; repair.transform.localPosition = DistrictMap.ToWorld(new Vector2(0,-13)); repair.transform.localScale *= .8f; repair.SetActive(false);
+                    var teach = Instance("Assets/Weedtopia/Production/TownVitality/Prefabs/Town_reading_corner.prefab", placeObject.transform);
+                    teach.name = "OpenLearningWorkshop"; teach.transform.localPosition = DistrictMap.ToWorld(new Vector2(0,-13)); teach.transform.localScale *= .8f; teach.SetActive(false);
+                    place.choicePlaces = new[] { repair, teach };
+                }
+            }
+            var ridgePositions = new[] { new Vector2(-158,210), new Vector2(-115,400), new Vector2(540,40), new Vector2(480,175) };
+            for (int i = 0; i < ridgePositions.Length; i++)
+            {
+                var anchor = new GameObject("AlpineRidge_" + (i + 1)); anchor.transform.SetParent(world.transform, false); anchor.transform.localPosition = DistrictMap.ToWorld(ridgePositions[i]);
+                var renderer = ProductionWorldAuthoring.Sprite("MountainRidge", anchor.transform, ridge, i < 2 ? 62 : 52, Vector3.zero); renderer.gameObject.AddComponent<CityLandmarkVisual>();
+            }
+            for (int i = 0; i < 24; i++)
+            {
+                var pine = Instance("Assets/Weedtopia/Production/Prefabs/Prop_pine.prefab", world.transform); pine.name = "ValleyPine_" + (i + 1);
+                var position = i < 8 ? new Vector2(-80 - i % 3 * 9,30 + i * 39) : i < 16 ? new Vector2(160 + (i - 8) * 45,-37 - i % 3 * 7) : new Vector2(55 + (i - 16) * 60,385 + i % 3 * 9);
+                pine.transform.localPosition = DistrictMap.ToWorld(position); pine.transform.localScale *= 1.45f + i % 3 * .18f;
+            }
+            RepairPineTargets(world); EnsurePropDepth(world); PrefabUtility.SaveAsPrefabAsset(world, LandmarksPath); Object.DestroyImmediate(world);
+        }
+        private static bool RepairPineTargets(GameObject contents)
+        {
+            bool changed = false;
+            const string sourcePath = "Assets/Weedtopia/Production/Prefabs/Prop_pine.prefab";
+            foreach (var target in contents.GetComponentsInChildren<Transform>(true))
+            {
+                Vector2 original, approved;
+                switch (target.name)
+                {
+                    case "ValleyPine_9": original = new Vector2(160,-51); approved = new Vector2(150,-51); break;
+                    case "ValleyPine_11": original = new Vector2(250,-44); approved = new Vector2(260,-44); break;
+                    default: continue;
+                }
+                // Only the known linked roots and exact original anchor opt into this two-pine repair.
+                if (PrefabUtility.GetNearestPrefabInstanceRoot(target.gameObject) != target.gameObject
+                    || PrefabUtility.GetPrefabAssetPathOfNearestInstanceRoot(target.gameObject) != sourcePath
+                    || !target.localPosition.Equals(DistrictMap.ToWorld(original))) continue;
+                target.localPosition = DistrictMap.ToWorld(approved);
+                PrefabUtility.RecordPrefabInstancePropertyModifications(target);
+                changed = true;
+            }
+            return changed;
+        }
+        private static void Districts()
+        {
+            if (File.Exists(MapPath)) return;
+            if (!AssetDatabase.CopyAsset(BigRockCityAuthoring.Folder + "/DistrictMap.asset", MapPath)) throw new InvalidOperationException("Could not copy district map.");
+            var map = AssetDatabase.LoadAssetAtPath<DistrictMap>(MapPath);
+            foreach (var range in map.districts)
+            {
+                string suffix = range.zone == Zone.Farm ? "farm" : range.zone == Zone.City ? "city" : range.zone == Zone.Settlement ? "settlement" : "industry";
+                range.labelKey = "district.little_montana." + suffix;
+                range.label = range.zone == Zone.Farm ? "Kiefernwiesen · Farm" : range.zone == Zone.City ? "Bahnhofsviertel · Stadt" : range.zone == Zone.Settlement ? "Adlerhang · Wohnviertel" : "Alter Sägewerkhof · Industrie";
+            }
+            EditorUtility.SetDirty(map);
+        }
+        private static bool MapAndLabels(GameRoot root, Scene scene)
+        {
+            bool changed = false;
+            var map = AssetDatabase.LoadAssetAtPath<DistrictMap>(MapPath); var cameraData = new SerializedObject(root.CameraRig);
+            if (cameraData.FindProperty("districtMap").objectReferenceValue != map)
+            { cameraData.FindProperty("districtMap").objectReferenceValue = map; cameraData.ApplyModifiedPropertiesWithoutUndo(); changed = true; }
+            foreach (var navigator in scene.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<DistrictNavigator>(true)))
+            {
+                var data = new SerializedObject(navigator); var label = data.FindProperty("cityLabel");
+                if (label.stringValue == "Little Montana") continue; label.stringValue = "Little Montana"; data.ApplyModifiedPropertiesWithoutUndo(); changed = true;
+            }
+            return changed;
+        }
+        private static void UpgradeCampaignPrefab()
+        {
+            var panel = PrefabUtility.LoadPrefabContents(BigRockCityAuthoring.CampaignPath);
+            try { if (CampaignRows(panel.GetComponent<CityCampaignUi>())) PrefabUtility.SaveAsPrefabAsset(panel, BigRockCityAuthoring.CampaignPath); }
+            finally { PrefabUtility.UnloadPrefabContents(panel); }
+        }
+        private static bool CampaignRows(CityCampaignUi ui)
+        {
+            if (ui == null) throw new InvalidOperationException("Missing authored city campaign UI.");
+            var rows = (ui.travelRows ?? Array.Empty<CityTravelRow>()).Where(r => r != null).ToList();
+            if (rows.Any(r => r.cityId == City)) return false;
+            var progressCopy = Object.Instantiate(ui.rockProgress.gameObject, ui.rockProgress.transform.parent); progressCopy.name = "MontanaProgress";
+            var progress = progressCopy.GetComponent<Text>(); progress.text = "";
+            var travelCopy = Object.Instantiate(ui.rockTravel.gameObject, ui.rockTravel.transform.parent); travelCopy.name = "TravelMontana";
+            var travel = travelCopy.GetComponent<Button>(); travel.onClick = new Button.ButtonClickedEvent(); travel.GetComponentInChildren<Text>(true).text = "";
+            var row = progressCopy.GetComponent<CityTravelRow>() ?? progressCopy.AddComponent<CityTravelRow>();
+            row.cityId = City; row.progress = progress; row.travel = travel; rows.Add(row); ui.travelRows = rows.ToArray();
+            // ModulePanelLayout already lays out any number of serialized city rows in its scroll content.
+            EditorUtility.SetDirty(row); EditorUtility.SetDirty(ui); PrefabUtility.RecordPrefabInstancePropertyModifications(row); PrefabUtility.RecordPrefabInstancePropertyModifications(ui);
+            return true;
+        }
+        private static void ReplaceResidentPanel(GameRoot root)
+        {
+            var previous = root.Ui.Stories.gameObject; var panel = Instance(StoriesPath, previous.transform.parent).GetComponent<VipStoriesUi>(); panel.gameObject.SetActive(false);
+            var data = new SerializedObject(root.Ui); data.FindProperty("stories").objectReferenceValue = panel;
+            var panels = data.FindProperty("panels"); for (int i = 0; i < panels.arraySize; i++) if (panels.GetArrayElementAtIndex(i).objectReferenceValue == previous) panels.GetArrayElementAtIndex(i).objectReferenceValue = panel.gameObject;
+            var bindings = data.FindProperty("bindings"); for (int i = 0; i < bindings.arraySize; i++) { var e = bindings.GetArrayElementAtIndex(i); if (e.FindPropertyRelative("target").objectReferenceValue == previous) e.FindPropertyRelative("target").objectReferenceValue = panel.gameObject; }
+            data.ApplyModifiedPropertiesWithoutUndo(); Object.DestroyImmediate(previous);
+        }
+        private static void RemapCity(Scene scene)
+        {
+            var instances = definitions.instances.Where(i => i.cityId == "big_rock_city").Select(i => i.id).ToHashSet();
+            var routes = definitions.routes.Where(r => instances.Contains(r.from)).Select(r => r.id).ToHashSet();
+            var ids = instances.Concat(routes).ToHashSet();
+            foreach (var transform in scene.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<Transform>(true)))
+            {
+                if (transform.name.StartsWith("BigRock", StringComparison.Ordinal)) transform.name = transform.name.Replace("BigRock", "LittleMontana");
+                foreach (var component in transform.GetComponents<MonoBehaviour>().Where(c => c != null))
+                {
+                    var data = new SerializedObject(component); var property = data.GetIterator(); bool changed = false;
+                    while (property.Next(true))
+                    {
+                        if (property.propertyType != SerializedPropertyType.String || !ids.Contains(property.stringValue)) continue;
+                        if (property.name != "instanceId" && property.name != "workplaceId" && property.name != "requiredBuilding" && property.name != "routeId") continue;
+                        property.stringValue = "lm_" + property.stringValue.Substring(3); changed = true;
+                    }
+                    if (changed) data.ApplyModifiedPropertiesWithoutUndo();
+                }
+                var text = transform.GetComponent<Text>(); if (text != null && text.text.Contains("Big Rock City")) text.text = text.text.Replace("Big Rock City", "Little Montana");
+            }
+        }
+        private static void ThemeLandscape(Scene scene, GameRoot root)
+        {
+            var materials = new Dictionary<Material, Material>();
+            foreach (var renderer in scene.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<Renderer>(true)))
+            {
+                var shared = renderer.sharedMaterials; bool changed = false;
+                for (int i = 0; i < shared.Length; i++)
+                {
+                    var source = shared[i]; if (source == null || source.shader == null) continue; string shader = source.shader.name;
+                    if (!shader.Contains("NaturalGround") && !shader.Contains("LivingWater") && !shader.Contains("FeatheredGround") && !shader.Contains("AtlasGround") && !shader.Contains("LivingFoliage")) continue;
+                    if (!materials.TryGetValue(source, out var themed))
+                    {
+                        string path = Folder + "/Materials/" + AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(source)) + ".mat";
+                        themed = AssetDatabase.LoadAssetAtPath<Material>(path);
+                        if (themed == null)
+                        {
+                            themed = new Material(source) { name = "LittleMontana_" + source.name };
+                            if (shader.Contains("Ground"))
+                            {
+                                if (themed.HasProperty("_BaseColor")) themed.SetColor("_BaseColor", new Color(.28f, .39f, .32f));
+                                if (themed.HasProperty("_Tint")) themed.SetColor("_Tint", new Color(.89f, 1.05f, 1.08f));
+                                if (themed.HasProperty("_Saturation")) themed.SetFloat("_Saturation", .72f);
+                                if (themed.HasProperty("_Contrast")) themed.SetFloat("_Contrast", .48f);
+                            }
+                            if (shader.Contains("Foliage") && themed.HasProperty("_Color")) themed.SetColor("_Color", new Color(.76f, .94f, .88f));
+                            AssetDatabase.CreateAsset(themed, path);
+                        }
+                        materials.Add(source, themed);
+                    }
+                    shared[i] = themed; changed = true;
+                }
+                if (changed) renderer.sharedMaterials = shared;
+            }
+            root.CameraRig.RenderCamera.backgroundColor = new Color(.13f, .20f, .24f);
+        }
+        private static void ImportSingle(string path, float pivot)
+        {
+            var importer = AssetImporter.GetAtPath(path) as TextureImporter;
+            if (importer == null) throw new InvalidOperationException("Missing city artwork " + path);
+            if (importer.textureType == TextureImporterType.Sprite && importer.spriteImportMode == SpriteImportMode.Single) return;
+            importer.textureType = TextureImporterType.Sprite; importer.spriteImportMode = SpriteImportMode.Single; importer.spritePixelsPerUnit = 256;
+            importer.alphaIsTransparency = true; importer.mipmapEnabled = true; importer.maxTextureSize = 2048;
+            var settings = new TextureImporterSettings(); importer.ReadTextureSettings(settings); settings.spriteAlignment = 9; settings.spritePivot = new Vector2(.5f, pivot); importer.SetTextureSettings(settings); importer.SaveAndReimport();
+        }
+        private static bool WelcomeSigns(Scene scene)
+        {
+            var sprite = AssetDatabase.LoadAssetAtPath<Sprite>(Folder + "/Art/town_sign.png"); bool changed = false;
+            foreach (var transform in scene.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<Transform>(true)).Where(t => t.name == "Living_town_sign" || t.name == "LittleMontanaWelcomeSign" || t.name == "BigRockWelcomeSign" || t.name == "SevenHillsWelcomeSign"))
+            {
+                var renderer = transform.GetComponentInChildren<SpriteRenderer>(true); if (renderer.sprite == sprite) continue;
+                float height = renderer.sprite.bounds.size.y * renderer.transform.localScale.y; renderer.sprite = sprite; renderer.transform.localScale = Vector3.one * (height / sprite.bounds.size.y);
+                PrefabUtility.RecordPrefabInstancePropertyModifications(renderer); PrefabUtility.RecordPrefabInstancePropertyModifications(renderer.transform);
+                transform.name = "LittleMontanaWelcomeSign"; PrefabUtility.RecordPrefabInstancePropertyModifications(transform.gameObject); changed = true;
+            }
+            return changed;
+        }
+        private static GameObject Instance(string path, Transform parent)
+        {
+            var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(path); if (prefab == null) throw new InvalidOperationException("Missing authored prefab " + path);
+            return (GameObject)PrefabUtility.InstantiatePrefab(prefab, parent);
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "status": "completed_experiment_archived_original_2d_sprite_restored",
+  "source_triangles": 3335710,
+  "source_exported_vertices": 1841806,
+  "source_sha256": "3c1cbf9e32741a30e7fb066e9b855e99cbe674340d52ed75a0b2f2c5da6062db",
+  "steps": {
+    "source_inventory": "complete",
+    "original_blender_renders": "complete",
+    "reduce_100000": "complete_visual_rejection_due_to_uv_distortion",
+    "reduce_50000": "complete_visual_rejection_due_to_uv_distortion",
+    "reduce_25000": "complete_visual_rejection_due_to_uv_distortion",
+    "rebake_50000": "UVv2_approved",
+    "comparison_board": "complete",
+    "user_review": "2K_and_LODs_50000_20000_12000_explicitly_approved",
+    "unity_import": "passed_import_prefab_and_render_experiment",
+    "target_hardware_performance": "editor_render_microbenchmark_complete; player_target_device_pending",
+    "glb_roundtrip": "passed_50000_triangles_one_material_no_boundary_or_nonmanifold_edges",
+    "lod_candidates": "50000_20000_12000; 6400_rejected",
+    "city_integration": "historical_success_reverted_to_original_sprite_by_user_request",
+    "city_gameview": "captured_agent_reviewed_user_review_pending",
+    "interaction_tests": "passed_19_of_19",
+    "asset_tests": "passed_4_of_4",
+    "restore_original_2d": "complete_4_editmode_19_playmode_5_gameview_captures_preservation_passed"
+  },
+  "resume": "No further 3D work for Weedtopia. Preserve optimized models, rebakes and reviews. Fixed camera and original 2D/2.5D buildings are the chosen production direction. Do not reinstall 3D without new explicit user authorization.",
+  "updated_utc": "2026-09-30T03:35:17.012729+00:00",
+  "current_candidate": "Rebaked_50000_UVv2/TownHall_50000_Rebaked.glb",
+  "review": "REVIEW.html",
+  "unity_review": "../UnityReview/README.de.md",
+  "city_integration": "../CityIntegration/README.de.md",
+  "city_lighting": {
+    "status": "user_reported_improvement_experiment_now_archived",
+    "report": "Docs/ArtProduction/Buildings/town_hall/T_FIXED/Meshy_Highpoly_2026-09-28/CityLighting/README.de.md",
+    "fill": 0.65,
+    "date": "2026-09-29T04:36:00.003718+00:00"
+  },
+  "active_in_production": false,
+  "archive": "Assets/Weedtopia/Art/Buildings/Archive/TownHall3D20260928"
+}

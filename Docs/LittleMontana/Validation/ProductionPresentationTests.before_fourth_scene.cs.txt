@@ -1,0 +1,79 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Security.Cryptography;
+using NUnit.Framework;
+using UnityEditor;
+using UnityEditor.SceneManagement;
+using UnityEngine;
+using Weedtopia.Content;
+using Weedtopia.Editor.GameSetup;
+using Weedtopia.Unity;
+
+namespace Weedtopia.Tests.Assets
+{
+    public sealed class ProductionPresentationTests
+    {
+        [Test] public void ProductionPreflightRecognizesApprovedSpritesAndKeepsIndependentReleaseGates()
+        {
+            var report=ProductionVisualPreflight.Inspect();Assert.That(report.productionReady,Is.False);Assert.That(report.userApproved,Is.True);Assert.That(report.catalogSlots,Is.EqualTo(251));
+            Assert.That(report.issues.Where(x=>x.code!="ACCEPTANCE_GATE_OPEN"),Is.Empty,string.Join("\n",report.issues.Select(x=>x.code+" "+x.objectPath+" "+x.asset)));
+            Assert.That(report.issues.Any(x=>x.objectPath=="human_playthrough"),Is.True);
+        }
+        [Test] public void EveryRoleAndRequiredIconHasAnImportedNonemptySprite()
+        {
+            var art=AssetDatabase.LoadAssetAtPath<PresentationArt>(ProductionArtImporter.ArtPath);Assert.That(art,Is.Not.Null);Assert.That(art.sprites.Length,Is.EqualTo(70));
+            Assert.That(art.sprites.Select(x=>x.id).Distinct().Count(),Is.EqualTo(70));
+            foreach(var entry in art.sprites){Assert.That(entry.sprite,Is.Not.Null,entry.id);Assert.That(entry.sprite.rect.width,Is.GreaterThan(8));}
+            var defs=AssetDatabase.LoadAssetAtPath<GameContent>(GameScaffold.ContentPath).Load();
+            foreach(var role in defs.roles){Assert.That(art.Get("portrait_"+PresentationArt.CharacterForRole(role.id)),Is.Not.Null,role.id);Assert.That(art.Get(PresentationArt.IconForRole(role.id)),Is.Not.Null,role.id);}
+            Assert.That(AssetDatabase.GetAssetPath(art.bodyFont),Is.EqualTo(TypographyAuthoring.BodyPath));Assert.That(File.Exists(TypographyAuthoring.Folder+"/OFL.txt"),Is.True);
+            Assert.Throws<InvalidOperationException>(()=>art.Get("unmapped_required_icon"));
+        }
+        [Test] public void AuthoredWorldUsesAllCharactersRoutesAndOriginalAudioWithoutChangingContent()
+        {
+            var setup=EditorSceneManager.GetSceneManagerSetup();
+            try
+            {
+                EditorSceneManager.OpenScene(GameScaffold.GameScene);var root=UnityEngine.Object.FindFirstObjectByType<GameRoot>();var p=root.Presentation;
+                Assert.That(p,Is.Not.Null);Assert.That(p.characters.Length,Is.EqualTo(8));Assert.That(root.Sites.Length,Is.EqualTo(56));
+                var defs=AssetDatabase.LoadAssetAtPath<GameContent>(GameScaffold.ContentPath).Load();Assert.That(p.routes.Length,Is.EqualTo(defs.routes.Count(r=>defs.instances.Single(i=>i.id==r.from).cityId=="burning_hills")));
+                var plan=JsonUtility.FromJson<BurningHillsLayoutInstaller.LayoutPlan>(File.ReadAllText(BurningHillsLayoutInstaller.Folder+"/BurningHillsLayout.json"));
+                foreach(var route in p.routes)
+                {
+                    var r=plan.routes.Single(x=>x.id==route.routeId);
+                    Assert.That(Vector2.Distance(DistrictMap.ToPlan(route.Position(0)),r.points.First()),Is.LessThan(.01));
+                    Assert.That(Vector2.Distance(DistrictMap.ToPlan(route.Position(1)),r.points.Last()),Is.LessThan(.01));
+                    Assert.That(route.points.Length,Is.EqualTo(r.points.Length));
+                }
+                Assert.That(p.ambience.clip.samples,Is.EqualTo(2646000));Assert.That(p.ambience.loop,Is.True);Assert.That(p.eventAudio,Is.Not.Null);
+                Assert.That(EditorBuildSettings.scenes.Where(x=>x.enabled).Select(x=>x.path),Is.EquivalentTo(new[]{GameScaffold.BootstrapScene,GameScaffold.GameScene,BigRockCityAuthoring.ScenePath,SevenHillsAuthoring.ScenePath}));
+                Assert.That(p.explicitBuildingApproval,Is.True);Assert.That(p.releaseRequested,Is.False);
+            }
+            finally{if(setup.Length>0)EditorSceneManager.RestoreSceneManagerSetup(setup);}
+        }
+        [Test] public void ProductionReauthoringPreservesManualSceneAndPrefabBytes()
+        {
+            var paths=Directory.GetFiles(ProductionArtImporter.Root,"*",SearchOption.AllDirectories).Concat(new[]{GameScaffold.GameScene,GameScaffold.Prefabs+"/BuildingSite.prefab",GameScaffold.Prefabs+"/ListRow.prefab"}).ToArray();
+            var before=paths.ToDictionary(x=>x,FileDigest);ProductionFinishInstaller.Apply();
+            foreach(var pair in before)Assert.That(FileDigest(pair.Key),Is.EqualTo(pair.Value),pair.Key);
+        }
+        private static string FileDigest(string path)
+        {
+            using(var hash=SHA256.Create())using(var stream=File.OpenRead(path))return Convert.ToBase64String(hash.ComputeHash(stream));
+        }
+        [TestCase("Assets/x/Development_city.prefab",true)]
+        [TestCase("Assets/x/DevelopmentVisuals.asset",true)]
+        [TestCase("Assets/x/development_accept.wav",true)]
+        [TestCase("Assets/Weedtopia/Game/VisualReview/Review_town.prefab",true)]
+        [TestCase("Assets/Weedtopia/Production/Prefabs/Character_rocko.prefab",false)]
+        public void PreflightIdentifiesForbiddenReferences(string path,bool expected)=>Assert.That(ProductionVisualPreflight.ForbiddenAsset(path),Is.EqualTo(expected));
+        [Test] public void OldOrUnboundAcceptanceCannotOpenTheReleaseGate()
+        {
+            Assert.That(ProductionVisualPreflight.AcceptsReceipt("{\"passed\":true}","current"),Is.False);
+            Assert.That(ProductionVisualPreflight.AcceptsReceipt("{\"passed\":true,\"fingerprint\":\"old\"}","current"),Is.False);
+            Assert.That(ProductionVisualPreflight.AcceptsReceipt("{\"passed\":false,\"fingerprint\":\"current\"}","current"),Is.False);
+            Assert.That(ProductionVisualPreflight.AcceptsReceipt("{\"passed\":true,\"fingerprint\":\"current\"}","current"),Is.True);
+        }
+    }
+}

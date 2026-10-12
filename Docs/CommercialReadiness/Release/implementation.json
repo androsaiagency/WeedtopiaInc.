@@ -1,0 +1,263 @@
+{
+  "utc": "2026-10-05T04:05:02.988616+00:00",
+  "scope": "release identity, editor diagnostic correctness and current architecture/design docs",
+  "sourceHashes": {
+    "Assets/Weedtopia/Scripts/Editor/GameSetup/ReleaseFingerprint.cs": "521b15a54ce230b6c3cbd84e2567c8c51ae6427eab79c5ea16ec420487d5935d",
+    "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionVisualPreflight.cs": "4bb0d32ccb7ab7344a16f2676be60e0c8757209545cda409ff726c98598ff977",
+    "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionDiagnosticBuild.cs": "1c54e66a586c5554d67507a25d60271b799f48a30600d9b3bf3d0b05c7cd2c17",
+    "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionProfileEvidence.cs": "c658417eb811afe04c799abd3230cc7eb0a9e6fc70787381d12e4e50c51a7fca",
+    "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionVisualEvidence.cs": "7d4442f60bbad7d59529b002efca655e48080a4bfb051c9a1e8cfd1deebd4824",
+    "Assets/Weedtopia/Scripts/Tests/EditorAssets/ReleaseFingerprintTests.cs": "45ea1deeaa0ea3ba1e8155219dda190b4c4df65d5536b1cd9ec5d3f3153d7028",
+    "Docs/GameDesign/WEEDTOPIA_GDD.md": "6cd26e8479af8913378f9e18eaaf3fd4fa5daa0f0e2030a502b596899193bbe6",
+    "Docs/Architecture/GAMEPLAY_ARCHITECTURE.md": "a8d711cced8172c2a3e6ec69f32c5d10b03126180846ad4a6db76f627c52d80d",
+    "Assets/Weedtopia/Scripts/Editor/GameSetup/CommercialReadinessTestJob.cs": "f695620c659bb929e115fd1d7b038d45ee987e611b9b627962e68a2fecee90e3",
+    "Assets/Weedtopia/Scripts/Editor/GameSetup/LayoutEditorJob.cs": "e3edcd3e3dc8a937b6ae499cae935935251f41fa1586cdb6f0e5a733a0d8d1c4",
+    "Assets/Weedtopia/Scripts/Tests/EditorAssets/NativeOfflineModelBenchmarkTests.cs": "378a74eccda7bebcec5b3546a94ee80ead5ba17266c1d1571361060246b48850",
+    "Tools/Implementation/compile_offline_reference.py": "099e44e9c5516f4d1bcab6a58c5efa89fbed2197576d2a541716772ff95ed1d1"
+  },
+  "nativeUnityTestsRun": true,
+  "deviceTestsRun": false,
+  "releaseAccepted": false,
+  "humanAcceptanceCreated": false,
+  "runnerCompileExitCode": 0,
+  "nativeBenchmarkCompileExitCode": 0,
+  "nativeBenchmarkRunBySubagent": false,
+  "effectiveTextureOverrideCompile": [
+    {
+      "assembly": "Weedtopia.Editor.GameSetup",
+      "exitCode": 0
+    },
+    {
+      "assembly": "Weedtopia.Game.AssetTests",
+      "exitCode": 0
+    }
+  ],
+  "historicalPreNativeStatus": null,
+  "nativeEvidenceUpdatedUtc": "2026-10-05T06:24:07.054764+00:00",
+  "nativeRegressionContext": {
+    "run": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/run.json",
+      "sha256": "3c21ff8ed4523cce4af54f2e16fb2c652df61a84512e5cd162c429825c5da583"
+    },
+    "runId": "20261005T061357352-258904",
+    "unity": "6000.3.9f1",
+    "finishedUtc": "2026-10-05T06:22:37.0323225Z",
+    "scope": "native_editmode_repair_aggregate_then_complete_playmode",
+    "editorRestored": true,
+    "editModeEvidenceMode": "395 original native passes plus one actual repaired native pass; no full EditMode rerun",
+    "originalFullEditMode": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+      "sha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29",
+      "passed": 395,
+      "failed": 1,
+      "skipped": 0,
+      "inconclusive": 0,
+      "total": 396,
+      "testcasecount": 396
+    },
+    "repairEditMode": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/EditModeRepair.xml",
+      "sha256": "97bfccd1e4e4a756a4d3f9aba4760c86759ba4100411341a181cdb72c47fc678",
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "total": 1,
+      "testcasecount": 1
+    },
+    "editModeAggregate": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/EditModeAggregate.json",
+      "sha256": "1e6a4b29ef087dd3e484609d1c3e3094233ca18ae57cea5e1b9a369bd892cdd4"
+    },
+    "effectiveEditModePassed": 396,
+    "completePlayMode": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+      "sha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611",
+      "passed": 103,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "total": 103,
+      "testcasecount": 103
+    },
+    "sourceValidation": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/source_validation.json",
+      "sha256": "c2c7f3827a839daf559acae80cf93cf1ce2a2dab0713aa3464c70cdc3399ebb2"
+    },
+    "sourceInputs": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/source_inputs.json",
+      "sha256": "626d4e2d40f7ad52637e6d715b195f316b424dcea4a1ec6f0a091115ce389b74"
+    },
+    "targetAccepted": false,
+    "releaseAccepted": false,
+    "deviceAccepted": false,
+    "humanAccepted": false
+  },
+  "finalRuntimeSourceHashes": {
+    "Assets/Weedtopia/Scripts/Runtime/Domain/Amount.cs": "1e2d5bcce8465a7c1942504f2670144b83e85b1c109a5ab4cb67df7b6c19bd8d",
+    "Assets/Weedtopia/Scripts/Runtime/Domain/Simulation.cs": "b26a6b64674d21a60061e2e48d7b5431b3b2f72485cdcb36902fadd6a3c30910",
+    "Assets/Weedtopia/Scripts/Runtime/Application/GameSession.cs": "511a4efcc663f27b6f929a17b0570dffa6ada9608155e7147282c9eaeca1d8bd",
+    "Assets/Weedtopia/Scripts/Runtime/Application/GameStateTransactionSnapshot.cs": "4257db04ddef24effc3782452d4811c9fe757ebbb7037ef0517d8ed3640de4c2",
+    "Assets/Weedtopia/Scripts/Runtime/Application/OfflineProgress.cs": "e584c95d207045a78e60cb8e0bb03e29bedd9e98aaa0fdef2d7a812f93ec8ac5",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/GameRoot.cs": "0e6b0a6eb5126466c5053e4ee2e6f7b2e6e26e58ca25c13fe65c4643157f4988",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/GameUi.cs": "7cdd50f2ef7db569897878ce2bc1a6ae58ae06861a0595ae29eed124a55c0111",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/UiExperience.cs": "204cd3429614b24ad74f8439deadde3e3c2ce2555946e082d89aa782dbb7818c",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/LuckyWheelUi.cs": "646c024251c1b0b80829f911a1e327f388e91b27c7be87487f5dae20c8e968d2"
+  },
+  "finalSourceHashes": {
+    "Assets/Weedtopia/Scripts/Editor/GameSetup/CommercialReadinessTestJob.cs": "1c977a2fdcb169309a7c7225095ddc79b9a5b661bf2ba933b2cdccb1e9b62252",
+    "Assets/Weedtopia/Scripts/Editor/GameSetup/LayoutEditorJob.cs": "dc98682250a712e7e9d954a6d38f8417d44e500d67e5dd4a49aad5f937785471",
+    "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionDiagnosticBuild.cs": "1c54e66a586c5554d67507a25d60271b799f48a30600d9b3bf3d0b05c7cd2c17",
+    "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionProfileEvidence.cs": "c658417eb811afe04c799abd3230cc7eb0a9e6fc70787381d12e4e50c51a7fca",
+    "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionVisualEvidence.cs": "7d4442f60bbad7d59529b002efca655e48080a4bfb051c9a1e8cfd1deebd4824",
+    "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionVisualPreflight.cs": "4bb0d32ccb7ab7344a16f2676be60e0c8757209545cda409ff726c98598ff977",
+    "Assets/Weedtopia/Scripts/Editor/GameSetup/ReleaseFingerprint.cs": "521b15a54ce230b6c3cbd84e2567c8c51ae6427eab79c5ea16ec420487d5935d",
+    "Assets/Weedtopia/Scripts/Tests/EditorAssets/NativeOfflineModelBenchmarkTests.cs": "cc8ac98fbbcaf9aed3f58fd4796ba4a654c98f353410fe7686d7511ada7e9c8b",
+    "Assets/Weedtopia/Scripts/Tests/EditorAssets/ReleaseFingerprintTests.cs": "45ea1deeaa0ea3ba1e8155219dda190b4c4df65d5536b1cd9ec5d3f3153d7028",
+    "Docs/Architecture/GAMEPLAY_ARCHITECTURE.md": "a8d711cced8172c2a3e6ec69f32c5d10b03126180846ad4a6db76f627c52d80d",
+    "Docs/GameDesign/WEEDTOPIA_GDD.md": "6cd26e8479af8913378f9e18eaaf3fd4fa5daa0f0e2030a502b596899193bbe6",
+    "Tools/Implementation/compile_offline_reference.py": "ce0ecfd82f9c1ff8906b20e859d93509f2f5a1f441254435b0d58d2a52465070"
+  },
+  "finalResponsiveStartupPolicy": {
+    "batchSeconds": 32,
+    "frameBudgetMilliseconds": 8,
+    "GameRootSha256": "0e6b0a6eb5126466c5053e4ee2e6f7b2e6e26e58ca25c13fe65c4643157f4988",
+    "matchesNativeSourceManifest": true
+  },
+  "nativeValidation": {
+    "status": "passed",
+    "stage": "EditMode",
+    "passed": 11,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0,
+    "fixtureResults": [
+      {
+        "fixture": "Weedtopia.Tests.Assets.ReleaseFingerprintTests",
+        "passed": 11,
+        "testNames": [
+          "Weedtopia.Tests.Assets.ReleaseFingerprintTests.ActualBuildOptionsArePartOfTheRecordedContext",
+          "Weedtopia.Tests.Assets.ReleaseFingerprintTests.BuildInputsIncludePlayerSettingsResourceAssetsAndImportMetadata",
+          "Weedtopia.Tests.Assets.ReleaseFingerprintTests.CurrentEffectiveTextureOverridesAreRecordedWithoutChangingEditorSettings",
+          "Weedtopia.Tests.Assets.ReleaseFingerprintTests.EffectiveTextureOverrideContextChangesInvalidateIdentity(\"target=Android\\ntextureCompressionOverride=ForceUncompressed\\nmaximumTextureSizeOverride=0\")",
+          "Weedtopia.Tests.Assets.ReleaseFingerprintTests.EffectiveTextureOverrideContextChangesInvalidateIdentity(\"target=Android\\ntextureCompressionOverride=NoOverride\\nmaximumTextureSizeOverride=512\")",
+          "Weedtopia.Tests.Assets.ReleaseFingerprintTests.MissingMandatoryInputIsRecordedAndItsRestorationChangesIdentity",
+          "Weedtopia.Tests.Assets.ReleaseFingerprintTests.PlatformOptionsAndBuildProfileEachChangeIdentity(\"target=Android\\noptions=0\\nprofile=Assets/Profiles/Release.asset\")",
+          "Weedtopia.Tests.Assets.ReleaseFingerprintTests.PlatformOptionsAndBuildProfileEachChangeIdentity(\"target=Android\\noptions=1\\nprofile=platform\")",
+          "Weedtopia.Tests.Assets.ReleaseFingerprintTests.PlatformOptionsAndBuildProfileEachChangeIdentity(\"target=StandaloneWindows64\\noptions=0\\nprofile=platform\")",
+          "Weedtopia.Tests.Assets.ReleaseFingerprintTests.PlayerSettingsChangesInvalidateTheGateIdentity",
+          "Weedtopia.Tests.Assets.ReleaseFingerprintTests.ReorderingAndDuplicatePathsKeepTheSameIdentity"
+        ]
+      }
+    ],
+    "cases": [
+      {
+        "fullname": "Weedtopia.Tests.Assets.ReleaseFingerprintTests.ActualBuildOptionsArePartOfTheRecordedContext",
+        "fixture": "Weedtopia.Tests.Assets.ReleaseFingerprintTests",
+        "method": "ActualBuildOptionsArePartOfTheRecordedContext",
+        "result": "Passed",
+        "durationSeconds": 0.007826,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.Assets.ReleaseFingerprintTests.BuildInputsIncludePlayerSettingsResourceAssetsAndImportMetadata",
+        "fixture": "Weedtopia.Tests.Assets.ReleaseFingerprintTests",
+        "method": "BuildInputsIncludePlayerSettingsResourceAssetsAndImportMetadata",
+        "result": "Passed",
+        "durationSeconds": 1.664077,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.Assets.ReleaseFingerprintTests.CurrentEffectiveTextureOverridesAreRecordedWithoutChangingEditorSettings",
+        "fixture": "Weedtopia.Tests.Assets.ReleaseFingerprintTests",
+        "method": "CurrentEffectiveTextureOverridesAreRecordedWithoutChangingEditorSettings",
+        "result": "Passed",
+        "durationSeconds": 0.002749,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.Assets.ReleaseFingerprintTests.EffectiveTextureOverrideContextChangesInvalidateIdentity(\"target=Android\\ntextureCompressionOverride=ForceUncompressed\\nmaximumTextureSizeOverride=0\")",
+        "fixture": "Weedtopia.Tests.Assets.ReleaseFingerprintTests",
+        "method": "EffectiveTextureOverrideContextChangesInvalidateIdentity",
+        "result": "Passed",
+        "durationSeconds": 0.003601,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.Assets.ReleaseFingerprintTests.EffectiveTextureOverrideContextChangesInvalidateIdentity(\"target=Android\\ntextureCompressionOverride=NoOverride\\nmaximumTextureSizeOverride=512\")",
+        "fixture": "Weedtopia.Tests.Assets.ReleaseFingerprintTests",
+        "method": "EffectiveTextureOverrideContextChangesInvalidateIdentity",
+        "result": "Passed",
+        "durationSeconds": 0.00292,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.Assets.ReleaseFingerprintTests.MissingMandatoryInputIsRecordedAndItsRestorationChangesIdentity",
+        "fixture": "Weedtopia.Tests.Assets.ReleaseFingerprintTests",
+        "method": "MissingMandatoryInputIsRecordedAndItsRestorationChangesIdentity",
+        "result": "Passed",
+        "durationSeconds": 0.004292,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.Assets.ReleaseFingerprintTests.PlatformOptionsAndBuildProfileEachChangeIdentity(\"target=Android\\noptions=0\\nprofile=Assets/Profiles/Release.asset\")",
+        "fixture": "Weedtopia.Tests.Assets.ReleaseFingerprintTests",
+        "method": "PlatformOptionsAndBuildProfileEachChangeIdentity",
+        "result": "Passed",
+        "durationSeconds": 0.003096,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.Assets.ReleaseFingerprintTests.PlatformOptionsAndBuildProfileEachChangeIdentity(\"target=Android\\noptions=1\\nprofile=platform\")",
+        "fixture": "Weedtopia.Tests.Assets.ReleaseFingerprintTests",
+        "method": "PlatformOptionsAndBuildProfileEachChangeIdentity",
+        "result": "Passed",
+        "durationSeconds": 0.003209,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.Assets.ReleaseFingerprintTests.PlatformOptionsAndBuildProfileEachChangeIdentity(\"target=StandaloneWindows64\\noptions=0\\nprofile=platform\")",
+        "fixture": "Weedtopia.Tests.Assets.ReleaseFingerprintTests",
+        "method": "PlatformOptionsAndBuildProfileEachChangeIdentity",
+        "result": "Passed",
+        "durationSeconds": 0.003122,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.Assets.ReleaseFingerprintTests.PlayerSettingsChangesInvalidateTheGateIdentity",
+        "fixture": "Weedtopia.Tests.Assets.ReleaseFingerprintTests",
+        "method": "PlayerSettingsChangesInvalidateTheGateIdentity",
+        "result": "Passed",
+        "durationSeconds": 0.004529,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.Assets.ReleaseFingerprintTests.ReorderingAndDuplicatePathsKeepTheSameIdentity",
+        "fixture": "Weedtopia.Tests.Assets.ReleaseFingerprintTests",
+        "method": "ReorderingAndDuplicatePathsKeepTheSameIdentity",
+        "result": "Passed",
+        "durationSeconds": 0.00416,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      }
+    ],
+    "scope": "Only these actual native cases certify the listed coverage; no device, store, visual or human acceptance is inferred."
+  },
+  "nativeCoveredAreas": [
+    "ReleaseFingerprint identity, required input manifests, build context and effective texture override context: only the actual listed fixture cases."
+  ],
+  "nativeUnverifiedAreas": [
+    "Device/GPU profiling and production timing acceptance require their own diagnostic evidence.",
+    "The completed regression does not certify final signing, store publishing or human acceptance."
+  ]
+}

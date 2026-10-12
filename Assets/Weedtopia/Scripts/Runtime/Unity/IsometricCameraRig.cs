@@ -42,13 +42,13 @@ namespace Weedtopia.Unity
             if(districtMap==null)return;
             LeaveInspectionForGesture();
             district=districtMap.Range(zone);
-            target=ClampToWorld(DistrictMap.ToWorld(district.start));zoom=district.zoom;
+            zoom=Mathf.Clamp(district.zoom,minZoom,MaximumZoom);target=ClampToWorld(DistrictMap.ToWorld(district.start));
         }
         public void ShowOverview()
         {
             if(districtMap==null||root==null||root.Session==null)return;
             LeaveInspectionForGesture();
-            district=null;target=DistrictMap.ToWorld(districtMap.overview);zoom=districtMap.overviewZoom;
+            district=null;zoom=MaximumZoom;target=DistrictMap.ToWorld(districtMap.overview);
         }
         public void ScrollTo(float fraction){if(district!=null)target=DistrictMap.ToWorld(Vector2.Lerp(district.start,district.end,Mathf.Clamp01(fraction)));}
         public void StepDistrict(int direction){if(district!=null)target=DistrictMap.ToWorld(district.Clamp(DistrictMap.ToPlan(target)+district.direction*direction*36));}
@@ -62,6 +62,7 @@ namespace Weedtopia.Unity
         {
             if(root==null||root.Session==null||root.Ui.ModalOpen||IsUiPoint(position))return false;
             var ray=renderCamera.ScreenPointToRay(position);
+            if(root.StoryWorld!=null&&root.StoryWorld.TrySelect(ray))return true;
             CharacterActor character=null;BuildingView building=null;float nearest=float.MaxValue;int front=int.MinValue;
             // The visible 2.5D world uses authored boxes. Test these directly so selection stays
             // stable across long orthographic rays, static collider synchronization and scene reloads.
@@ -70,7 +71,7 @@ namespace Weedtopia.Unity
                 if(actor.spriteRenderer.enabled&&actor.spriteRenderer.sortingOrder>front&&actor.TryPick(ray,out _)){character=actor;front=actor.spriteRenderer.sortingOrder;}
             }
             foreach(var site in root.Sites)if(site.TryPick(ray,out float distance)&&distance<nearest){building=site;nearest=distance;}
-            if(character!=null){root.Select(character.workplaceId);root.Ui.SpeakToSelected();return true;}
+            if(character!=null){root.Ui.SpeakToCharacter(character.speakerId);return true;}
             if(building!=null){if(root.Ui.Interaction!=null)root.Ui.Interaction.OpenBuilding(building.InstanceId);else root.Select(building.InstanceId);return true;}
             return false;
         }
@@ -83,7 +84,7 @@ namespace Weedtopia.Unity
         {
             // BuildingView owns the current instance. A retired sprite may still be in the hierarchy
             // until end-of-frame Destroy runs, and must never determine the new framing.
-            if(!inspectedBuilding.TryGetCurrentSpriteBounds(out Bounds bounds))return;
+            if(!inspectedBuilding.TryGetCurrentVisualBounds(out Bounds bounds))return;
             inspectionBounds=bounds;
             Vector3 up=renderCamera.transform.up,right=renderCamera.transform.right;
             float height=2*(Mathf.Abs(up.x)*bounds.extents.x+Mathf.Abs(up.y)*bounds.extents.y+Mathf.Abs(up.z)*bounds.extents.z);
@@ -103,7 +104,7 @@ namespace Weedtopia.Unity
         private void Update()
         {
             if(root==null)return;
-            if(inspection&&(Screen.width!=inspectionWidth||Screen.height!=inspectionHeight||root.Session.State.Find(inspectedBuilding.InstanceId).level!=inspectionLevel||inspectedBuilding.TryGetCurrentSpriteBounds(out var currentBounds)&&currentBounds!=inspectionBounds))FrameInspection();
+            if(inspection&&(Screen.width!=inspectionWidth||Screen.height!=inspectionHeight||root.Session.State.Find(inspectedBuilding.InstanceId).level!=inspectionLevel||inspectedBuilding.TryGetCurrentVisualBounds(out var currentBounds)&&currentBounds!=inspectionBounds))FrameInspection();
             var input=EventSystem.current!=null&&EventSystem.current.currentSelectedGameObject!=null?EventSystem.current.currentSelectedGameObject.GetComponent<InputField>():null;
             bool typing=input!=null&&input.isActiveAndEnabled&&input.isFocused;
             if(!root.Ui.ModalOpen&&!typing&&root.Session!=null)
@@ -159,11 +160,17 @@ namespace Weedtopia.Unity
             else {mouseGesture.Cancel();touchGesture.Cancel();suppressTouchUntilRelease=true;pinchPrevious=0;}
             if(!inspection)
             {
-                target=ClampToWorld(target);
                 zoom=Mathf.Clamp(zoom,minZoom,MaximumZoom);
+                target=ClampToWorld(target);
             }
             transform.position=Vector3.Lerp(transform.position,target,1-Mathf.Exp(-8*Time.unscaledDeltaTime));
             renderCamera.orthographicSize=Mathf.Lerp(renderCamera.orthographicSize,zoom,1-Mathf.Exp(-8*Time.unscaledDeltaTime));
+            if(districtMap!=null)
+            {
+                // Clamp the rendered view as well: zoom/position easing or an aspect change must never expose the outskirts.
+                renderCamera.orthographicSize=Mathf.Min(renderCamera.orthographicSize,MaximumZoom);
+                transform.position=ClampToWorld(transform.position,renderCamera.orthographicSize);
+            }
         }
         private void Drag(Vector2 pixels)
         {if(pixels.sqrMagnitude<.001f)return;LeaveInspectionForGesture();Pan(-pixels*(2*zoom/Mathf.Max(1,Screen.height)));}
@@ -173,11 +180,13 @@ namespace Weedtopia.Unity
             Vector3 offset=right*delta.x+up*(delta.y/Vector3.Dot(up,renderCamera.transform.up));
             target=ClampToWorld(target+offset);
         }
-        private float MaximumZoom => districtMap != null ? Mathf.Max(maxZoom,districtMap.overviewZoom) : maxZoom;
-        private Vector3 ClampToWorld(Vector3 position)
+        private float MaximumZoom => districtMap != null ? districtMap.MaximumNavigationZoom(renderCamera.aspect) : maxZoom;
+        private float GroundProjection => Vector3.ProjectOnPlane(renderCamera.transform.up,Vector3.up).magnitude;
+        private Vector3 ClampToWorld(Vector3 position) => ClampToWorld(position,zoom);
+        private Vector3 ClampToWorld(Vector3 position,float viewZoom)
         {
             if(districtMap==null)return new Vector3(Mathf.Clamp(position.x,minimum.x,maximum.x),0,Mathf.Clamp(position.z,minimum.y,maximum.y));
-            var plan=DistrictMap.ToPlan(position);var clamped=districtMap.ClampNavigation(plan);
+            var plan=DistrictMap.ToPlan(position);var clamped=districtMap.ClampNavigation(plan,viewZoom,renderCamera.aspect,GroundProjection);
             // Avoid a lossy plane/world round trip every idle frame: the camera must remain still over UI.
             return clamped==plan?new Vector3(position.x,0,position.z):DistrictMap.ToWorld(clamped);
         }

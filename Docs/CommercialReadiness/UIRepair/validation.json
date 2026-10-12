@@ -1,0 +1,228 @@
+{
+  "utc": "2026-10-05T07:25:19.736669+02:00",
+  "status": "integrated_native_tests_passed",
+  "nativeUnityTestsExecuted": true,
+  "targetAccepted": false,
+  "releaseAccepted": false,
+  "problem": "UiPolish generic ModulePanelLayout was added to an already authored ShopPanelLayout, together with a competing third outer ScrollRect.",
+  "fix": "Dedicated ShopPanelLayout makes InstallModuleLayout return false; callers only save a prefab when a real permitted change occurred.",
+  "sources": [
+    {
+      "path": "Assets/Weedtopia/Scripts/Editor/GameSetup/UiPolishAuthoring.cs",
+      "originalSha256": "728442fa97f3aa3b4f0ee774c90042899ae546668d8507f1a1c40ba0a8f9bcbc",
+      "stagedSha256": "91ac8c8e44743aaa515e81f828947f3c76dcc8810f618481da846fb52b7f4dad"
+    },
+    {
+      "path": "Assets/Weedtopia/Scripts/Tests/EditorAssets/ShopAssetTests.cs",
+      "originalSha256": "ac5c3ee20e8ca32ae0e581f2d38e132487620bfba1eda748587a6fa952b37fde",
+      "stagedSha256": "7de8b4d193ce2f3932152a935d1c59f3e2bd796dea4178081cfb51740a9c5b8b"
+    }
+  ],
+  "regression": "Weedtopia.Tests.Assets.ShopAssetTests.PolishingShopPreservesDedicatedLayoutAndEveryAuthoredByte",
+  "existingPreservationTest": "UiExperienceAssetTests.PolishedAssetsAndInstallerAreSharedAndRepeatable remains unmodified by this patch; no before-state normalization.",
+  "recovery": {
+    "path": "Assets/Weedtopia/Production/Prefabs/Shop/ShopPanel.prefab",
+    "currentSha256": "72bb6c14806d4f891de0f68c87c00fdc7f415105b216db2508deed61fba5d49d",
+    "currentBytes": 204096,
+    "candidateSha256": "eef2129a0b3baa9e4f826d9fe8da7fa3864925535083e7daa94ff1036cdbf0c5",
+    "candidateBytes": 202526,
+    "removedBytes": 1570,
+    "removedComponentFileIds": [
+      "2263877988346092739",
+      "5161255853558173407"
+    ],
+    "onlyAddedComponentsAndTheirTwoListReferencesRemoved": true,
+    "referencePath": ".utmp/WeedtopiaFontBaseline/Assets/Weedtopia/Production/Prefabs/Shop/ShopPanel.prefab",
+    "referenceSha256": "8824eb3f1131aa1fb9a75d63fa425784e9778bfd88426e25105870604f6e9bfc",
+    "referenceBytes": 202526,
+    "currentFontGuidsPreserved": true,
+    "fontGuidChangesFromEarlierReference": {
+      "7ab083661c9483c4fbf3606d8f1af552": 4,
+      "aa9aa54790670f34b9fe097036900ab9": 4
+    },
+    "candidateExactlyEqualsReferenceWithCurrentFontGuids": true,
+    "nativeFailureOffset": 9958,
+    "nativeExpectedByteAndCandidateByte": 109,
+    "nativeActualByteAndCurrentByte": 45,
+    "originalInMemoryNativeBeforeArrayUnavailable": true,
+    "note": "Recovery is constructed from the current working-tree bytes. The earlier reference is used only to prove the difference; it is never copied over the current prefab.",
+    "finalProductiveSha256": "eef2129a0b3baa9e4f826d9fe8da7fa3864925535083e7daa94ff1036cdbf0c5"
+  },
+  "currentBeforeRecoverySnapshot": "Docs/CommercialReadiness/UIRepair/ShopPanel.before-recovery.prefab",
+  "historicalPreNativeStatus": "integrated_pending_native_validation",
+  "nativeEvidenceUpdatedUtc": "2026-10-05T06:24:07.054764+00:00",
+  "nativeRegressionContext": {
+    "run": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/run.json",
+      "sha256": "3c21ff8ed4523cce4af54f2e16fb2c652df61a84512e5cd162c429825c5da583"
+    },
+    "runId": "20261005T061357352-258904",
+    "unity": "6000.3.9f1",
+    "finishedUtc": "2026-10-05T06:22:37.0323225Z",
+    "scope": "native_editmode_repair_aggregate_then_complete_playmode",
+    "editorRestored": true,
+    "editModeEvidenceMode": "395 original native passes plus one actual repaired native pass; no full EditMode rerun",
+    "originalFullEditMode": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+      "sha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29",
+      "passed": 395,
+      "failed": 1,
+      "skipped": 0,
+      "inconclusive": 0,
+      "total": 396,
+      "testcasecount": 396
+    },
+    "repairEditMode": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/EditModeRepair.xml",
+      "sha256": "97bfccd1e4e4a756a4d3f9aba4760c86759ba4100411341a181cdb72c47fc678",
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "total": 1,
+      "testcasecount": 1
+    },
+    "editModeAggregate": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/EditModeAggregate.json",
+      "sha256": "1e6a4b29ef087dd3e484609d1c3e3094233ca18ae57cea5e1b9a369bd892cdd4"
+    },
+    "effectiveEditModePassed": 396,
+    "completePlayMode": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+      "sha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611",
+      "passed": 103,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "total": 103,
+      "testcasecount": 103
+    },
+    "sourceValidation": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/source_validation.json",
+      "sha256": "c2c7f3827a839daf559acae80cf93cf1ce2a2dab0713aa3464c70cdc3399ebb2"
+    },
+    "sourceInputs": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/source_inputs.json",
+      "sha256": "626d4e2d40f7ad52637e6d715b195f316b424dcea4a1ec6f0a091115ce389b74"
+    },
+    "targetAccepted": false,
+    "releaseAccepted": false,
+    "deviceAccepted": false,
+    "humanAccepted": false
+  },
+  "finalRuntimeSourceHashes": {
+    "Assets/Weedtopia/Scripts/Runtime/Domain/Amount.cs": "1e2d5bcce8465a7c1942504f2670144b83e85b1c109a5ab4cb67df7b6c19bd8d",
+    "Assets/Weedtopia/Scripts/Runtime/Domain/Simulation.cs": "b26a6b64674d21a60061e2e48d7b5431b3b2f72485cdcb36902fadd6a3c30910",
+    "Assets/Weedtopia/Scripts/Runtime/Application/GameSession.cs": "511a4efcc663f27b6f929a17b0570dffa6ada9608155e7147282c9eaeca1d8bd",
+    "Assets/Weedtopia/Scripts/Runtime/Application/GameStateTransactionSnapshot.cs": "4257db04ddef24effc3782452d4811c9fe757ebbb7037ef0517d8ed3640de4c2",
+    "Assets/Weedtopia/Scripts/Runtime/Application/OfflineProgress.cs": "e584c95d207045a78e60cb8e0bb03e29bedd9e98aaa0fdef2d7a812f93ec8ac5",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/GameRoot.cs": "0e6b0a6eb5126466c5053e4ee2e6f7b2e6e26e58ca25c13fe65c4643157f4988",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/GameUi.cs": "7cdd50f2ef7db569897878ce2bc1a6ae58ae06861a0595ae29eed124a55c0111",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/UiExperience.cs": "204cd3429614b24ad74f8439deadde3e3c2ce2555946e082d89aa782dbb7818c",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/LuckyWheelUi.cs": "646c024251c1b0b80829f911a1e327f388e91b27c7be87487f5dae20c8e968d2"
+  },
+  "finalSourceHashes": {
+    "Assets/Weedtopia/Scripts/Editor/GameSetup/UiPolishAuthoring.cs": "91ac8c8e44743aaa515e81f828947f3c76dcc8810f618481da846fb52b7f4dad",
+    "Assets/Weedtopia/Scripts/Tests/EditorAssets/ShopAssetTests.cs": "7de8b4d193ce2f3932152a935d1c59f3e2bd796dea4178081cfb51740a9c5b8b"
+  },
+  "finalResponsiveStartupPolicy": {
+    "batchSeconds": 32,
+    "frameBudgetMilliseconds": 8,
+    "GameRootSha256": "0e6b0a6eb5126466c5053e4ee2e6f7b2e6e26e58ca25c13fe65c4643157f4988",
+    "matchesNativeSourceManifest": true
+  },
+  "nativeEditMode": {
+    "status": "passed",
+    "stage": "EditMode",
+    "passed": 2,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0,
+    "fixtureResults": [
+      {
+        "fixture": "Weedtopia.Tests.Assets.ShopAssetTests",
+        "passed": 1,
+        "testNames": [
+          "Weedtopia.Tests.Assets.ShopAssetTests.PolishingShopPreservesDedicatedLayoutAndEveryAuthoredByte"
+        ]
+      },
+      {
+        "fixture": "Weedtopia.Tests.Assets.UiExperienceAssetTests",
+        "passed": 1,
+        "testNames": [
+          "Weedtopia.Tests.Assets.UiExperienceAssetTests.PolishedAssetsAndInstallerAreSharedAndRepeatable"
+        ]
+      }
+    ],
+    "cases": [
+      {
+        "fullname": "Weedtopia.Tests.Assets.ShopAssetTests.PolishingShopPreservesDedicatedLayoutAndEveryAuthoredByte",
+        "fixture": "Weedtopia.Tests.Assets.ShopAssetTests",
+        "method": "PolishingShopPreservesDedicatedLayoutAndEveryAuthoredByte",
+        "result": "Passed",
+        "durationSeconds": 3.900086,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.Assets.UiExperienceAssetTests.PolishedAssetsAndInstallerAreSharedAndRepeatable",
+        "fixture": "Weedtopia.Tests.Assets.UiExperienceAssetTests",
+        "method": "PolishedAssetsAndInstallerAreSharedAndRepeatable",
+        "result": "Passed",
+        "durationSeconds": 7.890418,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      }
+    ],
+    "scope": "Only these actual native cases certify the listed coverage; no device, store, visual or human acceptance is inferred."
+  },
+  "nativePlayMode": {
+    "status": "passed",
+    "stage": "PlayMode",
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0,
+    "fixtureResults": [
+      {
+        "fixture": "Weedtopia.Tests.PlayMode.ShopUiTests",
+        "passed": 3,
+        "testNames": [
+          "Weedtopia.Tests.PlayMode.ShopUiTests.NavigationOpensShopAndEveryProductIsAccessibleThroughItsCategory",
+          "Weedtopia.Tests.PlayMode.ShopUiTests.PreviewAndCancellationDoNotGrantAndConfirmedStarterSurvivesContinue",
+          "Weedtopia.Tests.PlayMode.ShopUiTests.VipConfirmationGrantsFirstDayAndShowsTheSavedExpiration"
+        ]
+      }
+    ],
+    "cases": [
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.ShopUiTests.NavigationOpensShopAndEveryProductIsAccessibleThroughItsCategory",
+        "fixture": "Weedtopia.Tests.PlayMode.ShopUiTests",
+        "method": "NavigationOpensShopAndEveryProductIsAccessibleThroughItsCategory",
+        "result": "Passed",
+        "durationSeconds": 2.030298,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.ShopUiTests.PreviewAndCancellationDoNotGrantAndConfirmedStarterSurvivesContinue",
+        "fixture": "Weedtopia.Tests.PlayMode.ShopUiTests",
+        "method": "PreviewAndCancellationDoNotGrantAndConfirmedStarterSurvivesContinue",
+        "result": "Passed",
+        "durationSeconds": 2.149335,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.ShopUiTests.VipConfirmationGrantsFirstDayAndShowsTheSavedExpiration",
+        "fixture": "Weedtopia.Tests.PlayMode.ShopUiTests",
+        "method": "VipConfirmationGrantsFirstDayAndShowsTheSavedExpiration",
+        "result": "Passed",
+        "durationSeconds": 2.14243,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      }
+    ],
+    "scope": "Only these actual native cases certify the listed coverage; no device, store, visual or human acceptance is inferred."
+  }
+}

@@ -17,11 +17,11 @@ namespace Weedtopia.Editor.GameSetup
         public const string Folder = "Assets/Weedtopia/Production/DirectionalMotion";
         [Serializable] private sealed class Entry
         {
-            public string key, file, name;
-            public int row, frame, x, y, width, height;
-            public float pivotX, pivotY, scale;
+            public string key = default, file = default, name = default;
+            public int row = default, frame = default, x = default, y = default, width = default, height = default;
+            public float pivotX = default, pivotY = default, scale = default;
         }
-        [Serializable] private sealed class Manifest { public Entry[] sprites; }
+        [Serializable] private sealed class Manifest { public Entry[] sprites = default; }
         private static readonly string[] Keys = { "resident_a", "resident_b", "resident_c", "cyclist", "van", "swallow", "butterfly" };
         private static readonly int[] Rows = { 2, 3, 4, 3, 2, 1, 0, 1 };
 

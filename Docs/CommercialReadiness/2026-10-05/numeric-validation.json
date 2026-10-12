@@ -1,0 +1,502 @@
+{
+  "status": "integrated_native_tests_passed",
+  "assetsChanged": true,
+  "baseline": {
+    "utc": "2026-10-05T05:16:54.413622+00:00",
+    "status": "staged_only",
+    "source": "Assets/Weedtopia/Scripts/Runtime/Domain/Amount.cs",
+    "baselineSha256": "9e0a2b061e0bb6528fa4f3e0c6342e8cd04b6ab1232b2a40c30246a7de566a48",
+    "candidateSha256": "1e2d5bcce8465a7c1942504f2670144b83e85b1c109a5ab4cb67df7b6c19bd8d",
+    "domainBaselineHashes": {
+      "Amount.cs": "9e0a2b061e0bb6528fa4f3e0c6342e8cd04b6ab1232b2a40c30246a7de566a48",
+      "CityCampaign.cs": "86444cf5e218539dfd5480bc20f06f7fe2f26f0cbe914ec61e7e7bf799bca318",
+      "CityProject.cs": "79c026e707b140617b712a5aa220f615ec23acfeab18c86db42a394f4582c531",
+      "Definitions.cs": "64121a7eb217f0846c35deb4726d6f016ffbd6b10142179645789d6371b60468",
+      "GameState.cs": "5a81360897a46ec048ae4ddfb8aa2d946360138cda55238f487243c12b2b82c5",
+      "Inventory.cs": "77512296302729696ae636cad2b35faf5a2a71e64d0235aff22a3f34c961470e",
+      "LocalizationService.cs": "e5be0ccb1d76448296eefe34828e0c1c60f892b846a119c2c2e0a6150c16c73f",
+      "LuckyWheel.cs": "bb6e87a211a1d2708f3ce37b02fc65b1c2d548a7951afc993029460a1e654477",
+      "PlayerProfile.cs": "791ec2792e4ac343e050a1b93c3bcb714a5be20a48c03162a40c3206d82ca6fa",
+      "RewardHistory.cs": "523bdaafd2a3c15bab5d26982ff7825007baf5021b19fc1d23f21107e5f780a9",
+      "Shop.cs": "1df524b0330d14fb48ce033ba9d0d11afe6373cfda0011e1c4a6cdb19cb34118",
+      "Simulation.cs": "b26a6b64674d21a60061e2e48d7b5431b3b2f72485cdcb36902fadd6a3c30910",
+      "UpgradeService.cs": "61884fb6c05ef05c264117c739dcb10157f479d0c616351d95d4f8dfa6217cd7",
+      "VipStories.cs": "238764497225027596a602f2599546580e7e77c78f4e83951d697aef03193079",
+      "WorkerService.cs": "985fce2933dc94087d98edb7a6e858834a241edff9f949a04b19e191806021b6"
+    }
+  },
+  "dotnet": {
+    "utc": "2026-10-05T05:17:16.7446528Z",
+    "status": "passed",
+    "scope": "Isolated .NET numeric differential oracle and synthetic model comparison; no Unity Editor or target-device acceptance",
+    "numeric": {
+      "constructorComparisons": 1000968,
+      "arithmeticComparisons": 280000,
+      "fastIntervalInputs": 400903,
+      "originalMedianMilliseconds": 35.3997,
+      "candidateMedianMilliseconds": 13.3436,
+      "speedup": 2.6529347402500076,
+      "originalRunsMilliseconds": [
+        34.9484,
+        35.4446,
+        35.0481,
+        35.4594,
+        35.7804,
+        35.3997,
+        35.3828
+      ],
+      "candidateRunsMilliseconds": [
+        13.4828,
+        13.6686,
+        13.5898,
+        13.1882,
+        13.2579,
+        13.3436,
+        13.2743
+      ],
+      "exactMantissaBitsAndExponent": true,
+      "exactExceptionKindsAndParameters": true,
+      "microbenchmarkIterationsPerRun": 2000000,
+      "runtime": "9.0.16"
+    },
+    "scenarios": [
+      {
+        "scenario": "early-save",
+        "seconds": 28800,
+        "buildings": 112,
+        "workers": 0,
+        "originalMilliseconds": 547.1969,
+        "candidateMilliseconds": 400.1045,
+        "speedup": 1.3676349553679104,
+        "exactSerializedStateMatch": true
+      },
+      {
+        "scenario": "established-two-cities",
+        "seconds": 28800,
+        "buildings": 112,
+        "workers": 118,
+        "originalMilliseconds": 2398.3013,
+        "candidateMilliseconds": 2064.3872,
+        "speedup": 1.161749743458979,
+        "exactSerializedStateMatch": true
+      },
+      {
+        "scenario": "vip-expiry",
+        "seconds": 300,
+        "buildings": 112,
+        "workers": 118,
+        "originalMilliseconds": 23.4746,
+        "candidateMilliseconds": 21.4118,
+        "speedup": 1.096339401638349,
+        "exactSerializedStateMatch": true
+      }
+    ],
+    "passedRegressionTests": 10
+  },
+  "mono": {
+    "status": "passed",
+    "scope": "Standalone bundled Unity Mono numeric oracle only, no Editor or target acceptance",
+    "utc": "2026-10-05T05:18:51.8145846Z",
+    "runtime": "Mono 4.0.30319.42000",
+    "passedRegressionTests": 10,
+    "constructorComparisons": 1000968,
+    "arithmeticComparisons": 280000,
+    "fastIntervalInputs": 400903,
+    "exactMantissaBitsAndExponent": true,
+    "exactExceptionKindsAndParameters": true,
+    "microbenchmarkIterationsPerRun": 2000000,
+    "originalMedianMilliseconds": 198.5988,
+    "candidateMedianMilliseconds": 97.9791,
+    "speedup": 2.0269506455968673,
+    "originalRunsMilliseconds": [
+      201.8708,
+      197.6009,
+      201.12470000000002,
+      198.5988,
+      197.887,
+      197.80200000000002,
+      203.42430000000002
+    ],
+    "candidateRunsMilliseconds": [
+      97.4126,
+      97.9791,
+      100.3455,
+      99.2625,
+      97.36070000000001,
+      97.6956,
+      102.7282
+    ]
+  },
+  "proof": "For finite abs(value) in [1,9], Floor(Log10(abs(value))) equals zero. Dividing by Pow(10,0) is exactly dividing by 1. The same Math.Round(value,11,AwayFromZero) and IsValid exponent validation are retained. Rounded abs(value) stays <=9, so the original carry guard cannot execute. All other values use the unchanged original normalization branch.",
+  "limits": [
+    "Standalone bundled Mono is not the Unity Editor host benchmark.",
+    "Full model timings are isolated .NET measurements and one measurement per scenario.",
+    "Native regression suite and responsive-start measurement must follow integration."
+  ],
+  "assetsModifiedByValidationAgent": false,
+  "integrationStatus": "integrated_native_tests_passed",
+  "integration": {
+    "verifiedUtc": "2026-10-05T05:36:36.432101+00:00",
+    "productiveAmountPath": "Assets/Weedtopia/Scripts/Runtime/Domain/Amount.cs",
+    "productiveAmountSha256": "1e2d5bcce8465a7c1942504f2670144b83e85b1c109a5ab4cb67df7b6c19bd8d",
+    "productiveAmountMatchesValidatedCandidate": true,
+    "productiveTestsPath": "Assets/Weedtopia/Scripts/Tests/EditMode/AmountNormalizationTests.cs",
+    "productiveTestsSha256": "d994a3ff76ea39511cc9f36b01cb85dca3d2406d05be02891f9fe9488cee370b",
+    "productiveTestsMatchValidatedFixture": true,
+    "currentDomainSourceHashes": {
+      "Amount.cs": "1e2d5bcce8465a7c1942504f2670144b83e85b1c109a5ab4cb67df7b6c19bd8d",
+      "CityCampaign.cs": "86444cf5e218539dfd5480bc20f06f7fe2f26f0cbe914ec61e7e7bf799bca318",
+      "CityProject.cs": "79c026e707b140617b712a5aa220f615ec23acfeab18c86db42a394f4582c531",
+      "Definitions.cs": "64121a7eb217f0846c35deb4726d6f016ffbd6b10142179645789d6371b60468",
+      "GameState.cs": "5a81360897a46ec048ae4ddfb8aa2d946360138cda55238f487243c12b2b82c5",
+      "Inventory.cs": "77512296302729696ae636cad2b35faf5a2a71e64d0235aff22a3f34c961470e",
+      "LocalizationService.cs": "e5be0ccb1d76448296eefe34828e0c1c60f892b846a119c2c2e0a6150c16c73f",
+      "LuckyWheel.cs": "bb6e87a211a1d2708f3ce37b02fc65b1c2d548a7951afc993029460a1e654477",
+      "PlayerProfile.cs": "791ec2792e4ac343e050a1b93c3bcb714a5be20a48c03162a40c3206d82ca6fa",
+      "RewardHistory.cs": "523bdaafd2a3c15bab5d26982ff7825007baf5021b19fc1d23f21107e5f780a9",
+      "Shop.cs": "1df524b0330d14fb48ce033ba9d0d11afe6373cfda0011e1c4a6cdb19cb34118",
+      "Simulation.cs": "b26a6b64674d21a60061e2e48d7b5431b3b2f72485cdcb36902fadd6a3c30910",
+      "UpgradeService.cs": "61884fb6c05ef05c264117c739dcb10157f479d0c616351d95d4f8dfa6217cd7",
+      "VipStories.cs": "238764497225027596a602f2599546580e7e77c78f4e83951d697aef03193079",
+      "WorkerService.cs": "985fce2933dc94087d98edb7a6e858834a241edff9f949a04b19e191806021b6"
+    },
+    "otherDomainSourcesMatchStagedBaseline": true,
+    "sourceCompile": {
+      "status": "passed",
+      "gate": "source_compile_only",
+      "utc": "2026-10-05T05:32:56.545003+00:00",
+      "assemblies": 12,
+      "receipt": "Docs/Implementation/Validation/SourceCompile/result.json",
+      "receiptSha256": "f53ab521e83b88aab306920542ccba856cfbd5b2b06e2904b67f7b382a469327",
+      "amountAndTestHashesMatch": true
+    },
+    "unityRefresh": {
+      "id": "commercial-20261005-refresh-08",
+      "status": "refreshed",
+      "finishedUtc": "2026-10-05T05:33:11.0249087Z",
+      "unityVersion": "6000.3.9f1",
+      "processId": 258904,
+      "receipt": "Builds/Android/commercial-20261005-refresh-08/build-result.json"
+    },
+    "nativeTests": {
+      "status": "passed",
+      "stage": "EditMode",
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "fixtureResults": [
+        {
+          "fixture": "Weedtopia.Tests.AmountNormalizationTests",
+          "passed": 10,
+          "testNames": [
+            "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(-1.0d,-250,\"-1e-250\")",
+            "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(-1.234567890123d,17,\"-1.23456789012e17\")",
+            "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(-9.0d,250,\"-9e250\")",
+            "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(1.000000000001d,17,\"1e17\")",
+            "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(1.0d,250,\"1e250\")",
+            "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(1.234567890123d,17,\"1.23456789012e17\")",
+            "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(8.999999999994d,17,\"8.99999999999e17\")",
+            "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(9.0d,-250,\"9e-250\")",
+            "Weedtopia.Tests.AmountNormalizationTests.UnitIntervalRetainsExponentLimitsAndRejectsNonFiniteInputs",
+            "Weedtopia.Tests.AmountNormalizationTests.ValuesImmediatelyAroundIntervalAndCarryBoundaryNormalizeCorrectly"
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(-1.0d,-250,\"-1e-250\")",
+          "fixture": "Weedtopia.Tests.AmountNormalizationTests",
+          "method": "UnitDecimalIntervalStillUsesTwelveSignificantDigits",
+          "result": "Passed",
+          "durationSeconds": 0.000101,
+          "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+          "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+        },
+        {
+          "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(-1.234567890123d,17,\"-1.23456789012e17\")",
+          "fixture": "Weedtopia.Tests.AmountNormalizationTests",
+          "method": "UnitDecimalIntervalStillUsesTwelveSignificantDigits",
+          "result": "Passed",
+          "durationSeconds": 9.9e-05,
+          "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+          "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+        },
+        {
+          "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(-9.0d,250,\"-9e250\")",
+          "fixture": "Weedtopia.Tests.AmountNormalizationTests",
+          "method": "UnitDecimalIntervalStillUsesTwelveSignificantDigits",
+          "result": "Passed",
+          "durationSeconds": 0.000151,
+          "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+          "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+        },
+        {
+          "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(1.000000000001d,17,\"1e17\")",
+          "fixture": "Weedtopia.Tests.AmountNormalizationTests",
+          "method": "UnitDecimalIntervalStillUsesTwelveSignificantDigits",
+          "result": "Passed",
+          "durationSeconds": 9.8e-05,
+          "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+          "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+        },
+        {
+          "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(1.0d,250,\"1e250\")",
+          "fixture": "Weedtopia.Tests.AmountNormalizationTests",
+          "method": "UnitDecimalIntervalStillUsesTwelveSignificantDigits",
+          "result": "Passed",
+          "durationSeconds": 0.000684,
+          "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+          "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+        },
+        {
+          "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(1.234567890123d,17,\"1.23456789012e17\")",
+          "fixture": "Weedtopia.Tests.AmountNormalizationTests",
+          "method": "UnitDecimalIntervalStillUsesTwelveSignificantDigits",
+          "result": "Passed",
+          "durationSeconds": 0.0001,
+          "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+          "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+        },
+        {
+          "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(8.999999999994d,17,\"8.99999999999e17\")",
+          "fixture": "Weedtopia.Tests.AmountNormalizationTests",
+          "method": "UnitDecimalIntervalStillUsesTwelveSignificantDigits",
+          "result": "Passed",
+          "durationSeconds": 0.000102,
+          "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+          "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+        },
+        {
+          "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(9.0d,-250,\"9e-250\")",
+          "fixture": "Weedtopia.Tests.AmountNormalizationTests",
+          "method": "UnitDecimalIntervalStillUsesTwelveSignificantDigits",
+          "result": "Passed",
+          "durationSeconds": 0.000113,
+          "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+          "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+        },
+        {
+          "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitIntervalRetainsExponentLimitsAndRejectsNonFiniteInputs",
+          "fixture": "Weedtopia.Tests.AmountNormalizationTests",
+          "method": "UnitIntervalRetainsExponentLimitsAndRejectsNonFiniteInputs",
+          "result": "Passed",
+          "durationSeconds": 0.001111,
+          "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+          "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+        },
+        {
+          "fullname": "Weedtopia.Tests.AmountNormalizationTests.ValuesImmediatelyAroundIntervalAndCarryBoundaryNormalizeCorrectly",
+          "fixture": "Weedtopia.Tests.AmountNormalizationTests",
+          "method": "ValuesImmediatelyAroundIntervalAndCarryBoundaryNormalizeCorrectly",
+          "result": "Passed",
+          "durationSeconds": 0.000357,
+          "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+          "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+        }
+      ],
+      "scope": "Only these actual native cases certify the listed coverage; no device, store, visual or human acceptance is inferred."
+    },
+    "targetDeviceAccepted": false,
+    "releaseAccepted": false,
+    "humanAccepted": false
+  },
+  "historicalPreNativeStatus": "integrated_source_verified_native_pending",
+  "nativeEvidenceUpdatedUtc": "2026-10-05T06:24:07.054764+00:00",
+  "nativeRegressionContext": {
+    "run": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/run.json",
+      "sha256": "3c21ff8ed4523cce4af54f2e16fb2c652df61a84512e5cd162c429825c5da583"
+    },
+    "runId": "20261005T061357352-258904",
+    "unity": "6000.3.9f1",
+    "finishedUtc": "2026-10-05T06:22:37.0323225Z",
+    "scope": "native_editmode_repair_aggregate_then_complete_playmode",
+    "editorRestored": true,
+    "editModeEvidenceMode": "395 original native passes plus one actual repaired native pass; no full EditMode rerun",
+    "originalFullEditMode": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+      "sha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29",
+      "passed": 395,
+      "failed": 1,
+      "skipped": 0,
+      "inconclusive": 0,
+      "total": 396,
+      "testcasecount": 396
+    },
+    "repairEditMode": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/EditModeRepair.xml",
+      "sha256": "97bfccd1e4e4a756a4d3f9aba4760c86759ba4100411341a181cdb72c47fc678",
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "total": 1,
+      "testcasecount": 1
+    },
+    "editModeAggregate": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/EditModeAggregate.json",
+      "sha256": "1e6a4b29ef087dd3e484609d1c3e3094233ca18ae57cea5e1b9a369bd892cdd4"
+    },
+    "effectiveEditModePassed": 396,
+    "completePlayMode": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+      "sha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611",
+      "passed": 103,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "total": 103,
+      "testcasecount": 103
+    },
+    "sourceValidation": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/source_validation.json",
+      "sha256": "c2c7f3827a839daf559acae80cf93cf1ce2a2dab0713aa3464c70cdc3399ebb2"
+    },
+    "sourceInputs": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/source_inputs.json",
+      "sha256": "626d4e2d40f7ad52637e6d715b195f316b424dcea4a1ec6f0a091115ce389b74"
+    },
+    "targetAccepted": false,
+    "releaseAccepted": false,
+    "deviceAccepted": false,
+    "humanAccepted": false
+  },
+  "finalRuntimeSourceHashes": {
+    "Assets/Weedtopia/Scripts/Runtime/Domain/Amount.cs": "1e2d5bcce8465a7c1942504f2670144b83e85b1c109a5ab4cb67df7b6c19bd8d",
+    "Assets/Weedtopia/Scripts/Runtime/Domain/Simulation.cs": "b26a6b64674d21a60061e2e48d7b5431b3b2f72485cdcb36902fadd6a3c30910",
+    "Assets/Weedtopia/Scripts/Runtime/Application/GameSession.cs": "511a4efcc663f27b6f929a17b0570dffa6ada9608155e7147282c9eaeca1d8bd",
+    "Assets/Weedtopia/Scripts/Runtime/Application/GameStateTransactionSnapshot.cs": "4257db04ddef24effc3782452d4811c9fe757ebbb7037ef0517d8ed3640de4c2",
+    "Assets/Weedtopia/Scripts/Runtime/Application/OfflineProgress.cs": "e584c95d207045a78e60cb8e0bb03e29bedd9e98aaa0fdef2d7a812f93ec8ac5",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/GameRoot.cs": "0e6b0a6eb5126466c5053e4ee2e6f7b2e6e26e58ca25c13fe65c4643157f4988",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/GameUi.cs": "7cdd50f2ef7db569897878ce2bc1a6ae58ae06861a0595ae29eed124a55c0111",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/UiExperience.cs": "204cd3429614b24ad74f8439deadde3e3c2ce2555946e082d89aa782dbb7818c",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/LuckyWheelUi.cs": "646c024251c1b0b80829f911a1e327f388e91b27c7be87487f5dae20c8e968d2"
+  },
+  "finalSourceHashes": {},
+  "finalResponsiveStartupPolicy": {
+    "batchSeconds": 32,
+    "frameBudgetMilliseconds": 8,
+    "GameRootSha256": "0e6b0a6eb5126466c5053e4ee2e6f7b2e6e26e58ca25c13fe65c4643157f4988",
+    "matchesNativeSourceManifest": true
+  },
+  "nativeValidation": {
+    "status": "passed",
+    "stage": "EditMode",
+    "passed": 10,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0,
+    "fixtureResults": [
+      {
+        "fixture": "Weedtopia.Tests.AmountNormalizationTests",
+        "passed": 10,
+        "testNames": [
+          "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(-1.0d,-250,\"-1e-250\")",
+          "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(-1.234567890123d,17,\"-1.23456789012e17\")",
+          "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(-9.0d,250,\"-9e250\")",
+          "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(1.000000000001d,17,\"1e17\")",
+          "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(1.0d,250,\"1e250\")",
+          "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(1.234567890123d,17,\"1.23456789012e17\")",
+          "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(8.999999999994d,17,\"8.99999999999e17\")",
+          "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(9.0d,-250,\"9e-250\")",
+          "Weedtopia.Tests.AmountNormalizationTests.UnitIntervalRetainsExponentLimitsAndRejectsNonFiniteInputs",
+          "Weedtopia.Tests.AmountNormalizationTests.ValuesImmediatelyAroundIntervalAndCarryBoundaryNormalizeCorrectly"
+        ]
+      }
+    ],
+    "cases": [
+      {
+        "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(-1.0d,-250,\"-1e-250\")",
+        "fixture": "Weedtopia.Tests.AmountNormalizationTests",
+        "method": "UnitDecimalIntervalStillUsesTwelveSignificantDigits",
+        "result": "Passed",
+        "durationSeconds": 0.000101,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(-1.234567890123d,17,\"-1.23456789012e17\")",
+        "fixture": "Weedtopia.Tests.AmountNormalizationTests",
+        "method": "UnitDecimalIntervalStillUsesTwelveSignificantDigits",
+        "result": "Passed",
+        "durationSeconds": 9.9e-05,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(-9.0d,250,\"-9e250\")",
+        "fixture": "Weedtopia.Tests.AmountNormalizationTests",
+        "method": "UnitDecimalIntervalStillUsesTwelveSignificantDigits",
+        "result": "Passed",
+        "durationSeconds": 0.000151,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(1.000000000001d,17,\"1e17\")",
+        "fixture": "Weedtopia.Tests.AmountNormalizationTests",
+        "method": "UnitDecimalIntervalStillUsesTwelveSignificantDigits",
+        "result": "Passed",
+        "durationSeconds": 9.8e-05,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(1.0d,250,\"1e250\")",
+        "fixture": "Weedtopia.Tests.AmountNormalizationTests",
+        "method": "UnitDecimalIntervalStillUsesTwelveSignificantDigits",
+        "result": "Passed",
+        "durationSeconds": 0.000684,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(1.234567890123d,17,\"1.23456789012e17\")",
+        "fixture": "Weedtopia.Tests.AmountNormalizationTests",
+        "method": "UnitDecimalIntervalStillUsesTwelveSignificantDigits",
+        "result": "Passed",
+        "durationSeconds": 0.0001,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(8.999999999994d,17,\"8.99999999999e17\")",
+        "fixture": "Weedtopia.Tests.AmountNormalizationTests",
+        "method": "UnitDecimalIntervalStillUsesTwelveSignificantDigits",
+        "result": "Passed",
+        "durationSeconds": 0.000102,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitDecimalIntervalStillUsesTwelveSignificantDigits(9.0d,-250,\"9e-250\")",
+        "fixture": "Weedtopia.Tests.AmountNormalizationTests",
+        "method": "UnitDecimalIntervalStillUsesTwelveSignificantDigits",
+        "result": "Passed",
+        "durationSeconds": 0.000113,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.AmountNormalizationTests.UnitIntervalRetainsExponentLimitsAndRejectsNonFiniteInputs",
+        "fixture": "Weedtopia.Tests.AmountNormalizationTests",
+        "method": "UnitIntervalRetainsExponentLimitsAndRejectsNonFiniteInputs",
+        "result": "Passed",
+        "durationSeconds": 0.001111,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.AmountNormalizationTests.ValuesImmediatelyAroundIntervalAndCarryBoundaryNormalizeCorrectly",
+        "fixture": "Weedtopia.Tests.AmountNormalizationTests",
+        "method": "ValuesImmediatelyAroundIntervalAndCarryBoundaryNormalizeCorrectly",
+        "result": "Passed",
+        "durationSeconds": 0.000357,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      }
+    ],
+    "scope": "Only these actual native cases certify the listed coverage; no device, store, visual or human acceptance is inferred."
+  }
+}

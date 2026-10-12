@@ -16,6 +16,8 @@ namespace Weedtopia.Application
             if (ticks < state.highWaterUtcTicks) return Failure.NotReady;
             long day = ticks / TimeSpan.TicksPerDay;
             bool changed = false;
+            int cardsBefore = state.cards, grindersBefore = state.grinders;
+            var vipBefore = state.vip.Select(v => v.id).ToArray();
             foreach (var b in state.buildings.Where(x => x.cityId == state.activeCity && x.level > 0))
             {
                 var kind = defs.Building(b.family).kind;
@@ -32,7 +34,14 @@ namespace Weedtopia.Application
                 b.lastDailyDay = day; b.dailyTier = current; b.dailyClaims++; state.City.stats.dailyClaims++; changed = true;
             }
             state.highWaterUtcTicks = Math.Max(state.highWaterUtcTicks, ticks);
-            if (changed) state.revision++;
+            if (changed)
+            {
+                var rewards = RewardHistory.Currency(0, state.cards - cardsBefore, state.grinders - grindersBefore);
+                int orders = state.vip.Count(v => !vipBefore.Contains(v.id));
+                if (orders > 0) rewards.Add(RewardItem.Of(RewardKind.VipOrders, orders));
+                RewardHistory.Record(state, RewardSource.Daily, day.ToString(System.Globalization.CultureInfo.InvariantCulture), "reward.source.daily", rewards);
+                state.revision++;
+            }
             return changed ? Failure.None : Failure.NotReady;
         }
         private void GenerateVip(BuildingState park, int count, long day)

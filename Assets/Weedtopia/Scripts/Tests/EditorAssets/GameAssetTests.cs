@@ -17,6 +17,15 @@ namespace Weedtopia.Tests.Assets
         [Serializable] private sealed class SpriteMetric {public string path;public int width,height,colliders;public long textureBytes;public float worldHeight;}
         [Serializable] private sealed class SpriteReceipt {public string utc;public bool productionApproval=false;public SpriteMetric[] prototypes;}
         [Test] public void SceneReferencesAndBuildConfigurationValidate(){GameScaffold.ValidateBatch();}
+        [Test] public void ProjectAssetsUseCanonicalRoots()
+        {
+            Assert.That(AssetDatabase.IsValidFolder("Assets/Audio"),Is.False,"Audio belongs below the game-owned root");
+            Assert.That(AssetDatabase.IsValidFolder("Assets/Scenes"),Is.False,"Production scenes belong in Game/Scenes");
+            Assert.That(AssetDatabase.IsValidFolder("Assets/TutorialInfo"),Is.False,"Unity template material belongs in the archive");
+            Assert.That(AssetDatabase.IsValidFolder("Assets/Weedtopia/Game/Audio/Approved"),Is.True);
+            Assert.That(AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Weedtopia/Game/Audio/Approved/BurningHills/afterglow_loop_60s.wav"),Is.Not.Null);
+            Assert.That(AssetDatabase.LoadAssetAtPath<SceneAsset>("Assets/Weedtopia/Game/Archive/UnityTemplate/SampleScene.unity"),Is.Not.Null);
+        }
         [Test] public void EveryLevelMapsToExistingCatalogWithNoGaps()
         {
             var catalog=AssetDatabase.LoadAssetAtPath<BuildingVisualCatalog>(BuildingManifestReader.CatalogPath);int bands=0;
@@ -33,8 +42,8 @@ namespace Weedtopia.Tests.Assets
             var before=Directory.GetFiles(GameScaffold.Root,"*",SearchOption.AllDirectories).ToDictionary(p=>p,File.ReadAllBytes);
             var production=Directory.GetFiles("Assets/Weedtopia/Art/Buildings/Prefabs","*",SearchOption.AllDirectories).ToDictionary(p=>p,File.ReadAllBytes);
             GameScaffold.CreateOrRepair();
-            foreach(var pair in before)CollectionAssert.AreEqual(pair.Value,File.ReadAllBytes(pair.Key),pair.Key);
-            foreach(var pair in production)CollectionAssert.AreEqual(pair.Value,File.ReadAllBytes(pair.Key),pair.Key);
+            foreach(var pair in before)Assert.That(pair.Value.SequenceEqual(File.ReadAllBytes(pair.Key)),Is.True,pair.Key);
+            foreach(var pair in production)Assert.That(pair.Value.SequenceEqual(File.ReadAllBytes(pair.Key)),Is.True,pair.Key);
             File.WriteAllText("Docs/Implementation/Validation/game_idempotence.json","{\"utc\":\""+DateTime.UtcNow.ToString("O")+"\",\"passed\":true,\"gameFiles\":"+before.Count+",\"productionFiles\":"+production.Count+"}");
         }
         [Test] public void IsolatedSpritePrototypesHaveAlphaGroundPivotAnchorsAndBoundedTextures()

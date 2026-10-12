@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-08 04:48:56Z" end-time="2026-10-08 04:49:05Z" duration="9,1935561">
+  <test-suite type="TestSuite" id="1162" name="Weedtopia" fullname="Weedtopia" runstate="Runnable" testcasecount="133" result="Failed" site="Child" start-time="2026-10-08 04:48:56Z" end-time="2026-10-08 04:49:05Z" duration="9.193556" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1158" name="Weedtopia.Game.PlayModeTests.dll" fullname="D:/Unity Games/Weedtopia Inc/WeedtopiaInc/Library/ScriptAssemblies/Weedtopia.Game.PlayModeTests.dll" runstate="Runnable" testcasecount="133" result="Failed" site="Child" start-time="2026-10-08 04:48:56Z" end-time="2026-10-08 04:49:05Z" duration="9.182616" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="343696" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1159" name="Weedtopia" fullname="Weedtopia" runstate="Runnable" testcasecount="133" result="Failed" site="Child" start-time="2026-10-08 04:48:56Z" end-time="2026-10-08 04:49:05Z" duration="9.180029" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1160" name="Tests" fullname="Weedtopia.Tests" runstate="Runnable" testcasecount="133" result="Failed" site="Child" start-time="2026-10-08 04:48:56Z" end-time="2026-10-08 04:49:05Z" duration="9.177794" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1161" name="PlayMode" fullname="Weedtopia.Tests.PlayMode" runstate="Runnable" testcasecount="133" result="Failed" site="Child" start-time="2026-10-08 04:48:56Z" end-time="2026-10-08 04:49:05Z" duration="9.175707" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="1025" name="CassaVadelaFountainPlayModeTests" fullname="Weedtopia.Tests.PlayMode.CassaVadelaFountainPlayModeTests" classname="Weedtopia.Tests.PlayMode.CassaVadelaFountainPlayModeTests" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2026-10-08 04:48:56Z" end-time="2026-10-08 04:49:05Z" duration="9.169592" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1026" name="SavedFountainStagesStayDryUntilProjectCompletionAndRestoredWaterSurvivesContinue" fullname="Weedtopia.Tests.PlayMode.CassaVadelaFountainPlayModeTests.SavedFountainStagesStayDryUntilProjectCompletionAndRestoredWaterSurvivesContinue" methodname="SavedFountainStagesStayDryUntilProjectCompletionAndRestoredWaterSurvivesContinue" classname="Weedtopia.Tests.PlayMode.CassaVadelaFountainPlayModeTests" runstate="Runnable" seed="1748633242" result="Failed" start-time="2026-10-08 04:48:56Z" end-time="2026-10-08 04:49:05Z" duration="9.153039" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  String lengths are both 117. Strings differ at index 2.
+  Expected: "C:/Users/Mein-PC/AppData/Local/Temp/DefaultCompany/Weedtopia\\..."
+  But was:  "C:\\Users\\Mein-PC\\AppData\\Local\\Temp\\DefaultCompany\\Weedtopia\\..."
+  -------------^
+]]></message>
+                  <stack-trace><![CDATA[at Weedtopia.Tests.PlayMode.CassaVadelaFountainPlayModeTests+<SavedFountainStagesStayDryUntilProjectCompletionAndRestoredWaterSurvivesContinue>d__11.MoveNext () [0x00548] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\PlayMode\CassaVadelaFountainPlayModeTests.cs:88
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in .\Library\PackageCache\com.unity.test-framework@0b7a23ab2e1d\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:44
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[Saving results to: C:/Users/Mein-PC/AppData/LocalLow/DefaultCompany/Weedtopia\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -60,7 +60,7 @@ namespace Weedtopia.Editor.GameSetup
                 dock.transform.SetAsLastSibling();map["modalShade"].transform.SetAsLastSibling();
                 dock.SetActive(false);
                 var districtMap=AssetDatabase.LoadAssetAtPath<DistrictMap>("Assets/Weedtopia/Production/Layout/DistrictMap.asset");
-                districtMap.navigationMinimum=new Vector2(-330,-340);districtMap.navigationMaximum=new Vector2(700,475);
+                districtMap.overviewAspect=16f/9f;
                 EditorUtility.SetDirty(districtMap);EditorUtility.SetDirty(root.Ui);
                 EditorSceneManager.MarkSceneDirty(scene);EditorSceneManager.SaveScene(scene);AssetDatabase.SaveAssets();
                 Validate(root);
@@ -113,8 +113,9 @@ namespace Weedtopia.Editor.GameSetup
         {
             var navigation=root.Ui.GetComponent<WorldNavigationBar>();
             var buttons=navigation.Dock.GetComponentsInChildren<Button>(true);
-            if(buttons.Length!=5||buttons.Any(b=>b.GetComponent<RoundNavigationGraphic>()==null||b.GetComponent<CanvasRenderer>()==null||b.GetComponentsInChildren<Text>(true).Length>0))
-                throw new InvalidOperationException("World navigation must contain exactly five round icon-only controls.");
+            int expected=navigation.Dock.Find("Shop")!=null?10:navigation.Dock.Find("Inventory")!=null&&navigation.Dock.Find("LuckyWheel")!=null?9:root.Ui.GetComponentInChildren<CityStatusBar>(true)!=null?7:5;
+            if(buttons.Length!=expected||buttons.Any(b=>b.GetComponent<RoundNavigationGraphic>()==null||b.GetComponent<CanvasRenderer>()==null||b.GetComponentsInChildren<Text>(true).Length>0))
+                throw new InvalidOperationException("World navigation must contain "+expected+" round icon-only controls.");
             Directory.CreateDirectory("Docs/WorldNavigationRevision");
             File.WriteAllText("Docs/WorldNavigationRevision/authoring_receipt.json",JsonUtility.ToJson(new Receipt{utc=DateTime.UtcNow.ToString("O"),buttons=buttons.Length,buildings=root.Sites.Length,routes=root.Presentation.routes.Length},true));
         }

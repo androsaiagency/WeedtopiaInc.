@@ -17,7 +17,7 @@ namespace Weedtopia.Editor.GameSetup
             var van=GameObject.Find("Delivery_0").GetComponent<DeliveryView>();var vehicleMotion=van.GetComponent<DirectionalSpriteAnimator>();
             var flights=new[]{"swallow","butterfly"}.Select(key=>life.actors.First(a=>a.animation.animationSet.name==key)).ToArray();
             var allVehicles=Object.FindObjectsByType<DeliveryView>(FindObjectsSortMode.None);
-            void View(Vector2 point,float zoom){root.Ui.Close();root.Ui.Interaction.CloseBuilding();root.CameraRig.ShowOverview();root.CameraRig.Focus(DistrictMap.ToWorld(point));root.CameraRig.SetDiagnosticZoom(zoom);}
+            void View(Vector2 point,float zoom){root.Ui.Close();root.Ui.Interaction.CloseBuilding();root.CameraRig.ShowOverview();root.CameraRig.SetDiagnosticZoom(zoom);root.CameraRig.Focus(DistrictMap.ToWorld(point));}
             for(int d=0;d<8;d++)for(int f=0;f<6;f++)
             {
                 int direction=d,frame=f;

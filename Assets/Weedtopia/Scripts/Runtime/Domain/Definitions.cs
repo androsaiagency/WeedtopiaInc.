@@ -47,7 +47,14 @@ namespace Weedtopia.Domain
     [Serializable] public sealed class Curve
     {
         public double basis = 1, growth = 1;
-        public Amount At(int level) => basis == 0 ? Amount.Zero : Amount.FromLog10(Math.Log10(basis) + Math.Max(0, level - 1) * Math.Log10(growth));
+        public int earlyLevels;
+        public double earlyGrowth = 1;
+        public Amount At(int level)
+        {
+            int steps = Math.Max(0, level - 1), early = Math.Min(steps, earlyLevels);
+            return basis == 0 ? Amount.Zero : Amount.FromLog10(Math.Log10(basis) +
+                (early > 0 ? early * Math.Log10(earlyGrowth) : 0) + (steps - early) * Math.Log10(growth));
+        }
     }
     [Serializable] public sealed class BuildingDefinition
     {
@@ -57,7 +64,20 @@ namespace Weedtopia.Domain
         public Curve cost = new Curve(), capacity = new Curve(), rate = new Curve(), yield = new Curve(), price = new Curve();
         public int cycleSeconds = 4, baseBuildSeconds = 3, maxBuildSeconds = 120, baseResidents = 5;
         public double buildGrowth = 1.001;
-        public int BuildSeconds(int level) => Math.Min(maxBuildSeconds, (int)Math.Ceiling(baseBuildSeconds * Math.Pow(buildGrowth, Math.Max(0, level - 1))));
+        // When configured, only visible tier transitions take time. The last multiplier is the cap.
+        public double[] tierBuildMultipliers = Array.Empty<double>();
+        public int BuildSeconds(int level)
+        {
+            if (kind == BuildingKind.TownHall || kind == BuildingKind.Plot || level == 0) return 0;
+            if (tierBuildMultipliers != null && tierBuildMultipliers.Length > 0)
+            {
+                int tier = VisualTiers.Index(level);
+                if (VisualTiers.Starts[tier] != level) return 0;
+                return Math.Min(maxBuildSeconds, (int)Math.Ceiling(baseBuildSeconds *
+                    tierBuildMultipliers[Math.Min(tier - 1, tierBuildMultipliers.Length - 1)]));
+            }
+            return Math.Min(maxBuildSeconds, (int)Math.Ceiling(baseBuildSeconds * Math.Pow(buildGrowth, Math.Max(0, level - 1))));
+        }
     }
     [Serializable] public sealed class InstanceDefinition
     {
@@ -89,9 +109,11 @@ namespace Weedtopia.Domain
     [Serializable] public sealed class QuestDefinition
     {
         public string id, titleKey, bodyKey, speaker, focus;
+        public string cityId = "burning_hills";
         public QuestCondition[] conditions;
         public int moneyReward = 100, cardsReward;
         public string[] workerRewards = Array.Empty<string>();
+        public ItemStack[] itemRewards = Array.Empty<ItemStack>();
         public Zone unlock;
     }
     [Serializable] public sealed class TextEntry { public string key, de; }
@@ -106,10 +128,21 @@ namespace Weedtopia.Domain
         public RouteDefinition[] routes;
         public RoleDefinition[] roles;
         public QuestDefinition[] quests;
+        public CityDefinition[] cities = Array.Empty<CityDefinition>();
+        public CityProjectDefinition cityProject;
+        public VipStoryDefinition[] vipStories = Array.Empty<VipStoryDefinition>();
+        public VipCollaborationDefinition[] vipCollaborations = Array.Empty<VipCollaborationDefinition>();
+        public ItemDefinition[] items = Array.Empty<ItemDefinition>();
+        public ShopProductDefinition[] shopProducts = Array.Empty<ShopProductDefinition>();
+        public ItemStack[] vipItemRewards = Array.Empty<ItemStack>();
+        public ItemStack[] wheelRewards;
         public TextEntry[] texts;
         public BuildingDefinition Building(string id) => buildings.Single(x => x.id == id);
         public RoleDefinition Role(string id) => roles.Single(x => x.id == id);
-        public string Text(string key) => texts.FirstOrDefault(x => x.key == key)?.de ?? "[" + key + "]";
+        public QuestDefinition[] QuestsFor(string city) => quests.Where(q => (string.IsNullOrEmpty(q.cityId) ? "burning_hills" : q.cityId) == city).ToArray();
+        [NonSerialized] public ITextLookup TextLookup;
+        public string Text(string key) => TextLookup?.Get(key) ?? texts.FirstOrDefault(x => x.key == key)?.de ?? "[" + key + "]";
+        public string Format(string key,params object[] arguments) => string.Format((TextLookup as LocalizationService)?.Culture ?? System.Globalization.CultureInfo.InvariantCulture,Text(key),arguments);
         public void Validate()
         {
             if (version < 1 || maxOfflineSeconds < 0 || maxOfflineSeconds > 604800 || maxDailyCatchup < 1 || maxVip < 1 ||
@@ -122,8 +155,18 @@ namespace Weedtopia.Domain
                 if (!string.IsNullOrEmpty(b.managerRole)) Role(b.managerRole);
                 if (!string.IsNullOrEmpty(b.driverRole)) Role(b.driverRole);
                 foreach (var c in new[] { b.cost, b.capacity, b.rate, b.yield, b.price })
-                    if (c == null || c.basis <= 0 || c.growth < 1 || double.IsNaN(c.growth) || double.IsInfinity(c.growth)) throw new InvalidOperationException("Invalid curve " + b.id);
+                    if (c == null || c.basis <= 0 || double.IsNaN(c.basis) || double.IsInfinity(c.basis) ||
+                        c.growth < 1 || double.IsNaN(c.growth) || double.IsInfinity(c.growth) || c.earlyLevels < 0 ||
+                        (c.earlyLevels > 0 && (c.earlyGrowth < 1 || double.IsNaN(c.earlyGrowth) || double.IsInfinity(c.earlyGrowth))))
+                        throw new InvalidOperationException("Invalid curve " + b.id);
                 if (b.cycleSeconds < 1 || b.baseBuildSeconds < 1 || b.buildGrowth < 1 || b.maxBuildSeconds < b.baseBuildSeconds) throw new InvalidOperationException("Invalid times");
+                double previousMultiplier = 1;
+                foreach (double multiplier in b.tierBuildMultipliers ?? Array.Empty<double>())
+                {
+                    if (double.IsNaN(multiplier) || double.IsInfinity(multiplier) || multiplier < previousMultiplier ||
+                        b.baseBuildSeconds * multiplier > b.maxBuildSeconds) throw new InvalidOperationException("Invalid tier times " + b.id);
+                    previousMultiplier = multiplier;
+                }
             }
             foreach (var i in instances) { Building(i.family); if (string.IsNullOrWhiteSpace(i.cityId)) throw new InvalidOperationException("City ID required"); }
             foreach (var r in routes)
@@ -134,11 +177,23 @@ namespace Weedtopia.Domain
                     throw new InvalidOperationException("Pickup route needs a recipient worker and vehicle");
             }
             foreach (var role in roles) if (role.attributes == null || role.attributes.Length != 5 || role.attributes.Distinct().Count() != 5 || role.attributes.Any(x=>!Enum.IsDefined(typeof(WorkerAttribute),x))) throw new InvalidOperationException("Five distinct valid role attributes required");
+            InventoryItems.ValidateDefinitions(this);
+            ShopRules.ValidateCatalog(this);
+            InventoryItems.ValidateGrants(this, vipItemRewards);
+            if (wheelRewards != null)
+            {
+                if (wheelRewards.Length < LuckyWheelRules.Size) throw new ArgumentException("Wheel needs at least ten distinct items");
+                InventoryItems.ValidateGrants(this, wheelRewards);
+            }
+            cityProject?.Validate(this);
+            CityCampaignRules.Validate(this);
+            VipStoryRules.ValidateDefinitions(this);
             foreach (var q in quests)
             {
                 if (q.conditions == null || q.conditions.Length == 0 || q.moneyReward < 0 || q.cardsReward < 0) throw new InvalidOperationException("Invalid quest");
                 foreach (var role in q.workerRewards) Role(role);
-                if(!instances.Any(x=>x.id==q.focus))throw new InvalidOperationException("Unknown quest focus "+q.focus);
+                InventoryItems.ValidateGrants(this, q.itemRewards);
+                if(!instances.Any(x=>x.id==q.focus && x.cityId==(string.IsNullOrEmpty(q.cityId)?"burning_hills":q.cityId)))throw new InvalidOperationException("Unknown quest city/focus "+q.focus);
                 foreach (var c in q.conditions)
                 {
                     if (c.count < 1 || !Enum.IsDefined(typeof(ConditionKind), c.kind)) throw new InvalidOperationException("Invalid condition");

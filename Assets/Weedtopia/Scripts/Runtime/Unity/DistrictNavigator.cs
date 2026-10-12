@@ -1,3 +1,4 @@
+using Weedtopia.Domain;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,7 @@ namespace Weedtopia.Unity
         public Scrollbar position;
         public Text caption;
         public Button previous, next, overview;
+        [SerializeField] private string cityLabel="Burning Hills";
         private void Awake()
         {
             position.onValueChanged.AddListener(rig.ScrollTo);
@@ -20,7 +22,7 @@ namespace Weedtopia.Unity
         private void LateUpdate()
         {
             var range = rig.CurrentDistrict;
-            caption.text = range == null ? "Burning Hills · Übersicht" : range.label;
+            caption.text = range == null ? cityLabel+GameText.Get("presentation.districtnavigator.bersicht.eeb2d828") : (string.IsNullOrEmpty(range.labelKey)?range.label:GameText.Get(range.labelKey));
             position.interactable = range != null;
             previous.interactable = range != null && rig.DistrictFraction > .001f;
             next.interactable = range != null && rig.DistrictFraction < .999f;

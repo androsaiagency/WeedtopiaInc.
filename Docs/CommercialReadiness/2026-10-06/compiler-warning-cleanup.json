@@ -1,0 +1,194 @@
+{
+  "utc": "2026-10-06T03:45:05.945163+00:00",
+  "status": "implemented_native_pending",
+  "scope": "Explicit equivalent CLR defaults for Unity/JSON-populated fields; no diagnostic suppression and no serialized reference changes.",
+  "originalWarningCount": 74,
+  "explicitDefaults": 73,
+  "changes": [
+    {
+      "path": "Assets/Weedtopia/Scripts/Runtime/Buildings/Presentation/BuildingSpriteVisual.cs",
+      "beforeSha256": "6256544dc4dbb7a2087fe1ac8a4f97dfaebb95108ef9f7b78eb6b94a66ea5856",
+      "afterSha256": "deb35834d6d94c6835dfa3da51ea2490bd52da78d461ced237d2c95d540f81c3",
+      "initializedFields": [
+        "cameraOverride",
+        "rotationOffset"
+      ]
+    },
+    {
+      "path": "Assets/Weedtopia/Scripts/Runtime/Content/GameContent.cs",
+      "beforeSha256": "f13136ea30461ac7e3cc0a29ad03199da1b9ffbccc22803e438560198018cba5",
+      "afterSha256": "e92f164e91dd63d5354df1f1e7542383920b70de51a340a8aee52b1227f8c68a",
+      "initializedFields": [
+        "languageCatalog"
+      ]
+    },
+    {
+      "path": "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionArtImporter.cs",
+      "beforeSha256": "18072ea6c22349cda1f4a01c4eccdffd58c1e219fab47042ab3dc80d0a3da7b4",
+      "afterSha256": "dbdd6709f9daf4f968083d3911d045e87723ccc423debc9994e30a46697c90b7",
+      "initializedFields": [
+        "entries",
+        "file",
+        "name",
+        "x",
+        "y",
+        "width",
+        "height",
+        "border",
+        "ppu",
+        "pivotX",
+        "pivotY"
+      ]
+    },
+    {
+      "path": "Assets/Weedtopia/Scripts/Editor/GameSetup/AndroidBuildingTextureOptimization.cs",
+      "beforeSha256": "f330168bb63ef6ee1bacd4a0dedae7c7b38f8b912e8163b6c7f61b08e9dd92d7",
+      "afterSha256": "d43ca3456426762cff2a93e78606c40265fc5c67be322a09c724626a88843d60",
+      "initializedFields": [
+        "width",
+        "height",
+        "formatId",
+        "bundle",
+        "bundleSha256",
+        "sourcePath",
+        "sourceSha256",
+        "guid",
+        "actualEtc2CompressionVerified",
+        "sourcePixelsPreserved",
+        "metaBytesPreserved",
+        "spriteGeometryPreserved",
+        "texture"
+      ]
+    },
+    {
+      "path": "Assets/Weedtopia/Scripts/Editor/GameSetup/PhoneUiEvidence.cs",
+      "beforeSha256": "4490dcad0c02b3a141429f5d05360fb970c700d5cdbadd9c8ffe818167ee6a1a",
+      "afterSha256": "916e06786765f1746ef5fa63e71c31cc5325b1431f011667fd751de397794606",
+      "initializedFields": [
+        "physicalDeviceVerified"
+      ]
+    },
+    {
+      "path": "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionVisualPreflight.cs",
+      "beforeSha256": "4bb0d32ccb7ab7344a16f2676be60e0c8757209545cda409ff726c98598ff977",
+      "afterSha256": "394248151992c4d0fc949d8b3619fad1ed8e78818aa98f372589b0e441c8050d",
+      "initializedFields": [
+        "passed",
+        "fingerprint"
+      ]
+    },
+    {
+      "path": "Assets/Weedtopia/Scripts/Editor/GameSetup/DirectionalMotionAuthoring.cs",
+      "beforeSha256": "f653a23af1954ed3a4d4e2726820a6741c8b9746109a6342718b6f7a9df47a28",
+      "afterSha256": "d7fd94b306e4826211aa3aeca40382694da4d093f993b913008de1a8f8fd51aa",
+      "initializedFields": [
+        "key",
+        "file",
+        "name",
+        "row",
+        "frame",
+        "x",
+        "y",
+        "width",
+        "height",
+        "pivotX",
+        "pivotY",
+        "scale",
+        "sprites"
+      ]
+    },
+    {
+      "path": "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionBuildingIntegration.cs",
+      "beforeSha256": "e73274dfb23531fde79465103cc2e9c7ffe601882444075e02a2051d680dca0e",
+      "afterSha256": "52deeaff6ea0539174e06743b612d08b02924354a205aa19f1c1ab13a8414123",
+      "initializedFields": [
+        "approved"
+      ]
+    },
+    {
+      "path": "Assets/Weedtopia/Scripts/Editor/GameSetup/TownHall3DIntegration.cs",
+      "beforeSha256": "a7ec7fe6d4fae7ae7aa32128593b897a847255eecf032fd814231df4b74da4f3",
+      "afterSha256": "3ab898d7e66538ded5d0ae5e2de1e01a088e7432db7a1796a3295326ab639aca",
+      "initializedFields": [
+        "approved"
+      ]
+    },
+    {
+      "path": "Assets/Weedtopia/Scripts/Editor/GameSetup/ShopEvidence.cs",
+      "beforeSha256": "289e34432a02ef8a5f3161885b4d1819d5220c0eedcccc7d084e3d5eb1cbcfa4",
+      "afterSha256": "b00351128a3725c2b170ae2089e8f5405e76862e1f623dd5a500c206fd26afdb",
+      "initializedFields": [
+        "physicalDeviceVerified"
+      ]
+    },
+    {
+      "path": "Assets/Weedtopia/Scripts/Editor/GameSetup/ShopValidationJob.cs",
+      "beforeSha256": "0bc295a9d40e5faabd2a38b60c5dd596ee29dddcfa215e5c1bbe012e4304c6a9",
+      "afterSha256": "2abf4998732bb85bf0f3196bc0de4a382313938fd5ff7fb28025639c9d26b1e3",
+      "initializedFields": [
+        "status"
+      ]
+    },
+    {
+      "path": "Assets/Weedtopia/Scripts/Tests/EditorAssets/NativeOfflineModelBenchmarkTests.cs",
+      "beforeSha256": "cc8ac98fbbcaf9aed3f58fd4796ba4a654c98f353410fe7686d7511ada7e9c8b",
+      "afterSha256": "da941c23e7f65b3dd98e9a3c578adbf16e9456cfe0a949cd14d1ce20965c1fab",
+      "initializedFields": [
+        "status",
+        "originalSourceSha256",
+        "referenceAssembly",
+        "referenceAssemblySha256"
+      ]
+    },
+    {
+      "path": "Assets/Weedtopia/Scripts/Runtime/Unity/GameUi.cs",
+      "beforeSha256": "7cdd50f2ef7db569897878ce2bc1a6ae58ae06861a0595ae29eed124a55c0111",
+      "afterSha256": "c7290823c23335bbd489fdfc988b03a98c9ef2acf07512bd8ec61aa0acca17d3",
+      "initializedFields": [
+        "interaction",
+        "worldNavigation",
+        "cityStatus",
+        "rewards",
+        "collection",
+        "rewardPreview",
+        "luckyWheel",
+        "stories",
+        "campaign",
+        "experience",
+        "shop"
+      ]
+    },
+    {
+      "path": "Assets/Weedtopia/Scripts/Runtime/Unity/GameRoot.cs",
+      "beforeSha256": "0e6b0a6eb5126466c5053e4ee2e6f7b2e6e26e58ca25c13fe65c4643157f4988",
+      "afterSha256": "d9497f63eb43f999dd94d4fdf695197cc3dc77d4d08fb8a1d6a9974970b7782a",
+      "initializedFields": [
+        "productionVisualsApproved",
+        "feedback",
+        "presentation",
+        "storyWorld"
+      ]
+    },
+    {
+      "path": "Assets/Weedtopia/Scripts/Runtime/Unity/DeliveryView.cs",
+      "beforeSha256": "a6799956cc987c4c547af045a9b373ef8f24364373826b319fc958fffc9dbec1",
+      "afterSha256": "398404720e8c8c8bb658f509995e25bc05d203ed7ef3bdba2a4bd26a357d2c16",
+      "initializedFields": [
+        "artwork",
+        "leftSprite",
+        "rightSprite",
+        "cargo",
+        "directionalAnimation"
+      ]
+    },
+    {
+      "path": "Assets/Weedtopia/Scripts/Runtime/Unity/BuildingView.cs",
+      "beforeSha256": "aac059814522a5626cbf00000713470ba4d6f9be8558ec60f5bf6b075d49403f",
+      "afterSha256": "c26c76cb6c831ca81dfb3d33e68414c6b040ec3ab20717cc5fa4e1477c9a55ac",
+      "initializedFields": [
+        "upgradeEffect",
+        "constructionFence"
+      ]
+    }
+  ]
+}

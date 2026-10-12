@@ -10,7 +10,7 @@ conditions = ['Talk', 'Level', 'Harvest', 'Assigned', 'Delivered', 'Sold', 'Spin
               'Residents', 'Daily', 'Butter', 'PastrySold', 'Automated', 'VipCompleted']
 zones = ['Farm', 'Stadt', 'Siedlung', 'Industrie']
 lines = ['# Hauptquestfluss – Burning Hills', '',
-         'Direkt aus `Assets/Weedtopia/Game/Content/BurningHills.json` exportiert. Inhaltsversion 1.', '',
+         f'Direkt aus `Assets/Weedtopia/Game/Content/BurningHills.json` exportiert. Inhaltsversion {data["version"]}.', '',
          'Alle Bedingungen einer Quest müssen erfüllt sein. Danach wird die Belohnung ausdrücklich abgeholt. '
          'Die persistierte Reihenfolge und abgeschlossene Quest-ID verhindern doppelte Belohnungen. '
          'Farm, Stadt, Siedlung und Industrie werden durch die unten benannten Rewards freigeschaltet.', '',

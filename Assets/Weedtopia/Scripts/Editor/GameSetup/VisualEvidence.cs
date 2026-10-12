@@ -99,7 +99,7 @@ namespace Weedtopia.Editor.GameSetup
         }
         private static void Drive(Func<bool> condition)
         {
-            for(int i=0;i<300&&!condition();i++){TutorialDriver.Act(root.Session,clock.UtcNow);clock.UtcNow=clock.UtcNow.AddSeconds(1);root.Session.Advance(1);}
+            for(int i=0;i<TutorialDriver.MaxSimulationSeconds&&!condition();i++){TutorialDriver.Act(root.Session,clock.UtcNow);clock.UtcNow=clock.UtcNow.AddSeconds(1);root.Session.Advance(1);}
             if(!condition())throw new InvalidOperationException("Capture progression stalled at "+root.Session.Progression.Current?.id);
         }
         private static void Capture(string name)

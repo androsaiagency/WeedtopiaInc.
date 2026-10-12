@@ -21,7 +21,9 @@ namespace Weedtopia.Tests.Assets
                 var life=Object.FindFirstObjectByType<LivingTownPresentation>();
                 Assert.That(life.actors.All(a=>a.animation!=null),Is.True);
                 var motions=Object.FindObjectsByType<DirectionalSpriteAnimator>(FindObjectsInactive.Include,FindObjectsSortMode.None);
-                Assert.That(motions.Length,Is.EqualTo(110));
+                var vitality=Object.FindFirstObjectByType<TownVitalityStamp>();
+                var corners=Object.FindFirstObjectByType<WorldCornersStamp>();
+                Assert.That(motions.Length,Is.EqualTo(110+(vitality!=null?vitality.residents:0)+(corners!=null?corners.residents+corners.wildlife:0)));
                 foreach(var motion in motions)
                 {
                     Assert.That(PrefabUtility.IsPartOfPrefabInstance(motion),Is.True);

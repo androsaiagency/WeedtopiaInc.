@@ -1,0 +1,45 @@
+{
+  "utc": "2026-09-28T21:06:49.562013+00:00",
+  "status": "integrated_technical_checks_passed_city_visual_review_pending",
+  "approved_input": "User approved 2K maps and 50000/20000/12000 LOD review",
+  "editmode": {
+    "passed": 4,
+    "total": 4,
+    "receipt": "Docs/Implementation/Validation/20260928_230221_EditMode_TownHall3DFinal.json"
+  },
+  "playmode": {
+    "passed": 19,
+    "total": 19,
+    "receipt": "Docs/Implementation/Validation/20260928_225931_PlayMode_TownHall3DInteractions.json"
+  },
+  "preservation": {
+    "files_checked": 3039,
+    "intentional_changes": [
+      "Assets/Weedtopia/Art/Buildings/Prefabs/town_hall/WT_town_hall_T_FIXED.prefab",
+      "Assets/Weedtopia/Scripts/Editor/GameSetup/InteractionVisualEvidence.cs",
+      "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionBuildingIntegration.cs",
+      "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionVisualPreflight.cs",
+      "Assets/Weedtopia/Scripts/Runtime/Unity/BuildingView.cs",
+      "Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs",
+      "Assets/Weedtopia/Scripts/Tests/PlayMode/BuildingInteractionTests.cs"
+    ],
+    "unexpected_changes": [],
+    "passed": true
+  },
+  "gameview_count": 9,
+  "production_scene_changed": false,
+  "catalog_references_changed": false,
+  "active_building_slots": {
+    "sprites": 250,
+    "approved_3d_lod": 1
+  },
+  "external_credits_used": 0,
+  "city_visual_user_approval": false,
+  "player_target_performance": "not measured",
+  "notes": [
+    "100-instance synchronous render benchmark is not gameplay FPS.",
+    "Old source model files remain intact; retired FBX dependency removed from active wrapper.",
+    "2026-09-29: darker city rendering corrected with local texture-coloured fill; new visual review pending."
+  ],
+  "current_lighting": "../CityLighting/README.de.md"
+}

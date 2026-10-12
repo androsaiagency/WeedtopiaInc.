@@ -1,0 +1,138 @@
+Golden Flower - Entwurf fuer die Integration
+
+Status: Ausgearbeitetes Konzept; technische Integration noch offen.
+Die bestehenden Projektvertraege konnten wegen eines
+Windows-Sandbox-Fehlers nicht gelesen werden. Dieses Dokument bestaetigt
+keine implementierte oder getestete Stadtfreischaltung.
+
+Verbindlicher Ausloeser
+Golden Flower wird ab insgesamt 1.000.000 Einwohnern ueber alle Staedte
+freigeschaltet. Die vorhandene globale Einwohnerzahl ist massgeblich.
+Die Freischaltung muss auch fuer bereits fortgeschrittene Spielstaende
+gelten, genau einmal erfolgen und dauerhaft gespeichert bleiben.
+
+Geschichte
+Golden Flower liegt in einem sonnigen Tal mit alten Gewaechshausterrassen.
+Die Stadt entstand um einen gemeinschaftlichen Garten. Seine goldgelben
+Blueten wurden zum Zeichen dafuer, dass die Nachbarschaft gemeinsam
+etwas wachsen lassen kann. Spaeter wurde das alte Glashaus geschlossen;
+der Markt verlor Haendler und das jaehrliche Bluetenfest fiel aus.
+Die verbliebenen Bewohner wollen die Stadt wiederbeleben, ohne ihre
+alten Treffpunkte und ihr Wissen aufzugeben.
+
+Der Spieler wird nach Erreichen der globalen Einwohnergrenze eingeladen.
+Der zentrale Handlungsbogen fuehrt vom Wiederaufbau des Gemeinschafts-
+gartens ueber die Wiedereroeffnung des Marktes zum ersten neuen
+Goldbluetenfest. Bewohner bleiben Teil der Stadt und erhalten weitere
+Kapitel, die Stadtbevoelkerung und persoenlichen Fortschritt verbinden.
+
+Gestaltung
+Feste isometrische Kamera, 2D/2.5D-Gebaeude. Warme Sandsteinfassaden,
+goldene Blueten, gruene Terrassen, reparierte Glasdaecher und ein
+Marktplatz als sozialer Mittelpunkt. Sichtbare Veraenderungen werden
+als vorhandene oder neu angelegte Prefabs und authorierte Varianten
+in der Szene integriert. Bestehende Art wird nicht ersetzt.
+
+Bewohner
+Alma Sonnenberg: Gaertnerin und Hueterin des Gemeinschaftsgartens.
+Sie muss lernen, Verantwortung und Wissen weiterzugeben.
+Ida Kern: Mechanikerin fuer Bewaesserung und alte Gewaechshaustechnik.
+Sie sucht einen eigenen Platz jenseits der Werkstatt ihrer Familie.
+Milan Sommer: Marktkoch, der gern Menschen zusammenbringt.
+Er will ein verlaessliches Angebot statt eines einmaligen Erfolgs.
+Nora Winter: Chronistin, die Erinnerungen an die Stadt sammelt.
+Sie entdeckt auch Stimmen, die in der alten Festgeschichte fehlen.
+Theo Licht: Musiker und ehemaliger Organisator des Bluetenfests.
+Er beginnt neu, indem er andere bei der Planung mitentscheiden laesst.
+
+Kapitel
+1. Das Tor zum Sonnental: Einladung und Ankunft, Bewohner kennenlernen,
+   Gemeinschaftsgarten wieder nutzbar machen.
+2. Wasser fuer morgen: Bewaesserung und Gewaechshaus in Stand setzen;
+   Alma und Ida bauen gemeinsam eine dauerhafte Versorgung auf.
+3. Ein Platz fuer alle: Markt wiedereroeffnen, verlaessliche Lieferungen
+   aufbauen und mit Nora die Geschichte des Viertels sichtbar machen.
+4. Golden Flower blueht: Bewohner bereiten das Goldbluetenfest vor.
+   Garten, Markt und Festplatz erhalten dauerhafte sichtbare Verbesserungen.
+   Nach dem Fest folgen alltaegliche und persoenliche Bewohnerkapitel.
+
+Wiederkehrende Aufgaben
+Gartenpflege, Marktlieferungen aus den vorhandenen Produktionsketten,
+Wartung der Bewaesserung, Nachbarschaftshilfe und Festvorbereitungen.
+Persoenlicher Fortschritt wird gespeichert; abgeschlossene Geschichten
+werden nicht als erstmalige Begegnung wiederholt.
+
+Technische Abnahme nach Wiederherstellung des Projektzugriffs
+- Vorhandene Stadtdefinitionen, Kataloge, Einwohnerberechnung, Saves,
+  Bewohnerkapitel, Quests, Szenen und Prefabs zuerst lesen.
+- Stadt, Einstieg und Bewohner in die vorhandenen Datenmodelle eintragen.
+- Sperrhinweis und Navigation verwenden denselben Freischaltvertrag.
+- 999.999 gesperrt; 1.000.000 und 1.000.001 freigeschaltet.
+- Einwohner mehrerer Staedte werden zusammengezaehlt.
+- Alte Spielstaende oberhalb der Grenze bekommen die Stadt beim Laden.
+- Speichern und Laden erhalten Freischaltung und Bewohnerfortschritt.
+- Wiederholtes Laden erzeugt keine doppelten Quests oder Bewohner.
+- Unity Import, Compiler, passende EditMode/PlayMode-Tests und sichtbare
+  Stadtwechsel pruefen; nicht ausgefuehrte Pruefungen offen ausweisen.
+
+Vertiefung: Herkunft und Beziehungen
+Die Gruender waren eine Gaertnergenossenschaft. Ein schwerer Sturm
+beschaedigte das Glashaus und die Wasseranlage. Danach zogen viele
+Betriebe und Familien fort. Die verbliebenen Bewohner bewahrten den
+Ort, fanden aber keinen gemeinsamen Weg zur Wiedereroeffnung.
+Die Geschichte verbindet alte Erinnerungen mit Platz fuer neue Ideen.
+
+Alma Sonnenberg bewahrt die letzte Saatgutkiste der Gruender. Ihre
+persoenlichen Kapitel: Kiste gemeinsam oeffnen, Gemeinschaftsbeete
+betreuen, eine Gartenrunde in die Verantwortung nehmen. Ihr Saatguthaus
+wird zugaenglich und erhaelt beschriftete Pflanzkaesten und Arbeitstische.
+Dialog: "Vielleicht brauchen die alten Samen neue Haende."
+
+Ida Kern uebernimmt aus Gewohnheit jede Reparatur selbst. Ihre Kapitel:
+Wasserverteiler reparieren, Glashausanlage erneuern, eine oeffentliche
+Reparaturwerkstatt einrichten. Mit Alma verbindet sie erhaltenes Wissen
+und verlaessliche Technik. Pumpe und Werkstatthof zeigen den Fortschritt.
+Dialog: "Fuer alles, was heute noch nicht geht, machen wir einen Plan."
+
+Milan Sommer fuerchtet, dass grosse Festauftraege die kleinen Haendler
+verdraengen. Seine Kapitel: Gemeinschaftsmahlzeit, Bewohnerrezepte,
+Markt mit gemeinsamen Sitzplaetzen. Er gibt Theo zuerst ein kleines
+Publikum. Rezepttafel, lange Tische und sein Stand entwickeln sich.
+Dialog: "Ein guter Markt beginnt mit einem freien Platz am Tisch."
+
+Nora Winter merkt, dass ihr erstes Stadtportraet die Menschen ueberging,
+die nach dem Sturm blieben. Ihre Kapitel: Erinnerungen anhoeren,
+Stadtalbum gemeinsam gestalten, Ausstellung mit den Bewohnern.
+Auch Milans Alltagsarbeit findet darin einen Platz. Schaukasten und
+Erinnerungswand erhalten dauerhafte Eintraege.
+Dialog: "Diesmal soll jeder in unserer Geschichte vorkommen."
+
+Theo Licht versucht zuerst, das alte Festlied perfekt nachzuspielen.
+Seine Kapitel: eigene Melodie vorspielen, mit den Bewohnern proben,
+neues Lied gemeinsam auffuehren. Almas Erinnerungen und Idas
+Arbeitsrhythmen fliessen in das neue Lied. Musiklaube und Sitzplaetze
+oeffnen sich; spaeter kommt Festschmuck hinzu.
+Dialog: "Das Lied ist fast fertig. Jetzt muss ich es euch vorspielen."
+
+Kapitelvertraege als Entwurf
+Das Tor zum Sonnental setzt ausschliesslich die dauerhafte globale
+Freischaltung voraus. Unter Glas setzt den ersten persoenlichen
+Fortschritt von Alma und Ida sowie eine passende lokale Einwohnergrenze
+voraus. Ein Platz fuer alle setzt Milans und Noras zweiten Fortschritt
+und weiteres lokales Wachstum voraus. Golden Flower blueht setzt den
+dritten persoenlichen Fortschritt aller fuenf und die abschliessende
+lokale Einwohnergrenze voraus. Die lokalen Zahlen werden nach Pruefung
+der produktiven Bevoelkerungskurven festgelegt; keine unbelegten
+Balancingwerte werden als produktive Vorgabe behandelt.
+
+Alle persoenlichen Voraussetzungen eines Stadtkapitels muessen bereits
+im vorherigen Kapitel erreichbar sein. Das Fest hat kein Kalenderdatum
+und kein Ablaufzeitfenster. Spaeterer Bevoelkerungsrueckgang schliesst
+eine bereits freigeschaltete Stadt oder abgeschlossene Kapitel nicht.
+Wiederkehrende Aufgaben rotieren gespeichert oder deterministisch;
+einmalige Erfolge, Erinnerungen und sichtbare Verbesserungen bleiben.
+
+Abnahmegrenzen
+Dieser Entwurf behauptet keine produktive Registrierung, Migration,
+Szene, Unity-Importpruefung oder bestandenen Laufzeit-/Geraetetest.
+Die genaue Integration bleibt bis zum lesbaren Projektstand offen.

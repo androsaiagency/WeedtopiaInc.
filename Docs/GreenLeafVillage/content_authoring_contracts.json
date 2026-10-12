@@ -1,0 +1,216 @@
+{
+  "city": "green_leaf_village",
+  "generator": "Tools/Implementation/author_green_leaf_village.py",
+  "baseline": "Docs/GreenLeafVillage/Preservation/Before",
+  "isolatedCopiesOnly": true,
+  "tests": 9,
+  "passed": 9,
+  "failed": 0,
+  "liveContentAndAllFiveLocalesByteIdentical": true,
+  "liveBeforeSha256": {
+    "Assets/Weedtopia/Game/Content/BurningHills.json": "df0725944eb37b26591c79a101ff57b84d10f6e4ccf4b86d996962a538a4e6a3",
+    "Assets/Weedtopia/Game/Localization/de.json": "e04ca82c6afebc6a48152a2911b76e34ca06289236202cdcf496ffa99af9a94a",
+    "Assets/Weedtopia/Game/Localization/en.json": "17a6b169dfd73531e45ddf25c49588f69b9095fc53efac34543c21ff7e336b09",
+    "Assets/Weedtopia/Game/Localization/es.json": "7e1f49b787373297b65eb827da6e9e7bb33c5b27eaefe1a936ee500bf27d9a35",
+    "Assets/Weedtopia/Game/Localization/fr.json": "d1ba5638e8b69318d71b97434e94caf1e8715f2ff379ccb28204e82c680103fb",
+    "Assets/Weedtopia/Game/Localization/ru.json": "8c62378393f078626c4f1d81b6c2cc3168f939380fdc881e3f5301a69c585d95"
+  },
+  "liveAfterSha256": {
+    "Assets/Weedtopia/Game/Content/BurningHills.json": "df0725944eb37b26591c79a101ff57b84d10f6e4ccf4b86d996962a538a4e6a3",
+    "Assets/Weedtopia/Game/Localization/de.json": "e04ca82c6afebc6a48152a2911b76e34ca06289236202cdcf496ffa99af9a94a",
+    "Assets/Weedtopia/Game/Localization/en.json": "17a6b169dfd73531e45ddf25c49588f69b9095fc53efac34543c21ff7e336b09",
+    "Assets/Weedtopia/Game/Localization/es.json": "7e1f49b787373297b65eb827da6e9e7bb33c5b27eaefe1a936ee500bf27d9a35",
+    "Assets/Weedtopia/Game/Localization/fr.json": "d1ba5638e8b69318d71b97434e94caf1e8715f2ff379ccb28204e82c680103fb",
+    "Assets/Weedtopia/Game/Localization/ru.json": "8c62378393f078626c4f1d81b6c2cc3168f939380fdc881e3f5301a69c585d95"
+  },
+  "cases": [
+    {
+      "case": "v7_success_and_idempotence",
+      "passed": true,
+      "baselineVersion": 7,
+      "outputVersion": 8,
+      "firstExecutionChanged": true,
+      "secondExecutionChanged": false,
+      "allSixInputFilesByteIdentical": true,
+      "contentEntriesPreserved": true,
+      "localeEntriesPreserved": true
+    },
+    {
+      "case": "future_v9",
+      "passed": true,
+      "inputVersion": 9,
+      "outputVersion": 9,
+      "newCityIntroducedVersion": 8,
+      "unknownFutureMetadataPreserved": true,
+      "existingContentAndLocalesPreserved": true
+    },
+    {
+      "case": "conflicting_city",
+      "passed": true,
+      "refused": true,
+      "reason": "Refusing to overwrite existing content: green_leaf_village",
+      "allSixInputFilesByteIdentical": true,
+      "successReceiptAbsent": true,
+      "inputSha256": {
+        "Assets/Weedtopia/Game/Content/BurningHills.json": "37b3cb7553305de51b9e4a06c0caf927bdb3151a2a54de8d298cbf80da9351e9",
+        "Assets/Weedtopia/Game/Localization/de.json": "a1487947c533b9586bbdc10f1f3c41544e7a8f6761724c3b5d40ca520dc3322b",
+        "Assets/Weedtopia/Game/Localization/en.json": "9440888f27ce474d8d0f726b1d1bde723023fc66f0d7f25c33efd7fc9d0fde17",
+        "Assets/Weedtopia/Game/Localization/es.json": "1a2587445209de7ec995b11f022088acb7d871be7a4c04acb743a1cbd0bb0503",
+        "Assets/Weedtopia/Game/Localization/fr.json": "0e9c2618e14b53f7dda04e1041efd4e28c467dcf4a8cdd1771ae3eb3c1264c6a",
+        "Assets/Weedtopia/Game/Localization/ru.json": "1f39e8e17f239c42a14b4d174930a6d92b7d50cb81cb405ad99ab33d15ac12cc"
+      },
+      "outputSha256": {
+        "Assets/Weedtopia/Game/Content/BurningHills.json": "37b3cb7553305de51b9e4a06c0caf927bdb3151a2a54de8d298cbf80da9351e9",
+        "Assets/Weedtopia/Game/Localization/de.json": "a1487947c533b9586bbdc10f1f3c41544e7a8f6761724c3b5d40ca520dc3322b",
+        "Assets/Weedtopia/Game/Localization/en.json": "9440888f27ce474d8d0f726b1d1bde723023fc66f0d7f25c33efd7fc9d0fde17",
+        "Assets/Weedtopia/Game/Localization/es.json": "1a2587445209de7ec995b11f022088acb7d871be7a4c04acb743a1cbd0bb0503",
+        "Assets/Weedtopia/Game/Localization/fr.json": "0e9c2618e14b53f7dda04e1041efd4e28c467dcf4a8cdd1771ae3eb3c1264c6a",
+        "Assets/Weedtopia/Game/Localization/ru.json": "1f39e8e17f239c42a14b4d174930a6d92b7d50cb81cb405ad99ab33d15ac12cc"
+      }
+    },
+    {
+      "case": "conflicting_locale_de",
+      "passed": true,
+      "refused": true,
+      "reason": "Refusing to overwrite existing content: city.green_leaf_village",
+      "allSixInputFilesByteIdentical": true,
+      "successReceiptAbsent": true,
+      "inputSha256": {
+        "Assets/Weedtopia/Game/Content/BurningHills.json": "27eb7530d9ead3079ffe19d7aa9f005da27387b95cd0c2250e5dc209fd175ac8",
+        "Assets/Weedtopia/Game/Localization/de.json": "11c8fb79cd14212dac1079f0fc3c4121efdd5c0de3d5331bf3d15d84fd7816bd",
+        "Assets/Weedtopia/Game/Localization/en.json": "9440888f27ce474d8d0f726b1d1bde723023fc66f0d7f25c33efd7fc9d0fde17",
+        "Assets/Weedtopia/Game/Localization/es.json": "1a2587445209de7ec995b11f022088acb7d871be7a4c04acb743a1cbd0bb0503",
+        "Assets/Weedtopia/Game/Localization/fr.json": "0e9c2618e14b53f7dda04e1041efd4e28c467dcf4a8cdd1771ae3eb3c1264c6a",
+        "Assets/Weedtopia/Game/Localization/ru.json": "1f39e8e17f239c42a14b4d174930a6d92b7d50cb81cb405ad99ab33d15ac12cc"
+      },
+      "outputSha256": {
+        "Assets/Weedtopia/Game/Content/BurningHills.json": "27eb7530d9ead3079ffe19d7aa9f005da27387b95cd0c2250e5dc209fd175ac8",
+        "Assets/Weedtopia/Game/Localization/de.json": "11c8fb79cd14212dac1079f0fc3c4121efdd5c0de3d5331bf3d15d84fd7816bd",
+        "Assets/Weedtopia/Game/Localization/en.json": "9440888f27ce474d8d0f726b1d1bde723023fc66f0d7f25c33efd7fc9d0fde17",
+        "Assets/Weedtopia/Game/Localization/es.json": "1a2587445209de7ec995b11f022088acb7d871be7a4c04acb743a1cbd0bb0503",
+        "Assets/Weedtopia/Game/Localization/fr.json": "0e9c2618e14b53f7dda04e1041efd4e28c467dcf4a8cdd1771ae3eb3c1264c6a",
+        "Assets/Weedtopia/Game/Localization/ru.json": "1f39e8e17f239c42a14b4d174930a6d92b7d50cb81cb405ad99ab33d15ac12cc"
+      }
+    },
+    {
+      "case": "conflicting_locale_en",
+      "passed": true,
+      "refused": true,
+      "reason": "Refusing to overwrite existing content: city.green_leaf_village",
+      "allSixInputFilesByteIdentical": true,
+      "successReceiptAbsent": true,
+      "inputSha256": {
+        "Assets/Weedtopia/Game/Content/BurningHills.json": "27eb7530d9ead3079ffe19d7aa9f005da27387b95cd0c2250e5dc209fd175ac8",
+        "Assets/Weedtopia/Game/Localization/de.json": "a1487947c533b9586bbdc10f1f3c41544e7a8f6761724c3b5d40ca520dc3322b",
+        "Assets/Weedtopia/Game/Localization/en.json": "b9e847c36bb87c9fa6392ec95ebc67c843c6af6605ce849685ae902b9847e452",
+        "Assets/Weedtopia/Game/Localization/es.json": "1a2587445209de7ec995b11f022088acb7d871be7a4c04acb743a1cbd0bb0503",
+        "Assets/Weedtopia/Game/Localization/fr.json": "0e9c2618e14b53f7dda04e1041efd4e28c467dcf4a8cdd1771ae3eb3c1264c6a",
+        "Assets/Weedtopia/Game/Localization/ru.json": "1f39e8e17f239c42a14b4d174930a6d92b7d50cb81cb405ad99ab33d15ac12cc"
+      },
+      "outputSha256": {
+        "Assets/Weedtopia/Game/Content/BurningHills.json": "27eb7530d9ead3079ffe19d7aa9f005da27387b95cd0c2250e5dc209fd175ac8",
+        "Assets/Weedtopia/Game/Localization/de.json": "a1487947c533b9586bbdc10f1f3c41544e7a8f6761724c3b5d40ca520dc3322b",
+        "Assets/Weedtopia/Game/Localization/en.json": "b9e847c36bb87c9fa6392ec95ebc67c843c6af6605ce849685ae902b9847e452",
+        "Assets/Weedtopia/Game/Localization/es.json": "1a2587445209de7ec995b11f022088acb7d871be7a4c04acb743a1cbd0bb0503",
+        "Assets/Weedtopia/Game/Localization/fr.json": "0e9c2618e14b53f7dda04e1041efd4e28c467dcf4a8cdd1771ae3eb3c1264c6a",
+        "Assets/Weedtopia/Game/Localization/ru.json": "1f39e8e17f239c42a14b4d174930a6d92b7d50cb81cb405ad99ab33d15ac12cc"
+      }
+    },
+    {
+      "case": "conflicting_locale_es",
+      "passed": true,
+      "refused": true,
+      "reason": "Refusing to overwrite existing content: city.green_leaf_village",
+      "allSixInputFilesByteIdentical": true,
+      "successReceiptAbsent": true,
+      "inputSha256": {
+        "Assets/Weedtopia/Game/Content/BurningHills.json": "27eb7530d9ead3079ffe19d7aa9f005da27387b95cd0c2250e5dc209fd175ac8",
+        "Assets/Weedtopia/Game/Localization/de.json": "a1487947c533b9586bbdc10f1f3c41544e7a8f6761724c3b5d40ca520dc3322b",
+        "Assets/Weedtopia/Game/Localization/en.json": "9440888f27ce474d8d0f726b1d1bde723023fc66f0d7f25c33efd7fc9d0fde17",
+        "Assets/Weedtopia/Game/Localization/es.json": "535acf32527563dae6aa8e47c0c7c7ffcbf92fc8ea5c2c626f6f135047bc1a83",
+        "Assets/Weedtopia/Game/Localization/fr.json": "0e9c2618e14b53f7dda04e1041efd4e28c467dcf4a8cdd1771ae3eb3c1264c6a",
+        "Assets/Weedtopia/Game/Localization/ru.json": "1f39e8e17f239c42a14b4d174930a6d92b7d50cb81cb405ad99ab33d15ac12cc"
+      },
+      "outputSha256": {
+        "Assets/Weedtopia/Game/Content/BurningHills.json": "27eb7530d9ead3079ffe19d7aa9f005da27387b95cd0c2250e5dc209fd175ac8",
+        "Assets/Weedtopia/Game/Localization/de.json": "a1487947c533b9586bbdc10f1f3c41544e7a8f6761724c3b5d40ca520dc3322b",
+        "Assets/Weedtopia/Game/Localization/en.json": "9440888f27ce474d8d0f726b1d1bde723023fc66f0d7f25c33efd7fc9d0fde17",
+        "Assets/Weedtopia/Game/Localization/es.json": "535acf32527563dae6aa8e47c0c7c7ffcbf92fc8ea5c2c626f6f135047bc1a83",
+        "Assets/Weedtopia/Game/Localization/fr.json": "0e9c2618e14b53f7dda04e1041efd4e28c467dcf4a8cdd1771ae3eb3c1264c6a",
+        "Assets/Weedtopia/Game/Localization/ru.json": "1f39e8e17f239c42a14b4d174930a6d92b7d50cb81cb405ad99ab33d15ac12cc"
+      }
+    },
+    {
+      "case": "conflicting_locale_fr",
+      "passed": true,
+      "refused": true,
+      "reason": "Refusing to overwrite existing content: city.green_leaf_village",
+      "allSixInputFilesByteIdentical": true,
+      "successReceiptAbsent": true,
+      "inputSha256": {
+        "Assets/Weedtopia/Game/Content/BurningHills.json": "27eb7530d9ead3079ffe19d7aa9f005da27387b95cd0c2250e5dc209fd175ac8",
+        "Assets/Weedtopia/Game/Localization/de.json": "a1487947c533b9586bbdc10f1f3c41544e7a8f6761724c3b5d40ca520dc3322b",
+        "Assets/Weedtopia/Game/Localization/en.json": "9440888f27ce474d8d0f726b1d1bde723023fc66f0d7f25c33efd7fc9d0fde17",
+        "Assets/Weedtopia/Game/Localization/es.json": "1a2587445209de7ec995b11f022088acb7d871be7a4c04acb743a1cbd0bb0503",
+        "Assets/Weedtopia/Game/Localization/fr.json": "71d51c02ceb10d9e40b533cecd644f86df26ca3fdda64d1fb526a5d14db09471",
+        "Assets/Weedtopia/Game/Localization/ru.json": "1f39e8e17f239c42a14b4d174930a6d92b7d50cb81cb405ad99ab33d15ac12cc"
+      },
+      "outputSha256": {
+        "Assets/Weedtopia/Game/Content/BurningHills.json": "27eb7530d9ead3079ffe19d7aa9f005da27387b95cd0c2250e5dc209fd175ac8",
+        "Assets/Weedtopia/Game/Localization/de.json": "a1487947c533b9586bbdc10f1f3c41544e7a8f6761724c3b5d40ca520dc3322b",
+        "Assets/Weedtopia/Game/Localization/en.json": "9440888f27ce474d8d0f726b1d1bde723023fc66f0d7f25c33efd7fc9d0fde17",
+        "Assets/Weedtopia/Game/Localization/es.json": "1a2587445209de7ec995b11f022088acb7d871be7a4c04acb743a1cbd0bb0503",
+        "Assets/Weedtopia/Game/Localization/fr.json": "71d51c02ceb10d9e40b533cecd644f86df26ca3fdda64d1fb526a5d14db09471",
+        "Assets/Weedtopia/Game/Localization/ru.json": "1f39e8e17f239c42a14b4d174930a6d92b7d50cb81cb405ad99ab33d15ac12cc"
+      }
+    },
+    {
+      "case": "conflicting_locale_ru",
+      "passed": true,
+      "refused": true,
+      "reason": "Refusing to overwrite existing content: city.green_leaf_village",
+      "allSixInputFilesByteIdentical": true,
+      "successReceiptAbsent": true,
+      "inputSha256": {
+        "Assets/Weedtopia/Game/Content/BurningHills.json": "27eb7530d9ead3079ffe19d7aa9f005da27387b95cd0c2250e5dc209fd175ac8",
+        "Assets/Weedtopia/Game/Localization/de.json": "a1487947c533b9586bbdc10f1f3c41544e7a8f6761724c3b5d40ca520dc3322b",
+        "Assets/Weedtopia/Game/Localization/en.json": "9440888f27ce474d8d0f726b1d1bde723023fc66f0d7f25c33efd7fc9d0fde17",
+        "Assets/Weedtopia/Game/Localization/es.json": "1a2587445209de7ec995b11f022088acb7d871be7a4c04acb743a1cbd0bb0503",
+        "Assets/Weedtopia/Game/Localization/fr.json": "0e9c2618e14b53f7dda04e1041efd4e28c467dcf4a8cdd1771ae3eb3c1264c6a",
+        "Assets/Weedtopia/Game/Localization/ru.json": "e7ec464365ceb9ae4fe9060010c4fda52ead7f35f85ec67695f0b0dc93d85694"
+      },
+      "outputSha256": {
+        "Assets/Weedtopia/Game/Content/BurningHills.json": "27eb7530d9ead3079ffe19d7aa9f005da27387b95cd0c2250e5dc209fd175ac8",
+        "Assets/Weedtopia/Game/Localization/de.json": "a1487947c533b9586bbdc10f1f3c41544e7a8f6761724c3b5d40ca520dc3322b",
+        "Assets/Weedtopia/Game/Localization/en.json": "9440888f27ce474d8d0f726b1d1bde723023fc66f0d7f25c33efd7fc9d0fde17",
+        "Assets/Weedtopia/Game/Localization/es.json": "1a2587445209de7ec995b11f022088acb7d871be7a4c04acb743a1cbd0bb0503",
+        "Assets/Weedtopia/Game/Localization/fr.json": "0e9c2618e14b53f7dda04e1041efd4e28c467dcf4a8cdd1771ae3eb3c1264c6a",
+        "Assets/Weedtopia/Game/Localization/ru.json": "e7ec464365ceb9ae4fe9060010c4fda52ead7f35f85ec67695f0b0dc93d85694"
+      }
+    },
+    {
+      "case": "missing_sixth_source",
+      "passed": true,
+      "refused": true,
+      "reason": "Green Leaf Village requires all six existing campaign cities",
+      "allSixInputFilesByteIdentical": true,
+      "successReceiptAbsent": true,
+      "inputSha256": {
+        "Assets/Weedtopia/Game/Content/BurningHills.json": "c16e2b60a0d546b7a228150192e65bb13c66ef98b76f87263f42455f61ce1a11",
+        "Assets/Weedtopia/Game/Localization/de.json": "a1487947c533b9586bbdc10f1f3c41544e7a8f6761724c3b5d40ca520dc3322b",
+        "Assets/Weedtopia/Game/Localization/en.json": "9440888f27ce474d8d0f726b1d1bde723023fc66f0d7f25c33efd7fc9d0fde17",
+        "Assets/Weedtopia/Game/Localization/es.json": "1a2587445209de7ec995b11f022088acb7d871be7a4c04acb743a1cbd0bb0503",
+        "Assets/Weedtopia/Game/Localization/fr.json": "0e9c2618e14b53f7dda04e1041efd4e28c467dcf4a8cdd1771ae3eb3c1264c6a",
+        "Assets/Weedtopia/Game/Localization/ru.json": "1f39e8e17f239c42a14b4d174930a6d92b7d50cb81cb405ad99ab33d15ac12cc"
+      },
+      "outputSha256": {
+        "Assets/Weedtopia/Game/Content/BurningHills.json": "c16e2b60a0d546b7a228150192e65bb13c66ef98b76f87263f42455f61ce1a11",
+        "Assets/Weedtopia/Game/Localization/de.json": "a1487947c533b9586bbdc10f1f3c41544e7a8f6761724c3b5d40ca520dc3322b",
+        "Assets/Weedtopia/Game/Localization/en.json": "9440888f27ce474d8d0f726b1d1bde723023fc66f0d7f25c33efd7fc9d0fde17",
+        "Assets/Weedtopia/Game/Localization/es.json": "1a2587445209de7ec995b11f022088acb7d871be7a4c04acb743a1cbd0bb0503",
+        "Assets/Weedtopia/Game/Localization/fr.json": "0e9c2618e14b53f7dda04e1041efd4e28c467dcf4a8cdd1771ae3eb3c1264c6a",
+        "Assets/Weedtopia/Game/Localization/ru.json": "1f39e8e17f239c42a14b4d174930a6d92b7d50cb81cb405ad99ab33d15ac12cc"
+      }
+    }
+  ]
+}

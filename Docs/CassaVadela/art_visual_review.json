@@ -1,0 +1,345 @@
+{
+  "utc": "2026-10-08T04:16:52.758680+00:00",
+  "status": "passed",
+  "gate": "generated_source_art_visual_review",
+  "mode": "actual pixel inspection",
+  "filesReviewed": 12,
+  "residentsReviewed": 8,
+  "signReviewed": true,
+  "landmarksReviewed": 3,
+  "consistentAdultStyle": true,
+  "findings": "All eight residents show complete adult figures, distinct age, clothing and props, and a coherent warm painterly 2.5D style. The town sign is correctly spelled. The fountain and terrace garden use matching limestone, terracotta, olive and turquoise materials. The dry fountain visibly distinguishes the unrestored water network from the restored flowing fountain.",
+  "alphaFindings": "All files contain true transparent pixels. No principal subject reaches any canvas edge at alpha >= 128. Very low alpha values of 1 or 2 at a few distant landmark or character edges do not clip the visible object. Residents use a maximum alpha of 254; this is effectively opaque in normal blending. RGB color outside zero-alpha areas is not a visible scene background.",
+  "limitations": "Source-art review does not verify sprites at their authored Unity scale or in final Game Views and does not constitute direct user visual acceptance.",
+  "userVisualAcceptance": false,
+  "gameViewAcceptance": false,
+  "originalImagesModified": false,
+  "files": [
+    {
+      "path": "Assets/Weedtopia/Production/CassaVadela/Art/cv_amara.png",
+      "sha256": "a4aa8feaf82acb77ef5797ae8aad184bfa39ee593c49c8e481367c570ece11a7",
+      "width": 1024,
+      "height": 1536,
+      "method": "actual view_image pixel inspection plus read-only Pillow alpha-channel checks",
+      "status": "passed",
+      "findings": "Complete mature adult woman with gray-streaked curls, long blue cardigan, amber shirt, cream trousers and ledger with pen. Outfit and props distinguish her; both shoes remain visible.",
+      "transparentPixels": 1059641,
+      "alphaMinimum": 0,
+      "alphaMaximum": 254,
+      "subjectBboxAlpha128": [
+        253,
+        26,
+        803,
+        1516
+      ],
+      "edgeMaxAlpha": {
+        "top": 0,
+        "left": 0,
+        "bottom": 0,
+        "right": 0
+      },
+      "subjectClipped": false
+    },
+    {
+      "path": "Assets/Weedtopia/Production/CassaVadela/Art/cv_elio.png",
+      "sha256": "26bdb50365f054775937ae11f1555753d1065c809b8a8a9a7e6561b3167a9a4a",
+      "width": 1024,
+      "height": 1536,
+      "method": "actual view_image pixel inspection plus read-only Pillow alpha-channel checks",
+      "status": "passed",
+      "findings": "Complete slim adult musician with dark wavy hair, mustard jacket, cream shirt and acoustic guitar. Guitar headstock, tuning pegs, both hands and shoes are visible. Distinct pose and readable guitar silhouette.",
+      "transparentPixels": 1136857,
+      "alphaMinimum": 0,
+      "alphaMaximum": 254,
+      "subjectBboxAlpha128": [
+        194,
+        18,
+        922,
+        1520
+      ],
+      "edgeMaxAlpha": {
+        "top": 0,
+        "left": 0,
+        "bottom": 0,
+        "right": 0
+      },
+      "subjectClipped": false
+    },
+    {
+      "path": "Assets/Weedtopia/Production/CassaVadela/Art/cv_ines.png",
+      "sha256": "654b681471c6143b13b42c8cff16fd0638a9e56b5848b7d1575a45f98fee978d",
+      "width": 1024,
+      "height": 1536,
+      "method": "actual view_image pixel inspection plus read-only Pillow alpha-channel checks",
+      "status": "passed",
+      "findings": "Complete mature adult woman with silver bun, cream shirt, teal apron, rolled brown trousers and boots. Brass valve wheel is fully visible. Face, hands and feet read clearly; no cropped limb or prop.",
+      "transparentPixels": 1043242,
+      "alphaMinimum": 0,
+      "alphaMaximum": 254,
+      "subjectBboxAlpha128": [
+        204,
+        18,
+        798,
+        1514
+      ],
+      "edgeMaxAlpha": {
+        "top": 0,
+        "left": 0,
+        "bottom": 0,
+        "right": 0
+      },
+      "subjectClipped": false
+    },
+    {
+      "path": "Assets/Weedtopia/Production/CassaVadela/Art/cv_lucia.png",
+      "sha256": "300476152eb79939aa274e03df51fd6079d65aac05d5d4b29d9338d8607e18a1",
+      "width": 1024,
+      "height": 1536,
+      "method": "actual view_image pixel inspection plus read-only Pillow alpha-channel checks",
+      "status": "passed",
+      "findings": "Complete adult baker with dark curls, coral apron, brown trousers and bread board. Both shoes, hands and bread are visible; readable warm expression and coherent anatomy.",
+      "transparentPixels": 1122050,
+      "alphaMinimum": 0,
+      "alphaMaximum": 254,
+      "subjectBboxAlpha128": [
+        241,
+        25,
+        907,
+        1507
+      ],
+      "edgeMaxAlpha": {
+        "top": 0,
+        "left": 0,
+        "bottom": 0,
+        "right": 0
+      },
+      "subjectClipped": false
+    },
+    {
+      "path": "Assets/Weedtopia/Production/CassaVadela/Art/cv_mateo.png",
+      "sha256": "af4f9c638ab5bcb8f6f32b3bf75771443d0fee47cddc97482baf05b76ddc67ab",
+      "width": 1024,
+      "height": 1536,
+      "method": "actual view_image pixel inspection plus read-only Pillow alpha-channel checks",
+      "status": "passed",
+      "findings": "Complete older stocky adult man with straw hat, gray beard, ochre shirt, olive trousers and olive basket. Basket and branch tips remain visible; silhouette differs from the other residents.",
+      "transparentPixels": 973967,
+      "alphaMinimum": 0,
+      "alphaMaximum": 254,
+      "subjectBboxAlpha128": [
+        211,
+        33,
+        957,
+        1501
+      ],
+      "edgeMaxAlpha": {
+        "top": 0,
+        "left": 1,
+        "bottom": 0,
+        "right": 0
+      },
+      "subjectClipped": false
+    },
+    {
+      "path": "Assets/Weedtopia/Production/CassaVadela/Art/cv_nico.png",
+      "sha256": "990a0b6faba49505972f3af17cc9d6bb711888ca53f1aa762db0c4c54df5c5fe",
+      "width": 1024,
+      "height": 1536,
+      "method": "actual view_image pixel inspection plus read-only Pillow alpha-channel checks",
+      "status": "passed",
+      "findings": "Complete young adult courier with tousled brown hair, sage jacket, coral scarf and messenger bag. Complete boots and bag remain inside the canvas; no clipping or apparent childlike anatomy.",
+      "transparentPixels": 1127381,
+      "alphaMinimum": 0,
+      "alphaMaximum": 254,
+      "subjectBboxAlpha128": [
+        218,
+        22,
+        731,
+        1514
+      ],
+      "edgeMaxAlpha": {
+        "top": 0,
+        "left": 0,
+        "bottom": 0,
+        "right": 0
+      },
+      "subjectClipped": false
+    },
+    {
+      "path": "Assets/Weedtopia/Production/CassaVadela/Art/cv_rafael.png",
+      "sha256": "bdfd2b8c6cfa48133a4276379046474a0ce9681cfe9c02cab6a01c76a834d92b",
+      "width": 1024,
+      "height": 1536,
+      "method": "actual view_image pixel inspection plus read-only Pillow alpha-channel checks",
+      "status": "passed",
+      "findings": "Complete adult mechanic with short dark hair, teal shirt, navy overalls and red toolbox. Tool pockets and complete boots are visible. Clear workman silhouette; no cropped toolbox.",
+      "transparentPixels": 1056603,
+      "alphaMinimum": 0,
+      "alphaMaximum": 254,
+      "subjectBboxAlpha128": [
+        173,
+        32,
+        844,
+        1489
+      ],
+      "edgeMaxAlpha": {
+        "top": 0,
+        "left": 1,
+        "bottom": 0,
+        "right": 0
+      },
+      "subjectClipped": false
+    },
+    {
+      "path": "Assets/Weedtopia/Production/CassaVadela/Art/cv_sofia.png",
+      "sha256": "90e29f01bdf23f80b877142ffa0696521a91e45a112eb6ac6a6d1013117d1b6e",
+      "width": 1024,
+      "height": 1536,
+      "method": "actual view_image pixel inspection plus read-only Pillow alpha-channel checks",
+      "status": "passed",
+      "findings": "Complete adult potter with braid, lavender blouse, terracotta apron, cream trousers and turquoise bowl. Hands grip the bowl coherently; both sandals and toes remain visible.",
+      "transparentPixels": 1089956,
+      "alphaMinimum": 0,
+      "alphaMaximum": 254,
+      "subjectBboxAlpha128": [
+        236,
+        19,
+        761,
+        1510
+      ],
+      "edgeMaxAlpha": {
+        "top": 0,
+        "left": 0,
+        "bottom": 0,
+        "right": 0
+      },
+      "subjectClipped": false
+    },
+    {
+      "path": "Assets/Weedtopia/Production/CassaVadela/Art/fountain_square.png",
+      "sha256": "694fc3815858e6eb76303042eebf29b4ba742c94ca28022558fce074f5ce2b00",
+      "width": 1374,
+      "height": 1145,
+      "method": "actual view_image pixel inspection plus read-only Pillow alpha-channel checks",
+      "status": "passed",
+      "findings": "Readable three-tier limestone and terracotta fountain with turquoise water, visible cascade and two olive planters. Isometric structure and water paths are coherent. Crown and base are complete; surrounding transparent cutout contains no ground plane.",
+      "transparentPixels": 816372,
+      "alphaMinimum": 0,
+      "alphaMaximum": 255,
+      "subjectBboxAlpha128": [
+        70,
+        10,
+        1331,
+        1083
+      ],
+      "edgeMaxAlpha": {
+        "top": 2,
+        "left": 1,
+        "bottom": 1,
+        "right": 0
+      },
+      "subjectClipped": false
+    },
+    {
+      "path": "Assets/Weedtopia/Production/CassaVadela/Art/terraced_garden.png",
+      "sha256": "d34d99a965f0b4d4d7ba5d854f92710ee6a51d2a7c79196af7cdb15f74531cb5",
+      "width": 1374,
+      "height": 1145,
+      "method": "actual view_image pixel inspection plus read-only Pillow alpha-channel checks",
+      "status": "passed",
+      "findings": "Readable stepped limestone garden with three olive trees, vegetable plots, herb beds, amphorae and terracotta water channel. Stair run and terrace levels are coherent. All principal leaves, wall bases and lower stair elements fit within the canvas.",
+      "transparentPixels": 771683,
+      "alphaMinimum": 0,
+      "alphaMaximum": 255,
+      "subjectBboxAlpha128": [
+        122,
+        11,
+        1329,
+        1125
+      ],
+      "edgeMaxAlpha": {
+        "top": 2,
+        "left": 1,
+        "bottom": 1,
+        "right": 0
+      },
+      "subjectClipped": false
+    },
+    {
+      "path": "Assets/Weedtopia/Production/CassaVadela/Art/town_sign.png",
+      "sha256": "88b9bc9c0a68d9cf53f589cf5367b72db65601424cfc56d0269d718dc5dcfd5b",
+      "width": 1536,
+      "height": 1024,
+      "method": "actual view_image pixel inspection plus read-only Pillow alpha-channel checks",
+      "status": "passed",
+      "findings": "Cream limestone sign with terracotta caps and olive decorations. The exact words CASSA VADELA are legible and correctly spelled. Both stone pillars and their bases are complete; angled face is coherent with isometric presentation.",
+      "transparentPixels": 718047,
+      "alphaMinimum": 0,
+      "alphaMaximum": 254,
+      "subjectBboxAlpha128": [
+        64,
+        20,
+        1469,
+        1004
+      ],
+      "edgeMaxAlpha": {
+        "top": 0,
+        "left": 0,
+        "bottom": 1,
+        "right": 0
+      },
+      "subjectClipped": false
+    },
+    {
+      "path": "Assets/Weedtopia/Production/CassaVadela/Art/fountain_dry.png",
+      "sha256": "0ab2114e9201f5dba29b65ad1e28a92c8a571c31695c2dea5dfa1e048756b96f",
+      "width": 1374,
+      "height": 1145,
+      "method": "actual view_image pixel inspection plus read-only Pillow alpha-channel checks",
+      "status": "passed",
+      "findings": "The same recognizable three-tier limestone and terracotta fountain is now visibly dry: all three basins show dusty stone floors and faint cracks; no turquoise water, falling streams, splash, ripples or liquid reflections remain. Brass spout, crown, decorative tile bands and flanking olive pots remain present. Main silhouette is complete and coherent with the wet stage. The generated edit is not a pixel-identical alpha silhouette; its small boundary differences are measured separately.",
+      "transparentPixels": 813390,
+      "alphaMinimum": 0,
+      "alphaMaximum": 255,
+      "subjectBboxAlpha128": [
+        66,
+        10,
+        1335,
+        1086
+      ],
+      "edgeMaxAlpha": {
+        "top": 2,
+        "left": 0,
+        "bottom": 1,
+        "right": 0
+      },
+      "subjectClipped": false
+    }
+  ],
+  "dryWetFountainComparison": {
+    "status": "passed_visual_consistency",
+    "sameDimensions": true,
+    "dimensions": [
+      1374,
+      1145
+    ],
+    "drySha256": "0ab2114e9201f5dba29b65ad1e28a92c8a571c31695c2dea5dfa1e048756b96f",
+    "wetSha256": "694fc3815858e6eb76303042eebf29b4ba742c94ca28022558fce074f5ce2b00",
+    "drySubjectBboxAlpha128": [
+      66,
+      10,
+      1335,
+      1086
+    ],
+    "wetSubjectBboxAlpha128": [
+      70,
+      10,
+      1331,
+      1083
+    ],
+    "silhouetteMaskPixelIdentical": false,
+    "silhouetteIoUAlpha128": 0.9692071975964469,
+    "silhouetteMismatchPixels": 22630,
+    "findings": "Both stages show the same architecture, camera angle, decorative bands and olive pots. The dry stage removes all water and adds subtle age marks. The visible mask overlap is 96.92 percent; the dry main bounds extend 4 pixels further left and right and 3 pixels further down. This is a visually coherent generated edit, not an exact alpha-mask copy."
+  }
+}

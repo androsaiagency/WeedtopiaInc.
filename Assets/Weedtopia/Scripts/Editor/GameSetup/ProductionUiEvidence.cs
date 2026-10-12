@@ -15,6 +15,7 @@ namespace Weedtopia.Editor.GameSetup
         private static readonly List<UiOverflowIssue> issues=new List<UiOverflowIssue>();
         private static readonly HashSet<string> resolutions=new HashSet<string>();
         private static string PathOf(Transform tr)=>tr.parent==null?tr.name:PathOf(tr.parent)+"/"+tr.name;
+        public static void Reset(){issues.Clear();resolutions.Clear();}
         public static void Inspect(GameUi ui,string screen)
         {
             if(ui==null||!ui.gameObject.activeInHierarchy)return;Canvas.ForceUpdateCanvases();resolutions.Add(Screen.width+"x"+Screen.height);
@@ -33,11 +34,11 @@ namespace Weedtopia.Editor.GameSetup
                 if(corners.Min(x=>x.x)<safe.xMin-2||corners.Max(x=>x.x)>safe.xMax+2||corners.Min(x=>x.y)<safe.yMin-2||corners.Max(x=>x.y)>safe.yMax+2)Issue(selectable.transform,"Action outside actual safe area");
             }
         }
-        public static void Write(string fingerprint=null)
+        public static void Write(string fingerprint=null,string outputPath="Docs/ProductionFinish/Evidence/ui_overflow.json",IEnumerable<string> requiredResolutions=null)
         {
-            bool complete=new[]{"1920x1080","1366x768","2560x1080"}.All(x=>resolutions.Contains(x));
+            bool complete=(requiredResolutions??new[]{"1920x1080","1366x768","2560x1080"}).All(x=>resolutions.Contains(x));
             var result=new UiOverflowReceipt{utc=DateTime.UtcNow.ToString("O"),passed=issues.Count==0&&complete,fingerprint=fingerprint??ProductionVisualPreflight.Fingerprint(),resolutions=resolutions.ToArray(),issues=issues.ToArray()};
-            File.WriteAllText("Docs/ProductionFinish/Evidence/ui_overflow.json",JsonUtility.ToJson(result,true));
+            File.WriteAllText(outputPath,JsonUtility.ToJson(result,true));
         }
     }
 }

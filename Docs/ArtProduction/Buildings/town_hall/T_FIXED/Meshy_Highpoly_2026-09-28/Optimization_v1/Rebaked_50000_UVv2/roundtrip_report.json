@@ -1,0 +1,47 @@
+{
+  "created_utc": "2026-09-28T20:07:17.271357+00:00",
+  "objects": [
+    {
+      "name": "TownHall_50000_Rebaked",
+      "triangles": 50000,
+      "vertices_after_weld": 23970,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "uv_layers": 1,
+      "materials": 1
+    }
+  ],
+  "source_sha256_unchanged": true,
+  "glb_roundtrip": "passed_import_and_50000_triangle_assertion",
+  "unity_import": "not_run",
+  "performance": "not_run",
+  "user_acceptance": "pending",
+  "exported_vertices": 75074,
+  "glb_bytes": 58009532,
+  "roundtrip_render_mean_absolute_rgb_error_0_to_255": [
+    0.00018925619834710743,
+    0.00017520661157024794,
+    0.00019669421487603306
+  ],
+  "visual_review": {
+    "front": "crest and panel grid restored; small foliage and surface differences remain",
+    "rear": "facade lines preserved; small pipe and plant detail loss",
+    "raw_decimation": "rejected_all_three_targets_due_to_texture_distortion",
+    "rebake_v1": "rejected_poor_UV_packing_and_blur",
+    "rebake_UVv2": "candidate_for_user_review_not_final_approval"
+  },
+  "texture_sizes": {
+    "basecolor": [
+      4096,
+      4096
+    ],
+    "normal": [
+      4096,
+      4096
+    ],
+    "metallic_roughness": [
+      2048,
+      2048
+    ]
+  }
+}

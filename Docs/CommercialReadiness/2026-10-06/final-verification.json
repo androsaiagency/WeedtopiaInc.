@@ -1,0 +1,112 @@
+{
+  "utc": "2026-10-06T06:44:37.962130+00:00",
+  "status": "passed",
+  "scope": "Current full native regression, actual release diagnostic Android package, compiler/shader/build diagnostics and exact settings/scene/package preservation.",
+  "native": {
+    "path": "Docs/CommercialReadiness/2026-10-06/native-final-summary.json",
+    "sha256": "86430bf0980ef36c8db5282ad0505e8a064677539c2a8d228718b932d0e1317b"
+  },
+  "currentEditorDelta": {
+    "path": "Docs/CommercialReadiness/2026-10-06/native-editor-delta.json",
+    "sha256": "3955bda23b5f66da659c222fccc7e3a734eafdc635f9b5ad9764decc2a12ec6c"
+  },
+  "sourceInputs": {
+    "path": "Docs/CommercialReadiness/2026-10-06/native-editor-delta-inputs.json",
+    "sha256": "a99f8e00afb64d81143895abe072ebcba573fa964cceb6d0768bd5262796e670"
+  },
+  "sourceFilesVerifiedAfterActualBuild": 594,
+  "sourceFingerprint": "79ced30c613331e7bbce82d938c590ce218208f04765044128dcac8a48cc9409",
+  "androidAudit": {
+    "path": "Docs/CommercialReadiness/2026-10-06/ReleaseApkAudit/20261006-063535-release-diagnostic/apk-audit.json",
+    "sha256": "61ac59b46747e1ecdc86bbb0840e8e94b6bcd9f7af00487f354d00bd55fa2a4c"
+  },
+  "androidBuild": {
+    "path": "Builds/Android/20261006-063535-release-diagnostic/build-result.json",
+    "sha256": "6277a9c2a5164b1c1ecc49efb449379341cc8e07d30ed7398b8ebaf6baf91c21"
+  },
+  "logs": {
+    "nativeTests": {
+      "path": "Docs/CommercialReadiness/2026-10-06/native-regression-final.log",
+      "sha256": "cb776f853ff8aced42bf1bd708134ec6d0baef3ed8507217ce1c323c52005625"
+    },
+    "androidBuild": {
+      "path": "Docs/CommercialReadiness/2026-10-06/ReleaseApkAudit/20261006-063535-release-diagnostic/native-build.log",
+      "sha256": "2c75d8ae47b13d7765df34fb865ce715ef88794ac705b6a5ab369b9d3216bb59"
+    }
+  },
+  "settings": [
+    {
+      "path": "ProjectSettings/ProjectSettings.asset",
+      "beforeSha256": "4f0f21ec097a7c11c3b5779b71f8133826b0bdf71734ad59e861b8b5ecf4ae35",
+      "afterSha256": "4f0f21ec097a7c11c3b5779b71f8133826b0bdf71734ad59e861b8b5ecf4ae35",
+      "exactBytes": true,
+      "reviewedNativeNormalization": null
+    },
+    {
+      "path": "ProjectSettings/EditorBuildSettings.asset",
+      "beforeSha256": "37021518c0e7a96311c221c7dedb23d30c486983290b4c32a6f572abd4c3f3a8",
+      "afterSha256": "37021518c0e7a96311c221c7dedb23d30c486983290b4c32a6f572abd4c3f3a8",
+      "exactBytes": true,
+      "reviewedNativeNormalization": null
+    },
+    {
+      "path": "ProjectSettings/UnityConnectSettings.asset",
+      "beforeSha256": "dba38e936e68c426ab563aad8f0d91cf229fd78ccde7e337e706bd900972be8c",
+      "afterSha256": "11251dae0356b6f43dd2c67bb511f6b7ecda4e5de425186bba3297e6f3dc1c6f",
+      "exactBytes": false,
+      "reviewedNativeNormalization": "Native Unity serialized the root UnityConnectSettings.m_Enabled from 1 to 0 after project Cloud diagnostic collection was disabled. All remaining bytes and individual service settings are exact."
+    }
+  ],
+  "warnings": {
+    "sourceCompilerAssemblies": 12,
+    "sourceCompilerWarnings": 0,
+    "buildReportWarnings": 0,
+    "buildReportErrors": 0,
+    "projectCompilerAndShaderDiagnosticsInNativeLogs": 0,
+    "noSuppressionAdded": true,
+    "originalSourceWarnings": 74,
+    "originalAndroidBuildWarnings": 19,
+    "sourceCleanupReceipt": {
+      "path": "Docs/CommercialReadiness/2026-10-06/compiler-warning-cleanup.json",
+      "sha256": "b885931d3c2c41994fbd18abbf9ffbfda3255c22171edc35bc16e1772317da9b"
+    },
+    "embeddedShaderReceipt": {
+      "path": "Docs/CommercialReadiness/2026-10-06/embedded-urp-warning-fix.json",
+      "sha256": "91220f71040057d2e79998d80a7eccfeff5f421dd7b8f56ebfdeac9cd95660be"
+    },
+    "testArchiveAndCloudPolicyReceipt": {
+      "path": "Docs/CommercialReadiness/2026-10-06/BuildWarningCleanup/implementation.json",
+      "sha256": "894544b4bacee2bbd5f4003a7e071ecfa8013da635e2916783c33523c6b84216"
+    },
+    "testArchivePlan": {
+      "path": "Docs/CommercialReadiness/2026-10-06/BuildWarningCleanup/archive-plan.json",
+      "sha256": "2d5079b5e0492fdded09a438ac49c39c1f0b5464b4cd19d0e520d4fa686d3119"
+    },
+    "archivedUpstreamTestFiles": 184,
+    "embeddedFilesVerified": 2994,
+    "environmentMessages": {
+      "nativeTests": [
+        "Failed to load: D:/Unity Games/6000.3.9f1/Editor/Data/PlaybackEngines/VisionOSPlayer\\x64\\UnityEditor.VisionOS.Native.dll",
+        "Unable to join player connection multicast group (err: 10013).",
+        "[Licensing::Module] Error: Access token is unavailable; failed to update"
+      ],
+      "androidBuild": [
+        "Failed to load: D:/Unity Games/6000.3.9f1/Editor/Data/PlaybackEngines/VisionOSPlayer\\x64\\UnityEditor.VisionOS.Native.dll",
+        "Unable to join player connection multicast group (err: 10013).",
+        "[Licensing::Module] Error: Access token is unavailable; failed to update"
+      ]
+    },
+    "environmentScope": "Optional editor platform-module/licensing/player-connection messages are retained as environment findings; no global machine configuration was changed."
+  },
+  "authoredUiPreservation": {
+    "path": "Docs/CommercialReadiness/2026-10-06/SupportAuthoring/preservation.json",
+    "sha256": "38ae6b1158e936d1ec3c1552bd69c6283efea191a9e41700b684464084d356af"
+  },
+  "releaseAccepted": false,
+  "deviceAccepted": false,
+  "humanAccepted": false,
+  "scopeLimits": [
+    "Editor performance timings exclude cold process boot and initial scene loading.",
+    "No physical device, OS clipboard export, native crash symbolization, store signing or human visual acceptance is certified."
+  ]
+}

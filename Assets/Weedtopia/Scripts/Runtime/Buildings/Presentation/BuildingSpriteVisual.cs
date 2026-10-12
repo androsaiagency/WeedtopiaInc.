@@ -11,8 +11,8 @@ namespace Weedtopia.Buildings.Presentation
     {
         [SerializeField] private SpriteRenderer spriteRenderer;
         [SerializeField] private bool faceRenderCamera = true;
-        [SerializeField] private Camera cameraOverride;
-        [SerializeField] private Vector3 rotationOffset;
+        [SerializeField] private Camera cameraOverride = default;
+        [SerializeField] private Vector3 rotationOffset = default;
         [SerializeField, Min(0.01f)] private float authoredWorldHeight = 1f;
         [SerializeField] private string resourcePath;
         [SerializeField, Min(0)] private float footprintInset;

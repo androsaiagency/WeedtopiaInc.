@@ -1,0 +1,464 @@
+{
+  "utc": "2026-10-02T07:12:07.013043+00:00",
+  "implementationStatus": "verified",
+  "contentVersion": 3,
+  "city": "big_rock_city",
+  "unlock": {
+    "source": "burning_hills",
+    "residents": 1000,
+    "oneTimeMoney": 2500,
+    "oneTimeCards": 2
+  },
+  "content": {
+    "sites": 56,
+    "routes": 35,
+    "buildingVariants": 251,
+    "mainQuests": 16,
+    "inhabitants": 6,
+    "chapters": 24,
+    "recurringVariants": 18,
+    "collaborations": 3
+  },
+  "gates": {
+    "sourceCompile": {
+      "utc": "2026-10-02T06:58:55.893456+00:00",
+      "status": "passed",
+      "gate": "source_compile_only",
+      "results": [
+        {
+          "assembly": "Weedtopia.Domain",
+          "exitCode": 0,
+          "sources": {
+            "Assets/Weedtopia/Scripts/Runtime/Domain/Amount.cs": "a59e62a517016b3f9872a6a547d31977500fad92330bce8e64e8323f717ac7b0",
+            "Assets/Weedtopia/Scripts/Runtime/Domain/CityCampaign.cs": "86444cf5e218539dfd5480bc20f06f7fe2f26f0cbe914ec61e7e7bf799bca318",
+            "Assets/Weedtopia/Scripts/Runtime/Domain/CityProject.cs": "79c026e707b140617b712a5aa220f615ec23acfeab18c86db42a394f4582c531",
+            "Assets/Weedtopia/Scripts/Runtime/Domain/Definitions.cs": "68f7b062830571a87ef89d97665414d6beb99446649363aa57056ebde545d4f0",
+            "Assets/Weedtopia/Scripts/Runtime/Domain/GameState.cs": "0d4d616d826bb80f4872885d1255c8b01f18c3936228c7ddb2d6d319ad5a4ac6",
+            "Assets/Weedtopia/Scripts/Runtime/Domain/Inventory.cs": "77512296302729696ae636cad2b35faf5a2a71e64d0235aff22a3f34c961470e",
+            "Assets/Weedtopia/Scripts/Runtime/Domain/LuckyWheel.cs": "bb6e87a211a1d2708f3ce37b02fc65b1c2d548a7951afc993029460a1e654477",
+            "Assets/Weedtopia/Scripts/Runtime/Domain/RewardHistory.cs": "43c3408f15e442a455799da0dcb2878c74a40e51a6fcd91d1b81b103d0928d65",
+            "Assets/Weedtopia/Scripts/Runtime/Domain/Simulation.cs": "6c053d186165d109936a8dca3b67952f6d76e5a3972b70df39f775dcde9d89bb",
+            "Assets/Weedtopia/Scripts/Runtime/Domain/UpgradeService.cs": "61884fb6c05ef05c264117c739dcb10157f479d0c616351d95d4f8dfa6217cd7",
+            "Assets/Weedtopia/Scripts/Runtime/Domain/VipStories.cs": "238764497225027596a602f2599546580e7e77c78f4e83951d697aef03193079",
+            "Assets/Weedtopia/Scripts/Runtime/Domain/WorkerService.cs": "985fce2933dc94087d98edb7a6e858834a241edff9f949a04b19e191806021b6"
+          }
+        },
+        {
+          "assembly": "Weedtopia.Buildings.Presentation",
+          "exitCode": 0,
+          "sources": {
+            "Assets/Weedtopia/Scripts/Runtime/Buildings/Presentation/BuildingSpriteCache.cs": "9235069bd77a25e852a3695daf0b6308df4540b5b9e9eea2495e389805357d95",
+            "Assets/Weedtopia/Scripts/Runtime/Buildings/Presentation/BuildingSpriteVisual.cs": "6256544dc4dbb7a2087fe1ac8a4f97dfaebb95108ef9f7b78eb6b94a66ea5856",
+            "Assets/Weedtopia/Scripts/Runtime/Buildings/Presentation/BuildingVisualCatalog.cs": "8611bc749199af00272f70e8f72a873484392778233027c975580ac51e9d5abc",
+            "Assets/Weedtopia/Scripts/Runtime/Buildings/Presentation/BuildingVisualWrapper.cs": "864b58bd3183e1e0f42ae15efd4c4dda5f88faf3aff167754db99b20f4acf496"
+          }
+        },
+        {
+          "assembly": "Weedtopia.Editor.BuildingArtPipeline",
+          "exitCode": 0,
+          "sources": {
+            "Assets/Weedtopia/Scripts/Editor/BuildingArtPipeline/BuildingArtManifest.cs": "e559dbc26abdfb92fad916ded5f2a2b2b23ee9455ac6f3e1d9eaafa6269f2f35",
+            "Assets/Weedtopia/Scripts/Editor/BuildingArtPipeline/BuildingIntakeBatch.cs": "2485acb99c5bc3d1a66c58b021dc92d9449218acf4a055098b0735c813860a96",
+            "Assets/Weedtopia/Scripts/Editor/BuildingArtPipeline/BuildingIntakeService.cs": "75b971097141cde3fffcee9e270489298e72318b5e366cf7d32f564fc9143fbb",
+            "Assets/Weedtopia/Scripts/Editor/BuildingArtPipeline/BuildingIntakeValidator.cs": "38754b67c2a695b911f290762a694d44cf17ffdbcd6fad2ee70f3b28adb43aa4",
+            "Assets/Weedtopia/Scripts/Editor/BuildingArtPipeline/BuildingSpritePrototypeUtility.cs": "76d4a012304883e6d27d42617d7bb1f91b3824fa1b6a078bfe2c897231b5df36",
+            "Assets/Weedtopia/Scripts/Editor/BuildingArtPipeline/BuildingTierIntakeWindow.cs": "8a194dce765481984ab954370a765eb1f5fba6fc383b86f88bf6a4d21ab71bab",
+            "Assets/Weedtopia/Scripts/Editor/BuildingArtPipeline/TownHall3DReview.cs": "1b1d9dbe638f5b0c93b22149cd9dfc008564282b73c549ff79a52fa1ccd979ea"
+          }
+        },
+        {
+          "assembly": "Weedtopia.Application",
+          "exitCode": 0,
+          "sources": {
+            "Assets/Weedtopia/Scripts/Runtime/Application/CityCampaignService.cs": "d0595cfdb2846a451e0898bb80f857cd0e117589784fb2f33b9eedc0a16b8b20",
+            "Assets/Weedtopia/Scripts/Runtime/Application/CityProjectDriver.cs": "74aefa52d2d699ef1f27c2ba340501a893b005bd602563495b9f9b4e04cb8fe5",
+            "Assets/Weedtopia/Scripts/Runtime/Application/CityProjectService.cs": "b65c688c36b07a6a0d53a84b2982754d4242705bc8a0b0d56173cad05776ead5",
+            "Assets/Weedtopia/Scripts/Runtime/Application/CityProjectText.cs": "790ab019dce520e6f1281079a1b929791e8eb9e8ef8786eb5d2f92a50099d51f",
+            "Assets/Weedtopia/Scripts/Runtime/Application/DailyService.cs": "ca0e3460b263473beeaeae0e001f6a1a78cf314c78d54439b7d1d6c88763ee43",
+            "Assets/Weedtopia/Scripts/Runtime/Application/GameSession.cs": "e5626bc64cc0afa7ec655f8aeec660c99998cc20e2789eb22e98cd91585be083",
+            "Assets/Weedtopia/Scripts/Runtime/Application/InventoryService.cs": "28b53f063748437a97f64c499968f0899197bc25bdfd9065865f2f751f591c57",
+            "Assets/Weedtopia/Scripts/Runtime/Application/Leaderboard.cs": "d85ac7cdd0ab0f35578a381595926a0d1f96bf3975450227f549287751406ebc",
+            "Assets/Weedtopia/Scripts/Runtime/Application/LuckyWheelService.cs": "2b20985c43c2d891e20e22dcf6b5a3043b79155bc0005cd5e86f9c41d02c6918",
+            "Assets/Weedtopia/Scripts/Runtime/Application/ProgressionService.cs": "150490f7ac1448310067ddc963a6915122220caadab5736e5faf31bb402cfe89",
+            "Assets/Weedtopia/Scripts/Runtime/Application/RewardCatalog.cs": "b8e4e8dabe7deac1bc40a5e1b34ea65877624bf845738c37a7c753b737ccdc9e",
+            "Assets/Weedtopia/Scripts/Runtime/Application/TutorialDriver.cs": "926489a4b31602f6cfa6b4602d131e79ccb2e75ab9c6b14f3e9f627dd2e35885",
+            "Assets/Weedtopia/Scripts/Runtime/Application/VipStoryService.cs": "4c769bab74ff319a196749fcc63e6fa1f52773f519ab443985023182f3df6db0",
+            "Assets/Weedtopia/Scripts/Runtime/Application/VipStoryTransactionSnapshot.cs": "fa8e8e2f4daa3ec224b609102b7c6f15c0e9651262a1e81e65051f1a0a76eba9"
+          }
+        },
+        {
+          "assembly": "Weedtopia.Content",
+          "exitCode": 0,
+          "sources": {
+            "Assets/Weedtopia/Scripts/Runtime/Content/GameContent.cs": "fd94b15d7ce9a2e94dc1ef4b7c5e820bc780cec1c3641cf713021da9920d339b"
+          }
+        },
+        {
+          "assembly": "Weedtopia.Editor.BuildingArtPipeline.Tests",
+          "exitCode": 0,
+          "sources": {
+            "Assets/Weedtopia/Scripts/Editor/BuildingArtPipeline/Tests/BuildingIntakeTests.cs": "f4be9e280489ae25083212919637c9d69feed440d67f401ff15fe76862a48614",
+            "Assets/Weedtopia/Scripts/Editor/BuildingArtPipeline/Tests/BuildingSpritePrototypeTests.cs": "b8a84778960d0ef012f5325bed34e73efd2050015943c025afad521f42ea0469"
+          }
+        },
+        {
+          "assembly": "Weedtopia.Persistence",
+          "exitCode": 0,
+          "sources": {
+            "Assets/Weedtopia/Scripts/Runtime/Persistence/LocalLeaderboard.cs": "e684b6640027eaecb355cbc0ef510805665d168764fb354fd292af27d7eccee5",
+            "Assets/Weedtopia/Scripts/Runtime/Persistence/LocalSaveStore.cs": "504e386b8a5a58fe9d900504f636fd50b3d1f143ff80bf1255e65bab73421852",
+            "Assets/Weedtopia/Scripts/Runtime/Persistence/RewardSaveValidator.cs": "d515f9258e4a6222d180c526436781264aea6d60d471b4c0e17c4090c27b4de8",
+            "Assets/Weedtopia/Scripts/Runtime/Persistence/VipStorySaveValidator.cs": "cc40fc0e71c37ff2012d81c4e1a85c211242f3380901b40e1f8aa63a57acad16"
+          }
+        },
+        {
+          "assembly": "Weedtopia.Unity",
+          "exitCode": 0,
+          "sources": {
+            "Assets/Weedtopia/Scripts/Runtime/Unity/ActionMark.cs": "d7f09ce80b21f5a9452095dbbebf8a1889c53fb589da940b61dc38842c513b61",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/AuthoredBoxPicking.cs": "6bbec6bdda3426cd4cc1b8731f2358698aa64e904a8a8107c316601b312bf416",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/BigRockCityStamp.cs": "4eb6c3d31266c01aa2681df0774f70f393a7028e7c9b4406ab3d77b39b00c7d9",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/BootstrapLoader.cs": "452d457c759119728f6cd0333b78469ec317940a9e4f59d9543ed2bfc8db6bc0",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/BuildingInspectionMetrics.cs": "ed7f9de45ca26a423ab9225f9769f3b59b53954a05f87e733ba541a4d70ecc89",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/BuildingInteractionUi.cs": "d6b838e998d8c953587b193599fee968df156d6c77b17960fe9dcc74dfe5b8db",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/BuildingView.cs": "aac059814522a5626cbf00000713470ba4d6f9be8558ec60f5bf6b075d49403f",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/CharacterActor.cs": "224430f3632c95fa21ccc9f5f05b98d5528b83219cb7804d3810919df3780324",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/CityCampaignUi.cs": "b357b89f30c5a42e5cc067740b79873d535d865372d9c2846aee4d4e9c68b604",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/CityLandmarkVisual.cs": "f8384c7cdbc53cf1f86eacd45f966fe74e583fc2de2d5707e300d1c4c6382816",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/CityMandateActor.cs": "19c58a0c3da0f5186beab598b656b51c3299d2fa1ecbfdbfac8effccbde2ffd3",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/CitySceneHandoff.cs": "c1ec20b40f8e981b3602b401b98007ad57b4e3638cbaeb92dd0231c12bace39b",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/CityStatusBar.cs": "4b263f6809292a482f07cc11e3ccc89b10af99a7963ef7dd2277aec8e4d64d21",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/ConstructionFenceView.cs": "3bc2b94b3fe405d8764c3431b58efa7f2ad0687182834c2697098177dfdd85d8",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/ConveyorNetwork.cs": "b9c913f76c181b58ddcbf29cad532374a21787da08f55907dc61156495f0eb17",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/ConveyorSection.cs": "dc24c4476be0a79c95eb03f6dbec7d0d1176e139e1bb3b472b5e803a963135ab",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/DeliveryView.cs": "a6799956cc987c4c547af045a9b373ef8f24364373826b319fc958fffc9dbec1",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/DirectionalSpriteAnimator.cs": "8fb41d381ba2221bcfb117e2cc5eb504a8cb1094f3694df11eff5cc953992464",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/DirectionalSpriteSet.cs": "3fc907311d4dd1e5cb2d76d92f38d9af93397ff9ba19ea480ff576dca3e5ec12",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/DistrictLayoutStamp.cs": "f9bc37764c46f34996bdcd9b45f61ee9e483be994e5e63a9841f6678cec02907",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/DistrictMap.cs": "291856c426f0bd86b3ef3a3cd4e22d4c7e357c6026f4bead9b2ebd29810fefba",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/DistrictNavigator.cs": "9b8e56928d4836e22651fb760f11915fe251f6657cf29d41679b0acf3e554d04",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/GameFeedback.cs": "f6e06e93c2487d169db67a2bb641ab2c00be6f9dbb3d4dfa693e224446f79a6b",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/GameRoot.cs": "fa62d7483453af93be1802effc60af13215f95d579b7c99b80229d3ad05ada90",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/GameUi.cs": "65389f348eeb6fdd42e94dbb7ac68d129c2953335bf1a07e1107d0d2d3587dba",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/GameVisualSet.cs": "55e136e01c6a0739393cd06f662ebc00529bca5d758bf14dbb23d2ccb930587b",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/InteractionRow.cs": "0ba8b8dc1a7690ed03af234d55d7f842b90387cdd2549687e2d7d9d32c948683",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/InventoryDetailView.cs": "53cec5475a5dea6d1d68b5139e58ccb2902e2d3a93db64fb70953cff01e73233",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/InventoryTileView.cs": "2c1919966b32d8986e0af54e51defb181c049d4f88b2bd21c7c628d204a012f7",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/IsometricCameraRig.cs": "50d16af07904351ee3088d9a2eef481e224e150cc1d3ccdddee927719d888c58",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/LivingTownPresentation.cs": "00c8cfd492b35e50c7a728ec741021f16b3427ec19776972e6937241f6f1f12d",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/LuckyWheelGraphic.cs": "72e9aba06dd42ae510e2c9c52a8b981e48bd4e6cd56acc5c7df1d56050fa9b2f",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/LuckyWheelPrizeView.cs": "4636ea0110392f3807c725db7bbfcbe7c616b372a6943a42a6cbf3a2c4f3d3ed",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/LuckyWheelUi.cs": "fad7ba42f679a65de4932a6a3028160b6f788fc4d6b8048d4d56428447f751e2",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/NaturalEnvironmentStamp.cs": "e91280a547175f942c89505a75e3112475a7f7d66c6ec03357d158f1dcdc6f5c",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/PresentationArt.cs": "b74a58bb739554bccc7426c97bca2a0ce07ed43ea08d3075f0bbdbc5fcb92ae9",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/PresentationBenchmark.cs": "ca4fb163706615e74d427fb403bc7d53780abf0170ebb4c7d8594b6b0f90fa02",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/PresentationRoute.cs": "593bb2219e0eaf8707979efbb8744e5f6774db941017e39c71a5f5e8028ce72a",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/ProductionAuthoringStamp.cs": "602250cec114b3365bb014a6d352697159c1f8131583fb0ded0601168c640cdf",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/ProductionPresentation.cs": "3bc420a070199cf85a55a408bd832cdf3f1727d1f4a3a548f754c8724fc3c729",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/ReviewGroundSorting.cs": "4e00f51693413dc23108a3c6cadbc35a339335b0452eedab15a90977cec53df0",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/RewardBurstGraphic.cs": "24502cbe142f3c3f19e4720ed9b41b092c70b612477d4c9794c8f4da1e4faf47",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/RewardCardView.cs": "9b2a0ea381e87213cd243e73071b3a66f52b386a88987464746ac16fb1d512ae",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/RewardCollectionUi.cs": "ec896be9da9c823236473516ebf3f5a47e8745b67ca793992a438b12393bbe69",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/RewardPresentation.cs": "0a8e2f28cab717500b67bc392e2df54d6a70e62d53761d04d2a995eaa9ed7df8",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/RewardPreviewView.cs": "a0490840bf5898f7d8db229fb65411841cbcbf5e1327d27b6af3925bcb856709",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/RewardText.cs": "cae2b73fadfc10ffe34805ec1c93f1c06b85df16c2866b0beb781a7b4057d0fe",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/RoundNavigationGraphic.cs": "d83880832344c9c2d56cfe5d89a709307cd900bb41a318a829e1fe2e114bfaee",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/TownVitalityStamp.cs": "7475747069fd62ee004f1946cce935cded298dc968e094875727a5ba148d1499",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/VipStoriesUi.cs": "b1aece70a30da432736df7a678626589933869d157361ebb2ac142ffcd751593",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/VipStoryActor.cs": "cc87070d68580dd8e402041d6506b289df031c29dcafc6eeacce64ee6cbc9778",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/VipStoryParagraph.cs": "cbdbdcfd3840b7e3fd96deffa7056de36be574034e2ed80552c454b9d49116d8",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/VipStoryRosterRow.cs": "56bfbc21d4291f29399f9d662bf0df90aeb033f1848be910efd9dc83f53abc28",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/VipTownPresentation.cs": "ba4c62288451bb347eda050d45928ad170fa1ff01171bfa62638232555c757df",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/VipVisualCatalog.cs": "21ad0390c88bc91277cfc79c88732ff5c48fb59cdded043a28b1bba20003ffa8",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/WorldCornersStamp.cs": "a19c7f9f08d34e5ec594e7552a32597f77ed81a7f3789e8b4ba181e8242da64d",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/WorldNavigationBar.cs": "fa2437e71ffb35cfff654f09781de599d23ef2ca3af775a57e593a835a75fe20",
+            "Assets/Weedtopia/Scripts/Runtime/Unity/WorldPointerGesture.cs": "f5adb6e0e96f6abaa3cf4531d4361feee7c99f4f424c5d7ec2c54af8235aee4d"
+          }
+        },
+        {
+          "assembly": "Weedtopia.Game.EditModeTests",
+          "exitCode": 0,
+          "sources": {
+            "Assets/Weedtopia/Scripts/Tests/EditMode/BakeryDeliveryTests.cs": "40446664f4114386858c8ec5481e117077c18d7957ce3f9b3fe4fcd1e235d7e0",
+            "Assets/Weedtopia/Scripts/Tests/EditMode/BuildingBalanceTests.cs": "cc66d270837fd8a9d73eb9e7671fc4bcc3c3ddc350a2fcd06207f759390b9397",
+            "Assets/Weedtopia/Scripts/Tests/EditMode/CityCampaignTests.cs": "f0307d2eee0758a2bd26a244429e7e70427842b07853c0c14377df45f98dc43c",
+            "Assets/Weedtopia/Scripts/Tests/EditMode/CityProjectTests.cs": "20a065d3b6e33a8d12af5488cc104f58b07d22e19484258aa8678e3b061c97d8",
+            "Assets/Weedtopia/Scripts/Tests/EditMode/DomainTests.cs": "834be13236309f9a4e392eaec6fb08b2c2d516f50b5de4dc7ab5ad40c1700f2d",
+            "Assets/Weedtopia/Scripts/Tests/EditMode/InventoryTests.cs": "0e49a1ffb969775d971d5781b20353b44083a74cb307f6d1de8ba449478153c2",
+            "Assets/Weedtopia/Scripts/Tests/EditMode/LuckyWheelTests.cs": "4dd515b4dff48bfb63802826832c7293d032b492ef8bd0f243fdf8a96eedc6aa",
+            "Assets/Weedtopia/Scripts/Tests/EditMode/PersistenceTests.cs": "f201a8ec609f01a99113a6ca41d9bfe6e909f5b79f6f1b5514075442b6a118e5",
+            "Assets/Weedtopia/Scripts/Tests/EditMode/ProgressionTests.cs": "6d64814e4bbae526d4109e151b981f1403c636066a2eb5a26173b356aa88a960",
+            "Assets/Weedtopia/Scripts/Tests/EditMode/ResourceConversionTests.cs": "57d51c19528136efd7b2a725af0bebec2e4b804b4b5e93054c0c4b3a1bf30949",
+            "Assets/Weedtopia/Scripts/Tests/EditMode/RewardTests.cs": "e61b5176697241b0971364a8bc4c58178f2db8231f35aa02f767457398e43288",
+            "Assets/Weedtopia/Scripts/Tests/EditMode/VipStoryTests.cs": "29ea387706416d1bb134a6cec3e10a2cc45624564c2343a8992d47d9e04e0006"
+          }
+        },
+        {
+          "assembly": "Weedtopia.Editor.GameSetup",
+          "exitCode": 0,
+          "sources": {
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/BakeryDeliveryAuthoring.cs": "5773ba875f7e6b27057895386a9aaceabfb3fefb6c7c4504618d31dfca67b26d",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/BigRockCityAuthoring.cs": "439f309f0441ae52f6f88d8daa7f391a3121748dc56671f0a328afeab373f204",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/BigRockCityEvidence.cs": "277e8a84fcaa8207de2206be4c191b5dc02601180051da9344ea489ed1406a0e",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/BuildingInteractionAuthoring.cs": "3e854a67b73e5e73d81826b08987e98ed0e487c394346c463a6e0fd01130419d",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/BurningHillsLayoutInstaller.cs": "404157c45f02d23bc18a9905893cec908dbb844813ef9bd5457f80d5da119117",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/ConstructionFenceAuthoring.cs": "8feb1e9d428289406b8d2f1350ea0bb34095a740d43432fdf9af8226a48265a5",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/ConstructionFenceEvidence.cs": "b9493b997ef348748f572aabacc53aa44a52e369ea9335814baf0ef760a84c25",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/ConveyorAuthoring.cs": "0e616cc8a7eb8f95216a18ab0d51d4fc9955aea8fc415b34ce31a822b69bdc22",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/ConveyorVisualEvidence.cs": "a1dee8e42aab460fe954b886e99d46dc66a30d81ff686527c93b3a33752d2dfe",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/DirectionalMotionAuthoring.cs": "f653a23af1954ed3a4d4e2726820a6741c8b9746109a6342718b6f7a9df47a28",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/DirectionalMotionEvidence.cs": "be31316834d571781225ec96dd3d5c01dc948209cc54448c6ed00e6a19ec9f37",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/DistrictLandscapeRefinement.cs": "f8f2fac2233e28ceb83becd16932b16ad94d3701c3843e1fbf9b98ce67f61bcd",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/FarmGardenRefinement.cs": "df6ee9a72d74e6f24ebbc843e1f7b114c44911f100c8d48adaca8fe0b5891865",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/GamePolish.cs": "f17618718d605321ccf3bed493edc16a9834631bf1d6a42f67b07fac48c083e1",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/GameScaffold.cs": "fae860097677279d416037ddaec81ae56225e2fc1848d360d374aa51d9a0ff1d",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/InteractionVisualEvidence.cs": "6a243d3f6e1879b98985905bb0118ccde06e72bbdd7eb85e0bf8baf60dd23d0b",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/InventoryAuthoring.cs": "4e8ef4049318c39526fbf6adbaa5ae1309438df916655a2739b75766a0a7a792",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/InventoryEvidence.cs": "b87cba21708b724e07c63838d571d13a7b0306f78d60d72ac1d50c7fea123942",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/LayoutEditorJob.cs": "203959dab594cf9dac81477d52f1e9123533247b147aaf231b724515a3b99181",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/LayoutVisualEvidence.cs": "8ef387670f9e47e110dd8e5e03c398ded3fa5b7753ace1be293803bb5e895f04",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/LivingHillsAuthoring.cs": "81cb3c458345a99aa83f2f8325f0e3efb383e2e0ae7ee5ab6b15870ad54165c6",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/LuckyWheelAuthoring.cs": "7bfb890f28b274a588ff629edfb62edf9d778bcfe1894c18783e66bfd676dd5f",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/LuckyWheelEvidence.cs": "c91cde1bd648e4bb8ade7892ddaaccaf2796edee55f5b0c8815c1750a88564e5",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/MenuLayoutAuthoring.cs": "068dba9f7b4d39626171872aff6d7e45d5474775070704cec87deaee0e37a652",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/NaturalEnvironmentAuthoring.cs": "b647df6e254f86d79efa013cd739426a88166fee0aa9c6fa7c0a29915d0f0f63",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionArtImporter.cs": "13f13f1144e5839e0f6024e610e0a54d8c0856ab6d4be83dea57976a2ee61dc6",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionAudioAuthoring.cs": "02b20c22ce5fc66eaefeda17638f8aa472fabe83de29eefd0a361aaecfc998db",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionBuildingIntegration.cs": "e73274dfb23531fde79465103cc2e9c7ffe601882444075e02a2051d680dca0e",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionDiagnosticBuild.cs": "27647a0ff08e1c9cc0e2c63b256be1402ebb91e79a926175903b5470062e43f8",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionFinishInstaller.cs": "cef06c092c3f131ad8bd26620689d8b9cc649f84fc451c4d38e2e14f1c7577b3",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionProfileEvidence.cs": "d78f7640c8623a385f9f1ac0283645f3a57ae2f3671ce6e6f3ff194abcb841be",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionRefinement.cs": "b274623a68cabfe3d929bc32e0bd8e8924f011d19c19d01b85a8669fa077995b",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionReviewAuthoring.cs": "13977e3113be8cb6468c468bf00d29205eee983d9c57702779ba043b6e1c8a47",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionUiAuthoring.cs": "f7c9a3b612aee9a63260d606f7bd57c276e31b0d72f0f42591c37ac72c381b78",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionUiEvidence.cs": "113681222ffce207d1640090989cd4cde5d4663d5d809151e61ec2d73b04f343",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionVisualEvidence.cs": "e6ea17b6da63f998c660832af66b4651785c22c73f1b96f57c90aa1ae0c1ba2b",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionVisualPreflight.cs": "b4874fe8e0dc0d25a4a43f2b4376abe987729a5629a70cf7ecf7cf31597c0c72",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/ProductionWorldAuthoring.cs": "eceaf5527d69935ac8999d35192a9def4435fa7281854b656c417a5ac0e7eddc",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/RewardPresentationAuthoring.cs": "eca9e90319dd78134445d870458c3707c0754d84dfe3fe084b2fab5497da5d49",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/RewardPresentationEvidence.cs": "a87899b4c79dc49b59066c06a321d5725d04c85715b1c3f3fc16abe715d90c8b",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/SpriteReviewScene.cs": "ca9dcf1ab8b1281158e13749454a01282c2219e27911ecf2324c0b89ee7c422f",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/TownHall2DRestore.cs": "deac717c60a6698c3dd90cad3575d15865f8a891d5a87c697d72b3caf758020d",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/TownHall3DIntegration.cs": "a7ec7fe6d4fae7ae7aa32128593b897a847255eecf032fd814231df4b74da4f3",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/TownHallLightingAuthoring.cs": "97f1559ebeb73416bb7a08830963997d4ae8e1e713cbe8ce2fe6d495e9670a42",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/TownVitalityAuthoring.cs": "f842a803df68091a7d31d36a9714ef924d07df7725041807a0de50e6ae2f7935",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/UiAuthoring.cs": "374407d5a1cc2c92c8c7a10012d2a5900b16730ee2c5ae91c85ecb0c0ff85cbc",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/VipStoriesAuthoring.cs": "9569d69ffd2b5d759caa19c81d5172edf0d005269b7ab08a412831c084ea4588",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/VipStoriesEvidence.cs": "6b0ab0753fd7df3c3d510033209711835325b149e7862b42f4f948796aa0cb04",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/VisualEvidence.cs": "fc3a66f670ddcba458ae97a6bf98a53244dd9404089a4e9ec41371e58526bdca",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/WorldCornersAuthoring.cs": "7a4dd3538671345938b3ceba34a78382441daa171c6ec0e6715b1857856ba36d",
+            "Assets/Weedtopia/Scripts/Editor/GameSetup/WorldNavigationAuthoring.cs": "9b00eb104e43c80d8c1a5b3ee4eba7357fd6c1537735494ee91c391dc9f41178"
+          }
+        },
+        {
+          "assembly": "Weedtopia.Game.PlayModeTests",
+          "exitCode": 0,
+          "sources": {
+            "Assets/Weedtopia/Scripts/Tests/PlayMode/BuildingInteractionTests.cs": "1cb9fbb3ff3a779eec852826eeb54fa83319e7d3ac68e8eb3ced4330ec1ebc76",
+            "Assets/Weedtopia/Scripts/Tests/PlayMode/CityCampaignUiTests.cs": "ce52fce31a62eac4627333b63fbb5f1b094997f06a844906c208ea5c353a157e",
+            "Assets/Weedtopia/Scripts/Tests/PlayMode/GameFlowTests.cs": "4c90eba069abe2d02ee2fb4b004099d9fefaed13fb74ea3d176716a581f3fbff",
+            "Assets/Weedtopia/Scripts/Tests/PlayMode/LuckyWheelUiTests.cs": "0c67b4b4deed2f653ebd0ef9050ab10541bfeb9f473063a0741a7e9c3a0d9cec",
+            "Assets/Weedtopia/Scripts/Tests/PlayMode/RewardPresentationTests.cs": "5667912f942e8f977bc813f26ac7a5567a0037f16538475f120064ab361a9c7a",
+            "Assets/Weedtopia/Scripts/Tests/PlayMode/VipStoryUiTests.cs": "9f9af9e654d2a481e3d8fd8411d1f50f4d99722fe2cc9a736a361b3f3e6299e5"
+          }
+        },
+        {
+          "assembly": "Weedtopia.Game.AssetTests",
+          "exitCode": 0,
+          "sources": {
+            "Assets/Weedtopia/Scripts/Tests/EditorAssets/BigRockCityAssetTests.cs": "c2198cf8adeb74c9e27327473731242afcfe0a4c424f8760aff2ec8402bb470a",
+            "Assets/Weedtopia/Scripts/Tests/EditorAssets/ConstructionFenceAssetTests.cs": "4449dcc86fad01c777ac631e02b7fdcbc823500d2adedca80e15c4140cf04ff3",
+            "Assets/Weedtopia/Scripts/Tests/EditorAssets/ConveyorAssetTests.cs": "1edb350d752203f31d7d3881a24d57924d3c0dcacd020e76b3d608d4c2138bce",
+            "Assets/Weedtopia/Scripts/Tests/EditorAssets/DirectionalMotionTests.cs": "9178c704651e2ca078eed8aaeeca903ce4a42eaa375390b8eed1f4c36d5ecadd",
+            "Assets/Weedtopia/Scripts/Tests/EditorAssets/DistrictLayoutTests.cs": "c9ef6c6c6d3997bad14ef6556f12ecb6a44106beedd1d0ff7093c3be83cbb94d",
+            "Assets/Weedtopia/Scripts/Tests/EditorAssets/GameAssetTests.cs": "4d6425ee61540cac0f0ef8e03ffffd761f6c95c66a506d679a9f704d8147e135",
+            "Assets/Weedtopia/Scripts/Tests/EditorAssets/LivingHillsTests.cs": "51fa3ec922858ee7170c06c04056bf013e8c9dbf14dffaad8ea04c5c3aca71f8",
+            "Assets/Weedtopia/Scripts/Tests/EditorAssets/LuckyWheelAssetTests.cs": "3f5a3386a556a454100ec6ae5cbff62fa59811fb0f38d586ab5fd9578576ac50",
+            "Assets/Weedtopia/Scripts/Tests/EditorAssets/NaturalEnvironmentTests.cs": "5961bae06b2a960cd2229d1f0bd153f05343ac43e240bb77bb8cc73f5a9e16fb",
+            "Assets/Weedtopia/Scripts/Tests/EditorAssets/ProductionPresentationTests.cs": "a065de4bb6fd4ff5905dfebd591b2f4c6186948be7e642be6376d3ea9d23f450",
+            "Assets/Weedtopia/Scripts/Tests/EditorAssets/TownHall3DAssetTests.cs": "55a417e1b56e4c20d6d10e551cf01d9f8f31214db053e1cbed5e7b6dc9b2f359",
+            "Assets/Weedtopia/Scripts/Tests/EditorAssets/TownVitalityTests.cs": "a37eefd70e4efd3934acfa3c2e7858d51b200d00916a22f752ee67ca0495994f",
+            "Assets/Weedtopia/Scripts/Tests/EditorAssets/VipStoryAssetTests.cs": "765ec2c88770e5a158b18baf991957067cdcc84f3b3e9eddfe2973b1f970aa1c",
+            "Assets/Weedtopia/Scripts/Tests/EditorAssets/WorldCornersTests.cs": "5772c3bcf7bd44808c5f379b7481ee98a373c4e5ef9f5b68cf35cc7189e89a1b",
+            "Assets/Weedtopia/Scripts/Tests/EditorAssets/WorldNavigationTests.cs": "f7a2bc68c22470518253479fd0abbe10c95c1aa3ba2bd9ecc2f22eccef981595"
+          }
+        }
+      ],
+      "staleSources": []
+    },
+    "domain": {
+      "run": "20261002_080631_EditMode_BigRockCityFinalDomain",
+      "mode": "EditMode",
+      "startedUtc": "2026-10-02T06:06:31.8937347Z",
+      "endedUtc": "2026-10-02T06:11:37.9579179Z",
+      "unity": "6000.3.9f1 (7a9955a4f2fa)",
+      "exitCode": 0,
+      "log": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\Implementation\\Validation\\20261002_080631_EditMode_BigRockCityFinalDomain.log",
+      "status": "passed",
+      "total": 211,
+      "passed": 211,
+      "failed": 0,
+      "skipped": 0,
+      "xml": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\Implementation\\Validation\\20261002_080631_EditMode_BigRockCityFinalDomain.xml",
+      "report": "Docs/Implementation/Validation/20261002_080631_EditMode_BigRockCityFinalDomain.json"
+    },
+    "playMode": {
+      "status": "passed",
+      "total": 68,
+      "passed": 68,
+      "failed": 0,
+      "unresolvedTests": [],
+      "method": "Full assembly followed by targeted reruns of corrected tests; last result per test",
+      "reports": [
+        "Docs/Implementation/Validation/20261002_082016_PlayMode_BigRockCityFinalPlay.json",
+        "Docs/Implementation/Validation/20261002_084525_PlayMode_BigRockCityFinalPlay.json",
+        "Docs/Implementation/Validation/20261002_085944_PlayMode_BigRockCityFinalPlay.json"
+      ]
+    },
+    "editorAssets": {
+      "status": "passed",
+      "total": 43,
+      "passed": 43,
+      "failed": 0,
+      "unresolvedTests": [],
+      "method": "Full assembly followed by targeted reruns of corrected tests; last result per test",
+      "reports": [
+        "Docs/Implementation/Validation/20261002_082543_EditMode_BigRockCityFinalAssets.json",
+        "Docs/Implementation/Validation/20261002_085017_EditMode_BigRockCityFinalAssets.json"
+      ]
+    },
+    "authoring": {
+      "run": "20261002_083844_Install_HeaderSpriteReference",
+      "mode": "Install",
+      "startedUtc": "2026-10-02T06:38:44.0739730Z",
+      "endedUtc": "2026-10-02T06:39:07.8316001Z",
+      "exitCode": 0,
+      "log": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\BigRockCity\\Validation\\20261002_083844_Install_HeaderSpriteReference.log",
+      "status": "passed",
+      "receipt": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\BigRockCity\\authoring_receipt.json",
+      "report": "Docs/BigRockCity/Validation/20261002_083844_Install_HeaderSpriteReference.json"
+    },
+    "gameView": {
+      "run": "20261002_090143_Capture_FinalGameViews",
+      "mode": "Capture",
+      "startedUtc": "2026-10-02T07:01:43.8770505Z",
+      "endedUtc": "2026-10-02T07:04:45.9776421Z",
+      "exitCode": 0,
+      "log": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\BigRockCity\\Validation\\20261002_090143_Capture_FinalGameViews.log",
+      "status": "passed",
+      "receipt": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\BigRockCity\\gameview_receipt.json",
+      "screenshots": 30,
+      "layout": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\BigRockCity\\ui_overflow.json",
+      "report": "Docs/BigRockCity/Validation/20261002_090143_Capture_FinalGameViews.json"
+    },
+    "preservation": {
+      "status": "passed",
+      "protectedAssets": 2679,
+      "changedProtectedAssets": [],
+      "existingContentPreserved": true,
+      "originalScene": {
+        "passed": true,
+        "preservedOriginalObjects": 9189,
+        "addedDocuments": 16,
+        "removedObjects": [],
+        "unexpectedChanges": [],
+        "permittedAdditions": "Campaign panel, header and journal links, Rocko quest sign, default city labels"
+      }
+    },
+    "scoreIsolation": {
+      "status": "passed",
+      "playerLeaderboardUnchangedAfterValidation": true,
+      "preservedPlayerEntries": 2,
+      "removedOwnedDiagnosticRows": 2,
+      "testAndCaptureStores": "Isolated save and leaderboard paths carried across scene handoffs",
+      "receipt": "Docs/BigRockCity/Preservation/score_isolation_receipt.json"
+    },
+    "assetReferences": {
+      "status": "passed",
+      "checkedAssets": 268,
+      "unresolvedGuids": [],
+      "duplicateNewGuids": {}
+    },
+    "uiLayout": {
+      "utc": "2026-10-02T07:04:44.4600045Z",
+      "fingerprint": "bd59e318a0b9ae3bf557027f9f5a56b02b6df7241457c8af353a324c0af3f50e",
+      "passed": true,
+      "resolutions": [
+        "1920x1080",
+        "1366x768",
+        "2560x1080",
+        "1080x1920"
+      ],
+      "issues": []
+    },
+    "visualReview": {
+      "utc": "2026-10-02T07:08:54.373330+00:00",
+      "status": "passed",
+      "reviewType": "Assistant inspection of actual PlayMode Game View pixels",
+      "userAcceptance": false,
+      "diagnosticGrowthFixtures": true,
+      "fingerprint": "bd59e318a0b9ae3bf557027f9f5a56b02b6df7241457c8af353a324c0af3f50e",
+      "reviewedScreenshots": {
+        "Docs/BigRockCity/Screenshots/01_burning_below_threshold.png": "5beec089af9973e0e1d7a68b7ceea345092db5fced7684207dae63756a64833a",
+        "Docs/BigRockCity/Screenshots/02_rockos_government_request.png": "9d650e017e746c5c559a4f5a2bd4e4c1742528897c17a68c89ced85b56641aa5",
+        "Docs/BigRockCity/Screenshots/03_rocko_visible_new_quest.png": "06d50fef4e0d92a510ac5e7cdcaf978ba7203f1e64297e7bae08efb1d1a7f7d4",
+        "Docs/BigRockCity/Screenshots/04_mandate_accepted.png": "cedf40efb92718bd92d52f46e1aef25bfd473ce555154f434061c9d8d22d5dca",
+        "Docs/BigRockCity/Screenshots/05_arrival_new_main_quest.png": "e2a406b8ba88d317af0177fbc40e79e5f7999bb3cb94ba6f823126a0e34ce0f7",
+        "Docs/BigRockCity/Screenshots/06_big_rock_felsgaerten.png": "2260de83cf9daa51dda64bae1c5baa9400874c06aa68f42a82885d5947b59f69",
+        "Docs/BigRockCity/Screenshots/07_big_rock_kupfergasse.png": "07bf8d78d204c390da13a90c2f6a0523eb51f5a2647daf2df8fa5a1234300a04",
+        "Docs/BigRockCity/Screenshots/08_big_rock_felsstufen.png": "1e979aec1f5ff865f83416f70f20b4cb88cd9593855d2bebde1d225c33132087",
+        "Docs/BigRockCity/Screenshots/09_big_rock_werkviertel.png": "d8ff12df746b7a8109eb1cdb51d9a41908b86ec179949539f10c3a42ba43f09f",
+        "Docs/BigRockCity/Screenshots/10_berta_first_plan.png": "b01608add2bf6387b34a384dc63b0984a533abb54c3125bc5ddacf5ef884b7f6",
+        "Docs/BigRockCity/Screenshots/11_berta_accepted.png": "ebbf5855af4c1f90e247f0467bc6e2da3b8dbbf2b3462a90b1582ca9e3d5baee",
+        "Docs/BigRockCity/Screenshots/12_berta_memory_in_city.png": "2c5be887a184b2a93198cfd9622e6101c3bab23486c967137902ad5aba91692f",
+        "Docs/BigRockCity/Screenshots/13_berta_third_chapter_choice.png": "84e2a62b4857c6961587afc93d81214d18167097ebd9e2a6c1ccfadaddad765f",
+        "Docs/BigRockCity/Screenshots/14_city_shared_projects.png": "ade7312035047ef1816969a0bb6bb78bcf19fe5e5983787d5d2819316708befb",
+        "Docs/BigRockCity/Screenshots/15_campaign_1920x1080.png": "2574f48251ea8df63bc3aaf79d55496259d5b294c45534780730d419b734a760",
+        "Docs/BigRockCity/Screenshots/16_residents_1920x1080.png": "47d75f2971375e4a7d636b45a690c3f772e2c5be750e50fc18cc38f9e8599f68",
+        "Docs/BigRockCity/Screenshots/15_campaign_1366x768.png": "520e75fbdafb745cdad27279c8c21e50ad86c84f04f66d1424ad9ffcda2c82ab",
+        "Docs/BigRockCity/Screenshots/16_residents_1366x768.png": "ca435b4ebef2e85c88516fc071a3716861d96b62e77dcde9ba4aca3f74cc50fc",
+        "Docs/BigRockCity/Screenshots/15_campaign_2560x1080.png": "6ffc7a9845956c253564c460d7530b117de750fcb8f53d3d8d66b9548a57dffe",
+        "Docs/BigRockCity/Screenshots/16_residents_2560x1080.png": "b22d1871617bba3be43aec7034e56ab2a497ec7c98eefa0df26d6fa5761ae66c",
+        "Docs/BigRockCity/Screenshots/15_campaign_1080x1920.png": "a5cf5984c3697d5d5339cdd14ca04cd07fd224ccf9d2867952560312271910e1",
+        "Docs/BigRockCity/Screenshots/16_residents_1080x1920.png": "706746120f392f30e2bb289ff1a454f3b8f0b2cfc04cffab561d993675e54a9c",
+        "Docs/BigRockCity/Screenshots/17_city_br_berta.png": "0a6da665a8f00728f0bbc3f9f81da56dd2823ce505d96f272e223bd62b3a13e9",
+        "Docs/BigRockCity/Screenshots/17_city_br_levin.png": "40a0e3bd4ea507d7c9c7701d10309e9ea4b3ecfe3970be0bb19034caf52052ef",
+        "Docs/BigRockCity/Screenshots/17_city_br_samira.png": "86f838610478a84e853d6203280c0ac9d4561aed7f0cf46dd8dd96165767db3c",
+        "Docs/BigRockCity/Screenshots/17_city_br_enno.png": "ee0e347f39263063cce90fe68b957e805b30de4bfbca5cd0db69a1390669df13",
+        "Docs/BigRockCity/Screenshots/17_city_br_lotte.png": "679cbf9359512d0b14b5597c03e7363c44ab5e4b631b9ec7d5b36daca8f0ae4c",
+        "Docs/BigRockCity/Screenshots/17_city_br_ida.png": "1fc302237e8a7a517abee69da37d7b9a82c30ee0afba6a16a730bbaeebf328b8",
+        "Docs/BigRockCity/Screenshots/18_return_burning_hills.png": "7c964acc84f9d6cd8ea4944229df3284401d84005f991bde7d22aa0bc413133f",
+        "Docs/BigRockCity/Screenshots/19_return_big_rock_city_preserved.png": "5e0fd027ed8b79d3d5d1f40250fcd759365ba4b104fdcddade7aa19e654ca6a8"
+      },
+      "checks": [
+        "Government request at 1000 residents, visible Rocko marker and header notice",
+        "Warm sandstone/copper building palette, distinct dry grass and new Big Rock City signs",
+        "Felsgaerten, Kupfergasse, Felsstufen and Werkviertel with authored sandstone landmarks",
+        "Six distinct world characters with correct transparency and matching portraits",
+        "Fresh quest counters, active quest, memory prop, two third-chapter choices and collaboration prerequisites",
+        "Campaign and resident panels readable and controls contained at 1920x1080, 1366x768, 2560x1080 and 1080x1920",
+        "Return to Burning Hills keeps original palette; return to Big Rock City retains Berta progress"
+      ],
+      "observations": [
+        "Resident list is scrollable; its last row extends beyond the viewport as designed.",
+        "The reused tiled landscape retains visible texture transitions at close zoom and in portrait captures. These are also present in the original Burning Hills environment."
+      ],
+      "notCovered": [
+        "Physical touch on a device",
+        "Device audio",
+        "Human playthrough",
+        "WebGL/player build",
+        "Direct user art approval"
+      ]
+    }
+  },
+  "releaseAcceptance": {
+    "userVisualApproval": false,
+    "humanPlaythrough": "not_run",
+    "physicalTouch": "not_run",
+    "deviceAudio": "not_run",
+    "webglBuild": "not_run"
+  },
+  "diagnosticSaveOnly": true,
+  "published": false
+}

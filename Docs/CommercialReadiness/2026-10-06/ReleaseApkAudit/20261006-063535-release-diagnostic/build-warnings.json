@@ -1,0 +1,212 @@
+{
+  "schema": "weedtopia_android_build_warning_inventory_v1",
+  "utc": "2026-10-06T06:45:18.151766+00:00",
+  "status": "passed_zero_build_warnings",
+  "scope": "Exact completed ReleaseDiagnostic build 20261006-063535; editor infrastructure signals remain separate; no physical player test.",
+  "buildResult": {
+    "path": "Builds/Android/20261006-063535-release-diagnostic/build-result.json",
+    "sha256": "6277a9c2a5164b1c1ecc49efb449379341cc8e07d30ed7398b8ebaf6baf91c21",
+    "bytes": 3072
+  },
+  "nativeBuildLog": {
+    "path": "Docs/CommercialReadiness/2026-10-06/ReleaseApkAudit/20261006-063535-release-diagnostic/native-build.log",
+    "sha256": "2c75d8ae47b13d7765df34fb865ce715ef88794ac705b6a5ab369b9d3216bb59",
+    "bytes": 642661
+  },
+  "actualApkAudit": {
+    "path": "Docs/CommercialReadiness/2026-10-06/ReleaseApkAudit/20261006-063535-release-diagnostic/apk-audit.json",
+    "sha256": "61ac59b46747e1ecdc86bbb0840e8e94b6bcd9f7af00487f354d00bd55fa2a4c",
+    "bytes": 183992
+  },
+  "buildReport": {
+    "status": "succeeded",
+    "errors": 0,
+    "warnings": 0,
+    "seconds": 167.9099861,
+    "bytes": 353766630
+  },
+  "buildWarningClasses": [
+    {
+      "class": "UrpTestOnlyPrivateConstructorStripper",
+      "count": 0,
+      "lineNumbers": []
+    },
+    {
+      "class": "UnconfiguredUnityServicesSymbolUpload",
+      "count": 0,
+      "lineNumbers": []
+    },
+    {
+      "class": "CompilerWarnings",
+      "count": 0,
+      "lineNumbers": []
+    },
+    {
+      "class": "ShaderOrMin16FloatWarnings",
+      "count": 0,
+      "lineNumbers": []
+    }
+  ],
+  "unclassifiedDirectWarningLineNumbers": [],
+  "editorInfrastructureSignals": [
+    {
+      "class": "PlayerConnectionMulticastDenied",
+      "count": 1,
+      "lineNumbers": [
+        67
+      ],
+      "scope": "Editor discovery only."
+    },
+    {
+      "class": "LicensingAccessTokenUnavailable",
+      "count": 1,
+      "lineNumbers": [
+        80
+      ],
+      "scope": "Editor licensing service; build continued successfully."
+    },
+    {
+      "class": "OptionalNativePlatformExtensionsAbsent",
+      "count": 16,
+      "lineNumbers": [
+        192,
+        193,
+        194,
+        196,
+        197,
+        199,
+        200,
+        201,
+        353,
+        354,
+        355,
+        356,
+        357,
+        359,
+        360,
+        361
+      ],
+      "scope": "Editor module availability only."
+    },
+    {
+      "class": "VisionOSNativeModuleLoadFailed",
+      "count": 2,
+      "lineNumbers": [
+        198,
+        358
+      ],
+      "scope": "Unused VisionOS editor module."
+    }
+  ],
+  "cleanup": {
+    "implementation": {
+      "path": "Docs/CommercialReadiness/2026-10-06/BuildWarningCleanup/implementation.json",
+      "sha256": "894544b4bacee2bbd5f4003a7e071ecfa8013da635e2916783c33523c6b84216",
+      "bytes": 1721
+    },
+    "archivePlan": {
+      "path": "Docs/CommercialReadiness/2026-10-06/BuildWarningCleanup/archive-plan.json",
+      "sha256": "2d5079b5e0492fdded09a438ac49c39c1f0b5464b4cd19d0e520d4fa686d3119",
+      "bytes": 83427
+    },
+    "archiveFilesVerifiedAfterNativeImport": 184,
+    "archiveBytesVerifiedAfterNativeImport": 676125,
+    "archiveGuidsVerifiedAfterNativeImport": 100,
+    "allArchivedBytesAndGuidsPreserved": true,
+    "oldPathsAbsent": true,
+    "testFolderMeta": {
+      "path": "Packages/com.unity.render-pipelines.core/Tests~.meta",
+      "sha256": "60d613be333d2de8ba91564ee7c6f6b9241948501a750e527ae7af92030d8c39",
+      "bytes": 172
+    },
+    "testFolderMetaMatchesOriginalPlan": true,
+    "engineCloudCollectionEnabled": false,
+    "settingsSnapshots": [
+      {
+        "before": {
+          "path": "Docs/CommercialReadiness/2026-10-06/ReleaseApkAudit/20261006-063535-release-diagnostic/ProjectSettings.before.asset",
+          "sha256": "4f0f21ec097a7c11c3b5779b71f8133826b0bdf71734ad59e861b8b5ecf4ae35",
+          "bytes": 26802
+        },
+        "current": {
+          "path": "ProjectSettings/ProjectSettings.asset",
+          "sha256": "4f0f21ec097a7c11c3b5779b71f8133826b0bdf71734ad59e861b8b5ecf4ae35",
+          "bytes": 26802
+        },
+        "exactBytesMatch": true,
+        "documentedNativeNormalization": null
+      },
+      {
+        "before": {
+          "path": "Docs/CommercialReadiness/2026-10-06/ReleaseApkAudit/20261006-063535-release-diagnostic/EditorBuildSettings.before.asset",
+          "sha256": "37021518c0e7a96311c221c7dedb23d30c486983290b4c32a6f572abd4c3f3a8",
+          "bytes": 645
+        },
+        "current": {
+          "path": "ProjectSettings/EditorBuildSettings.asset",
+          "sha256": "37021518c0e7a96311c221c7dedb23d30c486983290b4c32a6f572abd4c3f3a8",
+          "bytes": 645
+        },
+        "exactBytesMatch": true,
+        "documentedNativeNormalization": null
+      },
+      {
+        "before": {
+          "path": "Docs/CommercialReadiness/2026-10-06/ReleaseApkAudit/20261006-063535-release-diagnostic/UnityConnectSettings.before.asset",
+          "sha256": "dba38e936e68c426ab563aad8f0d91cf229fd78ccde7e337e706bd900972be8c",
+          "bytes": 1063
+        },
+        "current": {
+          "path": "ProjectSettings/UnityConnectSettings.asset",
+          "sha256": "11251dae0356b6f43dd2c67bb511f6b7ecda4e5de425186bba3297e6f3dc1c6f",
+          "bytes": 1063
+        },
+        "exactBytesMatch": false,
+        "documentedNativeNormalization": {
+          "field": "UnityConnectSettings.m_Enabled",
+          "previous": 1,
+          "canonicalAfterNativeBuild": 0,
+          "engineDiagnosticsPrevious": 0,
+          "engineDiagnosticsAfter": 0,
+          "allOtherLinesExactIncludingCloudProjectIdentityAndIndividualServiceSettings": true,
+          "scope": "Unity-derived master enable flag canonicalized after project-specific cloud diagnostic collection was disabled; no manual mutation/restore in this audit."
+        }
+      }
+    ],
+    "runtimeAndFetcherCodeChangeScope": "Unchanged according to Root implementation receipt; this independent check verifies archived bytes, GUIDs, native outcome and settings normalization."
+  },
+  "settingsRestorationPairsVerified": 16,
+  "effectiveSettingsVerified": {
+    "TextureCompressionOverride": "NoOverride",
+    "MaximumTextureSizeOverride": 0,
+    "SymbolLevel": "Full",
+    "SymbolFormat": "Zip",
+    "ManagedStacktrace": "MethodFileLineNumber",
+    "ErrorStacktrace": "Full",
+    "ExceptionStacktrace": "Full"
+  },
+  "nativeSymbolIdentitiesMatch": true,
+  "textures": {
+    "report": {
+      "path": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\CommercialReadiness\\2026-10-06\\ReleaseApkAudit\\20261006-063535-release-diagnostic\\building-textures.json",
+      "bytes": 143051,
+      "sha256": "c10a49e3a770f10076c23a0a1426cf1103e593222fc9a522dd77f5fd91725d31"
+    },
+    "tool": {
+      "path": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Tools\\Implementation\\audit_android_building_textures.py",
+      "bytes": 13840,
+      "sha256": "b9618cead546bd09643c2dcca2d601806b6875496b769fa95c001b18b5226be3"
+    },
+    "textures": 251,
+    "formats": {
+      "ETC2_RGBA8": 251
+    },
+    "gpuImageBytes": 350930128,
+    "originalSourcesAndGuidsPreserved": true
+  },
+  "warningsZeroGatePassed": true,
+  "actualArtifactVerificationPassed": true,
+  "physicalDeviceAcceptance": false,
+  "humanAcceptance": false,
+  "releaseAccepted": false
+}

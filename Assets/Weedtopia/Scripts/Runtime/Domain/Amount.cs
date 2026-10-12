@@ -5,7 +5,7 @@ namespace Weedtopia.Domain
 {
     /// <summary>Signed base-ten value with 12 significant digits, independent of Unity and locale.</summary>
     [Serializable]
-    public struct Amount : IComparable<Amount>, IEquatable<Amount>
+    public struct Amount : IComparable<Amount>, IEquatable<Amount>, IFormattable
     {
         public double mantissa;
         public int exponent;
@@ -17,6 +17,14 @@ namespace Weedtopia.Domain
             if (double.IsNaN(value) || double.IsInfinity(value)) throw new ArgumentOutOfRangeException(nameof(value));
             mantissa = value; exponent = power;
             if (value == 0) { exponent = 0; return; }
+            // In this interval the original decimal shift is exactly zero. Keep its rounding contract.
+            double absolute = Math.Abs(value);
+            if (absolute >= 1 && absolute <= 9)
+            {
+                mantissa = Math.Round(value, 11, MidpointRounding.AwayFromZero);
+                if (!IsValid) throw new ArgumentOutOfRangeException(nameof(power));
+                return;
+            }
             int shift = (int)Math.Floor(Math.Log10(Math.Abs(value)));
             // Split subnormal exponents to avoid Pow underflow.
             if (shift < -300) { value *= 1e300; power -= 300; shift += 300; }
@@ -73,15 +81,17 @@ namespace Weedtopia.Domain
             return at < 0 ? new Amount(double.Parse(text, CultureInfo.InvariantCulture)) :
                 new Amount(double.Parse(text.Substring(0, at), CultureInfo.InvariantCulture), int.Parse(text.Substring(at + 1), CultureInfo.InvariantCulture));
         }
-        public override string ToString()
+        public override string ToString() => ToString(null,CultureInfo.InvariantCulture);
+        public string ToString(string format,IFormatProvider provider)
         {
+            provider=provider??CultureInfo.InvariantCulture;
             if (mantissa == 0) return "0";
-            if (exponent < 3 && exponent > -3) return ToDouble().ToString("0.##", CultureInfo.InvariantCulture);
+            if (exponent < 3 && exponent > -3) return ToDouble().ToString(format??"0.##", provider);
             string[] suffix = { "", "K", "M", "B", "T", "Qa", "Qi" };
             int group = exponent / 3;
             return group > 0 && group < suffix.Length
-                ? (mantissa * Math.Pow(10, exponent % 3)).ToString("0.##", CultureInfo.InvariantCulture) + suffix[group]
-                : mantissa.ToString("0.##", CultureInfo.InvariantCulture) + "e" + exponent;
+                ? (mantissa * Math.Pow(10, exponent % 3)).ToString(format??"0.##", provider) + suffix[group]
+                : mantissa.ToString(format??"0.##", provider) + "e" + exponent;
         }
     }
 }

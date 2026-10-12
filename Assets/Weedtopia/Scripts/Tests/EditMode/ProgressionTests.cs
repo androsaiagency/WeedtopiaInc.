@@ -10,31 +10,37 @@ namespace Weedtopia.Tests
 {
     public sealed class ProgressionTests
     {
-        public static GameDefinitions Definitions() => JsonUtility.FromJson<GameDefinitions>(File.ReadAllText("Assets/Weedtopia/Game/Content/BurningHills.json"));
+        public static GameDefinitions Definitions()
+        {
+            var definitions=JsonUtility.FromJson<GameDefinitions>(File.ReadAllText("Assets/Weedtopia/Game/Content/BurningHills.json"));
+            var german=JsonUtility.FromJson<LocaleDocument>(File.ReadAllText("Assets/Weedtopia/Game/Localization/de.json"));
+            definitions.TextLookup=new LocalizationService(new[]{new LanguageDefinition("de","Deutsch","de-DE")},new[]{german});return definitions;
+        }
         private static DateTime Start => new DateTime(2026,9,21,12,0,0,DateTimeKind.Utc);
         [Test] public void AuthoredContentAndAllCurvesAreValid()
         {
-            var d=Definitions();d.Validate();Assert.That(d.instances.Length,Is.EqualTo(56));Assert.That(d.roles.Length,Is.EqualTo(12));
+            var d=Definitions();d.Validate();Assert.That(d.instances.Count(i=>i.cityId=="burning_hills"),Is.EqualTo(56));Assert.That(d.roles.Length,Is.EqualTo(12));
             foreach(var b in d.buildings)
                 for(int n=2;n<=5000;n++)
                 {
                     Assert.That(b.cost.At(n)>=b.cost.At(n-1),Is.True);Assert.That(b.capacity.At(n)>=b.capacity.At(n-1),Is.True);
-                    Assert.That(b.rate.At(n)>=b.rate.At(n-1),Is.True);Assert.That(b.BuildSeconds(n)>=b.BuildSeconds(n-1),Is.True);
+                    Assert.That(b.rate.At(n)>=b.rate.At(n-1),Is.True);if (VisualTiers.Starts.Contains(n)) Assert.That(b.BuildSeconds(n)>=b.BuildSeconds(VisualTiers.Starts[VisualTiers.Index(n)-1]),Is.True);
+                    else Assert.That(b.BuildSeconds(n),Is.Zero,b.id+" level "+n);
                 }
         }
         [Test] public void FullTutorialReachesFreeplayWithoutPremiumOrStateInjection()
         {
             var d=Definitions();var s=GameState.Create(d,"Testperson",Start);var clock=new ManualClock(Start);var session=new GameSession(d,s,clock);
             int seconds=0;
-            for(;seconds<1800&&!s.City.freeplay;seconds++)
-            { TutorialDriver.Act(session,clock.UtcNow);clock.UtcNow=clock.UtcNow.AddSeconds(1);session.Advance(1); }
+            for(;seconds<TutorialDriver.MaxSimulationSeconds&&!s.City.freeplay;seconds++)
+            { TutorialDriver.Act(session,clock.UtcNow,allowRecovery:false);clock.UtcNow=clock.UtcNow.AddSeconds(1);session.Advance(1); }
             Directory.CreateDirectory("Docs/Implementation/Validation");
             File.WriteAllText("Docs/Implementation/Validation/progression_simulation.json",JsonUtility.ToJson(new Result{utc=DateTime.UtcNow.ToString("O"),seconds=seconds,freeplay=s.City.freeplay,quests=s.City.questIndex,grinders=s.grinders,money=s.money.Serialize(),quest=session.Progression.Current?.id},true));
             if(!s.City.freeplay) File.WriteAllText("Docs/Implementation/Validation/progression_failure_state.json",JsonUtility.ToJson(s,true));
             Assert.That(s.City.freeplay,Is.True,"Stuck at "+session.Progression.Current?.id);
-            Assert.That(s.grinders,Is.GreaterThanOrEqualTo(50));Assert.That(s.City.stats.pastrySold>0,Is.True);
+            Assert.That(s.grinders,Is.GreaterThanOrEqualTo(50));Assert.That(s.nextRecoveryWork,Is.Zero);Assert.That(s.City.stats.pastrySold>0,Is.True);
             Assert.That(session.Simulation.Residents(s.activeCity),Is.GreaterThan(0));
-            Assert.That(s.City.completedQuests.Distinct().Count(),Is.EqualTo(d.quests.Length));
+            Assert.That(s.City.completedQuests.Distinct().Count(),Is.EqualTo(d.QuestsFor(s.activeCity).Length));
             Amount money=s.money;Assert.That(session.Progression.Claim(),Is.EqualTo(Failure.NotReady));Assert.That(s.money,Is.EqualTo(money));
         }
         [Serializable] private sealed class Result {public string utc,money,quest;public int seconds,quests,grinders;public bool freeplay;}
@@ -52,7 +58,7 @@ namespace Weedtopia.Tests
         [Test] public void LastPlotProtectsMissingTutorialChoiceAndChoiceIsPermanent()
         {
             var d=Definitions();var s=GameState.Create(d,"Tester",Start);s.City.unlocked=Zone.Settlement;var session=new GameSession(d,s,new ManualClock(Start));
-            var plots=d.instances.Where(x=>x.family=="settlement_plot").ToArray();
+            var plots=d.instances.Where(x=>x.cityId==s.activeCity&&x.family=="settlement_plot").ToArray();
             foreach(var plot in plots.Take(plots.Length-1))Assert.That(session.ChoosePlot(plot.id,"park"),Is.EqualTo(Failure.None));
             string last=plots.Last().id;
             Assert.That(session.ChoosePlot(last,"park"),Is.EqualTo(Failure.ReservedPlot));
@@ -99,7 +105,7 @@ namespace Weedtopia.Tests
         [Test] public void VipGoalsAreReachableFromFarmAndRewardsCannotBeClaimedTwice()
         {
             var d=Definitions();var s=GameState.Create(d,"Tester",Start);var clock=new ManualClock(Start);var session=new GameSession(d,s,clock);
-            for(int i=0;i<300&&!s.City.freeplay;i++){TutorialDriver.Act(session,clock.UtcNow);clock.UtcNow=clock.UtcNow.AddSeconds(1);session.Advance(1);}
+            for(int i=0;i<TutorialDriver.MaxSimulationSeconds&&!s.City.freeplay;i++){TutorialDriver.Act(session,clock.UtcNow,allowRecovery:false);clock.UtcNow=clock.UtcNow.AddSeconds(1);session.Advance(1);}
             session.Daily.Claim(clock.UtcNow.AddDays(1));var v=s.vip.First(x=>!x.completed);
             Assert.That(v.kind==ConditionKind.Harvest||v.kind==ConditionKind.Delivered,Is.True);
             // Existing built production chain and public work commands must make the generated goal attainable.
@@ -113,10 +119,10 @@ namespace Weedtopia.Tests
         {
             var d=Definitions();var s=GameState.Create(d,"Tester",Start);var clock=new ManualClock(Start);var session=new GameSession(d,s,clock);
             session.CompleteIntro();Assert.That(session.Upgrades.BuyWithMoney("farm_grow_02"),Is.EqualTo(Failure.None));
-            for(int i=0;i<1800&&!s.City.freeplay;i++)
+            for(int i=0;i<TutorialDriver.MaxSimulationSeconds&&!s.City.freeplay;i++)
             {
                 if(s.City.unlocked==Zone.Industry&&s.Find("bakery_02").level==0&&s.Find("bakery_02").buildingSeconds==0)session.Upgrades.BuyWithMoney("bakery_02");
-                TutorialDriver.Act(session,clock.UtcNow);clock.UtcNow=clock.UtcNow.AddSeconds(1);session.Advance(1);
+                TutorialDriver.Act(session,clock.UtcNow,allowRecovery:false);clock.UtcNow=clock.UtcNow.AddSeconds(1);session.Advance(1);
             }
             Assert.That(s.City.freeplay,Is.True,session.Progression.Current?.id);Assert.That(s.Find("farm_grow_02").level,Is.EqualTo(1));Assert.That(s.Find("bakery_02").level,Is.EqualTo(1));Assert.That(s.grinders,Is.GreaterThanOrEqualTo(50));
         }
@@ -129,7 +135,7 @@ namespace Weedtopia.Tests
         [Test] public void QuestRewardsContributeToLifetimeEarningsOnlyOnce()
         {
             var d=Definitions();var s=GameState.Create(d,"Tester",Start);var session=new GameSession(d,s,new ManualClock(Start));
-            session.CompleteIntro();session.Talk("mila");session.Progression.Claim();session.Upgrades.BuyWithMoney("farm_grow_01");session.Advance(4);
+            session.CompleteIntro();session.Talk("mila");session.Progression.Claim();session.Upgrades.BuyWithMoney("farm_grow_01");session.Advance(s.Find("farm_grow_01").buildingSeconds);
             Assert.That(s.City.stats.earned,Is.EqualTo(Amount.Zero));Assert.That(session.Progression.Claim(),Is.EqualTo(Failure.None));Assert.That(s.City.stats.earned,Is.EqualTo(new Amount(150)));
             Assert.That(session.Progression.Claim(),Is.EqualTo(Failure.NotReady));Assert.That(s.City.stats.earned,Is.EqualTo(new Amount(150)));
         }

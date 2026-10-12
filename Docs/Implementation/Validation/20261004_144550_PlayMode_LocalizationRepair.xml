@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="5" result="Failed(Child)" total="5" passed="3" failed="2" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-04 12:46:10Z" end-time="2026-10-04 12:46:31Z" duration="21,0253576">
+  <test-suite type="TestSuite" id="1110" name="Weedtopia" fullname="Weedtopia" runstate="Runnable" testcasecount="91" result="Failed" site="Child" start-time="2026-10-04 12:46:10Z" end-time="2026-10-04 12:46:31Z" duration="21.025358" total="5" passed="3" failed="2" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1106" name="Weedtopia.Game.PlayModeTests.dll" fullname="D:/Unity Games/Weedtopia Inc/WeedtopiaInc/Library/ScriptAssemblies/Weedtopia.Game.PlayModeTests.dll" runstate="Runnable" testcasecount="91" result="Failed" site="Child" start-time="2026-10-04 12:46:10Z" end-time="2026-10-04 12:46:31Z" duration="21.012528" total="5" passed="3" failed="2" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="250936" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1107" name="Weedtopia" fullname="Weedtopia" runstate="Runnable" testcasecount="91" result="Failed" site="Child" start-time="2026-10-04 12:46:10Z" end-time="2026-10-04 12:46:31Z" duration="21.008828" total="5" passed="3" failed="2" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1108" name="Tests" fullname="Weedtopia.Tests" runstate="Runnable" testcasecount="91" result="Failed" site="Child" start-time="2026-10-04 12:46:10Z" end-time="2026-10-04 12:46:31Z" duration="21.005098" total="5" passed="3" failed="2" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1109" name="PlayMode" fullname="Weedtopia.Tests.PlayMode" runstate="Runnable" testcasecount="91" result="Failed" site="Child" start-time="2026-10-04 12:46:10Z" end-time="2026-10-04 12:46:31Z" duration="21.001595" total="5" passed="3" failed="2" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="1031" name="GameFlowTests" fullname="Weedtopia.Tests.PlayMode.GameFlowTests" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" testcasecount="25" result="Failed" site="Child" start-time="2026-10-04 12:46:10Z" end-time="2026-10-04 12:46:25Z" duration="14.978243" total="2" passed="0" failed="2" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1055" name="CharacterRaycastsOpenTheMatchingAuthoredPortraitAndCanBeClosed" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.CharacterRaycastsOpenTheMatchingAuthoredPortraitAndCanBeClosed" methodname="CharacterRaycastsOpenTheMatchingAuthoredPortraitAndCanBeClosed" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="1138803457" result="Failed" start-time="2026-10-04 12:46:10Z" end-time="2026-10-04 12:46:23Z" duration="12.881202" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected string length 21 but was 5. Strings differ at index 5.
+  Expected: "Rocko · Bürgermeister"
+  But was:  "Rocko"
+  ----------------^
+]]></message>
+                  <stack-trace><![CDATA[at Weedtopia.Tests.PlayMode.GameFlowTests+<CharacterRaycastsOpenTheMatchingAuthoredPortraitAndCanBeClosed>d__30.MoveNext () [0x00718] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\PlayMode\GameFlowTests.cs:422
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in .\Library\PackageCache\com.unity.test-framework@0b7a23ab2e1d\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:44
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case id="1054" name="MaximumUiScaleKeepsContextualActionsInsideSafeArea" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.MaximumUiScaleKeepsContextualActionsInsideSafeArea" methodname="MaximumUiScaleKeepsContextualActionsInsideSafeArea" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="1078980869" result="Failed" start-time="2026-10-04 12:46:23Z" end-time="2026-10-04 12:46:25Z" duration="2.056600" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  StaffAssignment
+  Expected: greater than or equal to -1
+  But was:  -27.9111023f
+]]></message>
+                  <stack-trace><![CDATA[at Weedtopia.Tests.PlayMode.GameFlowTests+<MaximumUiScaleKeepsContextualActionsInsideSafeArea>d__29.MoveNext () [0x00247] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\PlayMode\GameFlowTests.cs:398
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in .\Library\PackageCache\com.unity.test-framework@0b7a23ab2e1d\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:44
+]]></stack-trace>
+                </failure>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1057" name="LocalizationFlowTests" fullname="Weedtopia.Tests.PlayMode.LocalizationFlowTests" classname="Weedtopia.Tests.PlayMode.LocalizationFlowTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-04 12:46:25Z" end-time="2026-10-04 12:46:29Z" duration="4.466132" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1059" name="PersistedRussianPreferenceIsUsedInTheOtherCityAndTitle" fullname="Weedtopia.Tests.PlayMode.LocalizationFlowTests.PersistedRussianPreferenceIsUsedInTheOtherCityAndTitle" methodname="PersistedRussianPreferenceIsUsedInTheOtherCityAndTitle" classname="Weedtopia.Tests.PlayMode.LocalizationFlowTests" runstate="Runnable" seed="1853982899" result="Passed" start-time="2026-10-04 12:46:25Z" end-time="2026-10-04 12:46:28Z" duration="2.852016" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1058" name="SettingsDropdownSwitchesAllFiveLanguagesWithoutChangingProgress" fullname="Weedtopia.Tests.PlayMode.LocalizationFlowTests.SettingsDropdownSwitchesAllFiveLanguagesWithoutChangingProgress" methodname="SettingsDropdownSwitchesAllFiveLanguagesWithoutChangingProgress" classname="Weedtopia.Tests.PlayMode.LocalizationFlowTests" runstate="Runnable" seed="88813305" result="Passed" start-time="2026-10-04 12:46:28Z" end-time="2026-10-04 12:46:29Z" duration="1.608756" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1081" name="UiExperienceTests" fullname="Weedtopia.Tests.PlayMode.UiExperienceTests" classname="Weedtopia.Tests.PlayMode.UiExperienceTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-04 12:46:29Z" end-time="2026-10-04 12:46:31Z" duration="1.536456" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1090" name="WholeScreenTapAdvancesPagesAndConsumesTheFinalTap" fullname="Weedtopia.Tests.PlayMode.UiExperienceTests.WholeScreenTapAdvancesPagesAndConsumesTheFinalTap" methodname="WholeScreenTapAdvancesPagesAndConsumesTheFinalTap" classname="Weedtopia.Tests.PlayMode.UiExperienceTests" runstate="Runnable" seed="1040554537" result="Passed" start-time="2026-10-04 12:46:29Z" end-time="2026-10-04 12:46:31Z" duration="1.523128" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: C:/Users/Mein-PC/AppData/LocalLow/DefaultCompany/Weedtopia\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

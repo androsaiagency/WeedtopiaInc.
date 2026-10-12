@@ -46,10 +46,17 @@ namespace Weedtopia.Domain
         public string id;
         public Zone unlocked;
         public bool freeplay;
+        public bool charterAccepted;
+        // For combined charters only: greatest simultaneous source population observed, retained through later population decline.
+        public long charterResidentMilestone;
         public int questIndex;
         public List<string> talked = new List<string>();
         public List<string> completedQuests = new List<string>();
         public Statistics stats = new Statistics();
+        public CityProjectState project = new CityProjectState();
+        public int storyResidentMilestone;
+        public List<VipStoryState> vipStories = new List<VipStoryState>();
+        public List<VipCollaborationState> vipCollaborations = new List<VipCollaborationState>();
     }
     [Serializable] public sealed class Statistics
     {
@@ -61,6 +68,9 @@ namespace Weedtopia.Domain
     {
         public int schemaVersion = 2, contentVersion = 1;
         public string playerName, activeCity = "burning_hills";
+        public string playerAvatar = PlayerProfile.DefaultAvatar;
+        // False in historical saves. Only a fresh Play session asks Rocko for the name.
+        public bool profileNamePending;
         public bool introSeen;
         public int introLine;
         public Amount money = 1000;
@@ -69,6 +79,11 @@ namespace Weedtopia.Domain
         public long lastUtcTicks, highWaterUtcTicks, simulationSeconds;
         public double tickRemainder;
         public long revision, nextRecoveryWork;
+        public List<ItemStack> inventory = new List<ItemStack>();
+        public LuckyWheelState luckyWheel;
+        public ShopState shop;
+        public long rewardSequence;
+        public List<RewardReceipt> rewardHistory = new List<RewardReceipt>();
         public float volume = 0.7f, uiScale = 1;
         public List<CityState> cities = new List<CityState>();
         public List<BuildingState> buildings = new List<BuildingState>();
@@ -80,7 +95,7 @@ namespace Weedtopia.Domain
         public static GameState Create(GameDefinitions defs, string name, DateTime utc, uint seed = 420)
         {
             name = (name ?? "").Trim();
-            if (name.Length < 2 || name.Length > 24 || name.Any(c => char.IsControl(c) || c == '<' || c == '>')) throw new ArgumentException("name.invalid");
+            if (!PlayerProfile.ValidName(name)) throw new ArgumentException("name.invalid");
             defs.Validate();
             var state = new GameState { playerName = name, contentVersion = defs.version, lastUtcTicks = utc.Ticks, highWaterUtcTicks = utc.Ticks, randomState = seed == 0 ? 1 : seed };
             foreach (string city in defs.instances.Select(x => x.cityId).Distinct()) state.cities.Add(new CityState { id = city });

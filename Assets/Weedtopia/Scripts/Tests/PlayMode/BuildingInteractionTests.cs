@@ -10,6 +10,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 using UnityEngine.UI;
 using Weedtopia.Domain;
+using Weedtopia.Persistence;
 using Weedtopia.Unity;
 using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 
@@ -59,22 +60,94 @@ namespace Weedtopia.Tests.PlayMode
         [UnityTest] public IEnumerator FreeWorldHasNoPersistentPanelsOrPositionScrollbar()
         {
             Assert.That(Ui.BuildingOpen||Ui.PickerOpen||Ui.townMenu.activeSelf||root.Ui.ModalOpen,Is.False);
-            Assert.That(Ui.launcher.gameObject.activeInHierarchy,Is.True);
+            Assert.That(Ui.launcher.gameObject.activeInHierarchy,Is.False);
             Assert.That(root.Ui.GetComponentsInChildren<Scrollbar>(),Is.Empty);
             foreach(string id in new[]{"detailTitle","questTitle","title","recovery"})Assert.That(root.Ui.Element<RectTransform>(id).gameObject.activeInHierarchy,Is.False,id);
             var dock=root.Ui.GetComponent<WorldNavigationBar>().Dock;
             Assert.That(dock.gameObject.activeInHierarchy,Is.True);
-            Assert.That(dock.GetComponentsInChildren<Button>().Length,Is.EqualTo(5));
+            Assert.That(dock.GetComponentsInChildren<Button>().Length,Is.EqualTo(10));
             Assert.That(dock.GetComponentsInChildren<Text>(),Is.Empty);
-            Ui.launcher.onClick.Invoke();yield return null;Assert.That(Ui.townMenu.activeSelf,Is.True);
+            Ui.launcher.onClick.Invoke();yield return null;Assert.That(Ui.townMenu.activeSelf,Is.False);
             root.Ui.Element<Button>("zone.Settlement").onClick.Invoke();Assert.That(Ui.townMenu.activeSelf,Is.False);Assert.That(root.CameraRig.CurrentDistrict.zone,Is.EqualTo(Zone.Settlement));
+            LogAssert.NoUnexpectedReceived();
+        }
+        [UnityTest] public IEnumerator InventoryAndWheelDockOpenByTouchAndFreeBadgeTracksTheSavedDraw()
+        {
+            long sequence=root.Session.State.rewardSequence;
+            var inventory=root.Ui.Element<Button>("inventoryDock").GetComponent<RectTransform>();
+            Vector2 point=inventory.TransformPoint(inventory.rect.center);
+            yield return Finger(1,point,TouchPhase.Began);yield return Finger(1,point,TouchPhase.Ended);
+            Assert.That(root.Ui.Collection.gameObject.activeInHierarchy,Is.True);
+            Assert.That(root.Session.State.rewardSequence,Is.EqualTo(sequence));root.Ui.Close();yield return null;
+            var wheel=root.Ui.Element<Button>("wheelDock").GetComponent<RectTransform>();
+            Assert.That(wheel.Find("FreeBadge").gameObject.activeInHierarchy,Is.True);
+            point=wheel.TransformPoint(wheel.rect.center);
+            yield return Finger(1,point,TouchPhase.Began);yield return Finger(1,point,TouchPhase.Ended);
+            Assert.That(root.Ui.LuckyWheel.gameObject.activeInHierarchy,Is.True);
+            Assert.That(root.Session.State.rewardSequence,Is.EqualTo(sequence));
+            root.Ui.LuckyWheel.Spin();root.Ui.Close();root.Refresh();yield return null;
+            Assert.That(wheel.Find("FreeBadge").gameObject.activeInHierarchy,Is.False);
+            Assert.That(root.Session.State.grinders,Is.EqualTo(50));
+            point=wheel.TransformPoint(wheel.rect.center);
+            yield return Finger(1,point,TouchPhase.Began);yield return Finger(1,point,TouchPhase.Ended);
+            Assert.That(root.Ui.LuckyWheel.gameObject.activeInHierarchy,Is.True);
+            Assert.That(root.Ui.LuckyWheel.spinLabel.text,Does.Contain("50"));
+            LogAssert.NoUnexpectedReceived();
+        }
+        [UnityTest] public IEnumerator DirectMenuButtonsWorkByTouchAndSettingsPersistWithoutSaveButton()
+        {
+            var header=root.Ui.GetComponentInChildren<CityStatusBar>(true);
+            Assert.That(header.CityName.text,Is.EqualTo("Burning Hills"));
+            Assert.That(header.gameObject.activeInHierarchy,Is.True);
+            foreach(string id in new[]{"ui.save","ui.townhall"})Assert.That(root.Ui.Element<Button>(id).gameObject.activeInHierarchy,Is.False);
+            var overview=Ui.overview.GetComponent<RectTransform>();Vector2 point=overview.TransformPoint(overview.rect.center);
+            yield return Finger(1,point,TouchPhase.Began);yield return Finger(1,point,TouchPhase.Ended);
+            Assert.That(root.CameraRig.IsInspecting,Is.False);
+            var team=Ui.inventory.GetComponent<RectTransform>();point=team.TransformPoint(team.rect.center);
+            yield return Finger(1,point,TouchPhase.Began);yield return Finger(1,point,TouchPhase.Ended);
+            Assert.That(root.Ui.Element<RectTransform>("workers").gameObject.activeInHierarchy,Is.True);
+            Assert.That(header.Settings.gameObject.activeInHierarchy,Is.False);
+            root.Ui.Close();yield return null;
+            point=header.Settings.TransformPoint(header.Settings.rect.center);
+            yield return Finger(1,point,TouchPhase.Began);yield return Finger(1,point,TouchPhase.Ended);
+            Assert.That(root.Ui.Element<RectTransform>("settings").gameObject.activeInHierarchy,Is.True);
+            Assert.That(root.Session.Paused,Is.True);
+            root.Ui.Element<Slider>("volume").value=.37f;root.Ui.Element<Slider>("scale").value=1.1f;
+            root.Ui.Element<Button>("ui.resume").onClick.Invoke();
+            var loaded=new LocalSaveStore(save,root.Definitions).Load();
+            Assert.That(loaded.State.volume,Is.EqualTo(.37f).Within(.001));Assert.That(loaded.State.uiScale,Is.EqualTo(1.1f).Within(.001));
+            Assert.That(root.Session.Paused,Is.False);LogAssert.NoUnexpectedReceived();
+        }
+        [UnityTest] public IEnumerator TeamShowsCardsAndSpinSpendsExactlyOneCardAndAutosavesReward()
+        {
+            root.Session.State.cards=2;root.Ui.ShowWorkers();root.Refresh();yield return null;
+            var spin=root.Ui.Element<Button>("ui.spin");
+            Assert.That(spin.gameObject.activeInHierarchy,Is.True);
+            Assert.That(root.Presentation.currencyValues[2].transform.IsChildOf(root.Ui.Element<RectTransform>("workers")),Is.True);
+            Assert.That(root.Presentation.currencyValues[2].text,Is.EqualTo("2"));
+            int workers=root.Session.State.workers.Count;spin.onClick.Invoke();yield return null;
+            Assert.That(root.Session.State.cards,Is.EqualTo(1));Assert.That(root.Session.State.workers.Count,Is.EqualTo(workers+1));
+            Assert.That(root.Presentation.currencyValues[2].text,Is.EqualTo("1"));
+            var saved=new LocalSaveStore(save,root.Definitions).Load().State;
+            Assert.That(saved.cards,Is.EqualTo(1));Assert.That(saved.workers.Count,Is.EqualTo(workers+1));
+            root.Session.State.cards=0;root.Refresh();Assert.That(spin.interactable,Is.False);
+            root.Session.State.cards=2;root.Session.State.City.unlocked=Zone.Farm;root.Refresh();Assert.That(spin.interactable,Is.False);
+            LogAssert.NoUnexpectedReceived();
+        }
+        [UnityTest] public IEnumerator OrdersRetainQuestRewardsFocusAndRecoveryAfterRemovingHiddenMenu()
+        {
+            root.Ui.ShowJournal();yield return null;
+            foreach(string id in new[]{"questTitle","questBody","ui.claim","ui.focus","recovery","ui.daily"})
+                Assert.That(root.Ui.Element<RectTransform>(id).gameObject.activeInHierarchy,Is.True,id);
+            root.Ui.Element<Button>("ui.focus").onClick.Invoke();yield return null;
+            Assert.That(root.Ui.LegacyModalOpen,Is.False);Assert.That(Ui.townMenu.activeSelf,Is.False);
             LogAssert.NoUnexpectedReceived();
         }
         [UnityTest] public IEnumerator MouseSwipeMovesEveryDistrictWithoutClickingABuilding()
         {
             foreach(Zone zone in Enum.GetValues(typeof(Zone)))
             {
-                root.FocusZone(zone);root.CameraRig.ScrollTo(.5f);yield return Settle();
+                root.FocusZone(zone);root.CameraRig.SetDiagnosticZoom(28);root.CameraRig.ScrollTo(.5f);yield return Settle();
                 var before=root.CameraRig.TargetPosition;var camera=root.CameraRig.RenderCamera;var range=root.CameraRig.CurrentDistrict;
                 Vector2 screenDirection=(camera.WorldToScreenPoint(DistrictMap.ToWorld(range.end))-camera.WorldToScreenPoint(DistrictMap.ToWorld(range.start))).normalized;
                 Vector2 start=new Vector2(Screen.width*.6f,Screen.height*.45f);
@@ -88,7 +161,7 @@ namespace Weedtopia.Tests.PlayMode
         {
             foreach(Zone zone in Enum.GetValues(typeof(Zone)))
             {
-                root.CameraRig.EnterDistrict(zone);root.CameraRig.ScrollTo(.5f);yield return Settle();
+                root.CameraRig.EnterDistrict(zone);root.CameraRig.SetDiagnosticZoom(28);root.CameraRig.ScrollTo(.5f);yield return Settle();
                 var before=DistrictMap.ToPlan(root.CameraRig.TargetPosition);
                 var p=new Vector2(Screen.width*.4f,Screen.height*.55f);
                 var end=p+new Vector2(Screen.width*.23f,-Screen.height*.17f);
@@ -99,23 +172,51 @@ namespace Weedtopia.Tests.PlayMode
                 Assert.That(Ui.BuildingOpen||Ui.townMenu.activeSelf,Is.False);
             }
         }
-        [UnityTest] public IEnumerator TouchCrossesRiverAndReachesAllFourWorldEdgesWithoutMenu()
+        private void AssertRenderedViewInsideOverview()
         {
-            root.CameraRig.EnterDistrict(Zone.Farm);root.CameraRig.SetDiagnosticZoom(230);yield return Settle();
-            Vector2 start=new Vector2(Screen.width*.25f,Screen.height*.5f),end=new Vector2(Screen.width*.75f,Screen.height*.5f);
+            var camera=root.CameraRig.RenderCamera;
+            float projection=Vector3.ProjectOnPlane(camera.transform.up,Vector3.up).magnitude;
+            var center=new Vector2(174,65);var half=new Vector2(230*16f/9f,230/projection);
+            var ground=new Plane(Vector3.up,Vector3.zero);
+            foreach(var corner in new[]{Vector2.zero,Vector2.right,Vector2.up,Vector2.one})
+            {
+                var ray=camera.ViewportPointToRay(corner);Assert.That(ground.Raycast(ray,out float distance),Is.True);
+                var point=DistrictMap.ToPlan(ray.GetPoint(distance));
+                Assert.That(point.x,Is.InRange(center.x-half.x-.05f,center.x+half.x+.05f));
+                Assert.That(point.y,Is.InRange(center.y-half.y-.05f,center.y+half.y+.05f));
+            }
+        }
+        [UnityTest] public IEnumerator TouchCrossesRiverButRenderedViewCannotLeaveOverview()
+        {
+            root.CameraRig.EnterDistrict(Zone.Farm);root.CameraRig.SetDiagnosticZoom(120);yield return Settle();
+            // The active quest buttons now occupy the upper-left world area. Start this world gesture in free space.
+            Vector2 start=new Vector2(Screen.width*.5f,Screen.height*.5f),end=new Vector2(Screen.width*.9f,Screen.height*.5f);
+            Assert.That(root.CameraRig.IsUiPoint(start),Is.False);
             yield return Finger(1,start,TouchPhase.Began);yield return Finger(1,end,TouchPhase.Moved);yield return Finger(1,end,TouchPhase.Ended);
             Assert.That(DistrictMap.ToPlan(root.CameraRig.TargetPosition).x,Is.LessThan(140),"Swipe from farm across the river");
             foreach(var direction in new[]{new Vector2(1,1),new Vector2(-1,1),new Vector2(-1,-1),new Vector2(1,-1)})
             {
                 start=new Vector2(Screen.width*(.5f-direction.x*.3f),Screen.height*(.5f-direction.y*.3f));
                 end=new Vector2(Screen.width*(.5f+direction.x*.3f),Screen.height*(.5f+direction.y*.3f));
-                for(int i=0;i<8;i++)
-                {yield return Finger(1,start,TouchPhase.Began);yield return Finger(1,end,TouchPhase.Moved);yield return Finger(1,end,TouchPhase.Ended);}
-                var plan=DistrictMap.ToPlan(root.CameraRig.TargetPosition);
-                Assert.That(plan.x,Is.EqualTo(direction.x>0?-330:700).Within(.05));
-                Assert.That(plan.y,Is.EqualTo(direction.y>0?-340:475).Within(.05));
+                for(int i=0;i<10;i++)
+                {yield return Finger(1,start,TouchPhase.Began);yield return Finger(1,end,TouchPhase.Moved);AssertRenderedViewInsideOverview();yield return Finger(1,end,TouchPhase.Ended);}
+                yield return Settle();AssertRenderedViewInsideOverview();
                 Assert.That(Ui.BuildingOpen||Ui.townMenu.activeSelf,Is.False);
             }
+            root.CameraRig.ShowOverview();yield return Settle();AssertRenderedViewInsideOverview();
+        }
+        [UnityTest] public IEnumerator ZoomAndAspectChangesNeverExposeOutsideOverviewDuringEasing()
+        {
+            var camera=root.CameraRig.RenderCamera;
+            foreach(float aspect in new[]{16f/9f,2560f/1080,9f/16f})
+            {
+                camera.aspect=aspect;
+                root.CameraRig.SetDiagnosticZoom(12);root.CameraRig.Focus(DistrictMap.ToWorld(new Vector2(900,-800)));
+                for(int i=0;i<10;i++){yield return null;AssertRenderedViewInsideOverview();}
+                root.CameraRig.ShowOverview();
+                for(int i=0;i<30;i++){yield return null;AssertRenderedViewInsideOverview();}
+            }
+            camera.ResetAspect();
         }
         [UnityTest] public IEnumerator NavigationButtonsWorkByTouchAndPreserveLockedProgression()
         {
@@ -155,7 +256,7 @@ namespace Weedtopia.Tests.PlayMode
         }
         [UnityTest] public IEnumerator MouseTapFramesBuildingOnRightAndCloseRestoresPreviousView()
         {
-            var site=root.Site("farm_processing");root.CameraRig.ShowOverview();root.CameraRig.Focus(site.transform.position);root.CameraRig.SetDiagnosticZoom(45);yield return Settle();
+            var site=root.Site("farm_processing");root.CameraRig.ShowOverview();root.CameraRig.SetDiagnosticZoom(45);root.CameraRig.Focus(site.transform.position);yield return Settle();
             var center=site.VisualRoot.GetComponentInChildren<Weedtopia.Buildings.Presentation.BuildingSpriteVisual>().SpriteRenderer.bounds.center;
             Vector2 point=root.CameraRig.RenderCamera.WorldToScreenPoint(center);var before=root.CameraRig.TargetPosition;float zoom=root.CameraRig.DesiredZoom;
             yield return MouseAt(point,true);Assert.That(Ui.BuildingOpen,Is.False);yield return MouseAt(point,false);yield return Settle();
@@ -166,6 +267,54 @@ namespace Weedtopia.Tests.PlayMode
             yield return Finger(1,point,TouchPhase.Began);Assert.That(Ui.BuildingOpen,Is.False);
             yield return Finger(1,point,TouchPhase.Ended);Assert.That(Ui.BuildingOpen,Is.True);Assert.That(root.SelectedId,Is.EqualTo("farm_processing"));
             root.Focus("bakery_01");Assert.That(Ui.BuildingOpen,Is.False,"A quest focus must close the previous building context");Assert.That(root.CameraRig.IsInspecting,Is.False);
+        }
+        [UnityTest] public IEnumerator TownHallSpriteMouseAndTouchSelectionKeepStatisticsAndRockoDialogue()
+        {
+            var site=root.Site("town_hall");
+            Assert.That(site.TryGetCurrentSpriteBounds(out _),Is.True,"Original town hall sprite must be active");
+            Assert.That(site.TryGetCurrentVisualBounds(out var bounds),Is.True);
+            root.CameraRig.ShowOverview();root.CameraRig.SetDiagnosticZoom(45);root.CameraRig.Focus(site.transform.position);yield return Settle();
+            Vector2 point=root.CameraRig.RenderCamera.WorldToScreenPoint(bounds.center);
+            var before=root.CameraRig.TargetPosition;float zoom=root.CameraRig.DesiredZoom;
+            yield return MouseAt(point,true);yield return MouseAt(point,false);yield return Settle();
+            Assert.That(Ui.BuildingOpen,Is.True);Assert.That(root.SelectedId,Is.EqualTo("town_hall"));
+            var center=root.CameraRig.RenderCamera.WorldToViewportPoint(bounds.center);
+            Assert.That(center.x,Is.EqualTo(.68f).Within(.02));Assert.That(center.y,Is.EqualTo(.5f).Within(.02));
+            for(int x=-1;x<=1;x+=2)for(int y=-1;y<=1;y+=2)for(int z=-1;z<=1;z+=2)
+            {
+                var p=root.CameraRig.RenderCamera.WorldToViewportPoint(bounds.center+Vector3.Scale(bounds.extents,new Vector3(x,y,z)));
+                Assert.That(p.x,Is.InRange(.35f,.98f));Assert.That(p.y,Is.InRange(.02f,.98f));
+            }
+            Assert.That(Ui.upgrade.gameObject.activeSelf,Is.False,"Town hall remains a fixed building");
+            Ui.work.onClick.Invoke();yield return null;
+            Assert.That(root.Ui.Element<RectTransform>("townhall").gameObject.activeSelf,Is.True);
+            Assert.That(root.Ui.Element<Text>("stats").text,Does.Contain("Rocko"));
+            root.Ui.Close();Ui.talk.onClick.Invoke();yield return null;
+            Assert.That(root.Ui.Element<RectTransform>("conversation").gameObject.activeSelf,Is.True);
+            Assert.That(root.Ui.Element<Text>("conversationText").text,Is.Not.Empty);
+            root.Ui.Close();Ui.closeBuilding.onClick.Invoke();
+            Assert.That(root.CameraRig.TargetPosition,Is.EqualTo(before));Assert.That(root.CameraRig.DesiredZoom,Is.EqualTo(zoom));
+            yield return Settle();point=root.CameraRig.RenderCamera.WorldToScreenPoint(bounds.center);
+            yield return Finger(1,point,TouchPhase.Began);yield return Finger(1,point,TouchPhase.Ended);
+            Assert.That(Ui.BuildingOpen,Is.True);Assert.That(root.SelectedId,Is.EqualTo("town_hall"));
+            LogAssert.NoUnexpectedReceived();
+        }
+        [UnityTest] public IEnumerator TownHallSpriteRetainsAuthoredPickingAfterZoom()
+        {
+            var site=root.Site("town_hall");
+            Assert.That(site.GetComponentInChildren<LODGroup>(),Is.Null);
+            Assert.That(site.TryGetCurrentSpriteBounds(out var expected),Is.True);
+            root.CameraRig.ShowOverview();root.CameraRig.SetDiagnosticZoom(28);root.CameraRig.Focus(site.transform.position);yield return Settle();
+            foreach(float zoom in new[]{22f,48f})
+            {
+                root.CameraRig.SetDiagnosticZoom(zoom);yield return Settle();
+                var box=site.GetComponentInChildren<Weedtopia.Buildings.Presentation.BuildingSpriteVisual>().GetComponent<BoxCollider>();
+                Assert.That(box,Is.Not.Null);
+                var screen=root.CameraRig.RenderCamera.WorldToScreenPoint(box.transform.TransformPoint(box.center));
+                Assert.That(site.TryPick(root.CameraRig.RenderCamera.ScreenPointToRay(screen),out _),Is.True,box.name);
+                Assert.That(site.TryGetCurrentVisualBounds(out var actual),Is.True);Assert.That(actual,Is.EqualTo(expected));
+            }
+            LogAssert.NoUnexpectedReceived();
         }
         [UnityTest] public IEnumerator TouchSwipeAndPinchNeverDispatchAccidentalBuildingTaps()
         {
@@ -180,7 +329,7 @@ namespace Weedtopia.Tests.PlayMode
         }
         [UnityTest] public IEnumerator GesturesThatStartOnInspectorStayCapturedByUi()
         {
-            Ui.OpenBuilding("farm_processing");yield return Settle();var before=root.CameraRig.TargetPosition;var rect=Ui.inspector.GetComponent<RectTransform>();var p=(Vector2)rect.TransformPoint(new Vector3(0,20,0));
+            Ui.OpenBuilding("farm_processing");yield return Settle();var before=root.CameraRig.TargetPosition;var rect=Ui.inspector.GetComponent<RectTransform>();var p=(Vector2)rect.TransformPoint(rect.rect.center);
             Assert.That(root.CameraRig.IsUiPoint(p),Is.True);
             yield return MouseAt(p,true);yield return MouseAt(p+Vector2.right*Screen.width*.4f,true);yield return MouseAt(p+Vector2.right*Screen.width*.4f,false);
             Assert.That(Ui.BuildingOpen,Is.True);Assert.That(root.CameraRig.TargetPosition,Is.EqualTo(before));

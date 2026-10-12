@@ -17,7 +17,7 @@ namespace Weedtopia.Editor.GameSetup
     {
         public const string ResourceFolder = "Assets/Weedtopia/Production/Resources/WeedtopiaBuildings/";
         public const string ApprovalPath = "Docs/LayoutRevision/building_approval.json";
-        [Serializable] private sealed class Approval { public bool approved; }
+        [Serializable] private sealed class Approval { public bool approved = default; }
         [Serializable] public sealed class Cutout { public string key, sprite, spriteSha256; public float worldHeight; public int width, height; public int[] alphaBounds; }
         [Serializable] public sealed class Cutouts { public Cutout[] slots; }
         [Serializable] private sealed class IntegrationReceipt { public string utc; public bool userApproved, catalogReferencesPreserved, anchorsPreserved; public int integrated; public string[] slots; }
@@ -47,6 +47,9 @@ namespace Weedtopia.Editor.GameSetup
                 try
                 {
                     var wrapper=prefab.GetComponent<BuildingVisualWrapper>();
+                    // An explicit model installation owns this slot; sprite repair must preserve it.
+                    if(wrapper.ManagedModel!=null&&wrapper.ManagedModel.gameObject.activeSelf&&wrapper.ManagedModel.GetComponent<LODGroup>()!=null)
+                    {completed.Add(slot.Key);continue;}
                     string before=AnchorState(wrapper);var old=wrapper.VisualRoot.Find("ProductionSpriteVisual");
                     if(old==null || old.GetComponent<BuildingSpriteVisual>()?.ResourcePath=="WeedtopiaBuildings/"+slot.Key)
                     {

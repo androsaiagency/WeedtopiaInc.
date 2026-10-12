@@ -1,0 +1,38 @@
+{
+  "utc": "2026-09-29T04:36:00.003718+00:00",
+  "status": "brighter_city_materials_applied_gameview_verified_pending_user_visual_review",
+  "fill": 0.6499999761581421,
+  "lods": [
+    50000,
+    20000,
+    12000
+  ],
+  "comparison_fill_strengths": [
+    0,
+    0.4,
+    0.65,
+    0.9
+  ],
+  "selected_fill": 0.65,
+  "new_texture_files": 0,
+  "new_scene_lights": 0,
+  "scene_changed": false,
+  "material_changes": "Three dedicated city materials share the original approved 2K maps; base-colour texture also supplies local fill through URP Lit emission. BakedEmissive flag required by URP 17 import; renderers do not contribute baked GI and no light bake was performed.",
+  "verification": "Fresh Unity import, authoring validation of all 2K bindings, six final PlayMode Game View captures, preservation hashes. No new gameplay tests needed for the material-only visual change.",
+  "preservation": {
+    "checked": 2927,
+    "changed": [
+      "Assets/Weedtopia/Art/Buildings/Models/town_hall/T_FIXED/Approved20260928/WT_TownHall_LOD.prefab"
+    ],
+    "unexpected": [],
+    "passed": true
+  },
+  "render_comparison_check": {
+    "changed_pixels_checked": 120618,
+    "mean_error_vs_dark": 39.00758316890238,
+    "mean_error_vs_selected": 0.032626418389737295,
+    "passed": true
+  },
+  "visual_user_approval": false,
+  "external_credits_used": 0
+}

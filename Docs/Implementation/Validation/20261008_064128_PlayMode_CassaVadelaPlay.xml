@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="52" result="Failed(Child)" total="52" passed="51" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-08 04:41:53Z" end-time="2026-10-08 04:48:15Z" duration="381,7299705">
+  <test-suite type="TestSuite" id="1162" name="Weedtopia" fullname="Weedtopia" runstate="Runnable" testcasecount="133" result="Failed" site="Child" start-time="2026-10-08 04:41:53Z" end-time="2026-10-08 04:48:15Z" duration="381.729971" total="52" passed="51" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1158" name="Weedtopia.Game.PlayModeTests.dll" fullname="D:/Unity Games/Weedtopia Inc/WeedtopiaInc/Library/ScriptAssemblies/Weedtopia.Game.PlayModeTests.dll" runstate="Runnable" testcasecount="133" result="Failed" site="Child" start-time="2026-10-08 04:41:53Z" end-time="2026-10-08 04:48:15Z" duration="381.717960" total="52" passed="51" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="340600" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1159" name="Weedtopia" fullname="Weedtopia" runstate="Runnable" testcasecount="133" result="Failed" site="Child" start-time="2026-10-08 04:41:53Z" end-time="2026-10-08 04:48:15Z" duration="381.715062" total="52" passed="51" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1160" name="Tests" fullname="Weedtopia.Tests" runstate="Runnable" testcasecount="133" result="Failed" site="Child" start-time="2026-10-08 04:41:53Z" end-time="2026-10-08 04:48:15Z" duration="381.711448" total="52" passed="51" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1161" name="PlayMode" fullname="Weedtopia.Tests.PlayMode" runstate="Runnable" testcasecount="133" result="Failed" site="Child" start-time="2026-10-08 04:41:53Z" end-time="2026-10-08 04:48:15Z" duration="381.708885" total="52" passed="51" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="1025" name="CassaVadelaFountainPlayModeTests" fullname="Weedtopia.Tests.PlayMode.CassaVadelaFountainPlayModeTests" classname="Weedtopia.Tests.PlayMode.CassaVadelaFountainPlayModeTests" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2026-10-08 04:41:53Z" end-time="2026-10-08 04:41:59Z" duration="5.643842" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1026" name="SavedFountainStagesStayDryUntilProjectCompletionAndRestoredWaterSurvivesContinue" fullname="Weedtopia.Tests.PlayMode.CassaVadelaFountainPlayModeTests.SavedFountainStagesStayDryUntilProjectCompletionAndRestoredWaterSurvivesContinue" methodname="SavedFountainStagesStayDryUntilProjectCompletionAndRestoredWaterSurvivesContinue" classname="Weedtopia.Tests.PlayMode.CassaVadelaFountainPlayModeTests" runstate="Runnable" seed="780190902" result="Failed" label="Error" start-time="2026-10-08 04:41:53Z" end-time="2026-10-08 04:41:59Z" duration="5.626981" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[System.NullReferenceException : Object reference not set to an instance of an object]]></message>
+                  <stack-trace><![CDATA[  at Weedtopia.Tests.PlayMode.CassaVadelaFountainPlayModeTests+<SavedFountainStagesStayDryUntilProjectCompletionAndRestoredWaterSurvivesContinue>d__11.MoveNext () [0x00296] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\PlayMode\CassaVadelaFountainPlayModeTests.cs:81 
+  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in .\Library\PackageCache\com.unity.test-framework@0b7a23ab2e1d\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:44 ]]></stack-trace>
+                </failure>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1027" name="CityCampaignUiTests" fullname="Weedtopia.Tests.PlayMode.CityCampaignUiTests" classname="Weedtopia.Tests.PlayMode.CityCampaignUiTests" runstate="Runnable" testcasecount="16" result="Passed" start-time="2026-10-08 04:41:59Z" end-time="2026-10-08 04:43:33Z" duration="93.955263" total="16" passed="16" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1043" name="ActualFifthCityTravelContinueAndReturnPreserveAllCitiesAndAcceptedStory" fullname="Weedtopia.Tests.PlayMode.CityCampaignUiTests.ActualFifthCityTravelContinueAndReturnPreserveAllCitiesAndAcceptedStory" methodname="ActualFifthCityTravelContinueAndReturnPreserveAllCitiesAndAcceptedStory" classname="Weedtopia.Tests.PlayMode.CityCampaignUiTests" runstate="Runnable" seed="586764882" result="Passed" start-time="2026-10-08 04:41:59Z" end-time="2026-10-08 04:42:10Z" duration="10.944688" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1038" name="ActualFourthCityTravelContinueAndReturnPreserveAllCitiesAndStories" fullname="Weedtopia.Tests.PlayMode.CityCampaignUiTests.ActualFourthCityTravelContinueAndReturnPreserveAllCitiesAndStories" methodname="ActualFourthCityTravelContinueAndReturnPreserveAllCitiesAndStories" classname="Weedtopia.Tests.PlayMode.CityCampaignUiTests" runstate="Runnable" seed="1844891149" result="Passed" start-time="2026-10-08 04:42:10Z" end-time="2026-10-08 04:42:21Z" duration="10.839907" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1029" name="ActualSceneTravelRoundtripPreservesBothCitiesAndTheSavePath" fullname="Weedtopia.Tests.PlayMode.CityCampaignUiTests.ActualSceneTravelRoundtripPreservesBothCitiesAndTheSavePath" methodname="ActualSceneTravelRoundtripPreservesBothCitiesAndTheSavePath" classname="Weedtopia.Tests.PlayMode.CityCampaignUiTests" runstate="Runnable" seed="1604512212" result="Passed" start-time="2026-10-08 04:42:21Z" end-time="2026-10-08 04:42:27Z" duration="6.626592" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1035" name="ActualThirdCityTravelAndContinuePreserveAllThreeCities" fullname="Weedtopia.Tests.PlayMode.CityCampaignUiTests.ActualThirdCityTravelAndContinuePreserveAllThreeCities" methodname="ActualThirdCityTravelAndContinuePreserveAllThreeCities" classname="Weedtopia.Tests.PlayMode.CityCampaignUiTests" runstate="Runnable" seed="1823833243" result="Passed" start-time="2026-10-08 04:42:27Z" end-time="2026-10-08 04:42:38Z" duration="10.696229" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1028" name="AuthoredHeaderAndRockoOfferRespectThresholdAndPayOnce" fullname="Weedtopia.Tests.PlayMode.CityCampaignUiTests.AuthoredHeaderAndRockoOfferRespectThresholdAndPayOnce" methodname="AuthoredHeaderAndRockoOfferRespectThresholdAndPayOnce" classname="Weedtopia.Tests.PlayMode.CityCampaignUiTests" runstate="Runnable" seed="269805324" result="Passed" start-time="2026-10-08 04:42:38Z" end-time="2026-10-08 04:42:41Z" duration="2.829379" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1031" name="BigRockInhabitantsUseTheirOwnAuthoredRowsArtAndWorldPicking" fullname="Weedtopia.Tests.PlayMode.CityCampaignUiTests.BigRockInhabitantsUseTheirOwnAuthoredRowsArtAndWorldPicking" methodname="BigRockInhabitantsUseTheirOwnAuthoredRowsArtAndWorldPicking" classname="Weedtopia.Tests.PlayMode.CityCampaignUiTests" runstate="Runnable" seed="263588710" result="Passed" start-time="2026-10-08 04:42:41Z" end-time="2026-10-08 04:42:46Z" duration="4.985634" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1032" name="BigRockWorldActorsKeepTheirClickedIdentityWithLockedWorkplaces" fullname="Weedtopia.Tests.PlayMode.CityCampaignUiTests.BigRockWorldActorsKeepTheirClickedIdentityWithLockedWorkplaces" methodname="BigRockWorldActorsKeepTheirClickedIdentityWithLockedWorkplaces" classname="Weedtopia.Tests.PlayMode.CityCampaignUiTests" runstate="Runnable" seed="176571234" result="Passed" start-time="2026-10-08 04:42:46Z" end-time="2026-10-08 04:42:51Z" duration="5.210594" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1042" name="CassaVadelaFifthRowOffersFourCityMandateAndPaysOnlyOnce" fullname="Weedtopia.Tests.PlayMode.CityCampaignUiTests.CassaVadelaFifthRowOffersFourCityMandateAndPaysOnlyOnce" methodname="CassaVadelaFifthRowOffersFourCityMandateAndPaysOnlyOnce" classname="Weedtopia.Tests.PlayMode.CityCampaignUiTests" runstate="Runnable" seed="1325360830" result="Passed" start-time="2026-10-08 04:42:51Z" end-time="2026-10-08 04:42:54Z" duration="3.240980" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1030" name="ContinueOpensTheSavedCityAndDoesNotApplyOfflineTwice" fullname="Weedtopia.Tests.PlayMode.CityCampaignUiTests.ContinueOpensTheSavedCityAndDoesNotApplyOfflineTwice" methodname="ContinueOpensTheSavedCityAndDoesNotApplyOfflineTwice" classname="Weedtopia.Tests.PlayMode.CityCampaignUiTests" runstate="Runnable" seed="794638682" result="Passed" start-time="2026-10-08 04:42:54Z" end-time="2026-10-08 04:43:03Z" duration="8.573581" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1034" name="DirectRockoKeepsTheCityArrivalConversationWhenNoCampaignIsOffered" fullname="Weedtopia.Tests.PlayMode.CityCampaignUiTests.DirectRockoKeepsTheCityArrivalConversationWhenNoCampaignIsOffered" methodname="DirectRockoKeepsTheCityArrivalConversationWhenNoCampaignIsOffered" classname="Weedtopia.Tests.PlayMode.CityCampaignUiTests" runstate="Runnable" seed="1956690923" result="Passed" start-time="2026-10-08 04:43:03Z" end-time="2026-10-08 04:43:08Z" duration="4.831830" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1041" name="FourthCityTravelActionsUseTheLocalizedTravelVerbInAllFiveLanguages" fullname="Weedtopia.Tests.PlayMode.CityCampaignUiTests.FourthCityTravelActionsUseTheLocalizedTravelVerbInAllFiveLanguages" methodname="FourthCityTravelActionsUseTheLocalizedTravelVerbInAllFiveLanguages" classname="Weedtopia.Tests.PlayMode.CityCampaignUiTests" runstate="Runnable" seed="1311053183" result="Passed" start-time="2026-10-08 04:43:08Z" end-time="2026-10-08 04:43:11Z" duration="2.866754" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1037" name="LittleMontanaFourthRowShowsTheThreeSourceThresholdAndPaysOnce" fullname="Weedtopia.Tests.PlayMode.CityCampaignUiTests.LittleMontanaFourthRowShowsTheThreeSourceThresholdAndPaysOnce" methodname="LittleMontanaFourthRowShowsTheThreeSourceThresholdAndPaysOnce" classname="Weedtopia.Tests.PlayMode.CityCampaignUiTests" runstate="Runnable" seed="1473062852" result="Passed" start-time="2026-10-08 04:43:11Z" end-time="2026-10-08 04:43:14Z" duration="3.022429" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1040" name="LittleMontanaProjectStatusExplainsMissingChaptersAfterItsPopulationThreshold" fullname="Weedtopia.Tests.PlayMode.CityCampaignUiTests.LittleMontanaProjectStatusExplainsMissingChaptersAfterItsPopulationThreshold" methodname="LittleMontanaProjectStatusExplainsMissingChaptersAfterItsPopulationThreshold" classname="Weedtopia.Tests.PlayMode.CityCampaignUiTests" runstate="Runnable" seed="1667330558" result="Passed" start-time="2026-10-08 04:43:14Z" end-time="2026-10-08 04:43:20Z" duration="5.929858" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1039" name="LittleMontanaRockoUsesItsOwnAuthoredDialogueAfterArrival" fullname="Weedtopia.Tests.PlayMode.CityCampaignUiTests.LittleMontanaRockoUsesItsOwnAuthoredDialogueAfterArrival" methodname="LittleMontanaRockoUsesItsOwnAuthoredDialogueAfterArrival" classname="Weedtopia.Tests.PlayMode.CityCampaignUiTests" runstate="Runnable" seed="1682236666" result="Passed" start-time="2026-10-08 04:43:20Z" end-time="2026-10-08 04:43:25Z" duration="5.279377" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1036" name="SevenHillsOfferCanBeSelectedWithoutAcceptingTheEarlierBigRockMandate" fullname="Weedtopia.Tests.PlayMode.CityCampaignUiTests.SevenHillsOfferCanBeSelectedWithoutAcceptingTheEarlierBigRockMandate" methodname="SevenHillsOfferCanBeSelectedWithoutAcceptingTheEarlierBigRockMandate" classname="Weedtopia.Tests.PlayMode.CityCampaignUiTests" runstate="Runnable" seed="1567405557" result="Passed" start-time="2026-10-08 04:43:25Z" end-time="2026-10-08 04:43:28Z" duration="2.937911" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1033" name="SevenHillsUsesItsAuthoredThirdRowAndRockoOffersItInEitherSourceCity" fullname="Weedtopia.Tests.PlayMode.CityCampaignUiTests.SevenHillsUsesItsAuthoredThirdRowAndRockoOffersItInEitherSourceCity" methodname="SevenHillsUsesItsAuthoredThirdRowAndRockoOffersItInEitherSourceCity" classname="Weedtopia.Tests.PlayMode.CityCampaignUiTests" runstate="Runnable" seed="1408644909" result="Passed" start-time="2026-10-08 04:43:28Z" end-time="2026-10-08 04:43:33Z" duration="5.128979" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1044" name="CitySceneFailureUiTests" fullname="Weedtopia.Tests.PlayMode.CitySceneFailureUiTests" classname="Weedtopia.Tests.PlayMode.CitySceneFailureUiTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-08 04:43:33Z" end-time="2026-10-08 04:43:44Z" duration="11.164743" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1046" name="RejectedSceneLoadRetainsOldSessionAndAllowsCommittedCityRetry" fullname="Weedtopia.Tests.PlayMode.CitySceneFailureUiTests.RejectedSceneLoadRetainsOldSessionAndAllowsCommittedCityRetry" methodname="RejectedSceneLoadRetainsOldSessionAndAllowsCommittedCityRetry" classname="Weedtopia.Tests.PlayMode.CitySceneFailureUiTests" runstate="Runnable" seed="687689673" result="Passed" start-time="2026-10-08 04:43:33Z" end-time="2026-10-08 04:43:39Z" duration="5.674814" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[City scene load failed. Retry remains available.
+]]></output>
+              </test-case>
+              <test-case id="1045" name="SceneLoaderExceptionRetainsOldSessionAndAllowsCommittedCityRetry" fullname="Weedtopia.Tests.PlayMode.CitySceneFailureUiTests.SceneLoaderExceptionRetainsOldSessionAndAllowsCommittedCityRetry" methodname="SceneLoaderExceptionRetainsOldSessionAndAllowsCommittedCityRetry" classname="Weedtopia.Tests.PlayMode.CitySceneFailureUiTests" runstate="Runnable" seed="1791653772" result="Passed" start-time="2026-10-08 04:43:39Z" end-time="2026-10-08 04:43:44Z" duration="5.485533" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[City scene load failed. Retry remains available.
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1047" name="GameFlowTests" fullname="Weedtopia.Tests.PlayMode.GameFlowTests" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" testcasecount="25" result="Passed" start-time="2026-10-08 04:43:44Z" end-time="2026-10-08 04:47:51Z" duration="246.824312" total="25" passed="25" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1050" name="AmbientTownLifeMovesPausesAndNeverChangesGameplayOrCreatesObjects" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.AmbientTownLifeMovesPausesAndNeverChangesGameplayOrCreatesObjects" methodname="AmbientTownLifeMovesPausesAndNeverChangesGameplayOrCreatesObjects" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="436953574" result="Passed" start-time="2026-10-08 04:43:44Z" end-time="2026-10-08 04:43:47Z" duration="2.957590" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1062" name="BakerVanDrivesBothDirectionsAndShowsButterOnlyAfterLoading" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.BakerVanDrivesBothDirectionsAndShowsButterOnlyAfterLoading" methodname="BakerVanDrivesBothDirectionsAndShowsButterOnlyAfterLoading" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="71603467" result="Passed" start-time="2026-10-08 04:43:47Z" end-time="2026-10-08 04:43:50Z" duration="2.843789" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1053" name="BootstrapAndStartButtonsCreateOneSessionWithExactResources" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.BootstrapAndStartButtonsCreateOneSessionWithExactResources" methodname="BootstrapAndStartButtonsCreateOneSessionWithExactResources" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="784848621" result="Passed" start-time="2026-10-08 04:43:50Z" end-time="2026-10-08 04:43:53Z" duration="2.713057" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1054" name="BuildingSelectionPanelUpgradeAndManagerHaveRealEffects" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.BuildingSelectionPanelUpgradeAndManagerHaveRealEffects" methodname="BuildingSelectionPanelUpgradeAndManagerHaveRealEffects" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="1844597980" result="Passed" start-time="2026-10-08 04:43:53Z" end-time="2026-10-08 04:43:55Z" duration="2.868092" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1071" name="CharacterRaycastsOpenTheMatchingAuthoredPortraitAndCanBeClosed" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.CharacterRaycastsOpenTheMatchingAuthoredPortraitAndCanBeClosed" methodname="CharacterRaycastsOpenTheMatchingAuthoredPortraitAndCanBeClosed" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="1470726805" result="Passed" start-time="2026-10-08 04:43:55Z" end-time="2026-10-08 04:44:40Z" duration="44.572973" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1048" name="CityFestivalChoiceClaimAndReloadUseTheExistingOrdersUi" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.CityFestivalChoiceClaimAndReloadUseTheExistingOrdersUi" methodname="CityFestivalChoiceClaimAndReloadUseTheExistingOrdersUi" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="1592924600" result="Passed" start-time="2026-10-08 04:44:40Z" end-time="2026-10-08 04:45:22Z" duration="41.551705" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1049" name="CityFestivalTextsFitTheAuthoredOrdersFieldsForBothPlansAndCompletion" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.CityFestivalTextsFitTheAuthoredOrdersFieldsForBothPlansAndCompletion" methodname="CityFestivalTextsFitTheAuthoredOrdersFieldsForBothPlansAndCompletion" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="165358369" result="Passed" start-time="2026-10-08 04:45:22Z" end-time="2026-10-08 04:45:56Z" duration="33.921661" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1059" name="CitySalesRathausSpinAndSettlementUnlockAreConnected" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.CitySalesRathausSpinAndSettlementUnlockAreConnected" methodname="CitySalesRathausSpinAndSettlementUnlockAreConnected" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="1050861061" result="Passed" start-time="2026-10-08 04:45:56Z" end-time="2026-10-08 04:46:03Z" duration="7.206338" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1065" name="ConstructionEnclosuresFitSmallAndLargeBuildingFamiliesWithoutChangingTheSave" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.ConstructionEnclosuresFitSmallAndLargeBuildingFamiliesWithoutChangingTheSave" methodname="ConstructionEnclosuresFitSmallAndLargeBuildingFamiliesWithoutChangingTheSave" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="1943895414" result="Passed" start-time="2026-10-08 04:46:03Z" end-time="2026-10-08 04:46:06Z" duration="3.369315" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1064" name="ConstructionFenceFollowsPurchasePauseReloadAndBothCompletionPaths" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.ConstructionFenceFollowsPurchasePauseReloadAndBothCompletionPaths" methodname="ConstructionFenceFollowsPurchasePauseReloadAndBothCompletionPaths" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="75284861" result="Passed" start-time="2026-10-08 04:46:06Z" end-time="2026-10-08 04:46:10Z" duration="3.836175" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1066" name="ConveyorsAnimateActualTransfersSmoothlyPauseAndPreserveGameplay" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.ConveyorsAnimateActualTransfersSmoothlyPauseAndPreserveGameplay" methodname="ConveyorsAnimateActualTransfersSmoothlyPauseAndPreserveGameplay" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="1459085298" result="Passed" start-time="2026-10-08 04:46:10Z" end-time="2026-10-08 04:46:13Z" duration="2.918370" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1051" name="DirectionalVanMovesBetweenHudRefreshesAndFacesTheActualReturnDirection" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.DirectionalVanMovesBetweenHudRefreshesAndFacesTheActualReturnDirection" methodname="DirectionalVanMovesBetweenHudRefreshesAndFacesTheActualReturnDirection" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="1148606762" result="Passed" start-time="2026-10-08 04:46:13Z" end-time="2026-10-08 04:46:16Z" duration="2.730095" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1056" name="DistrictControlsReachEveryExpansionEndAndApprovedSpritesLoadOnDemand" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.DistrictControlsReachEveryExpansionEndAndApprovedSpritesLoadOnDemand" methodname="DistrictControlsReachEveryExpansionEndAndApprovedSpritesLoadOnDemand" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="1646806893" result="Passed" start-time="2026-10-08 04:46:16Z" end-time="2026-10-08 04:46:24Z" duration="8.382177" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1063" name="EveryBakeryHasAnAuthoredRoadAndTheCourierPoolCoversAllWorkers" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.EveryBakeryHasAnAuthoredRoadAndTheCourierPoolCoversAllWorkers" methodname="EveryBakeryHasAnAuthoredRoadAndTheCourierPoolCoversAllWorkers" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="1432970997" result="Passed" start-time="2026-10-08 04:46:24Z" end-time="2026-10-08 04:46:27Z" duration="2.694000" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1058" name="ExpandedBuildingsRemainClickableAfterTheirLargestVisualSwap" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.ExpandedBuildingsRemainClickableAfterTheirLargestVisualSwap" methodname="ExpandedBuildingsRemainClickableAfterTheirLargestVisualSwap" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="1184568148" result="Passed" start-time="2026-10-08 04:46:27Z" end-time="2026-10-08 04:46:39Z" duration="11.938479" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1057" name="FarmEndToEndUnlocksCityWithCompletedDelivery" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.FarmEndToEndUnlocksCityWithCompletedDelivery" methodname="FarmEndToEndUnlocksCityWithCompletedDelivery" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="948473374" result="Passed" start-time="2026-10-08 04:46:39Z" end-time="2026-10-08 04:46:44Z" duration="5.575567" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1061" name="IndustrySellsButterProductsAndReachesFreeplay" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.IndustrySellsButterProductsAndReachesFreeplay" methodname="IndustrySellsButterProductsAndReachesFreeplay" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="408796575" result="Passed" start-time="2026-10-08 04:46:44Z" end-time="2026-10-08 04:47:18Z" duration="33.493012" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1055" name="InspectorShowsInstantLevelsAndTimedTierConstructionConsistently" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.InspectorShowsInstantLevelsAndTimedTierConstructionConsistently" methodname="InspectorShowsInstantLevelsAndTimedTierConstructionConsistently" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="2057091564" result="Passed" start-time="2026-10-08 04:47:18Z" end-time="2026-10-08 04:47:21Z" duration="3.207335" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1070" name="MaximumUiScaleKeepsContextualActionsInsideSafeArea" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.MaximumUiScaleKeepsContextualActionsInsideSafeArea" methodname="MaximumUiScaleKeepsContextualActionsInsideSafeArea" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="2088773255" result="Passed" start-time="2026-10-08 04:47:21Z" end-time="2026-10-08 04:47:24Z" duration="2.779796" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1069" name="PremiumPanelCancelThenConfirmSpendsOnlyAfterExplicitClick" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.PremiumPanelCancelThenConfirmSpendsOnlyAfterExplicitClick" methodname="PremiumPanelCancelThenConfirmSpendsOnlyAfterExplicitClick" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="313334561" result="Passed" start-time="2026-10-08 04:47:24Z" end-time="2026-10-08 04:47:26Z" duration="2.832102" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1060" name="SaveSceneReloadAndContinueKeepResidentialChoiceAndProgress" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.SaveSceneReloadAndContinueKeepResidentialChoiceAndProgress" methodname="SaveSceneReloadAndContinueKeepResidentialChoiceAndProgress" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="2083313830" result="Passed" start-time="2026-10-08 04:47:26Z" end-time="2026-10-08 04:47:39Z" duration="12.840222" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1067" name="UiRaycastsBlockWorldAndPauseStopsTime" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.UiRaycastsBlockWorldAndPauseStopsTime" methodname="UiRaycastsBlockWorldAndPauseStopsTime" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="1480474747" result="Passed" start-time="2026-10-08 04:47:39Z" end-time="2026-10-08 04:47:42Z" duration="2.884417" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1052" name="WesternDirectionsReflectActualGeometryForBothProductionShaderFamilies" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.WesternDirectionsReflectActualGeometryForBothProductionShaderFamilies" methodname="WesternDirectionsReflectActualGeometryForBothProductionShaderFamilies" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="1816887502" result="Passed" start-time="2026-10-08 04:47:42Z" end-time="2026-10-08 04:47:45Z" duration="2.709512" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1068" name="WorkerInventoryButtonsAssignRemoveAndImproveManager" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.WorkerInventoryButtonsAssignRemoveAndImproveManager" methodname="WorkerInventoryButtonsAssignRemoveAndImproveManager" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="1929131472" result="Passed" start-time="2026-10-08 04:47:45Z" end-time="2026-10-08 04:47:48Z" duration="3.159996" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1072" name="WorkerRoleFiltersAndRarityCardsKeepAllTwelveRolesVisible" fullname="Weedtopia.Tests.PlayMode.GameFlowTests.WorkerRoleFiltersAndRarityCardsKeepAllTwelveRolesVisible" methodname="WorkerRoleFiltersAndRarityCardsKeepAllTwelveRolesVisible" classname="Weedtopia.Tests.PlayMode.GameFlowTests" runstate="Runnable" seed="641783100" result="Passed" start-time="2026-10-08 04:47:48Z" end-time="2026-10-08 04:47:51Z" duration="2.817670" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1149" name="VipStoryUiTests" fullname="Weedtopia.Tests.PlayMode.VipStoryUiTests" classname="Weedtopia.Tests.PlayMode.VipStoryUiTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-08 04:47:51Z" end-time="2026-10-08 04:48:15Z" duration="24.097583" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1152" name="AcceptedQuestClaimsOnceAndItsWorldMemoryAndProgressSurviveContinue" fullname="Weedtopia.Tests.PlayMode.VipStoryUiTests.AcceptedQuestClaimsOnceAndItsWorldMemoryAndProgressSurviveContinue" methodname="AcceptedQuestClaimsOnceAndItsWorldMemoryAndProgressSurviveContinue" classname="Weedtopia.Tests.PlayMode.VipStoryUiTests" runstate="Runnable" seed="2043270421" result="Passed" start-time="2026-10-08 04:47:51Z" end-time="2026-10-08 04:47:54Z" duration="3.357065" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1153" name="ChapterChoicesAreSelectableAndSavedWithTheChosenResponse" fullname="Weedtopia.Tests.PlayMode.VipStoryUiTests.ChapterChoicesAreSelectableAndSavedWithTheChosenResponse" methodname="ChapterChoicesAreSelectableAndSavedWithTheChosenResponse" classname="Weedtopia.Tests.PlayMode.VipStoryUiTests" runstate="Runnable" seed="1397069073" result="Passed" start-time="2026-10-08 04:47:54Z" end-time="2026-10-08 04:47:57Z" duration="3.079686" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1151" name="ClickingTheActualActorOpensItsOwnStoryAndStoresTheVisit" fullname="Weedtopia.Tests.PlayMode.VipStoryUiTests.ClickingTheActualActorOpensItsOwnStoryAndStoresTheVisit" methodname="ClickingTheActualActorOpensItsOwnStoryAndStoresTheVisit" classname="Weedtopia.Tests.PlayMode.VipStoryUiTests" runstate="Runnable" seed="1485699540" result="Passed" start-time="2026-10-08 04:47:57Z" end-time="2026-10-08 04:48:00Z" duration="2.893326" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1154" name="LockedRosterAndSharedProjectsRemainReadableAndCannotBeAccepted" fullname="Weedtopia.Tests.PlayMode.VipStoryUiTests.LockedRosterAndSharedProjectsRemainReadableAndCannotBeAccepted" methodname="LockedRosterAndSharedProjectsRemainReadableAndCannotBeAccepted" classname="Weedtopia.Tests.PlayMode.VipStoryUiTests" runstate="Runnable" seed="915591586" result="Passed" start-time="2026-10-08 04:48:00Z" end-time="2026-10-08 04:48:03Z" duration="2.725047" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1150" name="PopulationUnlocksOnlyTheFirstActorAndNewGameHidesAllActorsAgain" fullname="Weedtopia.Tests.PlayMode.VipStoryUiTests.PopulationUnlocksOnlyTheFirstActorAndNewGameHidesAllActorsAgain" methodname="PopulationUnlocksOnlyTheFirstActorAndNewGameHidesAllActorsAgain" classname="Weedtopia.Tests.PlayMode.VipStoryUiTests" runstate="Runnable" seed="735496262" result="Passed" start-time="2026-10-08 04:48:03Z" end-time="2026-10-08 04:48:06Z" duration="3.423027" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1155" name="RecurringOfferPreviewsTheSameScaledTargetsAndRewardThatAcceptanceStores" fullname="Weedtopia.Tests.PlayMode.VipStoryUiTests.RecurringOfferPreviewsTheSameScaledTargetsAndRewardThatAcceptanceStores" methodname="RecurringOfferPreviewsTheSameScaledTargetsAndRewardThatAcceptanceStores" classname="Weedtopia.Tests.PlayMode.VipStoryUiTests" runstate="Runnable" seed="717491434" result="Passed" start-time="2026-10-08 04:48:06Z" end-time="2026-10-08 04:48:09Z" duration="2.828107" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1157" name="StoryControlsReceivePointerHitsAndUseTheAuthoredStaticRows" fullname="Weedtopia.Tests.PlayMode.VipStoryUiTests.StoryControlsReceivePointerHitsAndUseTheAuthoredStaticRows" methodname="StoryControlsReceivePointerHitsAndUseTheAuthoredStaticRows" classname="Weedtopia.Tests.PlayMode.VipStoryUiTests" runstate="Runnable" seed="1096218876" result="Passed" start-time="2026-10-08 04:48:09Z" end-time="2026-10-08 04:48:12Z" duration="2.893427" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1156" name="StoryPanelRefreshesAllAuthoredLabelsAcrossFiveLanguageChangesWithoutRepeatingVisits" fullname="Weedtopia.Tests.PlayMode.VipStoryUiTests.StoryPanelRefreshesAllAuthoredLabelsAcrossFiveLanguageChangesWithoutRepeatingVisits" methodname="StoryPanelRefreshesAllAuthoredLabelsAcrossFiveLanguageChangesWithoutRepeatingVisits" classname="Weedtopia.Tests.PlayMode.VipStoryUiTests" runstate="Runnable" seed="547369589" result="Passed" start-time="2026-10-08 04:48:12Z" end-time="2026-10-08 04:48:15Z" duration="2.890402" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: C:/Users/Mein-PC/AppData/LocalLow/DefaultCompany/Weedtopia\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

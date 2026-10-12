@@ -1,7 +1,27 @@
 {
   "schemaVersion": 1,
-  "updated_at_utc": "2026-09-23T04:32:14.987749+00:00",
-  "status": "approved_251_sprites_integrated_district_layout_tested_release_gates_open",
+  "town_hall_highpoly_experiment_2026_09_28": {
+    "scope": "historical_single_town_hall_3d_experiment_no_active_production_exception",
+    "status": "completed_and_archived_by_product_decision_original_2d_sprite_restored",
+    "unity_review": "Docs/ArtProduction/Buildings/town_hall/T_FIXED/Meshy_Highpoly_2026-09-28/UnityReview/README.de.md",
+    "review": "Docs/ArtProduction/Buildings/town_hall/T_FIXED/Meshy_Highpoly_2026-09-28/Optimization_v1/REVIEW.html",
+    "source": "Docs/ArtProduction/Buildings/town_hall/T_FIXED/Meshy_Highpoly_2026-09-28/Meshy_AI_Green_Industrial_Buil_0928195308_image-to-3d-texture.glb",
+    "progress": "Docs/ArtProduction/Buildings/town_hall/T_FIXED/Meshy_Highpoly_2026-09-28/Optimization_v1/PROGRESS.json",
+    "production_assets_changed": true,
+    "city_integration": "Docs/ArtProduction/Buildings/town_hall/T_FIXED/Meshy_Highpoly_2026-09-28/CityIntegration/README.de.md",
+    "city_lighting": {
+      "status": "user_reported_improvement_experiment_now_archived",
+      "report": "Docs/ArtProduction/Buildings/town_hall/T_FIXED/Meshy_Highpoly_2026-09-28/CityLighting/README.de.md",
+      "fill": 0.65,
+      "date": "2026-09-29T04:36:00.003718+00:00"
+    },
+    "active_in_production": false,
+    "archive": "Assets/Weedtopia/Art/Buildings/Archive/TownHall3D20260928",
+    "restoration": "Docs/ArtProduction/Buildings/town_hall/T_FIXED/Meshy_Highpoly_2026-09-28/Restore2D/README.de.md",
+    "restore_2d_validation": "Docs/ArtProduction/Buildings/town_hall/T_FIXED/Meshy_Highpoly_2026-09-28/Restore2D/validation.json"
+  },
+  "updated_at_utc": "2026-09-30T03:41:03.261441+00:00",
+  "status": "251_original_sprite_slots_active_release_gates_open",
   "expected_slots": 251,
   "generated_slots": 251,
   "validated_slots": 251,
@@ -36,7 +56,7 @@
     "audio_listening",
     "audio_license"
   ],
-  "active_delivery_strategy": "isometric_2d_sprite_with_optional_2_5d_layers",
+  "active_delivery_strategy": "isometric_2d_2_5d_city_with_fixed_camera_no_3d_building_exception",
   "archived_delivery_strategy": "meshy_fbx_and_blender_polish_preserved_for_reference_but_no_longer_active_for_Weedtopia",
   "two_d_prototype": {
     "slot": "town_hall/T_FIXED",
@@ -73,5 +93,14 @@
   "production_order": "10 family T01 anchors, T_FIXED, then each family T00 and T02..T24, then 11 showcases",
   "acceptance_rule": "Source-art acceptance remains hash-bound. The new 2D delivery path additionally requires a generated prefab, EditMode validation, Game View review with the production camera, and explicit user approval before any production wrapper or catalog reference is changed.",
   "current_gameplay_evidence": "Docs/Implementation/VALIDATION_REPORT.md",
-  "production_wrappers_converted": 251
+  "production_wrappers_converted": 251,
+  "active_production_visuals": {
+    "sprite_slots": 251,
+    "mesh_lod_slots": 0
+  },
+  "camera_decision": {
+    "date": "2026-09-30",
+    "free_camera_planned": false,
+    "source": "explicit_user_decision"
+  }
 }

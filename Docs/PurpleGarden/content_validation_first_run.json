@@ -1,0 +1,166 @@
+{
+  "city": "purple_garden",
+  "version": 9,
+  "changed": true,
+  "instances": 56,
+  "routes": 35,
+  "mainQuests": 18,
+  "permanentResidents": 8,
+  "personalChapters": 32,
+  "recurringVariants": 24,
+  "communityProjects": 3,
+  "localizedKeys": 315,
+  "languages": [
+    "de",
+    "en",
+    "es",
+    "fr",
+    "ru"
+  ],
+  "oldContentDigest": "26e1793825efe29f21c45dc1b1f975508d8c853adb3e5c0e4bde2fecfa981472",
+  "contentDigest": "220c92a3b4eb6147a7f3ddd6a8b031604dfce396e1b1afb92e839a2831e03f6d",
+  "priorContentPreserved": true,
+  "priorLocaleEntriesPreserved": true,
+  "placeholderParity": true,
+  "freshProgressGoals": true,
+  "residents": [
+    {
+      "id": "pg_iris",
+      "appearsAt": 50,
+      "chapters": [
+        50,
+        1000,
+        5000,
+        15000
+      ]
+    },
+    {
+      "id": "pg_malik",
+      "appearsAt": 120,
+      "chapters": [
+        120,
+        1500,
+        6000,
+        16000
+      ]
+    },
+    {
+      "id": "pg_viola",
+      "appearsAt": 260,
+      "chapters": [
+        260,
+        1900,
+        6800,
+        17000
+      ]
+    },
+    {
+      "id": "pg_theo",
+      "appearsAt": 500,
+      "chapters": [
+        500,
+        2400,
+        7600,
+        17500
+      ]
+    },
+    {
+      "id": "pg_jun",
+      "appearsAt": 850,
+      "chapters": [
+        850,
+        2900,
+        8400,
+        18000
+      ]
+    },
+    {
+      "id": "pg_ada",
+      "appearsAt": 1300,
+      "chapters": [
+        1300,
+        3500,
+        9300,
+        18500
+      ]
+    },
+    {
+      "id": "pg_ravi",
+      "appearsAt": 1900,
+      "chapters": [
+        1900,
+        4300,
+        10500,
+        19500
+      ]
+    },
+    {
+      "id": "pg_selma",
+      "appearsAt": 2600,
+      "chapters": [
+        2600,
+        5200,
+        11500,
+        20000
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "pg_joint_water_court",
+      "residents": 2000,
+      "participants": [
+        "pg_iris",
+        "pg_malik",
+        "pg_viola"
+      ],
+      "goals": [
+        {
+          "kind": 5,
+          "count": 180,
+          "target": "",
+          "textKey": "pg.goal.coffee"
+        }
+      ]
+    },
+    {
+      "id": "pg_joint_seed_archive",
+      "residents": 6500,
+      "participants": [
+        "pg_theo",
+        "pg_jun",
+        "pg_ada"
+      ],
+      "goals": [
+        {
+          "kind": 8,
+          "count": 340,
+          "target": "",
+          "textKey": "pg.goal.delivered"
+        }
+      ]
+    },
+    {
+      "id": "pg_joint_night_bloom",
+      "residents": 12500,
+      "participants": [
+        "pg_iris",
+        "pg_malik",
+        "pg_viola",
+        "pg_theo",
+        "pg_jun",
+        "pg_ada",
+        "pg_ravi",
+        "pg_selma"
+      ],
+      "goals": [
+        {
+          "kind": 9,
+          "count": 45,
+          "target": "",
+          "textKey": "pg.goal.deliveries"
+        }
+      ]
+    }
+  ]
+}

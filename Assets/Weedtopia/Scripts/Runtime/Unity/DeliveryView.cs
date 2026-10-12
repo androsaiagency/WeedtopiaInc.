@@ -8,11 +8,11 @@ namespace Weedtopia.Unity
     public sealed class DeliveryView : MonoBehaviour
     {
         [SerializeField] private GameObject body;
-        [SerializeField] private SpriteRenderer artwork;
-        [SerializeField] private Sprite leftSprite,rightSprite;
-        [SerializeField] private SpriteRenderer cargo;
+        [SerializeField] private SpriteRenderer artwork = default;
+        [SerializeField] private Sprite leftSprite = default,rightSprite = default;
+        [SerializeField] private SpriteRenderer cargo = default;
         [SerializeField,Min(.1f)] private float pickupVanScale=1.65f;
-        [SerializeField] private DirectionalSpriteAnimator directionalAnimation;
+        [SerializeField] private DirectionalSpriteAnimator directionalAnimation = default;
         private Vector3 bodyScale=Vector3.one;
         private DeliveryState currentDelivery;
         private GameRoot currentRoot;

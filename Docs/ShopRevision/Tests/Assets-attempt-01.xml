@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="5" result="Failed(Child)" total="5" passed="4" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-04 10:45:33Z" end-time="2026-10-04 10:47:29Z" duration="115,9246027">
+  <test-suite type="TestSuite" id="1108" name="Weedtopia" fullname="Weedtopia" runstate="Runnable" testcasecount="327" result="Failed" site="Child" start-time="2026-10-04 10:45:33Z" end-time="2026-10-04 10:47:29Z" duration="115.924603" total="5" passed="4" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1211" name="Weedtopia.Game.AssetTests.dll" fullname="D:/Unity Games/Weedtopia Inc/WeedtopiaInc/Library/ScriptAssemblies/Weedtopia.Game.AssetTests.dll" runstate="Runnable" testcasecount="52" result="Failed" site="Child" start-time="2026-10-04 10:45:33Z" end-time="2026-10-04 10:47:29Z" duration="115.871237" total="5" passed="4" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="272832" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1212" name="Weedtopia" fullname="Weedtopia" runstate="Runnable" testcasecount="52" result="Failed" site="Child" start-time="2026-10-04 10:45:33Z" end-time="2026-10-04 10:47:29Z" duration="115.867755" total="5" passed="4" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1213" name="Tests" fullname="Weedtopia.Tests" runstate="Runnable" testcasecount="52" result="Failed" site="Child" start-time="2026-10-04 10:45:33Z" end-time="2026-10-04 10:47:29Z" duration="115.864334" total="5" passed="4" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1214" name="Assets" fullname="Weedtopia.Tests.Assets" runstate="Runnable" testcasecount="52" result="Failed" site="Child" start-time="2026-10-04 10:45:33Z" end-time="2026-10-04 10:47:29Z" duration="115.860602" total="5" passed="4" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="1172" name="ProductionPresentationTests" fullname="Weedtopia.Tests.Assets.ProductionPresentationTests" classname="Weedtopia.Tests.Assets.ProductionPresentationTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-04 10:45:33Z" end-time="2026-10-04 10:46:48Z" duration="75.415289" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1173" name="ProductionPreflightRecognizesApprovedSpritesAndKeepsIndependentReleaseGates" fullname="Weedtopia.Tests.Assets.ProductionPresentationTests.ProductionPreflightRecognizesApprovedSpritesAndKeepsIndependentReleaseGates" methodname="ProductionPreflightRecognizesApprovedSpritesAndKeepsIndependentReleaseGates" classname="Weedtopia.Tests.Assets.ProductionPresentationTests" runstate="Runnable" seed="1347869981" result="Passed" start-time="2026-10-04 10:45:33Z" end-time="2026-10-04 10:46:48Z" duration="75.404239" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1184" name="ShopAssetTests" fullname="Weedtopia.Tests.Assets.ShopAssetTests" classname="Weedtopia.Tests.Assets.ShopAssetTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-04 10:46:48Z" end-time="2026-10-04 10:47:25Z" duration="36.329242" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1185" name="BothCitiesShareAuthoredShopPrefabsAndTenRoundNavigationButtons" fullname="Weedtopia.Tests.Assets.ShopAssetTests.BothCitiesShareAuthoredShopPrefabsAndTenRoundNavigationButtons" methodname="BothCitiesShareAuthoredShopPrefabsAndTenRoundNavigationButtons" classname="Weedtopia.Tests.Assets.ShopAssetTests" runstate="Runnable" seed="847439517" result="Passed" start-time="2026-10-04 10:46:49Z" end-time="2026-10-04 10:46:52Z" duration="3.209250" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1186" name="ExplicitInstallerIsIdempotentAndRetainsManualUiAndWorldBytes" fullname="Weedtopia.Tests.Assets.ShopAssetTests.ExplicitInstallerIsIdempotentAndRetainsManualUiAndWorldBytes" methodname="ExplicitInstallerIsIdempotentAndRetainsManualUiAndWorldBytes" classname="Weedtopia.Tests.Assets.ShopAssetTests" runstate="Runnable" seed="543827809" result="Passed" start-time="2026-10-04 10:46:52Z" end-time="2026-10-04 10:47:25Z" duration="32.645853" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1208" name="WorldNavigationTests" fullname="Weedtopia.Tests.Assets.WorldNavigationTests" classname="Weedtopia.Tests.Assets.WorldNavigationTests" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2026-10-04 10:47:25Z" end-time="2026-10-04 10:47:29Z" duration="4.096303" total="2" passed="1" failed="1" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1210" name="AuthoredNavigationUsesTenReusableIconButtonsAndAllBuildingsAreReachable" fullname="Weedtopia.Tests.Assets.WorldNavigationTests.AuthoredNavigationUsesTenReusableIconButtonsAndAllBuildingsAreReachable" methodname="AuthoredNavigationUsesTenReusableIconButtonsAndAllBuildingsAreReachable" classname="Weedtopia.Tests.Assets.WorldNavigationTests" runstate="Runnable" seed="535662703" result="Passed" start-time="2026-10-04 10:47:25Z" end-time="2026-10-04 10:47:27Z" duration="1.995455" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1209" name="RepeatingMenuInstallerPreservesDockSceneAndGuids" fullname="Weedtopia.Tests.Assets.WorldNavigationTests.RepeatingMenuInstallerPreservesDockSceneAndGuids" methodname="RepeatingMenuInstallerPreservesDockSceneAndGuids" classname="Weedtopia.Tests.Assets.WorldNavigationTests" runstate="Runnable" seed="591355903" result="Failed" label="Error" start-time="2026-10-04 10:47:27Z" end-time="2026-10-04 10:47:29Z" duration="2.001530" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[System.InvalidOperationException : Expected nine round navigation buttons and the authored city header.]]></message>
+                  <stack-trace><![CDATA[  at Weedtopia.Editor.GameSetup.MenuLayoutAuthoring.Validate (Weedtopia.Unity.GameRoot root) [0x00061] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Editor\GameSetup\MenuLayoutAuthoring.cs:267 
+  at Weedtopia.Editor.GameSetup.MenuLayoutAuthoring.Apply () [0x0010f] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Editor\GameSetup\MenuLayoutAuthoring.cs:46 
+  at Weedtopia.Tests.Assets.WorldNavigationTests.RepeatingMenuInstallerPreservesDockSceneAndGuids () [0x0005a] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\EditorAssets\WorldNavigationTests.cs:18 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <1eb9db207454431c84a47bcd81e79c37>:0 ]]></stack-trace>
+                </failure>
+                <output><![CDATA[Saving results to: C:/Users/Mein-PC/AppData/LocalLow/DefaultCompany/Weedtopia\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

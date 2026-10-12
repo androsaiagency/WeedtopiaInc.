@@ -5111,6 +5111,7 @@ Transform:
   - {fileID: 8514949920150205871}
   - {fileID: 6519221369518845114}
   - {fileID: 8560739347511218710}
+  - {fileID: 6215621139774409232}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5251687638097239504
@@ -5131,6 +5132,7 @@ MonoBehaviour:
   label: {fileID: 1233763726068200266}
   statusLamp: {fileID: 5777233376334843998}
   upgradeEffect: {fileID: 2532475926749216952}
+  constructionFence: {fileID: 7476738980533429496}
 --- !u!65 &8317758499247677844
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5241,7 +5243,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: aa9aa54790670f34b9fe097036900ab9, type: 3}
+  - {fileID: 2100000, guid: 46703b1e0bfb42cfb1207a82b652c2ec, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5283,7 +5285,80 @@ TextMesh:
   m_FontSize: 48
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: aa9aa54790670f34b9fe097036900ab9, type: 3}
+  m_Font: {fileID: 12800000, guid: 46703b1e0bfb42cfb1207a82b652c2ec, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4290767093
+--- !u!1001 &6327241317431591132
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3731680972372748504}
+    m_Modifications:
+    - target: {fileID: 111659850337274572, guid: 4484418c852721147b71dd7d1b940408, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 111659850337274572, guid: 4484418c852721147b71dd7d1b940408, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 111659850337274572, guid: 4484418c852721147b71dd7d1b940408, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 111659850337274572, guid: 4484418c852721147b71dd7d1b940408, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 111659850337274572, guid: 4484418c852721147b71dd7d1b940408, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 111659850337274572, guid: 4484418c852721147b71dd7d1b940408, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 111659850337274572, guid: 4484418c852721147b71dd7d1b940408, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 111659850337274572, guid: 4484418c852721147b71dd7d1b940408, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 111659850337274572, guid: 4484418c852721147b71dd7d1b940408, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 111659850337274572, guid: 4484418c852721147b71dd7d1b940408, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491727525197305201, guid: 4484418c852721147b71dd7d1b940408, type: 3}
+      propertyPath: m_Name
+      value: ConstructionFence
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4484418c852721147b71dd7d1b940408, type: 3}
+--- !u!4 &6215621139774409232 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 111659850337274572, guid: 4484418c852721147b71dd7d1b940408, type: 3}
+  m_PrefabInstance: {fileID: 6327241317431591132}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7476738980533429496 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3462236811146667044, guid: 4484418c852721147b71dd7d1b940408, type: 3}
+  m_PrefabInstance: {fileID: 6327241317431591132}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ba08d5d147f40c4594546036f80189f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Weedtopia.Unity::Weedtopia.Unity.ConstructionFenceView

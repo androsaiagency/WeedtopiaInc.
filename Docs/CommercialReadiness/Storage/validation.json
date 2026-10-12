@@ -1,0 +1,800 @@
+{
+  "createdUtc": "2026-10-05T04:42:54.2121552Z",
+  "scope": "Generic rollback, object/list preservation, autosave/VIP persistence backoff, visible error episodes and responsive incremental offline startup; direct IOException and UnauthorizedAccessException UI boundaries; atomic single-save intro and success-only UI transitions",
+  "sourceCompile": {
+    "status": "passed",
+    "gate": "source_compile_only",
+    "assemblies": 12,
+    "result": "Docs/Implementation/Validation/SourceCompile/result.json"
+  },
+  "isolatedModelTests": {
+    "status": "passed",
+    "total": 31,
+    "passed": 31,
+    "runner": "Isolated .NET 9 model harness with NUnit assertions and field-only System.Text.Json shim",
+    "log": "isolated-model-tests.log",
+    "unityRunner": false,
+    "failed": 0,
+    "independentlyVerifiedHarnessExitCode": 0,
+    "exitCode": 0,
+    "productiveSources": true,
+    "integrationSourceSha256": {
+      "Assets/Weedtopia/Scripts/Runtime/Application/GameSession.cs": "511a4efcc663f27b6f929a17b0570dffa6ada9608155e7147282c9eaeca1d8bd",
+      "Assets/Weedtopia/Scripts/Tests/EditMode/OfflineStartupTests.cs": "fe2b98a2de65348ca1f6ef2fd45db272297b7d1b5e3f33142e7fafe56b1e71d2"
+    }
+  },
+  "unityEditMode": {
+    "status": "passed",
+    "stage": "EditMode",
+    "passed": 31,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0,
+    "fixtureResults": [
+      {
+        "fixture": "Weedtopia.Tests.OfflineStartupTests",
+        "passed": 11,
+        "testNames": [
+          "Weedtopia.Tests.OfflineStartupTests.ChunkedOfflineExactlyMatchesSynchronousResultIncludingTwoCitiesAndVipExpiry(1)",
+          "Weedtopia.Tests.OfflineStartupTests.ChunkedOfflineExactlyMatchesSynchronousResultIncludingTwoCitiesAndVipExpiry(128)",
+          "Weedtopia.Tests.OfflineStartupTests.ChunkedOfflineExactlyMatchesSynchronousResultIncludingTwoCitiesAndVipExpiry(64)",
+          "Weedtopia.Tests.OfflineStartupTests.ChunkedOfflineExactlyMatchesSynchronousResultIncludingTwoCitiesAndVipExpiry(7)",
+          "Weedtopia.Tests.OfflineStartupTests.DisposedPartialOfflineRestoresModelAndRejectsSaveAdvanceAndReentrancy",
+          "Weedtopia.Tests.OfflineStartupTests.FailedFinalOfflineWriteRestoresCountersResourcesTimestampAndReferences",
+          "Weedtopia.Tests.OfflineStartupTests.FailedSingleOfflineVipCommitRollsBackAllProgressAndRetryGrantsOnce",
+          "Weedtopia.Tests.OfflineStartupTests.InvalidOfflineBatchIsRejectedBeforeAnyMutation(0)",
+          "Weedtopia.Tests.OfflineStartupTests.InvalidOfflineBatchIsRejectedBeforeAnyMutation(129)",
+          "Weedtopia.Tests.OfflineStartupTests.OfflineInitialProgressPrecedesSimulationAndZeroElapsedStillCompletes",
+          "Weedtopia.Tests.OfflineStartupTests.OfflineWithDueVipUsesOneCommitEvenIfASecondWriteWouldFail"
+        ]
+      },
+      {
+        "fixture": "Weedtopia.Tests.SessionPersistenceTests",
+        "passed": 20,
+        "testNames": [
+          "Weedtopia.Tests.SessionPersistenceTests.AutosaveFailureKeepsLiveProgressAndBacksOffUntilStoreRecovers",
+          "Weedtopia.Tests.SessionPersistenceTests.EveryMutableSaveFieldAndNestedReferenceSurvivesFailedTransaction",
+          "Weedtopia.Tests.SessionPersistenceTests.FailedCommandAndThrownCommandRestoreMutationsWithoutSaving",
+          "Weedtopia.Tests.SessionPersistenceTests.FailedConstructionSaveRestoresPaymentTimerRevisionAndBuildingIdentity",
+          "Weedtopia.Tests.SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(\"advance\",False)",
+          "Weedtopia.Tests.SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(\"advance\",True)",
+          "Weedtopia.Tests.SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(\"advance_to_complete\",False)",
+          "Weedtopia.Tests.SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(\"advance_to_complete\",True)",
+          "Weedtopia.Tests.SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(\"complete\",False)",
+          "Weedtopia.Tests.SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(\"complete\",True)",
+          "Weedtopia.Tests.SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(\"restart\",False)",
+          "Weedtopia.Tests.SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(\"restart\",True)",
+          "Weedtopia.Tests.SessionPersistenceTests.FailedRewardSaveRemovesGrantedWorkerAndRestoresRandomAndReceipts",
+          "Weedtopia.Tests.SessionPersistenceTests.FailedWorkerAssignmentSaveRestoresBothWorkersInPlace",
+          "Weedtopia.Tests.SessionPersistenceTests.IntroAdvanceCompletionAndRestartEachPersistExactlyOnce",
+          "Weedtopia.Tests.SessionPersistenceTests.PausedSessionRetriesUnsavedProgressWithoutSimulating",
+          "Weedtopia.Tests.SessionPersistenceTests.RetryDelayIsCappedAndManualSaveCanRecoverImmediately",
+          "Weedtopia.Tests.SessionPersistenceTests.SaveFailureDoesNotConsumeTimestampAndInvalidFrameDoesNotTouchStore",
+          "Weedtopia.Tests.SessionPersistenceTests.UnauthorizedSaveRestoresTransactionAndMarksTheExactStorageError",
+          "Weedtopia.Tests.SessionPersistenceTests.VipDailySaveFailureRetriesAtBackoffAndGrantsExactlyOnce"
+        ]
+      }
+    ],
+    "cases": [
+      {
+        "fullname": "Weedtopia.Tests.OfflineStartupTests.ChunkedOfflineExactlyMatchesSynchronousResultIncludingTwoCitiesAndVipExpiry(1)",
+        "fixture": "Weedtopia.Tests.OfflineStartupTests",
+        "method": "ChunkedOfflineExactlyMatchesSynchronousResultIncludingTwoCitiesAndVipExpiry",
+        "result": "Passed",
+        "durationSeconds": 26.858078,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineStartupTests.ChunkedOfflineExactlyMatchesSynchronousResultIncludingTwoCitiesAndVipExpiry(128)",
+        "fixture": "Weedtopia.Tests.OfflineStartupTests",
+        "method": "ChunkedOfflineExactlyMatchesSynchronousResultIncludingTwoCitiesAndVipExpiry",
+        "result": "Passed",
+        "durationSeconds": 8.717987,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineStartupTests.ChunkedOfflineExactlyMatchesSynchronousResultIncludingTwoCitiesAndVipExpiry(64)",
+        "fixture": "Weedtopia.Tests.OfflineStartupTests",
+        "method": "ChunkedOfflineExactlyMatchesSynchronousResultIncludingTwoCitiesAndVipExpiry",
+        "result": "Passed",
+        "durationSeconds": 8.853081,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineStartupTests.ChunkedOfflineExactlyMatchesSynchronousResultIncludingTwoCitiesAndVipExpiry(7)",
+        "fixture": "Weedtopia.Tests.OfflineStartupTests",
+        "method": "ChunkedOfflineExactlyMatchesSynchronousResultIncludingTwoCitiesAndVipExpiry",
+        "result": "Passed",
+        "durationSeconds": 11.239278,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineStartupTests.DisposedPartialOfflineRestoresModelAndRejectsSaveAdvanceAndReentrancy",
+        "fixture": "Weedtopia.Tests.OfflineStartupTests",
+        "method": "DisposedPartialOfflineRestoresModelAndRejectsSaveAdvanceAndReentrancy",
+        "result": "Passed",
+        "durationSeconds": 0.312485,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineStartupTests.FailedFinalOfflineWriteRestoresCountersResourcesTimestampAndReferences",
+        "fixture": "Weedtopia.Tests.OfflineStartupTests",
+        "method": "FailedFinalOfflineWriteRestoresCountersResourcesTimestampAndReferences",
+        "result": "Passed",
+        "durationSeconds": 0.444039,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineStartupTests.FailedSingleOfflineVipCommitRollsBackAllProgressAndRetryGrantsOnce",
+        "fixture": "Weedtopia.Tests.OfflineStartupTests",
+        "method": "FailedSingleOfflineVipCommitRollsBackAllProgressAndRetryGrantsOnce",
+        "result": "Passed",
+        "durationSeconds": 0.446344,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineStartupTests.InvalidOfflineBatchIsRejectedBeforeAnyMutation(0)",
+        "fixture": "Weedtopia.Tests.OfflineStartupTests",
+        "method": "InvalidOfflineBatchIsRejectedBeforeAnyMutation",
+        "result": "Passed",
+        "durationSeconds": 0.177702,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineStartupTests.InvalidOfflineBatchIsRejectedBeforeAnyMutation(129)",
+        "fixture": "Weedtopia.Tests.OfflineStartupTests",
+        "method": "InvalidOfflineBatchIsRejectedBeforeAnyMutation",
+        "result": "Passed",
+        "durationSeconds": 0.177191,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineStartupTests.OfflineInitialProgressPrecedesSimulationAndZeroElapsedStillCompletes",
+        "fixture": "Weedtopia.Tests.OfflineStartupTests",
+        "method": "OfflineInitialProgressPrecedesSimulationAndZeroElapsedStillCompletes",
+        "result": "Passed",
+        "durationSeconds": 0.185754,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineStartupTests.OfflineWithDueVipUsesOneCommitEvenIfASecondWriteWouldFail",
+        "fixture": "Weedtopia.Tests.OfflineStartupTests",
+        "method": "OfflineWithDueVipUsesOneCommitEvenIfASecondWriteWouldFail",
+        "result": "Passed",
+        "durationSeconds": 0.331878,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.AutosaveFailureKeepsLiveProgressAndBacksOffUntilStoreRecovers",
+        "fixture": "Weedtopia.Tests.SessionPersistenceTests",
+        "method": "AutosaveFailureKeepsLiveProgressAndBacksOffUntilStoreRecovers",
+        "result": "Passed",
+        "durationSeconds": 0.353037,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.EveryMutableSaveFieldAndNestedReferenceSurvivesFailedTransaction",
+        "fixture": "Weedtopia.Tests.SessionPersistenceTests",
+        "method": "EveryMutableSaveFieldAndNestedReferenceSurvivesFailedTransaction",
+        "result": "Passed",
+        "durationSeconds": 0.190273,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.FailedCommandAndThrownCommandRestoreMutationsWithoutSaving",
+        "fixture": "Weedtopia.Tests.SessionPersistenceTests",
+        "method": "FailedCommandAndThrownCommandRestoreMutationsWithoutSaving",
+        "result": "Passed",
+        "durationSeconds": 0.177546,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.FailedConstructionSaveRestoresPaymentTimerRevisionAndBuildingIdentity",
+        "fixture": "Weedtopia.Tests.SessionPersistenceTests",
+        "method": "FailedConstructionSaveRestoresPaymentTimerRevisionAndBuildingIdentity",
+        "result": "Passed",
+        "durationSeconds": 0.179187,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(\"advance\",False)",
+        "fixture": "Weedtopia.Tests.SessionPersistenceTests",
+        "method": "FailedIntroSaveRestoresPageCompletionAndUnlockedStories",
+        "result": "Passed",
+        "durationSeconds": 0.177046,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(\"advance\",True)",
+        "fixture": "Weedtopia.Tests.SessionPersistenceTests",
+        "method": "FailedIntroSaveRestoresPageCompletionAndUnlockedStories",
+        "result": "Passed",
+        "durationSeconds": 0.176436,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(\"advance_to_complete\",False)",
+        "fixture": "Weedtopia.Tests.SessionPersistenceTests",
+        "method": "FailedIntroSaveRestoresPageCompletionAndUnlockedStories",
+        "result": "Passed",
+        "durationSeconds": 0.174822,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(\"advance_to_complete\",True)",
+        "fixture": "Weedtopia.Tests.SessionPersistenceTests",
+        "method": "FailedIntroSaveRestoresPageCompletionAndUnlockedStories",
+        "result": "Passed",
+        "durationSeconds": 0.176393,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(\"complete\",False)",
+        "fixture": "Weedtopia.Tests.SessionPersistenceTests",
+        "method": "FailedIntroSaveRestoresPageCompletionAndUnlockedStories",
+        "result": "Passed",
+        "durationSeconds": 0.177567,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(\"complete\",True)",
+        "fixture": "Weedtopia.Tests.SessionPersistenceTests",
+        "method": "FailedIntroSaveRestoresPageCompletionAndUnlockedStories",
+        "result": "Passed",
+        "durationSeconds": 0.176903,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(\"restart\",False)",
+        "fixture": "Weedtopia.Tests.SessionPersistenceTests",
+        "method": "FailedIntroSaveRestoresPageCompletionAndUnlockedStories",
+        "result": "Passed",
+        "durationSeconds": 0.174088,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(\"restart\",True)",
+        "fixture": "Weedtopia.Tests.SessionPersistenceTests",
+        "method": "FailedIntroSaveRestoresPageCompletionAndUnlockedStories",
+        "result": "Passed",
+        "durationSeconds": 0.175765,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.FailedRewardSaveRemovesGrantedWorkerAndRestoresRandomAndReceipts",
+        "fixture": "Weedtopia.Tests.SessionPersistenceTests",
+        "method": "FailedRewardSaveRemovesGrantedWorkerAndRestoresRandomAndReceipts",
+        "result": "Passed",
+        "durationSeconds": 0.175089,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.FailedWorkerAssignmentSaveRestoresBothWorkersInPlace",
+        "fixture": "Weedtopia.Tests.SessionPersistenceTests",
+        "method": "FailedWorkerAssignmentSaveRestoresBothWorkersInPlace",
+        "result": "Passed",
+        "durationSeconds": 0.178812,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.IntroAdvanceCompletionAndRestartEachPersistExactlyOnce",
+        "fixture": "Weedtopia.Tests.SessionPersistenceTests",
+        "method": "IntroAdvanceCompletionAndRestartEachPersistExactlyOnce",
+        "result": "Passed",
+        "durationSeconds": 0.197462,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.PausedSessionRetriesUnsavedProgressWithoutSimulating",
+        "fixture": "Weedtopia.Tests.SessionPersistenceTests",
+        "method": "PausedSessionRetriesUnsavedProgressWithoutSimulating",
+        "result": "Passed",
+        "durationSeconds": 0.234328,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.RetryDelayIsCappedAndManualSaveCanRecoverImmediately",
+        "fixture": "Weedtopia.Tests.SessionPersistenceTests",
+        "method": "RetryDelayIsCappedAndManualSaveCanRecoverImmediately",
+        "result": "Passed",
+        "durationSeconds": 0.176587,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.SaveFailureDoesNotConsumeTimestampAndInvalidFrameDoesNotTouchStore",
+        "fixture": "Weedtopia.Tests.SessionPersistenceTests",
+        "method": "SaveFailureDoesNotConsumeTimestampAndInvalidFrameDoesNotTouchStore",
+        "result": "Passed",
+        "durationSeconds": 0.175061,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.UnauthorizedSaveRestoresTransactionAndMarksTheExactStorageError",
+        "fixture": "Weedtopia.Tests.SessionPersistenceTests",
+        "method": "UnauthorizedSaveRestoresTransactionAndMarksTheExactStorageError",
+        "result": "Passed",
+        "durationSeconds": 0.177129,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.SessionPersistenceTests.VipDailySaveFailureRetriesAtBackoffAndGrantsExactlyOnce",
+        "fixture": "Weedtopia.Tests.SessionPersistenceTests",
+        "method": "VipDailySaveFailureRetriesAtBackoffAndGrantsExactlyOnce",
+        "result": "Passed",
+        "durationSeconds": 0.193404,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      }
+    ],
+    "scope": "Only these actual native cases certify the listed coverage; no device, store, visual or human acceptance is inferred."
+  },
+  "unityPlayMode": {
+    "status": "passed",
+    "stage": "PlayMode",
+    "passed": 22,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0,
+    "fixtureResults": [
+      {
+        "fixture": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests",
+        "passed": 8,
+        "testNames": [
+          "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests.FailedContinueBlocksRetainedSessionUpdateFocusWritesAndCommandsUntilRetry",
+          "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests.FailedContinueCanStartExplicitNewGameWithoutAdvancingRetainedSession",
+          "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests.FailedFinalWritePreservesOldSessionAndUnlocksPlayForRetry",
+          "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests.FailedSynchronousContinueRetainsSessionUntilSuccessfulSynchronousRetry",
+          "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests.PlayAfterFailedContinueRetriesMissingSaveUntilExplicitNewGame",
+          "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests.ResponsiveContinueOpensSavedCityWithOneCompletedOfflineSummary",
+          "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests.RestartAfterFailedContinueArchivesOriginalSaveBeforeStartingNewGame",
+          "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests.StartShowsProgressBeforeWorkAndSuppressesDuplicateClicksAndPauseSaves"
+        ]
+      },
+      {
+        "fixture": "Weedtopia.Tests.PlayMode.StorageFailureUiTests",
+        "passed": 3,
+        "testNames": [
+          "Weedtopia.Tests.PlayMode.StorageFailureUiTests.AutosaveErrorAppearsOnceUntilRecoveryAndCanBeReportedAgain",
+          "Weedtopia.Tests.PlayMode.StorageFailureUiTests.DirectUnauthorizedSaveIsLocalizedAndRestoresTheFailedCommand",
+          "Weedtopia.Tests.PlayMode.StorageFailureUiTests.FailedIntroButtonsStayOnTheirPageAndKeepTheIntroOpenUntilSaved"
+        ]
+      },
+      {
+        "fixture": "Weedtopia.Tests.PlayMode.UiExperienceTests",
+        "passed": 11,
+        "testNames": [
+          "Weedtopia.Tests.PlayMode.UiExperienceTests.AuthoredModuleScrollKeepsLowerInventoryActionsReachable",
+          "Weedtopia.Tests.PlayMode.UiExperienceTests.EveryClickedActorKeepsItsIdentityEvenWhenItsWorkplaceIsLocked",
+          "Weedtopia.Tests.PlayMode.UiExperienceTests.LegacyWindowCloseLivesInAReservedHeaderOutsideTheContent",
+          "Weedtopia.Tests.PlayMode.UiExperienceTests.MilaUsesSpeechAndDifferentGesturesAboveTheBottomDialogueBox",
+          "Weedtopia.Tests.PlayMode.UiExperienceTests.ModalCloseButtonsAreAboveTheirContentAndRestoreNavigation",
+          "Weedtopia.Tests.PlayMode.UiExperienceTests.NewGameRequiresInGameConfirmationAndKeepsItsOwnArchive",
+          "Weedtopia.Tests.PlayMode.UiExperienceTests.OnePlayButtonStartsNamesAndResumesTheSavedGame",
+          "Weedtopia.Tests.PlayMode.UiExperienceTests.ProfileTabChangesNameAndAvatarWithoutResettingTheTown",
+          "Weedtopia.Tests.PlayMode.UiExperienceTests.RoundQuestShortcutOpensANextStepPreviewBeforeTheChecklist",
+          "Weedtopia.Tests.PlayMode.UiExperienceTests.WholeScreenTapAdvancesPagesAndConsumesTheFinalTap",
+          "Weedtopia.Tests.PlayMode.UiExperienceTests.WorkerPickerCloseDoesNotOpenSettingsAndGlobalMenusRemainReachable"
+        ]
+      }
+    ],
+    "cases": [
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests.FailedContinueBlocksRetainedSessionUpdateFocusWritesAndCommandsUntilRetry",
+        "fixture": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests",
+        "method": "FailedContinueBlocksRetainedSessionUpdateFocusWritesAndCommandsUntilRetry",
+        "result": "Passed",
+        "durationSeconds": 2.905415,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests.FailedContinueCanStartExplicitNewGameWithoutAdvancingRetainedSession",
+        "fixture": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests",
+        "method": "FailedContinueCanStartExplicitNewGameWithoutAdvancingRetainedSession",
+        "result": "Passed",
+        "durationSeconds": 2.65196,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests.FailedFinalWritePreservesOldSessionAndUnlocksPlayForRetry",
+        "fixture": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests",
+        "method": "FailedFinalWritePreservesOldSessionAndUnlocksPlayForRetry",
+        "result": "Passed",
+        "durationSeconds": 2.649012,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests.FailedSynchronousContinueRetainsSessionUntilSuccessfulSynchronousRetry",
+        "fixture": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests",
+        "method": "FailedSynchronousContinueRetainsSessionUntilSuccessfulSynchronousRetry",
+        "result": "Passed",
+        "durationSeconds": 2.287712,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests.PlayAfterFailedContinueRetriesMissingSaveUntilExplicitNewGame",
+        "fixture": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests",
+        "method": "PlayAfterFailedContinueRetriesMissingSaveUntilExplicitNewGame",
+        "result": "Passed",
+        "durationSeconds": 2.413434,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests.ResponsiveContinueOpensSavedCityWithOneCompletedOfflineSummary",
+        "fixture": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests",
+        "method": "ResponsiveContinueOpensSavedCityWithOneCompletedOfflineSummary",
+        "result": "Passed",
+        "durationSeconds": 4.054126,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests.RestartAfterFailedContinueArchivesOriginalSaveBeforeStartingNewGame",
+        "fixture": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests",
+        "method": "RestartAfterFailedContinueArchivesOriginalSaveBeforeStartingNewGame",
+        "result": "Passed",
+        "durationSeconds": 2.579702,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests.StartShowsProgressBeforeWorkAndSuppressesDuplicateClicksAndPauseSaves",
+        "fixture": "Weedtopia.Tests.PlayMode.ResponsiveStartupUiTests",
+        "method": "StartShowsProgressBeforeWorkAndSuppressesDuplicateClicksAndPauseSaves",
+        "result": "Passed",
+        "durationSeconds": 2.393807,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.StorageFailureUiTests.AutosaveErrorAppearsOnceUntilRecoveryAndCanBeReportedAgain",
+        "fixture": "Weedtopia.Tests.PlayMode.StorageFailureUiTests",
+        "method": "AutosaveErrorAppearsOnceUntilRecoveryAndCanBeReportedAgain",
+        "result": "Passed",
+        "durationSeconds": 2.89108,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.StorageFailureUiTests.DirectUnauthorizedSaveIsLocalizedAndRestoresTheFailedCommand",
+        "fixture": "Weedtopia.Tests.PlayMode.StorageFailureUiTests",
+        "method": "DirectUnauthorizedSaveIsLocalizedAndRestoresTheFailedCommand",
+        "result": "Passed",
+        "durationSeconds": 2.862964,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.StorageFailureUiTests.FailedIntroButtonsStayOnTheirPageAndKeepTheIntroOpenUntilSaved",
+        "fixture": "Weedtopia.Tests.PlayMode.StorageFailureUiTests",
+        "method": "FailedIntroButtonsStayOnTheirPageAndKeepTheIntroOpenUntilSaved",
+        "result": "Passed",
+        "durationSeconds": 2.798761,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.UiExperienceTests.AuthoredModuleScrollKeepsLowerInventoryActionsReachable",
+        "fixture": "Weedtopia.Tests.PlayMode.UiExperienceTests",
+        "method": "AuthoredModuleScrollKeepsLowerInventoryActionsReachable",
+        "result": "Passed",
+        "durationSeconds": 1.930669,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.UiExperienceTests.EveryClickedActorKeepsItsIdentityEvenWhenItsWorkplaceIsLocked",
+        "fixture": "Weedtopia.Tests.PlayMode.UiExperienceTests",
+        "method": "EveryClickedActorKeepsItsIdentityEvenWhenItsWorkplaceIsLocked",
+        "result": "Passed",
+        "durationSeconds": 2.144697,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.UiExperienceTests.LegacyWindowCloseLivesInAReservedHeaderOutsideTheContent",
+        "fixture": "Weedtopia.Tests.PlayMode.UiExperienceTests",
+        "method": "LegacyWindowCloseLivesInAReservedHeaderOutsideTheContent",
+        "result": "Passed",
+        "durationSeconds": 2.060109,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.UiExperienceTests.MilaUsesSpeechAndDifferentGesturesAboveTheBottomDialogueBox",
+        "fixture": "Weedtopia.Tests.PlayMode.UiExperienceTests",
+        "method": "MilaUsesSpeechAndDifferentGesturesAboveTheBottomDialogueBox",
+        "result": "Passed",
+        "durationSeconds": 1.898699,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.UiExperienceTests.ModalCloseButtonsAreAboveTheirContentAndRestoreNavigation",
+        "fixture": "Weedtopia.Tests.PlayMode.UiExperienceTests",
+        "method": "ModalCloseButtonsAreAboveTheirContentAndRestoreNavigation",
+        "result": "Passed",
+        "durationSeconds": 2.47556,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.UiExperienceTests.NewGameRequiresInGameConfirmationAndKeepsItsOwnArchive",
+        "fixture": "Weedtopia.Tests.PlayMode.UiExperienceTests",
+        "method": "NewGameRequiresInGameConfirmationAndKeepsItsOwnArchive",
+        "result": "Passed",
+        "durationSeconds": 2.114523,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.UiExperienceTests.OnePlayButtonStartsNamesAndResumesTheSavedGame",
+        "fixture": "Weedtopia.Tests.PlayMode.UiExperienceTests",
+        "method": "OnePlayButtonStartsNamesAndResumesTheSavedGame",
+        "result": "Passed",
+        "durationSeconds": 2.088671,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.UiExperienceTests.ProfileTabChangesNameAndAvatarWithoutResettingTheTown",
+        "fixture": "Weedtopia.Tests.PlayMode.UiExperienceTests",
+        "method": "ProfileTabChangesNameAndAvatarWithoutResettingTheTown",
+        "result": "Passed",
+        "durationSeconds": 2.056094,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.UiExperienceTests.RoundQuestShortcutOpensANextStepPreviewBeforeTheChecklist",
+        "fixture": "Weedtopia.Tests.PlayMode.UiExperienceTests",
+        "method": "RoundQuestShortcutOpensANextStepPreviewBeforeTheChecklist",
+        "result": "Passed",
+        "durationSeconds": 1.896355,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.UiExperienceTests.WholeScreenTapAdvancesPagesAndConsumesTheFinalTap",
+        "fixture": "Weedtopia.Tests.PlayMode.UiExperienceTests",
+        "method": "WholeScreenTapAdvancesPagesAndConsumesTheFinalTap",
+        "result": "Passed",
+        "durationSeconds": 1.900633,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      },
+      {
+        "fullname": "Weedtopia.Tests.PlayMode.UiExperienceTests.WorkerPickerCloseDoesNotOpenSettingsAndGlobalMenusRemainReachable",
+        "fixture": "Weedtopia.Tests.PlayMode.UiExperienceTests",
+        "method": "WorkerPickerCloseDoesNotOpenSettingsAndGlobalMenusRemainReachable",
+        "result": "Passed",
+        "durationSeconds": 2.188206,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+        "nativeXmlSha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611"
+      }
+    ],
+    "scope": "Only these actual native cases certify the listed coverage; no device, store, visual or human acceptance is inferred."
+  },
+  "retrySeconds": [
+    30,
+    60,
+    120,
+    240,
+    300
+  ],
+  "offlineBatch": {
+    "maximumSeconds": 32,
+    "thread": "Unity main thread",
+    "initialRenderYield": true,
+    "finalSummarySavedBeforeSessionSwap": true,
+    "interruptedGraphRollback": true,
+    "duplicateStartBlocked": true,
+    "saveSuppressedWhileContinueBusy": true,
+    "savedCityGetsCompletedSummary": true,
+    "localizedProgressLanguages": [
+      "de",
+      "en",
+      "es",
+      "fr",
+      "ru"
+    ],
+    "applicationIteratorDefaultSeconds": 128,
+    "responsiveFrameBudgetMilliseconds": 8
+  },
+  "preservation": {
+    "existingStateAndGraphReferences": true,
+    "noPersonalSaveReadOrWrite": true,
+    "noUnityProcessStartedOrStopped": true,
+    "synchronousApplyOfflineAndContinueApisPreserved": true
+  },
+  "sourceSha256": {
+    "Assets/Weedtopia/Scripts/Runtime/Application/GameSession.cs": "511a4efcc663f27b6f929a17b0570dffa6ada9608155e7147282c9eaeca1d8bd",
+    "Assets/Weedtopia/Scripts/Runtime/Application/GameStateTransactionSnapshot.cs": "4257db04ddef24effc3782452d4811c9fe757ebbb7037ef0517d8ed3640de4c2",
+    "Assets/Weedtopia/Scripts/Runtime/Application/OfflineProgress.cs": "e584c95d207045a78e60cb8e0bb03e29bedd9e98aaa0fdef2d7a812f93ec8ac5",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/GameRoot.cs": "4ae82b965a869f8587ad9ea90ec4e2da7726ef71e3ecf876a8e32bce4b1ae42e",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/GameUi.cs": "7cdd50f2ef7db569897878ce2bc1a6ae58ae06861a0595ae29eed124a55c0111",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/UiExperience.cs": "204cd3429614b24ad74f8439deadde3e3c2ce2555946e082d89aa782dbb7818c",
+    "Assets/Weedtopia/Scripts/Tests/EditMode/SessionPersistenceTests.cs": "8b19c79ecd745f566a9a1ab50798b0cac0a677acc46abea6b4dc1b660e0f08f4",
+    "Assets/Weedtopia/Scripts/Tests/EditMode/OfflineStartupTests.cs": "fe2b98a2de65348ca1f6ef2fd45db272297b7d1b5e3f33142e7fafe56b1e71d2",
+    "Assets/Weedtopia/Scripts/Tests/PlayMode/StorageFailureUiTests.cs": "7c0aa05fe4834d659b0a625174987405e9647111109645807085c598eeeb004d",
+    "Assets/Weedtopia/Scripts/Tests/PlayMode/ResponsiveStartupUiTests.cs": "43f548cb0662f80ed874c74c2173673dba2cc1b042f036aac1065d122af8cfcd",
+    "Assets/Weedtopia/Scripts/Tests/PlayMode/UiExperienceTests.cs": "c836d1b8c29593496e5a856a1e8d58ec68be82750213caa47383fe644cd0e090",
+    "Assets/Weedtopia/Game/Localization/de.json": "b09753e28e12400c462989b656354871ea78910877f472d5663158abc30520fc",
+    "Assets/Weedtopia/Game/Localization/en.json": "193b944e088e1354e00d2b94dc07162015c297a0254596ab01d0c2e4b2331dff",
+    "Assets/Weedtopia/Game/Localization/es.json": "793d30d042bcbb3aadfa8f774dbaa283d471e696ce2d90d1ebf321a6323e5eb5",
+    "Assets/Weedtopia/Game/Localization/fr.json": "71f461196194daa6e65c70afaefcc8cda789ebb9fd09bcdebf29dfa7e54740f6",
+    "Assets/Weedtopia/Game/Localization/ru.json": "75f09d50191e4decef946193e29cb191f06e4392581791693d049d53feab5ec2",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/LuckyWheelUi.cs": "646c024251c1b0b80829f911a1e327f388e91b27c7be87487f5dae20c8e968d2"
+  },
+  "directStorageExceptionFilters": [
+    "IOException",
+    "UnauthorizedAccessException"
+  ],
+  "introPersistence": {
+    "atomicRollback": true,
+    "oneSavePerAction": true,
+    "directSessionCallsRemovedFromUi": true,
+    "failureKeepsPageAndIntroOpen": true,
+    "nativePlayModeFixtureCount": 3
+  },
+  "offlineSingleCommit": {
+    "implementation": "integrated",
+    "dueVipAndOfflineShareOneDiskWrite": true,
+    "failureRestoresEntireOfflineAndVipModel": true,
+    "retryGrantsVipExactlyOnce": true,
+    "productiveSourceSha256": {
+      "Assets/Weedtopia/Scripts/Runtime/Application/GameSession.cs": "511a4efcc663f27b6f929a17b0570dffa6ada9608155e7147282c9eaeca1d8bd",
+      "Assets/Weedtopia/Scripts/Tests/EditMode/OfflineStartupTests.cs": "fe2b98a2de65348ca1f6ef2fd45db272297b7d1b5e3f33142e7fafe56b1e71d2"
+    },
+    "stagedProof": "Docs/CommercialReadiness/Storage/offline-single-commit-validation.json",
+    "nativeVerification": "passed_actual_two_regressions"
+  },
+  "historicalPreNativeStatus": null,
+  "nativeEvidenceUpdatedUtc": "2026-10-05T06:24:07.054764+00:00",
+  "nativeRegressionContext": {
+    "run": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/run.json",
+      "sha256": "3c21ff8ed4523cce4af54f2e16fb2c652df61a84512e5cd162c429825c5da583"
+    },
+    "runId": "20261005T061357352-258904",
+    "unity": "6000.3.9f1",
+    "finishedUtc": "2026-10-05T06:22:37.0323225Z",
+    "scope": "native_editmode_repair_aggregate_then_complete_playmode",
+    "editorRestored": true,
+    "editModeEvidenceMode": "395 original native passes plus one actual repaired native pass; no full EditMode rerun",
+    "originalFullEditMode": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+      "sha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29",
+      "passed": 395,
+      "failed": 1,
+      "skipped": 0,
+      "inconclusive": 0,
+      "total": 396,
+      "testcasecount": 396
+    },
+    "repairEditMode": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/EditModeRepair.xml",
+      "sha256": "97bfccd1e4e4a756a4d3f9aba4760c86759ba4100411341a181cdb72c47fc678",
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "total": 1,
+      "testcasecount": 1
+    },
+    "editModeAggregate": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/EditModeAggregate.json",
+      "sha256": "1e6a4b29ef087dd3e484609d1c3e3094233ca18ae57cea5e1b9a369bd892cdd4"
+    },
+    "effectiveEditModePassed": 396,
+    "completePlayMode": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+      "sha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611",
+      "passed": 103,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "total": 103,
+      "testcasecount": 103
+    },
+    "sourceValidation": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/source_validation.json",
+      "sha256": "c2c7f3827a839daf559acae80cf93cf1ce2a2dab0713aa3464c70cdc3399ebb2"
+    },
+    "sourceInputs": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/source_inputs.json",
+      "sha256": "626d4e2d40f7ad52637e6d715b195f316b424dcea4a1ec6f0a091115ce389b74"
+    },
+    "targetAccepted": false,
+    "releaseAccepted": false,
+    "deviceAccepted": false,
+    "humanAccepted": false
+  },
+  "finalRuntimeSourceHashes": {
+    "Assets/Weedtopia/Scripts/Runtime/Domain/Amount.cs": "1e2d5bcce8465a7c1942504f2670144b83e85b1c109a5ab4cb67df7b6c19bd8d",
+    "Assets/Weedtopia/Scripts/Runtime/Domain/Simulation.cs": "b26a6b64674d21a60061e2e48d7b5431b3b2f72485cdcb36902fadd6a3c30910",
+    "Assets/Weedtopia/Scripts/Runtime/Application/GameSession.cs": "511a4efcc663f27b6f929a17b0570dffa6ada9608155e7147282c9eaeca1d8bd",
+    "Assets/Weedtopia/Scripts/Runtime/Application/GameStateTransactionSnapshot.cs": "4257db04ddef24effc3782452d4811c9fe757ebbb7037ef0517d8ed3640de4c2",
+    "Assets/Weedtopia/Scripts/Runtime/Application/OfflineProgress.cs": "e584c95d207045a78e60cb8e0bb03e29bedd9e98aaa0fdef2d7a812f93ec8ac5",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/GameRoot.cs": "0e6b0a6eb5126466c5053e4ee2e6f7b2e6e26e58ca25c13fe65c4643157f4988",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/GameUi.cs": "7cdd50f2ef7db569897878ce2bc1a6ae58ae06861a0595ae29eed124a55c0111",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/UiExperience.cs": "204cd3429614b24ad74f8439deadde3e3c2ce2555946e082d89aa782dbb7818c",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/LuckyWheelUi.cs": "646c024251c1b0b80829f911a1e327f388e91b27c7be87487f5dae20c8e968d2"
+  },
+  "finalSourceHashes": {
+    "Assets/Weedtopia/Game/Localization/de.json": "b09753e28e12400c462989b656354871ea78910877f472d5663158abc30520fc",
+    "Assets/Weedtopia/Game/Localization/en.json": "193b944e088e1354e00d2b94dc07162015c297a0254596ab01d0c2e4b2331dff",
+    "Assets/Weedtopia/Game/Localization/es.json": "793d30d042bcbb3aadfa8f774dbaa283d471e696ce2d90d1ebf321a6323e5eb5",
+    "Assets/Weedtopia/Game/Localization/fr.json": "71f461196194daa6e65c70afaefcc8cda789ebb9fd09bcdebf29dfa7e54740f6",
+    "Assets/Weedtopia/Game/Localization/ru.json": "75f09d50191e4decef946193e29cb191f06e4392581791693d049d53feab5ec2",
+    "Assets/Weedtopia/Scripts/Runtime/Application/GameSession.cs": "511a4efcc663f27b6f929a17b0570dffa6ada9608155e7147282c9eaeca1d8bd",
+    "Assets/Weedtopia/Scripts/Runtime/Application/GameStateTransactionSnapshot.cs": "4257db04ddef24effc3782452d4811c9fe757ebbb7037ef0517d8ed3640de4c2",
+    "Assets/Weedtopia/Scripts/Runtime/Application/OfflineProgress.cs": "e584c95d207045a78e60cb8e0bb03e29bedd9e98aaa0fdef2d7a812f93ec8ac5",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/GameRoot.cs": "0e6b0a6eb5126466c5053e4ee2e6f7b2e6e26e58ca25c13fe65c4643157f4988",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/GameUi.cs": "7cdd50f2ef7db569897878ce2bc1a6ae58ae06861a0595ae29eed124a55c0111",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/LuckyWheelUi.cs": "646c024251c1b0b80829f911a1e327f388e91b27c7be87487f5dae20c8e968d2",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/UiExperience.cs": "204cd3429614b24ad74f8439deadde3e3c2ce2555946e082d89aa782dbb7818c",
+    "Assets/Weedtopia/Scripts/Tests/EditMode/OfflineStartupTests.cs": "fe2b98a2de65348ca1f6ef2fd45db272297b7d1b5e3f33142e7fafe56b1e71d2",
+    "Assets/Weedtopia/Scripts/Tests/EditMode/SessionPersistenceTests.cs": "8b19c79ecd745f566a9a1ab50798b0cac0a677acc46abea6b4dc1b660e0f08f4",
+    "Assets/Weedtopia/Scripts/Tests/PlayMode/ResponsiveStartupUiTests.cs": "43f548cb0662f80ed874c74c2173673dba2cc1b042f036aac1065d122af8cfcd",
+    "Assets/Weedtopia/Scripts/Tests/PlayMode/StorageFailureUiTests.cs": "7c0aa05fe4834d659b0a625174987405e9647111109645807085c598eeeb004d",
+    "Assets/Weedtopia/Scripts/Tests/PlayMode/UiExperienceTests.cs": "c836d1b8c29593496e5a856a1e8d58ec68be82750213caa47383fe644cd0e090"
+  },
+  "finalResponsiveStartupPolicy": {
+    "batchSeconds": 32,
+    "frameBudgetMilliseconds": 8,
+    "GameRootSha256": "0e6b0a6eb5126466c5053e4ee2e6f7b2e6e26e58ca25c13fe65c4643157f4988",
+    "matchesNativeSourceManifest": true
+  },
+  "historicalOfflineBatch": {
+    "maximumSeconds": 128,
+    "thread": "Unity main thread",
+    "initialRenderYield": true,
+    "finalSummarySavedBeforeSessionSwap": true,
+    "interruptedGraphRollback": true,
+    "duplicateStartBlocked": true,
+    "saveSuppressedWhileContinueBusy": true,
+    "savedCityGetsCompletedSummary": true,
+    "localizedProgressLanguages": [
+      "de",
+      "en",
+      "es",
+      "fr",
+      "ru"
+    ]
+  }
+}

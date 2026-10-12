@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-07T20:32:39.891360+00:00",
+  "mode": "EditMode",
+  "label": "LittleMontanaAssetsGrid",
+  "assembly": "Weedtopia.Game.AssetTests",
+  "testFilter": "Weedtopia.Tests.Assets.BigRockCityAssetTests;Weedtopia.Tests.Assets.SevenHillsAssetTests;Weedtopia.Tests.Assets.LittleMontanaAssetTests",
+  "expectedUniqueCases": 12,
+  "command": "powershell -NoProfile -ExecutionPolicy Bypass -File Tools/Implementation/Run-UnityValidation.ps1 -Mode EditMode -Label LittleMontanaAssetsGrid -Assembly Weedtopia.Game.AssetTests -TestFilter <exact three class names above>",
+  "sourceCompileSnapshot": "Docs/LittleMontana/Validation/assets_grid_source_compile_snapshot.json",
+  "memoryProbeTechnicalReceipt": "Docs/LittleMontana/Validation/20261007_213738_MemoryProbe_PlacementProbeCoverage7.json",
+  "memoryProbeFingerprint": "dbf72a4c01df1382a1c301e904d611d1ae4861fc45e33150da65ff304247b500",
+  "serializedPineProof": "Docs/LittleMontana/pine_clearance_asset_diff.json",
+  "scope": "Exactly three named city asset classes and 12 cases, including the existing isolated manual-work case with memory and two-pine guards."
+}

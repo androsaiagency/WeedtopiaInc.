@@ -1,0 +1,16 @@
+{
+  "fullRun": "PlayMode-attempt-01.xml",
+  "fullRunPassed": 88,
+  "fullRunFailed": 1,
+  "repeatedRun": "PlayModeFocused.xml",
+  "repeatedRunPassed": 4,
+  "replacedTestNames": [
+    "Weedtopia.Tests.PlayMode.BuildingInteractionTests.FreeWorldHasNoPersistentPanelsOrPositionScrollbar",
+    "Weedtopia.Tests.PlayMode.ShopUiTests.NavigationOpensShopAndEveryProductIsAccessibleThroughItsCategory",
+    "Weedtopia.Tests.PlayMode.ShopUiTests.PreviewAndCancellationDoNotGrantAndConfirmedStarterSurvivesContinue",
+    "Weedtopia.Tests.PlayMode.ShopUiTests.VipConfirmationGrantsFirstDayAndShowsTheSavedExpiration"
+  ],
+  "uniqueFinalPassed": 89,
+  "uniqueFinalFailed": 0,
+  "reason": "The existing free-world test expected nine dock buttons; the Shop adds the tenth. Only that expectation and the validation launcher changed."
+}

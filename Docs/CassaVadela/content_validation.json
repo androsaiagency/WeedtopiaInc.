@@ -1,0 +1,440 @@
+{
+  "city": "cassa_vadela",
+  "version": 6,
+  "changed": false,
+  "instances": 56,
+  "routes": 35,
+  "mainQuests": 18,
+  "permanentResidents": 8,
+  "personalChapters": 32,
+  "recurringVariants": 24,
+  "communityProjects": 3,
+  "localizedKeys": 299,
+  "languages": [
+    "de",
+    "en",
+    "es",
+    "fr",
+    "ru"
+  ],
+  "oldContentDigest": "d8bfab6d356e62542ceec2d7319deb67f454768ea68ac736ce759bcae41a274a",
+  "contentDigest": "d8bfab6d356e62542ceec2d7319deb67f454768ea68ac736ce759bcae41a274a",
+  "priorContentPreserved": true,
+  "priorLocaleEntriesPreserved": true,
+  "placeholderParity": true,
+  "residents": [
+    {
+      "id": "cv_ines",
+      "appearsAt": 0,
+      "chapters": [
+        0,
+        600,
+        3000,
+        8000
+      ]
+    },
+    {
+      "id": "cv_mateo",
+      "appearsAt": 75,
+      "chapters": [
+        75,
+        900,
+        3500,
+        8500
+      ]
+    },
+    {
+      "id": "cv_lucia",
+      "appearsAt": 200,
+      "chapters": [
+        200,
+        1200,
+        4000,
+        9000
+      ]
+    },
+    {
+      "id": "cv_rafael",
+      "appearsAt": 400,
+      "chapters": [
+        400,
+        1600,
+        4500,
+        9500
+      ]
+    },
+    {
+      "id": "cv_sofia",
+      "appearsAt": 700,
+      "chapters": [
+        700,
+        2000,
+        5000,
+        10000
+      ]
+    },
+    {
+      "id": "cv_elio",
+      "appearsAt": 1100,
+      "chapters": [
+        1100,
+        2500,
+        5500,
+        10500
+      ]
+    },
+    {
+      "id": "cv_amara",
+      "appearsAt": 1600,
+      "chapters": [
+        1600,
+        3000,
+        6500,
+        11500
+      ]
+    },
+    {
+      "id": "cv_nico",
+      "appearsAt": 2200,
+      "chapters": [
+        2200,
+        3600,
+        7000,
+        12000
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "cv_joint_fountain_market",
+      "residents": 1800,
+      "participants": [
+        "cv_ines",
+        "cv_mateo",
+        "cv_lucia"
+      ],
+      "goals": [
+        {
+          "kind": 5,
+          "count": 120,
+          "target": "",
+          "textKey": "cv.goal.coffee"
+        }
+      ]
+    },
+    {
+      "id": "cv_joint_open_ceramic_yard",
+      "residents": 4500,
+      "participants": [
+        "cv_rafael",
+        "cv_sofia",
+        "cv_amara"
+      ],
+      "goals": [
+        {
+          "kind": 8,
+          "count": 240,
+          "target": "",
+          "textKey": "cv.goal.delivered"
+        }
+      ]
+    },
+    {
+      "id": "cv_joint_terrace_walk",
+      "residents": 9000,
+      "participants": [
+        "cv_ines",
+        "cv_mateo",
+        "cv_lucia",
+        "cv_rafael",
+        "cv_sofia",
+        "cv_elio",
+        "cv_amara",
+        "cv_nico"
+      ],
+      "goals": [
+        {
+          "kind": 9,
+          "count": 30,
+          "target": "",
+          "textKey": "cv.goal.deliveries"
+        }
+      ]
+    }
+  ],
+  "independentLocalizationAudit": {
+    "authoredKeys": 299,
+    "referencedKeys": 295,
+    "keysPerLocale": {
+      "de": 299,
+      "en": 299,
+      "es": 299,
+      "fr": 299,
+      "ru": 299
+    },
+    "allReferencesResolved": true,
+    "duplicateKeys": false,
+    "placeholderParity": true,
+    "germanFallbackMatches": true,
+    "priorLocaleSnapshotEntriesPreserved": true,
+    "distinctThirdChapterOutcomes": 8,
+    "uniquePersonalMemories": 32,
+    "recheckedAfterSevenKeyRevision": true
+  },
+  "narrativeAudit": {
+    "scope": "All 299 authored keys in de/en/es/fr/ru, including invitation, main quests, biographies, four chapters per person, choices, memories, recurring variants and projects.",
+    "method": "Assistant semantic review against live catalog, Definitions/Simulation/Progression/VipStoryService and serialized Cassa authoring. Spanish/French/Russian are rough semantic checks, not native human editorial approval.",
+    "nativeHumanLanguageReview": false,
+    "invitation": {
+      "threshold": 50000,
+      "sources": [
+        "burning_hills",
+        "big_rock_city",
+        "seven_hills",
+        "little_montana"
+      ],
+      "ownPopulationExcluded": true,
+      "localThresholdsClearlySeparate": true,
+      "grantMoney": 5000,
+      "grantCards": 4
+    },
+    "economy": {
+      "resources": [
+        "Raw",
+        "Refined",
+        "Butter",
+        "Pastry"
+      ],
+      "newResourcesIntroduced": false,
+      "coffeeShopActualInput": "Refined",
+      "coffeeShopSalesNarration": "Cannabis buds; cups are story ambience only. Explicit mechanical sale instructions and goal label corrected in five keys.",
+      "butterConversion": "Refined -> Butter",
+      "bakeryConversion": "Butter -> Pastry; pastry sales count after production",
+      "waterOlivesAndCeramic": "Water-network history, terrace gardens and ceramic patterns are narrative/places, not additional production resources.",
+      "genericVipVersusPersonalStory": "The main everyday quest explicitly asks for a generic VIP task with claimed reward; Ines personal chapter is parallel content. Both namespaces/counters remain separate."
+    },
+    "projects": [
+      {
+        "id": "cv_joint_fountain_market",
+        "localResidents": 1800,
+        "counterKind": 5,
+        "freshCount": 120,
+        "firstChapterPrerequisites": [
+          "cv_ines_chapter_1",
+          "cv_mateo_chapter_1",
+          "cv_lucia_chapter_1"
+        ]
+      },
+      {
+        "id": "cv_joint_open_ceramic_yard",
+        "localResidents": 4500,
+        "counterKind": 8,
+        "freshCount": 240,
+        "firstChapterPrerequisites": [
+          "cv_rafael_chapter_1",
+          "cv_sofia_chapter_1",
+          "cv_amara_chapter_1"
+        ]
+      },
+      {
+        "id": "cv_joint_terrace_walk",
+        "localResidents": 9000,
+        "counterKind": 9,
+        "freshCount": 30,
+        "firstChapterPrerequisites": [
+          "cv_ines_chapter_1",
+          "cv_mateo_chapter_1",
+          "cv_lucia_chapter_1",
+          "cv_rafael_chapter_1",
+          "cv_sofia_chapter_1",
+          "cv_elio_chapter_1",
+          "cv_amara_chapter_1",
+          "cv_nico_chapter_1"
+        ]
+      }
+    ],
+    "freshCounterSemantics": "VipStoryService stores city-specific baselines at acceptance and subtracts them on progress. DeliveredGoods counts arriving units; Deliveries counts completed shipments. Existing totals cannot pre-complete these fresh goals.",
+    "continuity": [
+      "Ines shares duty with Rafael and takes a seat saved by Lucia.",
+      "Mateo opens his garden with Sofia/Lucia; Nico later returns a seed tin.",
+      "Lucia adds her own signature while preserving family memory.",
+      "Rafael learns to teach Sofia and plans an evening with Elio.",
+      "Sofia keeps her teacher named while allowing other hands and patterns.",
+      "Elio asks Nico about quiet hours and listens to Ines/Rafael.",
+      "Amara keeps both Ines and Nico accounts without erasing contradiction.",
+      "Nico sets boundaries with Ines and becomes a guest at the final gathering."
+    ],
+    "placeChanges": {
+      "allEightThirdChoicesSaved": true,
+      "allEightChoiceIdsAuthoredIntoDistinctMemoryVisuals": true,
+      "sharedYardExactBranch": [
+        "repair",
+        "teach"
+      ],
+      "communityPlaceStages": [
+        "closed",
+        "growing",
+        "completed"
+      ],
+      "artMeaning": "Existing reusable props represent memories/choices; localized memory and outcome text supplies their specific narrative meaning."
+    },
+    "recurring": "Three goal variants per resident, no expiry field; 300-second pause after completion, existing capped population scaling; residents stay after fourth chapter.",
+    "languageNotes": {
+      "es": "The first-four total, aid amounts, shared responsibility and choice alternatives retain the German meaning; the product correction explicitly says flores de cannabis. Café follows the existing localized building name.",
+      "fr": "Four-city total and local milestones remain distinct; origin notes, testimony and choice consequences remain readable. The corrected sell goal says fleurs de cannabis; café follows the existing localized building name.",
+      "ru": "Four-city invitation and local resident counts retain the intended distinction; соцветия конопли now names the actual sell resource. Ines/Nico responsibility and boundaries remain intact; proper surnames remain unchanged as catalog names."
+    },
+    "unresolvedSemanticMechanicBugs": [],
+    "visualAcceptance": "This semantic audit does not substitute for Game View screenshots, touch/audio/device evidence or user art approval.",
+    "reviewedTextRevisionCount": 7
+  },
+  "priorFourCitySnapshotPreserved": true,
+  "priorFourCityContentDigest": "9a0b9b677bc4840bcfecd44fa6574a4915da80a94f3660af49738fe4e8fc7452",
+  "versionMigrationBase": 5,
+  "reviewedTextRevision": {
+    "reason": "Coffeeshop sells Resource.Refined cannabis buds; cups remain ambience only.",
+    "changedKeys": [
+      "cv.goal.coffee",
+      "cv.quest.first_meeting.body",
+      "cv.story.ines.chapter.2.body",
+      "cv.story.lucia.chapter.1.body",
+      "cv.quest.first_meeting.body.dialogue",
+      "cv.quest.everyday.body",
+      "cv.quest.everyday.body.dialogue"
+    ],
+    "translations": [
+      {
+        "key": "cv.goal.coffee",
+        "before": {
+          "de": "Neue Caféverkäufe seit Annahme: {1}/{2}",
+          "en": "New café sales since acceptance: {1}/{2}",
+          "es": "Ventas nuevas del café desde la aceptación: {1}/{2}",
+          "fr": "Nouvelles ventes au café depuis acceptation : {1}/{2}",
+          "ru": "Новые продажи в кафе после принятия: {1}/{2}"
+        },
+        "after": {
+          "de": "Neue Blütenverkäufe im Coffeeshop seit Annahme: {1}/{2}",
+          "en": "New cannabis bud sales in the coffee shop since acceptance: {1}/{2}",
+          "es": "Ventas nuevas de flores de cannabis en el café desde la aceptación: {1}/{2}",
+          "fr": "Nouvelles ventes de fleurs de cannabis au café depuis acceptation : {1}/{2}",
+          "ru": "Новые продажи соцветий конопли в кофейне после принятия: {1}/{2}"
+        }
+      },
+      {
+        "key": "cv.quest.first_meeting.body",
+        "before": {
+          "de": "Rocko: Besetze Stadtlager und Café und verkaufe die erste Tasse. Lucia unterschreibt die Karte. Danach öffnen wir den Sonnenhang für Wohnhäuser und Parks.",
+          "en": "Rocko: Staff the city warehouse and café and sell the first cup. Lucia signs the menu. Then we open Sun Slope for homes and parks.",
+          "es": "Rocko: Asigna almacén y café y vende una taza. Lucia firma la carta. Después abrimos la ladera para casas y parques.",
+          "fr": "Rocko : Affecte entrepôt et café, puis vends une tasse. Lucia signe le menu. Nous ouvrirons ensuite le coteau aux maisons et parcs.",
+          "ru": "Рокко: Назначь склад и кафе, продай первую чашку. Лусия подпишет меню. Затем откроем Солнечный склон для домов и парков."
+        },
+        "after": {
+          "de": "Rocko: Besetze Stadtlager und Coffeeshop und verkaufe die ersten Blüten. Lucia unterschreibt die Karte. Danach öffnen wir den Sonnenhang für Wohnhäuser und Parks.",
+          "en": "Rocko: Staff the city warehouse and coffee shop and sell the first cannabis buds. Lucia signs the menu. Then we open Sun Slope for homes and parks.",
+          "es": "Rocko: Asigna personal al almacén y al café y vende las primeras flores de cannabis. Lucia firma la carta. Después abrimos la ladera para casas y parques.",
+          "fr": "Rocko : Affecte entrepôt et café, puis vends les premières fleurs de cannabis. Lucia signe le menu. Nous ouvrirons ensuite le coteau aux maisons et parcs.",
+          "ru": "Рокко: Назначь работников в склад и кофейню, продай первые соцветия конопли. Лусия подпишет меню. Затем откроем Солнечный склон для домов и парков."
+        }
+      },
+      {
+        "key": "cv.story.ines.chapter.2.body",
+        "before": {
+          "de": "Lucia hält einen Platz frei, aber Ines zählt erneut ihre Schlüssel. Baue das Café aus und verkaufe neue Tassen. Rafael übernimmt die Notizen für einen Abend; Ines setzt sich endlich dazu.",
+          "en": "Lucia saves a seat, but Ines counts her keys again. Upgrade the café and sell fresh cups. Rafael takes the notes for an evening; Ines finally joins the table.",
+          "es": "Lucia guarda un sitio, pero Ines vuelve a contar sus llaves. Mejora el café y vende nuevas tazas. Rafael cuida las notas una tarde; Ines por fin se sienta.",
+          "fr": "Lucia garde une place, mais Ines recompte ses clés. Agrandis le café et vends de nouvelles tasses. Rafael prend les notes pour une soirée ; Ines s’assied enfin.",
+          "ru": "Лусия оставляет место, но Инес опять пересчитывает ключи. Улучши кафе и продай новые чашки. Рафаэль возьмёт записи на вечер, и Инес наконец сядет за стол."
+        },
+        "after": {
+          "de": "Lucia hält einen Platz frei, aber Ines zählt erneut ihre Schlüssel. Baue den Coffeeshop aus und verkaufe neue Blüten. Rafael übernimmt die Notizen für einen Abend; Ines setzt sich endlich dazu.",
+          "en": "Lucia saves a seat, but Ines counts her keys again. Upgrade the coffee shop and sell new cannabis buds. Rafael takes the notes for an evening; Ines finally joins the table.",
+          "es": "Lucia guarda un sitio, pero Ines vuelve a contar sus llaves. Mejora el café y vende nuevas flores de cannabis. Rafael cuida las notas una tarde; Ines por fin se sienta.",
+          "fr": "Lucia garde une place, mais Ines recompte ses clés. Agrandis le café et vends de nouvelles fleurs de cannabis. Rafael prend les notes pour une soirée ; Ines s’assied enfin.",
+          "ru": "Лусия оставляет место, но Инес опять пересчитывает ключи. Улучши кофейню и продай новые соцветия конопли. Рафаэль возьмёт записи на вечер, и Инес наконец сядет за стол."
+        }
+      },
+      {
+        "key": "cv.story.lucia.chapter.1.body",
+        "before": {
+          "de": "Lucia stellt einen Stuhl an den leeren Markt. Baue das Café aus und verkaufe neue Tassen. Ines setzt sich kurz; Lucia fragt nach Geschmack, nicht nach einem Urteil.",
+          "en": "Lucia puts a chair by the empty market. Upgrade the café and sell new cups. Ines sits briefly; Lucia asks about flavour rather than a verdict.",
+          "es": "Lucia pone una silla junto al mercado vacío. Mejora el café y vende tazas nuevas. Ines se sienta un momento; Lucia pregunta por el sabor, no por un veredicto.",
+          "fr": "Lucia pose une chaise près du marché vide. Agrandis le café et vends de nouvelles tasses. Ines s’assied un instant ; Lucia demande un goût, pas un jugement.",
+          "ru": "Лусия поставит стул у пустого рынка. Улучши кафе и продай новые чашки. Инес ненадолго сядет, а Лусия спросит о вкусе, а не об оценке."
+        },
+        "after": {
+          "de": "Lucia stellt einen Stuhl an den leeren Markt. Baue den Coffeeshop aus und verkaufe neue Blüten. Ines setzt sich kurz; Lucia fragt nach Geschmack, nicht nach einem Urteil.",
+          "en": "Lucia puts a chair by the empty market. Upgrade the coffee shop and sell new cannabis buds. Ines sits briefly; Lucia asks about flavour rather than a verdict.",
+          "es": "Lucia pone una silla junto al mercado vacío. Mejora el café y vende nuevas flores de cannabis. Ines se sienta un momento; Lucia pregunta por el sabor, no por un veredicto.",
+          "fr": "Lucia pose une chaise près du marché vide. Agrandis le café et vends de nouvelles fleurs de cannabis. Ines s’assied un instant ; Lucia demande un goût, pas un jugement.",
+          "ru": "Лусия поставит стул у пустого рынка. Улучши кофейню и продай новые соцветия конопли. Инес ненадолго сядет, а Лусия спросит о вкусе, а не об оценке."
+        }
+      },
+      {
+        "key": "cv.quest.first_meeting.body.dialogue",
+        "before": {
+          "de": "Besetze Stadtlager und Café und verkaufe die erste Tasse. Lucia unterschreibt die Karte. Danach öffnen wir den Sonnenhang für Wohnhäuser und Parks.",
+          "en": "Staff the city warehouse and café and sell the first cup. Lucia signs the menu. Then we open Sun Slope for homes and parks.",
+          "es": "Asigna almacén y café y vende una taza. Lucia firma la carta. Después abrimos la ladera para casas y parques.",
+          "fr": "Affecte entrepôt et café, puis vends une tasse. Lucia signe le menu. Nous ouvrirons ensuite le coteau aux maisons et parcs.",
+          "ru": "Назначь склад и кафе, продай первую чашку. Лусия подпишет меню. Затем откроем Солнечный склон для домов и парков."
+        },
+        "after": {
+          "de": "Besetze Stadtlager und Coffeeshop und verkaufe die ersten Blüten. Lucia unterschreibt die Karte. Danach öffnen wir den Sonnenhang für Wohnhäuser und Parks.",
+          "en": "Staff the city warehouse and coffee shop and sell the first cannabis buds. Lucia signs the menu. Then we open Sun Slope for homes and parks.",
+          "es": "Asigna personal al almacén y al café y vende las primeras flores de cannabis. Lucia firma la carta. Después abrimos la ladera para casas y parques.",
+          "fr": "Affecte entrepôt et café, puis vends les premières fleurs de cannabis. Lucia signe le menu. Nous ouvrirons ensuite le coteau aux maisons et parcs.",
+          "ru": "Назначь работников в склад и кофейню, продай первые соцветия конопли. Лусия подпишет меню. Затем откроем Солнечный склон для домов и парков."
+        }
+      },
+      {
+        "key": "cv.quest.everyday.body",
+        "before": {
+          "de": "Rocko: Besetze Haus und Park, hole einen Tagesertrag ab und erledige einen Bewohnerauftrag. Ines wartet mit ihrer ersten Liefergeschichte. Danach öffnen wir den alten Keramikhof.",
+          "en": "Rocko: Staff house and park, collect daily income and complete a resident task. Ines has her first delivery story waiting. Then we open the Old Ceramic Yard.",
+          "es": "Rocko: Asigna casa y parque, cobra un ingreso y ayuda a un vecino. Ines espera su primera historia. Después abrimos el patio de cerámica.",
+          "fr": "Rocko : Affecte maison et parc, collecte un revenu et aide un habitant. Ines attend sa première histoire. Nous ouvrirons ensuite la cour des céramistes.",
+          "ru": "Рокко: Назначь дом и парк, собери доход и выполни задание жителя. Инес ждёт с первой историей доставки. Затем откроем керамический двор."
+        },
+        "after": {
+          "de": "Rocko: Besetze Haus und Park, hole einen Tagesertrag ab und erledige einen VIP-Auftrag samt Belohnung. Ines wartet daneben mit ihrer persönlichen Liefergeschichte. Danach öffnen wir den alten Keramikhof.",
+          "en": "Rocko: Staff house and park, collect daily income and complete a VIP task and claim its reward. Ines has her separate personal delivery story waiting. Then we open the Old Ceramic Yard.",
+          "es": "Rocko: Asigna casa y parque, cobra un ingreso, completa un encargo VIP y recoge su recompensa. La historia personal de Ines espera por separado. Después abrimos el patio de cerámica.",
+          "fr": "Rocko : Affecte maison et parc, collecte un revenu, termine une mission VIP et récupère sa récompense. L’histoire personnelle d’Ines attend séparément. Nous ouvrirons ensuite la cour des céramistes.",
+          "ru": "Рокко: Назначь работников в дом и парк, собери доход, выполни задание VIP и получи награду. Личная история доставки Инес ждёт отдельно. Затем откроем керамический двор."
+        }
+      },
+      {
+        "key": "cv.quest.everyday.body.dialogue",
+        "before": {
+          "de": "Besetze Haus und Park, hole einen Tagesertrag ab und erledige einen Bewohnerauftrag. Ines wartet mit ihrer ersten Liefergeschichte. Danach öffnen wir den alten Keramikhof.",
+          "en": "Staff house and park, collect daily income and complete a resident task. Ines has her first delivery story waiting. Then we open the Old Ceramic Yard.",
+          "es": "Asigna casa y parque, cobra un ingreso y ayuda a un vecino. Ines espera su primera historia. Después abrimos el patio de cerámica.",
+          "fr": "Affecte maison et parc, collecte un revenu et aide un habitant. Ines attend sa première histoire. Nous ouvrirons ensuite la cour des céramistes.",
+          "ru": "Назначь дом и парк, собери доход и выполни задание жителя. Инес ждёт с первой историей доставки. Затем откроем керамический двор."
+        },
+        "after": {
+          "de": "Besetze Haus und Park, hole einen Tagesertrag ab und erledige einen VIP-Auftrag samt Belohnung. Ines wartet daneben mit ihrer persönlichen Liefergeschichte. Danach öffnen wir den alten Keramikhof.",
+          "en": "Staff house and park, collect daily income and complete a VIP task and claim its reward. Ines has her separate personal delivery story waiting. Then we open the Old Ceramic Yard.",
+          "es": "Asigna casa y parque, cobra un ingreso, completa un encargo VIP y recoge su recompensa. La historia personal de Ines espera por separado. Después abrimos el patio de cerámica.",
+          "fr": "Affecte maison et parc, collecte un revenu, termine une mission VIP et récupère sa récompense. L’histoire personnelle d’Ines attend séparément. Nous ouvrirons ensuite la cour des céramistes.",
+          "ru": "Назначь работников в дом и парк, собери доход, выполни задание VIP и получи награду. Личная история доставки Инес ждёт отдельно. Затем откроем керамический двор."
+        }
+      }
+    ],
+    "onlyReviewedKeysChanged": true,
+    "gameplayDataUnchanged": true,
+    "additionalReason": "Generic VIP completion advances ConditionKind.VipCompleted; personal resident chapters do not increment that generic counter.",
+    "unknownLocalEditsStillRejected": true
+  },
+  "idempotenceVerified": true,
+  "idempotenceContentAndLocaleByteHashes": {
+    "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Assets\\Weedtopia\\Game\\Content\\BurningHills.json": "4996c92019fc12c2a9d3eacf8e49620a95475f16c7f366053b38bf3717219e10",
+    "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Assets\\Weedtopia\\Game\\Localization\\de.json": "ad9be0a2519e6d17ce219bf643058aee19b92da9bdd9b80c479dc63a8efa749d",
+    "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Assets\\Weedtopia\\Game\\Localization\\en.json": "6fc1ee5d19f443f3e65d37c6cbb26bf17a11d8c9b6b55665d4aa0e1f4ccfc3d9",
+    "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Assets\\Weedtopia\\Game\\Localization\\es.json": "e8f3d4e616e9ce5e43911f08d79bf4ea297ce7794b2ff9887a98e205420fc529",
+    "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Assets\\Weedtopia\\Game\\Localization\\fr.json": "447315860f3e3b2c2ebda6c83bb86ae459e267067043aa8f5eda155ad5e449b7",
+    "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Assets\\Weedtopia\\Game\\Localization\\ru.json": "e9a620cebfd31735fdf41a6c3004084af8c79400172a575b4f375cc6f07db271"
+  }
+}

@@ -30,6 +30,7 @@ namespace Weedtopia.Domain
             string role = defs.roles[random.Next(defs.roles.Length)].id;
             state.randomState = random.State; state.cards--;
             worker = Grant(role, rarity); state.City.stats.spins++;
+            RewardHistory.Record(state, RewardSource.Recruitment, worker.id, "reward.source.recruitment", new[] { RewardItem.ForWorker(worker) });
             return Failure.None;
         }
         public int Slots(BuildingState building) => string.IsNullOrEmpty(defs.Building(building.family).driverRole) ? 0 : VisualTiers.Index(building.level);

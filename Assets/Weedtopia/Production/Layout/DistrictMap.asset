@@ -15,29 +15,32 @@ MonoBehaviour:
   districts:
   - zone: 0
     label: "Farm \xB7 Anbau nach rechts"
+    labelKey: district.burning_hills.farm
     start: {x: 265, y: -45}
     end: {x: 552, y: -45}
     direction: {x: 1, y: 0}
     zoom: 48
   - zone: 1
     label: "Stadt \xB7 Shops nach unten"
+    labelKey: district.burning_hills.city
     start: {x: 34, y: -12}
     end: {x: 34, y: -214}
     direction: {x: 0, y: -1}
-    zoom: 44
+    zoom: 48
   - zone: 2
     label: "Siedlung \xB7 Pl\xE4tze nach oben"
+    labelKey: district.burning_hills.settlement
     start: {x: 34, y: 96}
     end: {x: 34, y: 356}
     direction: {x: 0, y: 1}
-    zoom: 44
+    zoom: 48
   - zone: 3
     label: "Industrie \xB7 B\xE4cker nach links"
+    labelKey: district.burning_hills.industry
     start: {x: -94, y: 30}
     end: {x: -204, y: 30}
     direction: {x: -1, y: 0}
-    zoom: 78
+    zoom: 48
   overview: {x: 174, y: 65}
   overviewZoom: 230
-  navigationMinimum: {x: -330, y: -340}
-  navigationMaximum: {x: 700, y: 475}
+  overviewAspect: 1.7777778

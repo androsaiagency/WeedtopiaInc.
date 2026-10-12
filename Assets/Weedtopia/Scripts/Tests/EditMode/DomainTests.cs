@@ -56,6 +56,17 @@ namespace Weedtopia.Tests
         {
             var s=GameState.Create(d,"Tester",new DateTime(2026,9,21,0,0,0,DateTimeKind.Utc));foreach(var b in s.buildings)b.level=1;return s;
         }
+        [Test] public void ObservingConveyorTransfersDoesNotChangeSimulationState()
+        {
+            var definitions=Fixture();var first=State(definitions);var second=State(definitions);
+            var observed=new Simulation(definitions,first);var reference=new Simulation(definitions,second);
+            int transfers=0;
+            observed.ConveyorTransferred+=id=>{Assert.That(id,Is.EqualTo("gp").Or.EqualTo("pw"));transfers++;};
+            foreach(var id in new[]{"g","p","w"}){observed.Work(id);reference.Work(id);}
+            for(int i=0;i<90;i++){observed.Advance(1);reference.Advance(1);}
+            Assert.That(transfers,Is.GreaterThan(0));
+            Assert.That(UnityEngine.JsonUtility.ToJson(first),Is.EqualTo(UnityEngine.JsonUtility.ToJson(second)));
+        }
         [Test] public void ManualCropStopsAtCapacityAndManagerEnablesTransfer()
         {
             var d=Fixture();var s=State(d);var sim=new Simulation(d,s);sim.Advance(30);

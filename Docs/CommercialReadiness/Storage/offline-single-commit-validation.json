@@ -1,0 +1,241 @@
+{
+  "createdUtc": "2026-10-05T06:29:25.033198+02:00",
+  "status": "integrated_native_tests_passed",
+  "productionAssetsChanged": true,
+  "productionSourceMatchesBaseline": false,
+  "integrationRequiredAfterImport": false,
+  "fix": "Defers nested VIP persistence only inside the no-yield offline completion; final Save is the only disk write.",
+  "stagedFiles": [
+    {
+      "staged": ".utmp/OfflineCompletionFix/GameSession.cs",
+      "destination": "Assets/Weedtopia/Scripts/Runtime/Application/GameSession.cs",
+      "sha256": "511a4efcc663f27b6f929a17b0570dffa6ada9608155e7147282c9eaeca1d8bd",
+      "baselineSha256": "392368e9f382cb749293e862683491e5b8e7fbce6720945cd695a269fe530157"
+    },
+    {
+      "staged": ".utmp/OfflineCompletionFix/OfflineStartupTests.cs",
+      "destination": "Assets/Weedtopia/Scripts/Tests/EditMode/OfflineStartupTests.cs",
+      "sha256": "fe2b98a2de65348ca1f6ef2fd45db272297b7d1b5e3f33142e7fafe56b1e71d2",
+      "baselineSha256": "b57f9d534473a7af8490f7e3b552424dec17e3a1196f7e6839c89662fcd8e0fd"
+    }
+  ],
+  "sourceCompile": {
+    "createdUtc": "2026-10-05T06:28:17.845844+02:00",
+    "gate": "source_compile_only_staged",
+    "status": "passed",
+    "productionAssetsChanged": false,
+    "results": [
+      {
+        "assembly": "Weedtopia.Application",
+        "exitCode": 0,
+        "stagedSources": [
+          "Assets/Weedtopia/Scripts/Runtime/Application/GameSession.cs"
+        ]
+      },
+      {
+        "assembly": "Weedtopia.Game.EditModeTests",
+        "exitCode": 0,
+        "stagedSources": [
+          "Assets/Weedtopia/Scripts/Tests/EditMode/OfflineStartupTests.cs"
+        ]
+      }
+    ]
+  },
+  "modelTests": {
+    "runner": "isolated .NET 9 model harness with field-only JSON shim",
+    "exitCode": 0,
+    "passed": 31,
+    "failed": 0,
+    "log": "Docs/CommercialReadiness/Storage/offline-single-commit-staged-model-tests.log"
+  },
+  "controlOriginal": {
+    "expectedRegressionReproduction": true,
+    "exitCode": 1,
+    "passed": 29,
+    "failed": 2,
+    "log": "Docs/CommercialReadiness/Storage/offline-single-commit-original-control.log"
+  },
+  "nativeUnityTests": {
+    "status": "passed",
+    "stage": "EditMode",
+    "passed": 2,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0,
+    "fixtureResults": [
+      {
+        "fixture": "Weedtopia.Tests.OfflineStartupTests",
+        "passed": 2,
+        "testNames": [
+          "Weedtopia.Tests.OfflineStartupTests.FailedSingleOfflineVipCommitRollsBackAllProgressAndRetryGrantsOnce",
+          "Weedtopia.Tests.OfflineStartupTests.OfflineWithDueVipUsesOneCommitEvenIfASecondWriteWouldFail"
+        ]
+      }
+    ],
+    "cases": [
+      {
+        "fullname": "Weedtopia.Tests.OfflineStartupTests.FailedSingleOfflineVipCommitRollsBackAllProgressAndRetryGrantsOnce",
+        "fixture": "Weedtopia.Tests.OfflineStartupTests",
+        "method": "FailedSingleOfflineVipCommitRollsBackAllProgressAndRetryGrantsOnce",
+        "result": "Passed",
+        "durationSeconds": 0.446344,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      },
+      {
+        "fullname": "Weedtopia.Tests.OfflineStartupTests.OfflineWithDueVipUsesOneCommitEvenIfASecondWriteWouldFail",
+        "fixture": "Weedtopia.Tests.OfflineStartupTests",
+        "method": "OfflineWithDueVipUsesOneCommitEvenIfASecondWriteWouldFail",
+        "result": "Passed",
+        "durationSeconds": 0.331878,
+        "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+        "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+      }
+    ],
+    "scope": "Only these actual native cases certify the listed coverage; no device, store, visual or human acceptance is inferred."
+  },
+  "patch": ".utmp/OfflineCompletionFix/offline-single-commit.patch",
+  "durableEvidenceCreatedUtc": "2026-10-05T06:31:52.700666+02:00",
+  "integration": {
+    "status": "integrated_native_tests_passed",
+    "owner": "root",
+    "productionImplementationClaimed": true,
+    "mainValidationUnmodified": true,
+    "mainValidationSha256": "14a0df56546e09c6c21f02c02491b2d4aa6470e6a47243738c9222b8189236de",
+    "note": "This validates staged sources only. Root integrates the patch after the import and records native Unity results separately.",
+    "historicalStagingReceipt": {
+      "status": "pending",
+      "productionImplementationClaimed": false,
+      "note": "This validates staged sources only. Root integrates the patch after the import and records native Unity results separately."
+    },
+    "nativeEvidence": {
+      "status": "passed",
+      "stage": "EditMode",
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "fixtureResults": [
+        {
+          "fixture": "Weedtopia.Tests.OfflineStartupTests",
+          "passed": 2,
+          "testNames": [
+            "Weedtopia.Tests.OfflineStartupTests.FailedSingleOfflineVipCommitRollsBackAllProgressAndRetryGrantsOnce",
+            "Weedtopia.Tests.OfflineStartupTests.OfflineWithDueVipUsesOneCommitEvenIfASecondWriteWouldFail"
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "fullname": "Weedtopia.Tests.OfflineStartupTests.FailedSingleOfflineVipCommitRollsBackAllProgressAndRetryGrantsOnce",
+          "fixture": "Weedtopia.Tests.OfflineStartupTests",
+          "method": "FailedSingleOfflineVipCommitRollsBackAllProgressAndRetryGrantsOnce",
+          "result": "Passed",
+          "durationSeconds": 0.446344,
+          "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+          "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+        },
+        {
+          "fullname": "Weedtopia.Tests.OfflineStartupTests.OfflineWithDueVipUsesOneCommitEvenIfASecondWriteWouldFail",
+          "fixture": "Weedtopia.Tests.OfflineStartupTests",
+          "method": "OfflineWithDueVipUsesOneCommitEvenIfASecondWriteWouldFail",
+          "result": "Passed",
+          "durationSeconds": 0.331878,
+          "nativeXml": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+          "nativeXmlSha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29"
+        }
+      ],
+      "scope": "Only these actual native cases certify the listed coverage; no device, store, visual or human acceptance is inferred."
+    },
+    "productiveSourceHashes": {
+      "Assets/Weedtopia/Scripts/Runtime/Application/GameSession.cs": "511a4efcc663f27b6f929a17b0570dffa6ada9608155e7147282c9eaeca1d8bd",
+      "Assets/Weedtopia/Scripts/Tests/EditMode/OfflineStartupTests.cs": "fe2b98a2de65348ca1f6ef2fd45db272297b7d1b5e3f33142e7fafe56b1e71d2"
+    }
+  },
+  "durableLogSha256": {
+    "offline-single-commit-staged-model-tests.log": "388eb96101503cf3f678d1adbbcf3b2f4f989904189ae784e6cc292cedb7f6ff",
+    "offline-single-commit-original-control.log": "6f83d12731c87122bfc2f27fbfa78843eee0f480252a2d4bc4c3bf836c461f76"
+  },
+  "historicalPreNativeStatus": "integrated_pending_native_validation",
+  "nativeEvidenceUpdatedUtc": "2026-10-05T06:24:07.054764+00:00",
+  "nativeRegressionContext": {
+    "run": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/run.json",
+      "sha256": "3c21ff8ed4523cce4af54f2e16fb2c652df61a84512e5cd162c429825c5da583"
+    },
+    "runId": "20261005T061357352-258904",
+    "unity": "6000.3.9f1",
+    "finishedUtc": "2026-10-05T06:22:37.0323225Z",
+    "scope": "native_editmode_repair_aggregate_then_complete_playmode",
+    "editorRestored": true,
+    "editModeEvidenceMode": "395 original native passes plus one actual repaired native pass; no full EditMode rerun",
+    "originalFullEditMode": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T053428609-258904/EditMode.xml",
+      "sha256": "ffbd90e5a93bdee24d18a3e605bbf4ddd2b3c5a7bde294509e543038950cfd29",
+      "passed": 395,
+      "failed": 1,
+      "skipped": 0,
+      "inconclusive": 0,
+      "total": 396,
+      "testcasecount": 396
+    },
+    "repairEditMode": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/EditModeRepair.xml",
+      "sha256": "97bfccd1e4e4a756a4d3f9aba4760c86759ba4100411341a181cdb72c47fc678",
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "total": 1,
+      "testcasecount": 1
+    },
+    "editModeAggregate": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/EditModeAggregate.json",
+      "sha256": "1e6a4b29ef087dd3e484609d1c3e3094233ca18ae57cea5e1b9a369bd892cdd4"
+    },
+    "effectiveEditModePassed": 396,
+    "completePlayMode": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/PlayMode.xml",
+      "sha256": "9ffaf892ab6b6e9ce09256f8949f6cb50d256d79ee4265aaf2550646d5381611",
+      "passed": 103,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "total": 103,
+      "testcasecount": 103
+    },
+    "sourceValidation": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/source_validation.json",
+      "sha256": "c2c7f3827a839daf559acae80cf93cf1ce2a2dab0713aa3464c70cdc3399ebb2"
+    },
+    "sourceInputs": {
+      "path": "Docs/CommercialReadiness/2026-10-05/Tests/20261005T061357352-258904/source_inputs.json",
+      "sha256": "626d4e2d40f7ad52637e6d715b195f316b424dcea4a1ec6f0a091115ce389b74"
+    },
+    "targetAccepted": false,
+    "releaseAccepted": false,
+    "deviceAccepted": false,
+    "humanAccepted": false
+  },
+  "finalRuntimeSourceHashes": {
+    "Assets/Weedtopia/Scripts/Runtime/Domain/Amount.cs": "1e2d5bcce8465a7c1942504f2670144b83e85b1c109a5ab4cb67df7b6c19bd8d",
+    "Assets/Weedtopia/Scripts/Runtime/Domain/Simulation.cs": "b26a6b64674d21a60061e2e48d7b5431b3b2f72485cdcb36902fadd6a3c30910",
+    "Assets/Weedtopia/Scripts/Runtime/Application/GameSession.cs": "511a4efcc663f27b6f929a17b0570dffa6ada9608155e7147282c9eaeca1d8bd",
+    "Assets/Weedtopia/Scripts/Runtime/Application/GameStateTransactionSnapshot.cs": "4257db04ddef24effc3782452d4811c9fe757ebbb7037ef0517d8ed3640de4c2",
+    "Assets/Weedtopia/Scripts/Runtime/Application/OfflineProgress.cs": "e584c95d207045a78e60cb8e0bb03e29bedd9e98aaa0fdef2d7a812f93ec8ac5",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/GameRoot.cs": "0e6b0a6eb5126466c5053e4ee2e6f7b2e6e26e58ca25c13fe65c4643157f4988",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/GameUi.cs": "7cdd50f2ef7db569897878ce2bc1a6ae58ae06861a0595ae29eed124a55c0111",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/UiExperience.cs": "204cd3429614b24ad74f8439deadde3e3c2ce2555946e082d89aa782dbb7818c",
+    "Assets/Weedtopia/Scripts/Runtime/Unity/LuckyWheelUi.cs": "646c024251c1b0b80829f911a1e327f388e91b27c7be87487f5dae20c8e968d2"
+  },
+  "finalSourceHashes": {
+    "Assets/Weedtopia/Scripts/Runtime/Application/GameSession.cs": "511a4efcc663f27b6f929a17b0570dffa6ada9608155e7147282c9eaeca1d8bd",
+    "Assets/Weedtopia/Scripts/Tests/EditMode/OfflineStartupTests.cs": "fe2b98a2de65348ca1f6ef2fd45db272297b7d1b5e3f33142e7fafe56b1e71d2"
+  },
+  "finalResponsiveStartupPolicy": {
+    "batchSeconds": 32,
+    "frameBudgetMilliseconds": 8,
+    "GameRootSha256": "0e6b0a6eb5126466c5053e4ee2e6f7b2e6e26e58ca25c13fe65c4643157f4988",
+    "matchesNativeSourceManifest": true
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "utc": "2026-09-28T20:38:28.781489+00:00",
+  "textures_mib": {
+    "LOD0_4K": 96.00274848937988,
+    "LOD0_2K": 32.00274848937988,
+    "all_3_LODs_2K": 96.00824546813965
+  },
+  "memory_measurement": "Unity Profiler.GetRuntimeMemorySizeLong in Editor; not a dedicated GPU-residency measurement",
+  "encoded_texture_data_mib_including_mips": {
+    "LOD0_2K": 16.000076293945312,
+    "LOD0_4K": 48.00007629394531
+  },
+  "caveat": "100 instances share the same three meshes/materials/textures. Not 100 distinct building asset sets. Editor synchronous render/readback timing is not FPS. The existing pipeline shadow distance is 50m; the overview camera is more than 400m away, so this benchmark does not measure city-wide realtime shadows.",
+  "user_approved_50000_4K": true,
+  "new_lods_user_approval": "approved",
+  "city_integration": "../CityIntegration/README.de.md"
+}

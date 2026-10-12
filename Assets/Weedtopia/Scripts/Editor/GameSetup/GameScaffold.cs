@@ -176,7 +176,7 @@ namespace Weedtopia.Editor.GameSetup
             if(serialized.FindProperty("feedback").objectReferenceValue!=null)return false;
             var feedback=root.GetComponent<GameFeedback>();if(feedback==null)feedback=root.gameObject.AddComponent<GameFeedback>();
             var audio=root.GetComponent<AudioSource>();if(audio==null){audio=root.gameObject.AddComponent<AudioSource>();audio.playOnAwake=false;audio.spatialBlend=0;audio.volume=.25f;}
-            var confirm=AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audio/Approved/BurningHills/confirm.wav");var unavailable=AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audio/Approved/BurningHills/unavailable.wav");
+            var confirm=AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Weedtopia/Game/Audio/Approved/BurningHills/confirm.wav");var unavailable=AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Weedtopia/Game/Audio/Approved/BurningHills/unavailable.wav");
             feedback.EditorConfigure(audio,confirm!=null?confirm:AssetDatabase.LoadAssetAtPath<AudioClip>(Root+"/Audio/development_accept.wav"),unavailable!=null?unavailable:AssetDatabase.LoadAssetAtPath<AudioClip>(Root+"/Audio/development_blocked.wav"));
             serialized.FindProperty("feedback").objectReferenceValue=feedback;serialized.ApplyModifiedPropertiesWithoutUndo();return true;
         }
@@ -201,9 +201,9 @@ namespace Weedtopia.Editor.GameSetup
                 var scene=EditorSceneManager.OpenScene(GameScene,OpenSceneMode.Single);var objects=scene.GetRootGameObjects().SelectMany(x=>x.GetComponentsInChildren<Transform>(true)).ToArray();
                 missing=objects.Sum(x=>GameObjectUtility.GetMonoBehavioursWithMissingScriptCount(x.gameObject));if(missing>0)issues.Add("Missing scripts: "+missing);
                 sites=objects.Count(x=>x.GetComponent<BuildingView>()!=null);events=objects.Count(x=>x.GetComponent<EventSystem>()!=null);if(events!=1)issues.Add("Expected one EventSystem");
-                var content=AssetDatabase.LoadAssetAtPath<GameContent>(ContentPath);var d=content.Load();if(sites!=d.instances.Length)issues.Add("Site count mismatch");
+                var content=AssetDatabase.LoadAssetAtPath<GameContent>(ContentPath);var d=content.Load();if(sites!=d.instances.Count(x=>x.cityId=="burning_hills"))issues.Add("Site count mismatch");
                 var views=objects.Select(x=>x.GetComponent<BuildingView>()).Where(x=>x!=null).ToArray();if(views.Select(x=>x.InstanceId).Distinct().Count()!=sites)issues.Add("Duplicate site IDs");
-                foreach(var id in d.instances.Select(x=>x.id))if(!views.Any(x=>x.InstanceId==id))issues.Add("Missing site "+id);
+                foreach(var id in d.instances.Where(x=>x.cityId=="burning_hills").Select(x=>x.id))if(!views.Any(x=>x.InstanceId==id))issues.Add("Missing site "+id);
                 var game=objects.Select(x=>x.GetComponent<GameRoot>()).Single(x=>x!=null);var so=new SerializedObject(game);
                 foreach(string key in new[]{"content","productionCatalog","ui","cameraRig","feedback"})if(so.FindProperty(key).objectReferenceValue==null)issues.Add("Missing root reference "+key);
                 bool approved=so.FindProperty("productionVisualsApproved").boolValue;

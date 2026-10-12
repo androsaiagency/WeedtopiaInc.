@@ -1,0 +1,49 @@
+D:\Unity Games\Weedtopia Inc\WeedtopiaInc\.utmp\OfflineCompletionFix\Program.cs(20,87): warning SYSLIB0050: "FieldInfo.IsNotSerialized" ist veraltet: "Formatter-based serialization is obsolete and should not be used." (https://aka.ms/dotnet-warnings/SYSLIB0050) [D:\Unity Games\Weedtopia Inc\WeedtopiaInc\.utmp\OfflineCompletionFix\ControlOriginal.csproj]
+PASS SessionPersistenceTests.FailedConstructionSaveRestoresPaymentTimerRevisionAndBuildingIdentity()
+PASS SessionPersistenceTests.UnauthorizedSaveRestoresTransactionAndMarksTheExactStorageError()
+PASS SessionPersistenceTests.FailedWorkerAssignmentSaveRestoresBothWorkersInPlace()
+PASS SessionPersistenceTests.FailedRewardSaveRemovesGrantedWorkerAndRestoresRandomAndReceipts()
+PASS SessionPersistenceTests.FailedCommandAndThrownCommandRestoreMutationsWithoutSaving()
+PASS SessionPersistenceTests.EveryMutableSaveFieldAndNestedReferenceSurvivesFailedTransaction()
+PASS SessionPersistenceTests.AutosaveFailureKeepsLiveProgressAndBacksOffUntilStoreRecovers()
+PASS SessionPersistenceTests.RetryDelayIsCappedAndManualSaveCanRecoverImmediately()
+PASS SessionPersistenceTests.PausedSessionRetriesUnsavedProgressWithoutSimulating()
+PASS SessionPersistenceTests.VipDailySaveFailureRetriesAtBackoffAndGrantsExactlyOnce()
+PASS SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(complete,False)
+PASS SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(complete,True)
+PASS SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(advance,False)
+PASS SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(advance,True)
+PASS SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(advance_to_complete,False)
+PASS SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(advance_to_complete,True)
+PASS SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(restart,False)
+PASS SessionPersistenceTests.FailedIntroSaveRestoresPageCompletionAndUnlockedStories(restart,True)
+PASS SessionPersistenceTests.IntroAdvanceCompletionAndRestartEachPersistExactlyOnce()
+PASS SessionPersistenceTests.SaveFailureDoesNotConsumeTimestampAndInvalidFrameDoesNotTouchStore()
+PASS OfflineStartupTests.ChunkedOfflineExactlyMatchesSynchronousResultIncludingTwoCitiesAndVipExpiry(1)
+PASS OfflineStartupTests.ChunkedOfflineExactlyMatchesSynchronousResultIncludingTwoCitiesAndVipExpiry(7)
+PASS OfflineStartupTests.ChunkedOfflineExactlyMatchesSynchronousResultIncludingTwoCitiesAndVipExpiry(64)
+PASS OfflineStartupTests.ChunkedOfflineExactlyMatchesSynchronousResultIncludingTwoCitiesAndVipExpiry(128)
+PASS OfflineStartupTests.DisposedPartialOfflineRestoresModelAndRejectsSaveAdvanceAndReentrancy()
+PASS OfflineStartupTests.FailedFinalOfflineWriteRestoresCountersResourcesTimestampAndReferences()
+PASS OfflineStartupTests.InvalidOfflineBatchIsRejectedBeforeAnyMutation(0)
+PASS OfflineStartupTests.InvalidOfflineBatchIsRejectedBeforeAnyMutation(129)
+PASS OfflineStartupTests.OfflineInitialProgressPrecedesSimulationAndZeroElapsedStillCompletes()
+FAIL OfflineStartupTests.OfflineWithDueVipUsesOneCommitEvenIfASecondWriteWouldFail() System.IO.IOException: Offline final write failed
+   at Weedtopia.Tests.OfflineStartupTests.CountingStore.Save(GameState state) in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\.utmp\OfflineCompletionFix\OfflineStartupTests.cs:line 195
+   at Weedtopia.Application.GameSession.Save() in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Application\GameSession.cs:line 89
+   at Weedtopia.Application.GameSession.ApplyOfflineIncrementally(Int32 batchSeconds)+MoveNext() in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Application\GameSession.cs:line 227
+   at System.Linq.Enumerable.TryGetLastNonIterator[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   at Weedtopia.Application.GameSession.ApplyOffline() in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Application\GameSession.cs:line 192
+   at Weedtopia.Tests.OfflineStartupTests.OfflineWithDueVipUsesOneCommitEvenIfASecondWriteWouldFail() in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\.utmp\OfflineCompletionFix\OfflineStartupTests.cs:line 130
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+FAIL OfflineStartupTests.FailedSingleOfflineVipCommitRollsBackAllProgressAndRetryGrantsOnce() NUnit.Framework.AssertionException:   One failed attempt and one successful retry
+  Expected: 2
+  But was:  3
+
+   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args)
+   at Weedtopia.Tests.OfflineStartupTests.FailedSingleOfflineVipCommitRollsBackAllProgressAndRetryGrantsOnce() in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\.utmp\OfflineCompletionFix\OfflineStartupTests.cs:line 156
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+RESULT 29 passed, 2 failed (isolated .NET model harness; field-only JSON shim; not Unity test runner)

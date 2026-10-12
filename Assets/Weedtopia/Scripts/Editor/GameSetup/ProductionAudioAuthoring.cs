@@ -16,7 +16,7 @@ namespace Weedtopia.Editor.GameSetup
             var setup=EditorSceneManager.GetSceneManagerSetup();
             try
             {
-                AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);const string folder="Assets/Audio/Approved/BurningHills/";
+                AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);const string folder="Assets/Weedtopia/Game/Audio/Approved/BurningHills/";
                 foreach(string name in new[]{"confirm","unavailable","upgrade","delivery","afterglow_loop_60s"})
                 {
                     var importer=(AudioImporter)AssetImporter.GetAtPath(folder+name+".wav");var settings=importer.defaultSampleSettings;settings.loadType=name.StartsWith("afterglow")?AudioClipLoadType.Streaming:AudioClipLoadType.DecompressOnLoad;settings.compressionFormat=AudioCompressionFormat.Vorbis;settings.quality=.85f;importer.defaultSampleSettings=settings;importer.SaveAndReimport();

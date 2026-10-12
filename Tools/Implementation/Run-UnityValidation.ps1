@@ -1,6 +1,6 @@
 [CmdletBinding()]
 param(
-    [ValidateSet('EditMode','PlayMode','Install','Prototype','Validate','Capture','Polish','Production','Preflight','ProductionCapture','ProductionAudio','ProductionRefine','ProductionBuild','Layout','BuildingSprites','LayoutCapture','LayoutRefine','Environment','EnvironmentRefine','EnvironmentCapture','Interaction','InteractionCapture','BuildingAlignment','BuildingAlignmentCapture','BakeryDelivery','BakeryCapture','LivingHills','LivingHillsRefine','LivingHillsCapture','DirectionalMotion','DirectionalMotionCapture','FarmGardenBefore','FarmGardenCapture','FarmGarden','FarmGardenMeshes','WorldNavigation','WorldNavigationCapture')][string]$Mode = 'EditMode',
+    [ValidateSet('UiRefinement','UiRefinementCapture','UiPolish','UiPolishCapture','UiExperience','UiExperienceCapture','EditMode','PlayMode','Install','Prototype','Validate','Capture','Polish','Production','Preflight','ProductionCapture','ProductionAudio','ProductionRefine','ProductionBuild','Layout','BuildingSprites','LayoutCapture','LayoutRefine','Environment','EnvironmentRefine','EnvironmentCapture','Interaction','InteractionCapture','BuildingAlignment','BuildingAlignmentCapture','BakeryDelivery','BakeryCapture','LivingHills','LivingHillsRefine','LivingHillsCapture','DirectionalMotion','DirectionalMotionCapture','FarmGardenBefore','FarmGardenCapture','FarmGarden','FarmGardenMeshes','WorldNavigation','WorldNavigationCapture','TownVitality','TownVitalityRefine','TownVitalityCapture','WorldCorners','WorldCornersRefine','WorldCornersCapture','MenuLayout','MenuLayoutCapture','InventoryWheelDockCapture','Conveyors','ConveyorCapture','ConveyorCargoCapture','ConstructionCapture','ConstructionFences','Rewards','RewardsCapture','RewardsRefine','Inventory','InventoryCapture','LuckyWheel','LuckyWheelCapture')][string]$Mode = 'EditMode',
     [string]$Label = '',
     [string]$Assembly = '',
     [string]$TestFilter = '',
@@ -17,13 +17,19 @@ $runId = (Get-Date -Format 'yyyyMMdd_HHmmss') + '_' + $Mode + $(if($Label){'_'+$
 $log = Join-Path $reportRoot ($runId + '.log')
 $xml = Join-Path $reportRoot ($runId + '.xml')
 $arguments = @('-batchmode', '-projectPath', ('"'+$projectRoot+'"'), '-logFile', ('"'+$log+'"'))
-if($Mode -notin @('Capture','ProductionCapture','LayoutCapture','EnvironmentCapture','InteractionCapture','BuildingAlignmentCapture','BakeryCapture','LivingHillsCapture','DirectionalMotionCapture','FarmGardenBefore','FarmGardenCapture','WorldNavigationCapture')) { $arguments += '-nographics' }
+if($Mode -notin @('UiRefinementCapture','UiPolishCapture','UiExperienceCapture','Capture','ProductionCapture','LayoutCapture','EnvironmentCapture','InteractionCapture','BuildingAlignmentCapture','BakeryCapture','LivingHillsCapture','DirectionalMotionCapture','FarmGardenBefore','FarmGardenCapture','WorldNavigationCapture','TownVitalityCapture','WorldCornersCapture','MenuLayoutCapture','InventoryWheelDockCapture','ConveyorCapture','ConveyorCargoCapture','ConstructionCapture','RewardsCapture','InventoryCapture','LuckyWheelCapture')) { $arguments += '-nographics' }
 if($Mode -in @('EditMode','PlayMode')) {
     $arguments += @('-runTests','-testPlatform',$Mode,'-testResults',('"'+$xml+'"'))
     if($Assembly) { $arguments += @('-assemblyNames',$Assembly) }
     if($TestFilter) { $arguments += @('-testFilter',$TestFilter) }
 } else {
     $method = switch($Mode) {
+        'UiRefinement' {'Weedtopia.Editor.GameSetup.UiRefinementAuthoring.Apply'}
+        'UiRefinementCapture' {'Weedtopia.Editor.GameSetup.UiRefinementEvidence.Begin'}
+        'UiPolish' {'Weedtopia.Editor.GameSetup.UiPolishAuthoring.Apply'}
+        'UiPolishCapture' {'Weedtopia.Editor.GameSetup.UiPolishEvidence.Begin'}
+        'UiExperience' {'Weedtopia.Editor.GameSetup.UiExperienceAuthoring.Apply'}
+        'UiExperienceCapture' {'Weedtopia.Editor.GameSetup.UiExperienceEvidence.Begin'}
         'Prototype' {'Weedtopia.Editor.BuildingArtPipeline.BuildingSpritePrototypeUtility.CreateTownHallPrototypeMenu'}
         'Install' {'Weedtopia.Editor.GameSetup.GameScaffold.CreateOrRepair'}
         'Validate' {'Weedtopia.Editor.GameSetup.GameScaffold.ValidateBatch'}
@@ -59,9 +65,30 @@ if($Mode -in @('EditMode','PlayMode')) {
         'FarmGardenMeshes' {'Weedtopia.Editor.GameSetup.FarmGardenRefinement.RefreshPathMeshes'}
         'WorldNavigation' {'Weedtopia.Editor.GameSetup.WorldNavigationAuthoring.Apply'}
         'WorldNavigationCapture' {'Weedtopia.Editor.GameSetup.InteractionVisualEvidence.BeginWorldNavigation'}
+        'TownVitality' {'Weedtopia.Editor.GameSetup.TownVitalityAuthoring.Apply'}
+        'TownVitalityRefine' {'Weedtopia.Editor.GameSetup.TownVitalityAuthoring.RebuildOwned'}
+        'TownVitalityCapture' {'Weedtopia.Editor.GameSetup.InteractionVisualEvidence.BeginTownVitality'}
+        'WorldCorners' {'Weedtopia.Editor.GameSetup.WorldCornersAuthoring.Apply'}
+        'WorldCornersRefine' {'Weedtopia.Editor.GameSetup.WorldCornersAuthoring.RefineOwned'}
+        'WorldCornersCapture' {'Weedtopia.Editor.GameSetup.InteractionVisualEvidence.BeginWorldCorners'}
+        'MenuLayout' {'Weedtopia.Editor.GameSetup.MenuLayoutAuthoring.Apply'}
+        'InventoryWheelDockCapture' {'Weedtopia.Editor.GameSetup.InteractionVisualEvidence.BeginInventoryWheelDock'}
+        'MenuLayoutCapture' {'Weedtopia.Editor.GameSetup.InteractionVisualEvidence.BeginMenuLayout'}
+        'Conveyors' {'Weedtopia.Editor.GameSetup.ConveyorAuthoring.Apply'}
+        'ConveyorCapture' {'Weedtopia.Editor.GameSetup.InteractionVisualEvidence.BeginConveyors'}
+        'ConveyorCargoCapture' {'Weedtopia.Editor.GameSetup.InteractionVisualEvidence.BeginConveyorCargo'}
+        'ConstructionCapture' {'Weedtopia.Editor.GameSetup.InteractionVisualEvidence.BeginConstructionFences'}
+        'Inventory' {'Weedtopia.Editor.GameSetup.InventoryAuthoring.Apply'}
+        'LuckyWheel' {'Weedtopia.Editor.GameSetup.LuckyWheelAuthoring.Apply'}
+        'LuckyWheelCapture' {'Weedtopia.Editor.GameSetup.InteractionVisualEvidence.BeginLuckyWheel'}
+        'InventoryCapture' {'Weedtopia.Editor.GameSetup.InteractionVisualEvidence.BeginInventory'}
+        'RewardsRefine' {'Weedtopia.Editor.GameSetup.RewardPresentationAuthoring.Refine'}
+        'Rewards' {'Weedtopia.Editor.GameSetup.RewardPresentationAuthoring.Apply'}
+        'RewardsCapture' {'Weedtopia.Editor.GameSetup.InteractionVisualEvidence.BeginRewards'}
+        'ConstructionFences' {'Weedtopia.Editor.GameSetup.ConstructionFenceAuthoring.Apply'}
     }
     $arguments += @('-executeMethod',$method)
-    if($Mode -notin @('Capture','ProductionCapture','LayoutCapture','EnvironmentCapture','InteractionCapture','BuildingAlignmentCapture','BakeryCapture','LivingHillsCapture','DirectionalMotionCapture','FarmGardenBefore','FarmGardenCapture','WorldNavigationCapture')) { $arguments += '-quit' }
+    if($Mode -notin @('UiRefinementCapture','UiPolishCapture','UiExperienceCapture','Capture','ProductionCapture','LayoutCapture','EnvironmentCapture','InteractionCapture','BuildingAlignmentCapture','BakeryCapture','LivingHillsCapture','DirectionalMotionCapture','FarmGardenBefore','FarmGardenCapture','WorldNavigationCapture','TownVitalityCapture','WorldCornersCapture','MenuLayoutCapture','InventoryWheelDockCapture','ConveyorCapture','ConveyorCargoCapture','ConstructionCapture','RewardsCapture','InventoryCapture','LuckyWheelCapture')) { $arguments += '-quit' }
 }
 $start = [DateTime]::UtcNow
 # Unity/URP can serialize build caches and enable Unity Connect during a diagnostic build.

@@ -1,0 +1,28 @@
+{
+  "schema": "weedtopia_release_apk_audit_v1",
+  "utc": "2026-10-06T05:49:20.753856+00:00",
+  "status": "passed",
+  "tool": {
+    "path": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Tools\\CommercialReadiness\\audit_android_release.py",
+    "bytes": 30724,
+    "sha256": "aebdb2745991d49fd7b6a5264daf0b803f25b04c916de1f1516493e3f9877f2b"
+  },
+  "physicalDeviceAcceptance": false,
+  "humanAcceptance": false,
+  "releaseAccepted": false,
+  "gate": "synthetic_parser_self_test_only",
+  "checks": [
+    "central/local/CRC exact",
+    "prefix orphan bytes detected",
+    "synthetic structural block excluded (no cryptographic claim)",
+    "corrupt payload CRC rejected",
+    "data descriptor bounds/CRC matched",
+    "ELF32/64 multiple PT_NOTE IDs and malformed lengths",
+    "positive Full ZIP Unity filename: public .so.sym and IL2CPP .so.dbg; ELF32/64, both ABIs, six actual hashes/IDs",
+    "Full symbol receipt with wrong ELF ID rejected",
+    "changed keystore restoration rejected",
+    "all 16 diagnostic restoration pairs plus seven effective overrides verified; missing required evidence rejected"
+  ],
+  "actualApkVerified": false,
+  "nativeBuildExecuted": false
+}

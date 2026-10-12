@@ -1,0 +1,229 @@
+{
+  "schema": "weedtopia_android_build_warning_inventory_v1",
+  "utc": "2026-10-05T07:11:39.117171+00:00",
+  "scope": "Warning classification for two successful Development APK builds; no source, asset, editor request or build mutation.",
+  "historical": {
+    "id": "20261005-commercial-startup-v1",
+    "status": "succeeded",
+    "startedUtc": "2026-10-05T06:24:07.5933853Z",
+    "finishedUtc": "2026-10-05T06:53:19.2656052Z",
+    "buildReceiptPath": "Builds/Android/20261005-commercial-startup-v1/build-result.json",
+    "buildReceiptSha256": "775d2af118d4c04fe365a960f0bca13a81eed34df6a184adc7c878d8ac718b3e",
+    "warnings": 22,
+    "errors": 0,
+    "apkBytes": 1382681437,
+    "seconds": 1750.414528,
+    "buildType": "Development",
+    "evidenceState": "historical_native_report_and_editor_log_observed_before_v2",
+    "originalNativeReportNowOverwritten": true,
+    "nativeReportSha256": null,
+    "classifiedWarningCount": 22,
+    "classificationComplete": true,
+    "categories": [
+      {
+        "category": "editor_probe_volume_d3d11_precision",
+        "occurrences": 18,
+        "uniqueMessages": 9,
+        "severity": "low_for_android_apk",
+        "source": "Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/VirtualOffset/TraceVirtualOffset.urtshader",
+        "finding": "Nine min16float conversion diagnostics occur twice; each identifies d3d11 and the editor probe-volume shader. No Android Vulkan/GLES3 game-shader error is reported by these messages.",
+        "action": "Retain as package/editor diagnostics; device rendering acceptance is independent.",
+        "messages": [
+          {
+            "message": "Shader warning in 'TraceVirtualOffset': conversion from larger type 'uint' to smaller type 'min16float', possible loss of data [-Wconversion] at Inc/WeedtopiaInc/Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/ShaderLibrary/Sampling/Fibonacci.hlsl(16) (on d3d11)",
+            "occurrences": 2
+          },
+          {
+            "message": "Shader warning in 'TraceVirtualOffset': conversion from larger type 'uint' to smaller type 'min16float', possible loss of data [-Wconversion] at Inc/WeedtopiaInc/Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/ShaderLibrary/Sampling/Fibonacci.hlsl(27) (on d3d11)",
+            "occurrences": 2
+          },
+          {
+            "message": "Shader warning in 'TraceVirtualOffset': conversion from larger type 'uint' to smaller type 'min16float', possible loss of data [-Wconversion] at Inc/WeedtopiaInc/Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/ShaderLibrary/Sampling/Fibonacci.hlsl(270) (on d3d11)",
+            "occurrences": 2
+          },
+          {
+            "message": "Shader warning in 'TraceVirtualOffset': conversion from larger type 'uint' to smaller type 'min16float', possible loss of data [-Wconversion] at Inc/WeedtopiaInc/Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/ShaderLibrary/Sampling/Fibonacci.hlsl(277) (on d3d11)",
+            "occurrences": 2
+          },
+          {
+            "message": "Shader warning in 'TraceVirtualOffset': conversion from larger type 'float' to smaller type 'min16float', possible loss of data [-Wconversion] at Inc/WeedtopiaInc/Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/ShaderLibrary/Sampling/Hammersley.hlsl(25) (on d3d11)",
+            "occurrences": 2
+          },
+          {
+            "message": "Shader warning in 'TraceVirtualOffset': conversion from larger type 'float3' to smaller type 'min16float3', possible loss of data [-Wconversion] at Inc/WeedtopiaInc/Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/ShaderLibrary/Sampling/Sampling.hlsl(144) (on d3d11)",
+            "occurrences": 2
+          },
+          {
+            "message": "Shader warning in 'TraceVirtualOffset': conversion from larger type 'float' to smaller type 'min16float', possible loss of data [-Wconversion] at Inc/WeedtopiaInc/Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/ShaderLibrary/Sampling/Sampling.hlsl(316) (on d3d11)",
+            "occurrences": 2
+          },
+          {
+            "message": "Shader warning in 'TraceVirtualOffset': conversion from larger type 'float' to smaller type 'min16float', possible loss of data [-Wconversion] at Inc/WeedtopiaInc/Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/ShaderLibrary/Sampling/Sampling.hlsl(317) (on d3d11)",
+            "occurrences": 2
+          },
+          {
+            "message": "Shader warning in 'TraceVirtualOffset': conversion from larger type 'float' to smaller type 'min16float', possible loss of data [-Wconversion] at Inc/WeedtopiaInc/Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/ShaderLibrary/Sampling/Sampling.hlsl(318) (on d3d11)",
+            "occurrences": 2
+          }
+        ]
+      },
+      {
+        "category": "crash_diagnostics_symbols_missing",
+        "occurrences": 1,
+        "severity": "commercial_diagnostics_followup",
+        "finding": "Diagnostics Data is enabled while native debug symbols are not configured as SymbolTable or Full. Crash-stack resolution is limited.",
+        "action": "Generate and retain matching native symbol artifacts with the production build.",
+        "messages": [
+          {
+            "message": "Diagnostics Data is enabled, and it requires Debug Symbols to be either SymbolTable or Full to resolve stacktraces in crash reports. Consider selecting Full to receive fully-detailed crash reports.",
+            "occurrences": 1
+          }
+        ]
+      },
+      {
+        "category": "own_code_member_hiding",
+        "occurrences": 1,
+        "severity": "minor_code_clarity",
+        "source": "Assets/Weedtopia/Scripts/Runtime/Unity/InventoryTileView.cs:12",
+        "finding": "The Text field tag hides Component.tag. Existing Bind uses the Text field; the warning does not identify a present startup failure.",
+        "action": "Use an explicit serialized-field-preserving rename or intentional hiding in a separate tested change.",
+        "messages": [
+          {
+            "message": "Assets\\Weedtopia\\Scripts\\Runtime\\Unity\\InventoryTileView.cs(12,38): warning CS0108: 'InventoryTileView.tag' hides inherited member 'Component.tag'. Use the new keyword if hiding was intended.",
+            "occurrences": 1
+          }
+        ]
+      },
+      {
+        "category": "android_icon_deprecation",
+        "occurrences": 2,
+        "severity": "maintenance_followup",
+        "source": "Library/Bee/artifacts/Android/Manifest/IntermediateLauncherManifestDiag.txt",
+        "finding": "Round and Legacy icon settings are deprecated. This does not establish that Adaptive icons are absent.",
+        "action": "Review and retain the authored Adaptive-icon setup before a production release.",
+        "messages": [
+          {
+            "message": "Library\\Bee\\artifacts\\Android\\Manifest\\IntermediateLauncherManifestDiag.txt: Round icons are deprecated and will be removed in a future Unity version. Use Adaptive icons instead.",
+            "occurrences": 1
+          },
+          {
+            "message": "Library\\Bee\\artifacts\\Android\\Manifest\\IntermediateLauncherManifestDiag.txt: Legacy icons are deprecated and will be removed in a future Unity version. Use Adaptive icons instead.",
+            "occurrences": 1
+          }
+        ]
+      }
+    ],
+    "editorLogReference": {
+      "path": "C:/Users/Mein-PC/AppData/Local/Unity/Editor/Editor.log",
+      "traceVirtualOffsetLines": [
+        43469,
+        43501
+      ],
+      "diagnosticsLine": 43607,
+      "memberHidingLines": [
+        43871,
+        43990
+      ],
+      "iconWarningLines": [
+        49813,
+        49836
+      ]
+    }
+  },
+  "latest": {
+    "id": "20261005-commercial-startup-v2",
+    "status": "succeeded",
+    "startedUtc": "2026-10-05T07:05:49.4255627Z",
+    "finishedUtc": "2026-10-05T07:06:16.0365570Z",
+    "buildReceiptPath": "Builds/Android/20261005-commercial-startup-v2/build-result.json",
+    "buildReceiptSha256": "eb24dc10d87b9e6f217cf9bce6867a8fb6c5027fc21faa4a865c8e0730b10621",
+    "warnings": 19,
+    "errors": 0,
+    "apkBytes": 384274724,
+    "seconds": 25.637012799999997,
+    "buildType": "Development",
+    "evidenceState": "current_native_report_read_only",
+    "nativeReportPath": "Library/LastBuild.buildreport",
+    "nativeReportSha256": "62a51f64ec583bee18d6f9eaf194a191f629047e76ca14d1df4cd7b8a55fe23f",
+    "nativeReportExtraction": "Read-only ASCII message extraction from the native serialized BuildReport; 19 matching warning texts reconcile exactly with summary.totalWarnings.",
+    "classifiedWarningCount": 19,
+    "classificationComplete": true,
+    "categories": [
+      {
+        "category": "editor_probe_volume_d3d11_precision",
+        "occurrences": 18,
+        "uniqueMessages": 9,
+        "severity": "low_for_android_apk",
+        "source": "Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/VirtualOffset/TraceVirtualOffset.urtshader",
+        "finding": "Nine min16float conversion diagnostics occur twice; each identifies d3d11 and the editor probe-volume shader. No Android Vulkan/GLES3 game-shader error is reported by these messages.",
+        "action": "Retain as package/editor diagnostics; device rendering acceptance is independent.",
+        "messages": [
+          {
+            "message": "Shader warning in 'TraceVirtualOffset': conversion from larger type 'uint' to smaller type 'min16float', possible loss of data [-Wconversion] at Inc/WeedtopiaInc/Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/ShaderLibrary/Sampling/Fibonacci.hlsl(16) (on d3d11)",
+            "occurrences": 2
+          },
+          {
+            "message": "Shader warning in 'TraceVirtualOffset': conversion from larger type 'uint' to smaller type 'min16float', possible loss of data [-Wconversion] at Inc/WeedtopiaInc/Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/ShaderLibrary/Sampling/Fibonacci.hlsl(27) (on d3d11)",
+            "occurrences": 2
+          },
+          {
+            "message": "Shader warning in 'TraceVirtualOffset': conversion from larger type 'uint' to smaller type 'min16float', possible loss of data [-Wconversion] at Inc/WeedtopiaInc/Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/ShaderLibrary/Sampling/Fibonacci.hlsl(270) (on d3d11)",
+            "occurrences": 2
+          },
+          {
+            "message": "Shader warning in 'TraceVirtualOffset': conversion from larger type 'uint' to smaller type 'min16float', possible loss of data [-Wconversion] at Inc/WeedtopiaInc/Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/ShaderLibrary/Sampling/Fibonacci.hlsl(277) (on d3d11)",
+            "occurrences": 2
+          },
+          {
+            "message": "Shader warning in 'TraceVirtualOffset': conversion from larger type 'float' to smaller type 'min16float', possible loss of data [-Wconversion] at Inc/WeedtopiaInc/Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/ShaderLibrary/Sampling/Hammersley.hlsl(25) (on d3d11)",
+            "occurrences": 2
+          },
+          {
+            "message": "Shader warning in 'TraceVirtualOffset': conversion from larger type 'float3' to smaller type 'min16float3', possible loss of data [-Wconversion] at Inc/WeedtopiaInc/Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/ShaderLibrary/Sampling/Sampling.hlsl(144) (on d3d11)",
+            "occurrences": 2
+          },
+          {
+            "message": "Shader warning in 'TraceVirtualOffset': conversion from larger type 'float' to smaller type 'min16float', possible loss of data [-Wconversion] at Inc/WeedtopiaInc/Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/ShaderLibrary/Sampling/Sampling.hlsl(316) (on d3d11)",
+            "occurrences": 2
+          },
+          {
+            "message": "Shader warning in 'TraceVirtualOffset': conversion from larger type 'float' to smaller type 'min16float', possible loss of data [-Wconversion] at Inc/WeedtopiaInc/Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/ShaderLibrary/Sampling/Sampling.hlsl(317) (on d3d11)",
+            "occurrences": 2
+          },
+          {
+            "message": "Shader warning in 'TraceVirtualOffset': conversion from larger type 'float' to smaller type 'min16float', possible loss of data [-Wconversion] at Inc/WeedtopiaInc/Library/PackageCache/com.unity.render-pipelines.core@04ab0eefa0c3/ShaderLibrary/Sampling/Sampling.hlsl(318) (on d3d11)",
+            "occurrences": 2
+          }
+        ]
+      },
+      {
+        "category": "crash_diagnostics_symbols_missing",
+        "occurrences": 1,
+        "severity": "commercial_diagnostics_followup",
+        "finding": "Diagnostics Data is enabled while native debug symbols are not configured as SymbolTable or Full. Crash-stack resolution is limited.",
+        "action": "Generate and retain matching native symbol artifacts with the production build.",
+        "messages": [
+          {
+            "message": "Diagnostics Data is enabled, and it requires Debug Symbols to be either SymbolTable or Full to resolve stacktraces in crash reports. Consider selecting Full to receive fully-detailed crash reports.",
+            "occurrences": 1
+          }
+        ]
+      }
+    ],
+    "networkOrGradlePackagingWarningCount": 0,
+    "note": "CS0108 and icon deprecation messages did not recur in this incremental build. Their absence is not evidence of a source or icon fix."
+  },
+  "editorLogMessagesOutsideBuildWarningCounts": [
+    "ILPP duplicate hint paths for installed editor platform/reference assemblies",
+    "Kestrel or editor-service messages",
+    "Terrain shader import unsupported-subshader diagnostics"
+  ],
+  "acceptance": {
+    "apkBuildSucceeded": true,
+    "warningClassificationComplete": true,
+    "deviceAccepted": false,
+    "humanAccepted": false,
+    "releaseAccepted": false
+  },
+  "releaseContext": "These are Development/debug-signed test APKs with the existing template application identifier. This warning inventory does not promote them to production release artifacts."
+}
