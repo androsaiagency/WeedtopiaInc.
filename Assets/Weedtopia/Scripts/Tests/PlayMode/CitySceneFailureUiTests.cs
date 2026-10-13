@@ -148,9 +148,9 @@ namespace Weedtopia.Tests.PlayMode
         {
             foreach (var plot in candidate.State.buildings.Where(building => building.cityId == city && building.family == "settlement_plot").Take(10))
             {
-                plot.family = "residential_house"; plot.level = 5000;
+                plot.family = "residential_house"; plot.level = 1750;
                 candidate.State.workers.Add(new WorkerState { id = "scene_failure_fixture_" + plot.id, role = "caretaker", buildingId = plot.id,
-                    slot = 0, level = 60, rank = 1, attributes = new System.Collections.Generic.List<WorkerAttribute> { WorkerAttribute.Residents } });
+                    slot = 0, level = 80, rank = 1, attributes = new System.Collections.Generic.List<WorkerAttribute> { WorkerAttribute.Residents } });
             }
             Assert.That(candidate.Simulation.Residents(city), Is.EqualTo(5000));
         }

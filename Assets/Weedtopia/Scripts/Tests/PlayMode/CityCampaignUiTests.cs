@@ -119,8 +119,8 @@ namespace Weedtopia.Tests.PlayMode
             {
                 foreach(var plot in root.Session.State.buildings.Where(b=>b.cityId==city&&b.family=="settlement_plot").Take(10))
                 {
-                    plot.family="residential_house";plot.level=5000;
-                    root.Session.State.workers.Add(new WorkerState{id="resident_fixture_"+plot.id,role="caretaker",buildingId=plot.id,slot=0,level=20,rank=1,
+                    plot.family="residential_house";plot.level=1750;
+                    root.Session.State.workers.Add(new WorkerState{id="resident_fixture_"+plot.id,role="caretaker",buildingId=plot.id,slot=0,level=30,rank=1,
                         attributes=new System.Collections.Generic.List<WorkerAttribute>{WorkerAttribute.Residents}});
                 }
             }
@@ -190,8 +190,8 @@ namespace Weedtopia.Tests.PlayMode
         {
             foreach(var plot in root.Session.State.buildings.Where(b=>b.cityId=="burning_hills"&&b.family=="settlement_plot").Take(10))
             {
-                plot.family="residential_house";plot.level=5000;
-                root.Session.State.workers.Add(new WorkerState{id="resident_fixture_"+plot.id,role="caretaker",buildingId=plot.id,slot=0,level=60,rank=1,
+                plot.family="residential_house";plot.level=1750;
+                root.Session.State.workers.Add(new WorkerState{id="resident_fixture_"+plot.id,role="caretaker",buildingId=plot.id,slot=0,level=80,rank=1,
                     attributes=new System.Collections.Generic.List<WorkerAttribute>{WorkerAttribute.Residents}});
             }
             root.Session.Campaign.RefreshMilestones();root.Refresh();root.Ui.ShowCities();
@@ -211,9 +211,9 @@ namespace Weedtopia.Tests.PlayMode
                 var plots = root.Session.State.buildings.Where(b => b.cityId == city && (b.family == "settlement_plot" || b.family == "residential_house")).Take(10).ToArray();
                 foreach (var plot in plots)
                 {
-                    root.Session.State.workers.RemoveAll(w => w.buildingId == plot.id); plot.family = "residential_house"; plot.level = 5000;
+                    root.Session.State.workers.RemoveAll(w => w.buildingId == plot.id); plot.family = "residential_house"; plot.level = 1750;
                     root.Session.State.workers.Add(new WorkerState { id = "montana_ui_fixture_" + plot.id, role = "caretaker", buildingId = plot.id,
-                        slot = 0, level = 60, rank = 1, attributes = new System.Collections.Generic.List<WorkerAttribute> { WorkerAttribute.Residents } });
+                        slot = 0, level = 80, rank = 1, attributes = new System.Collections.Generic.List<WorkerAttribute> { WorkerAttribute.Residents } });
                 }
                 Assert.That(root.Session.Simulation.Residents(city), Is.EqualTo(5000));
             }
@@ -417,9 +417,9 @@ namespace Weedtopia.Tests.PlayMode
                     (b.family == "settlement_plot" || b.family == "residential_house")).Take(10))
                 {
                     root.Session.State.workers.RemoveAll(w => w.buildingId == plot.id);
-                    plot.family = "residential_house"; plot.level = 5000;
+                    plot.family = "residential_house"; plot.level = 1750;
                     root.Session.State.workers.Add(new WorkerState { id = "cassa_ui_fixture_" + plot.id, role = "caretaker",
-                        buildingId = plot.id, slot = 0, level = 60, rank = 3,
+                        buildingId = plot.id, slot = 0, level = 46, rank = 5,
                         attributes = new System.Collections.Generic.List<WorkerAttribute> { WorkerAttribute.Residents } });
                 }
                 Assert.That(root.Session.Simulation.Residents(city), Is.EqualTo(12500));

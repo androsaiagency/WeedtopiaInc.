@@ -1,0 +1,28 @@
+{
+  "originalRun": "20261013_062917_EditMode_SkunkfurtDomainAndRegression",
+  "originalTotal": 122,
+  "originalPassed": 105,
+  "originalFailed": 17,
+  "repairs": [
+    {
+      "cases": 11,
+      "file": "Assets/Weedtopia/Scripts/Tests/EditMode/SkunkfurtCampaignTests.cs",
+      "cause": "Fixture profile names exceeded the existing 24-character limit.",
+      "change": "Use valid short fixture names; profile validation is unchanged."
+    },
+    {
+      "cases": 2,
+      "file": "Assets/Weedtopia/Scripts/Tests/EditMode/SkunkfurtCampaignTests.cs",
+      "cause": "The historical version-12 source fixture requested an unrepresentable 500000 residents within 17 legal houses.",
+      "change": "Version-12 fixtures use their actual legal maximum of 520200 per source city. Current version-13 fixtures retain 500000. Each city keeps its required park."
+    },
+    {
+      "cases": 4,
+      "file": "Assets/Weedtopia/Scripts/Tests/EditMode/CityProjectTests.cs",
+      "cause": "Full tutorial and city-project simulations completed in 190.914 to 240.750 seconds, exceeding NUnit's default 180-second timeout.",
+      "change": "Set an explicit 600-second wall-clock timeout for the four complete simulations. Simulation tick limits and all gameplay assertions are unchanged."
+    }
+  ],
+  "productChangesForTheseRepairs": [],
+  "rerunPolicy": "Rerun all 45 Skunkfurt domain cases and the four timed-out CityProject cases. Keep the original XML and require a later passing result for every original failure."
+}

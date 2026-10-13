@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-12T18:38:21.9859364Z",
+  "status": "source_review_passed",
+  "scope": "Read-only source and production contract review; no Unity or GameView execution by reviewer",
+  "reviewedSource": "Assets/Weedtopia/Scripts/Editor/GameSetup/SaintMaryVilleEvidence.cs",
+  "sourceSha256": "77DBD5AA8127A7B0907FB13DBA74EC42B25C9F1B5DBA0D3DF3D859004538DFBB",
+  "sourceChecks": 12,
+  "checks": [
+    "No raw JsonUtility.FromJson<GameState> or GameState clone remains in evidence",
+    "Branch baseline Save uses production validator and exact on-disk Decode",
+    "Branch baseline Load restores story and shop serialized nulls through production Decode",
+    "Branch restore requires non-null primary state with no recovery or load error",
+    "Branch restore explicitly validates and writes through validated LocalSaveStore.Save",
+    "Branch restore activates through GameRoot.Continue and production offline commit",
+    "Both completed Elias branches compare loaded saved city state",
+    "Offline Continue checks exactly thirty simulation seconds and zero repeated application",
+    "Offline Continue compares all ten city story/project/quest snapshots and worker assignments",
+    "Travel uses authored rows then validates each actual scene state and catalog count",
+    "Completion requires eighty-three fresh dimension-checked screenshots and sixty locale/resolution matrix entries",
+    "Completion and runner require choice/city/state/housing/offline gates and UI overflow passed"
+  ],
+  "findings": [],
+  "gameViewStatus": "Pending parent-owned corrected capture and fresh receipt verification",
+  "physicalTouchVerified": false,
+  "userVisualApproval": false
+}

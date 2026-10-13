@@ -1,0 +1,146 @@
+{
+  "utc": "2026-10-13T16:53:19.757982+00:00",
+  "status": "resolved_verified",
+  "sourceXml": "Docs/Implementation/Validation/20261013_173657_EditMode_GreatSativadamDomainAndRegression.xml",
+  "sourceXmlSha256": "e7371eff4c72e49472e69dbb76dd1eaee12fc3d63f0104a3dc04428caa48da47",
+  "fixtureCities": 13,
+  "fixtureBuildings": 728,
+  "fixtureCases": 13,
+  "passedCasesBeforeRepair": 10,
+  "failedCasesBeforeRepair": 3,
+  "oldWatchdogSeconds": 120,
+  "newWatchdogSeconds": 600,
+  "eightHourCapCaseDurationSeconds": 310.929041,
+  "eightHourCapNonWatchdogDurationSeconds": 190.92904099999998,
+  "timingInterpretation": "The cap case runs the synchronous eight-hour reference before starting the worker. Total duration minus the120-second watchdog is an approximate reference+setup duration, not an isolated exact profiler sample.",
+  "diagnosis": "All three failures reached the test watchdog; no state-equivalence assertion failed. The functional fixture expanded to the complete13-city catalog while its three-city watchdog documentation remained unchanged. Root observed healthy CPU progress. Worker completion still needs a targeted Unity rerun. The first targeted rerun passed cancellation and UTC rollback/zero, but exposed a second independent NUnit default180000ms whole-case timeout on the350/373-second multi-phase cases. These two failures are not the600-second worker watchdog and are not claimed passed. The final targeted run after both bounded timeout repairs passed all five actual cases, including all three original failures. No functional assertions were removed. This is functional equivalence and rollback evidence, not production performance or device acceptance.",
+  "failedCases": [
+    {
+      "name": "Weedtopia.Tests.OfflineWorkerTests.CancelledCalculationKeepsSessionBusyUntilRollbackAndNeverSaves",
+      "method": "CancelledCalculationKeepsSessionBusyUntilRollbackAndNeverSaves",
+      "durationSeconds": 123.766294,
+      "message": "System.TimeoutException : Three-city isolated worker did not finish within the functional-test watchdog.",
+      "stackTrace": "  at Weedtopia.Tests.OfflineWorkerTests.WaitUntil (System.Func`1[TResult] condition) [0x00027] in D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Assets\\Weedtopia\\Scripts\\Tests\\EditMode\\OfflineWorkerTests.cs:269 \n  at Weedtopia.Tests.OfflineWorkerTests.Finish (Weedtopia.Application.OfflineSimulationOperation operation) [0x00015] in D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Assets\\Weedtopia\\Scripts\\Tests\\EditMode\\OfflineWorkerTests.cs:260 \n  at Weedtopia.Tests.OfflineWorkerTests.CancelledCalculationKeepsSessionBusyUntilRollbackAndNeverSaves () [0x00184] in D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Assets\\Weedtopia\\Scripts\\Tests\\EditMode\\OfflineWorkerTests.cs:129 \n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\n  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <1eb9db207454431c84a47bcd81e79c37>:0 "
+    },
+    {
+      "name": "Weedtopia.Tests.OfflineWorkerTests.FailedCommitRollsBackEveryFieldAndReferenceAndRetryGrantsVipOnce",
+      "method": "FailedCommitRollsBackEveryFieldAndReferenceAndRetryGrantsVipOnce",
+      "durationSeconds": 122.022595,
+      "message": "  Expected: <System.IO.IOException>\n  But was:  <System.TimeoutException: Three-city isolated worker did not finish within the functional-test watchdog.\n  at Weedtopia.Tests.OfflineWorkerTests.WaitUntil (System.Func`1[TResult] condition) [0x00027] in D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Assets\\Weedtopia\\Scripts\\Tests\\EditMode\\OfflineWorkerTests.cs:269 \n  at Weedtopia.Tests.OfflineWorkerTests.Finish (Weedtopia.Application.OfflineSimulationOperation operation) [0x00015] in D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Assets\\Weedtopia\\Scripts\\Tests\\EditMode\\OfflineWorkerTests.cs:260 \n  at Weedtopia.Tests.OfflineWorkerTests+<>c__DisplayClass6_0.<FailedCommitRollsBackEveryFieldAndReferenceAndRetryGrantsVipOnce>b__0 () [0x00000] in D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Assets\\Weedtopia\\Scripts\\Tests\\EditMode\\OfflineWorkerTests.cs:95 \n  at NUnit.Framework.Assert.Throws (NUnit.Framework.Constraints.IResolveConstraint expression, NUnit.Framework.TestDelegate code, System.String message, System.Object[] args) [0x0002f] in <f577cd9686154d6ab10efd7e65e64366>:0 >\n",
+      "stackTrace": "at Weedtopia.Tests.OfflineWorkerTests.FailedCommitRollsBackEveryFieldAndReferenceAndRetryGrantsVipOnce () [0x000eb] in D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Assets\\Weedtopia\\Scripts\\Tests\\EditMode\\OfflineWorkerTests.cs:95\n"
+    },
+    {
+      "name": "Weedtopia.Tests.OfflineWorkerTests.WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap(86400)",
+      "method": "WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap",
+      "durationSeconds": 310.929041,
+      "message": "System.TimeoutException : Three-city isolated worker did not finish within the functional-test watchdog.",
+      "stackTrace": "  at Weedtopia.Tests.OfflineWorkerTests.WaitUntil (System.Func`1[TResult] condition) [0x00027] in D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Assets\\Weedtopia\\Scripts\\Tests\\EditMode\\OfflineWorkerTests.cs:269 \n  at Weedtopia.Tests.OfflineWorkerTests.Finish (Weedtopia.Application.OfflineSimulationOperation operation) [0x00015] in D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Assets\\Weedtopia\\Scripts\\Tests\\EditMode\\OfflineWorkerTests.cs:260 \n  at Weedtopia.Tests.OfflineWorkerTests.WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap (System.Int32 elapsed) [0x0005d] in D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Assets\\Weedtopia\\Scripts\\Tests\\EditMode\\OfflineWorkerTests.cs:76 \n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\n  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <1eb9db207454431c84a47bcd81e79c37>:0 "
+    }
+  ],
+  "passingEquivalenceCases": [
+    {
+      "name": "Weedtopia.Tests.OfflineWorkerTests.WorkerExactlyMatchesHistoricalResponsiveTwoCityConstructionVipAndPersistedState(0.375d)",
+      "durationSeconds": 83.631561
+    },
+    {
+      "name": "Weedtopia.Tests.OfflineWorkerTests.WorkerExactlyMatchesHistoricalResponsiveTwoCityConstructionVipAndPersistedState(0.1d)",
+      "durationSeconds": 84.166687
+    }
+  ],
+  "exactAllowedEdits": [
+    "watchdog documentation",
+    "WorkerWatchdogSeconds120to600",
+    "TimeoutException diagnostic wording",
+    "Three multi-phase case Timeout attributes with finite900000ms constant and explanation"
+  ],
+  "functionalAssertionsUnchanged": true,
+  "productionSourcesChanged": false,
+  "byteReversiblePatch": true,
+  "beforeSha256": "8f8a5d83d55a4fbf1fe3389affcd9b7a156a230a35999f25bb7f2fa4358d658b",
+  "afterSha256": "5c55b1c103c75d728080675e0c33eea672fa996171f47a2c69da1f1199da460a",
+  "targetedRerunMethods": [
+    "CancelledCalculationKeepsSessionBusyUntilRollbackAndNeverSaves",
+    "FailedCommitRollsBackEveryFieldAndReferenceAndRetryGrantsVipOnce",
+    "WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap"
+  ],
+  "unityStartedByThisAgent": true,
+  "updatedUtc": "2026-10-13T19:20:11.734866+00:00",
+  "testFrameworkTimeoutMillisecondsBefore": 180000,
+  "testFrameworkTimeoutMillisecondsAfter": 900000,
+  "beforeTestFrameworkRepairSha256": "3a93a065de222d1a73563b6c86b6627bfdb5aa233acea61d4ca0364aca9c750b",
+  "firstTargetedRerun": {
+    "xml": "Docs/Implementation/Validation/20261013_201511_EditMode_GreatSativadamOfflineWorkerRetest.xml",
+    "sha256": "9d0dc175c0fa761f7a74e6682e81c545673eda61b958972a1dc054d9a9e8473d",
+    "cases": [
+      {
+        "name": "Weedtopia.Tests.OfflineWorkerTests.CancelledCalculationKeepsSessionBusyUntilRollbackAndNeverSaves",
+        "result": "Passed",
+        "durationSeconds": 178.047169,
+        "message": null
+      },
+      {
+        "name": "Weedtopia.Tests.OfflineWorkerTests.FailedCommitRollsBackEveryFieldAndReferenceAndRetryGrantsVipOnce",
+        "result": "Failed",
+        "durationSeconds": 350.020187,
+        "message": "Timeout value of 180000 ms was exceeded. If this is intended, increase the timeout value using a TimeoutAttribute."
+      },
+      {
+        "name": "Weedtopia.Tests.OfflineWorkerTests.WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap(-100)",
+        "result": "Passed",
+        "durationSeconds": 2.937892,
+        "message": null
+      },
+      {
+        "name": "Weedtopia.Tests.OfflineWorkerTests.WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap(0)",
+        "result": "Passed",
+        "durationSeconds": 2.945298,
+        "message": null
+      },
+      {
+        "name": "Weedtopia.Tests.OfflineWorkerTests.WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap(86400)",
+        "result": "Failed",
+        "durationSeconds": 372.870102,
+        "message": "Timeout value of 180000 ms was exceeded. If this is intended, increase the timeout value using a TimeoutAttribute."
+      }
+    ]
+  },
+  "allOriginalFailingCasesPassed": true,
+  "finalTargetedRerun": {
+    "run": "20261013_210424_EditMode_GreatSativadamOfflineFinalTimeoutRetest",
+    "receipt": "Docs/Implementation/Validation/20261013_210424_EditMode_GreatSativadamOfflineFinalTimeoutRetest.json",
+    "startedUtc": "2026-10-13T19:04:24.7593991Z",
+    "endedUtc": "2026-10-13T19:19:51.2278472Z",
+    "xml": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\Implementation\\Validation\\20261013_210424_EditMode_GreatSativadamOfflineFinalTimeoutRetest.xml",
+    "sha256": "52f3eda91128094537a941cd3982a6882245f48f5a310bcc7df5e942f497d651",
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "cases": [
+      {
+        "name": "Weedtopia.Tests.OfflineWorkerTests.CancelledCalculationKeepsSessionBusyUntilRollbackAndNeverSaves",
+        "result": "Passed",
+        "durationSeconds": 179.541611
+      },
+      {
+        "name": "Weedtopia.Tests.OfflineWorkerTests.FailedCommitRollsBackEveryFieldAndReferenceAndRetryGrantsVipOnce",
+        "result": "Passed",
+        "durationSeconds": 349.134842
+      },
+      {
+        "name": "Weedtopia.Tests.OfflineWorkerTests.WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap(-100)",
+        "result": "Passed",
+        "durationSeconds": 3.071452
+      },
+      {
+        "name": "Weedtopia.Tests.OfflineWorkerTests.WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap(0)",
+        "result": "Passed",
+        "durationSeconds": 2.993993
+      },
+      {
+        "name": "Weedtopia.Tests.OfflineWorkerTests.WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap(86400)",
+        "result": "Passed",
+        "durationSeconds": 369.192706
+      }
+    ]
+  }
+}

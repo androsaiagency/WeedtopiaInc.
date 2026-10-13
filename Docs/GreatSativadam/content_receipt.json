@@ -1,0 +1,143 @@
+{
+  "city": "great_sativadam",
+  "version": 14,
+  "changed": false,
+  "instances": 56,
+  "routes": 35,
+  "mainQuests": 18,
+  "permanentResidents": 6,
+  "personalChapters": 18,
+  "recurringVariants": 18,
+  "communityProjects": 3,
+  "localizedKeys": 230,
+  "languages": [
+    "de",
+    "en",
+    "es",
+    "fr",
+    "ru"
+  ],
+  "oldContentDigest": "19f9fd934f582000deaeadac2dcb2311d062b106f916bffa232d406ea116b5b2",
+  "contentDigest": "19f9fd934f582000deaeadac2dcb2311d062b106f916bffa232d406ea116b5b2",
+  "priorContentPreservedExceptAuthorizedHousingTier": true,
+  "priorLocaleEntriesPreserved": true,
+  "allOtherBuildingDefinitionFieldsPreserved": true,
+  "placeholderParity": true,
+  "freshProgressGoals": true,
+  "prerequisiteGraphAcyclic": true,
+  "chapterRoundsBeforeProjects": true,
+  "savedPlaceChoice": {
+    "quest": "gs_joost_chapter_3",
+    "choices": [
+      "repair_wharf",
+      "learning_dock"
+    ]
+  },
+  "residents": [
+    {
+      "id": "gs_noor",
+      "appearsAt": 50,
+      "chapters": [
+        50,
+        2300,
+        7100
+      ]
+    },
+    {
+      "id": "gs_bram",
+      "appearsAt": 150,
+      "chapters": [
+        150,
+        3000,
+        8100
+      ]
+    },
+    {
+      "id": "gs_esra",
+      "appearsAt": 300,
+      "chapters": [
+        300,
+        3600,
+        9200
+      ]
+    },
+    {
+      "id": "gs_daan",
+      "appearsAt": 500,
+      "chapters": [
+        500,
+        4400,
+        10200
+      ]
+    },
+    {
+      "id": "gs_fenna",
+      "appearsAt": 900,
+      "chapters": [
+        900,
+        5200,
+        11200
+      ]
+    },
+    {
+      "id": "gs_joost",
+      "appearsAt": 1500,
+      "chapters": [
+        1500,
+        5900,
+        11900
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "gs_joint_tide_court",
+      "residents": 2000,
+      "prerequisites": [
+        "gs_noor_chapter_1",
+        "gs_bram_chapter_1",
+        "gs_esra_chapter_1",
+        "gs_daan_chapter_1",
+        "gs_fenna_chapter_1",
+        "gs_joost_chapter_1"
+      ]
+    },
+    {
+      "id": "gs_joint_seed_quay",
+      "residents": 6000,
+      "prerequisites": [
+        "gs_noor_chapter_2",
+        "gs_bram_chapter_2",
+        "gs_esra_chapter_2",
+        "gs_daan_chapter_2",
+        "gs_fenna_chapter_2",
+        "gs_joost_chapter_2"
+      ]
+    },
+    {
+      "id": "gs_joint_open_water_charter",
+      "residents": 12000,
+      "prerequisites": [
+        "gs_noor_chapter_3",
+        "gs_bram_chapter_3",
+        "gs_esra_chapter_3",
+        "gs_daan_chapter_3",
+        "gs_fenna_chapter_3",
+        "gs_joost_chapter_3"
+      ]
+    }
+  ],
+  "authorizedFinalHousingTier": {
+    "building": "residential_house",
+    "index": 24,
+    "level": 5000,
+    "fromBonus": 1000,
+    "toBonus": 2000,
+    "previousLevelsPreserved": true,
+    "previousMaximumPerHouse": 1125,
+    "maximumPerHouse": 2125,
+    "maximumPreviousTwelveCities": 22108500,
+    "required": 20000000,
+    "allOtherEconomyCurvesPreserved": true
+  }
+}

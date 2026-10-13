@@ -1,0 +1,154 @@
+{
+  "byteIdentical": true,
+  "files": {
+    "Assets\\Weedtopia\\Game\\Content\\BurningHills.json": "1ab25c66075cae537c0ea3465660e4b982c0e844527bf960871537474ccbb019",
+    "Assets\\Weedtopia\\Game\\Localization\\de.json": "e43ecb48ddc860b93b69597fa1c2454c5939ff9529134be0129dfef055ea15f9",
+    "Assets\\Weedtopia\\Game\\Localization\\en.json": "13e38e6c9ebf8234d76f655b92ae93879b508694a5c9c6b98a50b9d541d4d6bd",
+    "Assets\\Weedtopia\\Game\\Localization\\es.json": "ca4f7e7bd489ba4ff3c95b55fa9ef81c62de704e3eef34fb598a6af775b42463",
+    "Assets\\Weedtopia\\Game\\Localization\\fr.json": "0722a0b1241996599eff56085b6942748ef03cdf82043b7349162dfd30ccfcca",
+    "Assets\\Weedtopia\\Game\\Localization\\ru.json": "7b0672347329a1b0084a48bb8eab812f11758979e827798048fc0e5ee7002930"
+  },
+  "firstAuthor": {
+    "city": "skunkfurt",
+    "version": 13,
+    "changed": true,
+    "instances": 56,
+    "routes": 35,
+    "mainQuests": 18,
+    "permanentResidents": 6,
+    "personalChapters": 18,
+    "recurringVariants": 18,
+    "communityProjects": 3,
+    "localizedKeys": 230,
+    "languages": [
+      "de",
+      "en",
+      "es",
+      "fr",
+      "ru"
+    ],
+    "oldContentDigest": "f753f414f4177271e9fa88d030000f49f11b6df3a538cbd6a7db2f4b856c4093",
+    "contentDigest": "043059f496e16f9286531df645841059e3edf9f0963f2f5b65e946f3bb7a6051",
+    "priorContentPreservedExceptAuthorizedHousingTier": true,
+    "priorLocaleEntriesPreserved": true,
+    "allOtherBuildingDefinitionFieldsPreserved": true,
+    "placeholderParity": true,
+    "freshProgressGoals": true,
+    "prerequisiteGraphAcyclic": true,
+    "chapterRoundsBeforeProjects": true,
+    "savedPlaceChoice": {
+      "quest": "sf_jonas_chapter_3",
+      "choices": [
+        "fair_finance_desk",
+        "housing_council"
+      ]
+    },
+    "residents": [
+      {
+        "id": "sf_alma",
+        "appearsAt": 50,
+        "chapters": [
+          50,
+          2200,
+          7000
+        ]
+      },
+      {
+        "id": "sf_cem",
+        "appearsAt": 120,
+        "chapters": [
+          120,
+          2800,
+          7600
+        ]
+      },
+      {
+        "id": "sf_rika",
+        "appearsAt": 200,
+        "chapters": [
+          200,
+          3300,
+          8200
+        ]
+      },
+      {
+        "id": "sf_jonas",
+        "appearsAt": 350,
+        "chapters": [
+          350,
+          3900,
+          8800
+        ]
+      },
+      {
+        "id": "sf_lotte",
+        "appearsAt": 500,
+        "chapters": [
+          500,
+          4500,
+          9400
+        ]
+      },
+      {
+        "id": "sf_mina",
+        "appearsAt": 700,
+        "chapters": [
+          700,
+          5200,
+          10000
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "id": "sf_joint_bridge_table",
+        "residents": 2000,
+        "prerequisites": [
+          "sf_alma_chapter_1",
+          "sf_cem_chapter_1",
+          "sf_rika_chapter_1",
+          "sf_jonas_chapter_1",
+          "sf_lotte_chapter_1",
+          "sf_mina_chapter_1"
+        ]
+      },
+      {
+        "id": "sf_joint_market_commons",
+        "residents": 6000,
+        "prerequisites": [
+          "sf_alma_chapter_2",
+          "sf_cem_chapter_2",
+          "sf_rika_chapter_2",
+          "sf_jonas_chapter_2",
+          "sf_lotte_chapter_2",
+          "sf_mina_chapter_2"
+        ]
+      },
+      {
+        "id": "sf_joint_city_charter",
+        "residents": 12000,
+        "prerequisites": [
+          "sf_alma_chapter_3",
+          "sf_cem_chapter_3",
+          "sf_rika_chapter_3",
+          "sf_jonas_chapter_3",
+          "sf_lotte_chapter_3",
+          "sf_mina_chapter_3"
+        ]
+      }
+    ],
+    "authorizedFinalHousingTier": {
+      "building": "residential_house",
+      "index": 24,
+      "level": 5000,
+      "fromBonus": 475,
+      "toBonus": 1000,
+      "previousLevelsPreserved": true,
+      "previousMaximumPerHouse": 600,
+      "maximumPerHouse": 1125,
+      "maximumPreviousElevenCities": 10729125,
+      "required": 10000000,
+      "allOtherEconomyCurvesPreserved": true
+    }
+  }
+}

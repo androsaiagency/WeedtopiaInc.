@@ -1,0 +1,803 @@
+{
+  "utc": "2026-10-13T05:50:24.375483+00:00",
+  "status": "passed",
+  "city": "skunkfurt",
+  "unlockResidents": 10000000,
+  "maximumPreviousCityPopulation": 10729125,
+  "tests": [
+    {
+      "run": "20261013_062917_EditMode_SkunkfurtDomainAndRegression",
+      "status": "failed",
+      "total": 122,
+      "passed": 105,
+      "failed": 17,
+      "xml": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\Implementation\\Validation\\20261013_062917_EditMode_SkunkfurtDomainAndRegression.xml",
+      "sha256": "df2238a219f6d89777e3489d43a58f99927cf9b58546db2ca37bd78fc5a71b81"
+    },
+    {
+      "run": "20261013_070309_EditMode_SkunkfurtAssetsAndPreservation",
+      "status": "passed",
+      "total": 12,
+      "passed": 12,
+      "failed": 0,
+      "xml": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\Implementation\\Validation\\20261013_070309_EditMode_SkunkfurtAssetsAndPreservation.xml",
+      "sha256": "c3dbadb76e27bdfa7ffab0d20a8b4d3df316bdb23443ce2f5fd1340ac2144596"
+    },
+    {
+      "run": "20261013_071250_PlayMode_SkunkfurtRuntimeAndTravel",
+      "status": "passed",
+      "total": 29,
+      "passed": 29,
+      "failed": 0,
+      "xml": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\Implementation\\Validation\\20261013_071250_PlayMode_SkunkfurtRuntimeAndTravel.xml",
+      "sha256": "d0b1fb2e57c5626c550f2d8418f740c931493a04d5ea1049ba217a193d1af5b4"
+    },
+    {
+      "run": "20261013_072703_EditMode_SkunkfurtDomainFixtureRepair",
+      "status": "passed",
+      "total": 49,
+      "passed": 49,
+      "failed": 0,
+      "xml": "D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Docs\\Implementation\\Validation\\20261013_072703_EditMode_SkunkfurtDomainFixtureRepair.xml",
+      "sha256": "a7ba1b4f66bdc60e84782e363448192cb9f04e7d10bf9b0ca6f0362345489c9d"
+    }
+  ],
+  "totalTests": 163,
+  "totalTestExecutions": 212,
+  "finalCasesPerFixture": {
+    "Weedtopia.Tests.Assets.GreatKushvilleAssetTests": 6,
+    "Weedtopia.Tests.Assets.SkunkfurtAssetTests": 6,
+    "Weedtopia.Tests.CityCampaignTests": 13,
+    "Weedtopia.Tests.CityProjectTests": 14,
+    "Weedtopia.Tests.GreatKushvilleCampaignTests": 40,
+    "Weedtopia.Tests.PersistenceTests": 10,
+    "Weedtopia.Tests.PlayMode.CityCampaignUiTests": 16,
+    "Weedtopia.Tests.PlayMode.CitySceneFailureUiTests": 2,
+    "Weedtopia.Tests.PlayMode.GreatKushvillePlayModeTests": 5,
+    "Weedtopia.Tests.PlayMode.SkunkfurtPlayModeTests": 6,
+    "Weedtopia.Tests.SkunkfurtCampaignTests": 45
+  },
+  "sourceCompiledAssemblies": 12,
+  "initialFailures": 17,
+  "initialFailuresRetested": 17,
+  "unresolvedTestFailures": [],
+  "gameView": {
+    "screenshots": 85,
+    "matrix": 60,
+    "visuallyInspectedSamples": 15,
+    "visitedCities": [
+      "skunkfurt",
+      "burning_hills",
+      "big_rock_city",
+      "seven_hills",
+      "little_montana",
+      "cassa_vadela",
+      "mark_wood_city",
+      "green_leaf_village",
+      "purple_garden",
+      "golden_flower",
+      "saint_mary_ville",
+      "great_kushville"
+    ],
+    "captureRun": "20261013_072034_Capture_FinalGameView"
+  },
+  "checks": [
+    {
+      "check": "Version13 and twelve authored cities",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Ten million contemporaneous residents across all eleven preceding cities",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "One-time city charter grant",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Six permanent residents,18 chapters and18 recurring tasks",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Three chapter-linked civic projects",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "56 sites and35 local routes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "18 main quests",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Both durable Jonas outcomes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Housing before level5000 unchanged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Only final housing bonus475 to1000",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Threshold reachable with seventeen houses and a retained park per city",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Actual dirty working checkout preserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "All11 old city scenes andBootstrap byte-identical; one connected travel row appended",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "All source assemblies compile",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Compiled source hashes match final checkout",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Explicit Unity installation succeeded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Content authoring is byte-idempotent",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Original122case domain run remains in audit trail",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Unique NUnit run receipts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NUnit completed with consistent actual results 20261013_062917_EditMode_SkunkfurtDomainAndRegression",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NUnit used final catalogs 20261013_062917_EditMode_SkunkfurtDomainAndRegression",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh NUnit XML 20261013_062917_EditMode_SkunkfurtDomainAndRegression",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Unique test case names within run 20261013_062917_EditMode_SkunkfurtDomainAndRegression",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NUnit completed with consistent actual results 20261013_070309_EditMode_SkunkfurtAssetsAndPreservation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NUnit used final catalogs 20261013_070309_EditMode_SkunkfurtAssetsAndPreservation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh NUnit XML 20261013_070309_EditMode_SkunkfurtAssetsAndPreservation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Unique test case names within run 20261013_070309_EditMode_SkunkfurtAssetsAndPreservation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NUnit completed with consistent actual results 20261013_071250_PlayMode_SkunkfurtRuntimeAndTravel",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NUnit used final catalogs 20261013_071250_PlayMode_SkunkfurtRuntimeAndTravel",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh NUnit XML 20261013_071250_PlayMode_SkunkfurtRuntimeAndTravel",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Unique test case names within run 20261013_071250_PlayMode_SkunkfurtRuntimeAndTravel",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NUnit completed with consistent actual results 20261013_072703_EditMode_SkunkfurtDomainFixtureRepair",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NUnit used final catalogs 20261013_072703_EditMode_SkunkfurtDomainFixtureRepair",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh NUnit XML 20261013_072703_EditMode_SkunkfurtDomainFixtureRepair",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Unique test case names within run 20261013_072703_EditMode_SkunkfurtDomainFixtureRepair",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Every executed case has a passing latest result",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "All initial failures explicitly rerun and passed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "All45 Skunkfurt domain cases covered",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "All six cases covered Weedtopia.Tests.Assets.SkunkfurtAssetTests",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "All six cases covered Weedtopia.Tests.PlayMode.SkunkfurtPlayModeTests",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Skunkfurt domain,asset andPlayMode scenarios executed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Previous-city regression executed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Owned Unity rendered capture completed on final catalogs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Four-resolution overflow check",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "GameView savedStoryRoundtrip",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "GameView housingInspectionMatchesSimulation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "GameView returnedToPreviousCity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "GameView allTwelveCitiesVisited",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "GameView twelveCityOfflineRoundtrip",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "GameView jonasChoiceVariantsVerified",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "GameView architectureGroundAnchorsVerified",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "All twelve destinations rendered",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Both Jonas choices rendered",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 01_skunkfurt_invitation.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 02_charter_accepted.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 03_arrival.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 04_community_before.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG initial_quest_de_1920x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG initial_quest_de_1366x768.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG initial_quest_de_2560x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG initial_quest_de_1080x1920.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG initial_quest_en_1920x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG initial_quest_en_1366x768.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG initial_quest_en_2560x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG initial_quest_en_1080x1920.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG initial_quest_es_1920x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG initial_quest_es_1366x768.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG initial_quest_es_2560x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG initial_quest_es_1080x1920.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG initial_quest_fr_1920x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG initial_quest_fr_1366x768.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG initial_quest_fr_2560x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG initial_quest_fr_1080x1920.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG initial_quest_ru_1920x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG initial_quest_ru_1366x768.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG initial_quest_ru_2560x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG initial_quest_ru_1080x1920.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG travel_final_row_de_1920x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG travel_final_row_de_1366x768.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG travel_final_row_de_2560x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG travel_final_row_de_1080x1920.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG travel_final_row_en_1920x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG travel_final_row_en_1366x768.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG travel_final_row_en_2560x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG travel_final_row_en_1080x1920.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG travel_final_row_es_1920x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG travel_final_row_es_1366x768.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG travel_final_row_es_2560x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG travel_final_row_es_1080x1920.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG travel_final_row_fr_1920x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG travel_final_row_fr_1366x768.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG travel_final_row_fr_2560x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG travel_final_row_fr_1080x1920.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG travel_final_row_ru_1920x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG travel_final_row_ru_1366x768.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG travel_final_row_ru_2560x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG travel_final_row_ru_1080x1920.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 05_community_growing.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 06_resident_jonas.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG jonas_choice_de_1920x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG jonas_choice_de_1366x768.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG jonas_choice_de_2560x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG jonas_choice_de_1080x1920.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG jonas_choice_en_1920x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG jonas_choice_en_1366x768.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG jonas_choice_en_2560x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG jonas_choice_en_1080x1920.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG jonas_choice_es_1920x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG jonas_choice_es_1366x768.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG jonas_choice_es_2560x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG jonas_choice_es_1080x1920.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG jonas_choice_fr_1920x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG jonas_choice_fr_1366x768.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG jonas_choice_fr_2560x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG jonas_choice_fr_1080x1920.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG jonas_choice_ru_1920x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG jonas_choice_ru_1366x768.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG jonas_choice_ru_2560x1080.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG jonas_choice_ru_1080x1920.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 07_fair_finance_desk.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 08_housing_council.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 09_completed_project_0.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 09_completed_project_1.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 09_completed_project_2.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 10_offline_story_continue.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 11_twelve_city_burning_hills.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 11_twelve_city_big_rock_city.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 11_twelve_city_seven_hills.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 11_twelve_city_little_montana.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 11_twelve_city_cassa_vadela.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 11_twelve_city_mark_wood_city.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 11_twelve_city_green_leaf_village.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 11_twelve_city_purple_garden.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 11_twelve_city_golden_flower.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 11_twelve_city_saint_mary_ville.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 11_twelve_city_great_kushville.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 11_twelve_city_skunkfurt.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Fresh exact PNG 12_return_to_burning_hills.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "85 distinct screenshots",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Full60case language andresolution matrix",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Actual GameView samples visually inspected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Reviewed samples match exact final capture files",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "errors": [],
+  "diagnosticGrowthFixtures": true,
+  "fullHumanPlaythrough": false,
+  "physicalDeviceAcceptance": false,
+  "releaseAccepted": false,
+  "userArtApproval": false,
+  "nativeSpeakerReviewCompleted": false
+}

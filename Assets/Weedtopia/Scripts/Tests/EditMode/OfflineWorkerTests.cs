@@ -16,9 +16,13 @@ namespace Weedtopia.Tests
     {
         private static readonly DateTime Start = new DateTime(2026, 10, 1, 12, 0, 0, DateTimeKind.Utc);
         // A bounded deadlock watchdog for functional tests, not a performance acceptance limit.
-        // The full eight-hour fixture now exercises three cities (168 buildings); the former
-        // two-city fixture already took about 28 seconds per worker in native Unity.
-        private const double WorkerWatchdogSeconds = 120;
+        // ProductionState uses the full authored catalog: thirteen cities (728 buildings).
+        // The eight-hour synchronous reference took about 191 seconds in the v14 Unity run;
+        // keep a finite ten-minute watchdog with headroom for the equivalent isolated worker.
+        private const double WorkerWatchdogSeconds = 600;
+        // These cases run a complete reference or more than one isolated worker.
+        // NUnit's default 180-second case timeout is shorter than those combined phases.
+        private const int MultiPhaseCaseTimeoutMilliseconds = 900000;
         private GameDefinitions defs;
         [SetUp] public void Setup() => defs = ProgressionTests.Definitions();
 
@@ -64,7 +68,7 @@ namespace Weedtopia.Tests
             Assert.That(actualSession.IsApplyingOffline, Is.False);
         }
 
-        [TestCase(-100), TestCase(0), TestCase(86400)]
+        [TestCase(-100), TestCase(0), TestCase(86400), Timeout(MultiPhaseCaseTimeoutMilliseconds)]
         public void WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap(int elapsed)
         {
             var expectedState = ProductionState(); var actualState = Clone(expectedState);
@@ -81,7 +85,7 @@ namespace Weedtopia.Tests
             }
         }
 
-        [Test] public void FailedCommitRollsBackEveryFieldAndReferenceAndRetryGrantsVipOnce()
+        [Test, Timeout(MultiPhaseCaseTimeoutMilliseconds)] public void FailedCommitRollsBackEveryFieldAndReferenceAndRetryGrantsVipOnce()
         {
             var state = ProductionState();
             state.shop.vipMembership.startedUtcTicks = Start.Ticks;
@@ -107,7 +111,7 @@ namespace Weedtopia.Tests
             Assert.That(state.grinders, Is.EqualTo(grinders));
         }
 
-        [Test] public void CancelledCalculationKeepsSessionBusyUntilRollbackAndNeverSaves()
+        [Test, Timeout(MultiPhaseCaseTimeoutMilliseconds)] public void CancelledCalculationKeepsSessionBusyUntilRollbackAndNeverSaves()
         {
             var state = ProductionState(); var store = new OwnerStore();
             var session = new GameSession(defs, state, new OwnerClock(Start.AddHours(8)), store);
@@ -266,7 +270,7 @@ namespace Weedtopia.Tests
             while (!condition())
             {
                 if (watch.Elapsed.TotalSeconds > WorkerWatchdogSeconds)
-                    throw new TimeoutException("Three-city isolated worker did not finish within the functional-test watchdog.");
+                    throw new TimeoutException("The full authored city-catalog isolated worker did not finish within the " + WorkerWatchdogSeconds + "-second functional-test watchdog.");
                 Thread.Sleep(1);
             }
         }

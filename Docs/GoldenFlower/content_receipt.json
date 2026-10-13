@@ -1,0 +1,173 @@
+{
+  "city": "golden_flower",
+  "version": 10,
+  "changed": true,
+  "instances": 56,
+  "routes": 35,
+  "mainQuests": 18,
+  "permanentResidents": 5,
+  "personalChapters": 15,
+  "recurringVariants": 15,
+  "communityProjects": 4,
+  "localizedKeys": 225,
+  "languages": [
+    "de",
+    "en",
+    "es",
+    "fr",
+    "ru"
+  ],
+  "oldContentDigest": "3ba9f682a5adf80a4cdfe8574d3e6b3c60a9a006d807adbb55caeb97b3c1d148",
+  "contentDigest": "4d15dcd21ba7c158c03cc0ced420c9e8d8cad47d53a362953edeac685bd9591b",
+  "priorContentPreservedExceptFinalHousingTierBonus": true,
+  "authorizedBuildingDelta": {
+    "id": "residential_house",
+    "residentTierBonuses": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      20
+    ]
+  },
+  "priorLocaleEntriesPreserved": true,
+  "placeholderParity": true,
+  "freshProgressGoals": true,
+  "prerequisiteGraphAcyclic": true,
+  "chapterRoundsBeforeProjects": true,
+  "residents": [
+    {
+      "id": "gf_alma",
+      "appearsAt": 50,
+      "chapters": [
+        50,
+        1200,
+        5000
+      ]
+    },
+    {
+      "id": "gf_ida",
+      "appearsAt": 120,
+      "chapters": [
+        120,
+        1500,
+        6000
+      ]
+    },
+    {
+      "id": "gf_milan",
+      "appearsAt": 260,
+      "chapters": [
+        260,
+        1900,
+        7000
+      ]
+    },
+    {
+      "id": "gf_nora",
+      "appearsAt": 500,
+      "chapters": [
+        500,
+        2400,
+        8000
+      ]
+    },
+    {
+      "id": "gf_theo",
+      "appearsAt": 850,
+      "chapters": [
+        850,
+        3000,
+        9000
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "gf_joint_gate",
+      "residents": 1000,
+      "prerequisites": [
+        "gf_alma_chapter_1",
+        "gf_ida_chapter_1",
+        "gf_milan_chapter_1",
+        "gf_nora_chapter_1",
+        "gf_theo_chapter_1"
+      ]
+    },
+    {
+      "id": "gf_joint_greenhouse",
+      "residents": 4000,
+      "prerequisites": [
+        "gf_alma_chapter_2",
+        "gf_ida_chapter_2",
+        "gf_milan_chapter_2",
+        "gf_nora_chapter_2",
+        "gf_theo_chapter_2"
+      ]
+    },
+    {
+      "id": "gf_joint_market",
+      "residents": 10000,
+      "prerequisites": [
+        "gf_alma_chapter_3",
+        "gf_ida_chapter_3",
+        "gf_milan_chapter_3",
+        "gf_nora_chapter_3",
+        "gf_theo_chapter_3"
+      ]
+    },
+    {
+      "id": "gf_joint_festival",
+      "residents": 15000,
+      "prerequisites": [
+        "gf_alma_chapter_3",
+        "gf_ida_chapter_3",
+        "gf_milan_chapter_3",
+        "gf_nora_chapter_3",
+        "gf_theo_chapter_3"
+      ]
+    }
+  ],
+  "recurringDescriptionTargetsUseProgress": true,
+  "authoredRecurringDescriptionUpdates": [
+    "gf.story.alma.repeat.1.body",
+    "gf.story.alma.repeat.2.body",
+    "gf.story.alma.repeat.3.body",
+    "gf.story.ida.repeat.1.body",
+    "gf.story.ida.repeat.2.body",
+    "gf.story.ida.repeat.3.body",
+    "gf.story.milan.repeat.1.body",
+    "gf.story.milan.repeat.2.body",
+    "gf.story.milan.repeat.3.body",
+    "gf.story.nora.repeat.1.body",
+    "gf.story.nora.repeat.2.body",
+    "gf.story.nora.repeat.3.body",
+    "gf.story.theo.repeat.1.body",
+    "gf.story.theo.repeat.2.body",
+    "gf.story.theo.repeat.3.body"
+  ],
+  "recurringTextFixVerified": true,
+  "recurringTextFixMechanicsUnchanged": true,
+  "idempotenceVerified": true,
+  "repeatRunBytesIdentical": true
+}

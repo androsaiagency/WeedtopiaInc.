@@ -1,0 +1,205 @@
+{
+  "status": "passed_structural_review",
+  "reviewKind": "Read-only source, content and localization review; no Unity or compiler execution",
+  "cityId": "great_sativadam",
+  "contentVersion": 14,
+  "reviewedCounts": {
+    "mainQuests": 18,
+    "lateMainQuests": 6,
+    "permanentResidents": 6,
+    "personalChapters": 18,
+    "recurringVariants": 18,
+    "communityProjects": 3,
+    "localizedKeys": 230,
+    "languages": 5
+  },
+  "languages": [
+    "de",
+    "en",
+    "es",
+    "fr",
+    "ru"
+  ],
+  "placeholderParity": true,
+  "missingOrEmptyTranslations": [],
+  "foreignPreviousCityProse": [],
+  "hardcodedRecurringAmounts": [],
+  "personalChapterOrder": "VipStoryService.NextChapter offers chapters sequentially using completed.Count",
+  "acyclicProjects": true,
+  "projects": [
+    {
+      "id": "gs_joint_tide_court",
+      "residents": 2000,
+      "requiredChapterRound": 1,
+      "latestPrerequisiteResidents": 1500,
+      "requiredParticipants": 6
+    },
+    {
+      "id": "gs_joint_seed_quay",
+      "residents": 6000,
+      "requiredChapterRound": 2,
+      "latestPrerequisiteResidents": 5900,
+      "requiredParticipants": 6
+    },
+    {
+      "id": "gs_joint_open_water_charter",
+      "residents": 12000,
+      "requiredChapterRound": 3,
+      "latestPrerequisiteResidents": 11900,
+      "requiredParticipants": 6
+    }
+  ],
+  "foundationVipDeadlock": false,
+  "foundationVipReason": "The main quest before Industry can use Noor chapter1 in Farm; Fenna chapter1 in Industry is therefore not a required dependency.",
+  "latePopulationTargets": [
+    2000,
+    4000,
+    6000,
+    8000,
+    12000,
+    14000
+  ],
+  "housingCapacity": {
+    "settlementSites": 18,
+    "reservedParks": 1,
+    "availableHouses": 17,
+    "baseResidentsAtLevel1": 10,
+    "baseResidentsAtLevel100": 35,
+    "maximumResidentsPerUnboostedHouse": 2125,
+    "maximumUnboostedLocalResidents": 36125,
+    "unboostedConstructiveExample": {
+      "housesAtLevel5000": 7,
+      "housesAtLevel1": 10,
+      "parkSites": 1,
+      "population": 14975,
+      "residentsWorkerBonusRequired": false
+    },
+    "normalWorkerConstructiveExample": {
+      "houses": 17,
+      "houseLevel": 100,
+      "baseResidentsPerHouse": 35,
+      "distinctCaretakers": 17,
+      "attribute": "Residents",
+      "workerLevel": 100,
+      "workerRank": 5,
+      "workerAttributeStep": 0.05,
+      "effect": 25,
+      "multiplier": 26,
+      "population": 15470,
+      "oneManagerPerHouse": true,
+      "duplicateWorkerAssignments": false,
+      "requiresActuallyOwnedCompatibleWorkers": true
+    },
+    "meaning": "These examples prove static capacity and compatibility. They do not prove actual inventory, costs, wall-clock pacing or a human playthrough."
+  },
+  "storyLevelGoals": [
+    1,
+    7,
+    15
+  ],
+  "storyCounterFamilies": [
+    "RawProduced",
+    "RefinedProduced",
+    "CoffeeSold",
+    "ButterProduced",
+    "PastrySold",
+    "DeliveredGoods",
+    "Deliveries"
+  ],
+  "counterReachability": "Existing Farm-City-Butter-Bakery graph supplies every required positive counter; accepted counter baselines require fresh activity.",
+  "maximumRecurringScale": 10,
+  "maximumRecurringTargets": {
+    "newRawGoods": 350,
+    "newCompletedDeliveries": 30,
+    "newPastrySales": 400
+  },
+  "recurringPauseSeconds": 300,
+  "activeStoryLimit": 3,
+  "lateQuestPacingNote": "Main quests13-18 predominantly gate population milestones. Personal chapters and projects remain optional depth; a player can advance the main campaign without completing all resident stories. Capacity is reachable, but practical time and economic pacing remain unmeasured.",
+  "narrativeReview": {
+    "workaholismMessageDetected": false,
+    "protectedPersonalTime": [
+      "Esra hands over a shift and rests while access remains open",
+      "Fenna receives a free morning as part of reliable shared supply"
+    ],
+    "distinctArcs": {
+      "gs_noor": "Public limits and shared technical responsibility",
+      "gs_bram": "Protected home, seed sharing and communal care",
+      "gs_esra": "Reliable public access without secret overtime",
+      "gs_daan": "Acknowledged map omissions, rights and transparent corrections",
+      "gs_fenna": "Shared recipe and a protected morning of her own",
+      "gs_joost": "Maintenance trauma, trusted knowledge and a persistent wharf choice"
+    },
+    "sharedThemes": "Noor and Joost both learn to share control; Esra and Fenna both leave overtime behind. Their triggers and resulting places differ, within the communal water-care theme.",
+    "nativeSpeakerApproval": false,
+    "editorialObservations": [
+      {
+        "language": "es",
+        "key": "gs.story.joost.greeting",
+        "note": "The literal phrase mas de unas manos is understandable but would benefit from native wording such as mas de un par de manos.",
+        "status": "addressed_via_localization_polish_receipt",
+        "addressedBy": "Docs/GreatSativadam/localization_polish_receipt.json",
+        "finalValueMatchesAuthorSource": true
+      },
+      {
+        "language": "fr",
+        "key": "gs.story.joost.biography",
+        "note": "The final pour vivre sans son controle quotidien can make Joost rather than the shipyard the subject of survival; native polish should clarify the shipyard.",
+        "status": "addressed_via_localization_polish_receipt",
+        "addressedBy": "Docs/GreatSativadam/localization_polish_receipt.json",
+        "finalValueMatchesAuthorSource": true
+      }
+    ]
+  },
+  "practicalPlaythrough": false,
+  "elapsedTimeBalanceValidated": false,
+  "humanCompleteGameplay": false,
+  "physicalDeviceTouch": false,
+  "deviceAudio": false,
+  "releaseAcceptance": false,
+  "userArtAcceptance": false,
+  "contentOrSourceEditsDuringReview": false,
+  "files": {
+    "Assets\\Weedtopia\\Game\\Content\\BurningHills.json": "b13ea2e9c42d5d0ac1775ba22b00d9678fc7c2bdbca293a80e1b8011007e7551",
+    "Assets\\Weedtopia\\Game\\Localization\\de.json": "b4cf9fcbd1390ee1d437f75794c9131ac7ba42bc4edef46ee7d7dc82fdbc9dc1",
+    "Assets\\Weedtopia\\Game\\Localization\\en.json": "b90f297766d65c945089a845796320733dc4eda2f3273a586ead783ea5121ae6",
+    "Assets\\Weedtopia\\Game\\Localization\\es.json": "c5ed55db6377d8cb11bfbb79b733c93c25211ae4fda5debca27a9cc423d913f4",
+    "Assets\\Weedtopia\\Game\\Localization\\fr.json": "4a699d2a6ca6c9cf6343d87658300f810cd267ab5f87b83e32a60dc8cf081ba2",
+    "Assets\\Weedtopia\\Game\\Localization\\ru.json": "2ba5f54b63caf9e403d696a5c9c4ede20317d2b5811016d44a8d8032e8a3e82f"
+  },
+  "evidenceSources": [
+    "Tools/Implementation/author_great_sativadam.py",
+    "Tools/Implementation/mainrows_great_sativadam.py",
+    "Assets/Weedtopia/Scripts/Runtime/Domain/Definitions.cs",
+    "Assets/Weedtopia/Scripts/Runtime/Domain/WorkerService.cs",
+    "Assets/Weedtopia/Scripts/Runtime/Domain/Simulation.cs",
+    "Assets/Weedtopia/Scripts/Runtime/Domain/UpgradeService.cs",
+    "Assets/Weedtopia/Scripts/Runtime/Domain/VipStories.cs",
+    "Assets/Weedtopia/Scripts/Runtime/Application/VipStoryService.cs",
+    "Docs/GreatSativadam/localization_polish_receipt.json",
+    "Docs/GreatSativadam/content_idempotence_receipt.json"
+  ],
+  "placeholderParityCheckedAfterPolish": true,
+  "finalLocalizationPolish": {
+    "status": "addressed_and_verified",
+    "receipt": "Docs/GreatSativadam/localization_polish_receipt.json",
+    "receiptSha256": "4de175906f7dc4af2c5d16d8341e3574588078c6948691d7df4491576e7c9171",
+    "authorSourceSha256": "8929203d997c3db0072cd1e523cdaee34ec149d332461f09037448a87eacb19f",
+    "sourceAndCatalogValuesIdentical": true,
+    "checkedKeys": [
+      {
+        "language": "es",
+        "key": "gs.story.joost.greeting",
+        "finalValue": "Una buena herramienta está hecha para pasar de mano en mano."
+      },
+      {
+        "language": "fr",
+        "key": "gs.story.joost.biography",
+        "finalValue": "Joost tient le chantier par son métier et ses souvenirs. Son père a perdu un bateau faute d’entretien ; il ne fait confiance qu’à lui-même. Le conflit foncier menace le ponton. Il doit transmettre son savoir-faire pour que le chantier reste sûr sans dépendre de sa surveillance quotidienne."
+      }
+    ],
+    "finalSixCatalogHashesMatchPolishAndIdempotenceReceipts": true,
+    "prePolishReviewArchive": "Docs/GreatSativadam/content_review_before_polish.json"
+  },
+  "reviewScope": "Final read-only content/localization/structural review after the two authorized locale corrections. No Unity, PlayMode, device or release gate is implied."
+}

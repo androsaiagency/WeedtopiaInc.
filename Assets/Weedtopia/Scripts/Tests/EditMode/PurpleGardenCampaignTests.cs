@@ -180,7 +180,7 @@ namespace Weedtopia.Tests
             string[] workers = old.workers.Select(JsonUtility.ToJson).ToArray(), deliveries = old.deliveries.Select(JsonUtility.ToJson).ToArray();
             string inventory = JsonUtility.ToJson(new InventorySnapshot { items = old.inventory.ToArray() }); Amount money = old.money;
             var loaded = Roundtrip(old); var resumed = new GameSession(defs, loaded, clock);
-            Assert.That(loaded.contentVersion, Is.EqualTo(9)); Assert.That(loaded.buildings.Count, Is.EqualTo(previous.instances.Length + 56));
+            Assert.That(loaded.contentVersion, Is.EqualTo(defs.version)); Assert.That(loaded.buildings.Count, Is.EqualTo(defs.instances.Length));
             Assert.That(loaded.activeCity, Is.EqualTo("green_leaf_village")); Assert.That(loaded.money, Is.EqualTo(money));
             CollectionAssert.AreEqual(cities, loaded.cities.Take(7).Select(JsonUtility.ToJson));
             CollectionAssert.AreEqual(buildings, loaded.buildings.Take(previous.instances.Length).Select(JsonUtility.ToJson));
@@ -201,7 +201,7 @@ namespace Weedtopia.Tests
         [Test] public void MigrationStillRejectsAnUnsupportedFutureContentVersion()
         {
             var old = GameState.Create(VersionEight(), "Zukünftige Migration", Start);
-            var future = JsonUtility.FromJson<GameDefinitions>(JsonUtility.ToJson(defs)); future.version = 10;
+            var future = JsonUtility.FromJson<GameDefinitions>(JsonUtility.ToJson(defs)); future.version = defs.version + 1;
             string payload = JsonUtility.ToJson(old);
             var store = new LocalSaveStore(Path.Combine("Temp", "UnsupportedPurpleGardenVersion.json"), future);
             Assert.Throws<InvalidDataException>(() => store.Decode(JsonUtility.ToJson(new SaveEnvelope {
@@ -362,7 +362,7 @@ namespace Weedtopia.Tests
             for (int tier = 1; tier < VisualTiers.Starts.Length; tier++)
                 for (int level = 1; level <= 100; level++) for (int rank = 1; rank <= 10; rank++)
                 {
-                    int count = (int)Math.Floor(game.Definitions.Building("residential_house").baseResidents * (1 + tier) *
+                    int count = (int)Math.Floor(game.Definitions.Building("residential_house").ResidentCapacity(VisualTiers.Starts[tier]) *
                         (1 + game.Definitions.workerAttributeStep * level * rank));
                     if (!choices.ContainsKey(count)) choices[count] = (VisualTiers.Starts[tier], level, rank);
                 }

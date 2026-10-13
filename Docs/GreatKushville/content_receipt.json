@@ -1,0 +1,182 @@
+{
+  "city": "great_kushville",
+  "version": 12,
+  "changed": false,
+  "instances": 56,
+  "routes": 35,
+  "mainQuests": 18,
+  "permanentResidents": 8,
+  "personalChapters": 32,
+  "recurringVariants": 24,
+  "communityProjects": 3,
+  "localizedKeys": 292,
+  "languages": [
+    "de",
+    "en",
+    "es",
+    "fr",
+    "ru"
+  ],
+  "oldContentDigest": "f753f414f4177271e9fa88d030000f49f11b6df3a538cbd6a7db2f4b856c4093",
+  "contentDigest": "f753f414f4177271e9fa88d030000f49f11b6df3a538cbd6a7db2f4b856c4093",
+  "priorContentPreserved": true,
+  "priorLocaleEntriesPreserved": true,
+  "allBuildingDefinitionsPreserved": true,
+  "placeholderParity": true,
+  "freshProgressGoals": true,
+  "prerequisiteGraphAcyclic": true,
+  "chapterRoundsBeforeProjects": true,
+  "savedPlaceChoice": {
+    "quest": "gk_selma_chapter_3",
+    "choices": [
+      "water_lab",
+      "canal_workshop"
+    ]
+  },
+  "residents": [
+    {
+      "id": "gk_selma",
+      "appearsAt": 50,
+      "chapters": [
+        50,
+        1400,
+        7000,
+        14000
+      ]
+    },
+    {
+      "id": "gk_aurel",
+      "appearsAt": 100,
+      "chapters": [
+        100,
+        1600,
+        7500,
+        15000
+      ]
+    },
+    {
+      "id": "gk_daria",
+      "appearsAt": 180,
+      "chapters": [
+        180,
+        1800,
+        8000,
+        16000
+      ]
+    },
+    {
+      "id": "gk_leandro",
+      "appearsAt": 250,
+      "chapters": [
+        250,
+        2000,
+        8500,
+        17000
+      ]
+    },
+    {
+      "id": "gk_kira",
+      "appearsAt": 350,
+      "chapters": [
+        350,
+        2300,
+        9000,
+        18000
+      ]
+    },
+    {
+      "id": "gk_benno",
+      "appearsAt": 450,
+      "chapters": [
+        450,
+        2500,
+        9500,
+        18500
+      ]
+    },
+    {
+      "id": "gk_yuna",
+      "appearsAt": 600,
+      "chapters": [
+        600,
+        2700,
+        10000,
+        19000
+      ]
+    },
+    {
+      "id": "gk_oskar",
+      "appearsAt": 700,
+      "chapters": [
+        700,
+        2900,
+        10500,
+        19500
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "gk_joint_water_compact",
+      "residents": 2000,
+      "prerequisites": [
+        "gk_selma_chapter_1",
+        "gk_aurel_chapter_1",
+        "gk_daria_chapter_1",
+        "gk_leandro_chapter_1",
+        "gk_kira_chapter_1",
+        "gk_benno_chapter_1",
+        "gk_yuna_chapter_1",
+        "gk_oskar_chapter_1"
+      ]
+    },
+    {
+      "id": "gk_joint_shared_exchange",
+      "residents": 8000,
+      "prerequisites": [
+        "gk_selma_chapter_2",
+        "gk_aurel_chapter_2",
+        "gk_daria_chapter_2",
+        "gk_leandro_chapter_2",
+        "gk_kira_chapter_2",
+        "gk_benno_chapter_2",
+        "gk_yuna_chapter_2",
+        "gk_oskar_chapter_2"
+      ]
+    },
+    {
+      "id": "gk_joint_founders_walk",
+      "residents": 22000,
+      "prerequisites": [
+        "gk_selma_chapter_4",
+        "gk_aurel_chapter_4",
+        "gk_daria_chapter_4",
+        "gk_leandro_chapter_4",
+        "gk_kira_chapter_4",
+        "gk_benno_chapter_4",
+        "gk_yuna_chapter_4",
+        "gk_oskar_chapter_4"
+      ]
+    }
+  ],
+  "authorizedPopulationTargetCorrection": {
+    "questIds": [
+      "water_compact",
+      "shared_responsibility",
+      "shared_exchange",
+      "water_choice",
+      "founders_walk",
+      "connected_city"
+    ],
+    "keys": 12,
+    "languages": [
+      "de",
+      "en",
+      "es",
+      "fr",
+      "ru"
+    ],
+    "onlyExactFirstAuthoredGreatTexts": true,
+    "existingTenCitiesAndRequirementsPreserved": true
+  }
+}

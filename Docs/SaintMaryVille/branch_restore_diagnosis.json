@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-12T18:39:34.643752+00:00",
+  "failedRun": "20261012_203036_Capture_FinalStoryAndTenCities",
+  "exception": "InvalidDataException: Invalid shop state",
+  "failureStage": "Restore the pre-choice branch before 08_river_classroom",
+  "cause": "JsonUtility.FromJson<GameState> materialized nullable nested classes as zero-valued objects and bypassed the normal LocalSaveStore.Decode null restoration.",
+  "fixFile": "Assets/Weedtopia/Scripts/Editor/GameSetup/SaintMaryVilleEvidence.cs",
+  "fix": "Create a separate LocalSaveStore capture_branch_baseline.json, Save the real pre-choice state, Load via the production decoder, require exact valid non-recovered state, validate, save to capture_save.json and Continue through GameRoot.",
+  "runtimeFilesModified": false,
+  "manualShopNullReset": false,
+  "verification": "Awaiting root-owned compiler and rerun capture; original failed receipt and PNGs preserved."
+}

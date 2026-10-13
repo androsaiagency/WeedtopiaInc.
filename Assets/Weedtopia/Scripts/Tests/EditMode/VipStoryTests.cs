@@ -86,11 +86,13 @@ namespace Weedtopia.Tests
         }
         [Test] public void HighestChapterIsReachableWithExistingHousingAndWorkerRules()
         {
-            var plots = state.buildings.Where(b => b.family == "settlement_plot").ToArray();
+            var plots = state.buildings.Where(b => b.cityId == state.activeCity && b.family == "settlement_plot").ToArray();
+            Assert.That(session.ChoosePlot(plots.Last().id, "park"), Is.EqualTo(Failure.None)); plots.Last().level = 1;
             for (int i = 0; i < plots.Length - 1; i++)
             {
-                plots[i].family = "residential_house"; plots[i].level = 5000;
-                var worker = session.Workers.Grant("caretaker", 4); worker.level = 100; worker.rank = 10; session.Workers.Assign(worker.id, plots[i].id, 0);
+                Assert.That(session.ChoosePlot(plots[i].id, "residential_house"), Is.EqualTo(Failure.None)); plots[i].level = 5000;
+                var worker = session.Workers.Grant("caretaker", 4); worker.level = 100; worker.rank = 10;
+                Assert.That(session.Workers.Assign(worker.id, plots[i].id, 0), Is.EqualTo(Failure.None));
             }
             session.Stories.RefreshUnlocks();
             Assert.That(session.Simulation.Residents(state.activeCity), Is.GreaterThanOrEqualTo(VipStoryRules.Quests(defs).Max(q => q.residents)));

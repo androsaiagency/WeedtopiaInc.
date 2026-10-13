@@ -1,0 +1,139 @@
+{
+  "cityId": "GoldenFlower",
+  "generatedAt": "2026-10-12",
+  "generator": "builtin image_gen.imagegen",
+  "requestedTransparentBackground": true,
+  "editing": "Generated originals copied byte-for-byte into workspace. No raster editing, alpha replacement, drawing, or programmatic background removal.",
+  "validation": {
+    "method": "Visual review of builtin output plus System.Drawing read-only dimensions, Format32bppArgb, and alpha histogram.",
+    "alphaThresholdForAtlasGaps": 32,
+    "visualAcceptanceByUser": false,
+    "unityImportAcceptance": "Performed by GoldenFlowerAuthoring; separate from generation review.",
+    "note": "Atlas requested dimensions are prompt constraints. Actual generated dimensions below are authoritative. Architecture sprites occupy unequal fractions; split using measured alpha valleys rather than exact center."
+  },
+  "assets": [
+    {
+      "file": "resident_atlas.png",
+      "sha256": "6149BA7417F15403984F7032DDF509C3A1BAE6F32D8E56186B5A3E779192C994",
+      "source": "C:/Users/Mein-PC/.codex/generated_images/01a130d0-a63e-7672-83dd-29e561df1c1d/exec-b08764d7-61df-477d-afcd-d67ea79770cf.png",
+      "prompt": "Use case: stylized-concept\nAsset type: production mobile Unity game resident sprite atlas, real transparent PNG alpha.\nPrimary request: Five distinct warm painterly illustrated full-body Golden Flower townspeople in a single horizontal row. Canvas 2560x1024 landscape, divided invisibly into exactly five equal-width 512px columns. Each person occupies only the center of their own equal column, with a full transparent 35px margin on every side of each cell, from head to both feet completely visible, identical approximate height and feet baseline. Full-body character sprites for a charming mature cozy isometric town game, expressive adult faces, softly textured fabric, finely painted but readable at mobile size. Friendly grounded proportions, not photorealistic, not childish chibi.\nSubjects from left to right, exactly one figure per column:\n1 Alma Sonnenberg, a 64-year-old gardener, silver wavy hair tied loosely, wise kind face, sage work trousers and boots, cream gardening apron over mustard shirt, holding a small woven basket of golden-yellow flowers, small seed tin at belt.\n2 Ida Kern, 35-year-old practical female mechanic, short dark copper hair, confident warm face, forest-green work jumpsuit with rolled sleeves, brass wrench held safely at side, leather tool pouch, sturdy boots.\n3 Milan Sommer, 42-year-old male market cook, dark hair, olive complexion, short beard, cheerful thoughtful face, cream shirt, warm golden-brown apron, dark trousers, holding a small tray of fresh bread and herbs.\n4 Nora Winter, 29-year-old female town chronicler, dark curly bob, round glasses, teal cardigan and terracotta skirt, sturdy shoes, holding an old green photo album against chest, pencil in other hand.\n5 Theo Licht, 23-year-old male musician, light brown tousled hair, gentle hopeful face, ochre waistcoat over cream shirt, green trousers, acoustic string instrument held close at side without extending beyond cell.\nStyle/medium: polished painterly storybook game assets, coherent with richly painted fabric and grounded adult town portraits, soft sunlight from upper left, warm golden highlights, subtle handpainted texture.\nScene/backdrop: absolutely transparent empty background, no scenery, no colored glow or vignette, no backdrop color. Keep natural soft occlusion shading on figures only.\nConstraints: exact five equal columns, transparent gaps between all figures, no overlapping silhouettes, no shared ground plane, no labels, no lettering, no UI, no frame, no checkerboard painted into the image, no watermark, no cropped heads hands or feet.",
+      "order": [
+        "gf_alma",
+        "gf_ida",
+        "gf_milan",
+        "gf_nora",
+        "gf_theo"
+      ],
+      "layout": "single-row-5",
+      "cutsFromLeft": [
+        397,
+        793,
+        1190,
+        1586
+      ],
+      "architectureYCut": null,
+      "transparentPixels": 869902,
+      "residentCuts": [
+        {
+          "zeroRuns": [
+            {
+              "end": 441,
+              "start": 331
+            }
+          ],
+          "count": 0,
+          "cut": 397
+        },
+        {
+          "zeroRuns": [
+            {
+              "end": 834,
+              "start": 753
+            }
+          ],
+          "count": 0,
+          "cut": 793
+        },
+        {
+          "zeroRuns": [
+            {
+              "end": 1250,
+              "start": 1156
+            }
+          ],
+          "count": 0,
+          "cut": 1190
+        },
+        {
+          "zeroRuns": [
+            {
+              "end": 1651,
+              "start": 1548
+            }
+          ],
+          "count": 0,
+          "cut": 1586
+        }
+      ],
+      "width": 1983,
+      "visiblePixelsAlphaAbove32": 655000,
+      "architectureXCut": null,
+      "height": 793
+    },
+    {
+      "file": "architecture_atlas.png",
+      "sha256": "A75EFCBE68F4CDD7874A192DEA172B36EE54BD7CE9A2BB867DF8FB5BEBA6B8DE",
+      "source": "C:/Users/Mein-PC/.codex/generated_images/01a130d0-a63e-7672-83dd-29e561df1c1d/exec-651002bf-2a55-4b68-81eb-3dc2e8e9af45.png",
+      "prompt": "Use case: stylized-concept\nAsset type: production Unity isometric 2.5D game building sprite atlas, transparent PNG alpha\nPrimary request: Create exactly four distinct Golden Flower town buildings in a two-by-two grid of equal square cells, invisible grid. Square atlas 2048x2048. Each building stays wholly within its own quadrant, centered with generous completely transparent margins around every edge. Same fixed orthographic isometric camera at about 35 degrees above horizon, front entrance faces lower left, right facade faces lower right. Soft handpainted sandstone architecture, warm brass structural details, golden-yellow flowering planters and deep garden-green foliage, individually isolated sprites.\nTop-left quadrant: Golden Glasshouse, a beautiful old communal greenhouse, large arched green glass roof with brass ribs and clear small panes, low sandstone foundations, golden flower emblem above broad arched door, planted raised beds visible under glass, modest entry stairs. Main landmark, graceful and warm, restored craft construction.\nTop-right quadrant: Seed House, a small charming sandstone gardener's seed library, pitched pale terracotta roof with short green glass skylight, double green doors, small brass flower emblem, two neat flower planters, wooden seed crates tucked against wall, no readable lettering.\nBottom-left quadrant: Community Market, an open sandstone and carved wooden market pergola with deep sage-green cloth canopy and gold borders, three tidy empty vendor stalls displaying bread, fresh vegetables, herbs and gold flowers, two simple benches integrated beside entrance, compact cohesive building footprint.\nBottom-right quadrant: Festival Bandstand, an octagonal low sandstone pavilion with warm wooden platform, four brass and timber posts and shallow sage-green domed roof topped by a golden flower finial, small string instruments resting on stage and golden-flower planters around base, no people.\nStyle/medium: high quality painterly cozy mobile town-building assets, soft textured surfaces, clear readable silhouette, intricate but controlled realistic storybook detail, matching warm richly painted residents.\nLighting: coherent sunlight from upper left, gentle shading on buildings only, no broad ground shadows outside their base.\nScene/backdrop: entire background completely transparent, no gradient, no vignette, no landscape, no ground plane connecting cells. Individual building bases are compact sandstone footprints.\nConstraints: exact four buildings in equal2x2 cells and correct order, do not merge objects, no humans, no roads, no UI, no labels or lettering, no borders or drawn grid, no watermarks, no checkerboard painted into image, no part cropped or crossing midpoint or cell edges.",
+      "order": [
+        "architecture_glasshouse",
+        "architecture_seed_house",
+        "architecture_community_market",
+        "architecture_festival_bandstand"
+      ],
+      "layout": "2x2-read-top-left-to-bottom-right",
+      "recommendedCutXFromLeft": 680,
+      "recommendedCutYFromTop": 602,
+      "architectureYCut": {
+        "zeroRuns": [
+          {
+            "end": 622,
+            "start": 582
+          }
+        ],
+        "count": 0,
+        "cut": 622
+      },
+      "transparentPixels": 723680,
+      "residentCuts": [],
+      "width": 1254,
+      "visiblePixelsAlphaAbove32": 785879,
+      "architectureXCut": {
+        "zeroRuns": [
+          {
+            "end": 688,
+            "start": 673
+          }
+        ],
+        "count": 0,
+        "cut": 673
+      },
+      "height": 1254
+    },
+    {
+      "file": "town_sign.png",
+      "sha256": "7181D76B1C0077D7706E72E9654D7D3133D4B6E1B3EED3B07E55DE200B1037B3",
+      "source": "C:/Users/Mein-PC/.codex/generated_images/01a130d0-a63e-7672-83dd-29e561df1c1d/exec-88fcb085-2f0e-4a4d-8ae2-f1fda6c2022e.png",
+      "prompt": "Use case: stylized-concept\nAsset type: production transparent Unity town entrance sign sprite\nPrimary request: A single lovingly painted roadside town sign for Golden Flower, isolated on real transparent alpha. Front three-quarter view consistent with fixed isometric town scene around35degrees elevation, showing a slight depth and two sturdy timber posts standing on a compact pale sandstone base. Main horizontal cream painted wooden board in a gentle brass frame with carved golden flower emblem centered above it. On the board render exactly the two words \"Golden Flower\" in dark deep garden-green, large readable elegant warm serif lettering. Text spelling: G o l d e n [space] F l o w e r. One line. Do not add any other words.\nSmall pots of golden-yellow flowers and green foliage at the two feet of the sign; polished but aged craft materials, sage and gold ornamental flourish is restrained and supports readable name.\nStyle/medium: richly painted cozy mature storybook mobile game asset, same warm sandstone/brass/green palette as a communal glasshouse and town market, finely textured wood and painted golden sunlight from upper left.\nComposition: Entire isolated sign and its base centered and fully visible, generous transparent margins on every side, landscape image, no environment or horizon, no broad shadow extending from base.\nConstraints: actual transparent background, no black backdrop, no colored glow or vignette, no scenery, no people, no UI, no borders around canvas, no watermark, no checkerboard painted into image, precise exact text Golden Flower, no cropped sign posts.",
+      "layout": "single",
+      "text": "Golden Flower",
+      "architectureYCut": null,
+      "transparentPixels": 819439,
+      "residentCuts": [],
+      "width": 1536,
+      "visiblePixelsAlphaAbove32": 717162,
+      "architectureXCut": null,
+      "height": 1024
+    }
+  ]
+}

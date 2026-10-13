@@ -1,0 +1,402 @@
+{
+  "status": "resolved_verified",
+  "sourceXml": "Docs/Implementation/Validation/20261013_173657_EditMode_GreatSativadamDomainAndRegression.xml",
+  "originalCases": 49,
+  "originalPassed": 21,
+  "originalFailed": 28,
+  "commonFailure": "Hard-coded 1,000,000 storyResidentMilestone ceiling rejects a legal current city population of 1,842,375.",
+  "source": "Assets/Weedtopia/Scripts/Runtime/Persistence/VipStorySaveValidator.cs",
+  "beforeSource": "Docs/GreatSativadam/Preservation/Before/Assets/Weedtopia/Scripts/Runtime/Persistence/VipStorySaveValidator.cs",
+  "beforeSha256": "cc40fc0e71c37ff2012d81c4e1a85c211242f3380901b40e1f8aa63a57acad16",
+  "afterSha256": "7b6d468914de150f9bf93bda6ddc9636ef222541260ae71b6e5c387d54aaa950",
+  "allowedDelta": "Replace only the upper-bound expression at the original line 39; append private MaximumResidentMilestone and MaximumHouseResidents helpers. Reconstructing the previous file by removing those helpers and restoring the expression matches the baseline text exactly.",
+  "unchangedChecks": "All story IDs, chapter sequence, prerequisite, choice, active limits, recurrence, baselines, targets and timing checks remain byte-for-byte identical after newline normalization.",
+  "limits": [
+    {
+      "city": "burning_hills",
+      "plots": 18,
+      "parkReserved": 1,
+      "legalMaximum": 1842375,
+      "maximumSavedMilestone": 1842375
+    },
+    {
+      "city": "big_rock_city",
+      "plots": 18,
+      "parkReserved": 1,
+      "legalMaximum": 1842375,
+      "maximumSavedMilestone": 1842375
+    },
+    {
+      "city": "seven_hills",
+      "plots": 18,
+      "parkReserved": 1,
+      "legalMaximum": 1842375,
+      "maximumSavedMilestone": 1842375
+    },
+    {
+      "city": "little_montana",
+      "plots": 18,
+      "parkReserved": 1,
+      "legalMaximum": 1842375,
+      "maximumSavedMilestone": 1842375
+    },
+    {
+      "city": "cassa_vadela",
+      "plots": 18,
+      "parkReserved": 1,
+      "legalMaximum": 1842375,
+      "maximumSavedMilestone": 1842375
+    },
+    {
+      "city": "mark_wood_city",
+      "plots": 18,
+      "parkReserved": 1,
+      "legalMaximum": 1842375,
+      "maximumSavedMilestone": 1842375
+    },
+    {
+      "city": "green_leaf_village",
+      "plots": 18,
+      "parkReserved": 1,
+      "legalMaximum": 1842375,
+      "maximumSavedMilestone": 1842375
+    },
+    {
+      "city": "purple_garden",
+      "plots": 18,
+      "parkReserved": 1,
+      "legalMaximum": 1842375,
+      "maximumSavedMilestone": 1842375
+    },
+    {
+      "city": "golden_flower",
+      "plots": 18,
+      "parkReserved": 1,
+      "legalMaximum": 1842375,
+      "maximumSavedMilestone": 1842375
+    },
+    {
+      "city": "saint_mary_ville",
+      "plots": 18,
+      "parkReserved": 1,
+      "legalMaximum": 1842375,
+      "maximumSavedMilestone": 1842375
+    },
+    {
+      "city": "great_kushville",
+      "plots": 18,
+      "parkReserved": 1,
+      "legalMaximum": 1842375,
+      "maximumSavedMilestone": 1842375
+    },
+    {
+      "city": "skunkfurt",
+      "plots": 18,
+      "parkReserved": 1,
+      "legalMaximum": 1842375,
+      "maximumSavedMilestone": 1842375
+    },
+    {
+      "city": "great_sativadam",
+      "plots": 18,
+      "parkReserved": 1,
+      "legalMaximum": 1842375,
+      "maximumSavedMilestone": 1842375
+    }
+  ],
+  "legacyFloor": 1000000,
+  "impossibleMilestone": 1842376,
+  "negativeMilestone": -1,
+  "addedCases": 7,
+  "targetedGreatSativadamFixtureCases": 56,
+  "addedMethods": [
+    "StoryMilestoneRejectsNegativeOrUnreachablePopulation(false/true)",
+    "VersionThirteenStoryMilestonePreservesItsLegacySaveBoundary(1000000/1000001)",
+    "StoryMilestoneLimitFollowsAuthoredHousingCapacity",
+    "StoryMilestoneLimitFollowsTheCityCatalogPlotCount",
+    "StoryMilestoneLimitRequiresAResidentAttributeInTheHousingManagerRole"
+  ],
+  "existingPositiveStrengthened": "FinalHousingTierMakesTwentyMillionReachableAndPreservesEarlierPopulationBands now roundtrips all twelve actual 1,842,375 source milestones.",
+  "failedCases": [
+    "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(\"burning_hills\")",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(\"big_rock_city\")",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(\"seven_hills\")",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(\"little_montana\")",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(\"cassa_vadela\")",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(\"mark_wood_city\")",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(\"green_leaf_village\")",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(\"purple_garden\")",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(\"golden_flower\")",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(\"saint_mary_ville\")",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(\"great_kushville\")",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(\"skunkfurt\")",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptedStoryCapturesExistingActivityAsBaselineAndSurvivesContinue",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.EveryStoryChoiceRecurringOfferAndCommunityProjectPersists(0)",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.EveryStoryChoiceRecurringOfferAndCommunityProjectPersists(1)",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.FinalHousingTierMakesTwentyMillionReachableAndPreservesEarlierPopulationBands",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.FullyDevelopedVersionThirteenHousingReachesTwentyMillionAfterMigration",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.JoostCanalChoicePersistsWithoutChangingOtherCities(\"repair_wharf\")",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.JoostCanalChoicePersistsWithoutChangingOtherCities(\"learning_dock\")",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.LocalFoundationCompletesTwelveMainQuestsUsingOnlyTheCharterBridge",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.PlannedEmptyHousingAndStoredCityHighsCannotCreateAnInvitation",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.PopulationUnlockedResidentsRemainAfterDeclineAndContinue",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.ReachedTwentyMillionIsLatchedAcrossDeclineSaveAndContinue",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.SeparateHistoricalHighsAndDestinationResidentsNeverCountTowardsTwentyMillion",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.ThirteenCitySaveSurvivesOfflineAndVisitsEveryOwnedCityWithoutMovingWorkersOrLocalQuestAndStoryHistories",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.TwentyMillionBoundaryUsesActualSimultaneousPopulation(19999999,False)",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.TwentyMillionBoundaryUsesActualSimultaneousPopulation(20000000,True)",
+    "Weedtopia.Tests.GreatSativadamCampaignTests.TwentyMillionBoundaryUsesActualSimultaneousPopulation(20000001,True)"
+  ],
+  "checks": {
+    "gitDiffCheck": "passed",
+    "catalogCapacity": "passed",
+    "xmlFailureOrigin": "passed",
+    "originalValidatorReconstruction": "passed",
+    "unityTargetedRetest": "passed_verified_all_56_latest_great_sativadam_campaign_cases"
+  },
+  "updatedUtc": "2026-10-13T17:25:56.069141+00:00",
+  "currentGreatSativadamTestSource": "Assets/Weedtopia/Scripts/Tests/EditMode/GreatSativadamCampaignTests.cs",
+  "currentGreatSativadamTestSourceSha256": "00f1adceef0b24ea9c15ed7e1ab1788ab37e5d966da2faeee1962a2ac5eeddb4",
+  "productionFixRetest": {
+    "xml": "Docs/Implementation/Validation/20261013_190408_EditMode_GreatSativadamSaveFixAndStories.xml",
+    "xmlSha256": "688433908ce1ed551d032494fb0c0ba591a13f759617f322f4c2af2dcd95cbc6",
+    "overall": {
+      "total": 90,
+      "passed": 87,
+      "failed": 3
+    },
+    "fixtures": {
+      "GreatSativadamCampaignTests": {
+        "total": 56,
+        "passed": 53,
+        "failed": 3
+      },
+      "VipStoryTests": {
+        "total": 29,
+        "passed": 29,
+        "failed": 0
+      },
+      "LocalizationTests": {
+        "total": 5,
+        "passed": 5,
+        "failed": 0
+      }
+    },
+    "originalGreatSativadamCasesPassed": 49,
+    "originalFailedCasesNowPassed": 28,
+    "originalFailureResolution": [
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(\"burning_hills\")",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(\"big_rock_city\")",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(\"seven_hills\")",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(\"little_montana\")",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(\"cassa_vadela\")",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(\"mark_wood_city\")",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(\"green_leaf_village\")",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(\"purple_garden\")",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(\"golden_flower\")",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(\"saint_mary_ville\")",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(\"great_kushville\")",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(\"skunkfurt\")",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.AcceptedStoryCapturesExistingActivityAsBaselineAndSurvivesContinue",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.EveryStoryChoiceRecurringOfferAndCommunityProjectPersists(0)",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.EveryStoryChoiceRecurringOfferAndCommunityProjectPersists(1)",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.FinalHousingTierMakesTwentyMillionReachableAndPreservesEarlierPopulationBands",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.FullyDevelopedVersionThirteenHousingReachesTwentyMillionAfterMigration",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.JoostCanalChoicePersistsWithoutChangingOtherCities(\"repair_wharf\")",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.JoostCanalChoicePersistsWithoutChangingOtherCities(\"learning_dock\")",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.LocalFoundationCompletesTwelveMainQuestsUsingOnlyTheCharterBridge",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.PlannedEmptyHousingAndStoredCityHighsCannotCreateAnInvitation",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.PopulationUnlockedResidentsRemainAfterDeclineAndContinue",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.ReachedTwentyMillionIsLatchedAcrossDeclineSaveAndContinue",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.SeparateHistoricalHighsAndDestinationResidentsNeverCountTowardsTwentyMillion",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.ThirteenCitySaveSurvivesOfflineAndVisitsEveryOwnedCityWithoutMovingWorkersOrLocalQuestAndStoryHistories",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.TwentyMillionBoundaryUsesActualSimultaneousPopulation(19999999,False)",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.TwentyMillionBoundaryUsesActualSimultaneousPopulation(20000000,True)",
+        "result": "Passed"
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.TwentyMillionBoundaryUsesActualSimultaneousPopulation(20000001,True)",
+        "result": "Passed"
+      }
+    ],
+    "conclusion": "All 28 initial Invalid VIP story progress save failures passed in the actual Unity retest; all 49 original Great Sativadam cases passed."
+  },
+  "additionalTestProfileFailures": {
+    "sourceXml": "Docs/Implementation/Validation/20261013_190408_EditMode_GreatSativadamSaveFixAndStories.xml",
+    "count": 3,
+    "message": "System.ArgumentException : name.invalid",
+    "origin": "GameState.Create enforces PlayerProfile.ValidName, including a maximum length of 24 characters. Two newly added diagnostic fixture names exceeded that limit, so their three parameterized cases stopped before exercising save-boundary assertions.",
+    "cases": [
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.StoryMilestoneLimitRequiresAResidentAttributeInTheHousingManagerRole",
+        "message": "System.ArgumentException : name.invalid",
+        "origin": "  at Weedtopia.Domain.GameState.Create (Weedtopia.Domain.GameDefinitions defs, System.String name, System.DateTime utc, System.UInt32 seed) [0x0001f] in D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Assets\\Weedtopia\\Scripts\\Runtime\\Domain\\GameState.cs:98 "
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.VersionThirteenStoryMilestonePreservesItsLegacySaveBoundary(1000000)",
+        "message": "System.ArgumentException : name.invalid",
+        "origin": "  at Weedtopia.Domain.GameState.Create (Weedtopia.Domain.GameDefinitions defs, System.String name, System.DateTime utc, System.UInt32 seed) [0x0001f] in D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Assets\\Weedtopia\\Scripts\\Runtime\\Domain\\GameState.cs:98 "
+      },
+      {
+        "case": "Weedtopia.Tests.GreatSativadamCampaignTests.VersionThirteenStoryMilestonePreservesItsLegacySaveBoundary(1000001)",
+        "message": "System.ArgumentException : name.invalid",
+        "origin": "  at Weedtopia.Domain.GameState.Create (Weedtopia.Domain.GameDefinitions defs, System.String name, System.DateTime utc, System.UInt32 seed) [0x0001f] in D:\\Unity Games\\Weedtopia Inc\\WeedtopiaInc\\Assets\\Weedtopia\\Scripts\\Runtime\\Domain\\GameState.cs:98 "
+      }
+    ],
+    "nameCorrections": [
+      {
+        "before": "Historischer Einwohnerstand",
+        "beforeLength": 27,
+        "after": "Historischer Stand",
+        "afterLength": 18
+      },
+      {
+        "before": "Einwohner ohne Pflegebonus",
+        "beforeLength": 26,
+        "after": "Ohne Pflegebonus",
+        "afterLength": 16
+      }
+    ],
+    "onlyTwoProfileNameStringsChanged": true,
+    "preCorrectionTestSourceSha256": "3ab9b03c4ea8d8c05e1ea55c63d943c9c52a2145a68fff38933afd2fa93a7d5a",
+    "currentTestSourceSha256": "00f1adceef0b24ea9c15ed7e1ab1788ab37e5d966da2faeee1962a2ac5eeddb4",
+    "productionChangedForProfileCorrection": false,
+    "targetedRetest": {
+      "expectedXml": "Docs/Implementation/Validation/20261013_191402_EditMode_GreatSativadamAssetsAndBoundaryRetest.xml",
+      "scope": "The three failed profile fixture cases plus Great Sativadam and Skunkfurt asset fixtures.",
+      "status": "passed_verified",
+      "passed": 15,
+      "failed": 0,
+      "xml": "Docs/Implementation/Validation/20261013_191402_EditMode_GreatSativadamAssetsAndBoundaryRetest.xml",
+      "xmlSha256": "e8ed838ecc8eca08320ca833a9a71b7dab59e36512b791e2b20622ca691dfb5b",
+      "overall": {
+        "total": 15,
+        "passed": 15,
+        "failed": 0
+      },
+      "resolvedProfileCases": [
+        {
+          "case": "Weedtopia.Tests.GreatSativadamCampaignTests.StoryMilestoneLimitRequiresAResidentAttributeInTheHousingManagerRole",
+          "result": "Passed"
+        },
+        {
+          "case": "Weedtopia.Tests.GreatSativadamCampaignTests.VersionThirteenStoryMilestonePreservesItsLegacySaveBoundary(1000000)",
+          "result": "Passed"
+        },
+        {
+          "case": "Weedtopia.Tests.GreatSativadamCampaignTests.VersionThirteenStoryMilestonePreservesItsLegacySaveBoundary(1000001)",
+          "result": "Passed"
+        }
+      ],
+      "fixtures": {
+        "GreatSativadamCampaignTests": {
+          "total": 3,
+          "passed": 3,
+          "failed": 0
+        },
+        "GreatSativadamAssetTests": {
+          "total": 6,
+          "passed": 6,
+          "failed": 0
+        },
+        "SkunkfurtAssetTests": {
+          "total": 6,
+          "passed": 6,
+          "failed": 0
+        }
+      }
+    },
+    "status": "resolved_verified"
+  },
+  "verifiedLatestGreatSativadamResults": {
+    "status": "passed_verified",
+    "totalUniqueCases": 56,
+    "passed": 56,
+    "failed": 0,
+    "sourceXmls": [
+      "Docs/Implementation/Validation/20261013_190408_EditMode_GreatSativadamSaveFixAndStories.xml",
+      "Docs/Implementation/Validation/20261013_191402_EditMode_GreatSativadamAssetsAndBoundaryRetest.xml"
+    ],
+    "resolution": "All 28 initial production save failures and the three additional profile fixture failures are resolved in actual Unity XML results. Latest result per Great Sativadam campaign case is Passed.",
+    "testSourceSha256": "00f1adceef0b24ea9c15ed7e1ab1788ab37e5d966da2faeee1962a2ac5eeddb4"
+  }
+}

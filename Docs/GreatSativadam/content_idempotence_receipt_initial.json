@@ -1,0 +1,307 @@
+{
+  "byteIdenticalOnSecondRun": true,
+  "byteIdenticalSecondRun": true,
+  "changedOnSecondRun": false,
+  "files": {
+    "Assets\\Weedtopia\\Game\\Content\\BurningHills.json": "b13ea2e9c42d5d0ac1775ba22b00d9678fc7c2bdbca293a80e1b8011007e7551",
+    "Assets\\Weedtopia\\Game\\Localization\\de.json": "b4cf9fcbd1390ee1d437f75794c9131ac7ba42bc4edef46ee7d7dc82fdbc9dc1",
+    "Assets\\Weedtopia\\Game\\Localization\\en.json": "b90f297766d65c945089a845796320733dc4eda2f3273a586ead783ea5121ae6",
+    "Assets\\Weedtopia\\Game\\Localization\\es.json": "388679c36ecbd9f868887278a59f84c7a1fb7daf27bf889f4a00d0c49b4f1713",
+    "Assets\\Weedtopia\\Game\\Localization\\fr.json": "b6cee90865d411adade5da79cddc0d61170bd712ced3cf6d12509525193998aa",
+    "Assets\\Weedtopia\\Game\\Localization\\ru.json": "2ba5f54b63caf9e403d696a5c9c4ede20317d2b5811016d44a8d8032e8a3e82f"
+  },
+  "beforeFiles": {
+    "Assets\\Weedtopia\\Game\\Content\\BurningHills.json": "1ab25c66075cae537c0ea3465660e4b982c0e844527bf960871537474ccbb019",
+    "Assets\\Weedtopia\\Game\\Localization\\de.json": "e43ecb48ddc860b93b69597fa1c2454c5939ff9529134be0129dfef055ea15f9",
+    "Assets\\Weedtopia\\Game\\Localization\\en.json": "13e38e6c9ebf8234d76f655b92ae93879b508694a5c9c6b98a50b9d541d4d6bd",
+    "Assets\\Weedtopia\\Game\\Localization\\es.json": "ca4f7e7bd489ba4ff3c95b55fa9ef81c62de704e3eef34fb598a6af775b42463",
+    "Assets\\Weedtopia\\Game\\Localization\\fr.json": "0722a0b1241996599eff56085b6942748ef03cdf82043b7349162dfd30ccfcca",
+    "Assets\\Weedtopia\\Game\\Localization\\ru.json": "7b0672347329a1b0084a48bb8eab812f11758979e827798048fc0e5ee7002930"
+  },
+  "firstAuthor": {
+    "city": "great_sativadam",
+    "version": 14,
+    "changed": true,
+    "instances": 56,
+    "routes": 35,
+    "mainQuests": 18,
+    "permanentResidents": 6,
+    "personalChapters": 18,
+    "recurringVariants": 18,
+    "communityProjects": 3,
+    "localizedKeys": 230,
+    "languages": [
+      "de",
+      "en",
+      "es",
+      "fr",
+      "ru"
+    ],
+    "oldContentDigest": "043059f496e16f9286531df645841059e3edf9f0963f2f5b65e946f3bb7a6051",
+    "contentDigest": "19f9fd934f582000deaeadac2dcb2311d062b106f916bffa232d406ea116b5b2",
+    "priorContentPreservedExceptAuthorizedHousingTier": true,
+    "priorLocaleEntriesPreserved": true,
+    "allOtherBuildingDefinitionFieldsPreserved": true,
+    "placeholderParity": true,
+    "freshProgressGoals": true,
+    "prerequisiteGraphAcyclic": true,
+    "chapterRoundsBeforeProjects": true,
+    "savedPlaceChoice": {
+      "quest": "gs_joost_chapter_3",
+      "choices": [
+        "repair_wharf",
+        "learning_dock"
+      ]
+    },
+    "residents": [
+      {
+        "id": "gs_noor",
+        "appearsAt": 50,
+        "chapters": [
+          50,
+          2300,
+          7100
+        ]
+      },
+      {
+        "id": "gs_bram",
+        "appearsAt": 150,
+        "chapters": [
+          150,
+          3000,
+          8100
+        ]
+      },
+      {
+        "id": "gs_esra",
+        "appearsAt": 300,
+        "chapters": [
+          300,
+          3600,
+          9200
+        ]
+      },
+      {
+        "id": "gs_daan",
+        "appearsAt": 500,
+        "chapters": [
+          500,
+          4400,
+          10200
+        ]
+      },
+      {
+        "id": "gs_fenna",
+        "appearsAt": 900,
+        "chapters": [
+          900,
+          5200,
+          11200
+        ]
+      },
+      {
+        "id": "gs_joost",
+        "appearsAt": 1500,
+        "chapters": [
+          1500,
+          5900,
+          11900
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "id": "gs_joint_tide_court",
+        "residents": 2000,
+        "prerequisites": [
+          "gs_noor_chapter_1",
+          "gs_bram_chapter_1",
+          "gs_esra_chapter_1",
+          "gs_daan_chapter_1",
+          "gs_fenna_chapter_1",
+          "gs_joost_chapter_1"
+        ]
+      },
+      {
+        "id": "gs_joint_seed_quay",
+        "residents": 6000,
+        "prerequisites": [
+          "gs_noor_chapter_2",
+          "gs_bram_chapter_2",
+          "gs_esra_chapter_2",
+          "gs_daan_chapter_2",
+          "gs_fenna_chapter_2",
+          "gs_joost_chapter_2"
+        ]
+      },
+      {
+        "id": "gs_joint_open_water_charter",
+        "residents": 12000,
+        "prerequisites": [
+          "gs_noor_chapter_3",
+          "gs_bram_chapter_3",
+          "gs_esra_chapter_3",
+          "gs_daan_chapter_3",
+          "gs_fenna_chapter_3",
+          "gs_joost_chapter_3"
+        ]
+      }
+    ],
+    "authorizedFinalHousingTier": {
+      "building": "residential_house",
+      "index": 24,
+      "level": 5000,
+      "fromBonus": 1000,
+      "toBonus": 2000,
+      "previousLevelsPreserved": true,
+      "previousMaximumPerHouse": 1125,
+      "maximumPerHouse": 2125,
+      "maximumPreviousTwelveCities": 22108500,
+      "required": 20000000,
+      "allOtherEconomyCurvesPreserved": true
+    }
+  },
+  "secondAuthor": {
+    "city": "great_sativadam",
+    "version": 14,
+    "changed": false,
+    "instances": 56,
+    "routes": 35,
+    "mainQuests": 18,
+    "permanentResidents": 6,
+    "personalChapters": 18,
+    "recurringVariants": 18,
+    "communityProjects": 3,
+    "localizedKeys": 230,
+    "languages": [
+      "de",
+      "en",
+      "es",
+      "fr",
+      "ru"
+    ],
+    "oldContentDigest": "19f9fd934f582000deaeadac2dcb2311d062b106f916bffa232d406ea116b5b2",
+    "contentDigest": "19f9fd934f582000deaeadac2dcb2311d062b106f916bffa232d406ea116b5b2",
+    "priorContentPreservedExceptAuthorizedHousingTier": true,
+    "priorLocaleEntriesPreserved": true,
+    "allOtherBuildingDefinitionFieldsPreserved": true,
+    "placeholderParity": true,
+    "freshProgressGoals": true,
+    "prerequisiteGraphAcyclic": true,
+    "chapterRoundsBeforeProjects": true,
+    "savedPlaceChoice": {
+      "quest": "gs_joost_chapter_3",
+      "choices": [
+        "repair_wharf",
+        "learning_dock"
+      ]
+    },
+    "residents": [
+      {
+        "id": "gs_noor",
+        "appearsAt": 50,
+        "chapters": [
+          50,
+          2300,
+          7100
+        ]
+      },
+      {
+        "id": "gs_bram",
+        "appearsAt": 150,
+        "chapters": [
+          150,
+          3000,
+          8100
+        ]
+      },
+      {
+        "id": "gs_esra",
+        "appearsAt": 300,
+        "chapters": [
+          300,
+          3600,
+          9200
+        ]
+      },
+      {
+        "id": "gs_daan",
+        "appearsAt": 500,
+        "chapters": [
+          500,
+          4400,
+          10200
+        ]
+      },
+      {
+        "id": "gs_fenna",
+        "appearsAt": 900,
+        "chapters": [
+          900,
+          5200,
+          11200
+        ]
+      },
+      {
+        "id": "gs_joost",
+        "appearsAt": 1500,
+        "chapters": [
+          1500,
+          5900,
+          11900
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "id": "gs_joint_tide_court",
+        "residents": 2000,
+        "prerequisites": [
+          "gs_noor_chapter_1",
+          "gs_bram_chapter_1",
+          "gs_esra_chapter_1",
+          "gs_daan_chapter_1",
+          "gs_fenna_chapter_1",
+          "gs_joost_chapter_1"
+        ]
+      },
+      {
+        "id": "gs_joint_seed_quay",
+        "residents": 6000,
+        "prerequisites": [
+          "gs_noor_chapter_2",
+          "gs_bram_chapter_2",
+          "gs_esra_chapter_2",
+          "gs_daan_chapter_2",
+          "gs_fenna_chapter_2",
+          "gs_joost_chapter_2"
+        ]
+      },
+      {
+        "id": "gs_joint_open_water_charter",
+        "residents": 12000,
+        "prerequisites": [
+          "gs_noor_chapter_3",
+          "gs_bram_chapter_3",
+          "gs_esra_chapter_3",
+          "gs_daan_chapter_3",
+          "gs_fenna_chapter_3",
+          "gs_joost_chapter_3"
+        ]
+      }
+    ],
+    "authorizedFinalHousingTier": {
+      "building": "residential_house",
+      "index": 24,
+      "level": 5000,
+      "fromBonus": 1000,
+      "toBonus": 2000,
+      "previousLevelsPreserved": true,
+      "previousMaximumPerHouse": 1125,
+      "maximumPerHouse": 2125,
+      "maximumPreviousTwelveCities": 22108500,
+      "required": 20000000,
+      "allOtherEconomyCurvesPreserved": true
+    }
+  }
+}

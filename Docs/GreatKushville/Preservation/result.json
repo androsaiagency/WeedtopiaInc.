@@ -1,0 +1,247 @@
+{
+  "protectedFiles": 9155,
+  "changedFiles": [
+    "Assets/Weedtopia/Game/Content/BurningHills.json",
+    "Assets/Weedtopia/Game/Localization/de.json",
+    "Assets/Weedtopia/Game/Localization/en.json",
+    "Assets/Weedtopia/Game/Localization/es.json",
+    "Assets/Weedtopia/Game/Localization/fr.json",
+    "Assets/Weedtopia/Game/Localization/ru.json",
+    "Assets/Weedtopia/Production/BigRockCity/CityCampaign.prefab",
+    "Assets/Weedtopia/Scripts/Runtime/Persistence/LocalSaveStore.cs",
+    "Assets/Weedtopia/Scripts/Tests/EditMode/GoldenFlowerCampaignTests.cs",
+    "Assets/Weedtopia/Scripts/Tests/EditMode/SaintMaryVilleCampaignTests.cs",
+    "Assets/Weedtopia/Scripts/Tests/EditorAssets/SaintMaryVilleAssetTests.cs",
+    "Assets/Weedtopia/Scripts/Tests/PlayMode/SaintMaryVillePlayModeTests.cs",
+    "ProjectSettings/EditorBuildSettings.asset"
+  ],
+  "removedFiles": [],
+  "strictPrefabPreservation": {
+    "status": "passed",
+    "policy": "old scenes and prefab overrides exact; only one connected travel UI graph may be added",
+    "scenes": [
+      {
+        "path": "Assets/Weedtopia/Game/Scenes/BigRockCity.unity",
+        "byteIdentical": true,
+        "metaIdentical": true,
+        "oldSerializedDocuments": 9729,
+        "oldPrefabInstances": 2868,
+        "allOldPrefabInstanceDocumentsIdentical": true
+      },
+      {
+        "path": "Assets/Weedtopia/Game/Scenes/Bootstrap.unity",
+        "byteIdentical": true,
+        "metaIdentical": true,
+        "oldSerializedDocuments": 8,
+        "oldPrefabInstances": 0,
+        "allOldPrefabInstanceDocumentsIdentical": true
+      },
+      {
+        "path": "Assets/Weedtopia/Game/Scenes/BurningHills.unity",
+        "byteIdentical": true,
+        "metaIdentical": true,
+        "oldSerializedDocuments": 9728,
+        "oldPrefabInstances": 2867,
+        "allOldPrefabInstanceDocumentsIdentical": true
+      },
+      {
+        "path": "Assets/Weedtopia/Game/Scenes/CassaVadela.unity",
+        "byteIdentical": true,
+        "metaIdentical": true,
+        "oldSerializedDocuments": 9729,
+        "oldPrefabInstances": 2868,
+        "allOldPrefabInstanceDocumentsIdentical": true
+      },
+      {
+        "path": "Assets/Weedtopia/Game/Scenes/GoldenFlower.unity",
+        "byteIdentical": true,
+        "metaIdentical": true,
+        "oldSerializedDocuments": 9729,
+        "oldPrefabInstances": 2868,
+        "allOldPrefabInstanceDocumentsIdentical": true
+      },
+      {
+        "path": "Assets/Weedtopia/Game/Scenes/GreenLeafVillage.unity",
+        "byteIdentical": true,
+        "metaIdentical": true,
+        "oldSerializedDocuments": 9729,
+        "oldPrefabInstances": 2868,
+        "allOldPrefabInstanceDocumentsIdentical": true
+      },
+      {
+        "path": "Assets/Weedtopia/Game/Scenes/LittleMontana.unity",
+        "byteIdentical": true,
+        "metaIdentical": true,
+        "oldSerializedDocuments": 9729,
+        "oldPrefabInstances": 2868,
+        "allOldPrefabInstanceDocumentsIdentical": true
+      },
+      {
+        "path": "Assets/Weedtopia/Game/Scenes/MarkWoodCity.unity",
+        "byteIdentical": true,
+        "metaIdentical": true,
+        "oldSerializedDocuments": 9729,
+        "oldPrefabInstances": 2868,
+        "allOldPrefabInstanceDocumentsIdentical": true
+      },
+      {
+        "path": "Assets/Weedtopia/Game/Scenes/PurpleGarden.unity",
+        "byteIdentical": true,
+        "metaIdentical": true,
+        "oldSerializedDocuments": 9729,
+        "oldPrefabInstances": 2868,
+        "allOldPrefabInstanceDocumentsIdentical": true
+      },
+      {
+        "path": "Assets/Weedtopia/Game/Scenes/SaintMaryVille.unity",
+        "byteIdentical": true,
+        "metaIdentical": true,
+        "oldSerializedDocuments": 9729,
+        "oldPrefabInstances": 2868,
+        "allOldPrefabInstanceDocumentsIdentical": true
+      },
+      {
+        "path": "Assets/Weedtopia/Game/Scenes/SevenHills.unity",
+        "byteIdentical": true,
+        "metaIdentical": true,
+        "oldSerializedDocuments": 9729,
+        "oldPrefabInstances": 2868,
+        "allOldPrefabInstanceDocumentsIdentical": true
+      }
+    ],
+    "previousCityScenes": 10,
+    "bootstrapByteIdentical": true,
+    "sharedCampaign": {
+      "path": "Assets/Weedtopia/Production/BigRockCity/CityCampaign.prefab",
+      "unchangedOldPrefabInstances": 3,
+      "changedOldDocuments": [
+        "4348838650867842956",
+        "2032593320927803069"
+      ],
+      "addedDocuments": 14,
+      "travelRowsBefore": 10,
+      "travelRowsAfter": 11,
+      "newCityId": "great_kushville",
+      "newUiRoots": [
+        "GreatKushvilleProgress",
+        "TravelGreatKushville"
+      ],
+      "unrelatedTransformArtOrPrefabOverrideChanges": []
+    }
+  },
+  "regressionFixtureChanges": {
+    "Assets/Weedtopia/Scripts/Tests/EditMode/GoldenFlowerCampaignTests.cs": {
+      "passed": true,
+      "allowedChanges": [
+        "Exact unsupported future version 12 -> 13"
+      ],
+      "baselineHashRecovered": true
+    },
+    "Assets/Weedtopia/Scripts/Tests/EditMode/SaintMaryVilleCampaignTests.cs": {
+      "passed": true,
+      "allowedChanges": [
+        "Exact version-eleven fixture and setup binding",
+        "Exact unsupported future version 12 -> 13"
+      ],
+      "baselineHashRecovered": true
+    }
+  },
+  "unexpectedChanges": [],
+  "previousContentChanges": [],
+  "previousLocaleChanges": {
+    "Assets/Weedtopia/Game/Localization/de.json": [],
+    "Assets/Weedtopia/Game/Localization/en.json": [],
+    "Assets/Weedtopia/Game/Localization/es.json": [],
+    "Assets/Weedtopia/Game/Localization/fr.json": [],
+    "Assets/Weedtopia/Game/Localization/ru.json": []
+  },
+  "migrationOnly": true,
+  "housingChange": "Only level 5000 density bonus 135 -> 475; capacity 260 -> 600; all earlier levels unchanged",
+  "scenes": {
+    "Assets/Weedtopia/Game/Scenes/BigRockCity.unity": {
+      "byteIdentical": true,
+      "originalObjects": 9729,
+      "removedObjects": [],
+      "addedObjects": 0,
+      "unexpectedChangedObjects": []
+    },
+    "Assets/Weedtopia/Game/Scenes/Bootstrap.unity": {
+      "byteIdentical": true,
+      "originalObjects": 8,
+      "removedObjects": [],
+      "addedObjects": 0,
+      "unexpectedChangedObjects": []
+    },
+    "Assets/Weedtopia/Game/Scenes/BurningHills.unity": {
+      "byteIdentical": true,
+      "originalObjects": 9728,
+      "removedObjects": [],
+      "addedObjects": 0,
+      "unexpectedChangedObjects": []
+    },
+    "Assets/Weedtopia/Game/Scenes/CassaVadela.unity": {
+      "byteIdentical": true,
+      "originalObjects": 9729,
+      "removedObjects": [],
+      "addedObjects": 0,
+      "unexpectedChangedObjects": []
+    },
+    "Assets/Weedtopia/Game/Scenes/GoldenFlower.unity": {
+      "byteIdentical": true,
+      "originalObjects": 9729,
+      "removedObjects": [],
+      "addedObjects": 0,
+      "unexpectedChangedObjects": []
+    },
+    "Assets/Weedtopia/Game/Scenes/GreenLeafVillage.unity": {
+      "byteIdentical": true,
+      "originalObjects": 9729,
+      "removedObjects": [],
+      "addedObjects": 0,
+      "unexpectedChangedObjects": []
+    },
+    "Assets/Weedtopia/Game/Scenes/LittleMontana.unity": {
+      "byteIdentical": true,
+      "originalObjects": 9729,
+      "removedObjects": [],
+      "addedObjects": 0,
+      "unexpectedChangedObjects": []
+    },
+    "Assets/Weedtopia/Game/Scenes/MarkWoodCity.unity": {
+      "byteIdentical": true,
+      "originalObjects": 9729,
+      "removedObjects": [],
+      "addedObjects": 0,
+      "unexpectedChangedObjects": []
+    },
+    "Assets/Weedtopia/Game/Scenes/PurpleGarden.unity": {
+      "byteIdentical": true,
+      "originalObjects": 9729,
+      "removedObjects": [],
+      "addedObjects": 0,
+      "unexpectedChangedObjects": []
+    },
+    "Assets/Weedtopia/Game/Scenes/SaintMaryVille.unity": {
+      "byteIdentical": true,
+      "originalObjects": 9729,
+      "removedObjects": [],
+      "addedObjects": 0,
+      "unexpectedChangedObjects": []
+    },
+    "Assets/Weedtopia/Game/Scenes/SevenHills.unity": {
+      "byteIdentical": true,
+      "originalObjects": 9729,
+      "removedObjects": [],
+      "addedObjects": 0,
+      "unexpectedChangedObjects": []
+    },
+    "Assets/Weedtopia/Production/BigRockCity/CityCampaign.prefab": {
+      "byteIdentical": false,
+      "originalObjects": 178,
+      "removedObjects": [],
+      "addedObjects": 14,
+      "unexpectedChangedObjects": []
+    }
+  },
+  "status": "passed"
+}

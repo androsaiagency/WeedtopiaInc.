@@ -1,0 +1,180 @@
+{
+  "city": "saint_mary_ville",
+  "version": 11,
+  "changed": false,
+  "instances": 56,
+  "routes": 35,
+  "mainQuests": 18,
+  "permanentResidents": 6,
+  "personalChapters": 24,
+  "recurringVariants": 18,
+  "communityProjects": 3,
+  "localizedKeys": 248,
+  "languages": [
+    "de",
+    "en",
+    "es",
+    "fr",
+    "ru"
+  ],
+  "oldContentDigest": "762579de1527bf07af9f1736ec717b19523a359f78dc704b0d37e497675d5b2f",
+  "contentDigest": "762579de1527bf07af9f1736ec717b19523a359f78dc704b0d37e497675d5b2f",
+  "priorContentPreservedExceptFinalHousingTierBonus": true,
+  "authorizedBuildingDelta": {
+    "id": "residential_house",
+    "residentTierBonuses": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      135
+    ]
+  },
+  "priorLocaleEntriesPreserved": true,
+  "placeholderParity": true,
+  "freshProgressGoals": true,
+  "prerequisiteGraphAcyclic": true,
+  "chapterRoundsBeforeProjects": true,
+  "savedPlaceChoice": {
+    "quest": "sm_elias_chapter_3",
+    "choices": [
+      "ferry_workshop",
+      "river_classroom"
+    ]
+  },
+  "housingGate": {
+    "mandatoryParks": 9,
+    "housesPerPriorCity": 17,
+    "finalResidentCapacity": 260,
+    "strongestResidentBonus": 51,
+    "maxPriorResidents": 2028780,
+    "unlockResidents": 2000000,
+    "allEarlierLevelsPreserved": true
+  },
+  "residents": [
+    {
+      "id": "sm_mara",
+      "appearsAt": 50,
+      "chapters": [
+        50,
+        1500,
+        6500,
+        14000
+      ]
+    },
+    {
+      "id": "sm_elias",
+      "appearsAt": 120,
+      "chapters": [
+        120,
+        2000,
+        7000,
+        15000
+      ]
+    },
+    {
+      "id": "sm_rosa",
+      "appearsAt": 220,
+      "chapters": [
+        220,
+        2500,
+        7500,
+        16000
+      ]
+    },
+    {
+      "id": "sm_finn",
+      "appearsAt": 350,
+      "chapters": [
+        350,
+        3000,
+        8000,
+        17000
+      ]
+    },
+    {
+      "id": "sm_amira",
+      "appearsAt": 500,
+      "chapters": [
+        500,
+        3500,
+        8500,
+        17500
+      ]
+    },
+    {
+      "id": "sm_hugo",
+      "appearsAt": 700,
+      "chapters": [
+        700,
+        4000,
+        9000,
+        18000
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "sm_joint_ferry_yard",
+      "residents": 1200,
+      "prerequisites": [
+        "sm_mara_chapter_1",
+        "sm_elias_chapter_1",
+        "sm_rosa_chapter_1",
+        "sm_finn_chapter_1",
+        "sm_amira_chapter_1",
+        "sm_hugo_chapter_1"
+      ]
+    },
+    {
+      "id": "sm_joint_open_house",
+      "residents": 6000,
+      "prerequisites": [
+        "sm_mara_chapter_2",
+        "sm_elias_chapter_2",
+        "sm_rosa_chapter_2",
+        "sm_finn_chapter_2",
+        "sm_amira_chapter_2",
+        "sm_hugo_chapter_2"
+      ]
+    },
+    {
+      "id": "sm_joint_lights_evening",
+      "residents": 20000,
+      "prerequisites": [
+        "sm_mara_chapter_4",
+        "sm_elias_chapter_4",
+        "sm_rosa_chapter_4",
+        "sm_finn_chapter_4",
+        "sm_amira_chapter_4",
+        "sm_hugo_chapter_4"
+      ]
+    }
+  ],
+  "authorizedSaintInvitationCorrection": {
+    "bridgeMoney": 12500,
+    "bridgeCards": 7,
+    "localizedKey": "campaign.saint_mary_ville_body",
+    "existingNineCitiesAndTextsPreserved": true
+  }
+}

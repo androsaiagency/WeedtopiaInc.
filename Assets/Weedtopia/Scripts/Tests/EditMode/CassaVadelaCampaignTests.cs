@@ -354,7 +354,7 @@ namespace Weedtopia.Tests
             for (int tier = 1; tier < VisualTiers.Starts.Length; tier++)
                 for (int level = 1; level <= 100; level++) for (int rank = 1; rank <= 10; rank++)
                 {
-                    int count = (int)Math.Floor(game.Definitions.Building("residential_house").baseResidents * (1 + tier) *
+                    int count = (int)Math.Floor(game.Definitions.Building("residential_house").ResidentCapacity(VisualTiers.Starts[tier]) *
                         (1 + game.Definitions.workerAttributeStep * level * rank));
                     if (!choices.ContainsKey(count)) choices[count] = (VisualTiers.Starts[tier], level, rank);
                 }

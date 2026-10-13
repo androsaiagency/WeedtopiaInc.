@@ -40,8 +40,9 @@ namespace Weedtopia.Tests
         }
         [Test] public void RealResidentCalculationUnlocksTheMandate()
         {
-            var plots=state.buildings.Where(b=>b.cityId=="burning_hills"&&b.family=="settlement_plot").Take(8).ToArray();
-            foreach(var plot in plots){plot.family="residential_house";plot.level=5000;}
+            var plots=state.buildings.Where(b=>b.cityId=="burning_hills"&&b.family=="settlement_plot").Take(10).ToArray();
+            // An early housing tier reaches the original mandate without depending on later city density bonuses.
+            foreach(var plot in plots){plot.family="residential_house";plot.level=1750;}
             Assert.That(session.Simulation.Residents("burning_hills"),Is.EqualTo(1000));
             session.Campaign.RefreshMilestones();Assert.That(session.Campaign.Offered("big_rock_city"),Is.True);
             Assert.That(state.City.storyResidentMilestone,Is.EqualTo(1000));

@@ -1,0 +1,104 @@
+{
+  "utc": "2026-10-13T17:53:25.702579+00:00",
+  "status": "source_repaired_explicit_asset_repair_and_rerender_required",
+  "failedCaptureRun": "20261013_193300_Capture_FinalGameView",
+  "failedCaptureNotAccepted": true,
+  "gameViewReviewed": false,
+  "userVisualApproval": false,
+  "cause": "Architecture root scale was inherited by the nested activity ground offset and reusable prop size. The oversized displaced prop enlarged the active project bounds; normal navigation clamping then invalidated the HUD-safe close-up.",
+  "sourceSha256": {
+    "Assets/Weedtopia/Scripts/Editor/GameSetup/GreatSativadamAuthoring.cs": "789cf54158ee0b42325fabdd4e9e55bf130c012024571343373dcd88f78d70e2",
+    "Assets/Weedtopia/Scripts/Tests/EditorAssets/GreatSativadamAssetTests.cs": "f38f200084f25c6d78f2d45bdb3cfa44f9ead86e870865c8a4fb7fc7fa111372",
+    "Assets/Weedtopia/Scripts/Editor/GameSetup/GreatSativadamEvidence.cs": "67990e5d8322af8d305d7d6cd99cf8de1757840d2e7201e8079dce4a966318ab"
+  },
+  "repairEntryPoint": "Weedtopia.Editor.GameSetup.GreatSativadamAuthoring.RepairJoostActivityAnchors",
+  "normalApplyCallsRepair": true,
+  "repairAssets": [
+    "Assets/Weedtopia/Production/GreatSativadam/Prefabs/gs_joost.prefab",
+    "Assets/Weedtopia/Production/GreatSativadam/Prefabs/TideCommons.prefab"
+  ],
+  "activitiesRepaired": 4,
+  "sourcePrefabsUnchanged": [
+    "Assets/Weedtopia/Production/TownVitality/Prefabs/Town_workshop_corner.prefab",
+    "Assets/Weedtopia/Production/TownVitality/Prefabs/Town_reading_corner.prefab"
+  ],
+  "desiredGroundOffset": [
+    0,
+    0,
+    -9.89949493652
+  ],
+  "desiredGroundDistance": 9.89949493652,
+  "placementFormula": {
+    "localPosition": "parent.InverseTransformVector(DistrictMap.ToWorld(new Vector2(7,-7)))",
+    "localScale": "sourcePrefabRootScale * authoredScale / parent.lossyScale componentwise",
+    "communityAuthoredScale": 0.5,
+    "residentMemoryAuthoredScale": 0.45
+  },
+  "communityAnalysis": [
+    {
+      "choice": "repair_wharf",
+      "architectureWorldScale": 12.737562,
+      "beforePropWorldScale": 6.368781,
+      "afterPropWorldScale": 0.5,
+      "beforePlanarSpriteSize": [
+        52.895,
+        44.581
+      ],
+      "afterPlanarSpriteSize": [
+        4.153,
+        3.5
+      ],
+      "expectedLocalPosition": [
+        0,
+        0,
+        -0.777189151
+      ],
+      "expectedLocalScale": 0.0392539797
+    },
+    {
+      "choice": "learning_dock",
+      "architectureWorldScale": 14.654695,
+      "beforePropWorldScale": 7.3273475,
+      "afterPropWorldScale": 0.5,
+      "beforePlanarSpriteSize": [
+        71.089,
+        65.946
+      ],
+      "afterPlanarSpriteSize": [
+        4.851,
+        4.5
+      ],
+      "expectedLocalPosition": [
+        0,
+        0,
+        -0.675516959
+      ],
+      "expectedLocalScale": 0.0341187585
+    }
+  ],
+  "analysisNumbersAreRounded": true,
+  "measuredRepairReceipt": "Docs/GreatSativadam/joost_activity_repair_receipt.json",
+  "guard": "Accept exactly the known old local position/scale or already compensated state; refuse other existing local transform overrides. Check all four before saving either owned prefab.",
+  "assetTest": "Weedtopia.Tests.Assets.GreatSativadamAssetTests.JoostBranchActivitiesKeepGroundOffsetsAndSpriteBoundsIndependentOfArchitectureScale",
+  "testAssertions": [
+    "Both community choices and both chapter-three actor memories",
+    "Actual world ground offset equals (7,-7) plan units",
+    "Actual ground distance between 9.89 and 9.91 world units",
+    "Actual lossyScale matches the reusable source prefab times the authored factor",
+    "Actual SpriteRenderer.bounds.size matches transformed reusable sprite geometry",
+    "Original reusable prop prefab reference preserved"
+  ],
+  "evidenceCameraBypassImplemented": false,
+  "runtimeNavigationClampChanged": false,
+  "safeViewportGateUnchanged": {
+    "x": [
+      0.08,
+      0.92
+    ],
+    "y": [
+      0.15,
+      0.85
+    ]
+  },
+  "assetsModifiedByThisSourceTask": false
+}

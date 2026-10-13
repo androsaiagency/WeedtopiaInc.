@@ -1,0 +1,161 @@
+Skunkfurt – Zwischen den Brücken bleibt ein Zuhause
+
+Skunkfurt ist die zwölfte Stadt der Kampagne. Sie wird ab genau 10.000.000
+Einwohnern in allen elf bisherigen Städten zusammen freigeschaltet. Der
+Schwellwert zählt die ausdrücklich eingetragenen unlockSources: Burning Hills,
+Big Rock City, Seven Hills, Little Montana, Cassa Vadela, Mark Wood City,
+Green Leaf Village, Purple Garden, Golden Flower, Saint Mary Ville und
+Great Kushville. Die Einwohner Skunkfurts selbst zählen nicht zu diesem Tor.
+Contentstand und introducedVersion: 13. Starthilfe: 15.000 Geld, 8 Teamkarten.
+
+Geschichte und Stadtkonflikt
+
+Skunkfurt entstand an einer Furt durch den Main. Die ersten Brücken verbanden
+Gärten, Handwerksbetriebe und eine Markthalle aus kupferfarbenem Backstein.
+Waren, Rezepte und Nachrichten wechselten über den Fluss. Die Halle war zugleich
+Versorgungsort, Treffpunkt und Gedächtnis der beiden Ufer.
+
+Mit Handels- und Finanztürmen wuchs eine Pendlerstadt. Wege wurden nach Durchsatz,
+Gebäude nach Tagesmiete und Viertel nach abendlicher Belegung bewertet. Ein
+Umbauplan hält die nachts geschlossenen Marktstände für ungenutzten Raum. Die
+Mieter erscheinen als Nummern; Nachtarbeit, Fürsorge und Heimwege fehlen in der
+Rechnung. Der Plan bedroht die Halle und die Nachbarschaft mit Verdrängung.
+
+Die Geschichte löst diesen Konflikt durch nachvollziehbare Entscheidungen und
+gemeinsame Verantwortung. Auch Menschen, die an dem alten Plan mitwirkten,
+bekommen eine Entwicklung: Alma lernt zuzuhören, Jonas legt seine Annahmen offen.
+Alte Familiengeschichte und die Geschichte neu Zugezogener erhalten denselben
+Platz. Der Erfolg bleibt an Orten, Erinnerungen, geteilten Schlüsseln und freien
+Abenden sichtbar. Es gibt keinen Bewohnerverbrauch und kein endgültiges
+Verschwinden der sechs Figuren nach dem letzten Kapitel.
+
+Die vier Stadtgebiete
+
+Maingärten (Farm): Die Versorgung beider Ufer und der Nachtbetriebe beginnt hier.
+Alte Markthalle (City): Marktstände, lesbare Standregeln, gemeinsame Lieferzeiten.
+Brückenviertel (Settlement): Zuhause, Brückentafel und offenes Stadtarchiv.
+Bahnhofswerkstätten (Industry): Backstuben, Verarbeitung und verlässliche Zutaten.
+
+Die vorhandenen Building-, Assignment-, Route-, Produktions-, Save- und
+Questverträge bleiben Grundlage. Skunkfurt erhält 56 eigene Instanzen und
+35 eigene Routen unter dem Prefix sf_. Die vorhandenen Familien und deren
+Wirtschaftslogik werden verwendet. Persönliche Aufgaben verbinden die lokale
+Einwohnerentwicklung mit Gebäudeausbau und neuer Aktivität seit Auftragsannahme.
+
+Sechs permanente Bewohner und ihre Entwicklung
+
+Alma Main – Brückeningenieurin, sf_alma.
+Erscheint bei 50 lokalen Einwohnern; Kapitel bei 50 / 2.200 / 7.000.
+Ihr Brückenplan behandelte Begegnungsorte als Verkehrsflächen. Mina zeigt ihr
+die Bank zwischen Nacht- und Frühschicht. Alma plant die beiden Ufer mit den
+Betroffenen, gibt Rika einen zweiten Wartungsschlüssel und teilt ihr Wissen.
+Kapitel: Die Bank außerhalb des Plans; Zwei Ufer, ein offener Weg;
+Der zweite Schlüssel.
+
+Cem Kaya – Händler der alten Markthalle, sf_cem.
+Erscheint bei 120; Kapitel bei 120 / 2.800 / 7.600.
+Er bewahrt den Stand seiner Mutter, verschweigt aus Mietangst seine Probleme
+und öffnet dann das Standbuch. Mit Lotte schafft er verständliche Marktregeln.
+Am Ende teilt er Schlüssel und Vertretung, statt die Halle nach seiner Familie
+zu benennen. Ein freier Stand bleibt für neue Nachbarn.
+Kapitel: Das geöffnete Standbuch; Platz für einen neuen Stand;
+Die Halle ohne meinen Namen.
+
+Rika Takt – Planerin der Pendlerwege, sf_rika.
+Erscheint bei 200; Kapitel bei 200 / 3.300 / 8.200.
+Ihre Fahrpläne versorgten die Türme, ließen aber kaum Zeit für ihre Tochter.
+Mina zeigt die fehlende letzte Fahrt. Rika lernt, Kontrollen und Übergaben zu
+teilen. Ein freier Abend wird Teil des verbindlichen gemeinsamen Wochenplans.
+Kapitel: Die fehlende letzte Fahrt; Die Pause steht im Plan;
+Ein Platz nach der letzten Fahrt.
+
+Jonas Soll – Berater für faire Finanzierung, sf_jonas.
+Erscheint bei 350; Kapitel bei 350 / 3.900 / 8.800.
+Sein Bewertungsmodell unterstützte die Verdrängung. Lottes Mieternamen und Cems
+Standbuch machen die Lücken sichtbar. Jonas veröffentlicht seine Annahmen und
+prüft neue Bedingungen mit den Betroffenen. Sein früherer Schalter öffnet sich
+als Finanzberatung oder Wohnrat; seine Verantwortung bleibt dabei erhalten.
+Kapitel: Die Rechnung hinter den Fenstern; Risiko mit Namen;
+Der Schalter wird ein gemeinsamer Raum.
+Persistente Wahl im dritten Kapitel, sf_jonas_chapter_3:
+fair_finance_desk – offener Finanzschalter mit Rechenpult und Beratungsplan.
+housing_council – öffentlicher Wohnrat mit Quartierskarte und Sitzplätzen.
+Die Wahl wird im vorhandenen VIP-Savevertrag gespeichert und am Ort dargestellt.
+
+Lotte Stein – Archivarin der lebendigen Stadt, sf_lotte.
+Erscheint bei 500; Kapitel bei 500 / 4.500 / 9.400.
+Ihr verschlossenes Archiv bewahrte Papier und machte Menschen unsichtbar. Mit
+Cem liest sie die Marktordnung öffentlich. Rikas Tochter und Alma ergänzen die
+Seiten. Lotte übergibt Mina eine freie Seite und lässt künftigen Nachbarn Raum.
+Kapitel: Die Akte bekommt eine Stimme; Ein Archiv mit offenen Stühlen;
+Die freie Seite des Stadtvertrags.
+
+Mina Licht – Nachtbäckerin der beiden Ufer, sf_mina.
+Erscheint bei 700; Kapitel bei 700 / 5.200 / 10.000.
+Sie kam für die Nachtschicht und blieb. Alte Pläne gaben ihr Arbeit, aber keine
+Geschichte und keinen Heimweg. Sie wird an der Brückentafel sichtbar, teilt ihr
+Rezept mit dem Archiv und ihre Dienste mit anderen. Ihr Schlusskapitel schützt
+einen eigenen freien Abend und lädt die nächste neue Nachbarin dazu.
+Kapitel: Brot vor dem ersten Zug; Ein Rezept wird geteilt;
+Ein Abend gehört auch mir.
+
+Gemeinsame Projekte und sichtbare Orte
+
+1. sf_joint_bridge_table – Brückentafel der beiden Ufer.
+Ab 2.000 lokalen Einwohnern und abgeschlossenen ersten Kapiteln aller sechs.
+Eine neue Lieferung verbindet sicheren Weg, Vorräte, Zeit, Kosten und Geschichte.
+Der Brückendurchgang bekommt eine gemeinsame Tafel mit Platz zum Bleiben.
+
+2. sf_joint_market_commons – Offene Markthalle.
+Ab 6.000 lokalen Einwohnern und abgeschlossenen zweiten Kapiteln aller sechs.
+Neue Lieferungen öffnen einen gemeinsamen Markt mit lesbaren Regeln, geteilten
+Schlüsseln und einer freien Fläche für neue Stände.
+
+3. sf_joint_city_charter – Stadtvertrag der bleibenden Nachbarn.
+Ab 12.000 lokalen Einwohnern und abgeschlossenen dritten Kapiteln aller sechs.
+Neue Gebäckverkäufe tragen das gemeinsame Treffen. Am offenen Archivplatz wird
+ein Vertrag mit Namen, sicheren Wegen, fairer Finanzierung, Marktregeln und Zeit
+für das eigene Leben sichtbar. Eine freie Seite bleibt künftigen Nachbarn.
+
+18 Hauptquests führen vom ersten Feld bis zur freien Weiterentwicklung ab
+14.000 lokalen Einwohnern. Die Hauptquesttexte formulieren Bevölkerung als zu
+erreichendes Ziel, weil ein aktiver Auftrag schon vor seinem Abschluss sichtbar
+ist. Jonas’ dritte Geschichte nennt zusätzlich ihre reale 8.800er Schwelle.
+
+Jeder Bewohner erhält drei wiederkehrende Varianten: frische Rohwaren,
+zuverlässige Lieferungen und gemeinsamer Gebäckabsatz. Das ergibt 18 Varianten,
+die nach einer Pause im vorhandenen Bewohnerbereich weiterlaufen. Ihre Prosa
+enthält keine fest verdrahteten Mengen; die bestehenden Zieltexte zeigen die
+skalierten Zahlen. Alle Kapitel und Projekte benötigen neue Aktivität seit
+Annahme. Frühere Produktionsmengen schließen keinen neuen Auftrag sofort ab.
+
+Erreichbarkeit der Freischaltung
+
+Die vorherige letzte Wohnhausstufe erlaubte maximal 600 Einwohner je Haus.
+Selbst der optimale Ausbau aller elf Städte blieb dadurch bei 5.722.200
+Einwohnern und konnte die angefragte 10-Millionen-Schwelle nicht erreichen.
+Deshalb verändert Contentversion 13 genau einen bestehenden Wert:
+residential_house.residentTierBonuses[24] (Stufe 5.000): 475 -> 1.000.
+Damit erreicht ein maximales Wohnhaus 1.125 Einwohner; der optimale Ausbau der
+elf bisherigen Städte erreicht 10.729.125. Alle früheren Wohnhausstufen,
+Baukosten, Produktionskurven, Parkwerte, Routen und übrigen Gebäudefelder bleiben
+erhalten. Das Authoring lehnt eigenständig veränderte letzte Bonuswerte ab.
+Bestehende Saves verwenden den neuen Content. Die bis Version 13 unterstützte
+Migration validiert zuerst den historischen Katalog und ergänzt die neue Stadt
+mit ihren Instanzen. Sie nimmt keine Stadteinladung automatisch an; dafür bleibt
+die vorhandene gemeinsame Bevölkerungsschwelle maßgeblich.
+
+Authoring und Prüfnachweise
+
+Tools/Implementation/author_skunkfurt.py ist ein explizites, additives Werkzeug.
+Es startet weder beim Import noch beim Domain Reload. Gleiche vorhandene IDs
+müssen semantisch identisch sein; fremd veränderte Einträge werden abgelehnt.
+Bestehende Texte und Localeeinträge werden nicht migriert oder überschrieben.
+Die einzige Bestandskorrektur ist der beschriebene letzte Wohnhausbonus.
+
+Die 230 neuen Textkeys liegen vollständig auf Deutsch, Englisch, Spanisch,
+Französisch und Russisch vor. Der Author prüft Platzhalterparität, alle
+Referenzen, positive Ziele, Kapitel-/Projektgrenzen und einen azyklischen
+Voraussetzungsgraphen. Er schreibt einen content_receipt.json. Unity-Import,
+EditMode, PlayMode, Game View und Gerätebedienung bleiben getrennte Nachweise;
+der Content-Receipt allein bestätigt keine visuelle oder physische Abnahme.

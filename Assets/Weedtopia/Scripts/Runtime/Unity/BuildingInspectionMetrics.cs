@@ -38,7 +38,7 @@ namespace Weedtopia.Unity
                 if (project.Plan != null) rows.Add(new InspectionMetric(root.Definitions.Text("project.progress"), root.Session.State.City.project.stepIndex + " / " + project.Plan.steps.Length));
                 return rows;
             }
-            if (d.kind == BuildingKind.House) Value(GameText.Get("project.goal.2.15"), l => Math.Floor(d.baseResidents * (1 + VisualTiers.Index(l)) * Bonus(WorkerAttribute.Residents)).ToString());
+            if (d.kind == BuildingKind.House) Value(GameText.Get("project.goal.2.15"), l => Math.Floor(d.ResidentCapacity(l) * Bonus(WorkerAttribute.Residents)).ToString());
             else if (d.kind == BuildingKind.Park) rows.Add(new InspectionMetric(GameText.Get("presentation.buildinginspectionmetrics.gemeinschaft_s.b8019700"), (new Amount(root.Session.Simulation.Residents(b.cityId)) * (Bonus(WorkerAttribute.CommunityIncome) - 1)).ToString()));
             else
             {

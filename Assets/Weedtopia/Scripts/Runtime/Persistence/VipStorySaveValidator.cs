@@ -36,7 +36,7 @@ namespace Weedtopia.Persistence
             void Require(bool condition) { if (!condition) throw new InvalidDataException("Invalid VIP story progress"); }
             foreach (var city in state.cities)
             {
-                Require(city.storyResidentMilestone >= 0 && city.storyResidentMilestone <= 1000000);
+                Require(city.storyResidentMilestone >= 0 && city.storyResidentMilestone <= MaximumResidentMilestone(defs, city.id));
                 var people = city.vipStories ?? new System.Collections.Generic.List<VipStoryState>();
                 var joint = city.vipCollaborations ?? new System.Collections.Generic.List<VipCollaborationState>();
                 Require(people.All(p => p != null) && people.Select(p => p.id).Distinct().Count() == people.Count);
@@ -97,6 +97,29 @@ namespace Weedtopia.Persistence
                     }
                 }
             }
+        }
+
+        private static long MaximumResidentMilestone(GameDefinitions defs, string city)
+        {
+            var instances = defs.instances.Where(instance => instance.cityId == city).ToArray();
+            long maximum = instances.Where(instance => defs.Building(instance.family).kind == BuildingKind.House)
+                .Sum(instance => MaximumHouseResidents(defs, defs.Building(instance.family)));
+            int plots = instances.Count(instance => instance.family == "settlement_plot");
+            // ChoosePlot reserves one selectable plot for a park unless the catalog already supplies it.
+            if (plots > 0 && !instances.Any(instance => instance.family == "park")) plots--;
+            if (plots > 0) maximum += plots * MaximumHouseResidents(defs, defs.Building("residential_house"));
+            // Retain the previous save contract for historical milestones after a balance change.
+            return Math.Max(1000000L, maximum);
+        }
+
+        private static long MaximumHouseResidents(GameDefinitions defs, BuildingDefinition house)
+        {
+            bool residentManager = !string.IsNullOrEmpty(house.managerRole) &&
+                defs.Role(house.managerRole).attributes.Contains(WorkerAttribute.Residents);
+            // WorkerService and SaveValidator allow one manager at level 100 and rank 10.
+            double bonus = residentManager ? 1 + defs.workerAttributeStep * 100 * 10 : 1;
+            return VisualTiers.Starts.Where(level => level > 0)
+                .Max(level => (long)Math.Floor(house.ResidentCapacity(level) * bonus));
         }
     }
 }

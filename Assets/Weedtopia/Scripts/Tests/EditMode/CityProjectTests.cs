@@ -111,6 +111,8 @@ namespace Weedtopia.Tests
             Assert.That(JsonUtility.ToJson(loaded),Is.EqualTo(before));
         }
         [TestCase("neighborhood",420u)][TestCase("gourmet",420u)][TestCase("neighborhood",121u)][TestCase("gourmet",121u)]
+        // Whole-campaign simulations retain their tick limits; twelve cities need a larger wall-clock budget.
+        [Timeout(600000)]
         public void BothPlansCompleteFrom1000UsingOnlyPlayerCommandsWithoutPremiumOrRecovery(string planId,uint seed)
         {
             state=GameState.Create(defs,"Stadtfest",Start,seed);session=new GameSession(defs,state,clock);

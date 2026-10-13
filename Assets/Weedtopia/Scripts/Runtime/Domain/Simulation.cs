@@ -193,7 +193,7 @@ namespace Weedtopia.Domain
         {
             if (batchPlans != null && residentCounts.TryGetValue(city, out int cached)) return cached;
             int count = state.buildings.Where(x => x.cityId == city && x.level > 0 && Definition(x).kind == BuildingKind.House)
-                .Sum(x => (int)Math.Floor(Definition(x).baseResidents * (1 + VisualTiers.Index(x.level)) * Bonus(x, WorkerAttribute.Residents)));
+                .Sum(x => (int)Math.Floor(Definition(x).ResidentCapacity(x.level) * Bonus(x, WorkerAttribute.Residents)));
             if (batchPlans != null) residentCounts[city] = count;
             return count;
         }

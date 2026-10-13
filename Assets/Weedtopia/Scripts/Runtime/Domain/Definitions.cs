@@ -63,6 +63,13 @@ namespace Weedtopia.Domain
         public Zone zone;
         public Curve cost = new Curve(), capacity = new Curve(), rate = new Curve(), yield = new Curve(), price = new Curve();
         public int cycleSeconds = 4, baseBuildSeconds = 3, maxBuildSeconds = 120, baseResidents = 5;
+        // Optional density improvements at authored visual tiers, independent of early housing balance.
+        public int[] residentTierBonuses = Array.Empty<int>();
+        public int ResidentCapacity(int level)
+        {
+            int tier = VisualTiers.Index(level);
+            return checked(baseResidents * (1 + tier) + ((residentTierBonuses?.Length ?? 0) > tier ? residentTierBonuses[tier] : 0));
+        }
         public double buildGrowth = 1.001;
         // When configured, only visible tier transitions take time. The last multiplier is the cap.
         public double[] tierBuildMultipliers = Array.Empty<double>();
@@ -160,6 +167,10 @@ namespace Weedtopia.Domain
                         (c.earlyLevels > 0 && (c.earlyGrowth < 1 || double.IsNaN(c.earlyGrowth) || double.IsInfinity(c.earlyGrowth))))
                         throw new InvalidOperationException("Invalid curve " + b.id);
                 if (b.cycleSeconds < 1 || b.baseBuildSeconds < 1 || b.buildGrowth < 1 || b.maxBuildSeconds < b.baseBuildSeconds) throw new InvalidOperationException("Invalid times");
+                if ((b.residentTierBonuses?.Length ?? 0) != 0 &&
+                    (b.kind != BuildingKind.House || b.residentTierBonuses.Length != VisualTiers.Starts.Length ||
+                     b.residentTierBonuses.Any(bonus => bonus < 0 || bonus > 2000)))
+                    throw new InvalidOperationException("Invalid resident tier bonuses " + b.id);
                 double previousMultiplier = 1;
                 foreach (double multiplier in b.tierBuildMultipliers ?? Array.Empty<double>())
                 {

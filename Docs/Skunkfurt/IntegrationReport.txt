@@ -1,0 +1,215 @@
+Skunkfurt – Integrationsbericht
+Stand: 13. Oktober 2026, Contentversion 13
+Arbeitsverzeichnis: D:\Unity Games\Weedtopia Inc\WeedtopiaInc
+Dieser Bericht beschreibt die implementierte Integration und ihre getrennten
+Prüfgates. Der Ergebnisteil wird nach den realen Läufen durch Root aktualisiert.
+
+Stadt und Geschichte
+
+Skunkfurt ist die zwölfte Stadt. Sie entstand an einer Furt durch den Main.
+Brücken verbanden Gärten, Handwerk und eine kupferfarbene Backstein-Markthalle.
+Später wuchs sie zur Finanz- und Pendlerstadt mit Handels- und Bürotürmen.
+Ein Umbauplan bewertet die Halle anhand hoher Tagesmieten und leerer Abendfenster.
+Nachtschichten, Heimwege, Pflege und die dort lebenden Menschen fehlen in der
+Rechnung. Die drohende Verdrängung soll durch lesbare Regeln, geteilte Dienste
+und gemeinsame Verantwortung verhindert werden.
+
+Die vier Gebiete sind Maingärten (Farm), Alte Markthalle (City), Brückenviertel
+(Settlement) und Bahnhofswerkstätten (Industry). Ihre Story nutzt die bestehenden
+Gebäudefamilien und Lieferwege. Die neue Stadt erhält eigene IDs unter sf_.
+Ihre Szene liegt unter Assets/Weedtopia/Game/Scenes/Skunkfurt.unity.
+
+Bewohnerbiografien und Entwicklung
+
+Alma Main, sf_alma, Brückeningenieurin: Sie erbte die Pläne ihres Vaters und
+unterschrieb einen Umbau, der Begegnungsorte auf Verkehr reduzierte. Minas
+Nachtweg offenbart die fehlende Brückenbank. Alma plant mit Rika und Cem,
+bewahrt die Brückentafel und gibt einen zweiten Wartungsschlüssel weiter.
+Kapitelgrenzen: 50 / 2.200 / 7.000 lokale Einwohner.
+
+Cem Kaya, sf_cem, Markthallenhändler: Sein Stand stammt von seiner Mutter.
+Aus Mietangst verschwieg er Kosten und Lieferprobleme. Er öffnet Jonas das
+Standbuch, entwickelt mit Lotte verständliche Marktregeln und teilt Schlüssel
+und Vertretung. Die Halle bekommt keinen Familiennamen; neue Stände bleiben
+willkommen. Kapitelgrenzen: 120 / 2.800 / 7.600.
+
+Rika Takt, sf_rika, Pendlerplanerin: Ihre Fahrpläne versorgten die Türme und
+kosteten sie Abende mit ihrer Tochter. Minas Heimfahrt fehlte darin. Mit Alma
+und Mina teilt sie Kontrollen und Übergaben. Ein freier Abend bleibt im
+gemeinsamen Wochenplan geschützt. Kapitelgrenzen: 200 / 3.300 / 8.200.
+
+Jonas Soll, sf_jonas, Finanzberater: Sein Modell belohnte hohe Tagesmieten und
+stützte den Verdrängungsplan. Cems Buch und Lottes Mieternamen zeigen seine
+Verantwortung. Er legt Annahmen offen, hört Rückfragen an und öffnet den alten
+Schalter als gemeinsame Finanzberatung oder Wohnrat. Die Entscheidung wird
+im bestehenden Story-Save gespeichert. Kapitelgrenzen: 350 / 3.900 / 8.800.
+Wahlquest: sf_jonas_chapter_3. Choice-IDs: fair_finance_desk / housing_council.
+
+Lotte Stein, sf_lotte, Stadtarchivarin: Ihre verschlossenen Akten bewahrten
+Papier, machten aber neue Nachbarn unsichtbar. Sie liest mit Cem die alte
+Marktordnung öffentlich, teilt die Auswahl der Seiten und gibt Mina eine
+freie Seite. Der Stadtvertrag bewahrt Erinnerungen und Platz für Kommende.
+Kapitelgrenzen: 500 / 4.500 / 9.400.
+
+Mina Licht, sf_mina, Nachtbäckerin: Sie kam für eine Nachtschicht und blieb.
+Die alten Pläne gaben ihr Arbeit, aber keine Geschichte und keinen Heimweg.
+Sie wird an der Brückentafel sichtbar, teilt ihr Rezept mit Lottes Archiv
+und ihre Dienste mit anderen. Am Ende trägt sie ihren Namen in den Stadtvertrag
+ein und lädt die nächste neue Nachbarin ein. Kapitelgrenzen: 700 / 5.200 / 10.000.
+
+Alle sechs bleiben nach ihren Schlusskapiteln Teil der Stadt. Ihre Beziehungen
+verbinden die sechs Geschichten; gemeinsame Orte entwickeln sich aus den
+persönlichen Veränderungen.
+
+Contentumfang und Orte
+
+56 eigene Gebäudeinstanzen, 35 eigene Routen und 18 Hauptquests.
+6 permanente Bewohner mit je 3 Kapiteln und 3 wiederkehrenden Varianten:
+18 persönliche Kapitel, 18 wiederkehrende Aufgaben und 3 Gemeinschaftsprojekte.
+230 neue Textkeys mit expliziten de/en/es/fr/ru-Übersetzungen.
+
+sf_joint_bridge_table, Brückentafel: ab 2.000 lokalen Einwohnern und Kapitel 1
+aller sechs. Der sichere Brückenweg wird ein Ort zum Verweilen und für Vorräte,
+Absprachen und Geschichten.
+
+sf_joint_market_commons, Offene Markthalle: ab 6.000 und Kapitel 2 aller sechs.
+Lesbare Standregeln, geteilte Schlüssel und freie Flächen halten die Halle offen.
+
+sf_joint_city_charter, Stadtvertrag: ab 12.000 und Kapitel 3 aller sechs.
+Am offenen Archivplatz verbinden Unterschriften sichere Wege, faire Bedingungen,
+Marktregeln und persönliche Zeit. Eine freie Seite bleibt neuen Nachbarn.
+
+Hauptquesttexte formulieren Einwohnerzahlen als Ziele und führen bis 14.000
+lokalen Einwohnern zur freien Weiterentwicklung. Jonas’ Wahlkapitel nennt seine
+zusätzliche reale 8.800er Schwelle. Persönliche Aufgaben verwenden vorhandene
+BuildingFamilyLevel-Ziele plus neue Produktions-/Verkaufs-/Lieferaktivität seit
+Annahme. Population wird über die bestehenden residents-Schwellen geprüft.
+Wiederkehrende Prosa enthält keine festen Mengen; Zieltexte zeigen skalierte Werte.
+
+Freischaltung und gemeinsame Bevölkerung
+
+City-ID: skunkfurt. introducedVersion: 13. unlockResidents: 10.000.000.
+Angebot bei >= 10.000.000; 9.999.999 bleibt unter der Schwelle.
+unlockSources enthält exakt diese elf bisherigen Städte:
+burning_hills; big_rock_city; seven_hills; little_montana; cassa_vadela;
+mark_wood_city; green_leaf_village; purple_garden; golden_flower;
+saint_mary_ville; great_kushville.
+
+CityCampaignService.UnlockProgress summiert deren aktuelle Bevölkerungen aus
+Simulation.Residents, sofern die jeweilige Stadt zugänglich ist. Skunkfurts eigene
+Einwohner werden nicht gezählt. Unabhängige historische Einwohnermaxima einzelner
+Städte werden nicht addiert. Die vorhandene charterResidentMilestone speichert
+stattdessen den größten tatsächlich gleichzeitig erreichten gemeinsamen Total,
+damit ein einmal verdientes Angebot beim späteren Bevölkerungsschwund erhalten
+bleibt. Die Starthilfe von 15.000 Geld und 8 Teamkarten wird über die bestehende
+Stadtannahme mit RewardHistory vergeben.
+
+Migration und Erreichbarkeit
+
+LocalSaveStore.MigrateContent unterstützt jetzt Contentmigration bis Version 13.
+Vor Ergänzungen validiert es den historischen Katalog mit allen bereits zum Save
+gehörenden Instanzen. Danach ergänzt es den CityState und die neuen, eindeutig
+eingeführten Instanzen und setzt contentVersion auf den aktuellen Stand.
+Vorhandene Zustände bleiben erhalten. Eine fehlende alte Instanz bleibt ein
+Validierungsfehler. Die Migration nimmt keine Stadteinladung automatisch an.
+
+Die bisherige Endstufe der Wohnhäuser hatte 475 Zusatzbewohner und maximal
+600 Einwohner je Haus. Selbst der maximale Ausbau aller elf Vorgängerstädte
+erreichte damit nur 5.722.200 Einwohner. Die angefragte Schwelle war unerreichbar.
+Die notwendige Änderung ist auf einen Datenwert beschränkt:
+residential_house.residentTierBonuses[24], ausschließlich Stufe 5.000:
+475 -> 1.000. Ein maximales Wohnhaus erhält dadurch 1.125 Einwohner.
+
+Beim optimalen belegten Stadtaufbau mit 17 Wohnhäusern und einem maximalen Park
+ergibt der bestehende Multiplikator 51:
+Vorher je Stadt: 17 * 600 * 51 = 520.200; elf Städte: 5.722.200.
+Nachher je Stadt: 17 * 1.125 * 51 = 975.375; elf Städte: 10.729.125.
+Der neue Gesamthöchstwert liegt 729.125 über dem Freischalttor. Diese Rechnung
+belegt die theoretische Erreichbarkeit und enthält keine Aussage zur realen
+Spielzeit oder einem menschlichen Durchlauf. Alle früheren Wohnhausstufen,
+Baukosten, Produktionskurven, Parkwerte und übrigen Gebäudefelder bleiben erhalten.
+
+Explizite Installation, Assets und Art
+
+Contentauthoring: Tools/Implementation/author_skunkfurt.py.
+Unity-Menü: Weedtopia/Cities/Install or Repair Skunkfurt.
+Entry point: Weedtopia.Editor.GameSetup.SkunkfurtAuthoring.Apply.
+Quellen: Assets/Weedtopia/Scripts/Editor/GameSetup/SkunkfurtAuthoring.cs und
+Assets/Weedtopia/Scripts/Editor/GameSetup/SkunkfurtCampaignAuthoring.cs.
+Es gibt keinen automatischen Installer bei Import, Start oder Domain Reload.
+Statische Stadtobjekte werden als Prefabs und Szeneobjekte gespeichert.
+
+Produktionsassets: Assets/Weedtopia/Production/Skunkfurt/.
+Enthalten sind die eigene BuildingVisuals.asset, ResidentVisuals.asset,
+DistrictMap.asset, Residents.prefab, ResidentStories.prefab, acht Architektur-
+prefabs, sechs Figurenprefabs und die wiederverwendeten 251 Gebäudevarianten.
+Die Projektorte sind MainBridgeCommons, CopperMarketHall und RiverArchive.
+Jonas’ sichtbare Varianten verwenden FairFinanceHouse oder RooftopGardenCourt.
+
+Artprompts: Docs/Skunkfurt/art_prompts.json.
+Artdateien: Assets/Weedtopia/Production/Skunkfurt/Art/resident_atlas.png,
+architecture_atlas.png und town_sign.png. Die Prompts dokumentieren sechs
+Figuren, acht isometrische Architektur-Cutouts und ein eigenes Stadtschild.
+Die Existenz und Integration dieser Assets ersetzt keine visuelle Abnahme.
+
+Erhaltung und bisherige technische Belege
+
+Docs/Skunkfurt/Preservation/baseline.json erfasst den Ausgangsstand.
+Docs/Skunkfurt/Preservation/preservation_receipt.json meldet keine entfernten
+Dateien, keine unerwarteten Änderungen und unveränderte alte Localeeinträge.
+Docs/Skunkfurt/Preservation/prefab_result.json dokumentiert die erhaltenen alten
+Szenen, Meta-Dateien und vorhandenen Prefab-Instanzdokumente. Der Reisebereich
+erhält den zusätzlichen Zielgraphen, BuildSettings den neuen Szeneneintrag.
+
+Der Contentauthor prüfte Referenzen, Platzhalter, positive neue Aktivitätsziele,
+Kapitel-/Projektgrenzen und den azyklischen Voraussetzungen-Graphen.
+content_idempotence_receipt.json enthält SHA256-Werte für Content und fünf Locales;
+alle sechs Dateien waren im zweiten Authorlauf byteidentisch, changed=false.
+authoring_receipt.json meldet die erste explizite Installation als passed mit
+6 Figuren, 18 Kapiteln, 18 Recurring, 3 Landmark-Projekten und 8 Architekturprefabs.
+
+Ergebnisteil – technisch abgeschlossen am 13.10.2026
+
+Verbindliche Ergebniszusammenfassung: Docs/Skunkfurt/validation_summary.json.
+Status: passed; keine offenen automatisierten Testfehler.
+Alle zwölf Source-Assemblies wurden kompiliert; ihre 352 Source-Hashes stimmen
+mit den finalen Dateien überein.
+
+163 unterschiedliche NUnit-Fälle sind bestanden: 122 Domainfälle, 12 Assetfälle
+und 29 PlayMode-Fälle. Darin enthalten sind 45 Skunkfurt-Domainfälle, sechs
+Skunkfurt-Assetfälle und sechs Skunkfurt-PlayMode-Fälle. Insgesamt wurden 212
+Testausführungen über vier reale Unity-Läufe aufgezeichnet.
+Der erste Lauf enthielt 17 Fehler in Prüffixtures beziehungsweise Zeitgrenzen.
+Alle 45 Skunkfurt-Domainfälle und die vier vollständigen Projektsimulationen
+wurden nach den dokumentierten Fixture-Reparaturen erneut erfolgreich geprüft.
+Alle 17 ursprünglichen Fehler besitzen damit einen späteren bestandenen Lauf;
+die ursprünglichen XML-Dateien bleiben erhalten. Details: test_fixture_repairs.json.
+
+Bestanden sind die Grenzen 9.999.999 / 10.000.000 / 10.000.001, die einmalige
+Starthilfe, historische Version-12-Migration, Korruptions- und Speicherfehlerfälle,
+der lokale Einstieg mit zwölf Hauptquests, frische Storyaktivität, beide Jonas-
+Entscheidungen nach Save/Continue und UI-Reisen durch alle zwölf Städte.
+Die wiederholte explizite Installation erhielt Stadtassets und gespeicherte
+Szenendateien. Die abschließenden Preservation-Prüfungen wurden nach allen
+Unity-Läufen frisch berechnet: elf alte Stadtszenen plus Bootstrap, ihre Metadaten
+und bisherigen Prefab-Overrides sind byteidentisch zum gesicherten Arbeitsstand.
+Es wurden keine vorhandenen Dateien entfernt und keine unerwarteten Änderungen
+am übernommenen Projektstand gefunden.
+
+Der Game-View-Lauf 20261013_072034_Capture_FinalGameView bestand mit 85 frischen
+PNG-Dateien. Seine vollständige 60-Fall-Matrix enthält drei UI-Szenarien in fünf
+Sprachen und vier Auflösungen. Keine automatisiert erkannten Textüberläufe.
+Beide Jonas-Varianten, Offline-Fortsetzung, richtige Wohnhausinspektion,
+Bodenankersortierung und alle zwölf Reiseziele wurden bestätigt.
+15 tatsächliche Bildstichproben wurden direkt angesehen und mit Hashes in
+visual_review.json dokumentiert. Kein blockierender GUI-Fehler wurde beobachtet.
+Gestalterischer Hinweis: Die Brückentafel ist als dekorativer Gemeinschaftsort
+mit eigenem Wasserstück sichtbar; eine funktionale Querung des Hauptflusses
+wird durch diese Aufnahme nicht gezeigt.
+
+Die hohen Bevölkerungs- und Storyzustände der Bildbelege sind beschleunigte
+Diagnosefixtures. Sie belegen keinen menschlichen Gesamtdurchlauf bis zehn
+Millionen Einwohner. Die technische Integration ersetzt keine visuelle Abnahme.
+Menschlicher Durchlauf, physische Gerätebedienung, Geräteaudio, Player-/WebGL-Build
+und muttersprachliche Textabnahme sind durch diesen Bericht nicht nachgewiesen.
+Es wird keine Releasefreigabe behauptet.

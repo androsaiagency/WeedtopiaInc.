@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="5" result="Failed(Child)" total="5" passed="3" failed="2" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-13 18:15:31Z" end-time="2026-10-13 18:30:38Z" duration="907,4367724">
+  <test-suite type="TestSuite" id="1000" name="Weedtopia" fullname="Weedtopia" runstate="Runnable" testcasecount="942" result="Failed" site="Child" start-time="2026-10-13 18:15:31Z" end-time="2026-10-13 18:30:38Z" duration="907.436772" total="5" passed="3" failed="2" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="2136" name="Weedtopia.Game.EditModeTests.dll" fullname="D:/Unity Games/Weedtopia Inc/WeedtopiaInc/Library/ScriptAssemblies/Weedtopia.Game.EditModeTests.dll" runstate="Runnable" testcasecount="726" result="Failed" site="Child" start-time="2026-10-13 18:15:31Z" end-time="2026-10-13 18:30:38Z" duration="907.376603" total="5" passed="3" failed="2" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="75504" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="2137" name="Weedtopia" fullname="Weedtopia" runstate="Runnable" testcasecount="726" result="Failed" site="Child" start-time="2026-10-13 18:15:31Z" end-time="2026-10-13 18:30:38Z" duration="907.354298" total="5" passed="3" failed="2" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="2138" name="Tests" fullname="Weedtopia.Tests" runstate="Runnable" testcasecount="726" result="Failed" site="Child" start-time="2026-10-13 18:15:31Z" end-time="2026-10-13 18:30:38Z" duration="907.332275" total="5" passed="3" failed="2" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1741" name="OfflineWorkerTests" fullname="Weedtopia.Tests.OfflineWorkerTests" classname="Weedtopia.Tests.OfflineWorkerTests" runstate="Runnable" testcasecount="13" result="Failed" site="Child" start-time="2026-10-13 18:15:31Z" end-time="2026-10-13 18:30:38Z" duration="907.235170" total="5" passed="3" failed="2" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1750" name="CancelledCalculationKeepsSessionBusyUntilRollbackAndNeverSaves" fullname="Weedtopia.Tests.OfflineWorkerTests.CancelledCalculationKeepsSessionBusyUntilRollbackAndNeverSaves" methodname="CancelledCalculationKeepsSessionBusyUntilRollbackAndNeverSaves" classname="Weedtopia.Tests.OfflineWorkerTests" runstate="Runnable" seed="340731666" result="Passed" start-time="2026-10-13 18:15:31Z" end-time="2026-10-13 18:18:29Z" duration="178.047169" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1749" name="FailedCommitRollsBackEveryFieldAndReferenceAndRetryGrantsVipOnce" fullname="Weedtopia.Tests.OfflineWorkerTests.FailedCommitRollsBackEveryFieldAndReferenceAndRetryGrantsVipOnce" methodname="FailedCommitRollsBackEveryFieldAndReferenceAndRetryGrantsVipOnce" classname="Weedtopia.Tests.OfflineWorkerTests" runstate="Runnable" seed="1714118630" result="Failed" start-time="2026-10-13 18:18:29Z" end-time="2026-10-13 18:24:19Z" duration="350.020187" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[Timeout value of 180000 ms was exceeded. If this is intended, increase the timeout value using a TimeoutAttribute.]]></message>
+                <stack-trace><![CDATA[]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1748" name="WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap" fullname="Weedtopia.Tests.OfflineWorkerTests.WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap" classname="Weedtopia.Tests.OfflineWorkerTests" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2026-10-13 18:24:19Z" end-time="2026-10-13 18:30:38Z" duration="379.146569" total="3" passed="2" failed="1" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1745" name="WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap(-100)" fullname="Weedtopia.Tests.OfflineWorkerTests.WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap(-100)" methodname="WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap" classname="Weedtopia.Tests.OfflineWorkerTests" runstate="Runnable" seed="230111661" result="Passed" start-time="2026-10-13 18:24:19Z" end-time="2026-10-13 18:24:22Z" duration="2.937892" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1746" name="WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap(0)" fullname="Weedtopia.Tests.OfflineWorkerTests.WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap(0)" methodname="WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap" classname="Weedtopia.Tests.OfflineWorkerTests" runstate="Runnable" seed="2006528327" result="Passed" start-time="2026-10-13 18:24:22Z" end-time="2026-10-13 18:24:25Z" duration="2.945298" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1747" name="WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap(86400)" fullname="Weedtopia.Tests.OfflineWorkerTests.WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap(86400)" methodname="WorkerPreservesUtcRollbackZeroElapsedAndEightHourCap" classname="Weedtopia.Tests.OfflineWorkerTests" runstate="Runnable" seed="2044992901" result="Failed" start-time="2026-10-13 18:24:25Z" end-time="2026-10-13 18:30:38Z" duration="372.870102" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[Timeout value of 180000 ms was exceeded. If this is intended, increase the timeout value using a TimeoutAttribute.]]></message>
+                  <stack-trace><![CDATA[]]></stack-trace>
+                </failure>
+                <output><![CDATA[Saving results to: C:/Users/Mein-PC/AppData/LocalLow/DefaultCompany/Weedtopia\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

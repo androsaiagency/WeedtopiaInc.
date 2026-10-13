@@ -94,7 +94,7 @@ namespace Weedtopia.Persistence
         private void MigrateContent(GameState state)
         {
             if (state.contentVersion >= definitions.version) return;
-            if (state.contentVersion < 1 || definitions.version > 9) throw new InvalidDataException("Unsupported content migration");
+            if (state.contentVersion < 1 || definitions.version > 14) throw new InvalidDataException("Unsupported content migration");
             // Validate the historical catalog before adding anything. A missing old building is corruption.
             var previous = JsonUtility.FromJson<GameDefinitions>(JsonUtility.ToJson(definitions));
             previous.version = state.contentVersion;

@@ -1,0 +1,42 @@
+{
+  "Assets/Weedtopia/Scripts/Tests/EditMode/SkunkfurtCampaignTests.cs": {
+    "beforeSha256": "5bceb26cac68dcf2921450ceb7f4699fb3630f55174ec98f5e47d7c426a7cd00",
+    "afterSha256": "5d58abaab4b05635e59c129937e6960c7c27e4170c077b4cc18aec39af234230",
+    "reason": "Keep the verified content13 catalog and final bonus1000 as exact historical migration/campaign regression; reject the actual unsupported future version."
+  },
+  "Assets/Weedtopia/Scripts/Tests/EditMode/GreatKushvilleCampaignTests.cs": {
+    "beforeSha256": "61a07cff3d0ac06bb07e203fe93610bfb4a7ff7e324eaa09aa7a0237bef828ec",
+    "afterSha256": "bc2a22e14dadf29e79c50a663348889cdc58d9d2d1cabe4c18bf918ce1382744",
+    "reason": "The unsupported future content version follows the current catalog instead of the now supported content14."
+  },
+  "Assets/Weedtopia/Scripts/Tests/EditMode/SaintMaryVilleCampaignTests.cs": {
+    "beforeSha256": "aac93089e44655205bf48124c9ad19d62445bea703d97ee9277f76ff8c006846",
+    "afterSha256": "c862009a9bc89a4433aceaae00baf67aa2c1a3e655950bfc58cf21d8333bf9f9",
+    "reason": "The unsupported future content version follows the current catalog instead of the now supported content14."
+  },
+  "Assets/Weedtopia/Scripts/Tests/EditMode/GoldenFlowerCampaignTests.cs": {
+    "beforeSha256": "15e0bd9c5956a6d9b44be3e9f70ddfec7a77ba9256ee57ba31f481746a608ddd",
+    "afterSha256": "835cb6f370161bc54d507d3b6c4fbcd141039e0f1278c48c02896d7e90f3da9c",
+    "reason": "The unsupported future content version follows the current catalog instead of the now supported content14."
+  },
+  "Assets/Weedtopia/Scripts/Tests/EditorAssets/SkunkfurtAssetTests.cs": {
+    "beforeSha256": "4a801a6803a74b2688017af4b3bb73a39e0c4f820999784fe7371f5af0769790",
+    "afterSha256": "d03e1f98168eaaf8c1df3e34bd5b0dbef58b8a40e9c32675319b03d82657925f",
+    "reason": "The twelfth city and its authored assets persist in campaigns with twelve or more destinations."
+  },
+  "Assets/Weedtopia/Scripts/Tests/PlayMode/SkunkfurtPlayModeTests.cs": {
+    "beforeSha256": "9498d052fdab579bd6d1b55e640e94da75c0a674fa94940d76a5dd320e678bde",
+    "afterSha256": "3139118c42181e9d5ff03cc5a8531ff7adcea3328e8b2907528273770fc5943d",
+    "reason": "Continue verifies every current travel row while the existing twelve-owned-city test still visits exactly its original12 destinations."
+  },
+  "Assets/Weedtopia/Scripts/Tests/EditMode/OfflineWorkerTests.cs": {
+    "beforeSha256": "8f8a5d83d55a4fbf1fe3389affcd9b7a156a230a35999f25bb7f2fa4358d658b",
+    "afterSha256": "5c55b1c103c75d728080675e0c33eea672fa996171f47a2c69da1f1199da460a",
+    "reason": "Bound the full content14 functional worker watchdog at600 seconds and the three multi-phase NUnit cases at900000 milliseconds. Actual thirteen-city reference/worker and failed-save/retry cases take350-373 seconds, exceeding the separate NUnit180-second default. All functional state-equivalence, cap, cancellation, rollback, retry andVIP assertions remain unchanged; this is not a production performance acceptance."
+  },
+  "Assets/Weedtopia/Scripts/Tests/EditMode/VipStoryTests.cs": {
+    "beforeSha256": "29ea387706416d1bb134a6cec3e10a2cc45624564c2343a8992d47d9e04e0006",
+    "afterSha256": "5c010cd7a61f8c085a7eadce1a8f13c5bcec8fd941d063cde137331bfaeb94b9",
+    "reason": "Correct HighestChapterIsReachableWithExistingHousingAndWorkerRules to use only active-city plots, select a park and seventeen houses through GameSession.ChoosePlot, and assert successful compatible caretaker assignments. The previous fixture changed plots in all thirteen cities and bypassed the required park reservation; every other test and the existing reachability/story/save assertions remain unchanged."
+  }
+}

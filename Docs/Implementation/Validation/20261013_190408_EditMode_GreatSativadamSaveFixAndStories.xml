@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="90" result="Failed(Child)" total="90" passed="87" failed="3" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-13 17:04:26Z" end-time="2026-10-13 17:13:05Z" duration="518,788764">
+  <test-suite type="TestSuite" id="1000" name="Weedtopia" fullname="Weedtopia" runstate="Runnable" testcasecount="941" result="Failed" site="Child" start-time="2026-10-13 17:04:26Z" end-time="2026-10-13 17:13:05Z" duration="518.788764" total="90" passed="87" failed="3" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="2135" name="Weedtopia.Game.EditModeTests.dll" fullname="D:/Unity Games/Weedtopia Inc/WeedtopiaInc/Library/ScriptAssemblies/Weedtopia.Game.EditModeTests.dll" runstate="Runnable" testcasecount="726" result="Failed" site="Child" start-time="2026-10-13 17:04:26Z" end-time="2026-10-13 17:13:05Z" duration="518.744259" total="90" passed="87" failed="3" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="74836" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="2136" name="Weedtopia" fullname="Weedtopia" runstate="Runnable" testcasecount="726" result="Failed" site="Child" start-time="2026-10-13 17:04:26Z" end-time="2026-10-13 17:13:05Z" duration="518.730819" total="90" passed="87" failed="3" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="2137" name="Tests" fullname="Weedtopia.Tests" runstate="Runnable" testcasecount="726" result="Failed" site="Child" start-time="2026-10-13 17:04:26Z" end-time="2026-10-13 17:13:05Z" duration="518.717972" total="90" passed="87" failed="3" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="2138" name="EditMode" fullname="Weedtopia.Tests.EditMode" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-13 17:04:26Z" end-time="2026-10-13 17:04:26Z" duration="0.044090" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="2129" name="LocalizationTests" fullname="Weedtopia.Tests.EditMode.LocalizationTests" classname="Weedtopia.Tests.EditMode.LocalizationTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-13 17:04:26Z" end-time="2026-10-13 17:04:26Z" duration="0.041950" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="2133" name="CulturesFormatNumbersWithoutChangingAmountSerialization" fullname="Weedtopia.Tests.EditMode.LocalizationTests.CulturesFormatNumbersWithoutChangingAmountSerialization" methodname="CulturesFormatNumbersWithoutChangingAmountSerialization" classname="Weedtopia.Tests.EditMode.LocalizationTests" runstate="Runnable" seed="367241679" result="Passed" start-time="2026-10-13 17:04:26Z" end-time="2026-10-13 17:04:26Z" duration="0.017643" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2134" name="IndependentDefinitionLookupsDoNotShareMutableLanguageState" fullname="Weedtopia.Tests.EditMode.LocalizationTests.IndependentDefinitionLookupsDoNotShareMutableLanguageState" methodname="IndependentDefinitionLookupsDoNotShareMutableLanguageState" classname="Weedtopia.Tests.EditMode.LocalizationTests" runstate="Runnable" seed="1432104380" result="Passed" start-time="2026-10-13 17:04:26Z" end-time="2026-10-13 17:04:26Z" duration="0.001196" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2131" name="MissingTranslationFallsBackAndUnknownKeyRemainsVisible" fullname="Weedtopia.Tests.EditMode.LocalizationTests.MissingTranslationFallsBackAndUnknownKeyRemainsVisible" methodname="MissingTranslationFallsBackAndUnknownKeyRemainsVisible" classname="Weedtopia.Tests.EditMode.LocalizationTests" runstate="Runnable" seed="472339425" result="Passed" start-time="2026-10-13 17:04:26Z" end-time="2026-10-13 17:04:26Z" duration="0.001580" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2132" name="RejectsChangedPlaceholdersAndDuplicateKeys" fullname="Weedtopia.Tests.EditMode.LocalizationTests.RejectsChangedPlaceholdersAndDuplicateKeys" methodname="RejectsChangedPlaceholdersAndDuplicateKeys" classname="Weedtopia.Tests.EditMode.LocalizationTests" runstate="Runnable" seed="791579165" result="Passed" start-time="2026-10-13 17:04:26Z" end-time="2026-10-13 17:04:26Z" duration="0.002829" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2130" name="SelectPublishesOnceAndInvalidCodesPreserveCurrentLanguage" fullname="Weedtopia.Tests.EditMode.LocalizationTests.SelectPublishesOnceAndInvalidCodesPreserveCurrentLanguage" methodname="SelectPublishesOnceAndInvalidCodesPreserveCurrentLanguage" classname="Weedtopia.Tests.EditMode.LocalizationTests" runstate="Runnable" seed="1400917881" result="Passed" start-time="2026-10-13 17:04:26Z" end-time="2026-10-13 17:04:26Z" duration="0.000875" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+          <test-suite type="TestFixture" id="1513" name="GreatSativadamCampaignTests" fullname="Weedtopia.Tests.GreatSativadamCampaignTests" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" testcasecount="56" result="Failed" site="Child" start-time="2026-10-13 17:04:26Z" end-time="2026-10-13 17:12:52Z" duration="505.461832" total="56" passed="53" failed="3" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="ParameterizedMethod" id="1532" name="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-10-13 17:04:26Z" end-time="2026-10-13 17:05:49Z" duration="82.341084" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1520" name="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(&quot;burning_hills&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(&quot;burning_hills&quot;)" methodname="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="563672481" result="Passed" start-time="2026-10-13 17:04:26Z" end-time="2026-10-13 17:04:34Z" duration="7.613529" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1521" name="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(&quot;big_rock_city&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(&quot;big_rock_city&quot;)" methodname="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1595537283" result="Passed" start-time="2026-10-13 17:04:34Z" end-time="2026-10-13 17:04:41Z" duration="6.924238" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1522" name="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(&quot;seven_hills&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(&quot;seven_hills&quot;)" methodname="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1703136237" result="Passed" start-time="2026-10-13 17:04:41Z" end-time="2026-10-13 17:04:48Z" duration="6.684442" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1523" name="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(&quot;little_montana&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(&quot;little_montana&quot;)" methodname="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="52522548" result="Passed" start-time="2026-10-13 17:04:48Z" end-time="2026-10-13 17:04:54Z" duration="6.737561" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1524" name="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(&quot;cassa_vadela&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(&quot;cassa_vadela&quot;)" methodname="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="348247505" result="Passed" start-time="2026-10-13 17:04:54Z" end-time="2026-10-13 17:05:01Z" duration="6.734454" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1525" name="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(&quot;mark_wood_city&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(&quot;mark_wood_city&quot;)" methodname="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="333521246" result="Passed" start-time="2026-10-13 17:05:01Z" end-time="2026-10-13 17:05:08Z" duration="6.680511" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1526" name="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(&quot;green_leaf_village&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(&quot;green_leaf_village&quot;)" methodname="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="398167462" result="Passed" start-time="2026-10-13 17:05:08Z" end-time="2026-10-13 17:05:15Z" duration="6.754439" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1527" name="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(&quot;purple_garden&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(&quot;purple_garden&quot;)" methodname="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1912963919" result="Passed" start-time="2026-10-13 17:05:15Z" end-time="2026-10-13 17:05:21Z" duration="6.775207" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1528" name="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(&quot;golden_flower&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(&quot;golden_flower&quot;)" methodname="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="683428671" result="Passed" start-time="2026-10-13 17:05:21Z" end-time="2026-10-13 17:05:29Z" duration="7.228234" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1529" name="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(&quot;saint_mary_ville&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(&quot;saint_mary_ville&quot;)" methodname="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="536845011" result="Passed" start-time="2026-10-13 17:05:29Z" end-time="2026-10-13 17:05:35Z" duration="6.744243" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1530" name="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(&quot;great_kushville&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(&quot;great_kushville&quot;)" methodname="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1960885738" result="Passed" start-time="2026-10-13 17:05:35Z" end-time="2026-10-13 17:05:42Z" duration="6.765965" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1531" name="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(&quot;skunkfurt&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce(&quot;skunkfurt&quot;)" methodname="AcceptanceFromEverySourceCityGrantsTheBridgeExactlyOnce" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1700280971" result="Passed" start-time="2026-10-13 17:05:42Z" end-time="2026-10-13 17:05:49Z" duration="6.693129" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1571" name="AcceptedStoryCapturesExistingActivityAsBaselineAndSurvivesContinue" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.AcceptedStoryCapturesExistingActivityAsBaselineAndSurvivesContinue" methodname="AcceptedStoryCapturesExistingActivityAsBaselineAndSurvivesContinue" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1814545451" result="Passed" start-time="2026-10-13 17:05:49Z" end-time="2026-10-13 17:05:56Z" duration="6.763913" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1547" name="BalancedBoundaryIncludesTheTwelfthSourceCity" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.BalancedBoundaryIncludesTheTwelfthSourceCity" methodname="BalancedBoundaryIncludesTheTwelfthSourceCity" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1519275586" result="Passed" start-time="2026-10-13 17:05:56Z" end-time="2026-10-13 17:06:02Z" duration="6.114614" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1572" name="CommunityProjectsFollowResidentChaptersWithoutBlockingTheirOwnPrerequisites" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.CommunityProjectsFollowResidentChaptersWithoutBlockingTheirOwnPrerequisites" methodname="CommunityProjectsFollowResidentChaptersWithoutBlockingTheirOwnPrerequisites" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="222794937" result="Passed" start-time="2026-10-13 17:06:02Z" end-time="2026-10-13 17:06:07Z" duration="4.976561" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1570" name="EveryStoryChoiceRecurringOfferAndCommunityProjectPersists" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.EveryStoryChoiceRecurringOfferAndCommunityProjectPersists" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-13 17:06:07Z" end-time="2026-10-13 17:06:21Z" duration="14.871310" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1568" name="EveryStoryChoiceRecurringOfferAndCommunityProjectPersists(0)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.EveryStoryChoiceRecurringOfferAndCommunityProjectPersists(0)" methodname="EveryStoryChoiceRecurringOfferAndCommunityProjectPersists" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1614261548" result="Passed" start-time="2026-10-13 17:06:07Z" end-time="2026-10-13 17:06:14Z" duration="7.476314" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1569" name="EveryStoryChoiceRecurringOfferAndCommunityProjectPersists(1)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.EveryStoryChoiceRecurringOfferAndCommunityProjectPersists(1)" methodname="EveryStoryChoiceRecurringOfferAndCommunityProjectPersists" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="2056498752" result="Passed" start-time="2026-10-13 17:06:14Z" end-time="2026-10-13 17:06:21Z" duration="7.369828" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1549" name="FailedSaveRollsBackCharterRewardPopulationLatchAndTravel" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.FailedSaveRollsBackCharterRewardPopulationLatchAndTravel" methodname="FailedSaveRollsBackCharterRewardPopulationLatchAndTravel" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="240132536" result="Passed" start-time="2026-10-13 17:06:21Z" end-time="2026-10-13 17:06:28Z" duration="6.990922" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1553" name="FinalHousingTierMakesTwentyMillionReachableAndPreservesEarlierPopulationBands" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.FinalHousingTierMakesTwentyMillionReachableAndPreservesEarlierPopulationBands" methodname="FinalHousingTierMakesTwentyMillionReachableAndPreservesEarlierPopulationBands" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="265620740" result="Passed" start-time="2026-10-13 17:06:28Z" end-time="2026-10-13 17:06:35Z" duration="6.690904" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1552" name="FullyDevelopedVersionThirteenHousingReachesTwentyMillionAfterMigration" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.FullyDevelopedVersionThirteenHousingReachesTwentyMillionAfterMigration" methodname="FullyDevelopedVersionThirteenHousingReachesTwentyMillionAfterMigration" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="492836609" result="Passed" start-time="2026-10-13 17:06:35Z" end-time="2026-10-13 17:06:49Z" duration="13.752218" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1565" name="HousingDensityRejectsNegativeAndUnsupportedBonuses" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.HousingDensityRejectsNegativeAndUnsupportedBonuses" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-13 17:06:49Z" end-time="2026-10-13 17:06:59Z" duration="9.931630" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1563" name="HousingDensityRejectsNegativeAndUnsupportedBonuses(-1)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.HousingDensityRejectsNegativeAndUnsupportedBonuses(-1)" methodname="HousingDensityRejectsNegativeAndUnsupportedBonuses" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="2046666097" result="Passed" start-time="2026-10-13 17:06:49Z" end-time="2026-10-13 17:06:54Z" duration="4.936016" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1564" name="HousingDensityRejectsNegativeAndUnsupportedBonuses(2001)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.HousingDensityRejectsNegativeAndUnsupportedBonuses(2001)" methodname="HousingDensityRejectsNegativeAndUnsupportedBonuses" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="528701819" result="Passed" start-time="2026-10-13 17:06:54Z" end-time="2026-10-13 17:06:59Z" duration="4.993639" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1566" name="HousingSelectionReservesAParkAndNeverAllowsAnEighteenthHouse" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.HousingSelectionReservesAParkAndNeverAllowsAnEighteenthHouse" methodname="HousingSelectionReservesAParkAndNeverAllowsAnEighteenthHouse" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1086478835" result="Passed" start-time="2026-10-13 17:06:59Z" end-time="2026-10-13 17:07:06Z" duration="6.913831" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1576" name="JoostCanalChoicePersistsWithoutChangingOtherCities" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.JoostCanalChoicePersistsWithoutChangingOtherCities" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-13 17:07:06Z" end-time="2026-10-13 17:07:21Z" duration="15.221192" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1574" name="JoostCanalChoicePersistsWithoutChangingOtherCities(&quot;repair_wharf&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.JoostCanalChoicePersistsWithoutChangingOtherCities(&quot;repair_wharf&quot;)" methodname="JoostCanalChoicePersistsWithoutChangingOtherCities" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1409304244" result="Passed" start-time="2026-10-13 17:07:06Z" end-time="2026-10-13 17:07:13Z" duration="7.702637" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1575" name="JoostCanalChoicePersistsWithoutChangingOtherCities(&quot;learning_dock&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.JoostCanalChoicePersistsWithoutChangingOtherCities(&quot;learning_dock&quot;)" methodname="JoostCanalChoicePersistsWithoutChangingOtherCities" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1363760677" result="Passed" start-time="2026-10-13 17:07:13Z" end-time="2026-10-13 17:07:21Z" duration="7.516820" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1573" name="LocalFoundationCompletesTwelveMainQuestsUsingOnlyTheCharterBridge" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.LocalFoundationCompletesTwelveMainQuestsUsingOnlyTheCharterBridge" methodname="LocalFoundationCompletesTwelveMainQuestsUsingOnlyTheCharterBridge" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1551146475" result="Passed" start-time="2026-10-13 17:07:21Z" end-time="2026-10-13 17:09:32Z" duration="131.133139" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1567" name="MigrationRejectsHistoricalCorruptionForgedChartersAndUnsupportedFutureVersions" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.MigrationRejectsHistoricalCorruptionForgedChartersAndUnsupportedFutureVersions" methodname="MigrationRejectsHistoricalCorruptionForgedChartersAndUnsupportedFutureVersions" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="785377736" result="Passed" start-time="2026-10-13 17:09:32Z" end-time="2026-10-13 17:09:41Z" duration="9.013268" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1546" name="PlannedEmptyHousingAndStoredCityHighsCannotCreateAnInvitation" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.PlannedEmptyHousingAndStoredCityHighsCannotCreateAnInvitation" methodname="PlannedEmptyHousingAndStoredCityHighsCannotCreateAnInvitation" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="421444682" result="Passed" start-time="2026-10-13 17:09:41Z" end-time="2026-10-13 17:09:46Z" duration="4.991036" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1550" name="PopulationUnlockedResidentsRemainAfterDeclineAndContinue" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.PopulationUnlockedResidentsRemainAfterDeclineAndContinue" methodname="PopulationUnlockedResidentsRemainAfterDeclineAndContinue" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="685356341" result="Passed" start-time="2026-10-13 17:09:46Z" end-time="2026-10-13 17:09:53Z" duration="6.708050" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1548" name="ReachedTwentyMillionIsLatchedAcrossDeclineSaveAndContinue" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.ReachedTwentyMillionIsLatchedAcrossDeclineSaveAndContinue" methodname="ReachedTwentyMillionIsLatchedAcrossDeclineSaveAndContinue" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="2014589673" result="Passed" start-time="2026-10-13 17:09:53Z" end-time="2026-10-13 17:10:00Z" duration="7.175644" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1545" name="SeparateHistoricalHighsAndDestinationResidentsNeverCountTowardsTwentyMillion" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.SeparateHistoricalHighsAndDestinationResidentsNeverCountTowardsTwentyMillion" methodname="SeparateHistoricalHighsAndDestinationResidentsNeverCountTowardsTwentyMillion" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="789165022" result="Passed" start-time="2026-10-13 17:10:00Z" end-time="2026-10-13 17:10:06Z" duration="5.725459" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1519" name="SixOriginalBiographiesAndEighteenChaptersConnectPopulationProductionAndPersonalProgress" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.SixOriginalBiographiesAndEighteenChaptersConnectPopulationProductionAndPersonalProgress" methodname="SixOriginalBiographiesAndEighteenChaptersConnectPopulationProductionAndPersonalProgress" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1104287701" result="Passed" start-time="2026-10-13 17:10:06Z" end-time="2026-10-13 17:10:11Z" duration="5.082741" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1560" name="StoryMilestoneLimitFollowsAuthoredHousingCapacity" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.StoryMilestoneLimitFollowsAuthoredHousingCapacity" methodname="StoryMilestoneLimitFollowsAuthoredHousingCapacity" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1828507820" result="Passed" start-time="2026-10-13 17:10:11Z" end-time="2026-10-13 17:10:18Z" duration="6.947296" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1561" name="StoryMilestoneLimitFollowsTheCityCatalogPlotCount" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.StoryMilestoneLimitFollowsTheCityCatalogPlotCount" methodname="StoryMilestoneLimitFollowsTheCityCatalogPlotCount" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="430650623" result="Passed" start-time="2026-10-13 17:10:18Z" end-time="2026-10-13 17:10:25Z" duration="7.112507" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1562" name="StoryMilestoneLimitRequiresAResidentAttributeInTheHousingManagerRole" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.StoryMilestoneLimitRequiresAResidentAttributeInTheHousingManagerRole" methodname="StoryMilestoneLimitRequiresAResidentAttributeInTheHousingManagerRole" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="936429753" result="Failed" label="Error" start-time="2026-10-13 17:10:25Z" end-time="2026-10-13 17:10:31Z" duration="5.889815" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[System.ArgumentException : name.invalid]]></message>
+                <stack-trace><![CDATA[  at Weedtopia.Domain.GameState.Create (Weedtopia.Domain.GameDefinitions defs, System.String name, System.DateTime utc, System.UInt32 seed) [0x0001f] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\GameState.cs:98 
+  at Weedtopia.Tests.GreatSativadamCampaignTests.StoryMilestoneLimitRequiresAResidentAttributeInTheHousingManagerRole () [0x00063] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\EditMode\GreatSativadamCampaignTests.cs:308 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <1eb9db207454431c84a47bcd81e79c37>:0 ]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1556" name="StoryMilestoneRejectsNegativeOrUnreachablePopulation" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.StoryMilestoneRejectsNegativeOrUnreachablePopulation" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-13 17:10:31Z" end-time="2026-10-13 17:10:41Z" duration="10.251902" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1554" name="StoryMilestoneRejectsNegativeOrUnreachablePopulation(False)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.StoryMilestoneRejectsNegativeOrUnreachablePopulation(False)" methodname="StoryMilestoneRejectsNegativeOrUnreachablePopulation" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="904965465" result="Passed" start-time="2026-10-13 17:10:31Z" end-time="2026-10-13 17:10:36Z" duration="5.118589" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1555" name="StoryMilestoneRejectsNegativeOrUnreachablePopulation(True)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.StoryMilestoneRejectsNegativeOrUnreachablePopulation(True)" methodname="StoryMilestoneRejectsNegativeOrUnreachablePopulation" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="131139282" result="Passed" start-time="2026-10-13 17:10:36Z" end-time="2026-10-13 17:10:41Z" duration="5.131321" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1577" name="ThirteenCitySaveSurvivesOfflineAndVisitsEveryOwnedCityWithoutMovingWorkersOrLocalQuestAndStoryHistories" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.ThirteenCitySaveSurvivesOfflineAndVisitsEveryOwnedCityWithoutMovingWorkersOrLocalQuestAndStoryHistories" methodname="ThirteenCitySaveSurvivesOfflineAndVisitsEveryOwnedCityWithoutMovingWorkersOrLocalQuestAndStoryHistories" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="470817516" result="Passed" start-time="2026-10-13 17:10:41Z" end-time="2026-10-13 17:10:50Z" duration="8.578578" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1514" name="ThirteenthCityHasItsOwnRoutesSixPermanentResidentsAndThreeCommunityProjects" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.ThirteenthCityHasItsOwnRoutesSixPermanentResidentsAndThreeCommunityProjects" methodname="ThirteenthCityHasItsOwnRoutesSixPermanentResidentsAndThreeCommunityProjects" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1700158863" result="Passed" start-time="2026-10-13 17:10:50Z" end-time="2026-10-13 17:10:55Z" duration="5.878582" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1518" name="TwentyMillionBoundaryUsesActualSimultaneousPopulation" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.TwentyMillionBoundaryUsesActualSimultaneousPopulation" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-13 17:10:55Z" end-time="2026-10-13 17:11:13Z" duration="17.312575" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1515" name="TwentyMillionBoundaryUsesActualSimultaneousPopulation(19999999,False)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.TwentyMillionBoundaryUsesActualSimultaneousPopulation(19999999,False)" methodname="TwentyMillionBoundaryUsesActualSimultaneousPopulation" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="263616129" result="Passed" start-time="2026-10-13 17:10:55Z" end-time="2026-10-13 17:11:01Z" duration="5.959930" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1516" name="TwentyMillionBoundaryUsesActualSimultaneousPopulation(20000000,True)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.TwentyMillionBoundaryUsesActualSimultaneousPopulation(20000000,True)" methodname="TwentyMillionBoundaryUsesActualSimultaneousPopulation" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1907582889" result="Passed" start-time="2026-10-13 17:11:01Z" end-time="2026-10-13 17:11:07Z" duration="5.654044" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1517" name="TwentyMillionBoundaryUsesActualSimultaneousPopulation(20000001,True)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.TwentyMillionBoundaryUsesActualSimultaneousPopulation(20000001,True)" methodname="TwentyMillionBoundaryUsesActualSimultaneousPopulation" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="270351133" result="Passed" start-time="2026-10-13 17:11:07Z" end-time="2026-10-13 17:11:13Z" duration="5.696487" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="ParameterizedMethod" id="1544" name="UnacceptedCitiesCannotContributePopulation" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.UnacceptedCitiesCannotContributePopulation" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-13 17:11:13Z" end-time="2026-10-13 17:12:28Z" duration="75.640144" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1533" name="UnacceptedCitiesCannotContributePopulation(&quot;big_rock_city&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.UnacceptedCitiesCannotContributePopulation(&quot;big_rock_city&quot;)" methodname="UnacceptedCitiesCannotContributePopulation" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1115733542" result="Passed" start-time="2026-10-13 17:11:13Z" end-time="2026-10-13 17:11:20Z" duration="6.870277" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1534" name="UnacceptedCitiesCannotContributePopulation(&quot;seven_hills&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.UnacceptedCitiesCannotContributePopulation(&quot;seven_hills&quot;)" methodname="UnacceptedCitiesCannotContributePopulation" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1941264181" result="Passed" start-time="2026-10-13 17:11:20Z" end-time="2026-10-13 17:11:26Z" duration="6.780123" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1535" name="UnacceptedCitiesCannotContributePopulation(&quot;little_montana&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.UnacceptedCitiesCannotContributePopulation(&quot;little_montana&quot;)" methodname="UnacceptedCitiesCannotContributePopulation" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="473305714" result="Passed" start-time="2026-10-13 17:11:26Z" end-time="2026-10-13 17:11:33Z" duration="6.823636" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1536" name="UnacceptedCitiesCannotContributePopulation(&quot;cassa_vadela&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.UnacceptedCitiesCannotContributePopulation(&quot;cassa_vadela&quot;)" methodname="UnacceptedCitiesCannotContributePopulation" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="885644750" result="Passed" start-time="2026-10-13 17:11:33Z" end-time="2026-10-13 17:11:40Z" duration="6.830268" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1537" name="UnacceptedCitiesCannotContributePopulation(&quot;mark_wood_city&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.UnacceptedCitiesCannotContributePopulation(&quot;mark_wood_city&quot;)" methodname="UnacceptedCitiesCannotContributePopulation" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1336875252" result="Passed" start-time="2026-10-13 17:11:40Z" end-time="2026-10-13 17:11:47Z" duration="6.905322" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1538" name="UnacceptedCitiesCannotContributePopulation(&quot;green_leaf_village&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.UnacceptedCitiesCannotContributePopulation(&quot;green_leaf_village&quot;)" methodname="UnacceptedCitiesCannotContributePopulation" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="2092670789" result="Passed" start-time="2026-10-13 17:11:47Z" end-time="2026-10-13 17:11:54Z" duration="6.928484" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1539" name="UnacceptedCitiesCannotContributePopulation(&quot;purple_garden&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.UnacceptedCitiesCannotContributePopulation(&quot;purple_garden&quot;)" methodname="UnacceptedCitiesCannotContributePopulation" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1465627366" result="Passed" start-time="2026-10-13 17:11:54Z" end-time="2026-10-13 17:12:01Z" duration="7.209205" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1540" name="UnacceptedCitiesCannotContributePopulation(&quot;golden_flower&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.UnacceptedCitiesCannotContributePopulation(&quot;golden_flower&quot;)" methodname="UnacceptedCitiesCannotContributePopulation" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1764450390" result="Passed" start-time="2026-10-13 17:12:01Z" end-time="2026-10-13 17:12:08Z" duration="6.955170" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1541" name="UnacceptedCitiesCannotContributePopulation(&quot;saint_mary_ville&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.UnacceptedCitiesCannotContributePopulation(&quot;saint_mary_ville&quot;)" methodname="UnacceptedCitiesCannotContributePopulation" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1317197163" result="Passed" start-time="2026-10-13 17:12:08Z" end-time="2026-10-13 17:12:15Z" duration="6.783429" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1542" name="UnacceptedCitiesCannotContributePopulation(&quot;great_kushville&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.UnacceptedCitiesCannotContributePopulation(&quot;great_kushville&quot;)" methodname="UnacceptedCitiesCannotContributePopulation" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1857207055" result="Passed" start-time="2026-10-13 17:12:15Z" end-time="2026-10-13 17:12:22Z" duration="6.768327" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1543" name="UnacceptedCitiesCannotContributePopulation(&quot;skunkfurt&quot;)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.UnacceptedCitiesCannotContributePopulation(&quot;skunkfurt&quot;)" methodname="UnacceptedCitiesCannotContributePopulation" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="849627396" result="Passed" start-time="2026-10-13 17:12:22Z" end-time="2026-10-13 17:12:28Z" duration="6.780836" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="1551" name="VersionThirteenMigrationPreservesEveryPreviousCityWorkerCargoStoryAndInventoryAndIsIdempotent" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.VersionThirteenMigrationPreservesEveryPreviousCityWorkerCargoStoryAndInventoryAndIsIdempotent" methodname="VersionThirteenMigrationPreservesEveryPreviousCityWorkerCargoStoryAndInventoryAndIsIdempotent" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1356640965" result="Passed" start-time="2026-10-13 17:12:28Z" end-time="2026-10-13 17:12:40Z" duration="11.830392" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1559" name="VersionThirteenStoryMilestonePreservesItsLegacySaveBoundary" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.VersionThirteenStoryMilestonePreservesItsLegacySaveBoundary" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2026-10-13 17:12:40Z" end-time="2026-10-13 17:12:52Z" duration="11.609372" total="2" passed="0" failed="2" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1557" name="VersionThirteenStoryMilestonePreservesItsLegacySaveBoundary(1000000)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.VersionThirteenStoryMilestonePreservesItsLegacySaveBoundary(1000000)" methodname="VersionThirteenStoryMilestonePreservesItsLegacySaveBoundary" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1506416045" result="Failed" label="Error" start-time="2026-10-13 17:12:40Z" end-time="2026-10-13 17:12:46Z" duration="5.796252" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[System.ArgumentException : name.invalid]]></message>
+                  <stack-trace><![CDATA[  at Weedtopia.Domain.GameState.Create (Weedtopia.Domain.GameDefinitions defs, System.String name, System.DateTime utc, System.UInt32 seed) [0x0001f] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\GameState.cs:98 
+  at Weedtopia.Tests.GreatSativadamCampaignTests.VersionThirteenStoryMilestonePreservesItsLegacySaveBoundary (System.Int32 milestone) [0x00013] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\EditMode\GreatSativadamCampaignTests.cs:273 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <1eb9db207454431c84a47bcd81e79c37>:0 ]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case id="1558" name="VersionThirteenStoryMilestonePreservesItsLegacySaveBoundary(1000001)" fullname="Weedtopia.Tests.GreatSativadamCampaignTests.VersionThirteenStoryMilestonePreservesItsLegacySaveBoundary(1000001)" methodname="VersionThirteenStoryMilestonePreservesItsLegacySaveBoundary" classname="Weedtopia.Tests.GreatSativadamCampaignTests" runstate="Runnable" seed="1888553900" result="Failed" label="Error" start-time="2026-10-13 17:12:46Z" end-time="2026-10-13 17:12:52Z" duration="5.811320" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[System.ArgumentException : name.invalid]]></message>
+                  <stack-trace><![CDATA[  at Weedtopia.Domain.GameState.Create (Weedtopia.Domain.GameDefinitions defs, System.String name, System.DateTime utc, System.UInt32 seed) [0x0001f] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Runtime\Domain\GameState.cs:98 
+  at Weedtopia.Tests.GreatSativadamCampaignTests.VersionThirteenStoryMilestonePreservesItsLegacySaveBoundary (System.Int32 milestone) [0x00013] in D:\Unity Games\Weedtopia Inc\WeedtopiaInc\Assets\Weedtopia\Scripts\Tests\EditMode\GreatSativadamCampaignTests.cs:273 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <1eb9db207454431c84a47bcd81e79c37>:0 ]]></stack-trace>
+                </failure>
+              </test-case>
+            </test-suite>
+          </test-suite>
+          <test-suite type="TestFixture" id="2097" name="VipStoryTests" fullname="Weedtopia.Tests.VipStoryTests" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" testcasecount="29" result="Passed" start-time="2026-10-13 17:12:52Z" end-time="2026-10-13 17:13:05Z" duration="13.133766" total="29" passed="29" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="2098" name="AllApprovedCharactersChaptersAndRecurringPoolsValidate" fullname="Weedtopia.Tests.VipStoryTests.AllApprovedCharactersChaptersAndRecurringPoolsValidate" methodname="AllApprovedCharactersChaptersAndRecurringPoolsValidate" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1496629225" result="Passed" start-time="2026-10-13 17:12:52Z" end-time="2026-10-13 17:12:52Z" duration="0.428980" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="2116" name="AllFortyPersonalChaptersAndFiveCollaborationsCompleteAndRemainSaved" fullname="Weedtopia.Tests.VipStoryTests.AllFortyPersonalChaptersAndFiveCollaborationsCompleteAndRemainSaved" methodname="AllFortyPersonalChaptersAndFiveCollaborationsCompleteAndRemainSaved" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="700429937" result="Passed" start-time="2026-10-13 17:12:52Z" end-time="2026-10-13 17:12:54Z" duration="1.977643" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="2114" name="ChoicesBaselinesAndMemoriesSurviveSavingWithoutNewRewards" fullname="Weedtopia.Tests.VipStoryTests.ChoicesBaselinesAndMemoriesSurviveSavingWithoutNewRewards" methodname="ChoicesBaselinesAndMemoriesSurviveSavingWithoutNewRewards" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="2097458171" result="Passed" start-time="2026-10-13 17:12:54Z" end-time="2026-10-13 17:12:55Z" duration="0.506817" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="2117" name="CollaborationsRequireTheActualEarlierChaptersAndCannotPayTwice" fullname="Weedtopia.Tests.VipStoryTests.CollaborationsRequireTheActualEarlierChaptersAndCannotPayTwice" methodname="CollaborationsRequireTheActualEarlierChaptersAndCannotPayTwice" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1891164748" result="Passed" start-time="2026-10-13 17:12:55Z" end-time="2026-10-13 17:12:55Z" duration="0.320482" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="2125" name="CorruptProgressIsRejected" fullname="Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-13 17:12:55Z" end-time="2026-10-13 17:12:58Z" duration="2.985107" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="2118" name="CorruptProgressIsRejected(&quot;id&quot;)" fullname="Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(&quot;id&quot;)" methodname="CorruptProgressIsRejected" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="979086857" result="Passed" start-time="2026-10-13 17:12:55Z" end-time="2026-10-13 17:12:56Z" duration="0.466801" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2119" name="CorruptProgressIsRejected(&quot;id_empty&quot;)" fullname="Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(&quot;id_empty&quot;)" methodname="CorruptProgressIsRejected" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="691174084" result="Passed" start-time="2026-10-13 17:12:56Z" end-time="2026-10-13 17:12:56Z" duration="0.417044" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2120" name="CorruptProgressIsRejected(&quot;choice&quot;)" fullname="Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(&quot;choice&quot;)" methodname="CorruptProgressIsRejected" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1034209688" result="Passed" start-time="2026-10-13 17:12:56Z" end-time="2026-10-13 17:12:56Z" duration="0.422056" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2121" name="CorruptProgressIsRejected(&quot;baseline&quot;)" fullname="Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(&quot;baseline&quot;)" methodname="CorruptProgressIsRejected" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1163959367" result="Passed" start-time="2026-10-13 17:12:56Z" end-time="2026-10-13 17:12:57Z" duration="0.419947" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2122" name="CorruptProgressIsRejected(&quot;history&quot;)" fullname="Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(&quot;history&quot;)" methodname="CorruptProgressIsRejected" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1487806175" result="Passed" start-time="2026-10-13 17:12:57Z" end-time="2026-10-13 17:12:57Z" duration="0.414379" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2123" name="CorruptProgressIsRejected(&quot;scale&quot;)" fullname="Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(&quot;scale&quot;)" methodname="CorruptProgressIsRejected" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1630069118" result="Passed" start-time="2026-10-13 17:12:57Z" end-time="2026-10-13 17:12:58Z" duration="0.419297" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2124" name="CorruptProgressIsRejected(&quot;time&quot;)" fullname="Weedtopia.Tests.VipStoryTests.CorruptProgressIsRejected(&quot;time&quot;)" methodname="CorruptProgressIsRejected" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="69499604" result="Passed" start-time="2026-10-13 17:12:58Z" end-time="2026-10-13 17:12:58Z" duration="0.420824" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="2127" name="FailedDiskWritesRestoreAcceptedQuestsAndAllClaimedRewards" fullname="Weedtopia.Tests.VipStoryTests.FailedDiskWritesRestoreAcceptedQuestsAndAllClaimedRewards" methodname="FailedDiskWritesRestoreAcceptedQuestsAndAllClaimedRewards" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1426683447" result="Passed" start-time="2026-10-13 17:12:58Z" end-time="2026-10-13 17:12:59Z" duration="0.502230" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="2111" name="HighestChapterIsReachableWithExistingHousingAndWorkerRules" fullname="Weedtopia.Tests.VipStoryTests.HighestChapterIsReachableWithExistingHousingAndWorkerRules" methodname="HighestChapterIsReachableWithExistingHousingAndWorkerRules" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1713406315" result="Passed" start-time="2026-10-13 17:12:59Z" end-time="2026-10-13 17:12:59Z" duration="0.348535" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="2109" name="InhabitantsUnlockAtTheirExactSavedPopulationMilestone" fullname="Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-13 17:12:59Z" end-time="2026-10-13 17:13:02Z" duration="3.169431" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="2099" name="InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;toni&quot;,50)" fullname="Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;toni&quot;,50)" methodname="InhabitantsUnlockAtTheirExactSavedPopulationMilestone" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1805686675" result="Passed" start-time="2026-10-13 17:12:59Z" end-time="2026-10-13 17:12:59Z" duration="0.323610" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2100" name="InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;juno&quot;,100)" fullname="Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;juno&quot;,100)" methodname="InhabitantsUnlockAtTheirExactSavedPopulationMilestone" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="713993540" result="Passed" start-time="2026-10-13 17:12:59Z" end-time="2026-10-13 17:13:00Z" duration="0.318786" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2101" name="InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;rosa&quot;,200)" fullname="Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;rosa&quot;,200)" methodname="InhabitantsUnlockAtTheirExactSavedPopulationMilestone" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1356273548" result="Passed" start-time="2026-10-13 17:13:00Z" end-time="2026-10-13 17:13:00Z" duration="0.313511" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2102" name="InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;mira&quot;,350)" fullname="Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;mira&quot;,350)" methodname="InhabitantsUnlockAtTheirExactSavedPopulationMilestone" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1510661402" result="Passed" start-time="2026-10-13 17:13:00Z" end-time="2026-10-13 17:13:00Z" duration="0.313022" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2103" name="InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;kalle&quot;,500)" fullname="Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;kalle&quot;,500)" methodname="InhabitantsUnlockAtTheirExactSavedPopulationMilestone" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="2080370852" result="Passed" start-time="2026-10-13 17:13:00Z" end-time="2026-10-13 17:13:01Z" duration="0.313271" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2104" name="InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;alma&quot;,750)" fullname="Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;alma&quot;,750)" methodname="InhabitantsUnlockAtTheirExactSavedPopulationMilestone" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="611187961" result="Passed" start-time="2026-10-13 17:13:01Z" end-time="2026-10-13 17:13:01Z" duration="0.309750" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2105" name="InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;selma&quot;,1000)" fullname="Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;selma&quot;,1000)" methodname="InhabitantsUnlockAtTheirExactSavedPopulationMilestone" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1054039431" result="Passed" start-time="2026-10-13 17:13:01Z" end-time="2026-10-13 17:13:01Z" duration="0.352318" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2106" name="InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;oskar&quot;,1500)" fullname="Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;oskar&quot;,1500)" methodname="InhabitantsUnlockAtTheirExactSavedPopulationMilestone" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="290174120" result="Passed" start-time="2026-10-13 17:13:01Z" end-time="2026-10-13 17:13:02Z" duration="0.309869" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2107" name="InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;dalia&quot;,2000)" fullname="Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;dalia&quot;,2000)" methodname="InhabitantsUnlockAtTheirExactSavedPopulationMilestone" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="376441858" result="Passed" start-time="2026-10-13 17:13:02Z" end-time="2026-10-13 17:13:02Z" duration="0.302178" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2108" name="InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;valentina&quot;,3000)" fullname="Weedtopia.Tests.VipStoryTests.InhabitantsUnlockAtTheirExactSavedPopulationMilestone(&quot;valentina&quot;,3000)" methodname="InhabitantsUnlockAtTheirExactSavedPopulationMilestone" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1191584188" result="Passed" start-time="2026-10-13 17:13:02Z" end-time="2026-10-13 17:13:02Z" duration="0.306573" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-case id="2126" name="LegacySaveWithoutStoryFieldsKeepsExistingProgressAndResources" fullname="Weedtopia.Tests.VipStoryTests.LegacySaveWithoutStoryFieldsKeepsExistingProgressAndResources" methodname="LegacySaveWithoutStoryFieldsKeepsExistingProgressAndResources" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="636490293" result="Passed" start-time="2026-10-13 17:13:02Z" end-time="2026-10-13 17:13:03Z" duration="0.511007" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="2110" name="LiveResidentsRaiseTheMilestoneAndRemovalOfAWorkerDoesNotRemoveAnInhabitant" fullname="Weedtopia.Tests.VipStoryTests.LiveResidentsRaiseTheMilestoneAndRemovalOfAWorkerDoesNotRemoveAnInhabitant" methodname="LiveResidentsRaiseTheMilestoneAndRemovalOfAWorkerDoesNotRemoveAnInhabitant" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="692551766" result="Passed" start-time="2026-10-13 17:13:03Z" end-time="2026-10-13 17:13:03Z" duration="0.337357" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="2128" name="OfflineSimulationAdvancesAcceptedCountersButNeverAutomaticallyAwardsTheQuest" fullname="Weedtopia.Tests.VipStoryTests.OfflineSimulationAdvancesAcceptedCountersButNeverAutomaticallyAwardsTheQuest" methodname="OfflineSimulationAdvancesAcceptedCountersButNeverAutomaticallyAwardsTheQuest" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="611150397" result="Passed" start-time="2026-10-13 17:13:03Z" end-time="2026-10-13 17:13:04Z" duration="0.608831" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="2112" name="PopulationGrowthNeverSkipsChaptersOrPaysEarlierActivityAgain" fullname="Weedtopia.Tests.VipStoryTests.PopulationGrowthNeverSkipsChaptersOrPaysEarlierActivityAgain" methodname="PopulationGrowthNeverSkipsChaptersOrPaysEarlierActivityAgain" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="278971512" result="Passed" start-time="2026-10-13 17:13:04Z" end-time="2026-10-13 17:13:04Z" duration="0.390360" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="2115" name="RecurringQuestsRotateScaleAndWaitWithoutExpiring" fullname="Weedtopia.Tests.VipStoryTests.RecurringQuestsRotateScaleAndWaitWithoutExpiring" methodname="RecurringQuestsRotateScaleAndWaitWithoutExpiring" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="351458006" result="Passed" start-time="2026-10-13 17:13:04Z" end-time="2026-10-13 17:13:05Z" duration="0.597327" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="2113" name="ThreeActiveQuestsAreAllowedAndRejectedAcceptsHaveNoSideEffects" fullname="Weedtopia.Tests.VipStoryTests.ThreeActiveQuestsAreAllowedAndRejectedAcceptsHaveNoSideEffects" methodname="ThreeActiveQuestsAreAllowedAndRejectedAcceptsHaveNoSideEffects" classname="Weedtopia.Tests.VipStoryTests" runstate="Runnable" seed="1704125876" result="Passed" start-time="2026-10-13 17:13:05Z" end-time="2026-10-13 17:13:05Z" duration="0.439188" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/Mein-PC/AppData/LocalLow/DefaultCompany/Weedtopia\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
